@@ -207,7 +207,7 @@ export default function InteractiveCube({
             <div
               className="absolute inset-0 bg-cover bg-center"
               style={{
-                backgroundImage: cfg.face.image ? `url(${cfg.face.image})` : undefined,
+                backgroundImage: cfg.face.image ? `url("${cfg.face.image}")` : undefined,
                 backgroundColor: cfg.face.image ? undefined : '#0f131a',
                 filter: 'brightness(0.75) contrast(1.1)',
               }}

@@ -3,8 +3,9 @@
 import React, { useMemo } from 'react';
 import { Quote, Star, Linkedin, User, ArrowUpRight } from 'lucide-react';
 import { motion } from 'framer-motion';
-import SectionHeading from './SectionHeading';
 import Link from 'next/link';
+
+const SERIF = "Georgia, 'Times New Roman', serif";
 
 type Review = {
   name: string;
@@ -400,11 +401,36 @@ export default function TrustedBy() {
 
       {/* Section Heading */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-        <SectionHeading title="Don't Take My Word For It" description="" />
+        {/* Chapter marker */}
+        <div className="flex items-center gap-4 mb-10">
+          <span className="text-white/50 text-xs font-mono tracking-[0.3em] uppercase">
+            Chapter · Proof
+          </span>
+          <span className="h-[1px] flex-1 bg-white/15 max-w-[60px]" />
+          <span className="text-white/50 text-xs font-mono tracking-[0.3em] uppercase">
+            Testimonials · 25 verified
+          </span>
+        </div>
+
+        <motion.h2
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-80px' }}
+          transition={{ duration: 0.9 }}
+          className="text-white leading-[0.95] tracking-[-0.03em] mb-16 max-w-5xl"
+          style={{
+            fontFamily: SERIF,
+            fontSize: 'clamp(2.75rem, 7vw, 6.5rem)',
+            fontWeight: 400,
+          }}
+        >
+          Don&apos;t take my word{' '}
+          <em className="italic text-[#A3D1FF]">for it.</em>
+        </motion.h2>
 
         {/* Featured spotlight */}
         <motion.div
-          className="relative grid lg:grid-cols-[0.9fr_1.1fr] gap-10 items-center mb-20 mt-4"
+          className="relative grid lg:grid-cols-[0.9fr_1.1fr] gap-10 lg:gap-16 items-center mb-20"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-80px' }}
@@ -412,12 +438,12 @@ export default function TrustedBy() {
         >
           {/* Portrait card */}
           <div className="relative">
-            <div className="absolute -inset-6 bg-gradient-to-tr from-[#A3D1FF]/10 via-transparent to-[#A3D1FF]/5 blur-3xl rounded-full" />
-            <div className="relative aspect-[4/5] max-w-md mx-auto lg:mx-0 rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
+            <div className="absolute -inset-6 bg-gradient-to-tr from-[#A3D1FF]/10 via-transparent to-[#A3D1FF]/5 blur-3xl" />
+            <div className="relative aspect-[4/5] max-w-md mx-auto lg:mx-0 overflow-hidden border border-white/10">
               {featuredClient?.image ? (
                 <img
                   src={featuredClient.image}
-                  alt={featured.name}
+                  alt=""
                   className="w-full h-full object-cover"
                 />
               ) : (
@@ -426,22 +452,38 @@ export default function TrustedBy() {
                 </div>
               )}
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
+
+              {/* Corner film marks */}
+              <div className="absolute top-4 left-4 w-4 h-4 border-l border-t border-white/30" />
+              <div className="absolute top-4 right-4 w-4 h-4 border-r border-t border-white/30" />
+              <div className="absolute bottom-4 left-4 w-4 h-4 border-l border-b border-white/30" />
+              <div className="absolute bottom-4 right-4 w-4 h-4 border-r border-b border-white/30" />
+
               <div className="absolute bottom-0 left-0 right-0 p-6">
                 <Stars />
                 <div className="mt-3">
-                  <div className="text-white text-xl font-bold tracking-tight">
+                  <div
+                    className="text-white leading-none"
+                    style={{
+                      fontFamily: SERIF,
+                      fontSize: 'clamp(1.25rem, 1.8vw, 1.5rem)',
+                      fontWeight: 500,
+                    }}
+                  >
                     {featured.name}
                   </div>
-                  <div className="text-[#A3D1FF] text-sm">{featuredClient?.role}</div>
+                  <div className="text-[#A3D1FF]/80 text-xs mt-1 font-mono uppercase tracking-[0.2em]">
+                    {featuredClient?.role}
+                  </div>
                 </div>
                 {featuredClient?.linkedin && (
                   <a
                     href={featuredClient.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 mt-4 px-3 py-1.5 bg-white/10 hover:bg-white/20 text-white text-xs font-medium rounded-full backdrop-blur-sm transition-colors"
+                    className="inline-flex items-center gap-2 mt-4 px-3 py-1.5 bg-white/10 hover:bg-white/20 text-white text-[10px] font-mono uppercase tracking-[0.2em] backdrop-blur-sm transition-colors"
                   >
-                    <Linkedin className="w-3.5 h-3.5" /> Verify on LinkedIn
+                    <Linkedin className="w-3 h-3" /> Verify on LinkedIn
                     <ArrowUpRight className="w-3 h-3" />
                   </a>
                 )}
@@ -455,20 +497,21 @@ export default function TrustedBy() {
               className="absolute -top-4 -left-2 w-20 h-20 text-[#A3D1FF]/15 -scale-x-100"
               aria-hidden
             />
-            <p
-              className="relative font-bold text-white leading-[1.15] tracking-tight"
+            <blockquote
+              className="relative text-white/95 leading-[1.2]"
               style={{
-                fontSize: 'clamp(1.75rem, 3.2vw, 3rem)',
-                letterSpacing: '-0.02em',
+                fontFamily: SERIF,
+                fontSize: 'clamp(1.75rem, 3.2vw, 2.75rem)',
+                fontWeight: 400,
+                fontStyle: 'italic',
+                letterSpacing: '-0.01em',
               }}
             >
-              &ldquo;Marc was able to execute the{' '}
-              <span className="text-[#A3D1FF]">vision perfectly</span>. He dedicates his
-              time to the client, ensuring the client is{' '}
-              <span className="text-[#A3D1FF]">completely satisfied</span> at each step
-              of the process.&rdquo;
-            </p>
-            <div className="mt-8 flex flex-wrap items-center gap-4 text-sm text-white/50 font-mono uppercase tracking-widest">
+              &ldquo;Marc was able to execute the vision perfectly. He dedicates his time
+              to the client, ensuring the client is completely satisfied at each step of
+              the process.&rdquo;
+            </blockquote>
+            <div className="mt-8 flex flex-wrap items-center gap-4 text-xs text-white/50 font-mono uppercase tracking-[0.25em]">
               <span>Case study</span>
               <span className="w-1 h-1 rounded-full bg-white/30" />
               <Link
@@ -482,7 +525,7 @@ export default function TrustedBy() {
         </motion.div>
 
         {/* Aggregate stats strip */}
-        <div className="mb-14 py-6 border-y border-white/10 grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-4">
+        <div className="mb-14 py-8 border-y border-white/10 grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-4">
           {[
             { value: '5.0', label: 'Google Rating' },
             { value: '4.8', label: 'Clutch Rating' },
@@ -490,7 +533,15 @@ export default function TrustedBy() {
             { value: '50+', label: 'Projects Shipped' },
           ].map((s) => (
             <div key={s.label} className="text-center md:text-left">
-              <div className="text-white text-3xl md:text-4xl font-bold tracking-tight mb-1">
+              <div
+                className="text-white leading-none mb-2"
+                style={{
+                  fontFamily: SERIF,
+                  fontSize: 'clamp(2rem, 3.5vw, 3rem)',
+                  fontWeight: 500,
+                  fontVariantNumeric: 'tabular-nums',
+                }}
+              >
                 {s.value}
               </div>
               <div className="text-[10px] font-mono uppercase tracking-[0.25em] text-white/50">
