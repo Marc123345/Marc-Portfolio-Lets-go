@@ -1,6 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "marc-friedman-portfolio",
+  "name": "marcagencysite",
   "compatibility_date": "2026-04-15",
   "assets": {
     "directory": "./out",
