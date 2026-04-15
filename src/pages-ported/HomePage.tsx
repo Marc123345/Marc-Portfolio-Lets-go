@@ -2,6 +2,7 @@ import TrustedBy from '@/components/TrustedBy';
 import AccessibilityPanel from '@/components/AccessibilityPanel';
 import HeroSection from '@/components/home/HeroSection';
 import FeaturedWorkSection from '@/components/home/FeaturedWorkSection';
+import GlobeSection from '@/components/home/GlobeSection';
 import PressSection from '@/components/home/PressSection';
 import HowItWorksSection from '@/components/home/HowItWorksSection';
 import AboutSection from '@/components/home/AboutSection';
@@ -83,6 +84,7 @@ export default function HomePage() {
       <HeroSection />
       <TrustedBy />
       <FeaturedWorkSection />
+      <GlobeSection />
       <PressSection />
       <HowItWorksSection />
       <AboutSection />
