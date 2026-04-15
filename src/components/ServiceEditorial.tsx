@@ -23,7 +23,11 @@ export function ChapterMarker({ number, label }: { number: string; label: string
   );
 }
 
-/* ---------------- Kinetic Word ---------------- */
+/* ---------------- Kinetic Word ----------------
+   Per-character mask reveal. For italic, render the whole word as
+   one mask (instead of per-char) so italic glyph slant doesn't get
+   clipped at character edges (was cutting off italic "T" / "f").
+*/
 export function KineticWord({
   word,
   delay = 0,
@@ -33,8 +37,25 @@ export function KineticWord({
   delay?: number;
   italic?: boolean;
 }) {
+  if (italic) {
+    return (
+      <span
+        className="inline-block overflow-hidden align-bottom italic font-light"
+        style={{ paddingLeft: '0.08em', paddingRight: '0.04em' }}
+      >
+        <motion.span
+          initial={{ y: '105%' }}
+          animate={{ y: 0 }}
+          transition={{ duration: 0.95, delay, ease: [0.22, 1, 0.36, 1] }}
+          className="inline-block"
+        >
+          {word}
+        </motion.span>
+      </span>
+    );
+  }
   return (
-    <span className={`inline-block ${italic ? 'italic font-light' : ''}`}>
+    <span className="inline-block">
       {word.split('').map((ch, i) => (
         <span key={i} className="inline-block overflow-hidden align-bottom">
           <motion.span
