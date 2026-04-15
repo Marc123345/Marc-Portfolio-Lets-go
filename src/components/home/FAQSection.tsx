@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Plus } from 'lucide-react';
 
-const SERIF = "'Fraunces', Georgia, 'Times New Roman', serif";
+const SERIF = "Georgia, 'Times New Roman', serif";
 
 const faqItems = [
   {
@@ -86,7 +86,7 @@ function FAQRow({
           </h3>
         </div>
         <motion.div
-          className="shrink-0 w-12 h-12 rounded-full border border-white/20 flex items-center justify-center group-hover:border-[#A3D1FF] group-hover:bg-[#A3D1FF]/10 transition-all"
+          className="shrink-0 w-12 h-12 border border-white/20 flex items-center justify-center group-hover:border-[#A3D1FF] group-hover:bg-[#A3D1FF]/10 transition-all"
           animate={{ rotate: open ? 45 : 0 }}
           transition={{ type: 'spring', stiffness: 400, damping: 30 }}
         >

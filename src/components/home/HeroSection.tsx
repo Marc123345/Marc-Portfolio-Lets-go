@@ -137,7 +137,10 @@ export default function HeroSection() {
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           >
             <div className="overflow-hidden mb-6">
-              <h1 className="font-heading text-[clamp(3rem,6vw,4.5rem)] font-semibold tracking-[-0.01em] text-white leading-[1.15]">
+              <h1
+                className="text-[clamp(3rem,6vw,4.5rem)] font-medium tracking-[-0.03em] text-white leading-[1.05]"
+                style={{ fontFamily: "Georgia, 'Times New Roman', serif" }}
+              >
                 <SplitTextReveal
                   text="Your Website Should Be Your Best Salesperson. Is It?"
                   delay={0.2}
@@ -184,7 +187,7 @@ export default function HeroSection() {
             </motion.div>
 
             <motion.div
-              className="max-w-md bg-black/60 backdrop-blur-sm px-6 py-5 rounded-lg border border-white/10 shadow-2xl"
+              className="max-w-md bg-black/60 backdrop-blur-sm px-6 py-5 border border-white/10 shadow-2xl"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
@@ -199,7 +202,7 @@ export default function HeroSection() {
                   href="https://share.google/eF48yRJKqiZppBvfN"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-between hover:bg-white/5 p-2 -m-2 rounded-lg transition-colors"
+                  className="flex items-center justify-between hover:bg-white/5 p-2 -m-2 transition-colors"
                 >
                   <div className="flex items-center gap-3">
                     <div className="w-8 h-8 bg-white rounded flex items-center justify-center p-1">
@@ -227,7 +230,7 @@ export default function HeroSection() {
                   href="https://clutch.co/profile/marc-friedman-design-agency"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-between hover:bg-white/5 p-2 -m-2 rounded-lg transition-colors"
+                  className="flex items-center justify-between hover:bg-white/5 p-2 -m-2 transition-colors"
                 >
                   <div className="flex items-center gap-3">
                     <div className="w-8 h-8 bg-white rounded flex items-center justify-center overflow-hidden p-1">
@@ -254,7 +257,7 @@ export default function HeroSection() {
                   href="https://www.designrush.com/agency/profile/marc-friedman"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-between hover:bg-white/5 p-2 -m-2 rounded-lg transition-colors"
+                  className="flex items-center justify-between hover:bg-white/5 p-2 -m-2 transition-colors"
                 >
                   <div className="flex items-center gap-3">
                     <div className="w-8 h-8 bg-white rounded flex items-center justify-center overflow-hidden">
@@ -277,7 +280,7 @@ export default function HeroSection() {
                   href="https://www.linkedin.com/in/portfolio2/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-between hover:bg-white/5 p-2 -m-2 rounded-lg transition-colors"
+                  className="flex items-center justify-between hover:bg-white/5 p-2 -m-2 transition-colors"
                 >
                   <div className="flex items-center gap-3">
                     <div className="w-8 h-8 bg-[#0A66C2] rounded flex items-center justify-center">

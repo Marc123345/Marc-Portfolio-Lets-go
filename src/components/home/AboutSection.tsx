@@ -5,7 +5,7 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 import Link from 'next/link';
 
-const SERIF = "'Fraunces', Georgia, 'Times New Roman', serif";
+const SERIF = "Georgia, 'Times New Roman', serif";
 const CALENDLY_LINK = 'https://calendly.com/marc-friedman-web-design--meeting-link/30min';
 
 function ChapterMarker({ number, label }: { number: string; label: string }) {
@@ -50,7 +50,7 @@ export default function AboutSection() {
             transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
             className="relative"
           >
-            <div className="relative aspect-[4/5] overflow-hidden rounded-sm">
+            <div className="relative aspect-[4/5] overflow-hidden">
               <motion.img
                 src="https://ik.imagekit.io/qcvroy8xpd/PW8VUKH.png?updatedAt=1759693058055&tr=f-webp"
                 alt="Marc Friedman"
@@ -179,7 +179,7 @@ export default function AboutSection() {
                 href={CALENDLY_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-white text-black font-medium px-8 py-4 rounded-full hover:bg-[#A3D1FF] transition-colors group"
+                className="inline-flex items-center gap-2 bg-white text-black font-medium px-8 py-4 hover:bg-[#A3D1FF] transition-colors group"
               >
                 <MessageSquare className="w-4 h-4" />
                 Let&apos;s talk

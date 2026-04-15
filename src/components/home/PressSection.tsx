@@ -5,7 +5,7 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 import Link from 'next/link';
 
-const SERIF = "'Fraunces', Georgia, 'Times New Roman', serif";
+const SERIF = "Georgia, 'Times New Roman', serif";
 
 type Clip = {
   publication: string;

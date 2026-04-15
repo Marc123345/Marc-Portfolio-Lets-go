@@ -232,7 +232,7 @@ export default function InteractiveCube({
                 {cfg.face.title && (
                   <div
                     className="text-white text-sm sm:text-base leading-[1.1]"
-                    style={{ fontFamily: "'Fraunces', serif", fontWeight: 500 }}
+                    style={{ fontFamily: "Georgia, 'Times New Roman', serif", fontWeight: 500 }}
                   >
                     {cfg.face.title}
                   </div>

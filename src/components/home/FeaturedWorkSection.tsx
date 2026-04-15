@@ -7,7 +7,7 @@ import MagneticButton from '@/components/MagneticButton';
 import FeaturedWorkCarousel from '@/components/FeaturedWorkCarousel';
 import Link from 'next/link';
 
-const SERIF = "'Fraunces', Georgia, 'Times New Roman', serif";
+const SERIF = "Georgia, 'Times New Roman', serif";
 
 const portfolioProjects = [
   {
@@ -167,7 +167,7 @@ export default function FeaturedWorkSection() {
           className="relative grid lg:grid-cols-[1.3fr_1fr] gap-10 lg:gap-16 items-center"
         >
           {/* Image with parallax */}
-          <div className="relative aspect-[4/5] lg:aspect-[16/12] overflow-hidden rounded-none lg:rounded-sm bg-[#1b1b1b]">
+          <div className="relative aspect-[4/5] lg:aspect-[16/12] overflow-hidden lg:bg-[#1b1b1b]">
             <motion.img
               src="https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%201%20-%201x1(1).png?updatedAt=1767539579782"
               alt="Untapped Africa"
@@ -236,7 +236,7 @@ export default function FeaturedWorkSection() {
               {['Next.js', 'TypeScript', 'Postgres', 'Mapbox GL'].map((t) => (
                 <span
                   key={t}
-                  className="px-3 py-1 border border-white/15 text-white/70 rounded-full text-xs font-mono"
+                  className="px-3 py-1 border border-white/15 text-white/70 text-xs font-mono"
                 >
                   {t}
                 </span>
@@ -255,7 +255,7 @@ export default function FeaturedWorkSection() {
               </a>
               <Link
                 href="/work/case-studies/untapped-africa"
-                className="inline-flex items-center gap-2 bg-white text-black font-medium px-6 py-3 rounded-full hover:bg-[#A3D1FF] transition-colors"
+                className="inline-flex items-center gap-2 bg-white text-black font-medium px-6 py-3 hover:bg-[#A3D1FF] transition-colors"
               >
                 Read case study
                 <ArrowUpRight className="w-4 h-4" />
@@ -285,7 +285,7 @@ export default function FeaturedWorkSection() {
           <MagneticButton>
             <Link
               href="/work"
-              className="inline-flex items-center gap-3 bg-white text-black font-medium px-8 py-4 rounded-full hover:bg-[#A3D1FF] transition-colors group"
+              className="inline-flex items-center gap-3 bg-white text-black font-medium px-8 py-4 hover:bg-[#A3D1FF] transition-colors group"
             >
               <span>View the complete archive</span>
               <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />

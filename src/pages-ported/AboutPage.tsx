@@ -80,7 +80,7 @@ function AmbientDust() {
   );
 }
 
-const SERIF = "'Fraunces', Georgia, 'Times New Roman', serif";
+const SERIF = "Georgia, 'Times New Roman', serif";
 
 const personSchema = {
   '@context': 'https://schema.org',
@@ -887,7 +887,7 @@ export default function AboutPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.7, delay: 0.1 }}
-                className="aspect-[3/4] overflow-hidden rounded-sm col-span-2"
+                className="aspect-[3/4] overflow-hidden col-span-2"
               >
                 <img
                   src="https://ik.imagekit.io/qcvroy8xpd/uoq5Ztg.jpeg"
@@ -900,7 +900,7 @@ export default function AboutPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.7, delay: 0.2 }}
-                className="aspect-square overflow-hidden rounded-sm"
+                className="aspect-square overflow-hidden"
               >
                 <img
                   src="https://ik.imagekit.io/qcvroy8xpd/TTV8Liw.jpg"
@@ -913,7 +913,7 @@ export default function AboutPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.7, delay: 0.3 }}
-                className="aspect-square overflow-hidden rounded-sm"
+                className="aspect-square overflow-hidden"
               >
                 <img
                   src="https://ik.imagekit.io/qcvroy8xpd/PW8VUKH.png?updatedAt=1759693058055&tr=f-webp"
@@ -952,7 +952,7 @@ export default function AboutPage() {
           <div className="flex flex-wrap items-center gap-6 mb-16">
             <Link
               href="/contact"
-              className="inline-flex items-center gap-3 bg-white text-black font-medium px-8 py-4 rounded-full hover:bg-[#A3D1FF] transition-colors group"
+              className="inline-flex items-center gap-3 bg-white text-black font-medium px-8 py-4 hover:bg-[#A3D1FF] transition-colors group"
             >
               <Mail className="w-4 h-4" />
               Book a Free Strategy Call
@@ -960,7 +960,7 @@ export default function AboutPage() {
             </Link>
             <Link
               href="/work"
-              className="inline-flex items-center gap-2 text-white font-medium px-8 py-4 rounded-full border border-white/20 hover:border-white/60 transition-colors group"
+              className="inline-flex items-center gap-2 text-white font-medium px-8 py-4 border border-white/20 hover:border-white/60 transition-colors group"
             >
               See the Work
               <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />

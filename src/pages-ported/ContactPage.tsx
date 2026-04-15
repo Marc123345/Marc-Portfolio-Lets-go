@@ -6,7 +6,7 @@ import { ArrowUpRight, Mail, Calendar, Linkedin } from 'lucide-react';
 import ContactForm from '@/components/ContactForm';
 import InteractiveCube from '@/components/InteractiveCube';
 
-const SERIF = "'Fraunces', Georgia, 'Times New Roman', serif";
+const SERIF = "Georgia, 'Times New Roman', serif";
 const CALENDLY = 'https://calendly.com/marc-friedman-web-design--meeting-link/30min';
 
 const contactSchema = {
@@ -241,7 +241,7 @@ export default function ContactPage() {
                     <button
                       key={i}
                       onClick={() => setActiveFace(i)}
-                      className={`px-3 py-1.5 text-xs font-mono uppercase tracking-[0.15em] rounded-full border transition-all ${
+                      className={`px-3 py-1.5 text-xs font-mono uppercase tracking-[0.15em] border transition-all ${
                         activeFace === i
                           ? 'bg-white text-black border-white'
                           : 'text-white/70 border-white/15 hover:border-white/40 hover:text-white'
@@ -338,7 +338,7 @@ export default function ContactPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-80px' }}
               transition={{ duration: 0.9, delay: 0.15 }}
-              className="relative bg-[#111418] border border-white/10 p-8 md:p-10 rounded-sm"
+              className="relative bg-[#111418] border border-white/10 p-8 md:p-10"
             >
               <div className="absolute top-4 left-4 w-2 h-2 rounded-full bg-white/20" />
               <div className="absolute top-4 right-4 w-2 h-2 rounded-full bg-white/20" />

@@ -6,7 +6,7 @@ import ContactForm from '@/components/ContactForm';
 import Link from 'next/link';
 import { ArrowUpRight } from 'lucide-react';
 
-const SERIF = "'Fraunces', Georgia, 'Times New Roman', serif";
+const SERIF = "Georgia, 'Times New Roman', serif";
 const CALENDLY_LINK = 'https://calendly.com/marc-friedman-web-design--meeting-link/30min';
 
 function ChapterMarker({ number, label }: { number: string; label: string }) {
@@ -94,7 +94,7 @@ export default function CTASection() {
             transition={{ duration: 0.9, delay: 0.1 }}
             className="relative"
           >
-            <div className="relative bg-[#111418] border border-white/10 p-8 md:p-10 rounded-sm">
+            <div className="relative bg-[#111418] border border-white/10 p-8 md:p-10">
               {/* Corner bolts */}
               <div className="absolute top-4 left-4 w-2 h-2 rounded-full bg-white/20" />
               <div className="absolute top-4 right-4 w-2 h-2 rounded-full bg-white/20" />
@@ -185,7 +185,7 @@ export default function CTASection() {
                   href={CALENDLY_LINK}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-white text-black font-medium px-6 py-3 rounded-full hover:bg-[#A3D1FF] transition-colors group"
+                  className="inline-flex items-center gap-2 bg-white text-black font-medium px-6 py-3 hover:bg-[#A3D1FF] transition-colors group"
                 >
                   Book the 30-min call
                   <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />

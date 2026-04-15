@@ -158,7 +158,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
               <button
                 onClick={() => setMenuOpen(!isMenuOpen)}
-                className="group relative flex items-center gap-3 px-4 py-2.5 border border-white/15 rounded-full hover:border-white/40 transition-colors"
+                className="group relative flex items-center gap-3 px-4 py-2.5 border border-white/15 hover:border-white/40 transition-colors"
                 aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
                 aria-expanded={isMenuOpen}
               >

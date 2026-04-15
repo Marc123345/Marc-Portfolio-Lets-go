@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 
-const SERIF = "'Fraunces', Georgia, 'Times New Roman', serif";
+const SERIF = "Georgia, 'Times New Roman', serif";
 
 export default function SiteLoader() {
   const [visible, setVisible] = useState<boolean | null>(null);

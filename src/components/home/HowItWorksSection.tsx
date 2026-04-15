@@ -3,7 +3,7 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 
-const SERIF = "'Fraunces', Georgia, 'Times New Roman', serif";
+const SERIF = "Georgia, 'Times New Roman', serif";
 
 const steps = [
   {
@@ -131,7 +131,7 @@ function Step({
           {step.description}
         </p>
 
-        <span className="inline-flex items-center gap-2 px-3 py-1.5 border border-white/15 rounded-full text-xs font-mono uppercase tracking-[0.2em] text-white/70">
+        <span className="inline-flex items-center gap-2 px-3 py-1.5 border border-white/15 text-xs font-mono uppercase tracking-[0.2em] text-white/70">
           <span className="w-1.5 h-1.5 rounded-full bg-[#A3D1FF]" />
           {step.tag}
         </span>

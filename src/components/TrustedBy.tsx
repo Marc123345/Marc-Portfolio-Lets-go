@@ -228,7 +228,7 @@ function Stars({ count = 5 }: { count?: number }) {
 function MarqueeCard({ review }: { review: Review }) {
   const client = clientInfo[review.name] ?? { role: 'Client', image: '' };
   return (
-    <div className="w-[340px] sm:w-[380px] shrink-0 bg-[#111418] border border-white/10 rounded-2xl p-6 hover:border-[#A3D1FF]/60 hover:bg-[#14181d] transition-all group">
+    <div className="w-[340px] sm:w-[380px] shrink-0 bg-[#111418] border border-white/10 p-6 hover:border-[#A3D1FF]/60 hover:bg-[#14181d] transition-all group">
       <div className="flex items-start justify-between mb-4">
         <Stars />
         <Quote className="w-5 h-5 text-[#A3D1FF]/40 -scale-x-100 group-hover:text-[#A3D1FF] transition-colors" />
