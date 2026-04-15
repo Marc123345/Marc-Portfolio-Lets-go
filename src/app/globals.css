@@ -270,6 +270,11 @@
     }
   }
 
+  @keyframes ticker {
+    from { transform: translateX(0); }
+    to { transform: translateX(-33.3333%); }
+  }
+
   @keyframes float {
     0%, 100% {
       transform: translateY(0) translateX(-50%);
