@@ -278,7 +278,7 @@ export default function SecureAnnapolisCaseStudy() {
                  desc: "Full tracking setup to know exactly which keywords are driving the high-value commercial contracts."
                }
              ].map((card, i) => (
-               <div key={i} className="bg-[#111] p-8 rounded-2xl border border-white/5 hover:border-[#00e5ff]/30 transition-colors">
+               <div key={i} className="bg-[#111] p-8 border border-white/5 hover:border-[#00e5ff]/30 transition-colors">
                  <card.icon className="text-[#00e5ff] w-8 h-8 mb-6" />
                  <h4 className="text-xl font-bold text-white mb-3">{card.title}</h4>
                  <p className="text-white text-sm leading-relaxed">{card.desc}</p>
@@ -295,19 +295,19 @@ export default function SecureAnnapolisCaseStudy() {
             <h2 className="text-3xl font-bold text-center mb-16">Results & Impact</h2>
             
             <div className="grid md:grid-cols-4 gap-8 mb-20 text-center">
-              <div className="p-6 border border-white/5 rounded-2xl">
+              <div className="p-6 border border-white/5">
                 <div className="text-4xl font-bold text-white mb-2">150%</div>
                 <div className="text-[#00e5ff] text-xs font-bold uppercase tracking-widest">Lead Increase</div>
               </div>
-              <div className="p-6 border border-white/5 rounded-2xl">
+              <div className="p-6 border border-white/5">
                 <div className="text-4xl font-bold text-white mb-2">Top 3</div>
                 <div className="text-[#00e5ff] text-xs font-bold uppercase tracking-widest">Map Rankings</div>
               </div>
-              <div className="p-6 border border-white/5 rounded-2xl">
+              <div className="p-6 border border-white/5">
                 <div className="text-4xl font-bold text-white mb-2">85%</div>
                 <div className="text-[#00e5ff] text-xs font-bold uppercase tracking-widest">Mobile Conversion</div>
               </div>
-              <div className="p-6 border border-white/5 rounded-2xl">
+              <div className="p-6 border border-white/5">
                 <div className="text-4xl font-bold text-white mb-2">4.8</div>
                 <div className="text-[#00e5ff] text-xs font-bold uppercase tracking-widest">Customer Rating</div>
               </div>

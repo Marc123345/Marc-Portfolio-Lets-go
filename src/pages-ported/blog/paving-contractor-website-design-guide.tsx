@@ -64,7 +64,7 @@ export default function PavingContractorWebsiteDesignGuidePage() {
             </div>
           </div>
 
-          <div className="aspect-[21/9] overflow-hidden rounded-xl mb-8">
+          <div className="aspect-[21/9] overflow-hidden mb-8">
             <img
               src="https://images.unsplash.com/photo-1615811361523-6bd03d7748e7?auto=format&fit=crop&w=2000&q=80"
               alt="Paving Contractor Website Design"
@@ -82,7 +82,7 @@ export default function PavingContractorWebsiteDesignGuidePage() {
 
             <p>A professional website does more than just look good. It establishes credibility, showcases your expertise, and most importantly, converts visitors into paying customers. For paving contractors competing in local markets across the US, your website is your 24/7 salesperson working to generate leads even when you're on the job site.</p>
 
-            <div className="bg-[#1b1b1b] p-6 rounded-xl border border-white/10 my-8">
+            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
               <h4 className="text-white font-semibold mb-2 flex items-center">
                 <CheckCircle className="w-5 h-5 text-[#A3D1FF] mr-2" />
                 The Reality of Contractor Website Performance
@@ -108,7 +108,7 @@ export default function PavingContractorWebsiteDesignGuidePage() {
               <li><strong>Multiple Contact Options:</strong> Offer phone, email, and form options to accommodate different preferences.</li>
             </ul>
 
-            <div className="bg-[#1b1b1b] p-6 rounded-xl border border-white/10 my-8">
+            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
               <h4 className="text-white font-semibold mb-2">CTA Best Practices for Paving Contractors</h4>
               <ul className="text-gray-300 space-y-2">
                 <li><strong>Use Contrasting Colors:</strong> Your CTA buttons should stand out visually from the rest of your site</li>
@@ -141,7 +141,7 @@ export default function PavingContractorWebsiteDesignGuidePage() {
             <h3>4. Detailed Service Descriptions</h3>
             <p>Don't assume visitors know what services paving contractors offer. Educate them:</p>
 
-            <div className="bg-[#1b1b1b] p-6 rounded-xl border border-white/10 my-8">
+            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
               <h4 className="text-white font-semibold mb-3">Key Services to Highlight:</h4>
               <div className="grid md:grid-cols-2 gap-3 text-gray-300">
                 <div>
@@ -202,7 +202,7 @@ export default function PavingContractorWebsiteDesignGuidePage() {
             <h3>Hero Section That Captures Attention</h3>
             <p>Your homepage hero section has one job: immediately communicate what you do and why visitors should choose you.</p>
 
-            <div className="bg-[#1b1b1b] p-6 rounded-xl border border-white/10 my-8">
+            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
               <h4 className="text-white font-semibold mb-2">Effective Hero Section Formula:</h4>
               <ul className="text-gray-300 space-y-2">
                 <li><strong>Compelling Headline:</strong> "Professional Asphalt Paving & Driveway Installation in [Your City]"</li>
@@ -252,7 +252,7 @@ export default function PavingContractorWebsiteDesignGuidePage() {
             <h3>Educational Content Builds Authority</h3>
             <p>Create content that answers common questions and positions you as the local expert:</p>
 
-            <div className="bg-[#1b1b1b] p-6 rounded-xl border border-white/10 my-8">
+            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
               <h4 className="text-white font-semibold mb-3">Content Topics That Attract Customers:</h4>
               <ul className="text-gray-300 space-y-2">
                 <li><strong>Timing Guides:</strong> "Best Time of Year to Pave Your Driveway in [State/Region]"</li>
@@ -422,7 +422,7 @@ export default function PavingContractorWebsiteDesignGuidePage() {
 
             <h2>Getting Started: Your Website Launch Checklist</h2>
 
-            <div className="bg-[#1b1b1b] p-6 rounded-xl border border-white/10 my-8">
+            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
               <h4 className="text-white font-semibold mb-3">Pre-Launch Essentials:</h4>
               <ul className="text-gray-300 space-y-2">
                 <li className="flex items-start">
@@ -511,7 +511,7 @@ export default function PavingContractorWebsiteDesignGuidePage() {
           <div className="mt-12 pt-8 border-t border-white/10">
             <h3 className="text-2xl font-semibold text-white mb-6">Related Articles</h3>
             <div className="grid sm:grid-cols-2 gap-6">
-              <div className="bg-[#1b1b1b] rounded-xl overflow-hidden border border-white/10 hover:border-[#A3D1FF] transition-all group">
+              <div className="bg-[#1b1b1b] overflow-hidden border border-white/10 hover:border-[#A3D1FF] transition-all group">
                 <div className="aspect-[16/9] overflow-hidden">
                   <img
                     src="https://images.unsplash.com/photo-1562577309-4932fdd64cd1?auto=format&fit=crop&w=2000&q=80"
@@ -532,7 +532,7 @@ export default function PavingContractorWebsiteDesignGuidePage() {
                 </div>
               </div>
 
-              <div className="bg-[#1b1b1b] rounded-xl overflow-hidden border border-white/10 hover:border-[#A3D1FF] transition-all group">
+              <div className="bg-[#1b1b1b] overflow-hidden border border-white/10 hover:border-[#A3D1FF] transition-all group">
                 <div className="aspect-[16/9] overflow-hidden">
                   <img
                     src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=2000&q=80"

@@ -14,7 +14,7 @@ export default function ServiceLeadForm({ benefits }: Props) {
   const calendlyUXAuditLink = "https://calendly.com/marc-friedman-web-design--meeting-link/30min";
 
   return (
-    <div className="bg-[#1b1b1b] p-8 rounded-xl border border-white/10">
+    <div className="bg-[#1b1b1b] p-8 border border-white/10">
       <div className="grid md:grid-cols-2 gap-8 sm:gap-12">
         {/* Left Column: Benefits */}
         <div>

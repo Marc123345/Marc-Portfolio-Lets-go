@@ -67,7 +67,7 @@ export default function OptimizingWebsitesForAICrawlersPage() {
             </div>
           </div>
           
-          <div className="aspect-[21/9] overflow-hidden rounded-xl mb-8">
+          <div className="aspect-[21/9] overflow-hidden mb-8">
             <img 
               src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=2000&q=80" 
               alt="AI Crawlers and Website Optimization" 
@@ -100,7 +100,7 @@ export default function OptimizingWebsitesForAICrawlersPage() {
             
             <p>These capabilities mean that AI crawlers can potentially provide more relevant results to users, but they also require website owners to think differently about how they structure and present their content.</p>
             
-            <div className="bg-[#1b1b1b] p-6 rounded-xl border border-white/10 my-8">
+            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
               <h4 className="text-white font-semibold mb-2">Key Difference</h4>
               <p className="text-gray-300">Traditional SEO often focuses on optimizing for specific keywords and phrases. AI optimization requires thinking about topics, entities, and relationships—creating content that demonstrates expertise and answers questions comprehensively.</p>
             </div>
@@ -118,7 +118,7 @@ export default function OptimizingWebsitesForAICrawlersPage() {
             
             <p>While basic structured data has been a best practice for years, AI optimization requires more comprehensive implementation. Instead of just marking up obvious elements like products or events, consider how you can use structured data to provide context for all meaningful content on your site.</p>
             
-            <div className="bg-[#1b1b1b] p-6 rounded-xl border border-white/10 my-8">
+            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
               <h4 className="text-white font-semibold mb-2">Implementation Example</h4>
               <p className="text-gray-300 mb-4">For a blog post about automotive dealer platforms, you might include:</p>
               <pre className="text-xs text-gray-300 overflow-x-auto">
@@ -168,7 +168,7 @@ ${'</' + 'script>'}`}
             
             <p>AI plugins are particularly important for websites that offer specialized information or functionality that AI systems might want to access directly. By providing a well-defined interface, you can ensure that AI assistants like ChatGPT can accurately represent and interact with your content.</p>
             
-            <div className="bg-[#1b1b1b] p-6 rounded-xl border border-white/10 my-8">
+            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
               <h4 className="text-white font-semibold mb-2">Implementation Example</h4>
               <p className="text-gray-300 mb-4">A basic AI plugin manifest might look like this:</p>
               <pre className="text-xs text-gray-300 overflow-x-auto">
@@ -212,7 +212,7 @@ ${'</' + 'script>'}`}
               <li><strong>Crawl-Delay:</strong> Set appropriate crawl rates to manage server load.</li>
             </ul>
             
-            <div className="bg-[#1b1b1b] p-6 rounded-xl border border-white/10 my-8">
+            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
               <h4 className="text-white font-semibold mb-2">Implementation Example</h4>
               <p className="text-gray-300 mb-4">A robots.txt file with AI crawler directives:</p>
               <pre className="text-xs text-gray-300 overflow-x-auto">
@@ -384,7 +384,7 @@ Disallow: /admin/`}
           <div className="mt-12 pt-8 border-t border-white/10">
             <h3 className="text-2xl font-semibold text-white mb-6">Related Articles</h3>
             <div className="grid sm:grid-cols-2 gap-6">
-              <div className="bg-[#1b1b1b] rounded-xl overflow-hidden border border-white/10 hover:border-[#A3D1FF] transition-all group">
+              <div className="bg-[#1b1b1b] overflow-hidden border border-white/10 hover:border-[#A3D1FF] transition-all group">
                 <div className="aspect-[16/9] overflow-hidden">
                   <img 
                     src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=2000&q=80" 
@@ -405,7 +405,7 @@ Disallow: /admin/`}
                 </div>
               </div>
               
-              <div className="bg-[#1b1b1b] rounded-xl overflow-hidden border border-white/10 hover:border-[#A3D1FF] transition-all group">
+              <div className="bg-[#1b1b1b] overflow-hidden border border-white/10 hover:border-[#A3D1FF] transition-all group">
                 <div className="aspect-[16/9] overflow-hidden">
                   <img 
                     src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=2000&q=80" 

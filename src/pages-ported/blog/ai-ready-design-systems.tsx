@@ -55,7 +55,7 @@ export default function AIReadyDesignSystems() {
             </div>
           </div>
 
-          <div className="aspect-[21/9] overflow-hidden rounded-xl mb-8">
+          <div className="aspect-[21/9] overflow-hidden mb-8">
             <img
               src="/generated-1770282657147-xuhu1.png"
               alt="AI-ready design systems visualization"
@@ -69,7 +69,7 @@ export default function AIReadyDesignSystems() {
       <section className="py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <div className="prose prose-lg prose-invert max-w-none">
-            <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30 rounded-xl p-6 mb-8">
+            <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30 p-6 mb-8">
               <p className="text-white font-medium mb-2 flex items-center gap-2">
                 <Zap className="w-5 h-5 text-blue-400" />
                 The New Reality
@@ -94,7 +94,7 @@ export default function AIReadyDesignSystems() {
 
             <h3 className="text-xl font-semibold text-white mt-8 mb-4">What Goes Wrong</h3>
 
-            <div className="bg-red-900/20 border border-red-500/30 rounded-lg p-6 mb-6">
+            <div className="bg-red-900/20 border border-red-500/30 p-6 mb-6">
               <div className="flex items-start gap-3 mb-4">
                 <XCircle className="w-5 h-5 text-red-400 flex-shrink-0 mt-1" />
                 <div>
@@ -113,7 +113,7 @@ export default function AIReadyDesignSystems() {
               </div>
             </div>
 
-            <div className="bg-green-900/20 border border-green-500/30 rounded-lg p-6 mb-8">
+            <div className="bg-green-900/20 border border-green-500/30 p-6 mb-8">
               <div className="flex items-start gap-3 mb-4">
                 <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />
                 <div>
@@ -139,7 +139,7 @@ export default function AIReadyDesignSystems() {
               Create a hierarchical token structure with clear semantic layers:
             </p>
 
-            <div className="bg-gray-900/50 border border-gray-700 rounded-lg p-6 mb-6">
+            <div className="bg-gray-900/50 border border-gray-700 p-6 mb-6">
               <div className="space-y-4">
                 <div>
                   <p className="text-blue-400 font-medium mb-2">1. Primitive Tokens (Foundation)</p>
@@ -176,7 +176,7 @@ export default function AIReadyDesignSystems() {
               </div>
             </div>
 
-            <div className="bg-blue-900/20 border border-blue-500/30 rounded-lg p-6 mb-8">
+            <div className="bg-blue-900/20 border border-blue-500/30 p-6 mb-8">
               <div className="flex items-start gap-3">
                 <Lightbulb className="w-5 h-5 text-blue-400 flex-shrink-0 mt-1" />
                 <div>
@@ -216,7 +216,7 @@ export default function AIReadyDesignSystems() {
 
             <h3 className="text-xl font-semibold text-white mt-8 mb-4">The Solution: Structured Component Metadata</h3>
 
-            <div className="bg-gray-900/50 border border-gray-700 rounded-lg p-6 mb-6">
+            <div className="bg-gray-900/50 border border-gray-700 p-6 mb-6">
               <p className="text-white font-medium mb-4">Button Component Example</p>
               <div className="bg-black/50 rounded p-4 overflow-x-auto">
                 <pre className="text-gray-300 text-sm"><code>{`/**
@@ -264,7 +264,7 @@ export default function AIReadyDesignSystems() {
               Define clear rules about how components can be combined:
             </p>
 
-            <div className="bg-gray-900/50 border border-gray-700 rounded-lg p-6 mb-6">
+            <div className="bg-gray-900/50 border border-gray-700 p-6 mb-6">
               <div className="bg-black/50 rounded p-4 overflow-x-auto">
                 <pre className="text-gray-300 text-sm"><code>{`/**
  * @component Card
@@ -291,7 +291,7 @@ export default function AIReadyDesignSystems() {
               </div>
             </div>
 
-            <div className="bg-yellow-900/20 border border-yellow-500/30 rounded-lg p-6 mb-8">
+            <div className="bg-yellow-900/20 border border-yellow-500/30 p-6 mb-8">
               <div className="flex items-start gap-3">
                 <AlertTriangle className="w-5 h-5 text-yellow-400 flex-shrink-0 mt-1" />
                 <div>
@@ -314,7 +314,7 @@ export default function AIReadyDesignSystems() {
 
             <h3 className="text-xl font-semibold text-white mt-8 mb-4">Voice and Tone Documentation</h3>
 
-            <div className="bg-gray-900/50 border border-gray-700 rounded-lg p-6 mb-6">
+            <div className="bg-gray-900/50 border border-gray-700 p-6 mb-6">
               <div className="bg-black/50 rounded p-4 overflow-x-auto">
                 <pre className="text-gray-300 text-sm"><code>{`{
   "brandVoice": {
@@ -368,7 +368,7 @@ export default function AIReadyDesignSystems() {
               Different UI contexts require different copy approaches. Provide specific guidelines for each:
             </p>
 
-            <div className="bg-gray-900/50 border border-gray-700 rounded-lg p-6 mb-6">
+            <div className="bg-gray-900/50 border border-gray-700 p-6 mb-6">
               <div className="space-y-6">
                 <div>
                   <p className="text-blue-400 font-medium mb-3">Button Labels</p>
@@ -442,7 +442,7 @@ export default function AIReadyDesignSystems() {
             </p>
 
             <div className="space-y-6 mb-8">
-              <div className="bg-red-900/20 border border-red-500/30 rounded-lg p-6">
+              <div className="bg-red-900/20 border border-red-500/30 p-6">
                 <div className="flex items-start gap-3 mb-3">
                   <AlertTriangle className="w-5 h-5 text-red-400 flex-shrink-0 mt-1" />
                   <div>
@@ -457,7 +457,7 @@ export default function AIReadyDesignSystems() {
                 </div>
               </div>
 
-              <div className="bg-red-900/20 border border-red-500/30 rounded-lg p-6">
+              <div className="bg-red-900/20 border border-red-500/30 p-6">
                 <div className="flex items-start gap-3 mb-3">
                   <AlertTriangle className="w-5 h-5 text-red-400 flex-shrink-0 mt-1" />
                   <div>
@@ -472,7 +472,7 @@ export default function AIReadyDesignSystems() {
                 </div>
               </div>
 
-              <div className="bg-red-900/20 border border-red-500/30 rounded-lg p-6">
+              <div className="bg-red-900/20 border border-red-500/30 p-6">
                 <div className="flex items-start gap-3 mb-3">
                   <AlertTriangle className="w-5 h-5 text-red-400 flex-shrink-0 mt-1" />
                   <div>
@@ -487,7 +487,7 @@ export default function AIReadyDesignSystems() {
                 </div>
               </div>
 
-              <div className="bg-red-900/20 border border-red-500/30 rounded-lg p-6">
+              <div className="bg-red-900/20 border border-red-500/30 p-6">
                 <div className="flex items-start gap-3 mb-3">
                   <AlertTriangle className="w-5 h-5 text-red-400 flex-shrink-0 mt-1" />
                   <div>
@@ -502,7 +502,7 @@ export default function AIReadyDesignSystems() {
                 </div>
               </div>
 
-              <div className="bg-red-900/20 border border-red-500/30 rounded-lg p-6">
+              <div className="bg-red-900/20 border border-red-500/30 p-6">
                 <div className="flex items-start gap-3 mb-3">
                   <AlertTriangle className="w-5 h-5 text-red-400 flex-shrink-0 mt-1" />
                   <div>
@@ -529,7 +529,7 @@ export default function AIReadyDesignSystems() {
 
             <h3 className="text-xl font-semibold text-white mt-8 mb-4">Automated Validation</h3>
 
-            <div className="bg-gray-900/50 border border-gray-700 rounded-lg p-6 mb-6">
+            <div className="bg-gray-900/50 border border-gray-700 p-6 mb-6">
               <p className="text-white font-medium mb-4">Example: Component Usage Validator</p>
               <div className="bg-black/50 rounded p-4 overflow-x-auto">
                 <pre className="text-gray-300 text-sm"><code>{`// Validate component composition at build time
@@ -572,7 +572,7 @@ export function validateComponent(tree) {
               Create a curated set of examples that explicitly show AI what good looks like:
             </p>
 
-            <div className="bg-gray-900/50 border border-gray-700 rounded-lg p-6 mb-6">
+            <div className="bg-gray-900/50 border border-gray-700 p-6 mb-6">
               <div className="space-y-4">
                 <div>
                   <p className="text-green-400 font-medium mb-2">Approved Patterns</p>
@@ -604,7 +604,7 @@ export function validateComponent(tree) {
               How do you know if your design system is truly AI-ready? Here are key metrics to track:
             </p>
 
-            <div className="bg-gray-900/50 border border-gray-800 rounded-lg p-6 mb-8">
+            <div className="bg-gray-900/50 border border-gray-800 p-6 mb-8">
               <div className="space-y-6">
                 <div className="border-b border-gray-800 pb-4">
                   <p className="text-white font-semibold mb-2">AI Generation Accuracy</p>
@@ -697,7 +697,7 @@ export function validateComponent(tree) {
               </li>
             </ul>
 
-            <div className="bg-gradient-to-r from-[#A3D1FF]/10 to-purple-600/10 border border-[#A3D1FF]/30 rounded-xl p-8 mb-8">
+            <div className="bg-gradient-to-r from-[#A3D1FF]/10 to-purple-600/10 border border-[#A3D1FF]/30 p-8 mb-8">
               <p className="text-white text-lg font-medium mb-4">
                 The future belongs to design systems that serve both humans and AI—systems that maintain brand consistency regardless of who (or what) is implementing them.
               </p>
@@ -713,7 +713,7 @@ export function validateComponent(tree) {
               </p>
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 bg-[#A3D1FF] text-black px-8 py-3 rounded-lg font-semibold hover:bg-[#8BB8E8] transition-colors"
+                className="inline-flex items-center gap-2 bg-[#A3D1FF] text-black px-8 py-3 font-semibold hover:bg-[#8BB8E8] transition-colors"
               >
                 Get in Touch
                 <ArrowLeft className="w-4 h-4 rotate-180" />

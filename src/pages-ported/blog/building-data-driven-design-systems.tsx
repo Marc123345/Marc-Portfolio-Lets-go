@@ -67,7 +67,7 @@ export default function BuildingDataDrivenDesignSystemsPage() {
             </div>
           </div>
           
-          <div className="aspect-[21/9] overflow-hidden rounded-xl mb-8">
+          <div className="aspect-[21/9] overflow-hidden mb-8">
             <img 
               src="https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?auto=format&fit=crop&w=2000&q=80" 
               alt="Building Data-Driven Design Systems for Scale" 
@@ -101,7 +101,7 @@ export default function BuildingDataDrivenDesignSystemsPage() {
             
             <p>Implementing component analytics requires collaboration between design and development teams. Designers need to define the metrics that matter, while developers need to instrument components to collect the right data. This cross-functional approach ensures you're measuring what matters to both user experience and technical performance.</p>
             
-            <div className="bg-[#1b1b1b] p-6 rounded-xl border border-white/10 my-8">
+            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
               <h4 className="text-white font-semibold mb-2">Implementation Tip</h4>
               <p className="text-gray-300">Start with basic usage tracking for your most critical components. Even simple data like "how often is this button variant used across the product" can provide valuable insights for prioritization and decision-making.</p>
             </div>
@@ -145,7 +145,7 @@ export default function BuildingDataDrivenDesignSystemsPage() {
             
             <p>Documentation should be treated as a product in itself, with attention to user experience and regular updates based on feedback. The best documentation anticipates questions and provides answers before users need to ask.</p>
             
-            <div className="bg-[#1b1b1b] p-6 rounded-xl border border-white/10 my-8">
+            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
               <h4 className="text-white font-semibold mb-2">Documentation Tip</h4>
               <p className="text-gray-300">Include real-world examples of components in context, not just isolated demonstrations. This helps teams understand how components work together and makes it easier to envision how they might fit into new features.</p>
             </div>
@@ -222,7 +222,7 @@ export default function BuildingDataDrivenDesignSystemsPage() {
           <div className="mt-12 pt-8 border-t border-white/10">
             <h3 className="text-2xl font-semibold text-white mb-6">Related Articles</h3>
             <div className="grid sm:grid-cols-2 gap-6">
-              <div className="bg-[#1b1b1b] rounded-xl overflow-hidden border border-white/10 hover:border-[#A3D1FF] transition-all group">
+              <div className="bg-[#1b1b1b] overflow-hidden border border-white/10 hover:border-[#A3D1FF] transition-all group">
                 <div className="aspect-[16/9] overflow-hidden">
                   <img 
                     src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=2000&q=80" 
@@ -244,7 +244,7 @@ export default function BuildingDataDrivenDesignSystemsPage() {
                 </div>
               </div>
               
-              <div className="bg-[#1b1b1b] rounded-xl overflow-hidden border border-white/10 hover:border-[#A3D1FF] transition-all group">
+              <div className="bg-[#1b1b1b] overflow-hidden border border-white/10 hover:border-[#A3D1FF] transition-all group">
                 <div className="aspect-[16/9] overflow-hidden">
                   <img 
                     src="https://images.unsplash.com/photo-1560179707-f14e90ef3623?auto=format&fit=crop&w=2000&q=80" 
@@ -268,7 +268,7 @@ export default function BuildingDataDrivenDesignSystemsPage() {
             </div>
             
             {/* Additional Internal Links */}
-            <div className="mt-8 p-6 bg-[#1b1b1b] rounded-xl border border-white/10">
+            <div className="mt-8 p-6 bg-[#1b1b1b] border border-white/10">
               <h4 className="text-lg font-semibold text-white mb-4">Explore More Resources</h4>
               <div className="grid md:grid-cols-3 gap-4">
                 <Link 

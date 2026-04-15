@@ -79,11 +79,11 @@ export default function ConsentBanner() {
           transition={{ type: 'spring', damping: 25, stiffness: 300 }}
           className="relative w-full max-w-2xl mx-4 mb-4 sm:mb-6"
         >
-          <div className="bg-[#0a0a0a] border border-white/10 rounded-2xl shadow-2xl overflow-hidden">
+          <div className="bg-[#0a0a0a] border border-white/10 shadow-2xl overflow-hidden">
             <div className="p-5 sm:p-6">
               <div className="flex items-start justify-between gap-4 mb-4">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-[#A3D1FF]/10 flex items-center justify-center flex-shrink-0">
+                  <div className="w-10 h-10 bg-[#A3D1FF]/10 flex items-center justify-center flex-shrink-0">
                     <Cookie className="w-5 h-5 text-[#A3D1FF]" />
                   </div>
                   <div>
@@ -124,7 +124,7 @@ export default function ConsentBanner() {
                         return (
                           <div
                             key={cat.id}
-                            className="border border-white/5 rounded-xl bg-white/[0.02] overflow-hidden"
+                            className="border border-white/5 bg-white/[0.02] overflow-hidden"
                           >
                             <div className="flex items-center justify-between p-3 sm:p-4">
                               <button
@@ -179,7 +179,7 @@ export default function ConsentBanner() {
                                       {cat.services.map((service) => (
                                         <span
                                           key={service}
-                                          className="text-[11px] text-gray-500 bg-white/5 px-2 py-1 rounded-md"
+                                          className="text-[11px] text-gray-500 bg-white/5 px-2 py-1"
                                         >
                                           {service}
                                         </span>
@@ -201,7 +201,7 @@ export default function ConsentBanner() {
                 <button
                   onClick={acceptAll}
                   disabled={saving}
-                  className="flex-1 bg-[#A3D1FF] text-black font-semibold text-sm py-2.5 px-5 rounded-xl hover:bg-[#92bce6] transition-colors disabled:opacity-50"
+                  className="flex-1 bg-[#A3D1FF] text-black font-semibold text-sm py-2.5 px-5 hover:bg-[#92bce6] transition-colors disabled:opacity-50"
                 >
                   Accept All
                 </button>
@@ -210,7 +210,7 @@ export default function ConsentBanner() {
                   <button
                     onClick={() => savePreferences(customPrefs)}
                     disabled={saving}
-                    className="flex-1 bg-white/10 text-white font-medium text-sm py-2.5 px-5 rounded-xl hover:bg-white/15 transition-colors disabled:opacity-50"
+                    className="flex-1 bg-white/10 text-white font-medium text-sm py-2.5 px-5 hover:bg-white/15 transition-colors disabled:opacity-50"
                   >
                     Save Preferences
                   </button>
@@ -218,7 +218,7 @@ export default function ConsentBanner() {
                   <button
                     onClick={rejectAll}
                     disabled={saving}
-                    className="flex-1 bg-white/10 text-white font-medium text-sm py-2.5 px-5 rounded-xl hover:bg-white/15 transition-colors disabled:opacity-50"
+                    className="flex-1 bg-white/10 text-white font-medium text-sm py-2.5 px-5 hover:bg-white/15 transition-colors disabled:opacity-50"
                   >
                     Reject All
                   </button>
@@ -226,7 +226,7 @@ export default function ConsentBanner() {
 
                 <button
                   onClick={() => setShowDetails(!showDetails)}
-                  className="flex items-center justify-center gap-1.5 text-white hover:text-white text-sm py-2.5 px-4 rounded-xl hover:bg-white/5 transition-colors"
+                  className="flex items-center justify-center gap-1.5 text-white hover:text-white text-sm py-2.5 px-4 hover:bg-white/5 transition-colors"
                 >
                   <Settings2 className="w-4 h-4" />
                   <span>{showDetails ? 'Less' : 'Customize'}</span>

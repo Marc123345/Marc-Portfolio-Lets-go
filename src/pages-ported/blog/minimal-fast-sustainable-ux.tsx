@@ -65,7 +65,7 @@ export default function MinimalFastSustainableUXPage() {
             </div>
           </div>
 
-          <div className="aspect-[21/9] overflow-hidden rounded-xl mb-8">
+          <div className="aspect-[21/9] overflow-hidden mb-8">
             <img
               src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=2000&q=80"
               alt="Minimal mountain landscape representing calm, sustainable design"
@@ -93,7 +93,7 @@ export default function MinimalFastSustainableUXPage() {
 
             <p>The reason is neurological. Perceived performance shapes trust. When a page loads instantly, users subconsciously attribute that quality to the brand behind it. When it lags, they assume incompetence -- even if the content is superior.</p>
 
-            <div className="bg-[#1b1b1b] p-6 rounded-xl border border-white/10 my-8">
+            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
               <h4 className="text-white font-semibold mb-3 flex items-center">
                 <Gauge className="w-5 h-5 text-[#A3D1FF] mr-2" />
                 The Performance Budget Mindset
@@ -136,14 +136,14 @@ export default function MinimalFastSustainableUXPage() {
               <li><strong>Use web platform features.</strong> The Intersection Observer API replaces scroll-based animation libraries. CSS transitions and animations replace most GSAP use cases. The native <code>&lt;dialog&gt;</code> element replaces modal libraries.</li>
             </ol>
 
-            <div className="bg-[#1b1b1b] p-6 rounded-xl border border-white/10 my-8">
+            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
               <h4 className="text-white font-semibold mb-3 flex items-center">
                 <Zap className="w-5 h-5 text-[#A3D1FF] mr-2" />
                 Script Audit Example
               </h4>
               <p className="text-gray-300 mb-3">A typical marketing site before and after a script audit:</p>
               <div className="grid sm:grid-cols-2 gap-4">
-                <div className="bg-black/30 p-4 rounded-lg">
+                <div className="bg-black/30 p-4">
                   <p className="text-red-400 font-semibold text-sm mb-2">Before: 1.8 MB JavaScript</p>
                   <ul className="text-white text-sm space-y-1">
                     <li>Google Tag Manager + GA4</li>
@@ -156,7 +156,7 @@ export default function MinimalFastSustainableUXPage() {
                     <li>Cookie consent banner</li>
                   </ul>
                 </div>
-                <div className="bg-black/30 p-4 rounded-lg">
+                <div className="bg-black/30 p-4">
                   <p className="text-emerald-400 font-semibold text-sm mb-2">After: 280 KB JavaScript</p>
                   <ul className="text-white text-sm space-y-1">
                     <li>Plausible Analytics (self-hosted)</li>
@@ -200,14 +200,14 @@ export default function MinimalFastSustainableUXPage() {
 
             <p>A well-optimized page typically produces under 0.2g of CO2 per view. A bloated page can produce over 1.5g. At scale -- millions of page views per month -- that difference translates to tons of carbon annually.</p>
 
-            <div className="bg-[#1b1b1b] p-6 rounded-xl border border-white/10 my-8">
+            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
               <h4 className="text-white font-semibold mb-3 flex items-center">
                 <Leaf className="w-5 h-5 text-emerald-400 mr-2" />
                 The Math of Green UX
               </h4>
               <p className="text-gray-300 mb-3">Consider a site with 1 million monthly page views:</p>
               <div className="grid sm:grid-cols-2 gap-4">
-                <div className="bg-black/30 p-4 rounded-lg">
+                <div className="bg-black/30 p-4">
                   <p className="text-white font-semibold text-sm mb-2">Unoptimized (3 MB page)</p>
                   <ul className="text-white text-sm space-y-1">
                     <li>~1.2g CO2 per page view</li>
@@ -216,7 +216,7 @@ export default function MinimalFastSustainableUXPage() {
                     <li>Equivalent to 7 transatlantic flights</li>
                   </ul>
                 </div>
-                <div className="bg-black/30 p-4 rounded-lg">
+                <div className="bg-black/30 p-4">
                   <p className="text-emerald-400 font-semibold text-sm mb-2">Optimized (400 KB page)</p>
                   <ul className="text-white text-sm space-y-1">
                     <li>~0.15g CO2 per page view</li>
@@ -260,7 +260,7 @@ export default function MinimalFastSustainableUXPage() {
 
             <p>The irony is that designers often add these elements to "increase engagement," but the data tells a different story. Calm, focused interfaces consistently outperform cluttered ones in conversion rates, time-on-task metrics, and user satisfaction scores.</p>
 
-            <div className="bg-[#1b1b1b] p-6 rounded-xl border border-white/10 my-8">
+            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
               <h4 className="text-white font-semibold mb-3 flex items-center">
                 <Feather className="w-5 h-5 text-[#A3D1FF] mr-2" />
                 Principles of Calm Design
@@ -297,7 +297,7 @@ export default function MinimalFastSustainableUXPage() {
               <li><strong>Typography-driven hierarchy.</strong> A well-structured type scale (with clear distinctions between heading levels, body text, and supporting text) communicates hierarchy without relying on color or decoration.</li>
             </ol>
 
-            <div className="bg-[#1b1b1b] p-6 rounded-xl border border-white/10 my-8">
+            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
               <h4 className="text-white font-semibold mb-3 flex items-center">
                 <Wind className="w-5 h-5 text-[#A3D1FF] mr-2" />
                 A Calm Typography Scale
@@ -339,25 +339,25 @@ Font weights:
 
             <p>Minimal, fast, and sustainable UX is not a checklist. It is a design philosophy that connects three interconnected concerns:</p>
 
-            <div className="bg-[#1b1b1b] p-6 rounded-xl border border-white/10 my-8">
+            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
               <h4 className="text-white font-semibold mb-4">The Three Pillars</h4>
               <div className="grid sm:grid-cols-3 gap-6">
                 <div>
-                  <div className="w-10 h-10 bg-[#A3D1FF]/10 rounded-lg flex items-center justify-center mb-3">
+                  <div className="w-10 h-10 bg-[#A3D1FF]/10 flex items-center justify-center mb-3">
                     <Zap className="w-5 h-5 text-[#A3D1FF]" />
                   </div>
                   <h5 className="text-white font-semibold mb-2">Performance</h5>
                   <p className="text-white text-sm">Speed is a feature. Every millisecond saved improves engagement, conversion, and accessibility on constrained networks and devices.</p>
                 </div>
                 <div>
-                  <div className="w-10 h-10 bg-emerald-400/10 rounded-lg flex items-center justify-center mb-3">
+                  <div className="w-10 h-10 bg-emerald-400/10 flex items-center justify-center mb-3">
                     <Leaf className="w-5 h-5 text-emerald-400" />
                   </div>
                   <h5 className="text-white font-semibold mb-2">Sustainability</h5>
                   <p className="text-white text-sm">Lighter pages, green hosting, and efficient architecture reduce the environmental cost of every interaction.</p>
                 </div>
                 <div>
-                  <div className="w-10 h-10 bg-[#A3D1FF]/10 rounded-lg flex items-center justify-center mb-3">
+                  <div className="w-10 h-10 bg-[#A3D1FF]/10 flex items-center justify-center mb-3">
                     <Feather className="w-5 h-5 text-[#A3D1FF]" />
                   </div>
                   <h5 className="text-white font-semibold mb-2">Calm</h5>
@@ -454,7 +454,7 @@ Font weights:
           <div className="mt-12 pt-8 border-t border-white/10">
             <h3 className="text-2xl font-semibold text-white mb-6">Related Articles</h3>
             <div className="grid sm:grid-cols-2 gap-6">
-              <div className="bg-[#1b1b1b] rounded-xl overflow-hidden border border-white/10 hover:border-[#A3D1FF] transition-all group">
+              <div className="bg-[#1b1b1b] overflow-hidden border border-white/10 hover:border-[#A3D1FF] transition-all group">
                 <div className="aspect-[16/9] overflow-hidden">
                   <img
                     src="https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=2000&q=80"
@@ -475,7 +475,7 @@ Font weights:
                 </div>
               </div>
 
-              <div className="bg-[#1b1b1b] rounded-xl overflow-hidden border border-white/10 hover:border-[#A3D1FF] transition-all group">
+              <div className="bg-[#1b1b1b] overflow-hidden border border-white/10 hover:border-[#A3D1FF] transition-all group">
                 <div className="aspect-[16/9] overflow-hidden">
                   <img
                     src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=2000&q=80"

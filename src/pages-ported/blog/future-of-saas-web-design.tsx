@@ -67,7 +67,7 @@ export default function FutureOfSaasWebDesignPage() {
             </div>
           </div>
           
-          <div className="aspect-[21/9] overflow-hidden rounded-xl mb-8">
+          <div className="aspect-[21/9] overflow-hidden mb-8">
             <img 
               src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=2000&q=80" 
               alt="The Future of SaaS Web Design" 
@@ -95,7 +95,7 @@ export default function FutureOfSaasWebDesignPage() {
             
             <p>Effective micro-interactions serve multiple purposes: they provide immediate feedback on user actions, create moments of delight that build emotional connection, and guide users through complex processes without overwhelming them. When implemented thoughtfully, they transform utilitarian interfaces into engaging experiences that users enjoy returning to.</p>
             
-            <div className="bg-[#1b1b1b] p-6 rounded-xl border border-white/10 my-8">
+            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
               <h4 className="text-white font-semibold mb-2">Example: Videoleap's Template Interface</h4>
               <p className="text-gray-300 mb-4">In our work with Videoleap, we implemented subtle animation effects when users hover over video templates. This simple interaction provides immediate visual feedback, making the interface feel responsive and alive while guiding users toward available actions.</p>
               <p className="text-gray-300">The result? A significant increase in template usage and improvement in user retention rates.</p>
@@ -128,7 +128,7 @@ export default function FutureOfSaasWebDesignPage() {
             
             <p>The most sophisticated implementations use AI not just to react to user behavior but to anticipate needs. Predictive interfaces can prepare data, suggest next steps, or highlight relevant information before the user explicitly requests it—creating an experience that feels almost magical in its responsiveness.</p>
 
-            <div className="bg-[#1b1b1b] p-6 rounded-xl border border-white/10 my-8">
+            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
               <h4 className="text-white font-semibold mb-2">Case Study: MarginX AI-Powered Dashboard</h4>
               <p className="text-gray-300">In our work with MarginX, we implemented AI-driven data visualization that automatically highlights the most relevant metrics based on user role and historical interaction patterns. This intelligent prioritization reduced decision-making time and improved data comprehension.</p>
             </div>
@@ -210,7 +210,7 @@ export default function FutureOfSaasWebDesignPage() {
           <div className="mt-12 pt-8 border-t border-white/10">
             <h3 className="text-2xl font-semibold text-white mb-6">Related Articles</h3>
             <div className="grid sm:grid-cols-2 gap-6">
-              <div className="bg-[#1b1b1b] rounded-xl overflow-hidden border border-white/10 hover:border-[#A3D1FF] transition-all group">
+              <div className="bg-[#1b1b1b] overflow-hidden border border-white/10 hover:border-[#A3D1FF] transition-all group">
                 <div className="aspect-[16/9] overflow-hidden">
                   <img 
                     src="https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?auto=format&fit=crop&w=2000&q=80" 
@@ -231,7 +231,7 @@ export default function FutureOfSaasWebDesignPage() {
                 </div>
               </div>
               
-              <div className="bg-[#1b1b1b] rounded-xl overflow-hidden border border-white/10 hover:border-[#A3D1FF] transition-all group">
+              <div className="bg-[#1b1b1b] overflow-hidden border border-white/10 hover:border-[#A3D1FF] transition-all group">
                 <div className="aspect-[16/9] overflow-hidden">
                   <img 
                     src="https://images.unsplash.com/photo-1560179707-f14e90ef3623?auto=format&fit=crop&w=2000&q=80" 

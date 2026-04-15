@@ -24,20 +24,20 @@ export function NotFoundPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button 
               onClick={() => router.back()}
-              className="inline-flex items-center px-6 py-3 bg-[#1b1b1b] text-white rounded-lg hover:bg-[#2d3035] transition-colors"
+              className="inline-flex items-center px-6 py-3 bg-[#1b1b1b] text-white hover:bg-[#2d3035] transition-colors"
             >
               <ArrowLeft className="mr-2 w-5 h-5" />
               Go Back
             </button>
             <Link 
               href="/"
-              className="inline-flex items-center px-6 py-3 bg-[#A3D1FF] text-black rounded-lg hover:bg-[#92bce6] transition-colors"
+              className="inline-flex items-center px-6 py-3 bg-[#A3D1FF] text-black hover:bg-[#92bce6] transition-colors"
             >
               Go Home
             </Link>
             <Link 
               href="/work"
-              className="inline-flex items-center px-6 py-3 bg-[#2d3035] text-white rounded-lg hover:bg-[#3d4045] transition-colors"
+              className="inline-flex items-center px-6 py-3 bg-[#2d3035] text-white hover:bg-[#3d4045] transition-colors"
             >
               View Portfolio
             </Link>
@@ -125,14 +125,14 @@ export function RedirectPage({ permanent = false }) {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button 
               onClick={() => router.back()}
-              className="inline-flex items-center px-6 py-3 bg-[#1b1b1b] text-white rounded-lg hover:bg-[#2d3035] transition-colors"
+              className="inline-flex items-center px-6 py-3 bg-[#1b1b1b] text-white hover:bg-[#2d3035] transition-colors"
             >
               <ArrowLeft className="mr-2 w-5 h-5" />
               Go Back
             </button>
             <a 
               href={redirectUrl}
-              className="inline-flex items-center px-6 py-3 bg-[#A3D1FF] text-black rounded-lg hover:bg-[#92bce6] transition-colors"
+              className="inline-flex items-center px-6 py-3 bg-[#A3D1FF] text-black hover:bg-[#92bce6] transition-colors"
             >
               Continue
               <MoveRight className="ml-2 w-5 h-5" />

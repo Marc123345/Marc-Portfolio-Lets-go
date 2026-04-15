@@ -111,7 +111,7 @@ export default function WhatIsGEOPage() {
             </div>
           </div>
 
-          <div className="aspect-[21/9] overflow-hidden rounded-xl mb-8">
+          <div className="aspect-[21/9] overflow-hidden mb-8">
             <img
               src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=2000&q=80"
               alt="Generative AI and search optimization concept"
@@ -143,7 +143,7 @@ export default function WhatIsGEOPage() {
 
             <p>What makes these "generative" rather than "traditional" engines is the output format. A traditional search engine retrieves and ranks existing pages. A generative engine creates a new piece of text that did not exist before, assembled from information it found across the web. Your content is no longer the destination -- it is the raw material.</p>
 
-            <div className="bg-[#1b1b1b] p-6 rounded-xl border border-white/10 my-8">
+            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
               <h4 className="text-white font-semibold mb-3 flex items-center">
                 <Cpu className="w-5 h-5 text-[#A3D1FF] mr-2" />
                 The Generative Search Pipeline
@@ -192,7 +192,7 @@ export default function WhatIsGEOPage() {
 
             <p>Traditional SEO and GEO share common DNA -- both are about making content discoverable. But the mechanics diverge in critical ways.</p>
 
-            <div className="bg-[#1b1b1b] p-6 rounded-xl border border-white/10 my-8 overflow-x-auto">
+            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8 overflow-x-auto">
               <table className="w-full text-sm">
                 <thead>
                   <tr className="border-b border-white/10">
@@ -247,9 +247,9 @@ export default function WhatIsGEOPage() {
 
             <p>If you have been reading about AI search optimization, you have likely encountered both GEO and AEO (Answer Engine Optimization). The two terms are closely related and sometimes used interchangeably, but there is a meaningful distinction:</p>
 
-            <div className="bg-[#1b1b1b] p-6 rounded-xl border border-white/10 my-8">
+            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
               <div className="grid sm:grid-cols-2 gap-6">
-                <div className="bg-black/30 p-5 rounded-lg">
+                <div className="bg-black/30 p-5">
                   <h4 className="text-[#A3D1FF] font-semibold mb-3">AEO (Answer Engine Optimization)</h4>
                   <p className="text-white text-sm mb-3">Focuses on platforms that <strong className="text-gray-300">answer direct questions</strong>. The optimization target is the question-answer interaction.</p>
                   <ul className="text-white text-sm space-y-1">
@@ -258,7 +258,7 @@ export default function WhatIsGEOPage() {
                     <li>Primary concern: being the chosen answer</li>
                   </ul>
                 </div>
-                <div className="bg-black/30 p-5 rounded-lg">
+                <div className="bg-black/30 p-5">
                   <h4 className="text-emerald-400 font-semibold mb-3">GEO (Generative Engine Optimization)</h4>
                   <p className="text-white text-sm mb-3">Broader scope. Focuses on <strong className="text-gray-300">any AI system that generates content</strong> using web sources -- including summaries, research, comparisons, and creative tasks.</p>
                   <ul className="text-white text-sm space-y-1">
@@ -279,41 +279,41 @@ export default function WhatIsGEOPage() {
 
             <p>The research team tested nine different optimization strategies across thousands of queries and measured their impact on source visibility in generative engines. The results revealed which strategies actually move the needle:</p>
 
-            <div className="bg-[#1b1b1b] p-6 rounded-xl border border-white/10 my-8">
+            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
               <h4 className="text-white font-semibold mb-4 flex items-center">
                 <BarChart3 className="w-5 h-5 text-[#A3D1FF] mr-2" />
                 Optimization Strategies Ranked by Effectiveness
               </h4>
               <div className="space-y-4">
-                <div className="bg-black/30 p-4 rounded-lg">
+                <div className="bg-black/30 p-4">
                   <div className="flex items-center justify-between mb-2">
                     <p className="text-emerald-400 font-semibold text-sm">1. Citing Authoritative Sources</p>
                     <span className="text-emerald-400 text-xs font-mono bg-emerald-400/10 px-2 py-1 rounded">HIGH IMPACT</span>
                   </div>
                   <p className="text-white text-sm">Content that includes citations to credible, authoritative sources saw the largest visibility improvements. When your content references established research, official statistics, or recognized institutions, generative engines treat it as more trustworthy and are more likely to include it in their responses.</p>
                 </div>
-                <div className="bg-black/30 p-4 rounded-lg">
+                <div className="bg-black/30 p-4">
                   <div className="flex items-center justify-between mb-2">
                     <p className="text-emerald-400 font-semibold text-sm">2. Including Statistics and Quantitative Data</p>
                     <span className="text-emerald-400 text-xs font-mono bg-emerald-400/10 px-2 py-1 rounded">HIGH IMPACT</span>
                   </div>
                   <p className="text-white text-sm">Pages with specific numbers, percentages, data points, and quantitative claims were significantly more likely to be referenced. Generative engines prefer concrete data over vague assertions because data is easier to extract, verify, and weave into synthesized answers.</p>
                 </div>
-                <div className="bg-black/30 p-4 rounded-lg">
+                <div className="bg-black/30 p-4">
                   <div className="flex items-center justify-between mb-2">
                     <p className="text-[#A3D1FF] font-semibold text-sm">3. Adding Quotations from Experts</p>
                     <span className="text-[#A3D1FF] text-xs font-mono bg-[#A3D1FF]/10 px-2 py-1 rounded">MODERATE IMPACT</span>
                   </div>
                   <p className="text-white text-sm">Expert quotes provide a named authority that AI models can attribute. They also add a layer of human expertise that makes content more distinctive and citation-worthy.</p>
                 </div>
-                <div className="bg-black/30 p-4 rounded-lg">
+                <div className="bg-black/30 p-4">
                   <div className="flex items-center justify-between mb-2">
                     <p className="text-[#A3D1FF] font-semibold text-sm">4. Improving Technical Fluency</p>
                     <span className="text-[#A3D1FF] text-xs font-mono bg-[#A3D1FF]/10 px-2 py-1 rounded">MODERATE IMPACT</span>
                   </div>
                   <p className="text-white text-sm">Content written with clear, precise, technically accurate language performed better than oversimplified or jargon-heavy content. The sweet spot is expert-level accuracy delivered in accessible prose.</p>
                 </div>
-                <div className="bg-black/30 p-4 rounded-lg">
+                <div className="bg-black/30 p-4">
                   <div className="flex items-center justify-between mb-2">
                     <p className="text-white font-semibold text-sm">5. Keyword Stuffing</p>
                     <span className="text-red-400 text-xs font-mono bg-red-400/10 px-2 py-1 rounded">NEGATIVE IMPACT</span>
@@ -344,28 +344,28 @@ export default function WhatIsGEOPage() {
 
             <p>The GEO research is unambiguous: quantitative data significantly increases citation probability. For every major claim in your content, ask whether you can support it with a specific number:</p>
 
-            <div className="bg-[#1b1b1b] p-6 rounded-xl border border-white/10 my-8">
+            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
               <h4 className="text-white font-semibold mb-3 flex items-center">
                 <Lightbulb className="w-5 h-5 text-[#A3D1FF] mr-2" />
                 Weak vs. Strong for GEO
               </h4>
               <div className="space-y-3">
                 <div className="grid sm:grid-cols-2 gap-3">
-                  <div className="bg-red-500/5 border border-red-500/20 p-3 rounded-lg">
+                  <div className="bg-red-500/5 border border-red-500/20 p-3">
                     <p className="text-red-400 text-xs font-semibold mb-1">WEAK</p>
                     <p className="text-white text-sm">"Many businesses are now using AI in their marketing."</p>
                   </div>
-                  <div className="bg-emerald-500/5 border border-emerald-500/20 p-3 rounded-lg">
+                  <div className="bg-emerald-500/5 border border-emerald-500/20 p-3">
                     <p className="text-emerald-400 text-xs font-semibold mb-1">STRONG</p>
                     <p className="text-white text-sm">"According to a 2025 Salesforce survey, 73% of marketing teams now use generative AI tools in at least one campaign workflow."</p>
                   </div>
                 </div>
                 <div className="grid sm:grid-cols-2 gap-3">
-                  <div className="bg-red-500/5 border border-red-500/20 p-3 rounded-lg">
+                  <div className="bg-red-500/5 border border-red-500/20 p-3">
                     <p className="text-red-400 text-xs font-semibold mb-1">WEAK</p>
                     <p className="text-white text-sm">"Page speed is important for SEO."</p>
                   </div>
-                  <div className="bg-emerald-500/5 border border-emerald-500/20 p-3 rounded-lg">
+                  <div className="bg-emerald-500/5 border border-emerald-500/20 p-3">
                     <p className="text-emerald-400 text-xs font-semibold mb-1">STRONG</p>
                     <p className="text-white text-sm">"Google's Core Web Vitals data shows that pages loading in under 2.5 seconds have a 24% lower bounce rate than those exceeding 4 seconds."</p>
                   </div>
@@ -427,7 +427,7 @@ export default function WhatIsGEOPage() {
 
             <p>Your content cannot be cited if AI systems cannot access it. Technical GEO fundamentals include:</p>
 
-            <div className="bg-[#1b1b1b] p-6 rounded-xl border border-white/10 my-8">
+            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
               <h4 className="text-white font-semibold mb-4 flex items-center">
                 <Globe className="w-5 h-5 text-[#A3D1FF] mr-2" />
                 Technical Access Checklist
@@ -472,29 +472,29 @@ export default function WhatIsGEOPage() {
 
             <p>One of the most important findings from the GEO research is that optimization effectiveness varies by domain. Different strategies work better for different types of content:</p>
 
-            <div className="bg-[#1b1b1b] p-6 rounded-xl border border-white/10 my-8">
+            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
               <h4 className="text-white font-semibold mb-4 flex items-center">
                 <Layers className="w-5 h-5 text-[#A3D1FF] mr-2" />
                 GEO by Content Domain
               </h4>
               <div className="space-y-4">
-                <div className="bg-black/30 p-4 rounded-lg">
+                <div className="bg-black/30 p-4">
                   <p className="text-[#A3D1FF] font-semibold text-sm mb-2">Factual / Scientific Content</p>
                   <p className="text-white text-sm"><strong className="text-gray-300">Highest impact strategies:</strong> Authoritative citations, statistics, and technical fluency. Generative engines are especially citation-sensitive for factual claims where accuracy is critical.</p>
                 </div>
-                <div className="bg-black/30 p-4 rounded-lg">
+                <div className="bg-black/30 p-4">
                   <p className="text-[#A3D1FF] font-semibold text-sm mb-2">Opinion / Analysis Content</p>
                   <p className="text-white text-sm"><strong className="text-gray-300">Highest impact strategies:</strong> Expert quotes, unique perspectives, and clear authorship. For subjective topics, AI engines value identifiable expertise and named authorities.</p>
                 </div>
-                <div className="bg-black/30 p-4 rounded-lg">
+                <div className="bg-black/30 p-4">
                   <p className="text-[#A3D1FF] font-semibold text-sm mb-2">How-To / Instructional Content</p>
                   <p className="text-white text-sm"><strong className="text-gray-300">Highest impact strategies:</strong> Clear step-by-step structure, HowTo schema, and specific examples. AI engines extract procedural content most effectively when it follows explicit numbered or ordered patterns.</p>
                 </div>
-                <div className="bg-black/30 p-4 rounded-lg">
+                <div className="bg-black/30 p-4">
                   <p className="text-[#A3D1FF] font-semibold text-sm mb-2">Comparison / Review Content</p>
                   <p className="text-white text-sm"><strong className="text-gray-300">Highest impact strategies:</strong> Structured data tables, quantitative scoring, and balanced analysis. Generative engines prefer comparison content that presents information in extractable, parallel formats.</p>
                 </div>
-                <div className="bg-black/30 p-4 rounded-lg">
+                <div className="bg-black/30 p-4">
                   <p className="text-[#A3D1FF] font-semibold text-sm mb-2">Local / Niche Content</p>
                   <p className="text-white text-sm"><strong className="text-gray-300">Highest impact strategies:</strong> Specificity, local expertise signals, and unique firsthand information. For niche topics, being one of few high-quality sources dramatically increases citation probability.</p>
                 </div>
@@ -548,49 +548,49 @@ export default function WhatIsGEOPage() {
 
             <p>Use this framework to evaluate your existing content library for GEO readiness:</p>
 
-            <div className="bg-[#1b1b1b] p-6 rounded-xl border border-white/10 my-8">
+            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
               <h4 className="text-white font-semibold mb-4 flex items-center">
                 <BookOpen className="w-5 h-5 text-[#A3D1FF] mr-2" />
                 GEO Content Audit Scorecard
               </h4>
               <p className="text-white text-sm mb-4">For each piece of key content, score on a 0-3 scale across these dimensions:</p>
               <div className="space-y-3">
-                <div className="flex items-start gap-3 bg-black/30 p-3 rounded-lg">
+                <div className="flex items-start gap-3 bg-black/30 p-3">
                   <span className="text-[#A3D1FF] font-bold shrink-0">A.</span>
                   <div>
                     <p className="text-white font-semibold text-sm">Extractability</p>
                     <p className="text-white text-sm">Does the content lead with direct answers? Are headings descriptive? Can key claims be extracted without reading surrounding context?</p>
                   </div>
                 </div>
-                <div className="flex items-start gap-3 bg-black/30 p-3 rounded-lg">
+                <div className="flex items-start gap-3 bg-black/30 p-3">
                   <span className="text-[#A3D1FF] font-bold shrink-0">B.</span>
                   <div>
                     <p className="text-white font-semibold text-sm">Data Density</p>
                     <p className="text-white text-sm">Does the content include specific statistics, numbers, and quantitative evidence? Are claims supported with data rather than assertions?</p>
                   </div>
                 </div>
-                <div className="flex items-start gap-3 bg-black/30 p-3 rounded-lg">
+                <div className="flex items-start gap-3 bg-black/30 p-3">
                   <span className="text-[#A3D1FF] font-bold shrink-0">C.</span>
                   <div>
                     <p className="text-white font-semibold text-sm">Source Authority</p>
                     <p className="text-white text-sm">Does the content cite credible, named sources? Are claims backed by primary references rather than secondary summaries?</p>
                   </div>
                 </div>
-                <div className="flex items-start gap-3 bg-black/30 p-3 rounded-lg">
+                <div className="flex items-start gap-3 bg-black/30 p-3">
                   <span className="text-[#A3D1FF] font-bold shrink-0">D.</span>
                   <div>
                     <p className="text-white font-semibold text-sm">Uniqueness</p>
                     <p className="text-white text-sm">Does the content offer something that cannot be found on competing pages? Original data, novel frameworks, practitioner insights?</p>
                   </div>
                 </div>
-                <div className="flex items-start gap-3 bg-black/30 p-3 rounded-lg">
+                <div className="flex items-start gap-3 bg-black/30 p-3">
                   <span className="text-[#A3D1FF] font-bold shrink-0">E.</span>
                   <div>
                     <p className="text-white font-semibold text-sm">Schema Coverage</p>
                     <p className="text-white text-sm">Does the page have comprehensive structured data? Article, FAQ, Person/Organization schemas at minimum?</p>
                   </div>
                 </div>
-                <div className="flex items-start gap-3 bg-black/30 p-3 rounded-lg">
+                <div className="flex items-start gap-3 bg-black/30 p-3">
                   <span className="text-[#A3D1FF] font-bold shrink-0">F.</span>
                   <div>
                     <p className="text-white font-semibold text-sm">Freshness</p>
@@ -658,7 +658,7 @@ export default function WhatIsGEOPage() {
           <div className="mt-12 pt-8 border-t border-white/10">
             <h3 className="text-2xl font-semibold text-white mb-6">Related Articles</h3>
             <div className="grid sm:grid-cols-2 gap-6">
-              <div className="bg-[#1b1b1b] rounded-xl overflow-hidden border border-white/10 hover:border-[#A3D1FF] transition-all group">
+              <div className="bg-[#1b1b1b] overflow-hidden border border-white/10 hover:border-[#A3D1FF] transition-all group">
                 <div className="aspect-[16/9] overflow-hidden">
                   <img
                     src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=2000&q=80"
@@ -679,7 +679,7 @@ export default function WhatIsGEOPage() {
                 </div>
               </div>
 
-              <div className="bg-[#1b1b1b] rounded-xl overflow-hidden border border-white/10 hover:border-[#A3D1FF] transition-all group">
+              <div className="bg-[#1b1b1b] overflow-hidden border border-white/10 hover:border-[#A3D1FF] transition-all group">
                 <div className="aspect-[16/9] overflow-hidden">
                   <img
                     src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=2000&q=80"

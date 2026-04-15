@@ -104,7 +104,7 @@ export default function FeaturedWorkCarousel({
                       href={currentProject.liveUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 px-6 py-3 bg-white/10 backdrop-blur-sm text-white rounded-xl border border-white/20 hover:bg-white/20 transition-all font-semibold"
+                      className="inline-flex items-center gap-2 px-6 py-3 bg-white/10 backdrop-blur-sm text-white border border-white/20 hover:bg-white/20 transition-all font-semibold"
                       whileHover={{ scale: 1.05, y: -2 }}
                       whileTap={{ scale: 0.95 }}
                     >
@@ -115,7 +115,7 @@ export default function FeaturedWorkCarousel({
                   <motion.div whileHover={{ scale: 1.05, y: -2 }} whileTap={{ scale: 0.95 }}>
                     <Link
                       href={currentProject.caseStudy}
-                      className="inline-flex items-center gap-2 px-6 py-3 bg-[#A3D1FF] text-black rounded-xl hover:bg-[#A3D1FF]/90 transition-all font-semibold"
+                      className="inline-flex items-center gap-2 px-6 py-3 bg-[#A3D1FF] text-black hover:bg-[#A3D1FF]/90 transition-all font-semibold"
                     >
                       <span>Read Case Study</span>
                     </Link>

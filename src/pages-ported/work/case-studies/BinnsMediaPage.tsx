@@ -95,7 +95,7 @@ const BinnsMediaMasterStudy = () => {
           </div>
 
           <div className="lg:col-span-4 flex flex-col justify-end">
-            <div className="bg-[#111] border border-white/10 p-8 rounded-2xl backdrop-blur-sm">
+            <div className="bg-[#111] border border-white/10 p-8 backdrop-blur-sm">
               <h3 className="text-gray-500 text-xs font-bold uppercase tracking-widest mb-6">Verified Clutch Review</h3>
               <div className="space-y-6">
                 <div className="flex justify-between items-end border-b border-white/5 pb-4">
@@ -164,8 +164,8 @@ const BinnsMediaMasterStudy = () => {
               { icon: Zap, title: "Phased Launch", desc: "Successfully launched the landing page first to secure immediate presence while building the core platform." },
               { icon: Kanban, title: " Agile Workflow", desc: "Utilized Trello for transparent project tracking and sprint management." }
             ].map((card, i) => (
-              <div key={i} className="bg-[#111] p-8 rounded-2xl border border-white/5 hover:border-[#cc000a] transition-all group">
-                <div className="w-12 h-12 rounded-lg bg-[#cc000a]/10 flex items-center justify-center text-[#cc000a] mb-6 group-hover:bg-[#cc000a] group-hover:text-white transition-colors">
+              <div key={i} className="bg-[#111] p-8 border border-white/5 hover:border-[#cc000a] transition-all group">
+                <div className="w-12 h-12 bg-[#cc000a]/10 flex items-center justify-center text-[#cc000a] mb-6 group-hover:bg-[#cc000a] group-hover:text-white transition-colors">
                   <card.icon size={24} />
                 </div>
                 <h4 className="text-lg font-bold mb-3 text-white">{card.title}</h4>
@@ -188,7 +188,7 @@ const BinnsMediaMasterStudy = () => {
             <img 
               src={ASSETS.MOCKUPS.HERO_MAIN} 
               alt="Main Hero Interface" 
-              className="w-full h-full object-contain rounded-2xl" 
+              className="w-full h-full object-contain" 
             />
           </div>
 
@@ -197,7 +197,7 @@ const BinnsMediaMasterStudy = () => {
             <img 
               src={ASSETS.MOCKUPS.DARK_MODE} 
               alt="Dark Mode Interface" 
-              className="w-full h-full object-contain rounded-2xl" 
+              className="w-full h-full object-contain" 
             />
           </div>
 
@@ -206,7 +206,7 @@ const BinnsMediaMasterStudy = () => {
             <img 
               src={ASSETS.MOCKUPS.SQUARE_DETAIL_1} 
               alt="Typography Detail" 
-              className="w-full h-full object-contain rounded-2xl" 
+              className="w-full h-full object-contain" 
             />
           </div>
 
@@ -215,7 +215,7 @@ const BinnsMediaMasterStudy = () => {
             <img 
               src={ASSETS.MOCKUPS.SQUARE_DETAIL_2} 
               alt="Interface Detail" 
-              className="w-full h-full object-contain rounded-2xl" 
+              className="w-full h-full object-contain" 
             />
           </div>
 
@@ -226,7 +226,7 @@ const BinnsMediaMasterStudy = () => {
            <img 
               src={ASSETS.MOCKUPS.PLATFORM_OVERVIEW} 
               alt="Full Platform Overview" 
-              className="w-full h-auto object-contain rounded-2xl" 
+              className="w-full h-auto object-contain" 
             />
         </div>
 
@@ -247,7 +247,7 @@ const BinnsMediaMasterStudy = () => {
               <img 
                 src={ASSETS.MOCKUPS.MOBILE_VIEW} 
                 alt="Mobile Interface" 
-                className="w-full h-auto rounded-xl border border-white/10 shadow-2xl" 
+                className="w-full h-auto border border-white/10 shadow-2xl" 
               />
             </div>
           </div>
@@ -304,18 +304,18 @@ const BinnsMediaMasterStudy = () => {
 
               <div className="grid grid-cols-2 gap-4 mb-8">
                 {/* Primary Red */}
-                <div className="p-6 bg-[#cc000a] rounded-2xl flex flex-col justify-between h-40 shadow-[0_0_25px_rgba(204,0,10,0.3)]">
+                <div className="p-6 bg-[#cc000a] flex flex-col justify-between h-40 shadow-[0_0_25px_rgba(204,0,10,0.3)]">
                   <span className="text-white/50 text-xs font-mono">primary.DEFAULT</span>
                   <span className="text-white font-bold text-xl">#cc000a</span>
                 </div>
                 
                 {/* Dark & Light Variants */}
                 <div className="space-y-4">
-                  <div className="p-4 bg-[#990007] rounded-xl flex items-center justify-between">
+                  <div className="p-4 bg-[#990007] flex items-center justify-between">
                      <span className="text-white/50 text-xs font-mono">primary.dark</span>
                      <span className="text-white font-mono">#990007</span>
                   </div>
-                  <div className="p-4 bg-[#ff000d] rounded-xl flex items-center justify-between text-black">
+                  <div className="p-4 bg-[#ff000d] flex items-center justify-between text-black">
                      <span className="opacity-50 text-xs font-mono">primary.light</span>
                      <span className="font-bold font-mono">#ff000d</span>
                   </div>
@@ -337,7 +337,7 @@ const BinnsMediaMasterStudy = () => {
             <h3 className="text-4xl font-bold mb-8">Verified Impact</h3>
             
             <div className="space-y-6">
-              <div className="p-6 bg-[#111] rounded-2xl border border-white/5">
+              <div className="p-6 bg-[#111] border border-white/5">
                 <div className="flex gap-1 mb-2">
                    {[1,2,3,4,5].map(i => <Star key={i} size={16} className="fill-[#cc000a] text-[#cc000a]" />)}
                 </div>
@@ -345,7 +345,7 @@ const BinnsMediaMasterStudy = () => {
                 <p className="text-white text-sm">"The team has successfully completed specific parts of the website, including the landing page, by the agreed-upon deadlines."</p>
               </div>
               
-              <div className="p-6 bg-[#111] rounded-2xl border border-white/5">
+              <div className="p-6 bg-[#111] border border-white/5">
                  <div className="flex gap-1 mb-2">
                    {[1,2,3,4,5].map(i => <Star key={i} size={16} className="fill-[#cc000a] text-[#cc000a]" />)}
                 </div>
@@ -411,7 +411,7 @@ const BinnsMediaMasterStudy = () => {
             </h3>
             <div className="flex flex-wrap gap-2">
               {['React 18', 'Tailwind CSS', 'Vite', 'Framer Motion', 'ImageKit', 'Netlify', 'Cloudflare'].map(tech => (
-                <span key={tech} className="px-3 py-1.5 bg-white/5 border border-white/5 rounded-md text-gray-300 text-xs font-mono hover:border-[#cc000a] hover:text-white transition-colors cursor-default">
+                <span key={tech} className="px-3 py-1.5 bg-white/5 border border-white/5 text-gray-300 text-xs font-mono hover:border-[#cc000a] hover:text-white transition-colors cursor-default">
                   {tech}
                 </span>
               ))}

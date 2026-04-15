@@ -67,7 +67,7 @@ export default function MobileFirstDesignPrinciplesPage() {
             </div>
           </div>
           
-          <div className="aspect-[21/9] overflow-hidden rounded-xl mb-8">
+          <div className="aspect-[21/9] overflow-hidden mb-8">
             <img 
               src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=2000&q=80" 
               alt="Mobile-First Design" 
@@ -106,7 +106,7 @@ export default function MobileFirstDesignPrinciplesPage() {
             
             <p>Progressive enhancement aligns perfectly with mobile-first design because it ensures that the core experience works for everyone, regardless of device capabilities. This approach also tends to result in more performant websites since you're only loading the essentials by default and adding enhancements conditionally.</p>
             
-            <div className="bg-[#1b1b1b] p-6 rounded-xl border border-white/10 my-8">
+            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
               <h4 className="text-white font-semibold mb-2">Implementation Example</h4>
               <p className="text-gray-300 mb-4">Consider a product gallery:</p>
               <ul className="text-gray-300 list-disc pl-5 space-y-2">
@@ -127,7 +127,7 @@ export default function MobileFirstDesignPrinciplesPage() {
             
             <p>The key principle here is to identify the core content and functionality that users need, ensure it's immediately accessible, and then provide clear pathways to secondary content. This approach benefits users on all devices by creating more focused, purposeful experiences.</p>
             
-            <div className="bg-[#1b1b1b] p-6 rounded-xl border border-white/10 my-8">
+            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
               <h4 className="text-white font-semibold mb-2">Case Study: Wellness TCYS</h4>
               <p className="text-gray-300">When redesigning the Wellness TCYS website, we conducted user interviews to identify the most critical information for potential clients. We discovered that service descriptions and booking availability were the top priorities, while testimonials and practitioner bios, while important, were secondary. This insight guided our content hierarchy, resulting in a significant increase in booking conversions on mobile devices.</p>
             </div>
@@ -144,7 +144,7 @@ export default function MobileFirstDesignPrinciplesPage() {
             
             <p>Touch-friendly design isn't just about making elements big enough to tap—it's about creating an interface that feels natural and intuitive on touch devices while still working well with mouse and keyboard navigation.</p>
             
-            <div className="bg-[#1b1b1b] p-6 rounded-xl border border-white/10 my-8">
+            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
               <h4 className="text-white font-semibold mb-2">Implementation Tip</h4>
               <p className="text-gray-300">When designing navigation menus, ensure that dropdown targets are large enough to tap easily but also include appropriate touch feedback. A common mistake is making the tap target too small or failing to provide clear visual feedback when a menu item is activated.</p>
             </div>
@@ -161,7 +161,7 @@ export default function MobileFirstDesignPrinciplesPage() {
             
             <p>Performance isn't just a technical concern—it directly impacts user experience and conversion rates. Studies consistently show that faster sites have lower bounce rates and higher engagement, especially on mobile devices where users are often more impatient.</p>
             
-            <div className="bg-[#1b1b1b] p-6 rounded-xl border border-white/10 my-8">
+            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
               <h4 className="text-white font-semibold mb-2">Case Study: Binns Media Group</h4>
               <p className="text-gray-300">For the Binns Media Group platform, we implemented a comprehensive performance optimization strategy that reduced initial load time from 4.2 seconds to 1.8 seconds on 3G connections. This improvement led to a significant increase in mobile engagement and a reduction in bounce rate.</p>
             </div>
@@ -178,7 +178,7 @@ export default function MobileFirstDesignPrinciplesPage() {
             
             <p>The goal is to create designs that respond not just to different screen sizes but to different viewing contexts. This approach ensures that content remains accessible and readable regardless of how it's being viewed.</p>
             
-            <div className="bg-[#1b1b1b] p-6 rounded-xl border border-white/10 my-8">
+            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
               <h4 className="text-white font-semibold mb-2">Implementation Example</h4>
               <p className="text-gray-300 mb-4">For fluid typography, consider using a calculation like this:</p>
               <pre className="text-xs text-gray-300 overflow-x-auto">
@@ -212,7 +212,7 @@ font-size: clamp(1rem, 0.5rem + 2vw, 1.5rem);`}
             
             <p>Testing should be an ongoing process, not a one-time event at the end of development. By incorporating testing throughout the design and development process, you can identify and address issues early, when they're easier and less expensive to fix.</p>
             
-            <div className="bg-[#1b1b1b] p-6 rounded-xl border border-white/10 my-8">
+            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
               <h4 className="text-white font-semibold mb-2">Testing Tip</h4>
               <p className="text-gray-300">Create a device testing matrix that includes at minimum: a small Android phone, a large Android phone, an iPhone, and a tablet. For each device, test both portrait and landscape orientations. This basic matrix will catch the majority of layout and interaction issues.</p>
             </div>
@@ -263,7 +263,7 @@ font-size: clamp(1rem, 0.5rem + 2vw, 1.5rem);`}
           <div className="mt-12 pt-8 border-t border-white/10">
             <h3 className="text-2xl font-semibold text-white mb-6">Related Articles</h3>
             <div className="grid sm:grid-cols-2 gap-6">
-              <div className="bg-[#1b1b1b] rounded-xl overflow-hidden border border-white/10 hover:border-[#A3D1FF] transition-all group">
+              <div className="bg-[#1b1b1b] overflow-hidden border border-white/10 hover:border-[#A3D1FF] transition-all group">
                 <div className="aspect-[16/9] overflow-hidden">
                   <img 
                     src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=2000&q=80" 
@@ -284,7 +284,7 @@ font-size: clamp(1rem, 0.5rem + 2vw, 1.5rem);`}
                 </div>
               </div>
               
-              <div className="bg-[#1b1b1b] rounded-xl overflow-hidden border border-white/10 hover:border-[#A3D1FF] transition-all group">
+              <div className="bg-[#1b1b1b] overflow-hidden border border-white/10 hover:border-[#A3D1FF] transition-all group">
                 <div className="aspect-[16/9] overflow-hidden">
                   <img 
                     src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=2000&q=80" 

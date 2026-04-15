@@ -14,10 +14,10 @@ function FeatureCard({ icon: Icon, title, description }: {
   description: string;
 }) {
   return (
-    <div className="bg-[#1b1b1b] p-8 rounded-xl border border-white/10 hover:border-[#A3D1FF] transition-all group">
+    <div className="bg-[#1b1b1b] p-8 border border-white/10 hover:border-[#A3D1FF] transition-all group">
       <div className="relative mb-6">
         <div className="absolute inset-0 bg-[#A3D1FF]/20 blur-xl rounded-full"></div>
-        <div className="bg-[#A3D1FF]/10 p-4 rounded-xl relative">
+        <div className="bg-[#A3D1FF]/10 p-4 relative">
           <Icon className="w-8 h-8 text-[#A3D1FF] group-hover:scale-110 transition-transform" />
         </div>
       </div>
@@ -34,7 +34,7 @@ function StatCard({ value, label, icon: Icon, delay = 0 }: { value: string; labe
   return (
     <motion.div
       ref={ref}
-      className="bg-gradient-to-br from-[#1b1b1b] to-[#0a0a0a] p-8 rounded-xl border border-white/10 hover:border-[#A3D1FF] transition-all text-center group relative overflow-hidden"
+      className="bg-gradient-to-br from-[#1b1b1b] to-[#0a0a0a] p-8 border border-white/10 hover:border-[#A3D1FF] transition-all text-center group relative overflow-hidden"
       initial={{ opacity: 0, y: 20 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.6, delay }}
@@ -43,7 +43,7 @@ function StatCard({ value, label, icon: Icon, delay = 0 }: { value: string; labe
       <div className="absolute inset-0 bg-gradient-to-br from-[#A3D1FF]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
       {Icon && (
         <div className="mb-4 flex justify-center">
-          <div className="p-3 bg-[#A3D1FF]/10 rounded-lg">
+          <div className="p-3 bg-[#A3D1FF]/10">
             <Icon className="w-6 h-6 text-[#A3D1FF]" />
           </div>
         </div>
@@ -99,7 +99,7 @@ function MetricVisualization({ label, before, after, unit = '%' }: { label: stri
   return (
     <motion.div
       ref={ref}
-      className="bg-[#1b1b1b] p-6 rounded-xl border border-white/10"
+      className="bg-[#1b1b1b] p-6 border border-white/10"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
@@ -284,13 +284,13 @@ export default function AutoMarginPage() {
 
           <div className="grid md:grid-cols-3 gap-8 mb-16">
             <motion.div
-              className="bg-gradient-to-br from-[#1b1b1b] to-[#0a0a0a] p-8 rounded-xl border border-white/10"
+              className="bg-gradient-to-br from-[#1b1b1b] to-[#0a0a0a] p-8 border border-white/10"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
               viewport={{ once: true }}
             >
-              <div className="w-12 h-12 bg-[#A3D1FF]/10 rounded-lg flex items-center justify-center mb-4">
+              <div className="w-12 h-12 bg-[#A3D1FF]/10 flex items-center justify-center mb-4">
                 <Target className="w-6 h-6 text-[#A3D1FF]" />
               </div>
               <h3 className="text-xl font-bold text-white mb-3">The Challenge</h3>
@@ -298,13 +298,13 @@ export default function AutoMarginPage() {
             </motion.div>
 
             <motion.div
-              className="bg-gradient-to-br from-[#1b1b1b] to-[#0a0a0a] p-8 rounded-xl border border-white/10"
+              className="bg-gradient-to-br from-[#1b1b1b] to-[#0a0a0a] p-8 border border-white/10"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              <div className="w-12 h-12 bg-[#A3D1FF]/10 rounded-lg flex items-center justify-center mb-4">
+              <div className="w-12 h-12 bg-[#A3D1FF]/10 flex items-center justify-center mb-4">
                 <Zap className="w-6 h-6 text-[#A3D1FF]" />
               </div>
               <h3 className="text-xl font-bold text-white mb-3">The Solution</h3>
@@ -312,13 +312,13 @@ export default function AutoMarginPage() {
             </motion.div>
 
             <motion.div
-              className="bg-gradient-to-br from-[#1b1b1b] to-[#0a0a0a] p-8 rounded-xl border border-white/10"
+              className="bg-gradient-to-br from-[#1b1b1b] to-[#0a0a0a] p-8 border border-white/10"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
               viewport={{ once: true }}
             >
-              <div className="w-12 h-12 bg-[#A3D1FF]/10 rounded-lg flex items-center justify-center mb-4">
+              <div className="w-12 h-12 bg-[#A3D1FF]/10 flex items-center justify-center mb-4">
                 <TrendingUp className="w-6 h-6 text-[#A3D1FF]" />
               </div>
               <h3 className="text-xl font-bold text-white mb-3">The Impact</h3>
@@ -355,7 +355,7 @@ export default function AutoMarginPage() {
               <p className="text-gray-300 mb-4 leading-relaxed">
                 As the lead designer and developer, I was responsible for the entire product lifecycle—from initial market research and user interviews to final implementation and deployment. This comprehensive involvement ensured a cohesive vision throughout.
               </p>
-              <div className="bg-[#0a0a0a] p-6 rounded-xl border border-white/10">
+              <div className="bg-[#0a0a0a] p-6 border border-white/10">
                 <p className="text-[#A3D1FF] font-semibold mb-2">Project Duration</p>
                 <p className="text-white text-2xl font-bold mb-4">6 Months</p>
                 <p className="text-white text-sm">From concept to production launch with continuous iteration based on user feedback</p>
@@ -427,7 +427,7 @@ export default function AutoMarginPage() {
       {/* Testimonial */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <HoverCard3D className="bg-[#1b1b1b] p-8 rounded-xl border-l-4 border-[#0051a3]">
+          <HoverCard3D className="bg-[#1b1b1b] p-8 border-l-4 border-[#0051a3]">
             <div className="flex items-center gap-8">
               <img 
                 src="https://i.imgur.com/3DtZKd7.jpeg"
@@ -574,7 +574,7 @@ export default function AutoMarginPage() {
 
           <div className="grid md:grid-cols-2 gap-8">
             <motion.div
-              className="bg-gradient-to-br from-[#0a0a0a] to-[#1b1b1b] p-8 rounded-2xl border border-white/10 hover:border-[#A3D1FF]/50 transition-all group"
+              className="bg-gradient-to-br from-[#0a0a0a] to-[#1b1b1b] p-8 border border-white/10 hover:border-[#A3D1FF]/50 transition-all group"
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
@@ -582,7 +582,7 @@ export default function AutoMarginPage() {
               whileHover={{ scale: 1.02 }}
             >
               <div className="flex items-start gap-4 mb-6">
-                <div className="p-3 bg-[#A3D1FF]/10 rounded-xl group-hover:bg-[#A3D1FF]/20 transition-colors">
+                <div className="p-3 bg-[#A3D1FF]/10 group-hover:bg-[#A3D1FF]/20 transition-colors">
                   <Activity className="w-8 h-8 text-[#A3D1FF]" />
                 </div>
                 <div>
@@ -607,7 +607,7 @@ export default function AutoMarginPage() {
             </motion.div>
 
             <motion.div
-              className="bg-gradient-to-br from-[#0a0a0a] to-[#1b1b1b] p-8 rounded-2xl border border-white/10 hover:border-[#A3D1FF]/50 transition-all group"
+              className="bg-gradient-to-br from-[#0a0a0a] to-[#1b1b1b] p-8 border border-white/10 hover:border-[#A3D1FF]/50 transition-all group"
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
@@ -615,7 +615,7 @@ export default function AutoMarginPage() {
               whileHover={{ scale: 1.02 }}
             >
               <div className="flex items-start gap-4 mb-6">
-                <div className="p-3 bg-[#A3D1FF]/10 rounded-xl group-hover:bg-[#A3D1FF]/20 transition-colors">
+                <div className="p-3 bg-[#A3D1FF]/10 group-hover:bg-[#A3D1FF]/20 transition-colors">
                   <DollarSign className="w-8 h-8 text-[#A3D1FF]" />
                 </div>
                 <div>
@@ -640,7 +640,7 @@ export default function AutoMarginPage() {
             </motion.div>
 
             <motion.div
-              className="bg-gradient-to-br from-[#0a0a0a] to-[#1b1b1b] p-8 rounded-2xl border border-white/10 hover:border-[#A3D1FF]/50 transition-all group"
+              className="bg-gradient-to-br from-[#0a0a0a] to-[#1b1b1b] p-8 border border-white/10 hover:border-[#A3D1FF]/50 transition-all group"
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
@@ -648,7 +648,7 @@ export default function AutoMarginPage() {
               whileHover={{ scale: 1.02 }}
             >
               <div className="flex items-start gap-4 mb-6">
-                <div className="p-3 bg-[#A3D1FF]/10 rounded-xl group-hover:bg-[#A3D1FF]/20 transition-colors">
+                <div className="p-3 bg-[#A3D1FF]/10 group-hover:bg-[#A3D1FF]/20 transition-colors">
                   <Layers className="w-8 h-8 text-[#A3D1FF]" />
                 </div>
                 <div>
@@ -673,7 +673,7 @@ export default function AutoMarginPage() {
             </motion.div>
 
             <motion.div
-              className="bg-gradient-to-br from-[#0a0a0a] to-[#1b1b1b] p-8 rounded-2xl border border-white/10 hover:border-[#A3D1FF]/50 transition-all group"
+              className="bg-gradient-to-br from-[#0a0a0a] to-[#1b1b1b] p-8 border border-white/10 hover:border-[#A3D1FF]/50 transition-all group"
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
@@ -681,7 +681,7 @@ export default function AutoMarginPage() {
               whileHover={{ scale: 1.02 }}
             >
               <div className="flex items-start gap-4 mb-6">
-                <div className="p-3 bg-[#A3D1FF]/10 rounded-xl group-hover:bg-[#A3D1FF]/20 transition-colors">
+                <div className="p-3 bg-[#A3D1FF]/10 group-hover:bg-[#A3D1FF]/20 transition-colors">
                   <BarChart3 className="w-8 h-8 text-[#A3D1FF]" />
                 </div>
                 <div>
@@ -762,7 +762,7 @@ export default function AutoMarginPage() {
 
           <div className="grid md:grid-cols-3 gap-8">
             <motion.div
-              className="bg-gradient-to-br from-[#0a0a0a] to-black p-8 rounded-xl border border-white/10"
+              className="bg-gradient-to-br from-[#0a0a0a] to-black p-8 border border-white/10"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
@@ -774,7 +774,7 @@ export default function AutoMarginPage() {
             </motion.div>
 
             <motion.div
-              className="bg-gradient-to-br from-[#0a0a0a] to-black p-8 rounded-xl border border-white/10"
+              className="bg-gradient-to-br from-[#0a0a0a] to-black p-8 border border-white/10"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
@@ -786,7 +786,7 @@ export default function AutoMarginPage() {
             </motion.div>
 
             <motion.div
-              className="bg-gradient-to-br from-[#0a0a0a] to-black p-8 rounded-xl border border-white/10"
+              className="bg-gradient-to-br from-[#0a0a0a] to-black p-8 border border-white/10"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
@@ -816,19 +816,19 @@ export default function AutoMarginPage() {
             AutoMarginX continues to innovate with upcoming features aimed at further revolutionizing the dealership industry:
           </motion.p>
           <div className="grid md:grid-cols-3 gap-8">
-            <HoverCard3D className="bg-[#1b1b1b] p-6 rounded-xl border border-white/10">
+            <HoverCard3D className="bg-[#1b1b1b] p-6 border border-white/10">
               <h3 className="text-xl font-bold text-white mb-4 tracking-tight">Predictive Analytics</h3>
               <p className="text-gray-300">
                 AI-powered tools to forecast market trends and customer demand, enabling proactive decision-making.
               </p>
             </HoverCard3D>
-            <HoverCard3D className="bg-[#1b1b1b] p-6 rounded-xl border border-white/10">
+            <HoverCard3D className="bg-[#1b1b1b] p-6 border border-white/10">
               <h3 className="text-xl font-bold text-white mb-4 tracking-tight">Automated Reporting</h3>
               <p className="text-gray-300">
                 Streamlined reporting features for managers, reducing manual work and improving data accessibility.
               </p>
             </HoverCard3D>
-            <HoverCard3D className="bg-[#1b1b1b] p-6 rounded-xl border border-white/10">
+            <HoverCard3D className="bg-[#1b1b1b] p-6 border border-white/10">
               <h3 className="text-xl font-bold text-white mb-4 tracking-tight">AR/VR Integration</h3>
               <p className="text-gray-300">
                 Exploring how AR/VR can be used to visualize vehicle inventories and enhance customer engagement.

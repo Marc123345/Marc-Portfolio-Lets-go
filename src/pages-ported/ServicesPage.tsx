@@ -26,7 +26,7 @@ export default function ServicesPage() {
             <li key={s.slug}>
               <Link
                 href={`/services/${s.slug}`}
-                className="block p-6 rounded-lg border border-white/10 hover:border-[#A3D1FF] hover:bg-white/5 transition-all"
+                className="block p-6 border border-white/10 hover:border-[#A3D1FF] hover:bg-white/5 transition-all"
               >
                 <span className="text-lg font-medium">{s.label}</span>
               </Link>

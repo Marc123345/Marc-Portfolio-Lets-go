@@ -96,7 +96,7 @@ function PressCard({ item }: { item: PressItem }) {
   };
 
   return (
-    <HoverCard3D className={`bg-[#1b1b1b] rounded-xl overflow-hidden border border-white/10 hover:border-[#A3D1FF] transition-all group h-full ${item.featured ? 'border-[#A3D1FF]/50' : ''}`}>
+    <HoverCard3D className={`bg-[#1b1b1b] overflow-hidden border border-white/10 hover:border-[#A3D1FF] transition-all group h-full ${item.featured ? 'border-[#A3D1FF]/50' : ''}`}>
       {item.featured && (
         <div className="absolute -top-3 left-4 bg-[#A3D1FF] text-black px-3 py-1 rounded-full text-xs font-medium z-10">
           Featured
@@ -164,13 +164,13 @@ export default function PressPage() {
       <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8 bg-black">
         <div className="max-w-7xl mx-auto">
           <TextReveal>
-            <h1 className="font-heading text-[clamp(2.2rem,4vw,3rem)] font-semibold tracking-[-0.01em] text-white leading-[1.15] mb-6">
-              Press & Media Coverage
+            <h1
+              className="text-[clamp(2.75rem,7vw,6rem)] tracking-[-0.03em] text-white leading-[0.95] mb-6"
+              style={{ fontFamily: "Georgia, 'Times New Roman', serif", fontWeight: 400 }}
+            >
+              Press & <em className="italic text-[#A3D1FF]">recognition.</em>
             </h1>
-            <h2 className="font-body text-xl sm:text-2xl text-[#A3D1FF] mb-6">
-              Recognition & Industry Features
-            </h2>
-            <p className="font-body text-xl leading-[1.7] text-white max-w-3xl">
+            <p className="text-xl leading-[1.5] text-white/70 max-w-3xl">
               My work has been recognized by leading industry publications and platforms, showcasing the impact of my design and development solutions.
             </p>
           </TextReveal>
@@ -228,7 +228,7 @@ export default function PressPage() {
           
           <div className="grid md:grid-cols-4 gap-6">
             <motion.div 
-              className="bg-[#2d3035] p-6 rounded-xl border border-white/10 hover:border-[#A3D1FF] transition-all text-center group"
+              className="bg-[#2d3035] p-6 border border-white/10 hover:border-[#A3D1FF] transition-all text-center group"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
@@ -240,7 +240,7 @@ export default function PressPage() {
             </motion.div>
             
             <motion.div 
-              className="bg-[#2d3035] p-6 rounded-xl border border-white/10 hover:border-[#A3D1FF] transition-all text-center group"
+              className="bg-[#2d3035] p-6 border border-white/10 hover:border-[#A3D1FF] transition-all text-center group"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
@@ -252,7 +252,7 @@ export default function PressPage() {
             </motion.div>
             
             <motion.div 
-              className="bg-[#2d3035] p-6 rounded-xl border border-white/10 hover:border-[#A3D1FF] transition-all text-center group"
+              className="bg-[#2d3035] p-6 border border-white/10 hover:border-[#A3D1FF] transition-all text-center group"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
@@ -264,7 +264,7 @@ export default function PressPage() {
             </motion.div>
             
             <motion.div 
-              className="bg-[#2d3035] p-6 rounded-xl border border-white/10 hover:border-[#A3D1FF] transition-all text-center group"
+              className="bg-[#2d3035] p-6 border border-white/10 hover:border-[#A3D1FF] transition-all text-center group"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
@@ -324,7 +324,7 @@ export default function PressPage() {
               <img
                 src="https://ik.imagekit.io/qcvroy8xpd/PW8VUKH.png?updatedAt=1759693058055&tr=f-webp"
                 alt="Marc Friedman - Professional headshot for media use"
-                className="rounded-xl shadow-2xl hover:scale-105 transition-transform duration-500"
+                className="shadow-2xl hover:scale-105 transition-transform duration-500"
               />
             </div>
           </div>

@@ -11,7 +11,7 @@ export default function ThankYouPage() {
         <p className="text-white mb-8">Your message has been received. I&apos;ll get back to you within 24 hours.</p>
         <a
           href="/"
-          className="inline-flex items-center px-6 py-3 bg-[#A3D1FF] text-black rounded-lg hover:bg-[#92bce6] transition-colors"
+          className="inline-flex items-center px-6 py-3 bg-[#A3D1FF] text-black hover:bg-[#92bce6] transition-colors"
         >
           Return Home
         </a>

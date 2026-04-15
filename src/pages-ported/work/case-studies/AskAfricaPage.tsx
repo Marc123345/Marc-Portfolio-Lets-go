@@ -75,7 +75,7 @@ export default function AskAfricaPage() {
               <img
                 src={HERO_IMAGE}
                 alt="Ask Africa website showcase"
-                className="w-full h-auto rounded-2xl"
+                className="w-full h-auto"
               />
             </div>
           </div>
@@ -125,8 +125,8 @@ export default function AskAfricaPage() {
               { icon: Lightbulb, title: "Trust Building", desc: "Visual design and content flow that establishes immediate credibility with enterprise clients." },
               { icon: Globe, title: "Responsive & Fast", desc: "Optimized for all devices with performance-first architecture for African markets." }
             ].map((card, i) => (
-              <div key={i} className="bg-[#111] p-8 rounded-2xl border border-white/5 hover:border-[#f59e0b] transition-all group">
-                <div className="w-12 h-12 rounded-lg bg-[#f59e0b]/10 flex items-center justify-center text-[#f59e0b] mb-6 group-hover:bg-[#f59e0b] group-hover:text-black transition-colors">
+              <div key={i} className="bg-[#111] p-8 border border-white/5 hover:border-[#f59e0b] transition-all group">
+                <div className="w-12 h-12 bg-[#f59e0b]/10 flex items-center justify-center text-[#f59e0b] mb-6 group-hover:bg-[#f59e0b] group-hover:text-black transition-colors">
                   <card.icon size={24} />
                 </div>
                 <h4 className="text-lg font-bold mb-3 text-white">{card.title}</h4>
@@ -143,7 +143,7 @@ export default function AskAfricaPage() {
           <img
             src={HERO_IMAGE}
             alt="Ask Africa full website view"
-            className="w-full h-auto object-contain rounded-2xl"
+            className="w-full h-auto object-contain"
           />
         </div>
       </section>
@@ -169,7 +169,7 @@ export default function AskAfricaPage() {
             </h3>
             <div className="flex flex-wrap gap-2">
               {['React', 'Tailwind CSS', 'Vite', 'Framer Motion', 'Netlify'].map(tech => (
-                <span key={tech} className="px-3 py-1.5 bg-white/5 border border-white/5 rounded-md text-gray-300 text-xs font-mono hover:border-[#f59e0b] hover:text-white transition-colors cursor-default">
+                <span key={tech} className="px-3 py-1.5 bg-white/5 border border-white/5 text-gray-300 text-xs font-mono hover:border-[#f59e0b] hover:text-white transition-colors cursor-default">
                   {tech}
                 </span>
               ))}

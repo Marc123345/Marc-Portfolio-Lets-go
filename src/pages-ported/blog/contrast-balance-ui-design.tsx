@@ -67,7 +67,7 @@ export default function ContrastBalanceUIDesignPage() {
             </div>
           </div>
           
-          <div className="aspect-[21/9] overflow-hidden rounded-xl mb-8">
+          <div className="aspect-[21/9] overflow-hidden mb-8">
             <img 
               src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=2000&q=80" 
               alt="Contrast and Balance in UI Design - visual representation of light and dark interface elements" 
@@ -103,7 +103,7 @@ export default function ContrastBalanceUIDesignPage() {
             
             <p>However, meeting minimum requirements is just the starting point. Exceptional interfaces go beyond compliance to create contrast relationships that enhance the overall user experience.</p>
             
-            <div className="bg-[#1b1b1b] p-6 rounded-xl border border-white/10 my-8">
+            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
               <h4 className="text-white font-semibold mb-2 flex items-center">
                 <Eye className="w-5 h-5 text-[#A3D1FF] mr-2" />
                 Practical Contrast Testing
@@ -154,7 +154,7 @@ export default function ContrastBalanceUIDesignPage() {
               <li><strong>Hierarchy Creation:</strong> Use different stroke weights and contrasts to establish visual importance</li>
             </ul>
             
-            <div className="bg-[#1b1b1b] p-6 rounded-xl border border-white/10 my-8">
+            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
               <h4 className="text-white font-semibold mb-2">Stroke Contrast Implementation</h4>
               <pre className="text-xs text-gray-300 overflow-x-auto">
 {`:root {
@@ -201,7 +201,7 @@ export default function ContrastBalanceUIDesignPage() {
             
             <p>The key to effective surface contrast is subtlety. Large contrast differences between surfaces can create visual chaos, while too little contrast fails to provide the necessary structure. The goal is to create just enough differentiation to support the interface's information architecture.</p>
             
-            <div className="bg-[#1b1b1b] p-6 rounded-xl border border-white/10 my-8">
+            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
               <h4 className="text-white font-semibold mb-2">Case Study: AutoMarginX Dashboard</h4>
               <p className="text-gray-300">In the AutoMarginX platform, we used a carefully calibrated surface contrast system to distinguish between different data visualization layers. The main dashboard used a dark base surface, data cards used a slightly lighter surface, and active/selected states used an even lighter surface. This created clear visual hierarchy without overwhelming users with stark contrasts.</p>
             </div>
@@ -229,7 +229,7 @@ export default function ContrastBalanceUIDesignPage() {
               <li><strong>Strategic Color Usage:</strong> Use color sparingly and purposefully to maintain clarity and focus</li>
             </ul>
             
-            <div className="bg-[#1b1b1b] p-6 rounded-xl border border-white/10 my-8">
+            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
               <h4 className="text-white font-semibold mb-2">Light Theme Color System</h4>
               <pre className="text-xs text-gray-300 overflow-x-auto">
 {`:root[data-theme="light"] {
@@ -270,7 +270,7 @@ export default function ContrastBalanceUIDesignPage() {
             
             <p>Dark themes aren't just inverted light themes—they require their own design considerations and optimization strategies. The goal is to create interfaces that feel comfortable for extended use while maintaining all the functionality and clarity of their light counterparts.</p>
             
-            <div className="bg-[#1b1b1b] p-6 rounded-xl border border-white/10 my-8">
+            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
               <h4 className="text-white font-semibold mb-2">Dark Theme Color System</h4>
               <pre className="text-xs text-gray-300 overflow-x-auto">
 {`:root[data-theme="dark"] {
@@ -310,7 +310,7 @@ export default function ContrastBalanceUIDesignPage() {
               <li><strong>User Preference Respect:</strong> Honor user preferences for high contrast modes and reduced motion</li>
             </ul>
             
-            <div className="bg-[#1b1b1b] p-6 rounded-xl border border-white/10 my-8">
+            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
               <h4 className="text-white font-semibold mb-2">Adaptive Contrast Implementation</h4>
               <pre className="text-xs text-gray-300 overflow-x-auto">
 {`/* Respect user preferences for high contrast */
@@ -372,7 +372,7 @@ export default function ContrastBalanceUIDesignPage() {
               <li><strong>Smart Overlays:</strong> Use intelligent overlay systems that ensure text readability over any background</li>
             </ul>
             
-            <div className="bg-[#1b1b1b] p-6 rounded-xl border border-white/10 my-8">
+            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
               <h4 className="text-white font-semibold mb-2">Dynamic Overlay Example</h4>
               <pre className="text-xs text-gray-300 overflow-x-auto">
 {`.dynamic-overlay {
@@ -484,7 +484,7 @@ export default function ContrastBalanceUIDesignPage() {
               <li><strong>Disabled State:</strong> Obvious indication that the element is not interactive</li>
             </ul>
             
-            <div className="bg-[#1b1b1b] p-6 rounded-xl border border-white/10 my-8">
+            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
               <h4 className="text-white font-semibold mb-2">Interactive State System</h4>
               <pre className="text-xs text-gray-300 overflow-x-auto">
 {`.button {
@@ -618,7 +618,7 @@ export default function ContrastBalanceUIDesignPage() {
           <div className="mt-12 pt-8 border-t border-white/10">
             <h3 className="text-2xl font-semibold text-white mb-6">Related Articles</h3>
             <div className="grid sm:grid-cols-2 gap-6">
-              <div className="bg-[#1b1b1b] rounded-xl overflow-hidden border border-white/10 hover:border-[#A3D1FF] transition-all group">
+              <div className="bg-[#1b1b1b] overflow-hidden border border-white/10 hover:border-[#A3D1FF] transition-all group">
                 <div className="aspect-[16/9] overflow-hidden">
                   <img 
                     src="https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=2000&q=80" 
@@ -639,7 +639,7 @@ export default function ContrastBalanceUIDesignPage() {
                 </div>
               </div>
               
-              <div className="bg-[#1b1b1b] rounded-xl overflow-hidden border border-white/10 hover:border-[#A3D1FF] transition-all group">
+              <div className="bg-[#1b1b1b] overflow-hidden border border-white/10 hover:border-[#A3D1FF] transition-all group">
                 <div className="aspect-[16/9] overflow-hidden">
                   <img 
                     src="https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?auto=format&fit=crop&w=2000&q=80" 

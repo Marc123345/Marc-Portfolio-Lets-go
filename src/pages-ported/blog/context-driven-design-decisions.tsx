@@ -70,7 +70,7 @@ export default function ContextDrivenDesignDecisionsPage() {
             </div>
           </div>
 
-          <div className="aspect-[21/9] overflow-hidden rounded-xl mb-8">
+          <div className="aspect-[21/9] overflow-hidden mb-8">
             <img
               src="/generated-1770282657147-xuhu1.png"
               alt="Context in UX/UI Design"
@@ -88,7 +88,7 @@ export default function ContextDrivenDesignDecisionsPage() {
               I've mentored dozens of junior designers, and I keep seeing the same mistake: they learn design patterns, master Figma, study color theory, but when it comes to real projects, they freeze. Why? Because they're missing the most important skill: understanding context.
             </p>
 
-            <div className="bg-[#1a2332]/50 border border-[#A3D1FF]/20 rounded-xl p-8 my-12">
+            <div className="bg-[#1a2332]/50 border border-[#A3D1FF]/20 p-8 my-12">
               <h3 className="text-2xl font-bold text-white mb-4 flex items-center gap-3">
                 <Lightbulb className="w-6 h-6 text-[#A3D1FF]" />
                 The Core Problem
@@ -112,14 +112,14 @@ export default function ContextDrivenDesignDecisionsPage() {
 
             <div className="space-y-8 my-12">
               <motion.div
-                className="bg-[#1a2332]/30 border border-white/10 rounded-xl p-6"
+                className="bg-[#1a2332]/30 border border-white/10 p-6"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5 }}
               >
                 <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-[#A3D1FF]/10 rounded-lg flex items-center justify-center">
+                  <div className="flex-shrink-0 w-12 h-12 bg-[#A3D1FF]/10 flex items-center justify-center">
                     <Users className="w-6 h-6 text-[#A3D1FF]" />
                   </div>
                   <div>
@@ -137,14 +137,14 @@ export default function ContextDrivenDesignDecisionsPage() {
               </motion.div>
 
               <motion.div
-                className="bg-[#1a2332]/30 border border-white/10 rounded-xl p-6"
+                className="bg-[#1a2332]/30 border border-white/10 p-6"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.1 }}
               >
                 <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-[#A3D1FF]/10 rounded-lg flex items-center justify-center">
+                  <div className="flex-shrink-0 w-12 h-12 bg-[#A3D1FF]/10 flex items-center justify-center">
                     <Target className="w-6 h-6 text-[#A3D1FF]" />
                   </div>
                   <div>
@@ -162,14 +162,14 @@ export default function ContextDrivenDesignDecisionsPage() {
               </motion.div>
 
               <motion.div
-                className="bg-[#1a2332]/30 border border-white/10 rounded-xl p-6"
+                className="bg-[#1a2332]/30 border border-white/10 p-6"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.2 }}
               >
                 <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-[#A3D1FF]/10 rounded-lg flex items-center justify-center">
+                  <div className="flex-shrink-0 w-12 h-12 bg-[#A3D1FF]/10 flex items-center justify-center">
                     <Code className="w-6 h-6 text-[#A3D1FF]" />
                   </div>
                   <div>
@@ -187,14 +187,14 @@ export default function ContextDrivenDesignDecisionsPage() {
               </motion.div>
 
               <motion.div
-                className="bg-[#1a2332]/30 border border-white/10 rounded-xl p-6"
+                className="bg-[#1a2332]/30 border border-white/10 p-6"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.3 }}
               >
                 <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-[#A3D1FF]/10 rounded-lg flex items-center justify-center">
+                  <div className="flex-shrink-0 w-12 h-12 bg-[#A3D1FF]/10 flex items-center justify-center">
                     <Map className="w-6 h-6 text-[#A3D1FF]" />
                   </div>
                   <div>
@@ -219,7 +219,7 @@ export default function ContextDrivenDesignDecisionsPage() {
             </p>
 
             <div className="grid md:grid-cols-2 gap-6 my-8">
-              <div className="bg-[#1a2332]/30 border border-green-500/30 rounded-xl p-6">
+              <div className="bg-[#1a2332]/30 border border-green-500/30 p-6">
                 <h4 className="text-lg font-bold text-white mb-3 flex items-center gap-2">
                   <CheckCircle className="w-5 h-5 text-green-500" />
                   Choose Modal When:
@@ -233,7 +233,7 @@ export default function ContextDrivenDesignDecisionsPage() {
                 </ul>
               </div>
 
-              <div className="bg-[#1a2332]/30 border border-blue-500/30 rounded-xl p-6">
+              <div className="bg-[#1a2332]/30 border border-blue-500/30 p-6">
                 <h4 className="text-lg font-bold text-white mb-3 flex items-center gap-2">
                   <CheckCircle className="w-5 h-5 text-blue-500" />
                   Choose Sidebar When:
@@ -255,7 +255,7 @@ export default function ContextDrivenDesignDecisionsPage() {
             <h2 className="text-3xl font-bold text-white mt-16 mb-6">Common Mistakes Junior Designers Make</h2>
 
             <div className="space-y-6 my-8">
-              <div className="bg-red-500/10 border border-red-500/30 rounded-xl p-6">
+              <div className="bg-red-500/10 border border-red-500/30 p-6">
                 <div className="flex items-start gap-4">
                   <AlertCircle className="w-6 h-6 text-red-500 flex-shrink-0 mt-1" />
                   <div>
@@ -270,7 +270,7 @@ export default function ContextDrivenDesignDecisionsPage() {
                 </div>
               </div>
 
-              <div className="bg-red-500/10 border border-red-500/30 rounded-xl p-6">
+              <div className="bg-red-500/10 border border-red-500/30 p-6">
                 <div className="flex items-start gap-4">
                   <AlertCircle className="w-6 h-6 text-red-500 flex-shrink-0 mt-1" />
                   <div>
@@ -285,7 +285,7 @@ export default function ContextDrivenDesignDecisionsPage() {
                 </div>
               </div>
 
-              <div className="bg-red-500/10 border border-red-500/30 rounded-xl p-6">
+              <div className="bg-red-500/10 border border-red-500/30 p-6">
                 <div className="flex items-start gap-4">
                   <AlertCircle className="w-6 h-6 text-red-500 flex-shrink-0 mt-1" />
                   <div>
@@ -300,7 +300,7 @@ export default function ContextDrivenDesignDecisionsPage() {
                 </div>
               </div>
 
-              <div className="bg-red-500/10 border border-red-500/30 rounded-xl p-6">
+              <div className="bg-red-500/10 border border-red-500/30 p-6">
                 <div className="flex items-start gap-4">
                   <AlertCircle className="w-6 h-6 text-red-500 flex-shrink-0 mt-1" />
                   <div>
@@ -324,7 +324,7 @@ export default function ContextDrivenDesignDecisionsPage() {
               Before you open Figma, ask these questions:
             </p>
 
-            <div className="bg-[#1a2332]/50 rounded-xl p-6 my-6">
+            <div className="bg-[#1a2332]/50 p-6 my-6">
               <ul className="space-y-3 text-gray-300">
                 <li className="flex items-start gap-3">
                   <span className="text-[#A3D1FF] font-bold">→</span>
@@ -355,7 +355,7 @@ export default function ContextDrivenDesignDecisionsPage() {
               Create a checklist you run through for every project. Mine looks like this:
             </p>
 
-            <div className="bg-[#0a0a0a] border border-white/10 rounded-xl p-6 my-6 font-mono text-sm">
+            <div className="bg-[#0a0a0a] border border-white/10 p-6 my-6 font-mono text-sm">
               <div className="space-y-4 text-gray-300">
                 <div>
                   <div className="text-[#A3D1FF] mb-2">[ ] USER RESEARCH</div>
@@ -427,14 +427,14 @@ export default function ContextDrivenDesignDecisionsPage() {
             </p>
 
             <div className="grid md:grid-cols-2 gap-6 my-8">
-              <div className="bg-red-500/10 border border-red-500/30 rounded-xl p-6">
+              <div className="bg-red-500/10 border border-red-500/30 p-6">
                 <h4 className="text-lg font-bold text-red-400 mb-3">Bad Explanation:</h4>
                 <p className="text-gray-300 text-sm italic">
                   "I used a hamburger menu because it looks clean and modern."
                 </p>
               </div>
 
-              <div className="bg-green-500/10 border border-green-500/30 rounded-xl p-6">
+              <div className="bg-green-500/10 border border-green-500/30 p-6">
                 <h4 className="text-lg font-bold text-green-400 mb-3">Good Explanation:</h4>
                 <p className="text-gray-300 text-sm">
                   "I used a hamburger menu because 78% of our users are on mobile, they visit 2-3 times per week (so they'll learn the navigation), and we need to prioritize content over chrome. Our analytics show users scroll 80% of the page, so they're comfortable with vertical navigation."
@@ -478,7 +478,7 @@ export default function ContextDrivenDesignDecisionsPage() {
             </p>
 
             <div className="grid md:grid-cols-2 gap-8 my-12">
-              <div className="bg-[#1a2332]/30 border border-white/10 rounded-xl p-6">
+              <div className="bg-[#1a2332]/30 border border-white/10 p-6">
                 <h4 className="text-xl font-bold text-white mb-4">Revolut (Digital Bank)</h4>
                 <div className="space-y-4 text-sm text-gray-300">
                   <div>
@@ -503,7 +503,7 @@ export default function ContextDrivenDesignDecisionsPage() {
                 </div>
               </div>
 
-              <div className="bg-[#1a2332]/30 border border-white/10 rounded-xl p-6">
+              <div className="bg-[#1a2332]/30 border border-white/10 p-6">
                 <h4 className="text-xl font-bold text-white mb-4">Chase Bank (Traditional Bank)</h4>
                 <div className="space-y-4 text-sm text-gray-300">
                   <div>
@@ -589,7 +589,7 @@ export default function ContextDrivenDesignDecisionsPage() {
               </div>
             </div>
 
-            <div className="bg-[#A3D1FF]/10 border border-[#A3D1FF]/30 rounded-xl p-6 my-12">
+            <div className="bg-[#A3D1FF]/10 border border-[#A3D1FF]/30 p-6 my-12">
               <p className="text-gray-300 text-lg mb-0">
                 Notice that design execution is only 20% of the process. The rest is context-gathering and validation. This is what separates junior designers from senior ones.
               </p>
@@ -616,7 +616,7 @@ export default function ContextDrivenDesignDecisionsPage() {
             </p>
 
             <div className="space-y-8 my-12">
-              <div className="bg-[#0a0a0a] border border-white/10 rounded-xl p-6">
+              <div className="bg-[#0a0a0a] border border-white/10 p-6">
                 <h4 className="text-lg font-bold text-white mb-3">Scenario 1: E-commerce Checkout</h4>
                 <p className="text-gray-300 text-sm mb-4">
                   You're redesigning checkout for an online jewelry store. Average order value is $2,500. Users are 80% female, 35-55 years old. Most purchases happen on desktop (70%). Current conversion rate is 2.1%.
@@ -626,7 +626,7 @@ export default function ContextDrivenDesignDecisionsPage() {
                 </p>
               </div>
 
-              <div className="bg-[#0a0a0a] border border-white/10 rounded-xl p-6">
+              <div className="bg-[#0a0a0a] border border-white/10 p-6">
                 <h4 className="text-lg font-bold text-white mb-3">Scenario 2: SaaS Dashboard</h4>
                 <p className="text-gray-300 text-sm mb-4">
                   You're building a dashboard for project managers. Users log in daily, spend 30-45 minutes per session. They need to track 5-15 active projects simultaneously. Current pain point: "I can't see what's urgent at a glance."
@@ -636,7 +636,7 @@ export default function ContextDrivenDesignDecisionsPage() {
                 </p>
               </div>
 
-              <div className="bg-[#0a0a0a] border border-white/10 rounded-xl p-6">
+              <div className="bg-[#0a0a0a] border border-white/10 p-6">
                 <h4 className="text-lg font-bold text-white mb-3">Scenario 3: Healthcare App</h4>
                 <p className="text-gray-300 text-sm mb-4">
                   You're designing a medication reminder app for elderly patients (65+). Many have limited tech experience. They take 4-8 medications daily at different times. Missed doses can be dangerous. HIPAA compliance is required.
@@ -653,7 +653,7 @@ export default function ContextDrivenDesignDecisionsPage() {
 
             <h2 className="text-3xl font-bold text-white mt-16 mb-6">Key Takeaways</h2>
 
-            <div className="bg-[#1a2332]/50 border border-[#A3D1FF]/30 rounded-xl p-8 my-8">
+            <div className="bg-[#1a2332]/50 border border-[#A3D1FF]/30 p-8 my-8">
               <ul className="space-y-4 text-gray-300">
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-[#A3D1FF] flex-shrink-0 mt-1" />
@@ -688,7 +688,7 @@ export default function ContextDrivenDesignDecisionsPage() {
               For the next week, do this exercise:
             </p>
 
-            <div className="bg-[#1a2332]/30 border border-white/10 rounded-xl p-6 my-8">
+            <div className="bg-[#1a2332]/30 border border-white/10 p-6 my-8">
               <ol className="space-y-4 text-gray-300 list-decimal list-inside">
                 <li>Pick a product you use daily (app, website, tool)</li>
                 <li>Write down 3-5 design decisions you notice</li>

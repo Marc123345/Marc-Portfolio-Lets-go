@@ -65,7 +65,7 @@ export default function BrutalismAntiDesignPage() {
             </div>
           </div>
 
-          <div className="aspect-[21/9] overflow-hidden rounded-xl mb-8">
+          <div className="aspect-[21/9] overflow-hidden mb-8">
             <img
               src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=2000&q=80"
               alt="Brutalism and Anti-Design in Web Design"
@@ -102,7 +102,7 @@ export default function BrutalismAntiDesignPage() {
 
             <p>This approach creates websites that feel raw, immediate, and unfiltered—like looking directly at the bones of the internet rather than through a carefully polished lens.</p>
 
-            <div className="bg-[#1b1b1b] p-6 rounded-xl border border-white/10 my-8">
+            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
               <h4 className="text-white font-semibold mb-2 flex items-center">
                 <Grid className="w-5 h-5 text-[#A3D1FF] mr-2" />
                 Key Characteristics of Brutalist Design
@@ -151,7 +151,7 @@ export default function BrutalismAntiDesignPage() {
               <li><strong>Flexible Framework:</strong> Content can break or respect grid lines as needed for emphasis</li>
             </ul>
 
-            <div className="bg-[#1b1b1b] p-6 rounded-xl border border-white/10 my-8">
+            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
               <h4 className="text-white font-semibold mb-2 flex items-center">
                 <Layout className="w-5 h-5 text-[#A3D1FF] mr-2" />
                 Implementation: Exposed Grid System
@@ -234,7 +234,7 @@ export default function BrutalismAntiDesignPage() {
               <li><strong>User-Generated Content:</strong> Authentic, unpolished submissions from real users</li>
             </ul>
 
-            <div className="bg-[#1b1b1b] p-6 rounded-xl border border-white/10 my-8">
+            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
               <h4 className="text-white font-semibold mb-2">Case Study: Text-Based Navigation</h4>
               <p className="text-gray-300">Rather than icon-heavy navigation, brutalist sites often use large, bold text links organized in unconventional layouts. This approach is faster to load, easier to scan, and more direct in communication. Users don't need to decode icon meanings—the text says exactly what it is.</p>
             </div>
@@ -255,7 +255,7 @@ export default function BrutalismAntiDesignPage() {
             <h3>High-Contrast Design Techniques</h3>
             <p>When brutalist designs do use color, they often employ stark, high-contrast combinations that demand attention:</p>
 
-            <div className="bg-[#1b1b1b] p-6 rounded-xl border border-white/10 my-8">
+            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
               <h4 className="text-white font-semibold mb-2 flex items-center">
                 <Contrast className="w-5 h-5 text-[#A3D1FF] mr-2" />
                 Brutalist Color Strategies
@@ -327,7 +327,7 @@ export default function BrutalismAntiDesignPage() {
             <h3>Controlled Chaos</h3>
             <p>The key to effective imperfect layouts is that they're carefully planned chaos. Every apparent mistake or irregularity is actually a deliberate choice that serves the overall design intent:</p>
 
-            <div className="bg-[#1b1b1b] p-6 rounded-xl border border-white/10 my-8">
+            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
               <h4 className="text-white font-semibold mb-2">Techniques for Intentional Imperfection</h4>
               <ul className="text-gray-300 space-y-2">
                 <li><strong>Baseline Shifts:</strong> Elements sit on slightly different horizontal alignments</li>
@@ -375,7 +375,7 @@ export default function BrutalismAntiDesignPage() {
               <li><strong>Accessibility-Critical Applications:</strong> Where any barrier to access is unacceptable</li>
             </ul>
 
-            <div className="bg-[#1b1b1b] p-6 rounded-xl border border-white/10 my-8">
+            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
               <h4 className="text-white font-semibold mb-2">Design Decision Framework</h4>
               <p className="text-gray-300 mb-4">Ask these questions before committing to brutalist design:</p>
               <ul className="text-gray-300 space-y-2">
@@ -392,7 +392,7 @@ export default function BrutalismAntiDesignPage() {
             <h3>Starting with Structure</h3>
             <p>Implementing brutalist design requires different thinking from traditional web development:</p>
 
-            <div className="bg-[#1b1b1b] p-6 rounded-xl border border-white/10 my-8">
+            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
               <h4 className="text-white font-semibold mb-2">Basic Brutalist HTML Structure</h4>
               <pre className="text-xs text-gray-300 overflow-x-auto">
 {`<!DOCTYPE html>
@@ -503,7 +503,7 @@ export default function BrutalismAntiDesignPage() {
               <li><strong>Screen Reader Support:</strong> Simple HTML structure is inherently more accessible</li>
             </ul>
 
-            <div className="bg-[#1b1b1b] p-6 rounded-xl border border-white/10 my-8">
+            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
               <h4 className="text-white font-semibold mb-2">Usability Checklist for Brutalist Design</h4>
               <ul className="text-gray-300 space-y-2">
                 <li>Can users identify clickable elements immediately?</li>
@@ -586,7 +586,7 @@ export default function BrutalismAntiDesignPage() {
           <div className="mt-12 pt-8 border-t border-white/10">
             <h3 className="text-2xl font-semibold text-white mb-6">Related Articles</h3>
             <div className="grid sm:grid-cols-2 gap-6">
-              <div className="bg-[#1b1b1b] rounded-xl overflow-hidden border border-white/10 hover:border-[#A3D1FF] transition-all group">
+              <div className="bg-[#1b1b1b] overflow-hidden border border-white/10 hover:border-[#A3D1FF] transition-all group">
                 <div className="aspect-[16/9] overflow-hidden">
                   <img
                     src="https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=2000&q=80"
@@ -607,7 +607,7 @@ export default function BrutalismAntiDesignPage() {
                 </div>
               </div>
 
-              <div className="bg-[#1b1b1b] rounded-xl overflow-hidden border border-white/10 hover:border-[#A3D1FF] transition-all group">
+              <div className="bg-[#1b1b1b] overflow-hidden border border-white/10 hover:border-[#A3D1FF] transition-all group">
                 <div className="aspect-[16/9] overflow-hidden">
                   <img
                     src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=2000&q=80"

@@ -43,7 +43,7 @@ export default function DMCAPage() {
               <p className="text-gray-300 mb-4">
                 Please send DMCA notices to:
               </p>
-              <div className="bg-[#1b1b1b] p-4 rounded-lg">
+              <div className="bg-[#1b1b1b] p-4">
                 <p className="text-gray-300">Marc Friedman</p>
                 <p className="text-gray-300">Email: marcf@marcfriedmanwebdesign.com</p>
               </div>

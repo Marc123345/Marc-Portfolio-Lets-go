@@ -17,7 +17,7 @@ function ErrorFallback({ error, resetErrorBoundary }: { error: Error; resetError
         <p className="text-gray-600 mb-4">{error.message}</p>
         <button
           onClick={resetErrorBoundary}
-          className="bg-black text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition-colors"
+          className="bg-black text-white px-6 py-3 hover:bg-gray-800 transition-colors"
         >
           Try again
         </button>

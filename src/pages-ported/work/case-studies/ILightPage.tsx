@@ -25,7 +25,7 @@ const LIVE_URL = "https://www.ilight.care";
 // --- COMPONENTS ---
 function MetricCard({ value, label, subtext }: { value: string, label: string, subtext?: string }) {
   return (
-    <div className="bg-[#111] p-8 rounded-2xl border border-white/5 hover:border-[#00E0FF]/30 transition-all group">
+    <div className="bg-[#111] p-8 border border-white/5 hover:border-[#00E0FF]/30 transition-all group">
       <div className="text-4xl md:text-5xl font-bold text-white mb-2 group-hover:text-[#00E0FF] transition-colors">{value}</div>
       <div className="text-[#00E0FF] text-xs font-bold uppercase tracking-widest mb-2">{label}</div>
       {subtext && <div className="text-gray-500 text-sm">{subtext}</div>}
@@ -35,7 +35,7 @@ function MetricCard({ value, label, subtext }: { value: string, label: string, s
 
 function TechBadge({ name }: { name: string }) {
   return (
-    <span className="px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-gray-300 text-xs font-mono hover:bg-[#00E0FF]/10 hover:border-[#00E0FF]/30 hover:text-white transition-all cursor-default">
+    <span className="px-4 py-2 bg-white/5 border border-white/10 text-gray-300 text-xs font-mono hover:bg-[#00E0FF]/10 hover:border-[#00E0FF]/30 hover:text-white transition-all cursor-default">
       {name}
     </span>
   );
@@ -114,7 +114,7 @@ export default function ILightCaseStudy() {
 
           {/* Quick Metrics */}
           <div className="lg:col-span-4 flex flex-col justify-end">
-             <div className="bg-black/50 backdrop-blur-xl border border-white/10 p-8 rounded-2xl">
+             <div className="bg-black/50 backdrop-blur-xl border border-white/10 p-8">
                 <h3 className="text-gray-500 text-xs font-bold uppercase tracking-widest mb-6">Deliverables</h3>
                 <ul className="space-y-4">
                    <li className="flex justify-between items-center text-sm border-b border-white/10 pb-2">
@@ -194,17 +194,17 @@ export default function ILightCaseStudy() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-             <div className="bg-[#111] p-8 rounded-2xl border border-white/5 group hover:border-[#00E0FF] transition-all">
+             <div className="bg-[#111] p-8 border border-white/5 group hover:border-[#00E0FF] transition-all">
                 <Layout className="w-10 h-10 text-[#00E0FF] mb-6" />
                 <h4 className="text-xl font-bold mb-3">Marketing Site</h4>
                 <p className="text-white">A high-trust public face for the brand to capture leads and explain the methodology.</p>
              </div>
-             <div className="bg-[#111] p-8 rounded-2xl border border-white/5 group hover:border-[#00E0FF] transition-all">
+             <div className="bg-[#111] p-8 border border-white/5 group hover:border-[#00E0FF] transition-all">
                 <Database className="w-10 h-10 text-[#00E0FF] mb-6" />
                 <h4 className="text-xl font-bold mb-3">SaaS MVP</h4>
                 <p className="text-white">A functional React-based dashboard for users to track resilience scores and access AI tools.</p>
              </div>
-             <div className="bg-[#111] p-8 rounded-2xl border border-white/5 group hover:border-[#00E0FF] transition-all">
+             <div className="bg-[#111] p-8 border border-white/5 group hover:border-[#00E0FF] transition-all">
                 <FileText className="w-10 h-10 text-[#00E0FF] mb-6" />
                 <h4 className="text-xl font-bold mb-3">Pitch Assets</h4>
                 <p className="text-white">Professionally designed presentations to communicate the business model to stakeholders.</p>
@@ -294,7 +294,7 @@ export default function ILightCaseStudy() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                
                {/* 1. Main Dashboard */}
-               <div className="md:col-span-2 relative group rounded-2xl border border-[#00E0FF]/20 overflow-hidden shadow-2xl shadow-[#00E0FF]/10">
+               <div className="md:col-span-2 relative group border border-[#00E0FF]/20 overflow-hidden shadow-2xl shadow-[#00E0FF]/10">
                   <div className="bg-[#1a1a1a] px-4 py-2 border-b border-white/10 flex items-center gap-2">
                      <div className="w-3 h-3 rounded-full bg-red-500"></div>
                      <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
@@ -305,7 +305,7 @@ export default function ILightCaseStudy() {
                </div>
 
                {/* 2. Analytics View */}
-               <div className="relative group rounded-2xl border border-white/10 overflow-hidden bg-[#111]">
+               <div className="relative group border border-white/10 overflow-hidden bg-[#111]">
                   <div className="absolute top-4 left-4 z-10 bg-black/80 backdrop-blur px-3 py-1 rounded-full border border-white/10 text-xs font-bold text-gray-300">
                      Data Visualization
                   </div>
@@ -313,7 +313,7 @@ export default function ILightCaseStudy() {
                </div>
 
                {/* 3. User Profile */}
-               <div className="relative group rounded-2xl border border-white/10 overflow-hidden bg-[#111]">
+               <div className="relative group border border-white/10 overflow-hidden bg-[#111]">
                   <div className="absolute top-4 left-4 z-10 bg-black/80 backdrop-blur px-3 py-1 rounded-full border border-white/10 text-xs font-bold text-gray-300">
                      Patient Profile
                   </div>
@@ -333,14 +333,14 @@ export default function ILightCaseStudy() {
                <h2 className="text-sm font-bold text-[#00E0FF] uppercase tracking-widest mb-6">04 • Results</h2>
                <h3 className="text-4xl font-bold mb-8">Client Satisfaction</h3>
                <div className="space-y-6">
-                  <div className="p-6 bg-[#111] rounded-2xl border border-white/5">
+                  <div className="p-6 bg-[#111] border border-white/5">
                      <div className="flex gap-1 mb-2">
                         {[1,2,3,4,5].map(i => <Star key={i} size={16} className="fill-[#00E0FF] text-[#00E0FF]" />)}
                      </div>
                      <h4 className="font-bold text-lg mb-1">Above Expectations</h4>
                      <p className="text-white text-sm">"Delivered on time, within budget, and above the client's expectations."</p>
                   </div>
-                  <div className="p-6 bg-[#111] rounded-2xl border border-white/5">
+                  <div className="p-6 bg-[#111] border border-white/5">
                      <div className="flex gap-1 mb-2">
                         {[1,2,3,4,5].map(i => <Star key={i} size={16} className="fill-[#00E0FF] text-[#00E0FF]" />)}
                      </div>
@@ -390,7 +390,7 @@ export default function ILightCaseStudy() {
             </h3>
             <div className="flex flex-wrap gap-2">
               {['React', 'Node.js', 'Tailwind', 'AWS', 'Figma', 'PowerPoint'].map(tech => (
-                <span key={tech} className="px-3 py-1.5 bg-white/5 border border-white/5 rounded-md text-gray-300 text-xs font-mono hover:border-[#00E0FF] hover:text-white transition-colors cursor-default">
+                <span key={tech} className="px-3 py-1.5 bg-white/5 border border-white/5 text-gray-300 text-xs font-mono hover:border-[#00E0FF] hover:text-white transition-colors cursor-default">
                   {tech}
                 </span>
               ))}

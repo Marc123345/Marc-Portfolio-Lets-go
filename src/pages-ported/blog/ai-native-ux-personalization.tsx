@@ -55,7 +55,7 @@ export default function AINativeUXPersonalizationPage() {
             </div>
           </div>
 
-          <div className="aspect-[21/9] overflow-hidden rounded-xl mb-8">
+          <div className="aspect-[21/9] overflow-hidden mb-8">
             <img
               src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=2000&q=80"
               alt="AI-Native UX and Personalization"
@@ -69,7 +69,7 @@ export default function AINativeUXPersonalizationPage() {
       <section className="py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <div className="prose prose-lg prose-invert max-w-none">
-            <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30 rounded-xl p-6 mb-8">
+            <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30 p-6 mb-8">
               <p className="text-white font-medium mb-2 flex items-center gap-2">
                 <Sparkles className="w-5 h-5 text-blue-400" />
                 The Fundamental Shift
@@ -99,7 +99,7 @@ export default function AINativeUXPersonalizationPage() {
             <h3 className="text-2xl font-bold text-white mt-10 mb-4">Core Principles of AI-Native Design</h3>
 
             <div className="space-y-6 mb-8">
-              <div className="bg-gray-800/50 border-l-4 border-blue-500 rounded-lg p-6">
+              <div className="bg-gray-800/50 border-l-4 border-blue-500 p-6">
                 <h4 className="text-white font-bold mb-3 flex items-center gap-2">
                   <RefreshCw className="w-5 h-5 text-blue-400" />
                   1. Adaptive by Default
@@ -107,13 +107,13 @@ export default function AINativeUXPersonalizationPage() {
                 <p className="text-gray-300 mb-3">
                   Every element of the interface can adapt based on context, user behavior, and learned preferences. The UI doesn't have a single "correct" state—it has infinite possible states optimized for each moment and each user.
                 </p>
-                <div className="bg-gray-900/50 rounded-lg p-4 text-sm">
+                <div className="bg-gray-900/50 p-4 text-sm">
                   <p className="text-white mb-2"><strong className="text-white">Traditional:</strong> Same navigation menu for everyone</p>
                   <p className="text-white"><strong className="text-white">AI-Native:</strong> Navigation restructures based on your workflow patterns, frequently used features, time of day, and current task context</p>
                 </div>
               </div>
 
-              <div className="bg-gray-800/50 border-l-4 border-purple-500 rounded-lg p-6">
+              <div className="bg-gray-800/50 border-l-4 border-purple-500 p-6">
                 <h4 className="text-white font-bold mb-3 flex items-center gap-2">
                   <Eye className="w-5 h-5 text-purple-400" />
                   2. Context-Aware Intelligence
@@ -121,13 +121,13 @@ export default function AINativeUXPersonalizationPage() {
                 <p className="text-gray-300 mb-3">
                   The system understands not just what you're doing, but why you're doing it. It recognizes patterns, anticipates needs, and adjusts proactively.
                 </p>
-                <div className="bg-gray-900/50 rounded-lg p-4 text-sm">
+                <div className="bg-gray-900/50 p-4 text-sm">
                   <p className="text-white mb-2"><strong className="text-white">Traditional:</strong> You search for "project timeline template"</p>
                   <p className="text-white"><strong className="text-white">AI-Native:</strong> System notices you're creating a project proposal, automatically surfaces timeline templates, relevant past projects, team availability, and budget templates—before you search</p>
                 </div>
               </div>
 
-              <div className="bg-gray-800/50 border-l-4 border-green-500 rounded-lg p-6">
+              <div className="bg-gray-800/50 border-l-4 border-green-500 p-6">
                 <h4 className="text-white font-bold mb-3 flex items-center gap-2">
                   <MessageSquare className="w-5 h-5 text-green-400" />
                   3. Conversational Interfaces as Primary
@@ -135,13 +135,13 @@ export default function AINativeUXPersonalizationPage() {
                 <p className="text-gray-300 mb-3">
                   Natural language isn't a supplementary input method—it's often the primary interface. Users describe intent rather than navigate menus.
                 </p>
-                <div className="bg-gray-900/50 rounded-lg p-4 text-sm">
+                <div className="bg-gray-900/50 p-4 text-sm">
                   <p className="text-white mb-2"><strong className="text-white">Traditional:</strong> Navigate Settings → Privacy → Notifications → Email → Unsubscribe from Marketing</p>
                   <p className="text-white"><strong className="text-white">AI-Native:</strong> "Stop sending me promotional emails" → Done</p>
                 </div>
               </div>
 
-              <div className="bg-gray-800/50 border-l-4 border-orange-500 rounded-lg p-6">
+              <div className="bg-gray-800/50 border-l-4 border-orange-500 p-6">
                 <h4 className="text-white font-bold mb-3 flex items-center gap-2">
                   <Zap className="w-5 h-5 text-orange-400" />
                   4. Predictive Actions
@@ -149,13 +149,13 @@ export default function AINativeUXPersonalizationPage() {
                 <p className="text-gray-300 mb-3">
                   The interface doesn't wait for user input—it anticipates needs and prepares solutions in advance.
                 </p>
-                <div className="bg-gray-900/50 rounded-lg p-4 text-sm">
+                <div className="bg-gray-900/50 p-4 text-sm">
                   <p className="text-white mb-2"><strong className="text-white">Traditional:</strong> User manually exports report, formats data, sends to stakeholders</p>
                   <p className="text-white"><strong className="text-white">AI-Native:</strong> "Your weekly stakeholder report is ready. I've noticed attendance dropped 15% this week—I've added cohort analysis. Send now or review first?"</p>
                 </div>
               </div>
 
-              <div className="bg-gray-800/50 border-l-4 border-cyan-500 rounded-lg p-6">
+              <div className="bg-gray-800/50 border-l-4 border-cyan-500 p-6">
                 <h4 className="text-white font-bold mb-3 flex items-center gap-2">
                   <Settings className="w-5 h-5 text-cyan-400" />
                   5. Continuous Learning
@@ -163,7 +163,7 @@ export default function AINativeUXPersonalizationPage() {
                 <p className="text-gray-300 mb-3">
                   The experience evolves with each interaction. It doesn't just remember preferences—it learns patterns, predicts behaviors, and improves decision-making over time.
                 </p>
-                <div className="bg-gray-900/50 rounded-lg p-4 text-sm">
+                <div className="bg-gray-900/50 p-4 text-sm">
                   <p className="text-white mb-2"><strong className="text-white">Traditional:</strong> Static feature set with occasional updates</p>
                   <p className="text-white"><strong className="text-white">AI-Native:</strong> Interface becomes more efficient the longer you use it, learning your workflows, vocabulary, priorities, and patterns</p>
                 </div>
@@ -179,11 +179,11 @@ export default function AINativeUXPersonalizationPage() {
               AI-native personalization operates on multiple levels simultaneously, creating experiences that feel uniquely crafted for each individual.
             </p>
 
-            <div className="bg-gray-800/50 rounded-xl p-6 mb-8">
+            <div className="bg-gray-800/50 p-6 mb-8">
               <h3 className="text-xl font-bold text-white mb-4">Personalization Layers in AI-Native UX</h3>
 
               <div className="space-y-4">
-                <div className="bg-gray-900/50 rounded-lg p-5">
+                <div className="bg-gray-900/50 p-5">
                   <div className="flex items-start gap-3 mb-2">
                     <span className="text-2xl font-bold text-blue-400">1</span>
                     <div>
@@ -196,7 +196,7 @@ export default function AINativeUXPersonalizationPage() {
                   </p>
                 </div>
 
-                <div className="bg-gray-900/50 rounded-lg p-5">
+                <div className="bg-gray-900/50 p-5">
                   <div className="flex items-start gap-3 mb-2">
                     <span className="text-2xl font-bold text-purple-400">2</span>
                     <div>
@@ -209,7 +209,7 @@ export default function AINativeUXPersonalizationPage() {
                   </p>
                 </div>
 
-                <div className="bg-gray-900/50 rounded-lg p-5">
+                <div className="bg-gray-900/50 p-5">
                   <div className="flex items-start gap-3 mb-2">
                     <span className="text-2xl font-bold text-green-400">3</span>
                     <div>
@@ -222,7 +222,7 @@ export default function AINativeUXPersonalizationPage() {
                   </p>
                 </div>
 
-                <div className="bg-gray-900/50 rounded-lg p-5">
+                <div className="bg-gray-900/50 p-5">
                   <div className="flex items-start gap-3 mb-2">
                     <span className="text-2xl font-bold text-orange-400">4</span>
                     <div>
@@ -235,7 +235,7 @@ export default function AINativeUXPersonalizationPage() {
                   </p>
                 </div>
 
-                <div className="bg-gray-900/50 rounded-lg p-5">
+                <div className="bg-gray-900/50 p-5">
                   <div className="flex items-start gap-3 mb-2">
                     <span className="text-2xl font-bold text-cyan-400">5</span>
                     <div>
@@ -257,12 +257,12 @@ export default function AINativeUXPersonalizationPage() {
 
             <h3 className="text-2xl font-bold text-white mt-10 mb-4">Pattern 1: The Adaptive Canvas</h3>
 
-            <div className="bg-gray-800/50 rounded-xl p-6 mb-6">
+            <div className="bg-gray-800/50 p-6 mb-6">
               <p className="text-gray-300 mb-4">
                 Instead of fixed layouts, AI-native interfaces use adaptive canvases that reorganize based on context and user focus.
               </p>
 
-              <div className="bg-gray-900/50 rounded-lg p-5 mb-4">
+              <div className="bg-gray-900/50 p-5 mb-4">
                 <h4 className="text-white font-semibold mb-3">Implementation Example: Adaptive Dashboard</h4>
                 <ul className="space-y-2 text-gray-300 text-sm">
                   <li className="flex items-start gap-2">
@@ -291,12 +291,12 @@ export default function AINativeUXPersonalizationPage() {
 
             <h3 className="text-2xl font-bold text-white mt-10 mb-4">Pattern 2: Anticipatory UI</h3>
 
-            <div className="bg-gray-800/50 rounded-xl p-6 mb-6">
+            <div className="bg-gray-800/50 p-6 mb-6">
               <p className="text-gray-300 mb-4">
                 Instead of waiting for user commands, anticipatory UIs predict needs and prepare solutions proactively.
               </p>
 
-              <div className="bg-gray-900/50 rounded-lg p-5 mb-4">
+              <div className="bg-gray-900/50 p-5 mb-4">
                 <h4 className="text-white font-semibold mb-3">Real-World Applications:</h4>
                 <div className="space-y-3 text-gray-300 text-sm">
                   <div>
@@ -317,12 +317,12 @@ export default function AINativeUXPersonalizationPage() {
 
             <h3 className="text-2xl font-bold text-white mt-10 mb-4">Pattern 3: Progressive Complexity</h3>
 
-            <div className="bg-gray-800/50 rounded-xl p-6 mb-6">
+            <div className="bg-gray-800/50 p-6 mb-6">
               <p className="text-gray-300 mb-4">
                 AI-native interfaces adapt complexity to user expertise, revealing advanced features progressively as users demonstrate readiness.
               </p>
 
-              <div className="bg-gray-900/50 rounded-lg p-5">
+              <div className="bg-gray-900/50 p-5">
                 <h4 className="text-white font-semibold mb-3">Adaptive Complexity Framework:</h4>
                 <div className="space-y-3 text-gray-300 text-sm">
                   <div className="flex items-start gap-3">
@@ -347,12 +347,12 @@ export default function AINativeUXPersonalizationPage() {
 
             <h3 className="text-2xl font-bold text-white mt-10 mb-4">Pattern 4: Contextual Actions</h3>
 
-            <div className="bg-gray-800/50 rounded-xl p-6 mb-6">
+            <div className="bg-gray-800/50 p-6 mb-6">
               <p className="text-gray-300 mb-4">
                 Instead of overwhelming users with every possible action, AI-native interfaces surface relevant actions contextually.
               </p>
 
-              <div className="bg-gray-900/50 rounded-lg p-5">
+              <div className="bg-gray-900/50 p-5">
                 <h4 className="text-white font-semibold mb-3">Examples:</h4>
                 <ul className="space-y-2 text-gray-300 text-sm">
                   <li className="flex items-start gap-2">
@@ -384,7 +384,7 @@ export default function AINativeUXPersonalizationPage() {
               With great personalization comes great responsibility. AI-native UX raises important ethical questions that designers must address proactively.
             </p>
 
-            <div className="bg-gradient-to-r from-red-600/20 to-orange-600/20 border border-red-500/30 rounded-xl p-6 mb-8">
+            <div className="bg-gradient-to-r from-red-600/20 to-orange-600/20 border border-red-500/30 p-6 mb-8">
               <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
                 <AlertCircle className="w-6 h-6 text-red-400" />
                 Critical Ethical Challenges
@@ -446,22 +446,22 @@ export default function AINativeUXPersonalizationPage() {
             <h3 className="text-2xl font-bold text-white mt-10 mb-4">Design Principles for Ethical AI-Native UX</h3>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-              <div className="bg-gray-800/50 border-l-4 border-blue-500 rounded-lg p-5">
+              <div className="bg-gray-800/50 border-l-4 border-blue-500 p-5">
                 <h4 className="text-white font-bold mb-2">User Control</h4>
                 <p className="text-gray-300 text-sm">Users can adjust, override, or disable personalization. AI suggests, users decide.</p>
               </div>
 
-              <div className="bg-gray-800/50 border-l-4 border-green-500 rounded-lg p-5">
+              <div className="bg-gray-800/50 border-l-4 border-green-500 p-5">
                 <h4 className="text-white font-bold mb-2">Transparency</h4>
                 <p className="text-gray-300 text-sm">Explain why AI made recommendations. Show data sources. Make reasoning visible.</p>
               </div>
 
-              <div className="bg-gray-800/50 border-l-4 border-purple-500 rounded-lg p-5">
+              <div className="bg-gray-800/50 border-l-4 border-purple-500 p-5">
                 <h4 className="text-white font-bold mb-2">Reversibility</h4>
                 <p className="text-gray-300 text-sm">All AI actions can be undone. Users can revert to previous states. No permanent changes without confirmation.</p>
               </div>
 
-              <div className="bg-gray-800/50 border-l-4 border-orange-500 rounded-lg p-5">
+              <div className="bg-gray-800/50 border-l-4 border-orange-500 p-5">
                 <h4 className="text-white font-bold mb-2">Value Alignment</h4>
                 <p className="text-gray-300 text-sm">Optimize for user goals, not business metrics. Success = user success.</p>
               </div>
@@ -478,7 +478,7 @@ export default function AINativeUXPersonalizationPage() {
 
             <h3 className="text-2xl font-bold text-white mt-10 mb-4">Phase 1: Foundation (Weeks 1-4)</h3>
 
-            <div className="bg-gray-800/50 rounded-xl p-6 mb-6">
+            <div className="bg-gray-800/50 p-6 mb-6">
               <h4 className="text-white font-semibold mb-4">1. Instrument Everything</h4>
               <ul className="space-y-2 text-gray-300 text-sm mb-6">
                 <li className="flex items-start gap-2">
@@ -513,28 +513,28 @@ export default function AINativeUXPersonalizationPage() {
 
             <h3 className="text-2xl font-bold text-white mt-10 mb-4">Phase 2: Simple Adaptations (Weeks 5-8)</h3>
 
-            <div className="bg-gray-800/50 rounded-xl p-6 mb-6">
+            <div className="bg-gray-800/50 p-6 mb-6">
               <p className="text-gray-300 mb-4">
                 Start with rule-based adaptations before deploying ML models:
               </p>
 
               <div className="space-y-3 text-gray-300 text-sm">
-                <div className="bg-gray-900/50 rounded-lg p-4">
+                <div className="bg-gray-900/50 p-4">
                   <h5 className="text-white font-bold mb-2">Quick Win 1: Context-Based Defaults</h5>
                   <p>Adjust default settings based on context: dark mode at night, simplified view on mobile, priority view during work hours</p>
                 </div>
 
-                <div className="bg-gray-900/50 rounded-lg p-4">
+                <div className="bg-gray-900/50 p-4">
                   <h5 className="text-white font-bold mb-2">Quick Win 2: Smart Suggestions</h5>
                   <p>Surface recently/frequently used items first in menus, searches, and selections</p>
                 </div>
 
-                <div className="bg-gray-900/50 rounded-lg p-4">
+                <div className="bg-gray-900/50 p-4">
                   <h5 className="text-white font-bold mb-2">Quick Win 3: Progressive Disclosure</h5>
                   <p>Hide advanced features initially, reveal them after user demonstrates basic proficiency</p>
                 </div>
 
-                <div className="bg-gray-900/50 rounded-lg p-4">
+                <div className="bg-gray-900/50 p-4">
                   <h5 className="text-white font-bold mb-2">Quick Win 4: Predictive Pre-loading</h5>
                   <p>Load data users are likely to need next based on current action and historical patterns</p>
                 </div>
@@ -543,7 +543,7 @@ export default function AINativeUXPersonalizationPage() {
 
             <h3 className="text-2xl font-bold text-white mt-10 mb-4">Phase 3: ML-Powered Personalization (Weeks 9-16)</h3>
 
-            <div className="bg-gray-800/50 rounded-xl p-6 mb-6">
+            <div className="bg-gray-800/50 p-6 mb-6">
               <h4 className="text-white font-semibold mb-4">Recommended ML Approaches:</h4>
 
               <div className="space-y-4 text-gray-300 text-sm">
@@ -571,7 +571,7 @@ export default function AINativeUXPersonalizationPage() {
 
             <h3 className="text-2xl font-bold text-white mt-10 mb-4">Phase 4: Continuous Optimization (Ongoing)</h3>
 
-            <div className="bg-gray-800/50 rounded-xl p-6 mb-6">
+            <div className="bg-gray-800/50 p-6 mb-6">
               <ul className="space-y-3 text-gray-300 text-sm">
                 <li className="flex items-start gap-2">
                   <TrendingUp className="w-4 h-4 text-green-400 mt-1 flex-shrink-0" />
@@ -608,22 +608,22 @@ export default function AINativeUXPersonalizationPage() {
             <h3 className="text-2xl font-bold text-white mt-10 mb-4">Emerging Paradigms</h3>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-              <div className="bg-gradient-to-br from-blue-600/10 to-cyan-600/10 border border-blue-500/30 rounded-xl p-6">
+              <div className="bg-gradient-to-br from-blue-600/10 to-cyan-600/10 border border-blue-500/30 p-6">
                 <h4 className="text-white font-bold mb-3">Ambient Computing</h4>
                 <p className="text-gray-300 text-sm">Interfaces that fade into the background, responding to needs without explicit invocation. Proactive assistance without constant attention.</p>
               </div>
 
-              <div className="bg-gradient-to-br from-purple-600/10 to-pink-600/10 border border-purple-500/30 rounded-xl p-6">
+              <div className="bg-gradient-to-br from-purple-600/10 to-pink-600/10 border border-purple-500/30 p-6">
                 <h4 className="text-white font-bold mb-3">Multimodal Interaction</h4>
                 <p className="text-gray-300 text-sm">Seamlessly blend voice, touch, gesture, and gaze. The interface adapts to the most natural input method for each context.</p>
               </div>
 
-              <div className="bg-gradient-to-br from-green-600/10 to-emerald-600/10 border border-green-500/30 rounded-xl p-6">
+              <div className="bg-gradient-to-br from-green-600/10 to-emerald-600/10 border border-green-500/30 p-6">
                 <h4 className="text-white font-bold mb-3">Autonomous Agents</h4>
                 <p className="text-gray-300 text-sm">AI agents that handle entire workflows independently, checking in only when human judgment is required.</p>
               </div>
 
-              <div className="bg-gradient-to-br from-orange-600/10 to-red-600/10 border border-orange-500/30 rounded-xl p-6">
+              <div className="bg-gradient-to-br from-orange-600/10 to-red-600/10 border border-orange-500/30 p-6">
                 <h4 className="text-white font-bold mb-3">Thought-Based Interfaces</h4>
                 <p className="text-gray-300 text-sm">Brain-computer interfaces that respond to intent before conscious action. The ultimate form of personalization.</p>
               </div>
@@ -631,7 +631,7 @@ export default function AINativeUXPersonalizationPage() {
 
             <h2 className="text-3xl font-bold text-white mt-12 mb-6">Key Takeaways</h2>
 
-            <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30 rounded-xl p-6 mb-8">
+            <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30 p-6 mb-8">
               <ul className="space-y-3 text-gray-300">
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />
@@ -682,14 +682,14 @@ export default function AINativeUXPersonalizationPage() {
               The future of UX is intelligent, adaptive, and deeply personal. The question isn't whether to embrace AI-native design principles—it's how quickly you can learn to design for this new paradigm.
             </p>
 
-            <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 border border-purple-500/30 rounded-xl p-8 mt-10">
+            <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 border border-purple-500/30 p-8 mt-10">
               <h3 className="text-2xl font-bold text-white mb-4">Ready to Build AI-Native Experiences?</h3>
               <p className="text-gray-300 mb-6">
                 I specialize in designing and developing intelligent, adaptive interfaces that leverage cutting-edge AI while maintaining ethical standards and user control. Let's create something extraordinary together.
               </p>
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg transition-colors font-medium"
+                className="inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 transition-colors font-medium"
               >
                 Start Your AI-Native Project
                 <ArrowRight className="w-4 h-4" />

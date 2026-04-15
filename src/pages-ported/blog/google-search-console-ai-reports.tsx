@@ -58,7 +58,7 @@ export default function GoogleSearchConsoleAIReports() {
             </div>
           </div>
 
-          <div className="aspect-[21/9] overflow-hidden rounded-xl mb-8">
+          <div className="aspect-[21/9] overflow-hidden mb-8">
             <img
               src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=2000&q=80"
               alt="Google Search Console AI-powered configuration dashboard showing analytics data"
@@ -72,7 +72,7 @@ export default function GoogleSearchConsoleAIReports() {
         <div className="max-w-4xl mx-auto">
           <div className="prose prose-lg prose-invert max-w-none">
 
-            <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 border border-blue-500/30 rounded-xl p-6 mb-8">
+            <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 border border-blue-500/30 p-6 mb-8">
               <p className="text-white font-medium mb-2 flex items-center gap-2">
                 <Zap className="w-5 h-5 text-[#A3D1FF]" />
                 New Feature Alert
@@ -109,15 +109,15 @@ export default function GoogleSearchConsoleAIReports() {
             </p>
 
             <div className="space-y-4 mb-8">
-              <div className="bg-gray-800/50 border-l-4 border-[#A3D1FF] rounded-lg p-5">
+              <div className="bg-gray-800/50 border-l-4 border-[#A3D1FF] p-5">
                 <h4 className="text-white font-bold mb-2">Select the Right Metrics</h4>
                 <p className="text-gray-300 text-base">Chooses which combination of Clicks, Impressions, Average CTR, and Average Position to display based on your question.</p>
               </div>
-              <div className="bg-gray-800/50 border-l-4 border-green-500 rounded-lg p-5">
+              <div className="bg-gray-800/50 border-l-4 border-green-500 p-5">
                 <h4 className="text-white font-bold mb-2">Apply Filters Automatically</h4>
                 <p className="text-gray-300 text-base">Sets up query filters, page filters, country, device, search appearance, and date range from your plain-English description.</p>
               </div>
-              <div className="bg-gray-800/50 border-l-4 border-amber-500 rounded-lg p-5">
+              <div className="bg-gray-800/50 border-l-4 border-amber-500 p-5">
                 <h4 className="text-white font-bold mb-2">Build Comparisons</h4>
                 <p className="text-gray-300 text-base">Creates custom date range comparisons or segment-vs-segment views without you clicking through multiple menus.</p>
               </div>
@@ -127,7 +127,7 @@ export default function GoogleSearchConsoleAIReports() {
               An important distinction: this feature does not give you access to new data or affect your rankings in any way. It is purely a faster interface for reaching the same data views you could always build manually. Think of it as a shortcut, not a new data source.
             </p>
 
-            <div className="bg-gray-800/50 rounded-xl p-6 mb-8">
+            <div className="bg-gray-800/50 p-6 mb-8">
               <h4 className="text-white font-bold mb-4">Who Benefits Most</h4>
               <ul className="space-y-3 text-gray-300">
                 <li className="flex items-start gap-3">
@@ -164,7 +164,7 @@ export default function GoogleSearchConsoleAIReports() {
             </p>
 
             <div className="space-y-4 mb-8">
-              <div className="bg-[#1a2332] border border-[#A3D1FF]/30 rounded-lg p-5">
+              <div className="bg-[#1a2332] border border-[#A3D1FF]/30 p-5">
                 <div className="flex items-center gap-2 mb-2">
                   <Terminal className="w-4 h-4 text-[#A3D1FF]" />
                   <span className="text-[#A3D1FF] text-sm font-medium">Prompt 1</span>
@@ -172,7 +172,7 @@ export default function GoogleSearchConsoleAIReports() {
                 <p className="text-white font-mono text-sm mb-2">"Show queries with more than five words in the last 3 months."</p>
                 <p className="text-white text-sm">Reveals long-tail search terms driving impressions. These are your best candidates for dedicated content pieces.</p>
               </div>
-              <div className="bg-[#1a2332] border border-[#A3D1FF]/30 rounded-lg p-5">
+              <div className="bg-[#1a2332] border border-[#A3D1FF]/30 p-5">
                 <div className="flex items-center gap-2 mb-2">
                   <Terminal className="w-4 h-4 text-[#A3D1FF]" />
                   <span className="text-[#A3D1FF] text-sm font-medium">Prompt 2</span>
@@ -188,7 +188,7 @@ export default function GoogleSearchConsoleAIReports() {
             </p>
 
             <div className="space-y-4 mb-8">
-              <div className="bg-[#1a2332] border border-[#A3D1FF]/30 rounded-lg p-5">
+              <div className="bg-[#1a2332] border border-[#A3D1FF]/30 p-5">
                 <div className="flex items-center gap-2 mb-2">
                   <Terminal className="w-4 h-4 text-[#A3D1FF]" />
                   <span className="text-[#A3D1FF] text-sm font-medium">Prompt 3</span>
@@ -196,7 +196,7 @@ export default function GoogleSearchConsoleAIReports() {
                 <p className="text-white font-mono text-sm mb-2">"Compare clicks and impressions for my top 20 pages this month vs the same month last year."</p>
                 <p className="text-white text-sm">Year-over-year comparison on your highest-value pages. Immediately shows seasonal trends versus genuine declines.</p>
               </div>
-              <div className="bg-[#1a2332] border border-[#A3D1FF]/30 rounded-lg p-5">
+              <div className="bg-[#1a2332] border border-[#A3D1FF]/30 p-5">
                 <div className="flex items-center gap-2 mb-2">
                   <Terminal className="w-4 h-4 text-[#A3D1FF]" />
                   <span className="text-[#A3D1FF] text-sm font-medium">Prompt 4</span>
@@ -212,7 +212,7 @@ export default function GoogleSearchConsoleAIReports() {
             </p>
 
             <div className="space-y-4 mb-8">
-              <div className="bg-[#1a2332] border border-[#A3D1FF]/30 rounded-lg p-5">
+              <div className="bg-[#1a2332] border border-[#A3D1FF]/30 p-5">
                 <div className="flex items-center gap-2 mb-2">
                   <Terminal className="w-4 h-4 text-[#A3D1FF]" />
                   <span className="text-[#A3D1FF] text-sm font-medium">Prompt 5</span>
@@ -220,7 +220,7 @@ export default function GoogleSearchConsoleAIReports() {
                 <p className="text-white font-mono text-sm mb-2">"Show me clicks and CTR for pages containing '/blog/' this quarter vs last quarter."</p>
                 <p className="text-white text-sm">Checks whether your blog content strategy is gaining or losing traction quarter over quarter.</p>
               </div>
-              <div className="bg-[#1a2332] border border-[#A3D1FF]/30 rounded-lg p-5">
+              <div className="bg-[#1a2332] border border-[#A3D1FF]/30 p-5">
                 <div className="flex items-center gap-2 mb-2">
                   <Terminal className="w-4 h-4 text-[#A3D1FF]" />
                   <span className="text-[#A3D1FF] text-sm font-medium">Prompt 6</span>
@@ -228,7 +228,7 @@ export default function GoogleSearchConsoleAIReports() {
                 <p className="text-white font-mono text-sm mb-2">"Show performance of pages that include the word 'pricing' in the URL."</p>
                 <p className="text-white text-sm">Critical for SaaS and service businesses. Pricing pages are high-intent; declining performance here directly impacts revenue.</p>
               </div>
-              <div className="bg-[#1a2332] border border-[#A3D1FF]/30 rounded-lg p-5">
+              <div className="bg-[#1a2332] border border-[#A3D1FF]/30 p-5">
                 <div className="flex items-center gap-2 mb-2">
                   <Terminal className="w-4 h-4 text-[#A3D1FF]" />
                   <span className="text-[#A3D1FF] text-sm font-medium">Prompt 7</span>
@@ -244,7 +244,7 @@ export default function GoogleSearchConsoleAIReports() {
             </p>
 
             <div className="space-y-4 mb-8">
-              <div className="bg-[#1a2332] border border-[#A3D1FF]/30 rounded-lg p-5">
+              <div className="bg-[#1a2332] border border-[#A3D1FF]/30 p-5">
                 <div className="flex items-center gap-2 mb-2">
                   <Terminal className="w-4 h-4 text-[#A3D1FF]" />
                   <span className="text-[#A3D1FF] text-sm font-medium">Prompt 8</span>
@@ -252,7 +252,7 @@ export default function GoogleSearchConsoleAIReports() {
                 <p className="text-white font-mono text-sm mb-2">"Show queries related to 'web design' where impressions are up but CTR is down in the last 90 days."</p>
                 <p className="text-white text-sm">Replace "web design" with your niche keyword. This pattern often indicates queries being answered by AI Overviews.</p>
               </div>
-              <div className="bg-[#1a2332] border border-[#A3D1FF]/30 rounded-lg p-5">
+              <div className="bg-[#1a2332] border border-[#A3D1FF]/30 p-5">
                 <div className="flex items-center gap-2 mb-2">
                   <Terminal className="w-4 h-4 text-[#A3D1FF]" />
                   <span className="text-[#A3D1FF] text-sm font-medium">Prompt 9</span>
@@ -260,7 +260,7 @@ export default function GoogleSearchConsoleAIReports() {
                 <p className="text-white font-mono text-sm mb-2">"Show queries where average position improved but clicks decreased in the last 28 days."</p>
                 <p className="text-white text-sm">Ranking higher but getting fewer clicks is the hallmark of zero-click searches and AI Overview interference.</p>
               </div>
-              <div className="bg-[#1a2332] border border-[#A3D1FF]/30 rounded-lg p-5">
+              <div className="bg-[#1a2332] border border-[#A3D1FF]/30 p-5">
                 <div className="flex items-center gap-2 mb-2">
                   <Terminal className="w-4 h-4 text-[#A3D1FF]" />
                   <span className="text-[#A3D1FF] text-sm font-medium">Prompt 10</span>
@@ -280,7 +280,7 @@ export default function GoogleSearchConsoleAIReports() {
             </p>
 
             <div className="space-y-6 mb-8">
-              <div className="bg-gradient-to-br from-blue-600/10 to-cyan-600/10 border border-blue-500/30 rounded-xl p-6">
+              <div className="bg-gradient-to-br from-blue-600/10 to-cyan-600/10 border border-blue-500/30 p-6">
                 <div className="flex items-start gap-4">
                   <div className="w-10 h-10 bg-[#A3D1FF]/20 rounded-full flex items-center justify-center flex-shrink-0">
                     <span className="text-[#A3D1FF] font-bold">1</span>
@@ -293,7 +293,7 @@ export default function GoogleSearchConsoleAIReports() {
                 </div>
               </div>
 
-              <div className="bg-gradient-to-br from-green-600/10 to-emerald-600/10 border border-green-500/30 rounded-xl p-6">
+              <div className="bg-gradient-to-br from-green-600/10 to-emerald-600/10 border border-green-500/30 p-6">
                 <div className="flex items-start gap-4">
                   <div className="w-10 h-10 bg-green-500/20 rounded-full flex items-center justify-center flex-shrink-0">
                     <span className="text-green-400 font-bold">2</span>
@@ -306,7 +306,7 @@ export default function GoogleSearchConsoleAIReports() {
                 </div>
               </div>
 
-              <div className="bg-gradient-to-br from-amber-600/10 to-orange-600/10 border border-amber-500/30 rounded-xl p-6">
+              <div className="bg-gradient-to-br from-amber-600/10 to-orange-600/10 border border-amber-500/30 p-6">
                 <div className="flex items-start gap-4">
                   <div className="w-10 h-10 bg-amber-500/20 rounded-full flex items-center justify-center flex-shrink-0">
                     <span className="text-amber-400 font-bold">3</span>
@@ -319,7 +319,7 @@ export default function GoogleSearchConsoleAIReports() {
                 </div>
               </div>
 
-              <div className="bg-gradient-to-br from-cyan-600/10 to-blue-600/10 border border-cyan-500/30 rounded-xl p-6">
+              <div className="bg-gradient-to-br from-cyan-600/10 to-blue-600/10 border border-cyan-500/30 p-6">
                 <div className="flex items-start gap-4">
                   <div className="w-10 h-10 bg-cyan-500/20 rounded-full flex items-center justify-center flex-shrink-0">
                     <span className="text-cyan-400 font-bold">4</span>
@@ -333,7 +333,7 @@ export default function GoogleSearchConsoleAIReports() {
               </div>
             </div>
 
-            <div className="bg-gray-800/50 rounded-xl p-6 mb-8 border border-white/10">
+            <div className="bg-gray-800/50 p-6 mb-8 border border-white/10">
               <h4 className="text-white font-bold mb-3">Real-World Example</h4>
               <p className="text-gray-300 text-base">
                 Say you spot that all "managed IT support" queries lost CTR while impressions grew. The instinct is to panic about traffic. But the reality is likely AI Overviews absorbing clicks. The fix is not more content; it is reworking your SERP snippet with a stronger value proposition, adding comparison content that targets the queries AI cannot fully answer, and improving the conversion path on the pages you do get clicks to. The AI configuration panel surfaces the problem in seconds so you can spend your time on the solution.
@@ -350,19 +350,19 @@ export default function GoogleSearchConsoleAIReports() {
             </p>
 
             <div className="space-y-4 mb-8">
-              <div className="bg-red-900/20 border border-red-500/30 rounded-xl p-5">
+              <div className="bg-red-900/20 border border-red-500/30 p-5">
                 <h4 className="text-white font-bold mb-2">It Does Not Change Your Rankings</h4>
                 <p className="text-gray-300 text-base">AI configuration is a reporting interface, nothing more. Using it will not improve or hurt your search performance. It only changes how quickly you can see your data.</p>
               </div>
-              <div className="bg-red-900/20 border border-red-500/30 rounded-xl p-5">
+              <div className="bg-red-900/20 border border-red-500/30 p-5">
                 <h4 className="text-white font-bold mb-2">You Still Need to Validate</h4>
                 <p className="text-gray-300 text-base">The AI interprets your prompt and makes its best guess at the right filters. Sometimes that guess is wrong. Always verify the applied filters match your intent before drawing conclusions from the data.</p>
               </div>
-              <div className="bg-red-900/20 border border-red-500/30 rounded-xl p-5">
+              <div className="bg-red-900/20 border border-red-500/30 p-5">
                 <h4 className="text-white font-bold mb-2">It Does Not Replace Strategy</h4>
                 <p className="text-gray-300 text-base">Faster data access is valuable. But data without a framework for action is just noise. You still need to think about content quality, <Link href="/services" className="text-[#A3D1FF] hover:underline">user experience, and conversion paths</Link>. The AI saves you time on configuration so you can invest that time in the thinking that actually moves results.</p>
               </div>
-              <div className="bg-red-900/20 border border-red-500/30 rounded-xl p-5">
+              <div className="bg-red-900/20 border border-red-500/30 p-5">
                 <h4 className="text-white font-bold mb-2">Complex Analysis Still Needs Manual Filters</h4>
                 <p className="text-gray-300 text-base">For highly specific or compound analyses (e.g., "show me queries on mobile in Germany that contain 'pricing' and have a position between 4 and 10"), you may still need to build filters manually. The AI handles most common scenarios, but edge cases can trip it up.</p>
               </div>
@@ -394,7 +394,7 @@ export default function GoogleSearchConsoleAIReports() {
               If you are writing about this topic yourself or creating internal documentation for your team, here is a quick SEO checklist:
             </p>
 
-            <div className="bg-gradient-to-br from-green-600/10 to-emerald-600/10 border border-green-500/30 rounded-xl p-6 mb-8">
+            <div className="bg-gradient-to-br from-green-600/10 to-emerald-600/10 border border-green-500/30 p-6 mb-8">
               <ul className="space-y-3 text-gray-300">
                 <li className="flex items-start gap-2">
                   <span className="text-green-400 mt-1">&#10003;</span>
@@ -433,14 +433,14 @@ export default function GoogleSearchConsoleAIReports() {
               The prompts and workflow outlined above should get you started. Adapt them to your niche, refine them as you learn what the AI handles well and where it stumbles, and keep your focus on the fundamentals: understanding your audience, creating content that serves them, and building a site that converts.
             </p>
 
-            <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 border border-blue-500/30 rounded-xl p-8 mt-10">
+            <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 border border-blue-500/30 p-8 mt-10">
               <h3 className="text-2xl font-bold text-white mb-4">Want This Set Up for Your Site?</h3>
               <p className="text-gray-300 mb-6">
                 I can configure your Search Console AI reports, build a monthly reporting template around your actual business goals (leads, revenue, not just clicks), and translate the findings into a growth roadmap you can check in 10 minutes per week.
               </p>
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 bg-[#A3D1FF] hover:bg-[#92bce6] text-black px-6 py-3 rounded-lg transition-colors font-medium"
+                className="inline-flex items-center gap-2 bg-[#A3D1FF] hover:bg-[#92bce6] text-black px-6 py-3 transition-colors font-medium"
               >
                 Get a GSC AI Audit
                 <ArrowRight className="w-4 h-4" />
@@ -452,28 +452,28 @@ export default function GoogleSearchConsoleAIReports() {
               <div className="grid sm:grid-cols-2 gap-4">
                 <Link
                   href="/blog/google-algorithm-update-2026"
-                  className="p-4 bg-[#1b1b1b] rounded-lg border border-white/10 hover:border-[#A3D1FF] transition-colors group"
+                  className="p-4 bg-[#1b1b1b] border border-white/10 hover:border-[#A3D1FF] transition-colors group"
                 >
                   <h4 className="text-white font-medium group-hover:text-[#A3D1FF] transition-colors">Google's 2026 Algorithm Update</h4>
                   <p className="text-white text-sm mt-1">Strategies to rank in the AI-first era</p>
                 </Link>
                 <Link
                   href="/blog/optimizing-websites-for-ai-crawlers"
-                  className="p-4 bg-[#1b1b1b] rounded-lg border border-white/10 hover:border-[#A3D1FF] transition-colors group"
+                  className="p-4 bg-[#1b1b1b] border border-white/10 hover:border-[#A3D1FF] transition-colors group"
                 >
                   <h4 className="text-white font-medium group-hover:text-[#A3D1FF] transition-colors">Optimizing for AI Crawlers</h4>
                   <p className="text-white text-sm mt-1">The complete guide to AI search visibility</p>
                 </Link>
                 <Link
                   href="/blog/conversion-rate-optimization-techniques"
-                  className="p-4 bg-[#1b1b1b] rounded-lg border border-white/10 hover:border-[#A3D1FF] transition-colors group"
+                  className="p-4 bg-[#1b1b1b] border border-white/10 hover:border-[#A3D1FF] transition-colors group"
                 >
                   <h4 className="text-white font-medium group-hover:text-[#A3D1FF] transition-colors">Conversion Rate Optimization</h4>
                   <p className="text-white text-sm mt-1">7 proven techniques for 2025</p>
                 </Link>
                 <Link
                   href="/contact"
-                  className="p-4 bg-[#1b1b1b] rounded-lg border border-white/10 hover:border-[#A3D1FF] transition-colors group"
+                  className="p-4 bg-[#1b1b1b] border border-white/10 hover:border-[#A3D1FF] transition-colors group"
                 >
                   <h4 className="text-white font-medium group-hover:text-[#A3D1FF] transition-colors">Get in Touch</h4>
                   <p className="text-white text-sm mt-1">Discuss your project</p>

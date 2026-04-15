@@ -17,8 +17,8 @@ const ASSETS = {
 
 function FeatureCard({ icon: Icon, title, description }: { icon: any, title: string, description: string }) {
   return (
-    <div className="bg-[#111] p-8 rounded-2xl border border-white/5 hover:border-[#A3D1FF]/50 transition-all group hover:-translate-y-1 duration-300">
-      <div className="w-12 h-12 rounded-lg bg-[#A3D1FF]/10 flex items-center justify-center mb-6 group-hover:bg-[#A3D1FF] transition-colors">
+    <div className="bg-[#111] p-8 border border-white/5 hover:border-[#A3D1FF]/50 transition-all group hover:-translate-y-1 duration-300">
+      <div className="w-12 h-12 bg-[#A3D1FF]/10 flex items-center justify-center mb-6 group-hover:bg-[#A3D1FF] transition-colors">
         <Icon className="w-6 h-6 text-[#A3D1FF] group-hover:text-black transition-colors" />
       </div>
       <h3 className="text-xl font-bold mb-3 text-white">{title}</h3>
@@ -29,7 +29,7 @@ function FeatureCard({ icon: Icon, title, description }: { icon: any, title: str
 
 function StatCard({ value, label }: { value: string, label: string }) {
   return (
-    <div className="bg-[#111] p-6 rounded-2xl border border-white/5 hover:border-[#A3D1FF]/30 transition-all text-center group">
+    <div className="bg-[#111] p-6 border border-white/5 hover:border-[#A3D1FF]/30 transition-all text-center group">
       <div className="text-4xl font-bold text-white mb-2 group-hover:text-[#A3D1FF] transition-colors">{value}</div>
       <div className="text-gray-500 text-sm uppercase tracking-wider font-bold">{label}</div>
     </div>
@@ -206,13 +206,13 @@ export default function FriedmanCohenPage() {
           </div>
           
           <div className="relative group">
-            <div className="absolute -inset-1 bg-gradient-to-r from-[#A3D1FF] to-blue-600 rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-1000"></div>
+            <div className="absolute -inset-1 bg-gradient-to-r from-[#A3D1FF] to-blue-600 blur opacity-20 group-hover:opacity-40 transition duration-1000"></div>
             <img 
               src={ASSETS.STOREFRONT} 
               alt="Historic Storefront" 
-              className="relative rounded-2xl w-full h-[500px] object-cover filter grayscale group-hover:grayscale-0 transition-all duration-700"
+              className="relative w-full h-[500px] object-cover filter grayscale group-hover:grayscale-0 transition-all duration-700"
             />
-            <div className="absolute bottom-4 right-4 bg-black/80 backdrop-blur px-4 py-2 rounded-lg text-xs font-mono text-white">
+            <div className="absolute bottom-4 right-4 bg-black/80 backdrop-blur px-4 py-2 text-xs font-mono text-white">
               The Original Storefront
             </div>
           </div>
@@ -278,7 +278,7 @@ export default function FriedmanCohenPage() {
              <h3 className="text-2xl font-bold mb-10 relative z-10">Client Impact</h3>
              
              <div className="space-y-8 relative z-10">
-               <div className="p-6 bg-black/40 rounded-xl border border-white/5">
+               <div className="p-6 bg-black/40 border border-white/5">
                  <div className="flex gap-1 mb-4">
                    {[1,2,3,4,5].map(i => <Star key={i} size={16} className="fill-[#A3D1FF] text-[#A3D1FF]" />)}
                  </div>
@@ -294,7 +294,7 @@ export default function FriedmanCohenPage() {
                  </div>
                </div>
 
-               <div className="p-6 bg-black/40 rounded-xl border border-white/5">
+               <div className="p-6 bg-black/40 border border-white/5">
                  <div className="flex gap-1 mb-4">
                    {[1,2,3,4,5].map(i => <Star key={i} size={16} className="fill-[#A3D1FF] text-[#A3D1FF]" />)}
                  </div>

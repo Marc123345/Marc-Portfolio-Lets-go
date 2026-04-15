@@ -67,7 +67,7 @@ export default function ProgressiveWebAppsPage() {
             </div>
           </div>
           
-          <div className="aspect-[21/9] overflow-hidden rounded-xl mb-8">
+          <div className="aspect-[21/9] overflow-hidden mb-8">
             <img 
               src="https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?auto=format&fit=crop&w=2000&q=80" 
               alt="Progressive Web Apps" 
@@ -86,7 +86,7 @@ export default function ProgressiveWebAppsPage() {
             <h2>1. No App Store Barriers</h2>
             <p>Traditional mobile apps require users to download them from the app store. This means users must take additional steps to get started, and businesses must manage separate app updates and versions. PWAs eliminate this barrier — users simply access them via a URL. This means businesses can reach users instantly without the friction of an app download.</p>
             
-            <div className="bg-[#1b1b1b] p-6 rounded-xl border border-white/10 my-8">
+            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
               <h4 className="text-white font-semibold mb-2 flex items-center">
                 <Globe className="w-5 h-5 text-[#A3D1FF] mr-2" />
                 Instant Accessibility
@@ -97,7 +97,7 @@ export default function ProgressiveWebAppsPage() {
             <h2>2. Enhanced Performance</h2>
             <p>PWAs are designed for speed. By leveraging caching and service workers, they load instantly even in low-network environments. Unlike traditional websites, which can often be slow to load on mobile devices, PWAs give users an app-like speed, regardless of their internet connection. This results in higher user engagement and retention.</p>
             
-            <div className="bg-[#1b1b1b] p-6 rounded-xl border border-white/10 my-8">
+            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
               <h4 className="text-white font-semibold mb-2 flex items-center">
                 <Zap className="w-5 h-5 text-[#A3D1FF] mr-2" />
                 Case Study: Performance Impact
@@ -108,7 +108,7 @@ export default function ProgressiveWebAppsPage() {
             <h2>3. Better User Engagement with Push Notifications</h2>
             <p>One of the key benefits of PWAs is the ability to send push notifications to users. These notifications can prompt users to return to your app, notify them of special promotions, or keep them updated on important news. This functionality is traditionally found in native apps, but PWAs allow you to offer the same feature without needing to install anything from an app store.</p>
             
-            <div className="bg-[#1b1b1b] p-6 rounded-xl border border-white/10 my-8">
+            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
               <h4 className="text-white font-semibold mb-2 flex items-center">
                 <Bell className="w-5 h-5 text-[#A3D1FF] mr-2" />
                 Engagement Strategy
@@ -119,7 +119,7 @@ export default function ProgressiveWebAppsPage() {
             <h2>4. Cost-Effective Development</h2>
             <p>Developing a native app for each platform (iOS, Android, etc.) can be time-consuming and expensive. PWAs, on the other hand, are built once and can be deployed across all platforms. This eliminates the need for separate development teams and saves businesses significant resources.</p>
             
-            <div className="bg-[#1b1b1b] p-6 rounded-xl border border-white/10 my-8">
+            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
               <h4 className="text-white font-semibold mb-2 flex items-center">
                 <DollarSign className="w-5 h-5 text-[#A3D1FF] mr-2" />
                 Cost Comparison
@@ -154,7 +154,7 @@ export default function ProgressiveWebAppsPage() {
             
             <p>From there, you can start integrating PWA-specific features like offline functionality, push notifications, and app-like navigation. If you're not familiar with building PWAs, partnering with an experienced web development agency can help you get up to speed and implement the best practices.</p>
             
-            <div className="bg-[#1b1b1b] p-6 rounded-xl border border-white/10 my-8">
+            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
               <h4 className="text-white font-semibold mb-2 flex items-center">
                 <Smartphone className="w-5 h-5 text-[#A3D1FF] mr-2" />
                 PWA Checklist
@@ -211,7 +211,7 @@ export default function ProgressiveWebAppsPage() {
           <div className="mt-12 pt-8 border-t border-white/10">
             <h3 className="text-2xl font-semibold text-white mb-6">Related Articles</h3>
             <div className="grid sm:grid-cols-2 gap-6">
-              <div className="bg-[#1b1b1b] rounded-xl overflow-hidden border border-white/10 hover:border-[#A3D1FF] transition-all group">
+              <div className="bg-[#1b1b1b] overflow-hidden border border-white/10 hover:border-[#A3D1FF] transition-all group">
                 <div className="aspect-[16/9] overflow-hidden">
                   <img 
                     src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=2000&q=80" 
@@ -232,7 +232,7 @@ export default function ProgressiveWebAppsPage() {
                 </div>
               </div>
               
-              <div className="bg-[#1b1b1b] rounded-xl overflow-hidden border border-white/10 hover:border-[#A3D1FF] transition-all group">
+              <div className="bg-[#1b1b1b] overflow-hidden border border-white/10 hover:border-[#A3D1FF] transition-all group">
                 <div className="aspect-[16/9] overflow-hidden">
                   <img 
                     src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=2000&q=80" 

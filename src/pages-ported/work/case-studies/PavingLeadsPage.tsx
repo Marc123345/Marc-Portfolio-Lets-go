@@ -272,7 +272,7 @@ export default function PavingLeadsPage() {
                  desc: "Launched quickly without sacrificing quality, allowing the client to start generating ROI immediately."
                }
              ].map((card, i) => (
-               <div key={i} className="bg-[#111] p-8 rounded-2xl border border-white/5 hover:border-[#F97316]/30 transition-colors">
+               <div key={i} className="bg-[#111] p-8 border border-white/5 hover:border-[#F97316]/30 transition-colors">
                  <card.icon className="text-[#F97316] w-8 h-8 mb-6" />
                  <h4 className="text-xl font-bold text-white mb-3">{card.title}</h4>
                  <p className="text-white text-sm leading-relaxed">{card.desc}</p>
@@ -289,19 +289,19 @@ export default function PavingLeadsPage() {
             <h2 className="text-3xl font-bold text-center mb-16">Verified Results</h2>
             
             <div className="grid md:grid-cols-4 gap-8 mb-20 text-center">
-              <div className="p-6 border border-white/5 rounded-2xl">
+              <div className="p-6 border border-white/5">
                  <div className="text-4xl font-bold text-white mb-2">#1</div>
                  <div className="text-[#F97316] text-xs font-bold uppercase tracking-widest">Google Ranking</div>
               </div>
-              <div className="p-6 border border-white/5 rounded-2xl">
+              <div className="p-6 border border-white/5">
                  <div className="text-4xl font-bold text-white mb-2">5.0</div>
                  <div className="text-[#F97316] text-xs font-bold uppercase tracking-widest">Service & Speed</div>
               </div>
-              <div className="p-6 border border-white/5 rounded-2xl">
+              <div className="p-6 border border-white/5">
                  <div className="text-4xl font-bold text-white mb-2">100%</div>
                  <div className="text-[#F97316] text-xs font-bold uppercase tracking-widest">Client Satisfaction</div>
               </div>
-              <div className="p-6 border border-white/5 rounded-2xl">
+              <div className="p-6 border border-white/5">
                  <div className="text-4xl font-bold text-white mb-2">Fast</div>
                  <div className="text-[#F97316] text-xs font-bold uppercase tracking-widest">Turnaround Time</div>
               </div>

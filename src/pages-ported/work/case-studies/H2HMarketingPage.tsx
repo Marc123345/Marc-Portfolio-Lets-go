@@ -75,7 +75,7 @@ export default function H2HMarketingPage() {
               <img
                 src={HERO_IMAGE}
                 alt="H2H Social Marketing website showcase"
-                className="w-full h-auto rounded-2xl"
+                className="w-full h-auto"
               />
             </div>
           </div>
@@ -125,8 +125,8 @@ export default function H2HMarketingPage() {
               { icon: Search, title: "SEO Optimized", desc: "Built with search engine visibility in mind from the ground up." },
               { icon: Globe, title: "Fully Responsive", desc: "Seamless experience across all devices, from desktop to mobile." }
             ].map((card, i) => (
-              <div key={i} className="bg-[#111] p-8 rounded-2xl border border-white/5 hover:border-[#0ea5e9] transition-all group">
-                <div className="w-12 h-12 rounded-lg bg-[#0ea5e9]/10 flex items-center justify-center text-[#0ea5e9] mb-6 group-hover:bg-[#0ea5e9] group-hover:text-white transition-colors">
+              <div key={i} className="bg-[#111] p-8 border border-white/5 hover:border-[#0ea5e9] transition-all group">
+                <div className="w-12 h-12 bg-[#0ea5e9]/10 flex items-center justify-center text-[#0ea5e9] mb-6 group-hover:bg-[#0ea5e9] group-hover:text-white transition-colors">
                   <card.icon size={24} />
                 </div>
                 <h4 className="text-lg font-bold mb-3 text-white">{card.title}</h4>
@@ -143,7 +143,7 @@ export default function H2HMarketingPage() {
           <img
             src={HERO_IMAGE}
             alt="H2H Social Marketing full website view"
-            className="w-full h-auto object-contain rounded-2xl"
+            className="w-full h-auto object-contain"
           />
         </div>
       </section>
@@ -169,7 +169,7 @@ export default function H2HMarketingPage() {
             </h3>
             <div className="flex flex-wrap gap-2">
               {['React', 'Tailwind CSS', 'Vite', 'Framer Motion', 'Netlify'].map(tech => (
-                <span key={tech} className="px-3 py-1.5 bg-white/5 border border-white/5 rounded-md text-gray-300 text-xs font-mono hover:border-[#0ea5e9] hover:text-white transition-colors cursor-default">
+                <span key={tech} className="px-3 py-1.5 bg-white/5 border border-white/5 text-gray-300 text-xs font-mono hover:border-[#0ea5e9] hover:text-white transition-colors cursor-default">
                   {tech}
                 </span>
               ))}

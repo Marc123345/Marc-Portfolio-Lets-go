@@ -13,7 +13,7 @@ function Feature({ icon: Icon, title, description }: {
 }) {
   return (
     <motion.div
-      className="bg-gradient-to-br from-[#1b1b1b] to-[#0a0a0a] p-8 rounded-xl border border-white/10 hover:border-[#A3D1FF] transition-all group"
+      className="bg-gradient-to-br from-[#1b1b1b] to-[#0a0a0a] p-8 border border-white/10 hover:border-[#A3D1FF] transition-all group"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
@@ -21,7 +21,7 @@ function Feature({ icon: Icon, title, description }: {
       whileHover={{ scale: 1.03 }}
     >
       <div className="mb-6">
-        <div className="w-14 h-14 bg-[#A3D1FF]/10 rounded-xl flex items-center justify-center group-hover:bg-[#A3D1FF]/20 transition-colors">
+        <div className="w-14 h-14 bg-[#A3D1FF]/10 flex items-center justify-center group-hover:bg-[#A3D1FF]/20 transition-colors">
           <Icon className="w-8 h-8 text-[#A3D1FF] group-hover:scale-110 transition-transform" />
         </div>
       </div>
@@ -38,14 +38,14 @@ function StatCard({ value, label, icon: Icon }: { value: string; label: string; 
   return (
     <motion.div
       ref={ref}
-      className="bg-gradient-to-br from-[#1b1b1b] to-[#0a0a0a] p-8 rounded-xl border border-white/10 hover:border-[#A3D1FF] transition-all"
+      className="bg-gradient-to-br from-[#1b1b1b] to-[#0a0a0a] p-8 border border-white/10 hover:border-[#A3D1FF] transition-all"
       initial={{ opacity: 0, scale: 0.9 }}
       animate={isInView ? { opacity: 1, scale: 1 } : {}}
       transition={{ duration: 0.5 }}
       whileHover={{ scale: 1.05 }}
     >
       <div className="flex items-center justify-center mb-4">
-        <div className="p-3 bg-[#A3D1FF]/10 rounded-lg">
+        <div className="p-3 bg-[#A3D1FF]/10">
           <Icon className="w-6 h-6 text-[#A3D1FF]" />
         </div>
       </div>
@@ -126,21 +126,21 @@ export default function FleetManagementPage() {
 
             <div className="flex flex-wrap gap-4">
               <motion.div
-                className="bg-white/5 backdrop-blur-sm px-6 py-3 rounded-lg border border-white/10"
+                className="bg-white/5 backdrop-blur-sm px-6 py-3 border border-white/10"
                 whileHover={{ scale: 1.05, borderColor: 'rgba(163, 209, 255, 0.5)' }}
               >
                 <div className="text-[#A3D1FF] text-2xl font-bold">500+</div>
                 <div className="text-white text-sm">Vehicles Tracked</div>
               </motion.div>
               <motion.div
-                className="bg-white/5 backdrop-blur-sm px-6 py-3 rounded-lg border border-white/10"
+                className="bg-white/5 backdrop-blur-sm px-6 py-3 border border-white/10"
                 whileHover={{ scale: 1.05, borderColor: 'rgba(163, 209, 255, 0.5)' }}
               >
                 <div className="text-[#A3D1FF] text-2xl font-bold">95%</div>
                 <div className="text-white text-sm">User Satisfaction</div>
               </motion.div>
               <motion.div
-                className="bg-white/5 backdrop-blur-sm px-6 py-3 rounded-lg border border-white/10"
+                className="bg-white/5 backdrop-blur-sm px-6 py-3 border border-white/10"
                 whileHover={{ scale: 1.05, borderColor: 'rgba(163, 209, 255, 0.5)' }}
               >
                 <div className="text-[#A3D1FF] text-2xl font-bold">35%</div>
@@ -163,13 +163,13 @@ export default function FleetManagementPage() {
 
           <div className="grid md:grid-cols-3 gap-8">
             <motion.div
-              className="bg-gradient-to-br from-[#1b1b1b] to-[#0a0a0a] p-8 rounded-xl border border-white/10"
+              className="bg-gradient-to-br from-[#1b1b1b] to-[#0a0a0a] p-8 border border-white/10"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <div className="w-12 h-12 bg-[#A3D1FF]/10 rounded-lg flex items-center justify-center mb-4">
+              <div className="w-12 h-12 bg-[#A3D1FF]/10 flex items-center justify-center mb-4">
                 <Target className="w-6 h-6 text-[#A3D1FF]" />
               </div>
               <h3 className="text-xl font-bold text-white mb-3">The Problem</h3>
@@ -179,13 +179,13 @@ export default function FleetManagementPage() {
             </motion.div>
 
             <motion.div
-              className="bg-gradient-to-br from-[#1b1b1b] to-[#0a0a0a] p-8 rounded-xl border border-white/10"
+              className="bg-gradient-to-br from-[#1b1b1b] to-[#0a0a0a] p-8 border border-white/10"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
               viewport={{ once: true }}
             >
-              <div className="w-12 h-12 bg-[#A3D1FF]/10 rounded-lg flex items-center justify-center mb-4">
+              <div className="w-12 h-12 bg-[#A3D1FF]/10 flex items-center justify-center mb-4">
                 <Zap className="w-6 h-6 text-[#A3D1FF]" />
               </div>
               <h3 className="text-xl font-bold text-white mb-3">The Solution</h3>
@@ -195,13 +195,13 @@ export default function FleetManagementPage() {
             </motion.div>
 
             <motion.div
-              className="bg-gradient-to-br from-[#1b1b1b] to-[#0a0a0a] p-8 rounded-xl border border-white/10"
+              className="bg-gradient-to-br from-[#1b1b1b] to-[#0a0a0a] p-8 border border-white/10"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              <div className="w-12 h-12 bg-[#A3D1FF]/10 rounded-lg flex items-center justify-center mb-4">
+              <div className="w-12 h-12 bg-[#A3D1FF]/10 flex items-center justify-center mb-4">
                 <TrendingUp className="w-6 h-6 text-[#A3D1FF]" />
               </div>
               <h3 className="text-xl font-bold text-white mb-3">The Impact</h3>
@@ -221,7 +221,7 @@ export default function FleetManagementPage() {
             The automotive industry faces unprecedented challenges that demand innovative solutions. Rising customer expectations, fluctuating market dynamics, and complex inventory management require dealerships to embrace digital transformation.
           </p>
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-[#2d3035] p-6 rounded-xl border border-white/10">
+            <div className="bg-[#2d3035] p-6 border border-white/10">
               <h3 className="text-xl font-semibold text-white mb-4">Market Challenges</h3>
               <ul className="space-y-3">
                 {[
@@ -237,7 +237,7 @@ export default function FleetManagementPage() {
                 ))}
               </ul>
             </div>
-            <div className="bg-[#2d3035] p-6 rounded-xl border border-white/10">
+            <div className="bg-[#2d3035] p-6 border border-white/10">
               <h3 className="text-xl font-semibold text-white mb-4">Digital Solutions</h3>
               <ul className="space-y-3">
                 {[
@@ -253,7 +253,7 @@ export default function FleetManagementPage() {
                 ))}
               </ul>
             </div>
-            <div className="bg-[#2d3035] p-6 rounded-xl border border-white/10">
+            <div className="bg-[#2d3035] p-6 border border-white/10">
               <h3 className="text-xl font-semibold text-white mb-4">Key Benefits</h3>
               <ul className="space-y-3">
                 {[
@@ -278,14 +278,14 @@ export default function FleetManagementPage() {
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 gap-8">
             <div className="space-y-8">
-              <div className="aspect-[4/3] overflow-hidden rounded-xl">
+              <div className="aspect-[4/3] overflow-hidden">
                 <img 
                   src="https://i.imgur.com/EwgHAuK.png"
                   alt="Fleet Management Dashboard"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                 />
               </div>
-              <div className="aspect-[4/3] overflow-hidden rounded-xl">
+              <div className="aspect-[4/3] overflow-hidden">
                 <img 
                   src="https://i.imgur.com/ACKUFLy.jpeg"
                   alt="Fleet Management Mobile App"
@@ -294,14 +294,14 @@ export default function FleetManagementPage() {
               </div>
             </div>
             <div className="space-y-8">
-              <div className="aspect-[4/3] overflow-hidden rounded-xl">
+              <div className="aspect-[4/3] overflow-hidden">
                 <img 
                   src="https://i.imgur.com/gEbm2d0.png"
                   alt="Fleet Analytics"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                 />
               </div>
-              <div className="aspect-[4/3] overflow-hidden rounded-xl">
+              <div className="aspect-[4/3] overflow-hidden">
                 <img 
                   src="https://i.imgur.com/0npIa3u.png"
                   alt="Fleet Tracking Interface"
@@ -339,7 +339,7 @@ export default function FleetManagementPage() {
               <img 
                 src="https://i.imgur.com/EwgHAuK.png"
                 alt="Market Analysis Dashboard"
-                className="rounded-xl shadow-2xl hover:scale-105 transition-transform duration-300"
+                className="shadow-2xl hover:scale-105 transition-transform duration-300"
               />
             </div>
           </div>
@@ -354,7 +354,7 @@ export default function FleetManagementPage() {
               <img 
                 src="https://i.imgur.com/gEbm2d0.png"
                 alt="Dynamic Pricing Interface"
-                className="rounded-xl shadow-2xl hover:scale-105 transition-transform duration-300"
+                className="shadow-2xl hover:scale-105 transition-transform duration-300"
               />
             </div>
             <div>
@@ -387,7 +387,7 @@ export default function FleetManagementPage() {
               <img 
                 src="https://i.imgur.com/ACKUFLy.jpeg"
                 alt="Fleet Mobile App"
-                className="rounded-xl shadow-2xl hover:scale-105 transition-transform duration-300"
+                className="shadow-2xl hover:scale-105 transition-transform duration-300"
               />
             </div>
             <div>
@@ -434,7 +434,7 @@ export default function FleetManagementPage() {
 
           <div className="grid md:grid-cols-3 gap-8">
             <motion.div
-              className="bg-gradient-to-br from-[#1b1b1b] to-[#0a0a0a] p-8 rounded-xl border border-white/10"
+              className="bg-gradient-to-br from-[#1b1b1b] to-[#0a0a0a] p-8 border border-white/10"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
@@ -446,7 +446,7 @@ export default function FleetManagementPage() {
             </motion.div>
 
             <motion.div
-              className="bg-gradient-to-br from-[#1b1b1b] to-[#0a0a0a] p-8 rounded-xl border border-white/10"
+              className="bg-gradient-to-br from-[#1b1b1b] to-[#0a0a0a] p-8 border border-white/10"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
@@ -458,7 +458,7 @@ export default function FleetManagementPage() {
             </motion.div>
 
             <motion.div
-              className="bg-gradient-to-br from-[#1b1b1b] to-[#0a0a0a] p-8 rounded-xl border border-white/10"
+              className="bg-gradient-to-br from-[#1b1b1b] to-[#0a0a0a] p-8 border border-white/10"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}

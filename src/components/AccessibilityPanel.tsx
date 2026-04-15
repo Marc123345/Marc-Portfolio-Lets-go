@@ -264,7 +264,7 @@ export default function AccessibilityPanel({ className = '' }: AccessibilityPane
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: settings.language === 'he' ? -100 : 100 }}
             transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-            className={`absolute bottom-16 left-0 w-72 bg-[#1b1b1b] border border-white/10 rounded-xl shadow-xl p-4`}
+            className={`absolute bottom-16 left-0 w-72 bg-[#1b1b1b] border border-white/10 shadow-xl p-4`}
             role="dialog"
             aria-labelledby="accessibility-title"
           >
@@ -286,7 +286,7 @@ export default function AccessibilityPanel({ className = '' }: AccessibilityPane
                       setSettings({ ...settings, fontSize: 0 });
                       announceToScreenReader(`${t.textSize}: ${t.normal}`);
                     }}
-                    className={`flex-1 px-3 py-2 rounded-lg text-sm ${
+                    className={`flex-1 px-3 py-2 text-sm ${
                       settings.fontSize === 0
                         ? 'bg-[#A3D1FF] text-black'
                         : 'bg-[#2d3035] text-white hover:bg-[#3d4045]'
@@ -301,7 +301,7 @@ export default function AccessibilityPanel({ className = '' }: AccessibilityPane
                       setSettings({ ...settings, fontSize: 1 });
                       announceToScreenReader(`${t.textSize}: ${t.large}`);
                     }}
-                    className={`flex-1 px-3 py-2 rounded-lg text-sm ${
+                    className={`flex-1 px-3 py-2 text-sm ${
                       settings.fontSize === 1
                         ? 'bg-[#A3D1FF] text-black'
                         : 'bg-[#2d3035] text-white hover:bg-[#3d4045]'
@@ -316,7 +316,7 @@ export default function AccessibilityPanel({ className = '' }: AccessibilityPane
                       setSettings({ ...settings, fontSize: 2 });
                       announceToScreenReader(`${t.textSize}: ${t.larger}`);
                     }}
-                    className={`flex-1 px-3 py-2 rounded-lg text-sm ${
+                    className={`flex-1 px-3 py-2 text-sm ${
                       settings.fontSize === 2
                         ? 'bg-[#A3D1FF] text-black'
                         : 'bg-[#2d3035] text-white hover:bg-[#3d4045]'
@@ -336,7 +336,7 @@ export default function AccessibilityPanel({ className = '' }: AccessibilityPane
                     setSettings({ ...settings, highContrast: !settings.highContrast });
                     announceToScreenReader(`${t.highContrast}: ${!settings.highContrast ? t.on : t.off}`);
                   }}
-                  className={`w-full flex items-center justify-between px-4 py-3 rounded-lg text-sm ${
+                  className={`w-full flex items-center justify-between px-4 py-3 text-sm ${
                     settings.highContrast
                       ? 'bg-[#A3D1FF] text-black'
                       : 'bg-[#2d3035] text-white hover:bg-[#3d4045]'
@@ -360,7 +360,7 @@ export default function AccessibilityPanel({ className = '' }: AccessibilityPane
                     setSettings({ ...settings, reducedMotion: !settings.reducedMotion });
                     announceToScreenReader(`${t.reducedMotion}: ${!settings.reducedMotion ? t.on : t.off}`);
                   }}
-                  className={`w-full flex items-center justify-between px-4 py-3 rounded-lg text-sm ${
+                  className={`w-full flex items-center justify-between px-4 py-3 text-sm ${
                     settings.reducedMotion
                       ? 'bg-[#A3D1FF] text-black'
                       : 'bg-[#2d3035] text-white hover:bg-[#3d4045]'
@@ -389,7 +389,7 @@ export default function AccessibilityPanel({ className = '' }: AccessibilityPane
                       setSettings({ ...settings, cursorSize: 0 });
                       announceToScreenReader(`${t.cursorSize}: ${t.normal}`);
                     }}
-                    className={`flex-1 px-3 py-2 rounded-lg text-sm ${
+                    className={`flex-1 px-3 py-2 text-sm ${
                       settings.cursorSize === 0
                         ? 'bg-[#A3D1FF] text-black'
                         : 'bg-[#2d3035] text-white hover:bg-[#3d4045]'
@@ -403,7 +403,7 @@ export default function AccessibilityPanel({ className = '' }: AccessibilityPane
                       setSettings({ ...settings, cursorSize: 1 });
                       announceToScreenReader(`${t.cursorSize}: ${t.large}`);
                     }}
-                    className={`flex-1 px-3 py-2 rounded-lg text-sm ${
+                    className={`flex-1 px-3 py-2 text-sm ${
                       settings.cursorSize === 1
                         ? 'bg-[#A3D1FF] text-black'
                         : 'bg-[#2d3035] text-white hover:bg-[#3d4045]'
@@ -417,7 +417,7 @@ export default function AccessibilityPanel({ className = '' }: AccessibilityPane
                       setSettings({ ...settings, cursorSize: 2 });
                       announceToScreenReader(`${t.cursorSize}: ${t.larger}`);
                     }}
-                    className={`flex-1 px-3 py-2 rounded-lg text-sm ${
+                    className={`flex-1 px-3 py-2 text-sm ${
                       settings.cursorSize === 2
                         ? 'bg-[#A3D1FF] text-black'
                         : 'bg-[#2d3035] text-white hover:bg-[#3d4045]'
@@ -436,7 +436,7 @@ export default function AccessibilityPanel({ className = '' }: AccessibilityPane
                     setSettings({ ...settings, darkMode: !settings.darkMode });
                     announceToScreenReader(`${settings.darkMode ? t.lightMode : t.darkMode}: ${!settings.darkMode ? t.on : t.off}`);
                   }}
-                  className={`w-full flex items-center justify-between px-4 py-3 rounded-lg text-sm ${
+                  className={`w-full flex items-center justify-between px-4 py-3 text-sm ${
                     settings.darkMode
                       ? 'bg-[#A3D1FF] text-black'
                       : 'bg-[#2d3035] text-white hover:bg-[#3d4045]'
@@ -464,7 +464,7 @@ export default function AccessibilityPanel({ className = '' }: AccessibilityPane
                     setSettings({ ...settings, screenReader: !settings.screenReader });
                     announceToScreenReader(`${t.screenReader}: ${!settings.screenReader ? t.on : t.off}`);
                   }}
-                  className={`w-full flex items-center justify-between px-4 py-3 rounded-lg text-sm ${
+                  className={`w-full flex items-center justify-between px-4 py-3 text-sm ${
                     settings.screenReader
                       ? 'bg-[#A3D1FF] text-black'
                       : 'bg-[#2d3035] text-white hover:bg-[#3d4045]'
@@ -493,7 +493,7 @@ export default function AccessibilityPanel({ className = '' }: AccessibilityPane
                       setSettings({ ...settings, language: 'en' });
                       announceToScreenReader('Language: English');
                     }}
-                    className={`flex-1 px-3 py-2 rounded-lg text-sm ${
+                    className={`flex-1 px-3 py-2 text-sm ${
                       settings.language === 'en'
                         ? 'bg-[#A3D1FF] text-black'
                         : 'bg-[#2d3035] text-white hover:bg-[#3d4045]'
@@ -507,7 +507,7 @@ export default function AccessibilityPanel({ className = '' }: AccessibilityPane
                       setSettings({ ...settings, language: 'he' });
                       announceToScreenReader('שפה: עברית');
                     }}
-                    className={`flex-1 px-3 py-2 rounded-lg text-sm ${
+                    className={`flex-1 px-3 py-2 text-sm ${
                       settings.language === 'he'
                         ? 'bg-[#A3D1FF] text-black'
                         : 'bg-[#2d3035] text-white hover:bg-[#3d4045]'
@@ -522,7 +522,7 @@ export default function AccessibilityPanel({ className = '' }: AccessibilityPane
               {/* Help Button */}
               <button
                 onClick={() => setShowHelp(!showHelp)}
-                className="w-full flex items-center justify-between px-4 py-3 bg-[#2d3035] text-white rounded-lg hover:bg-[#3d4045] transition-colors text-sm"
+                className="w-full flex items-center justify-between px-4 py-3 bg-[#2d3035] text-white hover:bg-[#3d4045] transition-colors text-sm"
                 aria-expanded={showHelp}
                 aria-controls="accessibility-help"
               >
@@ -541,7 +541,7 @@ export default function AccessibilityPanel({ className = '' }: AccessibilityPane
                     animate={{ height: 'auto', opacity: 1 }}
                     exit={{ height: 0, opacity: 0 }}
                     transition={{ duration: 0.3 }}
-                    className="bg-[#2d3035] p-4 rounded-lg text-sm text-gray-300 overflow-hidden"
+                    className="bg-[#2d3035] p-4 text-sm text-gray-300 overflow-hidden"
                   >
                     <p className="mb-2">
                       {settings.language === 'he' 
@@ -560,7 +560,7 @@ export default function AccessibilityPanel({ className = '' }: AccessibilityPane
               {/* Reset Button */}
               <button
                 onClick={resetSettings}
-                className="w-full flex items-center justify-center px-4 py-3 bg-[#2d3035] text-white rounded-lg hover:bg-[#3d4045] transition-colors text-sm"
+                className="w-full flex items-center justify-center px-4 py-3 bg-[#2d3035] text-white hover:bg-[#3d4045] transition-colors text-sm"
               >
                 <RotateCcw className="w-4 h-4 mr-2" />
                 {t.resetSettings}

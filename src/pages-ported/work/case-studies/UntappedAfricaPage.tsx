@@ -271,7 +271,7 @@ export default function UntappedAfricaCaseStudy() {
                  desc: "Interactive maps and live data counters show exactly where donations are going, building radical transparency."
                }
              ].map((card, i) => (
-               <div key={i} className="bg-[#111] p-8 rounded-2xl border border-white/5 hover:border-[#FFD700]/30 transition-colors">
+               <div key={i} className="bg-[#111] p-8 border border-white/5 hover:border-[#FFD700]/30 transition-colors">
                  <card.icon className="text-[#FFD700] w-8 h-8 mb-6" />
                  <h4 className="text-xl font-bold text-white mb-3">{card.title}</h4>
                  <p className="text-white text-sm leading-relaxed">{card.desc}</p>

@@ -242,8 +242,8 @@ export default function TarChipPage() {
 
           <div className="lg:col-span-2 grid sm:grid-cols-2 gap-6">
 
-            <div className="bg-[#0a0a0a] border border-white/10 rounded-2xl p-8 hover:border-[#EA580C]/30 transition-colors">
-              <div className="mb-4 w-12 h-12 rounded-xl bg-[#EA580C]/10 flex items-center justify-center">
+            <div className="bg-[#0a0a0a] border border-white/10 p-8 hover:border-[#EA580C]/30 transition-colors">
+              <div className="mb-4 w-12 h-12 bg-[#EA580C]/10 flex items-center justify-center">
                 <Layout className="text-[#EA580C]" />
               </div>
               <h4 className="text-lg font-bold mb-3">Responsive Design</h4>
@@ -252,8 +252,8 @@ export default function TarChipPage() {
               </p>
             </div>
 
-            <div className="bg-[#0a0a0a] border border-white/10 rounded-2xl p-8 hover:border-[#EA580C]/30 transition-colors">
-              <div className="mb-4 w-12 h-12 rounded-xl bg-[#EA580C]/10 flex items-center justify-center">
+            <div className="bg-[#0a0a0a] border border-white/10 p-8 hover:border-[#EA580C]/30 transition-colors">
+              <div className="mb-4 w-12 h-12 bg-[#EA580C]/10 flex items-center justify-center">
                 <Search className="text-[#EA580C]" />
               </div>
               <h4 className="text-lg font-bold mb-3">SEO Foundation</h4>
@@ -262,8 +262,8 @@ export default function TarChipPage() {
               </p>
             </div>
 
-            <div className="bg-[#0a0a0a] border border-white/10 rounded-2xl p-8 hover:border-[#EA580C]/30 transition-colors">
-              <div className="mb-4 w-12 h-12 rounded-xl bg-[#EA580C]/10 flex items-center justify-center">
+            <div className="bg-[#0a0a0a] border border-white/10 p-8 hover:border-[#EA580C]/30 transition-colors">
+              <div className="mb-4 w-12 h-12 bg-[#EA580C]/10 flex items-center justify-center">
                 <Zap className="text-[#EA580C]" />
               </div>
               <h4 className="text-lg font-bold mb-3">Fast Performance</h4>
@@ -272,8 +272,8 @@ export default function TarChipPage() {
               </p>
             </div>
 
-            <div className="bg-[#0a0a0a] border border-white/10 rounded-2xl p-8 hover:border-[#EA580C]/30 transition-colors">
-              <div className="mb-4 w-12 h-12 rounded-xl bg-[#EA580C]/10 flex items-center justify-center">
+            <div className="bg-[#0a0a0a] border border-white/10 p-8 hover:border-[#EA580C]/30 transition-colors">
+              <div className="mb-4 w-12 h-12 bg-[#EA580C]/10 flex items-center justify-center">
                 <MousePointer2 className="text-[#EA580C]" />
               </div>
               <h4 className="text-lg font-bold mb-3">User Experience</h4>

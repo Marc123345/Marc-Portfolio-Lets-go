@@ -426,16 +426,16 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               </div>
 
               <div className="flex gap-3">
-                <a href="https://www.linkedin.com/in/portfolio2/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-[#2d3035] rounded-lg flex items-center justify-center text-white hover:text-[#0077B5] hover:bg-[#0077B5]/10 transition-all group" aria-label="LinkedIn">
+                <a href="https://www.linkedin.com/in/portfolio2/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-[#2d3035] flex items-center justify-center text-white hover:text-[#0077B5] hover:bg-[#0077B5]/10 transition-all group" aria-label="LinkedIn">
                   <Linkedin className="w-5 h-5 group-hover:scale-110 transition-transform" />
                 </a>
-                <a href="https://www.behance.net/marcfriedmanweb" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-[#2d3035] rounded-lg flex items-center justify-center text-white hover:text-[#1769FF] hover:bg-[#1769FF]/10 transition-all group" aria-label="Behance">
+                <a href="https://www.behance.net/marcfriedmanweb" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-[#2d3035] flex items-center justify-center text-white hover:text-[#1769FF] hover:bg-[#1769FF]/10 transition-all group" aria-label="Behance">
                   <Palette className="w-5 h-5 group-hover:scale-110 transition-transform" />
                 </a>
-                <a href={CALENDLY_LINK} target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-[#2d3035] rounded-lg flex items-center justify-center text-white hover:text-[#00A2FF] hover:bg-[#00A2FF]/10 transition-all group" aria-label="Schedule a Call">
+                <a href={CALENDLY_LINK} target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-[#2d3035] flex items-center justify-center text-white hover:text-[#00A2FF] hover:bg-[#00A2FF]/10 transition-all group" aria-label="Schedule a Call">
                   <Calendar className="w-5 h-5 group-hover:scale-110 transition-transform" />
                 </a>
-                <a href="https://www.awwwards.com/marc-friedman/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-[#2d3035] rounded-lg flex items-center justify-center text-white hover:text-[#FFB800] hover:bg-[#FFB800]/10 transition-all group" aria-label="Awwwards">
+                <a href="https://www.awwwards.com/marc-friedman/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-[#2d3035] flex items-center justify-center text-white hover:text-[#FFB800] hover:bg-[#FFB800]/10 transition-all group" aria-label="Awwwards">
                   <Trophy className="w-5 h-5 group-hover:scale-110 transition-transform" />
                 </a>
               </div>

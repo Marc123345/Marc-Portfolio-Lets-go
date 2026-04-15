@@ -111,7 +111,7 @@ export default function ConversationalUIChatInterfaces() {
             </div>
           </div>
 
-          <div className="aspect-[21/9] overflow-hidden rounded-xl mb-8">
+          <div className="aspect-[21/9] overflow-hidden mb-8">
             <img
               src="https://images.unsplash.com/photo-1531746790731-6c087fecd65a?auto=format&fit=crop&w=2000&q=80"
               alt="Conversational UI chat interface design"
@@ -131,14 +131,14 @@ export default function ConversationalUIChatInterfaces() {
 
             <p>Conversational UI (CUI) is any interface where users interact through natural language — text or voice — rather than menus, buttons, and forms. It encompasses a wide spectrum:</p>
 
-            <div className="bg-[#1b1b1b] p-6 rounded-xl border border-white/10 my-8 not-prose">
+            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8 not-prose">
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                 {[
                   { label: 'Rule-Based Bots', desc: 'Fixed decision trees, keyword matching, scripted responses', color: 'border-gray-700' },
                   { label: 'AI Assistants', desc: 'Intent recognition, context memory, dynamic generation', color: 'border-[#A3D1FF]/30' },
                   { label: 'Copilot Interfaces', desc: 'Embedded in apps, contextually aware, action-capable', color: 'border-[#A3D1FF]/50' },
                 ].map((item) => (
-                  <div key={item.label} className={`bg-black/30 border ${item.color} rounded-lg p-4`}>
+                  <div key={item.label} className={`bg-black/30 border ${item.color} p-4`}>
                     <p className="text-white font-semibold text-sm mb-1">{item.label}</p>
                     <p className="text-white text-sm leading-relaxed">{item.desc}</p>
                   </div>
@@ -154,7 +154,7 @@ export default function ConversationalUIChatInterfaces() {
 
             <p>Chat interfaces aren't inherently good or bad — they're appropriate or inappropriate for a given context. There are several situations where conversational design delivers real, measurable UX improvement.</p>
 
-            <div className="bg-[#1b1b1b] p-6 rounded-xl border border-white/10 my-8 not-prose">
+            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8 not-prose">
               <div className="space-y-4">
                 {[
                   {
@@ -183,7 +183,7 @@ export default function ConversationalUIChatInterfaces() {
                     icon: <Eye className="w-4 h-4 text-[#A3D1FF]" />,
                   },
                 ].map((item) => (
-                  <div key={item.title} className="bg-black/30 border border-white/5 rounded-lg p-5">
+                  <div key={item.title} className="bg-black/30 border border-white/5 p-5">
                     <div className="flex items-center gap-2 mb-2">
                       {item.icon}
                       <p className="text-white font-semibold">{item.title}</p>
@@ -194,7 +194,7 @@ export default function ConversationalUIChatInterfaces() {
               </div>
             </div>
 
-            <div className="bg-[#1b1b1b] p-6 rounded-xl border border-white/10 my-8 not-prose">
+            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8 not-prose">
               <p className="text-[#A3D1FF] font-semibold text-sm mb-2">Real-world benchmark</p>
               <p className="text-white text-sm leading-relaxed">
                 Intercom's data on conversational lead qualification flows found 35–40% higher completion rates compared to traditional multi-field forms. The difference wasn't the amount of information collected — it was the perceived effort and the sense of being guided rather than tested.
@@ -205,14 +205,14 @@ export default function ConversationalUIChatInterfaces() {
 
             <p>The honest truth is that most deployed chatbots make the user experience worse, not better. Here are the failure patterns that show up most consistently.</p>
 
-            <div className="bg-[#1b1b1b] p-6 rounded-xl border border-white/10 my-8 not-prose">
+            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8 not-prose">
               <div className="space-y-6">
                 <div className="border-l-2 border-red-500/40 pl-5">
                   <p className="text-white font-semibold mb-2">1. Replacing faster direct navigation</p>
                   <p className="text-white text-sm leading-relaxed mb-3">
                     If a user can find what they need in two clicks, making them type a query and wait for a response is a regression — not progress. Chat UI adds latency: the user has to articulate a request, the system has to interpret it, and they have to evaluate whether the response matches what they actually wanted.
                   </p>
-                  <div className="bg-black/30 rounded-lg p-4 text-sm">
+                  <div className="bg-black/30 p-4 text-sm">
                     <p className="text-red-400 font-medium mb-1">The trap:</p>
                     <p className="text-white">A SaaS app replaces its "Settings → Notifications" page with an AI assistant. Now users have to type "How do I turn off email notifications?" instead of clicking a toggle. Every interaction is now two steps slower with a chance of misinterpretation.</p>
                   </div>
@@ -223,7 +223,7 @@ export default function ConversationalUIChatInterfaces() {
                   <p className="text-white text-sm leading-relaxed mb-3">
                     Rule-based bots have a notoriously narrow vocabulary. When users phrase a request in a way the bot doesn't recognize, they get a fallback response and have to try again. Each failed attempt increases frustration exponentially. After two failures, most users abandon the bot entirely — and often the task.
                   </p>
-                  <div className="bg-black/30 rounded-lg p-4 text-sm">
+                  <div className="bg-black/30 p-4 text-sm">
                     <p className="text-[#A3D1FF] font-medium mb-1">The fix:</p>
                     <p className="text-white">Design escalation paths. If the bot can't resolve an intent after two attempts, proactively offer human escalation, a direct link, or a structured fallback menu. Never leave users in a loop.</p>
                   </div>
@@ -234,7 +234,7 @@ export default function ConversationalUIChatInterfaces() {
                   <p className="text-white text-sm leading-relaxed mb-3">
                     LLM-powered assistants have the opposite problem from rule-based bots: they always produce a response, regardless of whether they actually know the answer. Hallucinated information presented with confidence — especially in customer support, legal, or financial contexts — is worse than "I don't know." It erodes trust irreversibly.
                   </p>
-                  <div className="bg-black/30 rounded-lg p-4 text-sm">
+                  <div className="bg-black/30 p-4 text-sm">
                     <p className="text-[#A3D1FF] font-medium mb-1">The fix:</p>
                     <p className="text-white">Constrain the assistant's knowledge domain. Use retrieval-augmented generation (RAG) to ground responses in verified content. Build in explicit uncertainty signals when confidence is low.</p>
                   </div>
@@ -260,7 +260,7 @@ export default function ConversationalUIChatInterfaces() {
 
             <p>Not all conversational interfaces are alike. Understanding where a given implementation falls on this spectrum shapes every design decision.</p>
 
-            <div className="bg-[#1b1b1b] p-6 rounded-xl border border-white/10 my-8 overflow-x-auto not-prose">
+            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8 overflow-x-auto not-prose">
               <table className="w-full text-sm">
                 <thead>
                   <tr className="border-b border-white/10">
@@ -291,7 +291,7 @@ export default function ConversationalUIChatInterfaces() {
 
             <p>When you've established that a chat interface is genuinely the right tool, these principles determine whether it will be a quality experience or a liability.</p>
 
-            <div className="bg-[#1b1b1b] p-6 rounded-xl border border-white/10 my-8 not-prose">
+            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8 not-prose">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {[
                   { title: "Show, don't ask", detail: "Where possible, surface relevant options rather than making users describe what they want from scratch. Quick reply chips, smart suggestions, and contextual prompts reduce the blank-slate problem dramatically." },
@@ -301,7 +301,7 @@ export default function ConversationalUIChatInterfaces() {
                   { title: 'Give users an exit', detail: "Always provide a visible, frictionless path to human support or direct navigation. The bot is a layer on top of the product — not a wall between the user and what they need." },
                   { title: 'Match the conversation register', detail: "The tone of the bot should match the product context. Overly casual language in a high-stakes context (medical, financial, legal) signals untrustworthiness." },
                 ].map((item) => (
-                  <div key={item.title} className="bg-black/30 border border-white/5 rounded-lg p-5">
+                  <div key={item.title} className="bg-black/30 border border-white/5 p-5">
                     <p className="text-[#A3D1FF] font-semibold text-sm mb-2">{item.title}</p>
                     <p className="text-white text-sm leading-relaxed">{item.detail}</p>
                   </div>
@@ -313,7 +313,7 @@ export default function ConversationalUIChatInterfaces() {
 
             <p>Before committing to conversational UI, run through this evaluation honestly. The goal isn't to avoid chat interfaces — it's to use them where they provide genuine value.</p>
 
-            <div className="bg-[#1b1b1b] p-6 rounded-xl border border-white/10 my-8 not-prose">
+            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8 not-prose">
               <div className="space-y-3">
                 {[
                   { question: 'Can users accomplish this task faster with direct navigation?', ifYes: 'Build or improve the direct path. Add chat as a supplement, not a replacement.', signal: 'warning' },
@@ -325,7 +325,7 @@ export default function ConversationalUIChatInterfaces() {
                 ].map((item) => (
                   <div
                     key={item.question}
-                    className={`rounded-lg p-4 border ${item.signal === 'good' ? 'bg-emerald-900/20 border-emerald-700/30' : 'bg-yellow-900/20 border-yellow-700/30'}`}
+                    className={`p-4 border ${item.signal === 'good' ? 'bg-emerald-900/20 border-emerald-700/30' : 'bg-yellow-900/20 border-yellow-700/30'}`}
                   >
                     <p className={`font-semibold text-sm mb-1 ${item.signal === 'good' ? 'text-emerald-400' : 'text-yellow-400'}`}>
                       {item.question}
@@ -344,7 +344,7 @@ export default function ConversationalUIChatInterfaces() {
 
             <p>This is the right model for most products. It respects user expertise and preference while extending the interface's capabilities. It also de-risks AI integration: if the conversational layer fails or produces a bad response, the underlying product still works.</p>
 
-            <div className="bg-[#1b1b1b] p-6 rounded-xl border border-white/10 my-8 not-prose">
+            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8 not-prose">
               <p className="text-[#A3D1FF] font-semibold mb-4 text-sm uppercase tracking-wide">Hybrid architecture pattern</p>
               <div className="space-y-3 text-sm">
                 {[
@@ -367,7 +367,7 @@ export default function ConversationalUIChatInterfaces() {
 
             <p>The metrics that actually matter:</p>
 
-            <div className="bg-[#1b1b1b] p-6 rounded-xl border border-white/10 my-8 not-prose">
+            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8 not-prose">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {[
                   { metric: 'Task completion rate', desc: 'Did the user accomplish what they came to do via the conversational interface? This is the primary success metric. Anything below 60% for well-defined task types warrants redesign.' },
@@ -377,7 +377,7 @@ export default function ConversationalUIChatInterfaces() {
                   { metric: 'CSAT post-conversation', desc: 'A simple post-conversation rating surfaces qualitative signal. Track it by intent category to identify which use cases the bot handles well vs. poorly.' },
                   { metric: 'Deflection vs. resolution', desc: "Deflection (chat closed without escalation) isn't the same as resolution (user actually got what they needed). Many teams conflate these, dramatically overcounting success." },
                 ].map((item) => (
-                  <div key={item.metric} className="bg-black/30 border border-white/5 rounded-lg p-4">
+                  <div key={item.metric} className="bg-black/30 border border-white/5 p-4">
                     <p className="text-white font-semibold text-sm mb-1">{item.metric}</p>
                     <p className="text-white text-sm leading-relaxed">{item.desc}</p>
                   </div>
@@ -430,7 +430,7 @@ export default function ConversationalUIChatInterfaces() {
           <div className="mt-12 pt-8 border-t border-white/10">
             <h3 className="text-2xl font-semibold text-white mb-6">Related Articles</h3>
             <div className="grid sm:grid-cols-2 gap-6">
-              <div className="bg-[#1b1b1b] rounded-xl overflow-hidden border border-white/10 hover:border-[#A3D1FF] transition-all group">
+              <div className="bg-[#1b1b1b] overflow-hidden border border-white/10 hover:border-[#A3D1FF] transition-all group">
                 <div className="aspect-[16/9] overflow-hidden">
                   <img
                     src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=2000&q=80"
@@ -451,7 +451,7 @@ export default function ConversationalUIChatInterfaces() {
                 </div>
               </div>
 
-              <div className="bg-[#1b1b1b] rounded-xl overflow-hidden border border-white/10 hover:border-[#A3D1FF] transition-all group">
+              <div className="bg-[#1b1b1b] overflow-hidden border border-white/10 hover:border-[#A3D1FF] transition-all group">
                 <div className="aspect-[16/9] overflow-hidden">
                   <img
                     src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=2000&q=80"

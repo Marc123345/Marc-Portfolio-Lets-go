@@ -104,7 +104,7 @@ export default function WhatIsAEOPage() {
             </div>
           </div>
 
-          <div className="aspect-[21/9] overflow-hidden rounded-xl mb-8">
+          <div className="aspect-[21/9] overflow-hidden mb-8">
             <img
               src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=2000&q=80"
               alt="AI-powered search and answer engine visualization"
@@ -136,20 +136,20 @@ export default function WhatIsAEOPage() {
 
             <p>The common thread: none of these platforms work like traditional search. Users do not type keywords and scan a list of blue links. They ask questions in natural language and receive synthesized answers -- sometimes with source citations, sometimes without.</p>
 
-            <div className="bg-[#1b1b1b] p-6 rounded-xl border border-white/10 my-8">
+            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
               <h4 className="text-white font-semibold mb-3 flex items-center">
                 <MessageSquare className="w-5 h-5 text-[#A3D1FF] mr-2" />
                 The Shift in User Behavior
               </h4>
               <p className="text-gray-300 mb-3">Consider how the same information need plays out differently:</p>
               <div className="grid sm:grid-cols-2 gap-4">
-                <div className="bg-black/30 p-4 rounded-lg">
+                <div className="bg-black/30 p-4">
                   <p className="text-[#A3D1FF] font-semibold text-sm mb-2">Traditional Search</p>
                   <p className="text-white text-sm">User types: "best CRM for small business"</p>
                   <p className="text-white text-sm mt-1">Gets: 10 blue links to review sites, vendor pages, and blog posts</p>
                   <p className="text-white text-sm mt-1">Action: Clicks 3-4 results, reads, compares</p>
                 </div>
-                <div className="bg-black/30 p-4 rounded-lg">
+                <div className="bg-black/30 p-4">
                   <p className="text-emerald-400 font-semibold text-sm mb-2">Answer Engine</p>
                   <p className="text-white text-sm">User asks: "What CRM should a 10-person marketing agency use if we need pipeline tracking and email integration?"</p>
                   <p className="text-white text-sm mt-1">Gets: A synthesized recommendation with reasoning, pricing context, and source links</p>
@@ -180,7 +180,7 @@ export default function WhatIsAEOPage() {
               <li><strong>Semantic richness</strong> -- content that covers topics comprehensively with clear relationships between concepts</li>
             </ul>
 
-            <div className="bg-[#1b1b1b] p-6 rounded-xl border border-white/10 my-8">
+            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
               <h4 className="text-white font-semibold mb-3 flex items-center">
                 <Target className="w-5 h-5 text-[#A3D1FF] mr-2" />
                 Key Distinction
@@ -252,7 +252,7 @@ export default function WhatIsAEOPage() {
 
             <p>AI answer engines can detect content age and prefer recently published or recently updated content for time-sensitive queries. Content that references current data, recent developments, and up-to-date examples signals active maintenance and ongoing relevance.</p>
 
-            <div className="bg-[#1b1b1b] p-6 rounded-xl border border-white/10 my-8">
+            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
               <h4 className="text-white font-semibold mb-3 flex items-center">
                 <Bot className="w-5 h-5 text-[#A3D1FF] mr-2" />
                 How Perplexity Selects Sources
@@ -288,25 +288,25 @@ export default function WhatIsAEOPage() {
 
             <p>The most AEO-effective content format follows a pattern we call "answer-first architecture":</p>
 
-            <div className="bg-[#1b1b1b] p-6 rounded-xl border border-white/10 my-8">
+            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
               <h4 className="text-white font-semibold mb-3 flex items-center">
                 <FileText className="w-5 h-5 text-[#A3D1FF] mr-2" />
                 Answer-First Content Architecture
               </h4>
               <div className="space-y-4">
-                <div className="bg-black/30 p-4 rounded-lg">
+                <div className="bg-black/30 p-4">
                   <p className="text-[#A3D1FF] font-semibold text-sm mb-1">Layer 1: Direct Answer (2-3 sentences)</p>
                   <p className="text-white text-sm">Immediately answer the question in the clearest possible terms. This is what the AI will most likely extract for its synthesized response.</p>
                 </div>
-                <div className="bg-black/30 p-4 rounded-lg">
+                <div className="bg-black/30 p-4">
                   <p className="text-[#A3D1FF] font-semibold text-sm mb-1">Layer 2: Supporting Context (1-2 paragraphs)</p>
                   <p className="text-white text-sm">Provide the "why" and "how" behind the answer. Add nuance, conditions, and qualifications that make the answer more complete.</p>
                 </div>
-                <div className="bg-black/30 p-4 rounded-lg">
+                <div className="bg-black/30 p-4">
                   <p className="text-[#A3D1FF] font-semibold text-sm mb-1">Layer 3: Evidence and Examples (detailed section)</p>
                   <p className="text-white text-sm">Offer data, case studies, expert quotes, or real-world examples that substantiate the answer. This is what elevates your content from generic to citation-worthy.</p>
                 </div>
-                <div className="bg-black/30 p-4 rounded-lg">
+                <div className="bg-black/30 p-4">
                   <p className="text-[#A3D1FF] font-semibold text-sm mb-1">Layer 4: Related Questions (expanded coverage)</p>
                   <p className="text-white text-sm">Address follow-up questions the user is likely to have. This increases the chances of being cited for multiple parts of a multi-turn conversation.</p>
                 </div>
@@ -376,7 +376,7 @@ export default function WhatIsAEOPage() {
 
             <p>Beyond content strategy, several technical factors influence AEO performance:</p>
 
-            <div className="bg-[#1b1b1b] p-6 rounded-xl border border-white/10 my-8">
+            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
               <h4 className="text-white font-semibold mb-4 flex items-center">
                 <Search className="w-5 h-5 text-[#A3D1FF] mr-2" />
                 Technical AEO Foundations
@@ -432,7 +432,7 @@ export default function WhatIsAEOPage() {
 
             <h2>Getting Started: A 30-Day AEO Action Plan</h2>
 
-            <div className="bg-[#1b1b1b] p-6 rounded-xl border border-white/10 my-8">
+            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
               <h4 className="text-white font-semibold mb-4 flex items-center">
                 <TrendingUp className="w-5 h-5 text-[#A3D1FF] mr-2" />
                 Week-by-Week Plan
@@ -522,7 +522,7 @@ export default function WhatIsAEOPage() {
           <div className="mt-12 pt-8 border-t border-white/10">
             <h3 className="text-2xl font-semibold text-white mb-6">Related Articles</h3>
             <div className="grid sm:grid-cols-2 gap-6">
-              <div className="bg-[#1b1b1b] rounded-xl overflow-hidden border border-white/10 hover:border-[#A3D1FF] transition-all group">
+              <div className="bg-[#1b1b1b] overflow-hidden border border-white/10 hover:border-[#A3D1FF] transition-all group">
                 <div className="aspect-[16/9] overflow-hidden">
                   <img
                     src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=2000&q=80"
@@ -543,7 +543,7 @@ export default function WhatIsAEOPage() {
                 </div>
               </div>
 
-              <div className="bg-[#1b1b1b] rounded-xl overflow-hidden border border-white/10 hover:border-[#A3D1FF] transition-all group">
+              <div className="bg-[#1b1b1b] overflow-hidden border border-white/10 hover:border-[#A3D1FF] transition-all group">
                 <div className="aspect-[16/9] overflow-hidden">
                   <img
                     src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=2000&q=80"

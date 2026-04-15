@@ -8,7 +8,7 @@ function Feature({ icon: Icon, title, description }: {
   description: string;
 }) {
   return (
-    <div className="bg-[#1b1b1b] p-8 rounded-xl border border-white/10 hover:border-[#A3D1FF] transition-all group">
+    <div className="bg-[#1b1b1b] p-8 border border-white/10 hover:border-[#A3D1FF] transition-all group">
       <Icon className="w-8 h-8 text-[#A3D1FF] mb-4" />
       <h3 className="text-xl font-semibold mb-2 text-white">{title}</h3>
       <p className="text-white">{description}</p>
@@ -22,8 +22,8 @@ function WireframeCard({ image, title, description }: {
   description: string;
 }) {
   return (
-    <div className="bg-[#1b1b1b] p-6 rounded-xl border border-white/10 hover:border-[#A3D1FF] transition-all">
-      <div className="aspect-video overflow-hidden rounded-lg mb-6">
+    <div className="bg-[#1b1b1b] p-6 border border-white/10 hover:border-[#A3D1FF] transition-all">
+      <div className="aspect-video overflow-hidden mb-6">
         <img 
           src={image}
           alt={title}
@@ -60,14 +60,14 @@ export default function MyTubePage() {
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 gap-8">
             <div className="space-y-8">
-              <div className="aspect-[4/3] overflow-hidden rounded-xl">
+              <div className="aspect-[4/3] overflow-hidden">
                 <img
                   src="https://ik.imagekit.io/qcvroy8xpd/QNHXpzT%20(1).jpeg"
                   alt="MyTube Dashboard Interface"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                 />
               </div>
-              <div className="aspect-[4/3] overflow-hidden rounded-xl">
+              <div className="aspect-[4/3] overflow-hidden">
                 <img 
                   src="https://i.imgur.com/ZGLdkzN.jpeg"
                   alt="MyTube Analytics View"
@@ -76,14 +76,14 @@ export default function MyTubePage() {
               </div>
             </div>
             <div className="space-y-8">
-              <div className="aspect-[4/3] overflow-hidden rounded-xl">
+              <div className="aspect-[4/3] overflow-hidden">
                 <img 
                   src="https://i.imgur.com/ZDPU1yO.png"
                   alt="MyTube Content Management"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                 />
               </div>
-              <div className="aspect-[4/3] overflow-hidden rounded-xl">
+              <div className="aspect-[4/3] overflow-hidden">
                 <img 
                   src="https://i.imgur.com/Vt1rIYu.jpeg"
                   alt="MyTube User Interface"
@@ -111,7 +111,7 @@ export default function MyTubePage() {
                   <img
                     src="https://ik.imagekit.io/qcvroy8xpd/QNHXpzT%20(1).jpeg"
                     alt="Interface Design"
-                    className="rounded-xl shadow-lg hover:scale-105 transition-transform duration-300 mb-4"
+                    className="shadow-lg hover:scale-105 transition-transform duration-300 mb-4"
                   />
                   <p className="text-white">
                     Clean, intuitive interface design that prioritizes user experience and accessibility.
@@ -122,7 +122,7 @@ export default function MyTubePage() {
                   <img 
                     src="https://i.imgur.com/ZGLdkzN.jpeg"
                     alt="Analytics Dashboard"
-                    className="rounded-xl shadow-lg hover:scale-105 transition-transform duration-300 mb-4"
+                    className="shadow-lg hover:scale-105 transition-transform duration-300 mb-4"
                   />
                   <p className="text-white">
                     Comprehensive analytics tools providing actionable insights and performance metrics.
@@ -136,7 +136,7 @@ export default function MyTubePage() {
                 <img 
                   src="https://i.imgur.com/ZDPU1yO.png"
                   alt="Content Management"
-                  className="rounded-xl shadow-lg hover:scale-105 transition-transform duration-300 mb-4"
+                  className="shadow-lg hover:scale-105 transition-transform duration-300 mb-4"
                 />
                 <p className="text-white">
                   Efficient content management system with advanced metadata handling capabilities.
@@ -147,7 +147,7 @@ export default function MyTubePage() {
                 <img 
                   src="https://i.imgur.com/Vt1rIYu.jpeg"
                   alt="User Experience"
-                  className="rounded-xl shadow-lg hover:scale-105 transition-transform duration-300 mb-4"
+                  className="shadow-lg hover:scale-105 transition-transform duration-300 mb-4"
                 />
                 <p className="text-white">
                   Seamless user experience with intuitive navigation and workflow optimization.
@@ -185,7 +185,7 @@ export default function MyTubePage() {
                     </li>
                   </ul>
                 </div>
-                <div className="bg-[#2d3035] p-6 rounded-xl">
+                <div className="bg-[#2d3035] p-6">
                   <h4 className="text-lg font-semibold text-white mb-4">Key Findings</h4>
                   <ul className="space-y-3">
                     <li className="flex items-center text-gray-300">
@@ -227,7 +227,7 @@ export default function MyTubePage() {
                     </li>
                   </ul>
                 </div>
-                <div className="bg-[#2d3035] p-6 rounded-xl">
+                <div className="bg-[#2d3035] p-6">
                   <h4 className="text-lg font-semibold text-white mb-4">Implementation</h4>
                   <ul className="space-y-3">
                     <li className="flex items-center text-gray-300">
@@ -281,7 +281,7 @@ export default function MyTubePage() {
             />
           </div>
 
-          <div className="mt-12 bg-[#2d3035] p-8 rounded-xl border border-white/10">
+          <div className="mt-12 bg-[#2d3035] p-8 border border-white/10">
             <h3 className="text-2xl font-semibold text-white mb-6">Design Considerations</h3>
             <div className="grid md:grid-cols-2 gap-8">
               <div>
@@ -328,19 +328,19 @@ export default function MyTubePage() {
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-12">Results & Impact</h2>
           <div className="grid md:grid-cols-4 gap-8">
-            <div className="bg-[#1b1b1b] p-8 rounded-xl border border-white/10">
+            <div className="bg-[#1b1b1b] p-8 border border-white/10">
               <div className="text-4xl font-bold text-[#A3D1FF] mb-2">60%</div>
               <div className="text-white">Faster Processing</div>
             </div>
-            <div className="bg-[#1b1b1b] p-8 rounded-xl border border-white/10">
+            <div className="bg-[#1b1b1b] p-8 border border-white/10">
               <div className="text-4xl font-bold text-[#A3D1FF] mb-2">85%</div>
               <div className="text-white">User Satisfaction</div>
             </div>
-            <div className="bg-[#1b1b1b] p-8 rounded-xl border border-white/10">
+            <div className="bg-[#1b1b1b] p-8 border border-white/10">
               <div className="text-4xl font-bold text-[#A3D1FF] mb-2">40%</div>
               <div className="text-white">Time Saved</div>
             </div>
-            <div className="bg-[#1b1b1b] p-8 rounded-xl border border-white/10">
+            <div className="bg-[#1b1b1b] p-8 border border-white/10">
               <div className="text-4xl font-bold text-[#A3D1FF] mb-2">95%</div>
               <div className="text-white">Data Accuracy</div>
             </div>

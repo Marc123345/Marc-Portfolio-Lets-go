@@ -9,10 +9,10 @@ function FeatureCard({ icon: Icon, title, description }: {
   description: string;
 }) {
   return (
-    <div className="bg-[#1b1b1b] p-8 rounded-xl border border-white/10 hover:border-[#A3D1FF] transition-all group">
+    <div className="bg-[#1b1b1b] p-8 border border-white/10 hover:border-[#A3D1FF] transition-all group">
       <div className="relative mb-6">
         <div className="absolute inset-0 bg-[#A3D1FF]/20 blur-xl rounded-full"></div>
-        <div className="bg-[#A3D1FF]/10 p-4 rounded-xl relative">
+        <div className="bg-[#A3D1FF]/10 p-4 relative">
           <Icon className="w-8 h-8 text-[#A3D1FF] group-hover:scale-110 transition-transform" />
         </div>
       </div>
@@ -24,7 +24,7 @@ function FeatureCard({ icon: Icon, title, description }: {
 
 function StatCard({ value, label }: { value: string; label: string }) {
   return (
-    <div className="bg-[#1b1b1b] p-8 rounded-xl border border-white/10 hover:border-[#A3D1FF] transition-all text-center">
+    <div className="bg-[#1b1b1b] p-8 border border-white/10 hover:border-[#A3D1FF] transition-all text-center">
       <div className="text-4xl font-bold text-[#A3D1FF] mb-2">{value}</div>
       <div className="text-white">{label}</div>
     </div>
@@ -91,12 +91,12 @@ export default function VideoleapPage() {
                 <img 
                   src="https://i.imgur.com/NFzsZ4x.jpeg"
                   alt="Problem Statement Visualization"
-                  className="w-full rounded-xl mt-6"
+                  className="w-full mt-6"
                 />
               </div>
             </div>
             <div className="space-y-6">
-              <div className="bg-[#1b1b1b] p-6 rounded-xl border border-white/10">
+              <div className="bg-[#1b1b1b] p-6 border border-white/10">
                 <h3 className="text-xl font-semibold text-white mb-4">Key Findings</h3>
                 <ul className="space-y-3">
                   <li className="flex items-center text-gray-300">
@@ -120,7 +120,7 @@ export default function VideoleapPage() {
               <img 
                 src="https://i.imgur.com/d3AoNgS.jpeg"
                 alt="Target User Analysis"
-                className="w-full rounded-xl"
+                className="w-full"
               />
             </div>
           </div>
@@ -166,7 +166,7 @@ export default function VideoleapPage() {
               <img 
                 src="https://i.imgur.com/mYkjfcr.png"
                 alt="Design Thinking Workshop Process"
-                className="w-full rounded-xl shadow-lg"
+                className="w-full shadow-lg"
               />
             </div>
           </div>
@@ -203,7 +203,7 @@ export default function VideoleapPage() {
               <img 
                 src="https://i.imgur.com/n5O9B0A.jpeg"
                 alt="Team Presentation"
-                className="w-full rounded-xl shadow-lg"
+                className="w-full shadow-lg"
               />
             </div>
           </div>
@@ -240,7 +240,7 @@ export default function VideoleapPage() {
               <img 
                 src="https://i.imgur.com/e0YNmub.jpeg"
                 alt="Videoleap Team"
-                className="w-full rounded-xl shadow-lg"
+                className="w-full shadow-lg"
               />
             </div>
           </div>
@@ -287,12 +287,12 @@ export default function VideoleapPage() {
               <img 
                 src="https://i.imgur.com/bUr02As.jpeg"
                 alt="Charli D'Amelio Videoleap Partnership"
-                className="w-full rounded-xl shadow-lg hover:scale-105 transition-transform duration-300"
+                className="w-full shadow-lg hover:scale-105 transition-transform duration-300"
               />
               <img 
                 src="https://i.imgur.com/mb9FO2b.jpeg"
                 alt="Charli D'Amelio Using Videoleap"
-                className="w-full rounded-xl shadow-lg hover:scale-105 transition-transform duration-300"
+                className="w-full shadow-lg hover:scale-105 transition-transform duration-300"
               />
             </div>
           </div>
@@ -312,14 +312,14 @@ export default function VideoleapPage() {
               <img 
                 src="https://i.imgur.com/tvM9tB4.jpeg"
                 alt="Onboarding Flow Wireframes"
-                className="w-full rounded-xl shadow-lg hover:scale-105 transition-transform duration-300"
+                className="w-full shadow-lg hover:scale-105 transition-transform duration-300"
               />
             </div>
             <div>
               <img 
                 src="https://i.imgur.com/qBePcfz.png"
                 alt="Onboarding Flow Details"
-                className="w-full rounded-xl shadow-lg hover:scale-105 transition-transform duration-300"
+                className="w-full shadow-lg hover:scale-105 transition-transform duration-300"
               />
             </div>
           </div>

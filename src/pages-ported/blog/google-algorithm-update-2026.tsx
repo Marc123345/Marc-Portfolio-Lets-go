@@ -55,7 +55,7 @@ export default function GoogleAlgorithmUpdate2026() {
             </div>
           </div>
 
-          <div className="aspect-[21/9] overflow-hidden rounded-xl mb-8">
+          <div className="aspect-[21/9] overflow-hidden mb-8">
             <img
               src="https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?auto=format&fit=crop&w=2000&q=80"
               alt="Google Search Algorithm Update 2026"
@@ -69,7 +69,7 @@ export default function GoogleAlgorithmUpdate2026() {
       <section className="py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <div className="prose prose-lg prose-invert max-w-none">
-            <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30 rounded-xl p-6 mb-8">
+            <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30 p-6 mb-8">
               <p className="text-white font-medium mb-2 flex items-center gap-2">
                 <AlertTriangle className="w-5 h-5 text-yellow-400" />
                 Major Algorithm Update Alert
@@ -103,7 +103,7 @@ export default function GoogleAlgorithmUpdate2026() {
             <p className="text-gray-300 leading-relaxed mb-4">
               Experience, Expertise, Authoritativeness, and Trustworthiness (E-E-A-T) are now fundamental ranking factors, not just quality guidelines. Google's update heavily emphasizes:
             </p>
-            <div className="bg-gray-800/50 rounded-xl p-6 mb-6">
+            <div className="bg-gray-800/50 p-6 mb-6">
               <div className="space-y-4">
                 <div>
                   <h4 className="text-white font-bold mb-2">Experience</h4>
@@ -145,7 +145,7 @@ export default function GoogleAlgorithmUpdate2026() {
             <p className="text-gray-300 leading-relaxed mb-4">
               The days of generic, AI-generated content are over. To rank in 2026, you need to demonstrate real expertise:
             </p>
-            <div className="bg-gradient-to-br from-green-600/10 to-blue-600/10 border border-green-500/30 rounded-xl p-6 mb-6">
+            <div className="bg-gradient-to-br from-green-600/10 to-blue-600/10 border border-green-500/30 p-6 mb-6">
               <h4 className="text-white font-bold mb-4 flex items-center gap-2">
                 <CheckCircle2 className="w-5 h-5 text-green-400" />
                 Action Items:
@@ -179,15 +179,15 @@ export default function GoogleAlgorithmUpdate2026() {
               Google's natural language processing has evolved dramatically. The algorithm now understands context, nuance, and user intent with remarkable precision. Your content must satisfy the underlying need behind the search query.
             </p>
             <div className="space-y-4 mb-6">
-              <div className="bg-gray-800/50 rounded-lg p-5">
+              <div className="bg-gray-800/50 p-5">
                 <h4 className="text-white font-bold mb-2">Informational Intent</h4>
                 <p className="text-gray-300 text-base">Provide comprehensive, well-structured answers. Use clear headings, bullet points, and visual aids. Answer related questions users might have.</p>
               </div>
-              <div className="bg-gray-800/50 rounded-lg p-5">
+              <div className="bg-gray-800/50 p-5">
                 <h4 className="text-white font-bold mb-2">Transactional Intent</h4>
                 <p className="text-gray-300 text-base">Focus on product details, comparisons, pricing, and clear calls-to-action. Include trust signals like reviews, guarantees, and secure checkout badges.</p>
               </div>
-              <div className="bg-gray-800/50 rounded-lg p-5">
+              <div className="bg-gray-800/50 p-5">
                 <h4 className="text-white font-bold mb-2">Navigational Intent</h4>
                 <p className="text-gray-300 text-base">Make it easy for users to find what they're looking for. Clear navigation, internal linking, and prominent search functionality are essential.</p>
               </div>
@@ -209,7 +209,7 @@ export default function GoogleAlgorithmUpdate2026() {
             <p className="text-gray-300 leading-relaxed mb-4">
               Despite rumors of backlinks becoming less important, quality backlinks remain a crucial ranking factor. However, the emphasis has shifted dramatically toward quality over quantity:
             </p>
-            <div className="bg-gradient-to-br from-purple-600/10 to-pink-600/10 border border-purple-500/30 rounded-xl p-6 mb-6">
+            <div className="bg-gradient-to-br from-purple-600/10 to-pink-600/10 border border-purple-500/30 p-6 mb-6">
               <h4 className="text-white font-bold mb-4">Focus on:</h4>
               <ul className="space-y-3 text-gray-300">
                 <li className="flex items-start gap-2">
@@ -234,7 +234,7 @@ export default function GoogleAlgorithmUpdate2026() {
                 </li>
               </ul>
             </div>
-            <div className="bg-red-900/20 border border-red-500/30 rounded-xl p-6 mb-6">
+            <div className="bg-red-900/20 border border-red-500/30 p-6 mb-6">
               <h4 className="text-white font-bold mb-3 flex items-center gap-2">
                 <Shield className="w-5 h-5 text-red-400" />
                 Avoid at All Costs:
@@ -252,7 +252,7 @@ export default function GoogleAlgorithmUpdate2026() {
             <p className="text-gray-300 leading-relaxed mb-4">
               Here's the paradox: while Google penalizes purely AI-generated content, AI can be an incredibly valuable tool when used correctly. The key is human oversight and enhancement:
             </p>
-            <div className="bg-gray-800/50 rounded-xl p-6 mb-6">
+            <div className="bg-gray-800/50 p-6 mb-6">
               <h4 className="text-white font-bold mb-4">Smart AI Usage:</h4>
               <ol className="space-y-3 text-gray-300 list-decimal list-inside">
                 <li><strong className="text-white">Research and ideation:</strong> Use AI to identify topics, analyze competitors, and generate content outlines</li>
@@ -289,7 +289,7 @@ export default function GoogleAlgorithmUpdate2026() {
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-              <div className="bg-gradient-to-br from-blue-600/10 to-cyan-600/10 border border-blue-500/30 rounded-xl p-6">
+              <div className="bg-gradient-to-br from-blue-600/10 to-cyan-600/10 border border-blue-500/30 p-6">
                 <h4 className="text-white font-bold mb-3">Visibility Metrics</h4>
                 <ul className="space-y-2 text-gray-300 text-sm">
                   <li>• Organic traffic growth</li>
@@ -298,7 +298,7 @@ export default function GoogleAlgorithmUpdate2026() {
                   <li>• Impression share increases</li>
                 </ul>
               </div>
-              <div className="bg-gradient-to-br from-green-600/10 to-emerald-600/10 border border-green-500/30 rounded-xl p-6">
+              <div className="bg-gradient-to-br from-green-600/10 to-emerald-600/10 border border-green-500/30 p-6">
                 <h4 className="text-white font-bold mb-3">Engagement Metrics</h4>
                 <ul className="space-y-2 text-gray-300 text-sm">
                   <li>• Average session duration</li>
@@ -307,7 +307,7 @@ export default function GoogleAlgorithmUpdate2026() {
                   <li>• Return visitor percentage</li>
                 </ul>
               </div>
-              <div className="bg-gradient-to-br from-purple-600/10 to-pink-600/10 border border-purple-500/30 rounded-xl p-6">
+              <div className="bg-gradient-to-br from-purple-600/10 to-pink-600/10 border border-purple-500/30 p-6">
                 <h4 className="text-white font-bold mb-3">Technical Metrics</h4>
                 <ul className="space-y-2 text-gray-300 text-sm">
                   <li>• Core Web Vitals scores</li>
@@ -316,7 +316,7 @@ export default function GoogleAlgorithmUpdate2026() {
                   <li>• Index coverage status</li>
                 </ul>
               </div>
-              <div className="bg-gradient-to-br from-orange-600/10 to-red-600/10 border border-orange-500/30 rounded-xl p-6">
+              <div className="bg-gradient-to-br from-orange-600/10 to-red-600/10 border border-orange-500/30 p-6">
                 <h4 className="text-white font-bold mb-3">Conversion Metrics</h4>
                 <ul className="space-y-2 text-gray-300 text-sm">
                   <li>• Conversion rate trends</li>
@@ -337,19 +337,19 @@ export default function GoogleAlgorithmUpdate2026() {
             </p>
 
             <div className="space-y-4 mb-8">
-              <div className="bg-gray-800/50 border-l-4 border-blue-500 rounded-lg p-5">
+              <div className="bg-gray-800/50 border-l-4 border-blue-500 p-5">
                 <h4 className="text-white font-bold mb-2">Multimodal Search</h4>
                 <p className="text-gray-300 text-base">Search will increasingly incorporate images, video, and audio. Optimize all content formats, not just text.</p>
               </div>
-              <div className="bg-gray-800/50 border-l-4 border-green-500 rounded-lg p-5">
+              <div className="bg-gray-800/50 border-l-4 border-green-500 p-5">
                 <h4 className="text-white font-bold mb-2">Conversational Search</h4>
                 <p className="text-gray-300 text-base">Voice search and chatbot-style interactions will become more prevalent. Structure content to answer natural language queries.</p>
               </div>
-              <div className="bg-gray-800/50 border-l-4 border-purple-500 rounded-lg p-5">
+              <div className="bg-gray-800/50 border-l-4 border-purple-500 p-5">
                 <h4 className="text-white font-bold mb-2">Personalization</h4>
                 <p className="text-gray-300 text-base">Search results will become more personalized based on user history, preferences, and context. Focus on creating diverse content for different segments.</p>
               </div>
-              <div className="bg-gray-800/50 border-l-4 border-orange-500 rounded-lg p-5">
+              <div className="bg-gray-800/50 border-l-4 border-orange-500 p-5">
                 <h4 className="text-white font-bold mb-2">Zero-Click Searches</h4>
                 <p className="text-gray-300 text-base">More searches will be answered directly in SERPs. Optimize for featured snippets and consider how to drive value even when users don't click through.</p>
               </div>
@@ -369,14 +369,14 @@ export default function GoogleAlgorithmUpdate2026() {
               AI can be a powerful tool in your content creation arsenal, but it must enhance human expertise, not replace it. The sites that will thrive in 2026 and beyond are those that prioritize genuine value over shortcuts.
             </p>
 
-            <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30 rounded-xl p-8 mt-10">
+            <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30 p-8 mt-10">
               <h3 className="text-2xl font-bold text-white mb-4">Ready to Improve Your Rankings?</h3>
               <p className="text-gray-300 mb-6">
                 Navigating Google's algorithm changes requires expertise, strategic thinking, and technical know-how. If you're struggling to maintain or improve your search rankings, I can help.
               </p>
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors font-medium"
+                className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 transition-colors font-medium"
               >
                 Get Expert SEO Help
                 <ArrowLeft className="w-4 h-4 rotate-180" />

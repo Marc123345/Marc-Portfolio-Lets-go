@@ -67,7 +67,7 @@ export default function DesigningPlatformsForAutomotiveDealersPage() {
             </div>
           </div>
           
-          <div className="aspect-[21/9] overflow-hidden rounded-xl mb-8">
+          <div className="aspect-[21/9] overflow-hidden mb-8">
             <img 
               src="https://images.unsplash.com/photo-1560179707-f14e90ef3623?auto=format&fit=crop&w=2000&q=80" 
               alt="Automotive Dealership" 
@@ -95,7 +95,7 @@ export default function DesigningPlatformsForAutomotiveDealersPage() {
             
             <p>The concept emerged from a clear market need: as Tesla vehicles became increasingly popular in the secondary market, dealerships struggled to price them effectively. Traditional pricing models didn't account for the unique factors affecting Tesla values, from battery health to software version. Tesla Finder was conceived as a specialized solution to this emerging challenge.</p>
             
-            <div className="bg-[#1b1b1b] p-6 rounded-xl border border-white/10 my-8">
+            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
               <h4 className="text-white font-semibold mb-2">Design Challenge</h4>
               <p className="text-gray-300">The primary challenge was creating an interface that could present complex data in an actionable format. Dealers needed to quickly understand market positioning, profit potential, and risk factors without getting lost in the details.</p>
             </div>
@@ -127,7 +127,7 @@ export default function DesigningPlatformsForAutomotiveDealersPage() {
             
             <p>The European automotive market presents unique challenges: diverse regulations across countries, varying consumer preferences, and complex import/export considerations. Automargin was designed to address these specific challenges while providing the same data-driven advantages that were transforming dealerships in other markets.</p>
 
-            <div className="bg-[#1b1b1b] p-6 rounded-xl border border-white/10 my-8">
+            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
               <h4 className="text-white font-semibold mb-2">User Research Insight</h4>
               <p className="text-gray-300">Our research revealed that European dealers were spending an average of 12 hours per week manually analyzing market data. This represented a significant opportunity for automation and optimization.</p>
             </div>
@@ -215,7 +215,7 @@ export default function DesigningPlatformsForAutomotiveDealersPage() {
           <div className="mt-12 pt-8 border-t border-white/10">
             <h3 className="text-2xl font-semibold text-white mb-6">Related Articles</h3>
             <div className="grid sm:grid-cols-2 gap-6">
-              <div className="bg-[#1b1b1b] rounded-xl overflow-hidden border border-white/10 hover:border-[#A3D1FF] transition-all group">
+              <div className="bg-[#1b1b1b] overflow-hidden border border-white/10 hover:border-[#A3D1FF] transition-all group">
                 <div className="aspect-[16/9] overflow-hidden">
                   <img 
                     src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=2000&q=80" 
@@ -236,7 +236,7 @@ export default function DesigningPlatformsForAutomotiveDealersPage() {
                 </div>
               </div>
               
-              <div className="bg-[#1b1b1b] rounded-xl overflow-hidden border border-white/10 hover:border-[#A3D1FF] transition-all group">
+              <div className="bg-[#1b1b1b] overflow-hidden border border-white/10 hover:border-[#A3D1FF] transition-all group">
                 <div className="aspect-[16/9] overflow-hidden">
                   <img 
                     src="https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?auto=format&fit=crop&w=2000&q=80" 

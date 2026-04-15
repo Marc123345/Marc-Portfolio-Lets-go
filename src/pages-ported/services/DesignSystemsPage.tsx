@@ -27,10 +27,10 @@ function FeatureCard({
   description: string;
 }) {
   return (
-    <div className="bg-[#1b1b1b] p-8 rounded-xl border border-white/10 hover:border-[#A3D1FF] transition-all group">
+    <div className="bg-[#1b1b1b] p-8 border border-white/10 hover:border-[#A3D1FF] transition-all group">
       <div className="relative mb-6">
         <div className="absolute inset-0 bg-[#A3D1FF]/20 blur-xl rounded-full"></div>
-        <div className="bg-[#A3D1FF]/10 p-4 rounded-xl relative">
+        <div className="bg-[#A3D1FF]/10 p-4 relative">
           <Icon className="w-8 h-8 text-[#A3D1FF] group-hover:scale-110 transition-transform" />
         </div>
       </div>
@@ -50,7 +50,7 @@ function ProcessStep({
   description: string;
 }) {
   return (
-    <div className="bg-[#1b1b1b] p-8 rounded-xl border border-white/10 h-full">
+    <div className="bg-[#1b1b1b] p-8 border border-white/10 h-full">
       <div className="text-6xl font-black text-[#A3D1FF]/20 mb-4 leading-none">{number}</div>
       <h3 className="text-xl font-semibold text-white mb-3">{title}</h3>
       <p className="text-gray-400 leading-relaxed">{description}</p>
@@ -73,14 +73,14 @@ const SENTINEL = {
 function SentinelSystemCard() {
   return (
     <div
-      className="rounded-2xl border border-white/10 overflow-hidden"
+      className="border border-white/10 overflow-hidden"
       style={{ background: SENTINEL.bg }}
     >
       {/* Header */}
       <div className="flex items-center justify-between px-6 py-4 border-b border-white/5">
         <div className="flex items-center gap-3">
           <div
-            className="w-9 h-9 rounded-lg flex items-center justify-center"
+            className="w-9 h-9 flex items-center justify-center"
             style={{ background: `${SENTINEL.accent}15` }}
           >
             <ShieldAlert className="w-5 h-5" style={{ color: SENTINEL.accent }} />
@@ -119,7 +119,7 @@ function SentinelSystemCard() {
             ].map((s) => (
               <div
                 key={s.name}
-                className="flex items-center justify-between rounded-lg px-3 py-2"
+                className="flex items-center justify-between px-3 py-2"
                 style={{ background: SENTINEL.surface }}
               >
                 <div className="flex items-center gap-3">
@@ -151,7 +151,7 @@ function SentinelSystemCard() {
 
           {/* Alert */}
           <div
-            className="rounded-lg p-3 mb-3 border"
+            className="p-3 mb-3 border"
             style={{
               background: `${SENTINEL.critical}10`,
               borderColor: `${SENTINEL.critical}40`,
@@ -178,13 +178,13 @@ function SentinelSystemCard() {
 
           {/* KPI cards */}
           <div className="grid grid-cols-2 gap-2 mb-3">
-            <div className="rounded-lg p-3" style={{ background: SENTINEL.surface }}>
+            <div className="p-3" style={{ background: SENTINEL.surface }}>
               <div className="text-[10px] text-white/50 uppercase tracking-widest mb-1">
                 Open Alerts
               </div>
               <div className="text-white text-xl font-bold">127</div>
             </div>
-            <div className="rounded-lg p-3" style={{ background: SENTINEL.surface }}>
+            <div className="p-3" style={{ background: SENTINEL.surface }}>
               <div className="text-[10px] text-white/50 uppercase tracking-widest mb-1">
                 MTTR
               </div>
@@ -197,13 +197,13 @@ function SentinelSystemCard() {
           {/* Buttons */}
           <div className="flex gap-2">
             <button
-              className="flex-1 text-xs font-semibold px-3 py-2 rounded-md"
+              className="flex-1 text-xs font-semibold px-3 py-2"
               style={{ background: SENTINEL.accent, color: '#000' }}
             >
               Acknowledge
             </button>
             <button
-              className="flex-1 text-xs font-semibold px-3 py-2 rounded-md border text-white"
+              className="flex-1 text-xs font-semibold px-3 py-2 border text-white"
               style={{ borderColor: 'rgba(255,255,255,0.15)' }}
             >
               Investigate
@@ -248,14 +248,14 @@ const FLEET = {
 function FleetSystemCard() {
   return (
     <div
-      className="rounded-2xl border border-white/10 overflow-hidden"
+      className="border border-white/10 overflow-hidden"
       style={{ background: FLEET.bg }}
     >
       {/* Header */}
       <div className="flex items-center justify-between px-6 py-4 border-b border-white/5">
         <div className="flex items-center gap-3">
           <div
-            className="w-9 h-9 rounded-lg flex items-center justify-center"
+            className="w-9 h-9 flex items-center justify-center"
             style={{ background: `${FLEET.primary}15` }}
           >
             <Truck className="w-5 h-5" style={{ color: FLEET.primary }} />
@@ -288,7 +288,7 @@ function FleetSystemCard() {
             ].map((t) => (
               <div key={t.name} className="text-center">
                 <div
-                  className="aspect-square rounded-md mb-1.5 border border-white/5"
+                  className="aspect-square mb-1.5 border border-white/5"
                   style={{ background: t.c }}
                 />
                 <div className="text-[9px] font-mono text-white/50 uppercase tracking-wider">
@@ -325,7 +325,7 @@ function FleetSystemCard() {
 
           {/* Vehicle row */}
           <div
-            className="rounded-lg p-3 mb-2 flex items-center justify-between"
+            className="p-3 mb-2 flex items-center justify-between"
             style={{ background: FLEET.surface }}
           >
             <div className="flex items-center gap-3">
@@ -352,7 +352,7 @@ function FleetSystemCard() {
           </div>
 
           <div
-            className="rounded-lg p-3 mb-2 flex items-center justify-between"
+            className="p-3 mb-2 flex items-center justify-between"
             style={{ background: FLEET.surface }}
           >
             <div className="flex items-center gap-3">
@@ -379,7 +379,7 @@ function FleetSystemCard() {
           </div>
 
           <div
-            className="rounded-lg p-3 flex items-center justify-between"
+            className="p-3 flex items-center justify-between"
             style={{ background: FLEET.surface }}
           >
             <div className="flex items-center gap-3">

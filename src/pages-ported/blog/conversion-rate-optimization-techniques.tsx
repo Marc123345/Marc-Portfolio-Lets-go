@@ -67,7 +67,7 @@ export default function ConversionRateOptimizationTechniquesPage() {
             </div>
           </div>
           
-          <div className="aspect-[21/9] overflow-hidden rounded-xl mb-8">
+          <div className="aspect-[21/9] overflow-hidden mb-8">
             <img 
               src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=2000&q=80" 
               alt="Conversion Rate Optimization" 
@@ -97,7 +97,7 @@ export default function ConversionRateOptimizationTechniquesPage() {
               <li><strong>Multivariate Analysis:</strong> For high-traffic pages, use multivariate testing to understand how different elements interact with each other.</li>
             </ul>
             
-            <div className="bg-[#1b1b1b] p-6 rounded-xl border border-white/10 my-8">
+            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
               <h4 className="text-white font-semibold mb-2">Case Study: Binns Media Group</h4>
               <p className="text-gray-300">By implementing a systematic A/B testing program for their subscription page, Binns Media Group identified that combining social proof elements with a simplified form increased conversions. The key insight wasn't just what worked, but why it worked—users reported feeling both more confident in their decision and less overwhelmed by the signup process.</p>
             </div>
@@ -116,7 +116,7 @@ export default function ConversionRateOptimizationTechniquesPage() {
             
             <p>The goal is to make form completion feel effortless while still collecting the information you need. Every field should earn its place on your form—if you can't justify why you need a piece of information, consider removing it.</p>
             
-            <div className="bg-[#1b1b1b] p-6 rounded-xl border border-white/10 my-8">
+            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
               <h4 className="text-white font-semibold mb-2">Implementation Tip</h4>
               <p className="text-gray-300">Conduct a form field analysis to identify which fields have the highest abandonment rates. These are prime candidates for removal or modification. In our client work, we've found that reducing form fields typically increases completion rates.</p>
             </div>
@@ -132,7 +132,7 @@ export default function ConversionRateOptimizationTechniquesPage() {
             
             <p>The most effective social proof doesn't just tell visitors that others like your product—it addresses specific concerns and demonstrates relevant results for people similar to them.</p>
             
-            <div className="bg-[#1b1b1b] p-6 rounded-xl border border-white/10 my-8">
+            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
               <h4 className="text-white font-semibold mb-2">Case Study: Wellness TCYS</h4>
               <p className="text-gray-300">When we redesigned the Wellness TCYS website, we implemented contextual testimonials throughout the user journey. On the pricing page, we displayed testimonials specifically mentioning ROI and value. This targeted approach increased conversion rates compared to generic testimonials.</p>
             </div>
@@ -162,7 +162,7 @@ export default function ConversionRateOptimizationTechniquesPage() {
             
             <p>The most successful mobile experiences recognize that mobile users have different needs, behaviors, and constraints compared to desktop users. By designing specifically for these differences, you can create mobile experiences that convert as well as—or better than—desktop.</p>
             
-            <div className="bg-[#1b1b1b] p-6 rounded-xl border border-white/10 my-8">
+            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
               <h4 className="text-white font-semibold mb-2">Implementation Tip</h4>
               <p className="text-gray-300">Conduct mobile-specific user testing to identify friction points in your conversion process. Pay particular attention to form completion, which is often more challenging on mobile devices. In our experience, implementing mobile-specific form designs can increase mobile conversion rates.</p>
             </div>
@@ -251,7 +251,7 @@ export default function ConversionRateOptimizationTechniquesPage() {
           <div className="mt-12 pt-8 border-t border-white/10">
             <h3 className="text-2xl font-semibold text-white mb-6">Related Articles</h3>
             <div className="grid sm:grid-cols-2 gap-6">
-              <div className="bg-[#1b1b1b] rounded-xl overflow-hidden border border-white/10 hover:border-[#A3D1FF] transition-all group">
+              <div className="bg-[#1b1b1b] overflow-hidden border border-white/10 hover:border-[#A3D1FF] transition-all group">
                 <div className="aspect-[16/9] overflow-hidden">
                   <img 
                     src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=2000&q=80" 
@@ -272,7 +272,7 @@ export default function ConversionRateOptimizationTechniquesPage() {
                 </div>
               </div>
               
-              <div className="bg-[#1b1b1b] rounded-xl overflow-hidden border border-white/10 hover:border-[#A3D1FF] transition-all group">
+              <div className="bg-[#1b1b1b] overflow-hidden border border-white/10 hover:border-[#A3D1FF] transition-all group">
                 <div className="aspect-[16/9] overflow-hidden">
                   <img 
                     src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=2000&q=80" 

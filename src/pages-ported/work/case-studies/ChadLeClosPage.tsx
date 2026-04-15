@@ -12,10 +12,10 @@ function FeatureCard({ icon: Icon, title, description }: {
   description: string;
 }) {
   return (
-    <div className="bg-[#1b1b1b] p-8 rounded-xl border border-white/10 hover:border-[#A3D1FF] transition-all group">
+    <div className="bg-[#1b1b1b] p-8 border border-white/10 hover:border-[#A3D1FF] transition-all group">
       <div className="relative mb-6">
         <div className="absolute inset-0 bg-[#A3D1FF]/20 blur-xl rounded-full"></div>
-        <div className="bg-[#A3D1FF]/10 p-4 rounded-xl relative">
+        <div className="bg-[#A3D1FF]/10 p-4 relative">
           <Icon className="w-8 h-8 text-[#A3D1FF] group-hover:scale-110 transition-transform" />
         </div>
       </div>
@@ -32,7 +32,7 @@ function StatCard({ value, label, icon: Icon }: { value: string; label: string; 
   return (
     <motion.div
       ref={ref}
-      className="bg-gradient-to-br from-[#1b1b1b] to-[#0a0a0a] p-8 rounded-xl border border-white/10 hover:border-[#A3D1FF] transition-all text-center group"
+      className="bg-gradient-to-br from-[#1b1b1b] to-[#0a0a0a] p-8 border border-white/10 hover:border-[#A3D1FF] transition-all text-center group"
       initial={{ opacity: 0, scale: 0.9 }}
       animate={isInView ? { opacity: 1, scale: 1 } : {}}
       transition={{ duration: 0.5 }}
@@ -40,7 +40,7 @@ function StatCard({ value, label, icon: Icon }: { value: string; label: string; 
     >
       {Icon && (
         <div className="flex justify-center mb-4">
-          <div className="p-3 bg-[#A3D1FF]/10 rounded-lg">
+          <div className="p-3 bg-[#A3D1FF]/10">
             <Icon className="w-6 h-6 text-[#A3D1FF]" />
           </div>
         </div>
@@ -165,7 +165,7 @@ export default function ChadLeClosPage() {
               </div>
             </div>
             <div className="space-y-6">
-              <div className="bg-[#1b1b1b] p-6 rounded-xl border border-white/10">
+              <div className="bg-[#1b1b1b] p-6 border border-white/10">
                 <h3 className="text-xl font-semibold text-white mb-4">Key Achievements</h3>
                 <ul className="space-y-3">
                   <li className="flex items-center text-gray-300">
@@ -274,7 +274,7 @@ export default function ChadLeClosPage() {
                     </li>
                   </ul>
                 </div>
-                <div className="bg-[#1b1b1b] p-6 rounded-xl border border-white/10">
+                <div className="bg-[#1b1b1b] p-6 border border-white/10">
                   <h4 className="text-lg font-semibold text-white mb-4">Performance Metrics</h4>
                   <div className="space-y-4">
                     <div>
@@ -326,7 +326,7 @@ export default function ChadLeClosPage() {
                     </li>
                   </ul>
                 </div>
-                <div className="bg-[#1b1b1b] p-6 rounded-xl border border-white/10">
+                <div className="bg-[#1b1b1b] p-6 border border-white/10">
                   <h4 className="text-lg font-semibold text-white mb-4">Results</h4>
                   <div className="space-y-4">
                     <div>
@@ -374,7 +374,7 @@ export default function ChadLeClosPage() {
 
           <div className="grid md:grid-cols-3 gap-8">
             <motion.div
-              className="bg-gradient-to-br from-[#0a0a0a] to-black p-8 rounded-xl border border-white/10"
+              className="bg-gradient-to-br from-[#0a0a0a] to-black p-8 border border-white/10"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
@@ -386,7 +386,7 @@ export default function ChadLeClosPage() {
             </motion.div>
 
             <motion.div
-              className="bg-gradient-to-br from-[#0a0a0a] to-black p-8 rounded-xl border border-white/10"
+              className="bg-gradient-to-br from-[#0a0a0a] to-black p-8 border border-white/10"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
@@ -398,7 +398,7 @@ export default function ChadLeClosPage() {
             </motion.div>
 
             <motion.div
-              className="bg-gradient-to-br from-[#0a0a0a] to-black p-8 rounded-xl border border-white/10"
+              className="bg-gradient-to-br from-[#0a0a0a] to-black p-8 border border-white/10"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}

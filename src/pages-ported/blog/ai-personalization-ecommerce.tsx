@@ -64,7 +64,7 @@ export default function AIPersonalizationEcommercePage() {
             </div>
           </div>
 
-          <div className="aspect-[21/9] overflow-hidden rounded-xl mb-8">
+          <div className="aspect-[21/9] overflow-hidden mb-8">
             <img
               src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=2000&q=80"
               alt="AI-Driven Ecommerce Personalization"
@@ -82,7 +82,7 @@ export default function AIPersonalizationEcommercePage() {
 
             <p>AI-driven personalization has evolved from a competitive advantage to a baseline expectation. In 2025, showing every visitor the same homepage, the same product recommendations, and the same shopping journey is like having a salesperson greet every customer with the exact same scripted pitch—regardless of who they are or what they need.</p>
 
-            <div className="bg-[#1b1b1b] p-6 rounded-xl border border-white/10 my-8">
+            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
               <h4 className="text-white font-semibold mb-2 flex items-center">
                 <TrendingUp className="w-5 h-5 text-[#A3D1FF] mr-2" />
                 The Business Case for Personalization
@@ -102,7 +102,7 @@ export default function AIPersonalizationEcommercePage() {
             <h3>The Evolution from Rules to Intelligence</h3>
             <p>Early personalization was simple: "Customers who bought X also bought Y." This rule-based approach worked but lacked sophistication. Modern AI personalization uses machine learning to understand nuanced patterns, predict behavior, and continuously improve.</p>
 
-            <div className="bg-[#1b1b1b] p-6 rounded-xl border border-white/10 my-8">
+            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
               <h4 className="text-white font-semibold mb-3">Levels of Ecommerce Personalization:</h4>
 
               <div className="space-y-4 text-gray-300">
@@ -155,7 +155,7 @@ export default function AIPersonalizationEcommercePage() {
 
             <h4>Phase 1: Foundation (Months 1-2)</h4>
 
-            <div className="bg-[#1b1b1b] p-6 rounded-xl border border-white/10 my-8">
+            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
               <h4 className="text-white font-semibold mb-3">Essential Data Infrastructure:</h4>
               <ul className="text-gray-300 space-y-2">
                 <li className="flex items-start">
@@ -193,7 +193,7 @@ export default function AIPersonalizationEcommercePage() {
 
             <p>Deploy machine learning powered features:</p>
 
-            <div className="bg-[#1b1b1b] p-6 rounded-xl border border-white/10 my-8">
+            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
               <h4 className="text-white font-semibold mb-3">AI-Powered Personalization Tools for SMBs:</h4>
 
               <div className="space-y-3 text-gray-300">
@@ -250,7 +250,7 @@ export default function AIPersonalizationEcommercePage() {
 
             <h3>Case Study 1: Fashion Retailer Increases Revenue by 28%</h3>
 
-            <div className="bg-[#1b1b1b] p-6 rounded-xl border border-white/10 my-8">
+            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
               <h4 className="text-white font-semibold mb-2">The Challenge:</h4>
               <p className="text-gray-300 mb-4">Mid-sized fashion brand with 500K monthly visitors saw high bounce rates and low conversion. Generic homepage showed same products to everyone.</p>
 
@@ -274,7 +274,7 @@ export default function AIPersonalizationEcommercePage() {
 
             <h3>Case Study 2: Electronics Retailer Reduces Cart Abandonment by 40%</h3>
 
-            <div className="bg-[#1b1b1b] p-6 rounded-xl border border-white/10 my-8">
+            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
               <h4 className="text-white font-semibold mb-2">The Challenge:</h4>
               <p className="text-gray-300 mb-4">Consumer electronics store struggled with 75% cart abandonment rate. Generic recovery emails had 2% conversion rate.</p>
 
@@ -297,7 +297,7 @@ export default function AIPersonalizationEcommercePage() {
 
             <h3>Case Study 3: Health & Beauty Brand Boosts Customer Retention 3x</h3>
 
-            <div className="bg-[#1b1b1b] p-6 rounded-xl border border-white/10 my-8">
+            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
               <h4 className="text-white font-semibold mb-2">The Challenge:</h4>
               <p className="text-gray-300 mb-4">Subscription beauty box service saw high churn after first box. Customers didn't find products relevant to their preferences.</p>
 
@@ -325,7 +325,7 @@ export default function AIPersonalizationEcommercePage() {
 
             <p>The key is transparent, value-driven personalization that respects boundaries.</p>
 
-            <div className="bg-[#1b1b1b] p-6 rounded-xl border border-white/10 my-8">
+            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
               <h4 className="text-white font-semibold mb-2 flex items-center">
                 <AlertTriangle className="w-5 h-5 text-yellow-500 mr-2" />
                 The Creepy vs. Helpful Spectrum
@@ -387,7 +387,7 @@ export default function AIPersonalizationEcommercePage() {
 
             <p>Make personalization benefits obvious:</p>
 
-            <div className="bg-[#1b1b1b] p-6 rounded-xl border border-white/10 my-8">
+            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
               <h4 className="text-white font-semibold mb-2">The Value Proposition Formula:</h4>
               <p className="text-gray-300 text-sm italic mb-4">
                 "We use your browsing history to show you products you'll actually like, saving you time and helping you discover items perfect for your needs. You can turn this off anytime in settings."
@@ -407,7 +407,7 @@ export default function AIPersonalizationEcommercePage() {
               <li><strong>The Solution:</strong> Customer Data Platforms (CDPs) that unify data from all sources</li>
             </ul>
 
-            <div className="bg-[#1b1b1b] p-6 rounded-xl border border-white/10 my-8">
+            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
               <h4 className="text-white font-semibold mb-3">CDP Options by Business Size:</h4>
 
               <div className="space-y-3 text-gray-300">
@@ -483,7 +483,7 @@ export default function AIPersonalizationEcommercePage() {
 
             <p>Nothing frustrates users more than losing items they added to cart on another device:</p>
 
-            <div className="bg-[#1b1b1b] p-6 rounded-xl border border-white/10 my-8">
+            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
               <h4 className="text-white font-semibold mb-2">Implementation Checklist:</h4>
               <ul className="text-gray-300 space-y-2">
                 <li className="flex items-start">
@@ -509,7 +509,7 @@ export default function AIPersonalizationEcommercePage() {
 
             <p>Personalization should adapt to device context:</p>
 
-            <div className="bg-[#1b1b1b] p-6 rounded-xl border border-white/10 my-8">
+            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
               <div className="space-y-3 text-gray-300">
                 <div>
                   <strong className="text-white">Mobile (On-the-go):</strong>
@@ -581,7 +581,7 @@ export default function AIPersonalizationEcommercePage() {
 
             <h3>Key Metrics to Track</h3>
 
-            <div className="bg-[#1b1b1b] p-6 rounded-xl border border-white/10 my-8">
+            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
               <h4 className="text-white font-semibold mb-3">Personalization Performance Dashboard:</h4>
 
               <div className="space-y-3 text-gray-300">
@@ -688,7 +688,7 @@ export default function AIPersonalizationEcommercePage() {
 
             <h2>Getting Started: Your 90-Day Personalization Plan</h2>
 
-            <div className="bg-[#1b1b1b] p-6 rounded-xl border border-white/10 my-8">
+            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
               <h4 className="text-white font-semibold mb-4">Month 1: Foundation</h4>
               <ul className="text-gray-300 space-y-2 mb-6">
                 <li>• Week 1: Audit current data collection and identify gaps</li>
@@ -770,7 +770,7 @@ export default function AIPersonalizationEcommercePage() {
           <div className="mt-12 pt-8 border-t border-white/10">
             <h3 className="text-2xl font-semibold text-white mb-6">Related Articles</h3>
             <div className="grid sm:grid-cols-2 gap-6">
-              <div className="bg-[#1b1b1b] rounded-xl overflow-hidden border border-white/10 hover:border-[#A3D1FF] transition-all group">
+              <div className="bg-[#1b1b1b] overflow-hidden border border-white/10 hover:border-[#A3D1FF] transition-all group">
                 <div className="aspect-[16/9] overflow-hidden">
                   <img
                     src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=2000&q=80"
@@ -791,7 +791,7 @@ export default function AIPersonalizationEcommercePage() {
                 </div>
               </div>
 
-              <div className="bg-[#1b1b1b] rounded-xl overflow-hidden border border-white/10 hover:border-[#A3D1FF] transition-all group">
+              <div className="bg-[#1b1b1b] overflow-hidden border border-white/10 hover:border-[#A3D1FF] transition-all group">
                 <div className="aspect-[16/9] overflow-hidden">
                   <img
                     src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=2000&q=80"
