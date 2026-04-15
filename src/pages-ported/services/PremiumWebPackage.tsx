@@ -1,159 +1,222 @@
 "use client";
 
-import { ArrowRight, Check } from 'lucide-react';
-import ServiceLeadForm from '@/components/ServiceLeadForm';
-import { useRouter } from 'next/navigation';
+import {
+  ServiceMasthead,
+  ServiceMarquee,
+  EditorialSection,
+  ProblemQuote,
+  DeliverableRow,
+  ProcessChapter,
+  StatsBar,
+  WorkRow,
+  ServiceColophon,
+} from '@/components/ServiceEditorial';
+
 export default function PremiumWebPackage() {
-  const router = useRouter();
-
-  const includedFeatures = [
-    'Strategic Discovery & SEO Research',
-    'UX Wireframes (up to 10 pages)',
-    'UI Design System (Home, Templates, Style Guide)',
-    'Custom React Frontend Development',
-    'GSAP & Framer Motion Animations',
-    'Responsive, SEO-Optimized Layouts',
-    'CRM & Automation Integrations',
-    'Cloudflare Hosting, DNS, SSL Setup',
-    'QA Testing + Analytics/Pixel Integration'
-  ];
-
-  const optionalAddons = [
-    'Managed Backend + Auth',
-    'Stripe or Calendly Integration',
-    'Headless CMS',
-    'Cloudinary for Media Delivery',
-    'Ongoing Optimization & Retainers'
-  ];
-
-  const relatedServices = [
-    { name: 'advanced web design', url: '#' },
-    { name: 'react development', url: '#' },
-    { name: 'gsap animations', url: '#' },
-    { name: 'seo strategy', url: '#' },
-    { name: 'frontend development', url: '#' },
-    { name: 'responsive design', url: '#' },
-    { name: 'crm integrations', url: '#' },
-    { name: 'conversion optimization', url: '#' }
-  ];
-
   return (
     <>
-      
+      <ServiceMasthead
+        kicker="Package · Premium Web"
+        title="The flagship"
+        italicWord="build."
+        volumeNumber="07"
+        tagline={
+          <>
+            A complete, high-end website tailored for law firms, SaaS startups, and
+            media teams. Strategic planning, custom design, React development, CRM
+            integration, secure hosting.
+          </>
+        }
+        meta={['Flagship sites', 'React + Next.js', 'CRM · Analytics · SEO']}
+        imageSrc="https://ik.imagekit.io/qcvroy8xpd/TTV8Liw.jpg"
+      />
 
-      {/* Hero Section */}
-      <section className="relative min-h-[60vh] flex items-center justify-center bg-black overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-black via-[#0a0a0a] to-black"></div>
+      <ServiceMarquee
+        phrases={[
+          'Flagship',
+          'Premium',
+          'Hand-coded',
+          'CRM-Integrated',
+          'GSAP · Framer',
+          'Cloudflare-hosted',
+          'Designed for scale',
+        ]}
+      />
 
-        <div className="container-custom relative z-10 text-center">
-          <div className="inline-block px-4 py-2 bg-[#A3D1FF]/10 border border-[#A3D1FF]/20 rounded-full text-[#A3D1FF] text-sm font-medium mb-6">
-            Premium Package
-          </div>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
-            Complete Website Solution
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            A complete, high-end website solution tailored for law firms, SaaS startups, and media teams
-          </p>
-          <div className="text-5xl font-bold text-[#A3D1FF] mb-8">
-            $8,000
-          </div>
-          <button
-            onClick={() => {
-              const form = document.getElementById('contact-form');
-              form?.scrollIntoView({ behavior: 'smooth' });
-            }}
-            className="mr_btn mr_btn_primary inline-flex items-center gap-2 text-lg font-semibold"
-          >
-            <span>Get Started</span>
-            <ArrowRight className="w-5 h-5" />
-          </button>
-        </div>
-      </section>
-
-      {/* Description Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-white mb-6">About this Service</h2>
-          <div className="prose prose-invert max-w-none">
-            <p className="text-lg text-gray-300 mb-6">
-              A complete, high-end website solution tailored for law firms, SaaS startups, and media teams. This package includes strategic planning, UX wireframes, custom UI design, and full frontend development using React. I integrate GSAP animations, SEO optimization, CRM workflows (like HubSpot or Salesforce), and host everything securely with Cloudflare. Designed for scale, speed, and conversion.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Includes Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#1b1b1b]">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12">
-            <div>
-              <h2 className="text-3xl font-bold text-white mb-8">Includes</h2>
-              <ul className="space-y-4">
-                {includedFeatures.map((feature, index) => (
-                  <li key={index} className="flex items-start">
-                    <Check className="w-6 h-6 text-[#A3D1FF] mr-3 mt-0.5 flex-shrink-0" />
-                    <span className="text-gray-300">{feature}</span>
-                  </li>
-                ))}
-              </ul>
+      <EditorialSection
+        chapter="01"
+        label="Who it's for"
+        title="When a"
+        italicTitle="template won&apos;t do."
+        lead="This package is for teams whose website is the front door of a serious business — and needs to feel like it."
+      >
+        <div className="space-y-16">
+          {[
+            {
+              text: "Our website is the first impression for multi-million-dollar contracts.",
+              align: 'left' as const,
+              size: 'lg' as const,
+            },
+            {
+              text: "We've outgrown Squarespace and don't want to go back to WordPress.",
+              align: 'right' as const,
+              size: 'md' as const,
+            },
+            {
+              text: "We need CRM, analytics, and content management, all talking to each other.",
+              align: 'left' as const,
+              size: 'md' as const,
+            },
+            {
+              text: "The site has to match the quality of the work we do.",
+              align: 'right' as const,
+              size: 'lg' as const,
+            },
+          ].map((p, i) => (
+            <div
+              key={i}
+              className={`flex ${p.align === 'right' ? 'justify-end' : 'justify-start'}`}
+            >
+              <ProblemQuote text={p.text} align={p.align} size={p.size} />
             </div>
-
-            <div>
-              <h2 className="text-3xl font-bold text-white mb-8">Optional Add-ons</h2>
-              <ul className="space-y-4">
-                {optionalAddons.map((addon, index) => (
-                  <li key={index} className="flex items-start">
-                    <Check className="w-6 h-6 text-[#A3D1FF]/60 mr-3 mt-0.5 flex-shrink-0" />
-                    <span className="text-white">{addon}</span>
-                  </li>
-                ))}
-              </ul>
-              <p className="text-white mt-6 text-sm">
-                Optional add-ons available for additional cost
-              </p>
-            </div>
-          </div>
+          ))}
         </div>
-      </section>
+      </EditorialSection>
 
-      {/* Related Services */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl font-bold text-white mb-6">Browse Related Services</h2>
-          <div className="flex flex-wrap gap-3">
-            {relatedServices.map((service, index) => (
-              <span
-                key={index}
-                className="px-4 py-2 bg-[#1b1b1b] border border-white/10 rounded-lg text-gray-300 text-sm hover:border-[#A3D1FF] hover:text-[#A3D1FF] transition-colors cursor-pointer"
-              >
-                {service.name}
-              </span>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Form */}
-      <section id="contact-form" className="py-16 px-4 sm:px-6 lg:px-8 bg-[#1b1b1b]">
-        <div className="max-w-7xl mx-auto">
-          <ServiceLeadForm
-            service="Premium Web Development Package"
-            benefits={[
-              'Strategic planning & discovery phase',
-              'Custom UI/UX design system',
-              'React frontend with animations',
-              'SEO optimization included',
-              'CRM integrations & hosting setup'
-            ]}
-            testimonial={{
-              quote: "Marc was able to execute the vision perfectly! He's big on communication and easy to speak with. Marc dedicates his time to the client, ensuring the client is completely satisfied at each step of the process.",
-              author: "Omar Turner",
-              role: "Chief Executive Officer, Binns Media Group"
-            }}
+      <EditorialSection
+        chapter="02"
+        label="What's inside"
+        title="Everything"
+        italicTitle="a flagship needs."
+        bg="bg-[#0a0a0a]"
+      >
+        <div className="border-t border-white/10">
+          <DeliverableRow
+            number="01"
+            title="Strategic planning + wireframes"
+            description="We define positioning, information architecture, and the narrative arc of the site before any pixels are drawn."
+          />
+          <DeliverableRow
+            number="02"
+            title="Custom UI + motion design"
+            description="Bespoke visual identity, GSAP + Framer Motion micro-interactions, typography tuned at every breakpoint."
+          />
+          <DeliverableRow
+            number="03"
+            title="React + Next.js build"
+            description="Hand-coded frontend with perfect Core Web Vitals, SEO-native architecture, and a CMS your team can actually use."
+          />
+          <DeliverableRow
+            number="04"
+            title="CRM + analytics integration"
+            description="HubSpot, Salesforce, GA4, server-side tracking — wired cleanly so your sales and marketing teams get usable signal."
+          />
+          <DeliverableRow
+            number="05"
+            title="Cloudflare hosting + security"
+            description="Deployed on Cloudflare for speed, caching, DDoS protection, and world-class uptime."
           />
         </div>
-      </section>
+      </EditorialSection>
+
+      <EditorialSection
+        chapter="03"
+        label="The Process"
+        title="Six to eight"
+        italicTitle="thoughtful weeks."
+      >
+        <div>
+          <ProcessChapter
+            numeral="I."
+            title="Strategy"
+            description="Deep-dive into your business, audience, and competitive landscape. We agree on metrics, tone, and the one thing this site must do."
+            items={[
+              'Stakeholder interviews',
+              'Competitive audit',
+              'Positioning + messaging',
+              'Site architecture',
+            ]}
+          />
+          <ProcessChapter
+            numeral="II."
+            title="Design"
+            description="Full visual language, every page, every interaction, documented as a reusable design system."
+            items={[
+              'Visual identity',
+              'UI + motion design',
+              'Design system',
+              'Interactive prototype',
+            ]}
+            reverse
+          />
+          <ProcessChapter
+            numeral="III."
+            title="Build"
+            description="Hand-coded in React + Next.js with a headless CMS. Weekly demo links so you're never surprised."
+            items={[
+              'React + Next.js',
+              'Headless CMS',
+              'CRM + analytics',
+              'Weekly progress demos',
+            ]}
+          />
+          <ProcessChapter
+            numeral="IV."
+            title="Launch"
+            description="Production deploy, comprehensive QA, and 30 days of hypercare support."
+            items={[
+              'Cloudflare deploy',
+              'Full QA sweep',
+              'Analytics validation',
+              '30 days of support',
+            ]}
+            reverse
+          />
+        </div>
+      </EditorialSection>
+
+      <EditorialSection
+        chapter="04"
+        label="Proof"
+        title="Flagship"
+        italicTitle="builds in the wild."
+        bg="bg-[#0a0a0a]"
+      >
+        <StatsBar
+          stats={[
+            { value: '6–8wk', label: 'Build Time' },
+            { value: '95+', label: 'Lighthouse' },
+            { value: 'Full', label: 'CRM Integrated' },
+            { value: '30d', label: 'Post-Launch Care' },
+          ]}
+        />
+        <WorkRow
+          items={[
+            {
+              href: '/work/case-studies/binns-media',
+              title: 'Binns Media Group',
+              blurb: 'Flagship media platform — streaming, editorial, subscriber flows.',
+              image:
+                'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%204%20-%2016x9.png?updatedAt=1767539579710',
+              tags: ['Flagship', 'Media'],
+            },
+            {
+              href: '/work/case-studies/untapped-africa',
+              title: 'Untapped Africa',
+              blurb: 'Premium storytelling platform with Mapbox + donation + CMS.',
+              image:
+                'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%201%20-%201x1(1).png?updatedAt=1767539579782',
+              tags: ['Flagship', 'Impact'],
+            },
+          ]}
+        />
+      </EditorialSection>
+
+      <ServiceColophon
+        headline="A website worth"
+        italicHeadline="the business behind it."
+        lead="If your business is serious, your website should be too. Book a call and we'll scope your flagship build."
+      />
     </>
   );
 }
