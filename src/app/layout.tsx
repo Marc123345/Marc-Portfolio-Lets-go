@@ -4,6 +4,7 @@ import "./globals.css";
 import { AppProviders } from "@/providers/AppProviders";
 import Layout from "@/components/Layout";
 import SiteLoader from "@/components/SiteLoader";
+import SmoothScrollProvider from "@/components/SmoothScrollProvider";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -52,6 +53,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable}`}>
       <body className="min-h-screen bg-black text-white antialiased">
+        <SmoothScrollProvider />
         <SiteLoader />
         <AppProviders>
           <Layout>{children}</Layout>

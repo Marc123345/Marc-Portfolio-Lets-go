@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef, useState, useCallback } from 'react';
 import { ArrowUpRight, ChevronLeft, ChevronRight } from 'lucide-react';
+import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
 import Link from 'next/link';
 
 const SERIF = "Georgia, 'Times New Roman', serif";
@@ -24,9 +25,25 @@ interface ArcSliderProps {
 export default function ArcSlider({ cards, initialIndex = 0 }: ArcSliderProps) {
   const [activeIndex, setActiveIndex] = useState(initialIndex);
   const [isMobile, setIsMobile] = useState(false);
+  const [hovering, setHovering] = useState(false);
   const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
   const containerRef = useRef<HTMLDivElement>(null);
+  const activeCardRef = useRef<HTMLDivElement | null>(null);
   const dragRef = useRef({ startX: 0, hasMoved: false, isDragging: false });
+
+  // Magnetic cursor follower
+  const cursorX = useMotionValue(0);
+  const cursorY = useMotionValue(0);
+  const smoothCursorX = useSpring(cursorX, { stiffness: 250, damping: 30, mass: 0.6 });
+  const smoothCursorY = useSpring(cursorY, { stiffness: 250, damping: 30, mass: 0.6 });
+
+  // Pointer-driven tilt for the active card (subtle 3D parallax)
+  const tiltX = useMotionValue(0);
+  const tiltY = useMotionValue(0);
+  const smoothTiltX = useSpring(tiltX, { stiffness: 150, damping: 18, mass: 0.4 });
+  const smoothTiltY = useSpring(tiltY, { stiffness: 150, damping: 18, mass: 0.4 });
+  const tiltRotateX = useTransform(smoothTiltY, [-1, 1], [6, -6]);
+  const tiltRotateY = useTransform(smoothTiltX, [-1, 1], [-8, 8]);
 
   useEffect(() => {
     const check = () => setIsMobile(window.innerWidth < 768);
@@ -118,11 +135,36 @@ export default function ArcSlider({ cards, initialIndex = 0 }: ArcSliderProps) {
     return () => window.removeEventListener('keydown', onKey);
   }, [activeIndex, navigateTo]);
 
-  // Pointer drag
+  // Pointer drag + cursor + tilt
   const onPointerDown = (e: React.PointerEvent) => {
     dragRef.current = { startX: e.clientX, hasMoved: false, isDragging: true };
   };
   const onPointerMove = (e: React.PointerEvent) => {
+    // Cursor follower position (relative to stage)
+    const stage = containerRef.current?.getBoundingClientRect();
+    if (stage) {
+      cursorX.set(e.clientX - stage.left);
+      cursorY.set(e.clientY - stage.top);
+    }
+    // Tilt — only when over the active card
+    if (activeCardRef.current) {
+      const rect = activeCardRef.current.getBoundingClientRect();
+      const cx = rect.left + rect.width / 2;
+      const cy = rect.top + rect.height / 2;
+      const nx = (e.clientX - cx) / (rect.width / 2);
+      const ny = (e.clientY - cy) / (rect.height / 2);
+      const inside =
+        Math.abs(e.clientX - cx) < rect.width / 2 + 40 &&
+        Math.abs(e.clientY - cy) < rect.height / 2 + 40;
+      if (inside) {
+        tiltX.set(Math.max(-1, Math.min(1, nx)));
+        tiltY.set(Math.max(-1, Math.min(1, ny)));
+      } else {
+        tiltX.set(0);
+        tiltY.set(0);
+      }
+    }
+    // Drag
     if (!dragRef.current.isDragging) return;
     const dx = e.clientX - dragRef.current.startX;
     if (Math.abs(dx) > 8) dragRef.current.hasMoved = true;
@@ -186,43 +228,72 @@ export default function ArcSlider({ cards, initialIndex = 0 }: ArcSliderProps) {
         style={{
           perspective: '1600px',
           height: 540,
+          cursor: 'none',
         }}
         onPointerDown={onPointerDown}
         onPointerMove={onPointerMove}
         onPointerUp={onPointerUp}
+        onPointerEnter={() => setHovering(true)}
         onPointerLeave={(e) => {
+          setHovering(false);
+          tiltX.set(0);
+          tiltY.set(0);
           if (dragRef.current.isDragging) onPointerUp(e);
         }}
       >
+        {/* Magnetic cursor follower */}
+        <motion.div
+          className="absolute z-40 pointer-events-none"
+          style={{
+            left: 0,
+            top: 0,
+            x: smoothCursorX,
+            y: smoothCursorY,
+            translateX: '-50%',
+            translateY: '-50%',
+            opacity: hovering ? 1 : 0,
+            transition: 'opacity 0.25s ease',
+          }}
+        >
+          <div className="w-20 h-20 rounded-full border border-[#A3D1FF]/60 bg-[#A3D1FF]/10 backdrop-blur-md flex items-center justify-center text-[10px] font-mono uppercase tracking-[0.2em] text-white">
+            <span className="flex items-center gap-1">
+              Open <ArrowUpRight className="w-3 h-3" />
+            </span>
+          </div>
+        </motion.div>
         <div
           className="absolute inset-0 flex items-center justify-center"
           style={{ transformStyle: 'preserve-3d' }}
         >
-          {cards.map((c, i) => (
+          {cards.map((c, i) => {
+            const isActive = i === activeIndex;
+            return (
             <div
               key={c.id}
               ref={(el) => {
                 cardsRef.current[i] = el;
+                if (isActive) activeCardRef.current = el;
               }}
               className="absolute"
               style={{
                 transformStyle: 'preserve-3d',
                 width: 'min(380px, 55vw)',
                 height: 480,
-                cursor: i === activeIndex ? 'default' : 'pointer',
               }}
               onClick={() => {
                 if (dragRef.current.hasMoved) return;
                 if (i !== activeIndex) navigateTo(i);
               }}
             >
-              <div
+              <motion.div
                 className="relative w-full h-full border border-white/12 bg-[#0e1116] flex flex-col p-7 overflow-hidden"
                 style={{
-                  background:
-                    i === activeIndex
-                      ? `linear-gradient(140deg, #14181f 0%, #0a0c10 100%)`
-                      : '#0e1116',
+                  background: isActive
+                    ? `linear-gradient(140deg, #14181f 0%, #0a0c10 100%)`
+                    : '#0e1116',
+                  transformStyle: 'preserve-3d',
+                  rotateX: isActive ? tiltRotateX : 0,
+                  rotateY: isActive ? tiltRotateY : 0,
                 }}
               >
                 <div
@@ -289,9 +360,10 @@ export default function ArcSlider({ cards, initialIndex = 0 }: ArcSliderProps) {
                     <ArrowUpRight className="w-4 h-4" />
                   </Link>
                 </div>
-              </div>
+              </motion.div>
             </div>
-          ))}
+            );
+          })}
         </div>
 
         {/* Side arrows */}
@@ -299,7 +371,8 @@ export default function ArcSlider({ cards, initialIndex = 0 }: ArcSliderProps) {
           onClick={() => navigateTo(activeIndex - 1)}
           disabled={activeIndex === 0}
           aria-label="Previous service"
-          className="absolute left-4 lg:left-8 top-1/2 -translate-y-1/2 z-30 w-11 h-11 flex items-center justify-center border border-white/15 bg-black/40 backdrop-blur-sm text-white hover:border-white/40 transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
+          style={{ cursor: activeIndex === 0 ? 'not-allowed' : 'pointer' }}
+          className="absolute left-4 lg:left-8 top-1/2 -translate-y-1/2 z-30 w-11 h-11 flex items-center justify-center border border-white/15 bg-black/40 backdrop-blur-sm text-white hover:border-white/40 transition-colors disabled:opacity-30"
         >
           <ChevronLeft className="w-4 h-4" />
         </button>
@@ -307,7 +380,8 @@ export default function ArcSlider({ cards, initialIndex = 0 }: ArcSliderProps) {
           onClick={() => navigateTo(activeIndex + 1)}
           disabled={activeIndex === cards.length - 1}
           aria-label="Next service"
-          className="absolute right-4 lg:right-8 top-1/2 -translate-y-1/2 z-30 w-11 h-11 flex items-center justify-center border border-white/15 bg-black/40 backdrop-blur-sm text-white hover:border-white/40 transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
+          style={{ cursor: activeIndex === cards.length - 1 ? 'not-allowed' : 'pointer' }}
+          className="absolute right-4 lg:right-8 top-1/2 -translate-y-1/2 z-30 w-11 h-11 flex items-center justify-center border border-white/15 bg-black/40 backdrop-blur-sm text-white hover:border-white/40 transition-colors disabled:opacity-30"
         >
           <ChevronRight className="w-4 h-4" />
         </button>

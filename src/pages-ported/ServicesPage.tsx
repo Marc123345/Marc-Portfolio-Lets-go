@@ -190,14 +190,27 @@ export default function ServicesPage() {
 
           <ul className="border-y border-white/10">
             {services.map((s, i) => (
-              <li
+              <motion.li
                 key={s.id}
-                className="border-b border-white/10 last:border-b-0 group"
+                initial={{ clipPath: 'inset(0 100% 0 0)', opacity: 0 }}
+                whileInView={{ clipPath: 'inset(0 0% 0 0)', opacity: 1 }}
+                viewport={{ once: true, margin: '-60px' }}
+                transition={{
+                  duration: 0.85,
+                  delay: i * 0.06,
+                  ease: [0.22, 1, 0.36, 1],
+                }}
+                className="border-b border-white/10 last:border-b-0 group relative"
               >
                 <Link
                   href={s.href}
-                  className="grid md:grid-cols-[80px_1fr_180px_24px] gap-4 md:gap-8 items-center py-5 md:py-6"
+                  className="grid md:grid-cols-[80px_1fr_180px_24px] gap-4 md:gap-8 items-center py-5 md:py-6 relative"
                 >
+                  {/* Hover sweep — a thin cyan bar slides in from the left */}
+                  <span
+                    className="absolute left-0 top-0 bottom-0 w-[3px] bg-[#A3D1FF] origin-top scale-y-0 group-hover:scale-y-100 transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]"
+                    aria-hidden
+                  />
                   <span
                     className="text-[#A3D1FF]/60 font-mono text-xs tracking-[0.2em] hidden md:block"
                     style={{ fontVariantNumeric: 'tabular-nums' }}
@@ -205,7 +218,7 @@ export default function ServicesPage() {
                     {String(i + 1).padStart(2, '0')}
                   </span>
                   <h3
-                    className="text-white leading-[1.1] tracking-tight group-hover:text-[#A3D1FF] transition-colors"
+                    className="text-white leading-[1.1] tracking-tight group-hover:text-[#A3D1FF] group-hover:translate-x-2 transition-all duration-500"
                     style={{
                       fontFamily: SERIF,
                       fontSize: 'clamp(1.5rem, 2.5vw, 2.25rem)',
@@ -217,9 +230,9 @@ export default function ServicesPage() {
                   <span className="text-[10px] font-mono uppercase tracking-[0.25em] text-white/50 hidden md:block">
                     {s.category}
                   </span>
-                  <ArrowUpRight className="w-4 h-4 text-white/40 group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all hidden md:block" />
+                  <ArrowUpRight className="w-4 h-4 text-white/40 group-hover:text-[#A3D1FF] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all hidden md:block" />
                 </Link>
-              </li>
+              </motion.li>
             ))}
           </ul>
         </div>
