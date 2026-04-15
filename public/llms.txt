@@ -1,0 +1,82 @@
+# Marc Friedman — Web Designer & Full Stack Developer
+
+> Award-winning freelance web designer and full stack developer based in Tel Aviv, Israel. Specializing in high-performance websites, SaaS platforms, and AI-integrated digital experiences that turn attention into revenue.
+
+## About
+
+Marc Friedman is a freelance website designer and full stack developer operating as a dedicated web design agency. With 6+ years of experience and 50+ projects completed across three continents, Marc works directly with clients — no middlemen, no interns. He has pitched 5 VCs and was accepted into the AWS Accelerator program.
+
+- Location: Tel Aviv, Israel
+- Website: https://www.marcfriedmanportfolio.com
+- LinkedIn: https://www.linkedin.com/in/portfolio2/
+- Behance: https://www.behance.net/marcfriedmanweb
+- Clutch: https://clutch.co/profile/marc-friedman-design-agency
+- DesignRush: https://www.designrush.com/agency/profile/marc-friedman
+- Google Business: https://g.co/kgs/78fRZ6r
+- Book a Free Strategy Call: https://calendly.com/marc-friedman-web-design--meeting-link/30min
+
+## Services
+
+- Custom Web Design & Development
+- UI/UX Design & Design Systems
+- SaaS & Web Application Development
+- Startup MVP Development (launch in 30 days)
+- AI Integration (OpenAI, Google Cloud AI, AWS SageMaker)
+- Cybersecurity Assessment & Secure Development
+- E-commerce (Shopify, custom solutions)
+- SEO & Performance Optimization
+- Fractional CMO Partnership (white-label execution for agencies)
+- External Web Department (multi-location & franchise businesses)
+- Monthly Website Retainer & Management
+- UX/UI Mentorship & Tutoring
+- Non-Profit / NGO Impact Story Sites
+
+## Tech Stack
+
+React, Next.js, TypeScript, Tailwind CSS, Framer Motion, GSAP, Node.js, Express, PostgreSQL, MongoDB, Supabase, Cloudflare, Vercel, Netlify, AWS, Cloudinary, Shopify, Mapbox GL, HubSpot, Salesforce, Stripe, Calendly, Figma, Google Analytics 4
+
+## Industries Served
+
+Media & Entertainment, SaaS & Technology, E-commerce, Automotive, Professional Services, Social Impact & NGOs, Sports & Entertainment, Healthcare, Real Estate, Law Firms, Multi-location & Franchise Businesses, Education
+
+## Pricing
+
+- Monthly Website Retainer: $500/month
+- UX/UI Mentorship: from $499/month
+- Impact Story Site (NGO): $4,000 - $12,000
+- Startup MVP Validation Sprint: $4,999
+- Premium Web Development Package: $8,000
+- Startup MVP Launch: $14,999
+- Custom projects: Request a quote
+
+## Notable Client Results
+
+- Paving Leads: Ranked #1 on Google, 300% increase in organic traffic
+- Untapped Africa: 250% engagement increase, serving 500,000+ people across 8 African countries
+- Binns Media Group: Complete platform redesign with measurable engagement and load time improvements
+- Chad Le Clos Swimming: Olympic champion's clinic site drove numerous sign-ups within days
+- AutoMarginX: Real-time analytics platform enabling 35% faster dealer decisions
+
+## Ratings & Reviews
+
+- Google Business: 5.0 stars (10 reviews)
+- Clutch: 4.8 stars (5 reviews)
+- DesignRush: Best Web Design 2025
+- 25+ verified reviews across platforms
+- 99% client satisfaction rate
+
+## Contact
+
+- Website: https://www.marcfriedmanportfolio.com
+- Contact Page: https://www.marcfriedmanportfolio.com/contact
+- Book a Call: https://calendly.com/marc-friedman-web-design--meeting-link/30min
+- 24-hour response time guaranteed
+
+## Optional Links
+
+- Portfolio: https://www.marcfriedmanportfolio.com/work
+- Case Studies: https://www.marcfriedmanportfolio.com/work/case-studies
+- Blog: https://www.marcfriedmanportfolio.com/blog
+- Services: https://www.marcfriedmanportfolio.com/services
+- Free Website Analyzer: https://www.marcfriedmanportfolio.com/tools/website-analyzer
+- ROI Calculator: https://www.marcfriedmanportfolio.com/tools/roi-calculator

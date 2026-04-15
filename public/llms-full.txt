@@ -1,0 +1,379 @@
+# Marc Friedman — Web Designer & Full Stack Developer (Detailed)
+
+> Award-winning freelance web designer and full stack developer based in Tel Aviv, Israel. Specializing in high-performance websites, SaaS platforms, and AI-integrated digital experiences that turn attention into revenue. 6+ years of experience, 50+ projects across three continents, 99% client satisfaction.
+
+---
+
+## About Marc Friedman
+
+Marc Friedman is a freelance website designer and full stack developer who operates as a dedicated one-person web design agency. Based in Tel Aviv, Israel, Marc works directly with every client — there are no middlemen, no project managers relaying messages, no junior developers doing the work. When you hire Marc, you get Marc.
+
+With over 6 years of professional experience, 50+ completed projects, and clients across three continents (North America, Europe, and Africa), Marc brings a unique combination of design sensibility and engineering rigor to every project. He has pitched 5 venture capitalists, was accepted into the AWS Accelerator program, and understands the intersection of technology and business growth.
+
+Marc's approach follows a 4-D framework: Discover (stakeholder interviews, market analysis, user research, competitive audit), Define (strategic roadmap with KPIs, user personas, information architecture), Design (data-driven wireframing, conversion-focused UI, interactive prototyping), and Develop (SEO-optimized frontend, secure backend, high quality scores, comprehensive QA).
+
+### Key Statistics
+- 50+ projects completed
+- 6+ years of professional experience
+- 99% client satisfaction rate
+- 3 continents served (North America, Europe, Africa)
+- 20+ trusted clients
+- 5.0 Google Business rating
+- 24-hour response time guaranteed
+
+### Skills Proficiency
+- UI/UX Design: 95%
+- Design Systems: 90%
+- Wireframing & Prototyping: 95%
+- React / Next.js: 95%
+- TypeScript: 90%
+- Node.js: 85%
+- PostgreSQL: 80%
+
+---
+
+## Contact Information
+
+- Website: https://www.marcfriedmanportfolio.com
+- Contact Page: https://www.marcfriedmanportfolio.com/contact
+- Book a Free Strategy Call: https://calendly.com/marc-friedman-web-design--meeting-link/30min
+- LinkedIn: https://www.linkedin.com/in/portfolio2/
+- Behance: https://www.behance.net/marcfriedmanweb
+- Google Business: https://g.co/kgs/78fRZ6r
+- Clutch: https://clutch.co/profile/marc-friedman-design-agency
+- DesignRush: https://www.designrush.com/agency/profile/marc-friedman
+- Location: Tel Aviv, Tel Aviv District, Israel
+- Response Time: 24 hours guaranteed
+
+### Contact Process
+1. Initial Consultation — 24-hour response, free strategy call
+2. Proposal & Strategy — Detailed scope, timeline, and investment breakdown
+3. Execution & Launch — Collaborative process with weekly updates
+
+---
+
+## Services (Complete List)
+
+### 1. Custom Web Design & Development
+Custom website development with modern technologies, SEO-ready websites that load in under 2 seconds, mobile-first responsive design, and conversion optimization.
+
+**Packages:**
+- Landing Page: Mobile responsive, SEO optimization, high PageSpeed, analytics integration. 2-week delivery.
+- Business Website (Most Popular): 5-7 custom pages, CMS integration, blog with SEO, performance optimization. 4-6 week delivery.
+- Custom Web App: Custom functionality, user authentication, database integration, admin dashboard. 8-12 week delivery.
+
+URL: https://www.marcfriedmanportfolio.com/services/web-development
+
+### 2. UI/UX Design
+User-centered design solutions including UI design, UX design, design systems, interaction design, product strategy, and design audits.
+
+**Packages:**
+- Brand Design: Logo, color system, typography, brand guidelines. 2-3 week delivery.
+- Website Design (Most Popular): 5-7 page custom designs, responsive layouts, interactive prototypes, design system. 3-4 week delivery.
+- Product Design: Comprehensive UX research, user journey mapping, wireframes, full UI design, interactive prototype. 6-8 week delivery.
+
+URL: https://www.marcfriedmanportfolio.com/services/design
+
+### 3. SaaS & Web Application Development
+End-to-end SaaS solutions with scalable architecture, 99.9% uptime guarantee, enterprise-grade security, and API development.
+
+**Packages:**
+- MVP: Core features, user auth, cloud hosting, basic analytics. 8-12 week delivery.
+- Professional (Most Popular): Advanced features, custom admin dashboard, payment integration, API development. 12-16 week delivery.
+- Enterprise: Custom architecture, advanced security, third-party integrations, high-availability. Custom timeline.
+
+URL: https://www.marcfriedmanportfolio.com/services/saas
+
+### 4. Startup MVP Development
+Launch your MVP in 30 days. Built by a founder who has pitched 5 VCs and got into AWS Accelerator.
+
+**Packages:**
+- Validation Sprint — $4,999: Core features, user auth, landing page, analytics. 2-week delivery.
+- MVP Launch — $14,999: Full features, user management, admin dashboard, payment integration. 6-8 week delivery.
+- Startup Growth — Custom pricing: Custom roadmap, technical strategy, weekly founder coaching, scalable infrastructure.
+
+URL: https://www.marcfriedmanportfolio.com/services/startup-mvp
+
+### 5. AI Integration
+API integration with OpenAI, Google Cloud AI, and AWS SageMaker. Custom model deployment, AI-powered applications (chatbots, recommendation engines, predictive analytics), machine learning & data services, process automation, and AI-powered multilingual chat support (40+ languages).
+
+URL: https://www.marcfriedmanportfolio.com/services/ai-integration
+
+### 6. Cybersecurity
+Security assessment (OWASP Top 10 analysis, penetration testing), UX audit for security, secure backend development (RBAC, encryption), monitoring & alerting, cloud security, secure code review, GDPR/POPIA compliance, and 24/7 incident support.
+
+URL: https://www.marcfriedmanportfolio.com/services/cybersecurity
+
+### 7. Design Systems
+Component libraries, design tokens, style guides, and reusable component architecture. Delivers 40% faster development through systematic design.
+
+URL: https://www.marcfriedmanportfolio.com/services/design-systems
+
+### 8. Premium Web Development Package — $8,000
+All-inclusive package: Strategic discovery & SEO research, UX wireframes (up to 10 pages), UI design system, custom React frontend, GSAP & Framer Motion animations, responsive SEO-optimized layouts, CRM & automation integrations (HubSpot, Salesforce), Cloudflare hosting/DNS/SSL, QA testing + analytics/pixel integration.
+
+Optional add-ons: Supabase backend + auth, Stripe/Calendly integration, headless CMS, Cloudinary for media delivery, ongoing optimization.
+
+URL: https://www.marcfriedmanportfolio.com/services/premium-web-package
+
+### 9. Monthly Website Retainer — $500/month
+Full website management, premium hosting, technical SEO, on-page SEO, content creation, landing page design, analytics, monthly optimization, UX improvements, unlimited landing pages, 24/7 lead-capture chatbot, monthly SEO blog posts, backlink building, performance monitoring, GA4 & conversion tracking.
+
+URL: https://www.marcfriedmanportfolio.com/services/monthly-retainer
+
+### 10. Fractional CMO Partnership
+Design & development execution for go-to-market strategy. High-converting landing pages for paid campaigns and funnels, sales-ready websites, white-label execution under the agency's brand, strategy-aligned implementation.
+
+URL: https://www.marcfriedmanportfolio.com/services/fractional-cmo
+
+### 11. External Web Department
+For multi-location and multi-brand companies, franchise and chain businesses, multi-brand groups, healthcare/education/service networks. Ongoing website production, redesigns, scalable design systems, continuous improvements. Free landing page for first-time partners.
+
+URL: https://www.marcfriedmanportfolio.com/services/external-web-department
+
+### 12. UX/UI Mentorship & Tutoring
+Figma mastery, UI design skills, UX best practices, portfolio development, career growth, design systems.
+
+**Packages:**
+- Figma Mastery — $499/month: 4 sessions/month, 1-month commitment.
+- Portfolio Builder — $799/month: 6 sessions/month, 2-month commitment.
+- Career Accelerator — $1,299/month: 8 sessions/month, 3-month commitment.
+
+URL: https://www.marcfriedmanportfolio.com/services/mentorship
+
+### 13. Impact Story Site (NGO / Non-Profit Web Design) — $4,000 to $12,000
+Immersive storytelling websites for non-profits and NGOs. Frictionless giving (Stripe, PayPal, crypto), narrative clarity, emotional story-driven layouts, GSAP & Framer Motion animations, donation integration, CMS, video embeds, multilingual support, SEO, WCAG 2.1 accessibility, analytics. 2-3 week timeline, unlimited revisions during build, 30 days post-launch support. Limited to 4 projects per year.
+
+URL: https://www.marcfriedmanportfolio.com/services/impact-story-site
+
+### 14. E-commerce
+Shopify and custom e-commerce solutions with conversion optimization, payment integration, and inventory management.
+
+---
+
+## Pricing Summary
+
+| Service | Price |
+|---------|-------|
+| Monthly Website Retainer | $500/month |
+| Mentorship — Figma Mastery | $499/month |
+| Mentorship — Portfolio Builder | $799/month |
+| Mentorship — Career Accelerator | $1,299/month |
+| Impact Story Site (NGO) | $4,000 - $12,000 |
+| Startup MVP — Validation Sprint | $4,999 |
+| Premium Web Development Package | $8,000 |
+| Startup MVP — MVP Launch | $14,999 |
+| Startup MVP — Startup Growth | Custom |
+| Web Development packages | Custom (Request a Quote) |
+| UI/UX Design packages | Custom (Request a Quote) |
+| SaaS Development packages | Custom (Request a Quote) |
+
+---
+
+## Technology Stack
+
+### Frontend
+- React / React 18
+- Next.js
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+- GSAP (GreenSock Animation Platform)
+
+### Backend
+- Node.js
+- Express
+- PostgreSQL
+- MongoDB
+- Supabase
+- GraphQL & REST APIs
+
+### AI & Machine Learning
+- OpenAI API
+- Google Cloud AI
+- AWS SageMaker
+- Natural Language Processing (NLP)
+- Computer Vision
+
+### Infrastructure & Hosting
+- Cloudflare (hosting, DNS, SSL, CDN)
+- Vercel
+- Netlify
+- AWS (Amazon Web Services)
+- Cloudinary (media delivery & optimization)
+
+### E-commerce & Integrations
+- Shopify
+- Stripe (payments)
+- Calendly (scheduling)
+- HubSpot (CRM)
+- Salesforce (CRM)
+- Google Analytics 4
+- Mapbox GL (mapping)
+
+### Design Tools
+- Figma
+- Adobe Creative Suite
+- Design systems & component libraries
+- User research & testing tools
+
+### Security Standards
+- SOC 2 compliance standards
+- GDPR / POPIA compliance
+- OWASP Top 10 analysis & mitigation
+- Role-Based Access Control (RBAC)
+- Encryption at-rest and in-transit
+
+---
+
+## Industries Served
+
+1. **Media & Entertainment** — Digital media platforms, podcast networks, video editing tools, content management systems
+2. **SaaS & Technology** — Web applications, dashboards, real-time analytics platforms, API development
+3. **E-commerce** — Shopify stores, custom e-commerce, B2B procurement platforms
+4. **Automotive** — Dealership management systems, fleet tracking, vehicle analytics
+5. **Professional Services** — Locksmith businesses, paving contractors, legal services
+6. **Social Impact & NGOs** — Water infrastructure, non-profit storytelling, donation platforms
+7. **Sports & Entertainment** — Athlete personal brands, sports clinics, event registration
+8. **Healthcare & Wellness** — Health platforms, wellness booking systems, care management
+9. **Real Estate & Property Development** — B2B procurement, property management, investment platforms
+10. **Law Firms** — Professional websites, lead generation, content marketing
+11. **Multi-location & Franchise Businesses** — Scalable design systems, multi-brand management
+12. **Education** — Educational networks, learning platforms, mentorship programs
+
+---
+
+## Portfolio & Case Studies
+
+### Untapped Africa
+Water infrastructure platform serving 500,000+ people across 8 African countries. 250% increase in engagement. Built with Next.js, TypeScript, Supabase, and Mapbox GL.
+- Live: https://untappedafrica.co.za
+- Case Study: https://www.marcfriedmanportfolio.com/work/case-studies/untapped-africa
+
+### Binns Media Group
+Complete redesign of a digital media platform for podcasts, TV shows, and exclusive content. Measurable improvements in engagement and load times. Built with React 18, TypeScript, Supabase, and GSAP.
+- Live: https://www.binnsmediagroup.com
+- Case Study: https://www.marcfriedmanportfolio.com/work/case-studies/binns-media
+
+### Paving Leads
+SEO engine that ranked #1 on Google with 300% increase in organic traffic and strong lead conversion. Built with React, Node.js, SEO optimization, and analytics.
+- Live: https://pavinglead.com/
+- Case Study: https://www.marcfriedmanportfolio.com/work/case-studies/paving-leads
+
+### A Secure Annapolis Locksmith
+Professional locksmith website with increased leads and strong mobile conversion. Built with React, Node.js, Tailwind CSS, and local SEO.
+- Live: https://www.asecureannapolislocksmith.com
+- Case Study: https://www.marcfriedmanportfolio.com/work/case-studies/secure-annapolis
+
+### Friedman & Cohen
+B2B procurement platform for property developers with 100+ years of business excellence. Built with React, Node.js, and PostgreSQL.
+- Live: https://b2b.fandc.co.za
+- Case Study: https://www.marcfriedmanportfolio.com/work/case-studies/friedman-cohen
+
+### Tar & Chip Paving
+Specialized paving surface solutions showcase. Built with React, Tailwind CSS, and responsive design.
+- Live: https://cumberlandtarchip.org/
+- Case Study: https://www.marcfriedmanportfolio.com/work/case-studies/tar-chip
+
+### Chad Le Clos Swimming
+Olympic champion Chad Le Clos's swimming clinics website. Drove numerous sign-ups within days of launch with high form completion rates. Built with Next.js, Tailwind CSS, and Framer Motion.
+- Live: https://chadleclosswimming.com
+- Case Study: https://www.marcfriedmanportfolio.com/work/case-studies/chad-le-clos
+
+### iLight
+Modern lighting e-commerce store with increased conversions and excellent mobile performance. Built with Next.js, Shopify, and TypeScript.
+- Live: https://ilight.co.za
+- Case Study: https://www.marcfriedmanportfolio.com/work/case-studies/ilight
+
+### MyTube Platform
+Video metadata management platform for media and manufacturing. Faster metadata processing and high user satisfaction. Built with React, Node.js, AI/ML, and PostgreSQL.
+- Case Study: https://www.marcfriedmanportfolio.com/work/case-studies/mytube
+
+### Fleet Management System
+Comprehensive fleet tracking system with improved efficiency and cost reduction. Built with React Native, Node.js, and MongoDB.
+- Case Study: https://www.marcfriedmanportfolio.com/work/case-studies/fleet-management
+
+### AutoMarginX
+Dealership management platform with real-time analytics enabling 35% faster decisions and higher profits. Built with React, Node.js, and PostgreSQL.
+- Case Study: https://www.marcfriedmanportfolio.com/work/case-studies/automargin
+
+### Videoleap
+AI-powered video editing platform with template marketplace. Increased template usage and better user retention. Built with React, Node.js, AI/ML, and AWS.
+- Case Study: https://www.marcfriedmanportfolio.com/work/case-studies/videoleap
+
+---
+
+## Client Testimonials
+
+**Omar Turner, CEO of Binns Media Group:**
+"Marc was able to execute the vision perfectly! He's big on communication and easy to speak with. Marc dedicates his time to the client, ensuring the client is completely satisfied at each step of the process."
+
+**VP Product, WebAI / MarginX.ai:**
+"Marc excels in crafting intuitive, data-centric design solutions that have greatly enhanced our platform's usability and visual analytics."
+
+**Stallone Sweeney, Attorney & Founder of LegalContent:**
+"Marc helped us validate our startup idea quickly with an MVP that our early users loved. His lean approach saved us months of development time."
+
+**Benny Even Ari, Investments & Real Estate:**
+"Marc helped us build and launch our MVP in record time, enabling us to secure our first round of funding."
+
+**Lior Shimon, Algorithm Engineer / Data Scientist:**
+"The security assessment and implementation provided by Marc's team transformed our approach to data protection and gave us confidence in our systems."
+
+**Julia Friedman, UX Designer:**
+"Marc's mentorship was transformative for my design career. His guidance helped me land my dream job in UX design."
+
+**Gabriel Sher, CEO of Untapped Africa:**
+"Working with Marc was a fantastic experience. He delivered a stunning, user-friendly site that exceeded our expectations. His professionalism and creativity made the process smooth. He captured the heart of our mission."
+
+---
+
+## Ratings & Reviews
+
+- Google Business: 5.0 stars (10 reviews)
+- Clutch: 4.8 stars (5 reviews)
+- DesignRush: 4.5 stars — Best Web Design 2025
+- LinkedIn: 4.9 stars (8 reviews)
+- 25+ total verified reviews across platforms
+- 99% client satisfaction rate
+
+---
+
+## Key Differentiators
+
+1. **Direct collaboration** — You work directly with Marc, not a team of interns or project managers
+2. **Full-stack expertise** — Both design and development under one roof eliminates handoff issues
+3. **Results-driven** — Focus on measurable business outcomes: conversions, leads, and revenue
+4. **Strategic partner** — Provides business guidance beyond just design and code execution
+5. **Founder experience** — Has pitched 5 VCs, accepted into AWS Accelerator, understands startups
+6. **White-label ready** — Can work behind the scenes under a client's or agency's brand
+
+---
+
+## Free Tools
+
+- Website Analyzer: https://www.marcfriedmanportfolio.com/tools/website-analyzer
+- ROI Calculator: https://www.marcfriedmanportfolio.com/tools/roi-calculator
+- Project Timeline Estimator: https://www.marcfriedmanportfolio.com/tools/project-timeline
+
+---
+
+## Blog & Thought Leadership
+
+Marc publishes regularly on topics including AI in web design, SEO strategy, UX best practices, design systems, and modern web development.
+
+Blog: https://www.marcfriedmanportfolio.com/blog
+
+---
+
+## Sitemap
+
+- Homepage: https://www.marcfriedmanportfolio.com
+- About: https://www.marcfriedmanportfolio.com/about
+- Services: https://www.marcfriedmanportfolio.com/services
+- Work / Portfolio: https://www.marcfriedmanportfolio.com/work
+- Case Studies: https://www.marcfriedmanportfolio.com/work/case-studies
+- Blog: https://www.marcfriedmanportfolio.com/blog
+- Contact: https://www.marcfriedmanportfolio.com/contact
+- Press: https://www.marcfriedmanportfolio.com/press
+- XML Sitemap: https://www.marcfriedmanportfolio.com/sitemap.xml

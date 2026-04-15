@@ -1,0 +1,66 @@
+{
+  "name": "Marc Friedman - Full Stack Designer & Developer",
+  "short_name": "Marc Friedman",
+  "description": "Expert full-stack design and development solutions that transform your vision into exceptional digital experiences.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#A3D1FF",
+  "orientation": "any",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "https://ik.imagekit.io/qcvroy8xpd/apple-touch-icon.png?updatedAt=1750173036120",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://ik.imagekit.io/qcvroy8xpd/download%20(2).jpeg?updatedAt=1755000851609",
+      "sizes": "32x32",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "https://ik.imagekit.io/qcvroy8xpd/download%20(2).jpeg?updatedAt=1755000851609",
+      "sizes": "16x16",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "https://ik.imagekit.io/qcvroy8xpd/android-chrome-192x192.png?updatedAt=1750173036144",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://ik.imagekit.io/qcvroy8xpd/android-chrome-512x512.png?updatedAt=1750173036582",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "View Portfolio",
+      "url": "/work",
+      "description": "View my portfolio of work"
+    },
+    {
+      "name": "Contact Me",
+      "url": "/contact",
+      "description": "Get in touch"
+    }
+  ],
+  "categories": ["business", "productivity", "design"],
+  "related_applications": [],
+  "prefer_related_applications": false,
+  "screenshots": [
+    {
+      "src": "/screenshots/home.jpg",
+      "sizes": "1280x720",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "/screenshots/portfolio.jpg",
+      "sizes": "1280x720",
+      "type": "image/jpeg"
+    }
+  ]
+}
