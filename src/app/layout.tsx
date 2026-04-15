@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { AppProviders } from "@/providers/AppProviders";
 import Layout from "@/components/Layout";
+import SiteLoader from "@/components/SiteLoader";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -51,6 +52,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable}`}>
       <body className="min-h-screen bg-black text-white antialiased">
+        <SiteLoader />
         <AppProviders>
           <Layout>{children}</Layout>
         </AppProviders>
