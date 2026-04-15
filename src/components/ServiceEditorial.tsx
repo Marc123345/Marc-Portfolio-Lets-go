@@ -586,6 +586,137 @@ export function WorkRow({
   );
 }
 
+/* ---------------- Service Navigator (cross-link all services) ---------------- */
+
+const ALL_SERVICES = [
+  { slug: 'web-development', title: 'Web Development', category: 'Build' },
+  { slug: 'design', title: 'UI/UX Design', category: 'Design' },
+  { slug: 'design-systems', title: 'Design Systems', category: 'Systems' },
+  { slug: 'startup-mvp', title: 'Startup MVP', category: 'Launch' },
+  { slug: 'ai-integration', title: 'AI Integration', category: 'AI' },
+  { slug: 'cybersecurity', title: 'Cybersecurity UX', category: 'Security' },
+  { slug: 'external-web-department', title: 'External Web Department', category: 'Retainer' },
+  { slug: 'premium-web-package', title: 'Premium Web', category: 'Flagship' },
+  { slug: 'monthly-retainer', title: 'Monthly Retainer', category: 'Care' },
+];
+
+export function ServiceNavigator({ currentSlug }: { currentSlug: string }) {
+  const idx = ALL_SERVICES.findIndex((s) => s.slug === currentSlug);
+  const current = idx >= 0 ? idx : 0;
+  const total = ALL_SERVICES.length;
+  const prev = ALL_SERVICES[(current - 1 + total) % total];
+  const next = ALL_SERVICES[(current + 1) % total];
+
+  return (
+    <section className="relative bg-black border-t border-white/10 py-20 md:py-24 px-6 lg:px-12">
+      <div className="max-w-7xl mx-auto">
+        <ChapterMarker
+          number={`${String(current + 1).padStart(2, '0')} / ${String(total).padStart(2, '0')}`}
+          label="Continue · More services"
+        />
+
+        {/* Prev / Next big links */}
+        <div className="grid md:grid-cols-2 gap-px bg-white/10 mb-12 border border-white/10">
+          <Link
+            href={`/services/${prev.slug}`}
+            className="group bg-black hover:bg-[#0e1116] transition-colors p-6 md:p-8 flex flex-col gap-3"
+          >
+            <div className="flex items-center gap-3 text-[10px] font-mono uppercase tracking-[0.3em] text-white/40 group-hover:text-[#A3D1FF] transition-colors">
+              <span className="rotate-180 inline-block">↗</span>
+              Previous · {prev.category}
+            </div>
+            <h3
+              className="text-white leading-[1.0] tracking-tight group-hover:text-[#A3D1FF] transition-colors"
+              style={{
+                fontFamily: SERIF,
+                fontSize: 'clamp(1.5rem, 2.8vw, 2.5rem)',
+                fontWeight: 500,
+              }}
+            >
+              {prev.title}
+            </h3>
+          </Link>
+          <Link
+            href={`/services/${next.slug}`}
+            className="group bg-black hover:bg-[#0e1116] transition-colors p-6 md:p-8 flex flex-col gap-3 md:items-end md:text-right"
+          >
+            <div className="flex items-center gap-3 text-[10px] font-mono uppercase tracking-[0.3em] text-white/40 group-hover:text-[#A3D1FF] transition-colors">
+              Next · {next.category}
+              <ArrowUpRight className="w-3 h-3" />
+            </div>
+            <h3
+              className="text-white leading-[1.0] tracking-tight group-hover:text-[#A3D1FF] transition-colors"
+              style={{
+                fontFamily: SERIF,
+                fontSize: 'clamp(1.5rem, 2.8vw, 2.5rem)',
+                fontWeight: 500,
+              }}
+            >
+              {next.title}
+            </h3>
+          </Link>
+        </div>
+
+        {/* All-services dock — every service in one strip, current highlighted */}
+        <div className="border border-white/10">
+          <div className="px-5 py-3 border-b border-white/10 flex items-center justify-between">
+            <span className="text-[10px] font-mono uppercase tracking-[0.3em] text-white/50">
+              — All services
+            </span>
+            <Link
+              href="/services"
+              className="text-[10px] font-mono uppercase tracking-[0.3em] text-white/70 hover:text-[#A3D1FF] transition-colors flex items-center gap-1"
+            >
+              Open the arc <ArrowUpRight className="w-3 h-3" />
+            </Link>
+          </div>
+          <ul className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-9 divide-x divide-white/10">
+            {ALL_SERVICES.map((s, i) => {
+              const isActive = s.slug === currentSlug;
+              return (
+                <li key={s.slug} className="border-b border-white/10 lg:border-b-0">
+                  <Link
+                    href={`/services/${s.slug}`}
+                    className={`group block p-4 transition-colors ${
+                      isActive
+                        ? 'bg-[#A3D1FF]/10'
+                        : 'hover:bg-[#0e1116]'
+                    }`}
+                  >
+                    <div
+                      className={`text-[10px] font-mono tracking-[0.2em] mb-2 ${
+                        isActive ? 'text-[#A3D1FF]' : 'text-white/40'
+                      }`}
+                      style={{ fontVariantNumeric: 'tabular-nums' }}
+                    >
+                      {String(i + 1).padStart(2, '0')}
+                      {isActive && <span className="ml-2">●</span>}
+                    </div>
+                    <div
+                      className={`leading-tight transition-colors ${
+                        isActive
+                          ? 'text-white'
+                          : 'text-white/70 group-hover:text-white'
+                      }`}
+                      style={{
+                        fontFamily: SERIF,
+                        fontSize: '0.95rem',
+                        fontWeight: 500,
+                      }}
+                    >
+                      {s.title}
+                    </div>
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 /* ---------------- Closing CTA ---------------- */
 export function ServiceColophon({
   headline,

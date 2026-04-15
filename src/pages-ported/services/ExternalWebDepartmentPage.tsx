@@ -10,6 +10,7 @@ import {
   StatsBar,
   WorkRow,
   ServiceColophon,
+  ServiceNavigator,
 } from '@/components/ServiceEditorial';
 
 export default function ExternalWebDepartmentPage() {
@@ -210,6 +211,7 @@ export default function ExternalWebDepartmentPage() {
         />
       </EditorialSection>
 
+      <ServiceNavigator currentSlug="external-web-department" />
       <ServiceColophon
         headline="Ship more sites."
         italicHeadline="Without more headcount."

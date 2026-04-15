@@ -10,6 +10,7 @@ import {
   StatsBar,
   WorkRow,
   ServiceColophon,
+  ServiceNavigator,
 } from '@/components/ServiceEditorial';
 
 export default function AIIntegrationPage() {
@@ -204,6 +205,7 @@ export default function AIIntegrationPage() {
         />
       </EditorialSection>
 
+      <ServiceNavigator currentSlug="ai-integration" />
       <ServiceColophon
         headline="Ship AI your"
         italicHeadline="users actually use."

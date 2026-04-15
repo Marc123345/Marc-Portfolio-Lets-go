@@ -10,6 +10,7 @@ import {
   StatsBar,
   WorkRow,
   ServiceColophon,
+  ServiceNavigator,
 } from '@/components/ServiceEditorial';
 
 export default function PremiumWebPackage() {
@@ -212,6 +213,7 @@ export default function PremiumWebPackage() {
         />
       </EditorialSection>
 
+      <ServiceNavigator currentSlug="premium-web-package" />
       <ServiceColophon
         headline="A website worth"
         italicHeadline="the business behind it."

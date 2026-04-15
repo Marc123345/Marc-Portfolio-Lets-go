@@ -10,6 +10,7 @@ import {
   StatsBar,
   WorkRow,
   ServiceColophon,
+  ServiceNavigator,
 } from '@/components/ServiceEditorial';
 
 export default function MonthlyRetainerPackage() {
@@ -205,6 +206,7 @@ export default function MonthlyRetainerPackage() {
         />
       </EditorialSection>
 
+      <ServiceNavigator currentSlug="monthly-retainer" />
       <ServiceColophon
         headline="One developer."
         italicHeadline="On retainer."

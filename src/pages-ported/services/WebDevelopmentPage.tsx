@@ -10,6 +10,7 @@ import {
   StatsBar,
   WorkRow,
   ServiceColophon,
+  ServiceNavigator,
 } from '@/components/ServiceEditorial';
 
 export default function WebDevelopmentPage() {
@@ -210,6 +211,7 @@ export default function WebDevelopmentPage() {
         />
       </EditorialSection>
 
+      <ServiceNavigator currentSlug="web-development" />
       <ServiceColophon
         headline="Let's ship something"
         italicHeadline="your competitors will resent."

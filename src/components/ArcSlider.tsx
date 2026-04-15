@@ -349,12 +349,13 @@ export default function ArcSlider({ cards, initialIndex = 0 }: ArcSliderProps) {
                   <Link
                     href={c.href}
                     onClick={(e) => {
-                      if (i !== activeIndex) {
+                      // Block link if it was a drag, not a click
+                      if (dragRef.current.hasMoved) {
                         e.preventDefault();
-                        navigateTo(i);
                       }
                     }}
-                    className="inline-flex items-center gap-2 text-white text-sm font-medium border-b border-white/30 hover:border-[#A3D1FF] hover:text-[#A3D1FF] pb-1 self-start transition-colors"
+                    className="inline-flex items-center gap-2 text-white text-sm font-medium border-b border-white/30 hover:border-[#A3D1FF] hover:text-[#A3D1FF] pb-1 self-start transition-colors relative z-10"
+                    style={{ cursor: 'pointer' }}
                   >
                     Open service
                     <ArrowUpRight className="w-4 h-4" />

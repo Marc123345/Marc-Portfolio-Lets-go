@@ -10,6 +10,7 @@ import {
   StatsBar,
   WorkRow,
   ServiceColophon,
+  ServiceNavigator,
 } from '@/components/ServiceEditorial';
 
 export default function DesignPage() {
@@ -205,6 +206,7 @@ export default function DesignPage() {
         />
       </EditorialSection>
 
+      <ServiceNavigator currentSlug="design" />
       <ServiceColophon
         headline="Make the interface"
         italicHeadline="do the heavy lifting."

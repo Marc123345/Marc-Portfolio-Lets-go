@@ -10,6 +10,7 @@ import {
   StatsBar,
   WorkRow,
   ServiceColophon,
+  ServiceNavigator,
 } from '@/components/ServiceEditorial';
 
 export default function CybersecurityPage() {
@@ -207,6 +208,7 @@ export default function CybersecurityPage() {
         />
       </EditorialSection>
 
+      <ServiceNavigator currentSlug="cybersecurity" />
       <ServiceColophon
         headline="Security that"
         italicHeadline="doesn&apos;t get in the way."

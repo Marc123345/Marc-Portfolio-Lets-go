@@ -10,6 +10,7 @@ import {
   StatsBar,
   WorkRow,
   ServiceColophon,
+  ServiceNavigator,
 } from '@/components/ServiceEditorial';
 
 export default function StartupMVPPage() {
@@ -206,6 +207,7 @@ export default function StartupMVPPage() {
         />
       </EditorialSection>
 
+      <ServiceNavigator currentSlug="startup-mvp" />
       <ServiceColophon
         headline="Stop pitching decks."
         italicHeadline="Start shipping product."

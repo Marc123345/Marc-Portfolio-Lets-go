@@ -15,6 +15,7 @@ import {
   Github,
 } from 'lucide-react';
 import ServiceLeadForm from '@/components/ServiceLeadForm';
+import { ServiceNavigator } from '@/components/ServiceEditorial';
 import { useRouter } from 'next/navigation';
 
 function FeatureCard({
@@ -657,6 +658,8 @@ export default function DesignSystemsPage() {
           </div>
         </div>
       </section>
+
+      <ServiceNavigator currentSlug="design-systems" />
 
       {/* Lead Form Section */}
       <section id="contact-form" className="py-24 px-4 sm:px-6 lg:px-8 border-t border-white/5">
