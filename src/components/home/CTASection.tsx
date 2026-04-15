@@ -62,7 +62,7 @@ export default function CTASection() {
             className="text-white leading-[0.92] tracking-[-0.04em] max-w-6xl"
             style={{
               fontFamily: SERIF,
-              fontSize: 'clamp(3rem, 9vw, 9rem)',
+              fontSize: 'clamp(2rem, 4.5vw, 4.5rem)',
               fontWeight: 400,
             }}
           >

@@ -253,7 +253,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                                     className="relative font-bold leading-[0.95] tracking-tight text-white"
                                     style={{
                                       fontSize: 'clamp(2.75rem, 9vw, 7.5rem)',
-                                      fontFamily: "'Inter', sans-serif",
+                                      fontFamily: "Georgia, 'Times New Roman', serif",
                                       letterSpacing: '-0.03em',
                                     }}
                                   >
