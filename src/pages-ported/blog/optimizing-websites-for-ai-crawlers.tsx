@@ -439,7 +439,7 @@ Disallow: /admin/`}
           </p>
           <MagneticButton>
             <button
-              onClick={() => router.push('/tools/ai-crawler-optimization')}
+              onClick={() => router.push('/contact')}
               className="mr_btn mr_btn_primary inline-flex items-center gap-2"
             >
               <span>Try Our AI Crawler Optimization Tool</span>

@@ -725,7 +725,7 @@ export default function EcommerceUXFlawsKillingConversionsPage() {
                   </Link>
                 </MagneticButton>
                 <MagneticButton>
-                  <Link href="/tools/website-analyzer" className="mr_btn mr_btn_outline">
+                  <Link href="/contact" className="mr_btn mr_btn_outline">
                     <span>Try Free Website Analyzer</span>
                   </Link>
                 </MagneticButton>

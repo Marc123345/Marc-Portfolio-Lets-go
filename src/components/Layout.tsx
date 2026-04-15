@@ -235,11 +235,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       return `Service: ${service?.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')}`;
     }
     
-    if (path.includes('/tools/')) {
-      const tool = path.split('/').pop();
-      return `Tool: ${tool?.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')}`;
-    }
-    
     if (path.includes('/blog/')) {
       const blogPost = path.split('/').pop();
       return `Blog: ${blogPost?.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')}`;
@@ -771,45 +766,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               </ul>
             </div>
             
-            {/* Tools */}
-            <div>
-              <h3 className="text-white font-semibold mb-6 text-lg">Tools</h3>
-              <ul className="space-y-2">
-                <li>
-                  <Link
-                    href="/tools/website-analyzer"
-                    className="text-white hover:text-white transition-colors"
-                  >
-                    Website Analyzer
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/tools/ai-website-crawler"
-                    className="text-white hover:text-white transition-colors"
-                  >
-                    AI Website Crawler
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/tools/roi-calculator"
-                    className="text-white hover:text-white transition-colors"
-                  >
-                    ROI Calculator
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/tools/project-timeline"
-                    className="text-white hover:text-white transition-colors"
-                  >
-                    Project Timeline
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
             {/* Resources */}
             <div>
               <h3 className="text-white font-semibold mb-6 text-lg">Resources</h3>

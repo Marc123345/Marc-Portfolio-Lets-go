@@ -506,21 +506,21 @@ export default function WorkPage() {
                 <h4 className="text-lg font-semibold text-white mb-4">Free Tools</h4>
                 <div className="space-y-2">
                   <Link 
-                    href="/tools/website-analyzer" 
+                    href="/contact" 
                     className="block text-[#A3D1FF] hover:text-white transition-colors"
                     title="Free website analysis tool"
                   >
                     Website Analyzer Tool
                   </Link>
                   <Link 
-                    href="/tools/roi-calculator" 
+                    href="/contact" 
                     className="block text-[#A3D1FF] hover:text-white transition-colors"
                     title="Calculate website ROI"
                   >
                     ROI Calculator
                   </Link>
                   <Link 
-                    href="/tools/project-timeline" 
+                    href="/contact" 
                     className="block text-[#A3D1FF] hover:text-white transition-colors"
                     title="Project timeline visualization"
                   >

@@ -720,7 +720,7 @@ export default function AboutPage() {
                   <span>Blog & Insights</span>
                 </Link>
                 <Link
-                  href="/tools/website-analyzer"
+                  href="/contact"
                   className="mr_btn mr_btn_outline"
                   title="Try our free website analyzer"
                 >

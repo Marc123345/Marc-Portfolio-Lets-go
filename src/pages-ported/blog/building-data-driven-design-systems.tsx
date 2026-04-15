@@ -286,7 +286,7 @@ export default function BuildingDataDrivenDesignSystemsPage() {
                   Design Portfolio →
                 </Link>
                 <Link 
-                  href="/tools/website-analyzer" 
+                  href="/contact" 
                   className="text-[#A3D1FF] hover:text-white transition-colors"
                   title="Analyze your website design"
                 >

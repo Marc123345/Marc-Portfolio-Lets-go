@@ -74,11 +74,6 @@ const entries: Entry[] = [
   { path: 'blog/google-search-console-ai-reports', priority: 0.8 },
   { path: 'blog/conversational-ui-chat-interfaces', priority: 0.8 },
 
-  // Tools
-  { path: 'tools/roi-calculator', priority: 0.7 },
-  { path: 'tools/project-timeline', priority: 0.7 },
-  { path: 'tools/ai-crawler-optimization', priority: 0.7 },
-
   // Legal
   { path: 'privacy-policy', priority: 0.5 },
   { path: 'terms-and-conditions', priority: 0.5 },

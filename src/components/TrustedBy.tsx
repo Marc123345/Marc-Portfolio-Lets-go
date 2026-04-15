@@ -372,7 +372,7 @@ export default function TrustedBy() {
               <Link href="/work" className="mr_btn mr_btn_outline">
                 <span>View Our Work</span>
               </Link>
-              <Link href="/tools/website-analyzer" className="mr_btn mr_btn_outline">
+              <Link href="/contact" className="mr_btn mr_btn_outline">
                 <span>Free Website Analysis</span>
               </Link>
             </div>

@@ -836,7 +836,7 @@ export default function BlogPage() {
               <h3 className="text-xl font-semibold text-white mb-6">Helpful Resources</h3>
               <div className="grid md:grid-cols-4 gap-4">
                 <Link 
-                  href="/tools/website-analyzer" 
+                  href="/contact" 
                   className="p-4 bg-[#1b1b1b] rounded-lg border border-white/10 hover:border-[#A3D1FF] transition-colors group"
                   title="Analyze your website for free"
                 >
@@ -844,7 +844,7 @@ export default function BlogPage() {
                   <p className="text-white text-sm mt-1">Free analysis tool</p>
                 </Link>
                 <Link 
-                  href="/tools/roi-calculator" 
+                  href="/contact" 
                   className="p-4 bg-[#1b1b1b] rounded-lg border border-white/10 hover:border-[#A3D1FF] transition-colors group"
                   title="Calculate your website ROI"
                 >

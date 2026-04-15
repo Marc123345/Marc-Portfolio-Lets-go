@@ -164,7 +164,7 @@ export default function HeroSection() {
 
               <MagneticButton strength={20}>
                 <Link
-                  href="/tools/website-analyzer"
+                  href="/contact"
                   className="mr_btn mr_btn_outline inline-flex items-center gap-2"
                 >
                   <Sparkles className="w-5 h-5 group-hover:rotate-12 transition-transform" />

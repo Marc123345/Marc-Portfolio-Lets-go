@@ -472,7 +472,7 @@ export default function GoogleSearchConsoleAIReports() {
                   <p className="text-white text-sm mt-1">7 proven techniques for 2025</p>
                 </Link>
                 <Link
-                  href="/tools/website-analyzer"
+                  href="/contact"
                   className="p-4 bg-[#1b1b1b] rounded-lg border border-white/10 hover:border-[#A3D1FF] transition-colors group"
                 >
                   <h4 className="text-white font-medium group-hover:text-[#A3D1FF] transition-colors">Website Analyzer Tool</h4>

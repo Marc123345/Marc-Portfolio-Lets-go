@@ -52,7 +52,7 @@ export function NotFoundPage() {
               <Link href="/about" className="text-[#A3D1FF] hover:underline">About</Link>
               <Link href="/contact" className="text-[#A3D1FF] hover:underline">Contact</Link>
               <Link href="/blog" className="text-[#A3D1FF] hover:underline">Blog</Link>
-              <Link href="/tools/website-analyzer" className="text-[#A3D1FF] hover:underline">Free Tools</Link>
+              <Link href="/contact" className="text-[#A3D1FF] hover:underline">Free Tools</Link>
             </div>
           </div>
         </div>
