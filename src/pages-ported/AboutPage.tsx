@@ -99,7 +99,6 @@ export default function AboutPage() {
       "Web Design",
       "Web Development",
       "UI/UX Design",
-      "SaaS Development",
       "API Development",
       "Design Systems",
       "Conversion Optimization"

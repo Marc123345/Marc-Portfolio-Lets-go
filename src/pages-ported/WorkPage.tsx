@@ -494,11 +494,11 @@ export default function WorkPage() {
                     UI/UX Design Solutions
                   </Link>
                   <Link
-                    href="/services/saas"
+                    href="/services/design-systems"
                     className="block text-[#A3D1FF] hover:text-white transition-colors"
-                    title="SaaS development services"
+                    title="Design systems"
                   >
-                    SaaS Development
+                    Design Systems
                   </Link>
                 </div>
               </div>

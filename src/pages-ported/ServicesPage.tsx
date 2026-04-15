@@ -6,13 +6,9 @@ const services = [
   { slug: 'design', label: 'UI/UX Design' },
   { slug: 'design-systems', label: 'Design Systems' },
   { slug: 'startup-mvp', label: 'Startup MVP' },
-  { slug: 'saas', label: 'SaaS Development' },
-  { slug: 'mentorship', label: 'Design Mentorship' },
   { slug: 'ai-integration', label: 'AI Integration' },
   { slug: 'cybersecurity', label: 'Cybersecurity' },
-  { slug: 'fractional-cmo', label: 'Marketing Partner' },
   { slug: 'external-web-department', label: 'External Web Department' },
-  { slug: 'impact-story-site', label: 'Impact Story Site' },
   { slug: 'premium-web-package', label: 'Premium Web Package' },
   { slug: 'monthly-retainer', label: 'Monthly Retainer' },
 ];

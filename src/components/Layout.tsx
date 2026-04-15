@@ -447,14 +447,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 <li><Link href="/services/web-development" className="text-white hover:text-white transition-colors">Web Development</Link></li>
                 <li><Link href="/services/design" className="text-white hover:text-white transition-colors">UI/UX Design</Link></li>
                 <li><Link href="/services/design-systems" className="text-white hover:text-white transition-colors">Design Systems</Link></li>
-                <li><Link href="/services/saas" className="text-white hover:text-white transition-colors">SaaS Development</Link></li>
                 <li><Link href="/services/ai-integration" className="text-white hover:text-white transition-colors">AI Integration</Link></li>
                 <li><Link href="/services/cybersecurity" className="text-white hover:text-white transition-colors">Cybersecurity</Link></li>
                 <li><Link href="/services/startup-mvp" className="text-white hover:text-white transition-colors">Startup MVP</Link></li>
-                <li><Link href="/services/mentorship" className="text-white hover:text-white transition-colors">Mentorship</Link></li>
-                <li><Link href="/services/fractional-cmo" className="text-white hover:text-white transition-colors">Marketing Partner</Link></li>
                 <li><Link href="/services/external-web-department" className="text-white hover:text-white transition-colors">External Web Department</Link></li>
-                <li><Link href="/services/impact-story-site" className="text-white hover:text-white transition-colors">Impact Story Site</Link></li>
               </ul>
             </div>
 

@@ -64,14 +64,6 @@ const homeSchema = {
           "name": "UI/UX Design",
           "description": "User interface and experience design"
         }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "SaaS Development",
-          "description": "Software as a Service development"
-        }
       }
     ]
   },
