@@ -1,369 +1,126 @@
 "use client";
 
-import React from 'react';
-import { ArrowRight, Play, Search, Settings, Zap, CircleCheck as CheckCircle2 } from 'lucide-react';
-function Feature({ icon: Icon, title, description }: {
-  icon: any;
-  title: string;
-  description: string;
-}) {
-  return (
-    <div className="bg-[#1b1b1b] p-8 border border-white/10 hover:border-[#A3D1FF] transition-all group">
-      <Icon className="w-8 h-8 text-[#A3D1FF] mb-4" />
-      <h3 className="text-xl font-semibold mb-2 text-white">{title}</h3>
-      <p className="text-white">{description}</p>
-    </div>
-  );
-}
+import CaseStudyLayout, { CaseStudyConfig } from '@/components/CaseStudyLayout';
 
-function WireframeCard({ image, title, description }: {
-  image: string;
-  title: string;
-  description: string;
-}) {
-  return (
-    <div className="bg-[#1b1b1b] p-6 border border-white/10 hover:border-[#A3D1FF] transition-all">
-      <div className="aspect-video overflow-hidden mb-6">
-        <img 
-          src={image}
-          alt={title}
-          className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-        />
-      </div>
-      <h3 className="text-xl font-semibold text-white mb-2">{title}</h3>
-      <p className="text-white">{description}</p>
-    </div>
-  );
-}
+const config: CaseStudyConfig = {
+  kicker: 'Case File · 13 · AI / Metadata',
+  pkg: 'SaaS · Data-driven design',
+  title: 'MyTube',
+  italicWord: 'Platform.',
+  tagline: (
+    <>
+      Video metadata management system for media and manufacturing. AI-powered
+      insights and workflow automation — faster metadata processing, significant
+      time saved in analysis.
+    </>
+  ),
+  heroImage: 'https://i.imgur.com/QNHXpzT.jpeg',
+  metaStats: [
+    { value: 'AI', label: 'Powered' },
+    { value: 'Fast', label: 'Metadata' },
+    { value: 'Team', label: 'Tooling' },
+    { value: 'SaaS', label: 'Platform' },
+  ],
+
+  marquee: [
+    'React',
+    'Node.js',
+    'AI / ML',
+    'PostgreSQL',
+    'Data-driven UX',
+    'Workflow Automation',
+  ],
+
+  challenge: {
+    narrative: (
+      <>
+        <p>
+          Media teams were spending hours tagging, categorising, and searching
+          through video libraries. The metadata problem was killing their throughput
+          — more content meant less findable content.
+        </p>
+      </>
+    ),
+    bullets: [
+      'Manual tagging consuming analyst hours',
+      'Poor discoverability of relevant assets',
+      'Analytics fragmented across tools',
+      'No automated workflow for new uploads',
+    ],
+  },
+
+  solution: {
+    narrative: (
+      <>
+        <p>
+          A comprehensive video metadata management system built on data-driven
+          design principles — empowering media and manufacturing sectors with
+          AI-powered insights and automated ingestion.
+        </p>
+      </>
+    ),
+    items: [
+      {
+        title: 'AI-assisted tagging',
+        description:
+          'ML model suggests categories and keywords on upload. Analysts confirm or edit instead of starting from scratch.',
+      },
+      {
+        title: 'Unified analytics',
+        description:
+          'All viewing, engagement, and ROI metrics collapsed into a single dashboard tuned for glanceability.',
+      },
+      {
+        title: 'Content workflow automation',
+        description:
+          'New uploads flow through automated processing pipelines. Teams focus on strategy, not tagging.',
+      },
+      {
+        title: 'Design system for density',
+        description:
+          'Component library optimised for dense data tables, filter chips, and bulk operations without feeling cluttered.',
+      },
+    ],
+    tech: ['React', 'Node.js', 'AI/ML', 'PostgreSQL'],
+  },
+
+  results: {
+    stats: [
+      { value: 'AI', label: 'Powered' },
+      { value: 'Faster', label: 'Metadata' },
+      { value: 'Live', label: 'Dashboards' },
+      { value: 'High', label: 'Satisfaction' },
+    ],
+  },
+
+  gallery: [
+    {
+      image: 'https://i.imgur.com/QNHXpzT.jpeg',
+      caption: 'Dashboard',
+      wide: true,
+    },
+    {
+      image: 'https://i.imgur.com/ZGLdkzN.jpeg',
+      caption: 'Analytics view',
+    },
+    {
+      image: 'https://i.imgur.com/ZDPU1yO.png',
+      caption: 'Content management',
+    },
+    {
+      image: 'https://i.imgur.com/Vt1rIYu.jpeg',
+      caption: 'User interface',
+      wide: true,
+    },
+  ],
+
+  next: {
+    title: 'Videoleap',
+    url: '/work/case-studies/videoleap',
+    image: 'https://i.imgur.com/SubVB9A.jpeg',
+  },
+};
 
 export default function MyTubePage() {
-  return (
-    <>
-      
-
-      {/* Hero Section */}
-      <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8 bg-black">
-        <div className="max-w-7xl mx-auto">
-          <div className="max-w-3xl">
-            <h1 className="text-4xl sm:text-5xl font-bold text-white mb-6">
-              MyTube Platform
-            </h1>
-            <p className="text-xl text-white mb-8">
-              A comprehensive video metadata management system built on data-driven design principles, empowering media and manufacturing sectors with AI-powered insights.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Featured Design Showcase */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="space-y-8">
-              <div className="aspect-[4/3] overflow-hidden">
-                <img
-                  src="https://ik.imagekit.io/qcvroy8xpd/QNHXpzT%20(1).jpeg"
-                  alt="MyTube Dashboard Interface"
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-              <div className="aspect-[4/3] overflow-hidden">
-                <img 
-                  src="https://i.imgur.com/ZGLdkzN.jpeg"
-                  alt="MyTube Analytics View"
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-            </div>
-            <div className="space-y-8">
-              <div className="aspect-[4/3] overflow-hidden">
-                <img 
-                  src="https://i.imgur.com/ZDPU1yO.png"
-                  alt="MyTube Content Management"
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-              <div className="aspect-[4/3] overflow-hidden">
-                <img 
-                  src="https://i.imgur.com/Vt1rIYu.jpeg"
-                  alt="MyTube User Interface"
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Design System Overview */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#1b1b1b]">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-white mb-8">Data-Driven Design System</h2>
-          <p className="text-xl text-gray-300 mb-12">
-            My approach combines modular design principles with data analytics to create a scalable, user-friendly platform that evolves with user needs and business requirements.
-          </p>
-          
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <div className="space-y-6">
-                <div>
-                  <h3 className="text-2xl font-semibold text-white mb-4">Interface Design</h3>
-                  <img
-                    src="https://ik.imagekit.io/qcvroy8xpd/QNHXpzT%20(1).jpeg"
-                    alt="Interface Design"
-                    className="shadow-lg hover:scale-105 transition-transform duration-300 mb-4"
-                  />
-                  <p className="text-white">
-                    Clean, intuitive interface design that prioritizes user experience and accessibility.
-                  </p>
-                </div>
-                <div>
-                  <h3 className="text-2xl font-semibold text-white mb-4">Analytics Dashboard</h3>
-                  <img 
-                    src="https://i.imgur.com/ZGLdkzN.jpeg"
-                    alt="Analytics Dashboard"
-                    className="shadow-lg hover:scale-105 transition-transform duration-300 mb-4"
-                  />
-                  <p className="text-white">
-                    Comprehensive analytics tools providing actionable insights and performance metrics.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="space-y-6">
-              <div>
-                <h3 className="text-2xl font-semibold text-white mb-4">Content Management</h3>
-                <img 
-                  src="https://i.imgur.com/ZDPU1yO.png"
-                  alt="Content Management"
-                  className="shadow-lg hover:scale-105 transition-transform duration-300 mb-4"
-                />
-                <p className="text-white">
-                  Efficient content management system with advanced metadata handling capabilities.
-                </p>
-              </div>
-              <div>
-                <h3 className="text-2xl font-semibold text-white mb-4">User Experience</h3>
-                <img 
-                  src="https://i.imgur.com/Vt1rIYu.jpeg"
-                  alt="User Experience"
-                  className="shadow-lg hover:scale-105 transition-transform duration-300 mb-4"
-                />
-                <p className="text-white">
-                  Seamless user experience with intuitive navigation and workflow optimization.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Design Process */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#1b1b1b]">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-white mb-12">Design Process</h2>
-          <div className="space-y-12">
-            <div>
-              <h3 className="text-2xl font-semibold text-white mb-6">1. Research & Discovery</h3>
-              <div className="grid md:grid-cols-2 gap-8">
-                <div>
-                  <p className="text-white mb-4">
-                    My process began with comprehensive user research and stakeholder interviews:
-                  </p>
-                  <ul className="space-y-3">
-                    <li className="flex items-center text-gray-300">
-                      <CheckCircle2 className="w-5 h-5 text-[#A3D1FF] mr-3" />
-                      User interviews and surveys
-                    </li>
-                    <li className="flex items-center text-gray-300">
-                      <CheckCircle2 className="w-5 h-5 text-[#A3D1FF] mr-3" />
-                      Competitor analysis
-                    </li>
-                    <li className="flex items-center text-gray-300">
-                      <CheckCircle2 className="w-5 h-5 text-[#A3D1FF] mr-3" />
-                      Market research
-                    </li>
-                  </ul>
-                </div>
-                <div className="bg-[#2d3035] p-6">
-                  <h4 className="text-lg font-semibold text-white mb-4">Key Findings</h4>
-                  <ul className="space-y-3">
-                    <li className="flex items-center text-gray-300">
-                      <CheckCircle2 className="w-5 h-5 text-[#A3D1FF] mr-3" />
-                      Need for streamlined metadata management
-                    </li>
-                    <li className="flex items-center text-gray-300">
-                      <CheckCircle2 className="w-5 h-5 text-[#A3D1FF] mr-3" />
-                      Demand for real-time analytics
-                    </li>
-                    <li className="flex items-center text-gray-300">
-                      <CheckCircle2 className="w-5 h-5 text-[#A3D1FF] mr-3" />
-                      Integration requirements
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            <div>
-              <h3 className="text-2xl font-semibold text-white mb-6">2. Design System Development</h3>
-              <div className="grid md:grid-cols-2 gap-8">
-                <div>
-                  <p className="text-white mb-4">
-                    Created a comprehensive design system focusing on:
-                  </p>
-                  <ul className="space-y-3">
-                    <li className="flex items-center text-gray-300">
-                      <CheckCircle2 className="w-5 h-5 text-[#A3D1FF] mr-3" />
-                      Component library
-                    </li>
-                    <li className="flex items-center text-gray-300">
-                      <CheckCircle2 className="w-5 h-5 text-[#A3D1FF] mr-3" />
-                      Design tokens
-                    </li>
-                    <li className="flex items-center text-gray-300">
-                      <CheckCircle2 className="w-5 h-5 text-[#A3D1FF] mr-3" />
-                      Documentation
-                    </li>
-                  </ul>
-                </div>
-                <div className="bg-[#2d3035] p-6">
-                  <h4 className="text-lg font-semibold text-white mb-4">Implementation</h4>
-                  <ul className="space-y-3">
-                    <li className="flex items-center text-gray-300">
-                      <CheckCircle2 className="w-5 h-5 text-[#A3D1FF] mr-3" />
-                      Figma component library
-                    </li>
-                    <li className="flex items-center text-gray-300">
-                      <CheckCircle2 className="w-5 h-5 text-[#A3D1FF] mr-3" />
-                      Style guide
-                    </li>
-                    <li className="flex items-center text-gray-300">
-                      <CheckCircle2 className="w-5 h-5 text-[#A3D1FF] mr-3" />
-                      Pattern library
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Wireframes Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-white mb-8">Wireframe Designs</h2>
-          <p className="text-xl text-white mb-12">
-            My wireframe designs focus on creating intuitive user flows and clear information hierarchy, ensuring a seamless experience for both content creators and viewers.
-          </p>
-          
-          <div className="grid md:grid-cols-2 gap-8">
-            <WireframeCard
-              image="https://i.imgur.com/q2chntq.png"
-              title="Content Management Dashboard"
-              description="Centralized dashboard providing quick access to video analytics, metadata management, and content organization tools."
-            />
-            <WireframeCard
-              image="https://i.imgur.com/ib7VgQq.png"
-              title="Video Upload Interface"
-              description="Streamlined upload process with drag-and-drop functionality and batch metadata editing capabilities."
-            />
-            <WireframeCard
-              image="https://i.imgur.com/lfygewJ.png"
-              title="Analytics Overview"
-              description="Comprehensive analytics view with customizable metrics and performance insights for content optimization."
-            />
-            <WireframeCard
-              image="https://i.imgur.com/eJMI6YJ.png"
-              title="Metadata Editor"
-              description="Advanced metadata editing interface with AI-powered suggestions and batch processing tools."
-            />
-          </div>
-
-          <div className="mt-12 bg-[#2d3035] p-8 border border-white/10">
-            <h3 className="text-2xl font-semibold text-white mb-6">Design Considerations</h3>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div>
-                <h4 className="text-lg font-semibold text-white mb-4">User Interface</h4>
-                <ul className="space-y-3">
-                  <li className="flex items-center text-gray-300">
-                    <CheckCircle2 className="w-5 h-5 text-[#A3D1FF] mr-3" />
-                    Intuitive navigation and clear hierarchy
-                  </li>
-                  <li className="flex items-center text-gray-300">
-                    <CheckCircle2 className="w-5 h-5 text-[#A3D1FF] mr-3" />
-                    Consistent layout patterns
-                  </li>
-                  <li className="flex items-center text-gray-300">
-                    <CheckCircle2 className="w-5 h-5 text-[#A3D1FF] mr-3" />
-                    Responsive design principles
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <h4 className="text-lg font-semibold text-white mb-4">User Experience</h4>
-                <ul className="space-y-3">
-                  <li className="flex items-center text-gray-300">
-                    <CheckCircle2 className="w-5 h-5 text-[#A3D1FF] mr-3" />
-                    Streamlined workflows
-                  </li>
-                  <li className="flex items-center text-gray-300">
-                    <CheckCircle2 className="w-5 h-5 text-[#A3D1FF] mr-3" />
-                    Progressive disclosure
-                  </li>
-                  <li className="flex items-center text-gray-300">
-                    <CheckCircle2 className="w-5 h-5 text-[#A3D1FF] mr-3" />
-                    Error prevention
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Results & Impact */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-white mb-12">Results & Impact</h2>
-          <div className="grid md:grid-cols-4 gap-8">
-            <div className="bg-[#1b1b1b] p-8 border border-white/10">
-              <div className="text-4xl font-bold text-[#A3D1FF] mb-2">60%</div>
-              <div className="text-white">Faster Processing</div>
-            </div>
-            <div className="bg-[#1b1b1b] p-8 border border-white/10">
-              <div className="text-4xl font-bold text-[#A3D1FF] mb-2">85%</div>
-              <div className="text-white">User Satisfaction</div>
-            </div>
-            <div className="bg-[#1b1b1b] p-8 border border-white/10">
-              <div className="text-4xl font-bold text-[#A3D1FF] mb-2">40%</div>
-              <div className="text-white">Time Saved</div>
-            </div>
-            <div className="bg-[#1b1b1b] p-8 border border-white/10">
-              <div className="text-4xl font-bold text-[#A3D1FF] mb-2">95%</div>
-              <div className="text-white">Data Accuracy</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">Start Your Project</h2>
-          <p className="text-xl text-white mb-8 max-w-2xl mx-auto">
-            Ready to transform your digital presence with innovative solutions?
-          </p>
-          <button
-            onClick={() => router.push('/contact')}
-            className="mr_btn mr_btn_primary inline-flex items-center gap-2"
-          >
-            <span>Start Your Project</span>
-            <ArrowRight className="w-5 h-5" />
-          </button>
-        </div>
-      </section>
-    </>
-  );
+  return <CaseStudyLayout config={config} />;
 }
