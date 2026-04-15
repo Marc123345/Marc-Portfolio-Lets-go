@@ -54,16 +54,18 @@ function BenefitCard({ title, description }: {
   );
 }
 
-function ProcessCard({ title, description, items }: {
+function ProcessCard({ title, description, items, quote, attribution }: {
   title: string;
   description: string;
   items: string[];
+  quote?: string;
+  attribution?: string;
 }) {
   return (
-    <div className="bg-[#1b1b1b] p-8 rounded-xl border border-white/10 hover:border-[#A3D1FF] transition-all h-full">
+    <div className="bg-[#1b1b1b] p-8 rounded-xl border border-white/10 hover:border-[#A3D1FF] transition-all h-full flex flex-col">
       <h3 className="text-xl font-semibold text-white mb-4">{title}</h3>
       <p className="text-white mb-6">{description}</p>
-      <ul className="space-y-2">
+      <ul className="space-y-2 mb-6">
         {items.map((item, index) => (
           <li key={index} className="flex items-center text-gray-300">
             <ArrowRight className="w-4 h-4 text-[#A3D1FF] mr-2 flex-shrink-0" />
@@ -71,26 +73,14 @@ function ProcessCard({ title, description, items }: {
           </li>
         ))}
       </ul>
-    </div>
-  );
-}
-
-function SkillBar({ name, percentage }: { name: string; percentage: string }) {
-  return (
-    <div className="mb-6">
-      <div className="flex justify-between items-center mb-2">
-        <span className="text-white">{name}</span>
-        <span className="text-white">{percentage}</span>
-      </div>
-      <div className="h-2 bg-[#1b1b1b] rounded-full overflow-hidden">
-        <motion.div
-          className="h-full bg-[#A3D1FF] rounded-full transition-all duration-1000"
-          initial={{ width: 0 }}
-          whileInView={{ width: percentage }}
-          viewport={{ once: true }}
-          transition={{ duration: 1.5, ease: "easeOut" }}
-        ></motion.div>
-      </div>
+      {quote && (
+        <div className="mt-auto pt-6 border-t border-white/10">
+          <p className="text-sm italic text-gray-300 leading-relaxed">&ldquo;{quote}&rdquo;</p>
+          {attribution && (
+            <p className="text-xs text-[#A3D1FF] mt-2 font-medium">— {attribution}</p>
+          )}
+        </div>
+      )}
     </div>
   );
 }
@@ -193,9 +183,8 @@ export default function AboutPage() {
               className="text-xl text-gray-300 mb-8"
               variants={fadeInUp}
             >
-              I'm a full-stack designer and developer who bridges the gap between stunning visuals and robust functionality. Transforming ideas into digital realities for clients across three continents, I've built a reputation for creating <strong className="text-white">conversion-focused experiences that solve real business problems</strong>.
+              I&apos;m Marc. I design and build websites that bring in customers — not just compliments. Over the past 6 years, I&apos;ve shipped <strong className="text-white">50+ projects</strong> for startups, agencies, and brands across the US, Europe, and Africa. Every one of them was designed, coded, and launched by me personally.
             </motion.p>
-            <motion.p className="text-xl text-gray-300 mb-8" variants={fadeInUp}>As a freelance website designer, I bring a unique blend of creative vision and technical expertise to every project, ensuring your digital presence is not only beautiful but also highly functional and effective.</motion.p>
             <motion.div 
               variants={fadeInUp}
               className="flex flex-wrap gap-4"
@@ -273,40 +262,40 @@ export default function AboutPage() {
             <h2 className="text-3xl font-bold mb-12 text-white">The Problems I Solve</h2>
             <div className="bg-[#1b1b1b] p-8 rounded-lg shadow-md mb-16">
               <p className="text-xl text-gray-300 mb-6">
-                My clients typically come to me with specific challenges that are holding back their digital growth:
+                Most clients come to me saying one of these things:
               </p>
               <div className="grid md:grid-cols-2 gap-8">
                 <div className="space-y-4">
                   <div className="flex items-start">
                     <ArrowRight className="w-5 h-5 text-[#A3D1FF] mt-1 mr-3 flex-shrink-0" />
-                    <p className="text-white"><strong>Outdated digital presence</strong> that fails to reflect their brand quality and vision</p>
+                    <p className="text-white italic">&ldquo;Our website looks like it was built in 2018 and we&apos;re embarrassed to send people there.&rdquo;</p>
                   </div>
                   <div className="flex items-start">
                     <ArrowRight className="w-5 h-5 text-[#A3D1FF] mt-1 mr-3 flex-shrink-0" />
-                    <p className="text-white"><strong>Low conversion rates</strong> despite decent traffic, with users dropping off before taking action</p>
+                    <p className="text-white italic">&ldquo;We&apos;re getting traffic but nobody&apos;s filling out the contact form.&rdquo;</p>
                   </div>
                   <div className="flex items-start">
                     <ArrowRight className="w-5 h-5 text-[#A3D1FF] mt-1 mr-3 flex-shrink-0" />
-                    <p className="text-white"><strong>Slow, poorly performing websites</strong> that frustrate users and hurt search rankings</p>
+                    <p className="text-white italic">&ldquo;Our site takes forever to load and we&apos;re losing people before they even see what we do.&rdquo;</p>
                   </div>
                 </div>
                 <div className="space-y-4">
                   <div className="flex items-start">
                     <ArrowRight className="w-5 h-5 text-[#A3D1FF] mt-1 mr-3 flex-shrink-0" />
-                    <p className="text-white"><strong>Disconnected systems</strong> requiring manual work that could be automated</p>
+                    <p className="text-white italic">&ldquo;We&apos;re copy-pasting data between 4 different tools and it&apos;s eating our week.&rdquo;</p>
                   </div>
                   <div className="flex items-start">
                     <ArrowRight className="w-5 h-5 text-[#A3D1FF] mt-1 mr-3 flex-shrink-0" />
-                    <p className="text-white"><strong>Difficulty translating business ideas</strong> into technical requirements</p>
+                    <p className="text-white italic">&ldquo;I know what I want but I can&apos;t explain it to a developer.&rdquo;</p>
                   </div>
                   <div className="flex items-start">
                     <ArrowRight className="w-5 h-5 text-[#A3D1FF] mt-1 mr-3 flex-shrink-0" />
-                    <p className="text-white"><strong>Lack of strategic direction</strong> for digital initiatives and technology investments</p>
+                    <p className="text-white italic">&ldquo;We&apos;ve spent money on marketing but have no idea what&apos;s working.&rdquo;</p>
                   </div>
                 </div>
               </div>
               <p className="text-xl text-gray-300 mt-6">
-                My approach combines strategic thinking with technical excellence to solve these challenges. I don't just build websites or apps—I create <strong className="text-white">digital experiences that solve real business problems and drive measurable results</strong>.
+                If any of those sound familiar — that&apos;s where I come in. I don&apos;t just build websites, I fix the problems that are quietly costing you customers.
               </p>
             </div>
           </motion.div>
@@ -392,21 +381,59 @@ export default function AboutPage() {
               transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
               viewport={{ once: true, amount: 0.3 }}
             >
-              <h2 className="text-3xl font-bold text-white mb-12">Technical Skills</h2>
+              <h2 className="text-3xl font-bold text-white mb-12">Proof, Not Percentages</h2>
               <div className="grid gap-8">
                 <div>
                   <h3 className="text-xl font-semibold mb-6 text-white">Design</h3>
-                  <SkillBar name="UI/UX Design" percentage="95%" />
-                  <SkillBar name="Design Systems" percentage="90%" />
-                  <SkillBar name="Wireframing" percentage="95%" />
-                  <SkillBar name="Prototyping" percentage="90%" />
+                  <ul className="space-y-4">
+                    <li className="flex items-start gap-3 border-l-2 border-[#A3D1FF] pl-4">
+                      <div>
+                        <div className="text-white font-medium">UI/UX Design</div>
+                        <div className="text-gray-400 text-sm">50+ interfaces shipped to production</div>
+                      </div>
+                    </li>
+                    <li className="flex items-start gap-3 border-l-2 border-[#A3D1FF] pl-4">
+                      <div>
+                        <div className="text-white font-medium">Design Systems</div>
+                        <div className="text-gray-400 text-sm">Built from scratch for Binns Media, Untapped Africa, and 8 others</div>
+                      </div>
+                    </li>
+                    <li className="flex items-start gap-3 border-l-2 border-[#A3D1FF] pl-4">
+                      <div>
+                        <div className="text-white font-medium">Prototyping</div>
+                        <div className="text-gray-400 text-sm">Figma-to-code workflow on every project since 2020</div>
+                      </div>
+                    </li>
+                  </ul>
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold mb-6 text-white">Development</h3>
-                  <SkillBar name="React/Next.js" percentage="95%" />
-                  <SkillBar name="TypeScript" percentage="90%" />
-                  <SkillBar name="Node.js" percentage="85%" />
-                  <SkillBar name="PostgreSQL" percentage="80%" />
+                  <ul className="space-y-4">
+                    <li className="flex items-start gap-3 border-l-2 border-[#A3D1FF] pl-4">
+                      <div>
+                        <div className="text-white font-medium">React / Next.js</div>
+                        <div className="text-gray-400 text-sm">Primary stack for 40+ production sites</div>
+                      </div>
+                    </li>
+                    <li className="flex items-start gap-3 border-l-2 border-[#A3D1FF] pl-4">
+                      <div>
+                        <div className="text-white font-medium">TypeScript</div>
+                        <div className="text-gray-400 text-sm">Used on every project since 2023</div>
+                      </div>
+                    </li>
+                    <li className="flex items-start gap-3 border-l-2 border-[#A3D1FF] pl-4">
+                      <div>
+                        <div className="text-white font-medium">Node.js</div>
+                        <div className="text-gray-400 text-sm">Built 15+ APIs and backends</div>
+                      </div>
+                    </li>
+                    <li className="flex items-start gap-3 border-l-2 border-[#A3D1FF] pl-4">
+                      <div>
+                        <div className="text-white font-medium">PostgreSQL</div>
+                        <div className="text-gray-400 text-sm">Production databases for SaaS and B2B platforms</div>
+                      </div>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </motion.div>
@@ -441,6 +468,8 @@ export default function AboutPage() {
                   "User research with real customers",
                   "Competitive audit with actionable insights"
                 ]}
+                quote="Marc asked questions about our business that our last agency never thought to ask."
+                attribution="Omar Turner, Binns Media"
               />
             </motion.div>
             <motion.div
@@ -458,6 +487,8 @@ export default function AboutPage() {
                   "Information architecture optimized for conversions",
                   "Technical requirements with scalability in mind"
                 ]}
+                quote="He turned our half-formed ideas into a plan we could actually execute on."
+                attribution="Dinesh Varahni, Varahni Group"
               />
             </motion.div>
             <motion.div
@@ -475,6 +506,8 @@ export default function AboutPage() {
                   "Interactive prototyping for user testing",
                   "Comprehensive design systems for consistency"
                 ]}
+                quote="The first mockup was closer to what we wanted than three months of work with a previous designer."
+                attribution="AutoMarginX Team"
               />
             </motion.div>
             <motion.div
@@ -492,6 +525,8 @@ export default function AboutPage() {
                   "High quality scores through best practices",
                   "Comprehensive testing & QA process"
                 ]}
+                quote="Our site went from failing Core Web Vitals to a 98 Lighthouse score. Leads doubled in the first month."
+                attribution="Paving Leads"
               />
             </motion.div>
           </div>
@@ -507,7 +542,7 @@ export default function AboutPage() {
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
             viewport={{ once: true, amount: 0.3 }}
           >
-            Client Success Stories
+            The Work, In Their Words
           </motion.h2>
           <div className="grid md:grid-cols-3 gap-8">
             <motion.div
@@ -639,13 +674,10 @@ export default function AboutPage() {
             <div className="grid md:grid-cols-2 gap-12">
               <div>
                 <p className="text-xl text-gray-300 mb-6">
-                  When I'm not designing or coding, you'll find me exploring new technologies, contributing to open-source projects, or mentoring aspiring developers. I believe in continuous learning and giving back to the community that has supported my growth.
-                </p>
-                <p className="text-xl text-gray-300 mb-6">
-                  I'm also passionate about photography, hiking, and discovering new coffee shops in Tel Aviv. These activities help me maintain a fresh perspective and bring creative energy to my work.
+                  When I&apos;m not shipping websites, I&apos;m usually hiking somewhere in the Galilee, hunting for the best coffee in Tel Aviv, or helping junior designers build their first portfolios.
                 </p>
                 <p className="text-xl text-gray-300">
-                  My background in both design and development gives me a unique perspective on digital projects. I understand the challenges and opportunities from multiple angles, which helps me create solutions that are both beautiful and functional.
+                  I&apos;ve mentored 20+ designers and contributed to open-source projects that other developers actually use.
                 </p>
               </div>
               <div className="grid grid-cols-2 gap-4">
@@ -722,9 +754,9 @@ export default function AboutPage() {
                 <Link
                   href="/contact"
                   className="mr_btn mr_btn_outline"
-                  title="Try our free website analyzer"
+                  title="Get in touch"
                 >
-                  <span>Free Website Analysis</span>
+                  <span>Get in Touch</span>
                 </Link>
               </div>
             </div>
