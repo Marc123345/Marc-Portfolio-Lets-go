@@ -18,7 +18,7 @@ export default function StartupMVPPage() {
       <ServiceMasthead
         kicker="Service · Startup MVP"
         title="Validate"
-        italicWord="in 30 days."
+        italicWord="In 30 Days."
         volumeNumber="03"
         tagline={
           <>

@@ -17,8 +17,8 @@ export default function AIIntegrationPage() {
     <>
       <ServiceMasthead
         kicker="Service · AI Integration"
-        title="AI that"
-        italicWord="actually ships."
+        title="AI That"
+        italicWord="Actually Ships."
         volumeNumber="04"
         tagline={
           <>

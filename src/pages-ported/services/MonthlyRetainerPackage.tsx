@@ -18,7 +18,7 @@ export default function MonthlyRetainerPackage() {
       <ServiceMasthead
         kicker="Package · Monthly Retainer"
         title="Website,"
-        italicWord="handled."
+        italicWord="Handled."
         volumeNumber="08"
         tagline={
           <>

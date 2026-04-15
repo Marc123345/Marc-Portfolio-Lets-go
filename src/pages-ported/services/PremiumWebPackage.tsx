@@ -17,8 +17,8 @@ export default function PremiumWebPackage() {
     <>
       <ServiceMasthead
         kicker="Package · Premium Web"
-        title="The flagship"
-        italicWord="build."
+        title="The Flagship"
+        italicWord="Build."
         volumeNumber="07"
         tagline={
           <>

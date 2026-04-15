@@ -18,7 +18,7 @@ export default function CybersecurityPage() {
       <ServiceMasthead
         kicker="Service · Cybersecurity"
         title="Secure by"
-        italicWord="design."
+        italicWord="Design."
         volumeNumber="05"
         tagline={
           <>

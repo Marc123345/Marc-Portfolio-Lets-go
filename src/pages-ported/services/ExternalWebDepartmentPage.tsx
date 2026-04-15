@@ -17,8 +17,8 @@ export default function ExternalWebDepartmentPage() {
     <>
       <ServiceMasthead
         kicker="Service · External Web Department"
-        title="Your web"
-        italicWord="department."
+        title="Your Web"
+        italicWord="Department."
         volumeNumber="06"
         tagline={
           <>
