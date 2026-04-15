@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useMemo } from 'react';
-import { ArrowUpRight, ExternalLink } from 'lucide-react';
+import { ArrowUpRight, ChevronLeft, ChevronRight, ExternalLink } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 import InteractiveCube from '@/components/InteractiveCube';
@@ -113,7 +113,129 @@ const featured: Project[] = [
     ],
     tags: ['React', 'Node.js', 'AI/ML'],
   },
+  {
+    title: 'Ask Africa',
+    category: 'Research · Consultancy',
+    blurb:
+      "Commanding digital presence for one of Africa's leading research and consultancy firms.",
+    image: 'https://ik.imagekit.io/qcvroy8xpd/image%202%20(1).png',
+    liveUrl: 'https://askafrica.co.za/',
+    caseStudyUrl: '/work/case-studies/ask-africa',
+    stats: [
+      { value: '100%', label: 'Custom' },
+      { value: 'Pan', label: 'African' },
+      { value: 'Ent.', label: 'Ready' },
+    ],
+    tags: ['React', 'Tailwind', 'Vite'],
+  },
+  {
+    title: 'Friedman & Cohen',
+    category: 'B2B · Procurement',
+    blurb:
+      'Century-old retail legacy re-engineered for the digital procurement age.',
+    image:
+      'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%201%20-%201x1(3).png?updatedAt=1767539579776',
+    liveUrl: 'https://b2b.fandc.co.za',
+    caseStudyUrl: '/work/case-studies/friedman-cohen',
+    stats: [
+      { value: '100+', label: 'Years' },
+      { value: '4.4', label: 'Google' },
+      { value: 'B2B', label: 'Platform' },
+    ],
+    tags: ['React', 'Node.js', 'Postgres'],
+  },
+  {
+    title: 'A Secure Annapolis',
+    category: 'Local · Emergency',
+    blurb:
+      'Hyper-local lead engine. Emergency locksmith traffic turned into immediate phone calls.',
+    image:
+      'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%201%20-%201x1(2).png?updatedAt=1767539579194',
+    liveUrl: 'https://www.asecureannapolislocksmith.com',
+    caseStudyUrl: '/work/case-studies/secure-annapolis',
+    stats: [
+      { value: '+150%', label: 'Leads' },
+      { value: 'Top 3', label: 'Local' },
+      { value: '85%', label: 'Mobile' },
+    ],
+    tags: ['React', 'Local SEO', 'Node'],
+  },
+  {
+    title: 'Tar & Chip Paving',
+    category: 'Specialty · Contractor',
+    blurb:
+      'Specialised showcase for premium tar and chip paving applications.',
+    image:
+      'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%204%20-%2016x9(5).png?updatedAt=1767539578933',
+    liveUrl: 'https://cumberlandtarchip.org/',
+    caseStudyUrl: '/work/case-studies/tar-chip-paving',
+    stats: [
+      { value: 'Bento', label: 'Layout' },
+      { value: 'Mobile', label: 'First' },
+      { value: '100%', label: 'Custom' },
+    ],
+    tags: ['React', 'Tailwind', 'Responsive'],
+  },
+  {
+    title: 'Chad Le Clos',
+    category: 'Athlete · Bookings',
+    blurb:
+      "Olympic champion's swim clinics platform with self-serve booking and clinic scheduling.",
+    image: 'https://i.imgur.com/ApfYPlH.jpg',
+    liveUrl: 'https://chadleclosswimming.com',
+    caseStudyUrl: '/work/case-studies/chad-le-clos',
+    stats: [
+      { value: 'OLY', label: 'Champion' },
+      { value: 'Live', label: 'Bookings' },
+      { value: '<2s', label: 'Load' },
+    ],
+    tags: ['Next.js', 'Booking', 'Tailwind'],
+  },
+  {
+    title: 'Fleet Management',
+    category: 'SaaS · Logistics',
+    blurb:
+      'Enterprise fleet platform with real-time tracking and predictive maintenance.',
+    image: 'https://i.imgur.com/EwgHAuK.png',
+    caseStudyUrl: '/work/case-studies/fleet-management',
+    stats: [
+      { value: '500+', label: 'Vehicles' },
+      { value: '35%', label: 'Cost ↓' },
+      { value: '95%', label: 'Sat.' },
+    ],
+    tags: ['React', 'Node.js', 'MongoDB'],
+  },
+  {
+    title: 'MyTube',
+    category: 'AI · Metadata',
+    blurb:
+      'Video metadata management with AI-powered insights and workflow automation.',
+    image: 'https://i.imgur.com/QNHXpzT.jpeg',
+    caseStudyUrl: '/work/case-studies/mytube',
+    stats: [
+      { value: 'AI', label: 'Powered' },
+      { value: 'Fast', label: 'Metadata' },
+      { value: 'Team', label: 'Tooling' },
+    ],
+    tags: ['React', 'Node.js', 'AI/ML'],
+  },
+  {
+    title: 'Videoleap',
+    category: 'Mobile · AI',
+    blurb:
+      'AI-powered video editing platform — redesigned onboarding, editor, and template flows.',
+    image: 'https://i.imgur.com/SubVB9A.jpeg',
+    caseStudyUrl: '/work/case-studies/videoleap',
+    stats: [
+      { value: '↑', label: 'Templates' },
+      { value: '↑', label: 'Retention' },
+      { value: 'Mobile', label: 'First' },
+    ],
+    tags: ['React', 'AI/ML', 'AWS'],
+  },
 ];
+
+const PAGE_SIZE = 6;
 
 function ChapterMarker({ number, label }: { number: string; label: string }) {
   return (
@@ -131,24 +253,41 @@ function ChapterMarker({ number, label }: { number: string; label: string }) {
 
 export default function FeaturedWorkSection() {
   const [activeIndex, setActiveIndex] = useState(0);
+  const totalPages = Math.ceil(featured.length / PAGE_SIZE);
+  const currentPage = Math.floor(activeIndex / PAGE_SIZE);
+  const pageStart = currentPage * PAGE_SIZE;
+  const pageProjects = featured.slice(pageStart, pageStart + PAGE_SIZE);
+  const faceIndex = activeIndex - pageStart;
   const active = featured[activeIndex];
 
   const cubeFaces = useMemo(
     () =>
-      featured.map((p) => ({
+      pageProjects.map((p) => ({
         image: p.image,
         category: p.category,
         title: p.title,
       })),
-    [],
+    [pageProjects],
   );
+
+  const goPrev = () =>
+    setActiveIndex((i) =>
+      i - PAGE_SIZE >= 0 ? i - PAGE_SIZE : (totalPages - 1) * PAGE_SIZE,
+    );
+  const goNext = () =>
+    setActiveIndex((i) =>
+      i + PAGE_SIZE < featured.length ? i + PAGE_SIZE : 0,
+    );
 
   return (
     <section className="relative py-28 md:py-36 px-6 lg:px-12 bg-[#0a0a0a] border-t border-white/10 overflow-hidden">
       <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[900px] h-[500px] bg-[#A3D1FF]/8 rounded-full blur-[140px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto relative">
-        <ChapterMarker number="Chapter · Selected Work" label="Portfolio · 06 Files" />
+        <ChapterMarker
+          number="Chapter · Selected Work"
+          label={`Portfolio · ${featured.length} Files`}
+        />
 
         <div className="grid md:grid-cols-[1.2fr_1fr] gap-8 md:gap-16 items-end mb-16">
           <motion.h2
@@ -173,27 +312,45 @@ export default function FeaturedWorkSection() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-white/60 text-lg leading-relaxed"
           >
-            Six selected case files — drag the cube or click a project to rotate it
-            into view.
+            All {featured.length} case files — drag the cube, click a project, or page through the deck.
           </motion.p>
         </div>
 
         <div className="grid lg:grid-cols-12 gap-8 lg:gap-10 items-center">
           {/* List */}
           <div className="lg:col-span-3 order-2 lg:order-1">
-            <p className="text-[10px] font-mono uppercase tracking-[0.3em] text-white/40 mb-5">
-              — Case files
-            </p>
+            <div className="flex items-center justify-between mb-5">
+              <p className="text-[10px] font-mono uppercase tracking-[0.3em] text-white/40">
+                — Case files
+              </p>
+              <div className="flex items-center gap-1">
+                <button
+                  onClick={goPrev}
+                  aria-label="Previous set"
+                  className="w-7 h-7 flex items-center justify-center border border-white/15 text-white/60 hover:border-white/40 hover:text-white transition-colors"
+                >
+                  <ChevronLeft className="w-3.5 h-3.5" />
+                </button>
+                <button
+                  onClick={goNext}
+                  aria-label="Next set"
+                  className="w-7 h-7 flex items-center justify-center border border-white/15 text-white/60 hover:border-white/40 hover:text-white transition-colors"
+                >
+                  <ChevronRight className="w-3.5 h-3.5" />
+                </button>
+              </div>
+            </div>
             <ul className="border-y border-white/10">
-              {featured.map((p, i) => {
-                const isActive = i === activeIndex;
+              {pageProjects.map((p, i) => {
+                const globalIdx = pageStart + i;
+                const isActive = globalIdx === activeIndex;
                 return (
                   <li
                     key={p.title}
                     className="border-b border-white/10 last:border-b-0"
                   >
                     <button
-                      onClick={() => setActiveIndex(i)}
+                      onClick={() => setActiveIndex(globalIdx)}
                       className={`group w-full text-left flex items-center gap-3 py-4 transition-colors ${
                         isActive ? 'text-white' : 'text-white/50 hover:text-white'
                       }`}
@@ -204,7 +361,7 @@ export default function FeaturedWorkSection() {
                         }`}
                         style={{ fontVariantNumeric: 'tabular-nums' }}
                       >
-                        {String(i + 1).padStart(2, '0')}
+                        {String(globalIdx + 1).padStart(2, '0')}
                       </span>
                       <span
                         className="flex-1 leading-tight"
@@ -224,12 +381,31 @@ export default function FeaturedWorkSection() {
                 );
               })}
             </ul>
+
+            {/* Page dots */}
+            <div className="flex items-center gap-2 mt-6">
+              {Array.from({ length: totalPages }).map((_, p) => (
+                <button
+                  key={p}
+                  onClick={() => setActiveIndex(p * PAGE_SIZE)}
+                  className={`h-[2px] transition-all ${
+                    p === currentPage
+                      ? 'w-10 bg-[#A3D1FF]'
+                      : 'w-5 bg-white/15 hover:bg-white/30'
+                  }`}
+                  aria-label={`Go to set ${p + 1}`}
+                />
+              ))}
+              <span className="ml-2 text-[10px] font-mono uppercase tracking-[0.25em] text-white/40">
+                {String(currentPage + 1).padStart(2, '0')} / {String(totalPages).padStart(2, '0')}
+              </span>
+            </div>
           </div>
 
           {/* Cube */}
           <div className="lg:col-span-5 order-1 lg:order-2">
             <div className="relative flex items-center justify-center min-h-[380px] lg:min-h-[460px]">
-              <InteractiveCube faces={cubeFaces} activeIndex={activeIndex} />
+              <InteractiveCube faces={cubeFaces} activeIndex={faceIndex} />
             </div>
           </div>
 
