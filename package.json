@@ -11,14 +11,16 @@
   "dependencies": {
     "@plausible-analytics/tracker": "^0.4.4",
     "@tailwindcss/typography": "^0.5.19",
-    "cobe": "^2.0.1",
+    "@types/three": "^0.183.1",
     "framer-motion": "^12.38.0",
+    "globe.gl": "^2.45.3",
     "lucide-react": "^0.468.0",
     "next": "16.2.3",
     "react": "19.2.4",
     "react-dom": "19.2.4",
     "react-error-boundary": "^6.1.1",
     "sonner": "^2.0.7",
+    "three": "^0.183.2",
     "zustand": "^5.0.12"
   },
   "devDependencies": {
