@@ -10,13 +10,13 @@ export default function CTASection() {
       <div className="max-w-4xl mx-auto text-center">
         <Reveal direction="up" delay={0.1}>
           <h2 className="text-[clamp(2.5rem,6vw,5rem)] font-black mb-8 leading-tight text-white">
-            Ready to Stop<br />Losing Customers?
+            Every Day Without a Great Website<br />Is a Day Your <span className="text-[#A3D1FF]">Competitor Gets the Lead.</span>
           </h2>
         </Reveal>
 
         <Reveal direction="up" delay={0.2}>
           <p className="text-2xl mb-12 max-w-2xl mx-auto text-gray-300">
-            Book a free strategy call. We'll talk about your goals, and I'll show you exactly how I can help you grow.
+            Let&apos;s fix that. Book 30 minutes with me — I&apos;ll audit your current site live on the call and show you exactly what&apos;s costing you customers.
           </p>
         </Reveal>
 

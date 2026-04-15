@@ -139,12 +139,21 @@ export default function HeroSection() {
             <div className="overflow-hidden mb-6">
               <h1 className="font-heading text-[clamp(3rem,6vw,4.5rem)] font-semibold tracking-[-0.01em] text-white leading-[1.15]">
                 <SplitTextReveal
-                  text="Award Winning Websites That Turn Attention Into Revenue"
+                  text="Your Website Should Be Your Best Salesperson. Is It?"
                   delay={0.2}
                   staggerDelay={0.05}
                 />
               </h1>
             </div>
+
+            <motion.p
+              className="text-lg sm:text-xl text-white/85 leading-relaxed max-w-xl"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.35 }}
+            >
+              I build custom React websites that load in under 2 seconds, rank on Google, and turn visitors into paying customers. 50+ projects. 3 continents. One person you actually talk to.
+            </motion.p>
 
             <motion.div
               className="flex flex-col sm:flex-row gap-4"
@@ -157,7 +166,7 @@ export default function HeroSection() {
                   href="/contact"
                   className="mr_btn mr_btn_primary inline-flex items-center gap-2"
                 >
-                  <span>Contact Me</span>
+                  <span>Book a Free Strategy Call</span>
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </MagneticButton>
@@ -168,7 +177,8 @@ export default function HeroSection() {
                   className="mr_btn mr_btn_outline inline-flex items-center gap-2"
                 >
                   <Sparkles className="w-5 h-5 group-hover:rotate-12 transition-transform" />
-                  <span>Free Website Analysis</span>
+                  <span>See What&apos;s Wrong With Your Site</span>
+                  <ArrowRight className="w-4 h-4" />
                 </Link>
               </MagneticButton>
             </motion.div>
@@ -181,7 +191,7 @@ export default function HeroSection() {
             >
               <div className="flex items-center gap-3 mb-4">
                 <Shield className="w-5 h-5 text-[#A3D1FF]" />
-                <span className="text-white font-bold text-sm uppercase tracking-wider">25 Total Verified Reviews</span>
+                <span className="text-white font-bold text-sm uppercase tracking-wider">Rated 5.0 on Google · 4.8 on Clutch · 25 verified reviews</span>
               </div>
 
               <div className="space-y-3">

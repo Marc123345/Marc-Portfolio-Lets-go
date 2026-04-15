@@ -107,7 +107,7 @@ export default function FeaturedWorkSection() {
             Featured <span className="text-[#A3D1FF]">Work</span>
           </h2>
           <p className="text-2xl text-gray-300 max-w-3xl mx-auto">
-            Explore my portfolio of results-driven digital solutions that combine thoughtful design with robust development.
+            Real projects. Real results. No templates, no WordPress, no shortcuts.
           </p>
         </motion.div>
 
@@ -132,7 +132,7 @@ export default function FeaturedWorkSection() {
                 <span className="text-[#A3D1FF] text-sm bg-[#A3D1FF]/10 px-4 py-2 rounded-full">Featured Project</span>
               </div>
               <h3 className="text-xl md:text-3xl font-bold text-white mb-3 md:mb-4">Untapped Africa</h3>
-              <p className="text-sm md:text-base text-white mb-4 md:mb-6">Revolutionizing water infrastructure solutions across Africa with innovative technology and sustainable practices. A comprehensive platform for project management, data visualization, and community engagement.</p>
+              <p className="text-sm md:text-base text-white mb-4 md:mb-6">A platform that helps bring clean water to 500,000+ people across 8 African countries. Built with Next.js and Mapbox to track, manage, and fund water infrastructure projects at scale.</p>
               <div className="space-y-3 md:space-y-4 mb-4 md:mb-6">
                 <div className="flex items-center text-xs md:text-sm">
                   <CheckCircle className="w-4 h-4 text-[#A3D1FF] mr-2 flex-shrink-0" />

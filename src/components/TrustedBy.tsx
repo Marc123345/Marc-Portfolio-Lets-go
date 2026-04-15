@@ -334,8 +334,8 @@ export default function TrustedBy() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
-          title="Client Success Stories"
-          description="Hear from our satisfied clients about their experience working with us and the results we've delivered."
+          title="Don't Take My Word For It"
+          description=""
         />
 
         {/* Reviews Section */}
@@ -363,7 +363,7 @@ export default function TrustedBy() {
           {/* Related Links */}
           <div className="mt-12 text-center">
             <p className="text-white mb-4">
-              Ready to join our satisfied clients?
+              Ready to add your story to the list?
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link href="/contact" className="mr_btn mr_btn_primary">

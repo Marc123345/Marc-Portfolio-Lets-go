@@ -35,20 +35,17 @@ export default function AboutSection() {
           <div>
             <Reveal direction="right" delay={0.2}>
               <h2 className="text-5xl font-black mb-6 text-white">
-                Work With Me,<br />Not a <span className="text-[#A3D1FF]">Team of Interns</span>
+                One Designer. One Developer. <span className="text-[#A3D1FF]">Zero Handoffs.</span>
               </h2>
             </Reveal>
 
             <Reveal direction="right" delay={0.3}>
               <div className="space-y-6 text-xl text-gray-300 mb-8">
                 <p>
-                  Hey, I'm Marc. I've been building websites for agencies, local businesses, and jewellery brands across three continents.
+                  At an agency, your project gets passed between a designer, a developer, a PM, and whoever's available on Tuesday.
                 </p>
                 <p>
-                  Unlike big agencies that hand your project off to junior devs, you work directly with me from start to finish. That means faster turnaround, better communication, and no surprises.
-                </p>
-                <p>
-                  I care about your success because your results are my reputation. When your website brings in leads and grows your business, we both win.
+                  With me, the person who designs your site is the same person who codes it. That means fewer misunderstandings, faster turnarounds, and a website that actually matches the vision.
                 </p>
               </div>
             </Reveal>
