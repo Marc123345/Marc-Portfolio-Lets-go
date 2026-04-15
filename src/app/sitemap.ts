@@ -1,5 +1,7 @@
 import type { MetadataRoute } from 'next';
 
+export const dynamic = 'force-static';
+
 const BASE = 'https://marcfriedmanportfolio.com';
 
 type Entry = { path: string; priority: number };
