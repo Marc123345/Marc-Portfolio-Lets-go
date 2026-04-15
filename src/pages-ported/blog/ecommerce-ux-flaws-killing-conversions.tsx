@@ -724,11 +724,6 @@ export default function EcommerceUXFlawsKillingConversionsPage() {
                     <span>Get a Free UX Audit</span>
                   </Link>
                 </MagneticButton>
-                <MagneticButton>
-                  <Link href="/contact" className="mr_btn mr_btn_outline">
-                    <span>Try Free Website Analyzer</span>
-                  </Link>
-                </MagneticButton>
               </div>
             </div>
 

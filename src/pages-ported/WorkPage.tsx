@@ -475,56 +475,30 @@ export default function WorkPage() {
           {/* Related Content Links */}
           <div className="mt-16 bg-[#1b1b1b] p-8 rounded-xl border border-white/10">
             <h3 className="text-2xl font-bold text-white mb-6">Explore More</h3>
-            <div className="grid md:grid-cols-3 gap-6">
+            <div className="grid md:grid-cols-2 gap-6">
               <div>
                 <h4 className="text-lg font-semibold text-white mb-4">Our Services</h4>
                 <div className="space-y-2">
-                  <Link 
-                    href="/services/web-development" 
+                  <Link
+                    href="/services/web-development"
                     className="block text-[#A3D1FF] hover:text-white transition-colors"
                     title="Professional web development services"
                   >
                     Web Development Services
                   </Link>
-                  <Link 
-                    href="/services/design" 
+                  <Link
+                    href="/services/design"
                     className="block text-[#A3D1FF] hover:text-white transition-colors"
                     title="UI/UX design solutions"
                   >
                     UI/UX Design Solutions
                   </Link>
-                  <Link 
-                    href="/services/saas" 
+                  <Link
+                    href="/services/saas"
                     className="block text-[#A3D1FF] hover:text-white transition-colors"
                     title="SaaS development services"
                   >
                     SaaS Development
-                  </Link>
-                </div>
-              </div>
-              <div>
-                <h4 className="text-lg font-semibold text-white mb-4">Free Tools</h4>
-                <div className="space-y-2">
-                  <Link 
-                    href="/contact" 
-                    className="block text-[#A3D1FF] hover:text-white transition-colors"
-                    title="Free website analysis tool"
-                  >
-                    Website Analyzer Tool
-                  </Link>
-                  <Link 
-                    href="/contact" 
-                    className="block text-[#A3D1FF] hover:text-white transition-colors"
-                    title="Calculate website ROI"
-                  >
-                    ROI Calculator
-                  </Link>
-                  <Link 
-                    href="/contact" 
-                    className="block text-[#A3D1FF] hover:text-white transition-colors"
-                    title="Project timeline visualization"
-                  >
-                    Project Timeline
                   </Link>
                 </div>
               </div>

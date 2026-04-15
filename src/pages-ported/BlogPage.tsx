@@ -834,38 +834,30 @@ export default function BlogPage() {
             {/* Related Resources */}
             <div className="mt-12 pt-8 border-t border-white/10">
               <h3 className="text-xl font-semibold text-white mb-6">Helpful Resources</h3>
-              <div className="grid md:grid-cols-4 gap-4">
-                <Link 
-                  href="/contact" 
-                  className="p-4 bg-[#1b1b1b] rounded-lg border border-white/10 hover:border-[#A3D1FF] transition-colors group"
-                  title="Analyze your website for free"
-                >
-                  <h4 className="text-white font-medium group-hover:text-[#A3D1FF] transition-colors">Website Analyzer</h4>
-                  <p className="text-white text-sm mt-1">Free analysis tool</p>
-                </Link>
-                <Link 
-                  href="/contact" 
-                  className="p-4 bg-[#1b1b1b] rounded-lg border border-white/10 hover:border-[#A3D1FF] transition-colors group"
-                  title="Calculate your website ROI"
-                >
-                  <h4 className="text-white font-medium group-hover:text-[#A3D1FF] transition-colors">ROI Calculator</h4>
-                  <p className="text-white text-sm mt-1">Investment calculator</p>
-                </Link>
-                <Link 
-                  href="/work" 
+              <div className="grid md:grid-cols-3 gap-4">
+                <Link
+                  href="/work"
                   className="p-4 bg-[#1b1b1b] rounded-lg border border-white/10 hover:border-[#A3D1FF] transition-colors group"
                   title="View our portfolio"
                 >
                   <h4 className="text-white font-medium group-hover:text-[#A3D1FF] transition-colors">Portfolio</h4>
                   <p className="text-white text-sm mt-1">Case studies</p>
                 </Link>
-                <Link 
-                  href="/services" 
+                <Link
+                  href="/services"
                   className="p-4 bg-[#1b1b1b] rounded-lg border border-white/10 hover:border-[#A3D1FF] transition-colors group"
                   title="Explore our services"
                 >
                   <h4 className="text-white font-medium group-hover:text-[#A3D1FF] transition-colors">Services</h4>
                   <p className="text-white text-sm mt-1">What we offer</p>
+                </Link>
+                <Link
+                  href="/contact"
+                  className="p-4 bg-[#1b1b1b] rounded-lg border border-white/10 hover:border-[#A3D1FF] transition-colors group"
+                  title="Get in touch"
+                >
+                  <h4 className="text-white font-medium group-hover:text-[#A3D1FF] transition-colors">Contact</h4>
+                  <p className="text-white text-sm mt-1">Start your project</p>
                 </Link>
               </div>
             </div>
