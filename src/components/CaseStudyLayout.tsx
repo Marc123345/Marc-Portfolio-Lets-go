@@ -171,7 +171,7 @@ function CaseMasthead({
             className="text-white leading-[0.88] tracking-[-0.04em] mb-8"
             style={{
               fontFamily: SERIF,
-              fontSize: 'clamp(3rem, 11vw, 10rem)',
+              fontSize: 'clamp(2.75rem, 8vw, 7rem)',
               fontWeight: 400,
             }}
           >

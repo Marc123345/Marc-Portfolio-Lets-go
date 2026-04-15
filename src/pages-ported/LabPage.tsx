@@ -63,7 +63,7 @@ export default function LabPage() {
                 className="text-white leading-[0.88] tracking-[-0.04em] mb-8"
                 style={{
                   fontFamily: SERIF,
-                  fontSize: 'clamp(4rem, 14vw, 13rem)',
+                  fontSize: 'clamp(3rem, 9vw, 7.5rem)',
                   fontWeight: 400,
                 }}
               >

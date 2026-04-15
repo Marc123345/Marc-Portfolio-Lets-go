@@ -367,7 +367,7 @@ export default function BlogPage() {
             className="text-white leading-[0.9] tracking-[-0.04em] mb-8 max-w-5xl"
             style={{
               fontFamily: SERIF,
-              fontSize: 'clamp(3rem, 10vw, 9rem)',
+              fontSize: 'clamp(2.75rem, 7.5vw, 6.5rem)',
               fontWeight: 400,
             }}
           >

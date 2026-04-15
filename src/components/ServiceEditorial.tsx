@@ -177,7 +177,7 @@ export function ServiceMasthead({
             className="text-white leading-[0.88] tracking-[-0.04em] mb-8"
             style={{
               fontFamily: SERIF,
-              fontSize: 'clamp(3rem, 11vw, 10rem)',
+              fontSize: 'clamp(2.75rem, 8vw, 7rem)',
               fontWeight: 400,
             }}
           >
@@ -447,7 +447,7 @@ export function ProcessChapter({
           className="text-[#A3D1FF] leading-none"
           style={{
             fontFamily: SERIF,
-            fontSize: 'clamp(4rem, 10vw, 8rem)',
+            fontSize: 'clamp(3rem, 7vw, 6rem)',
             fontWeight: 300,
             fontStyle: 'italic',
           }}
@@ -591,7 +591,7 @@ export function ServiceColophon({
           className="text-white leading-[0.95] tracking-[-0.04em] mb-12 max-w-5xl"
           style={{
             fontFamily: SERIF,
-            fontSize: 'clamp(3rem, 9vw, 8rem)',
+            fontSize: 'clamp(2.5rem, 6.5vw, 5.5rem)',
             fontWeight: 400,
           }}
         >

@@ -199,7 +199,7 @@ function ProcessChapter({
     >
       <div className={`${reverse ? 'md:order-2 md:text-right' : ''}`}>
         <div
-          className="text-[clamp(4rem,10vw,8rem)] text-[#A3D1FF] leading-none"
+          className="text-[clamp(3rem,7vw,6rem)] text-[#A3D1FF] leading-none"
           style={{
             fontFamily: SERIF,
             fontWeight: 300,
@@ -412,7 +412,7 @@ export default function AboutPage() {
               className="text-white leading-[0.88] tracking-[-0.04em] mb-8"
               style={{
                 fontFamily: SERIF,
-                fontSize: 'clamp(3.5rem, 13vw, 12rem)',
+                fontSize: 'clamp(3rem, 8.5vw, 7.5rem)',
                 fontWeight: 400,
               }}
             >
@@ -1024,7 +1024,7 @@ export default function AboutPage() {
             className="text-white leading-[0.95] tracking-[-0.04em] mb-12 max-w-5xl"
             style={{
               fontFamily: SERIF,
-              fontSize: 'clamp(3rem, 9vw, 8rem)',
+              fontSize: 'clamp(2.5rem, 6.5vw, 5.5rem)',
               fontWeight: 400,
             }}
           >

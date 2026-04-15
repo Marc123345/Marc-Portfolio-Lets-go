@@ -81,7 +81,7 @@ function Step({
           <span
             style={{
               fontFamily: SERIF,
-              fontSize: 'clamp(5rem, 13vw, 11rem)',
+              fontSize: 'clamp(3.5rem, 9vw, 7.5rem)',
               fontWeight: 300,
               fontStyle: 'italic',
             }}

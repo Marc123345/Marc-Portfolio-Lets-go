@@ -110,7 +110,7 @@ export default function SiteLoader() {
               className="flex flex-wrap justify-center text-white leading-[0.9] tracking-[-0.04em] mb-12"
               style={{
                 fontFamily: SERIF,
-                fontSize: 'clamp(3rem, 12vw, 9rem)',
+                fontSize: 'clamp(2.5rem, 8vw, 6.5rem)',
                 fontWeight: 400,
               }}
             >

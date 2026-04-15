@@ -318,7 +318,7 @@ export default function WorkPage() {
             className="text-white leading-[0.9] tracking-[-0.04em] mb-8 max-w-5xl"
             style={{
               fontFamily: SERIF,
-              fontSize: 'clamp(3rem, 9vw, 8.5rem)',
+              fontSize: 'clamp(2.75rem, 7vw, 6rem)',
               fontWeight: 400,
             }}
           >
