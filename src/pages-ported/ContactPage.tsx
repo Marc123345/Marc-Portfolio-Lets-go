@@ -1,7 +1,8 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 import ContactForm from '@/components/ContactForm';
 import InteractiveCube from '@/components/InteractiveCube';
 
@@ -28,45 +29,47 @@ const contactSchema = {
 };
 
 const projectFaces = [
-  {
-    image:
-      'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%204%20-%2016x9.png?updatedAt=1767539579710',
-    category: 'Case File 01',
-    title: 'Binns Media Group',
-  },
-  {
-    image:
-      'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%201%20-%201x1(1).png?updatedAt=1767539579782',
-    category: 'Case File 02',
-    title: 'Untapped Africa',
-  },
-  {
-    image: 'https://ik.imagekit.io/qcvroy8xpd/image%201%20(5).png',
-    category: 'Case File 03',
-    title: 'H2H Marketing',
-  },
-  {
-    image:
-      'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%201%20-%201x1(5).png?updatedAt=1767539579818',
-    category: 'Case File 04',
-    title: 'iLight Care',
-  },
-  {
-    image:
-      'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%204%20-%2016_9.png?updatedAt=1767539579010',
-    category: 'Case File 05',
-    title: 'Paving Leads',
-  },
-  {
-    image:
-      'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%201%20-%201x1(3).png?updatedAt=1767539579776',
-    category: 'Case File 06',
-    title: 'Friedman & Cohen',
-  },
-];
+  { image: 'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%204%20-%2016x9.png?updatedAt=1767539579710', title: 'Binns Media Group' },
+  { image: 'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%201%20-%201x1(1).png?updatedAt=1767539579782', title: 'Untapped Africa' },
+  { image: 'https://ik.imagekit.io/qcvroy8xpd/image%201%20(5).png', title: 'H2H Marketing' },
+  { image: 'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%204%20-%2016_9.png?updatedAt=1767539579010', title: 'Paving Leads' },
+  { image: 'https://i.imgur.com/PiKh199.png', title: 'AutoMarginX' },
+  { image: 'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%201%20-%201x1(5).png?updatedAt=1767539579818', title: 'iLight Care' },
+  { image: 'https://ik.imagekit.io/qcvroy8xpd/image%202%20(1).png', title: 'Ask Africa' },
+  { image: 'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%201%20-%201x1(3).png?updatedAt=1767539579776', title: 'Friedman & Cohen' },
+  { image: 'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%201%20-%201x1(2).png?updatedAt=1767539579194', title: 'A Secure Annapolis' },
+  { image: 'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%204%20-%2016x9(5).png?updatedAt=1767539578933', title: 'Tar & Chip Paving' },
+  { image: 'https://i.imgur.com/ApfYPlH.jpg', title: 'Chad Le Clos' },
+  { image: 'https://i.imgur.com/EwgHAuK.png', title: 'Fleet Management' },
+  { image: 'https://i.imgur.com/QNHXpzT.jpeg', title: 'MyTube' },
+  { image: 'https://i.imgur.com/SubVB9A.jpeg', title: 'Videoleap' },
+].map((p, i) => ({
+  ...p,
+  category: `Case File ${String(i + 1).padStart(2, '0')}`,
+}));
+
+const PAGE_SIZE = 6;
 
 export default function ContactPage() {
-  const [activeFace, setActiveFace] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const totalPages = Math.ceil(projectFaces.length / PAGE_SIZE);
+  const currentPage = Math.floor(activeIndex / PAGE_SIZE);
+  const pageStart = currentPage * PAGE_SIZE;
+  const pageFaces = useMemo(
+    () => projectFaces.slice(pageStart, pageStart + PAGE_SIZE),
+    [pageStart],
+  );
+  const faceIndex = activeIndex - pageStart;
+  const active = projectFaces[activeIndex];
+
+  const goPrev = () =>
+    setActiveIndex((i) =>
+      i - PAGE_SIZE >= 0 ? i - PAGE_SIZE : (totalPages - 1) * PAGE_SIZE,
+    );
+  const goNext = () =>
+    setActiveIndex((i) =>
+      i + PAGE_SIZE < projectFaces.length ? i + PAGE_SIZE : 0,
+    );
 
   return (
     <>
@@ -134,20 +137,46 @@ export default function ContactPage() {
             >
               <div className="relative w-full flex items-center justify-center">
                 <div className="absolute w-[420px] h-[420px] bg-[#A3D1FF]/10 rounded-full blur-[100px] pointer-events-none" />
-                <InteractiveCube faces={projectFaces} activeIndex={activeFace} />
+                <InteractiveCube faces={pageFaces} activeIndex={faceIndex} />
               </div>
 
-              <div className="mt-10 w-full max-w-md">
-                <p className="text-[10px] font-mono uppercase tracking-[0.3em] text-white/40 mb-4 text-center">
-                  — Drag, or cycle the deck
-                </p>
+              <div className="mt-10 w-full max-w-xl">
+                <div className="flex items-center justify-between mb-4">
+                  <p className="text-[10px] font-mono uppercase tracking-[0.3em] text-white/40">
+                    — Drag, or cycle the deck
+                  </p>
+                  <div className="flex items-center gap-1">
+                    <button
+                      onClick={goPrev}
+                      aria-label="Previous set"
+                      className="w-7 h-7 flex items-center justify-center border border-white/15 text-white/60 hover:border-white/40 hover:text-white transition-colors"
+                    >
+                      <ChevronLeft className="w-3.5 h-3.5" />
+                    </button>
+                    <span
+                      className="px-2 text-[10px] font-mono uppercase tracking-[0.25em] text-white/40"
+                      style={{ fontVariantNumeric: 'tabular-nums' }}
+                    >
+                      {String(currentPage + 1).padStart(2, '0')} /{' '}
+                      {String(totalPages).padStart(2, '0')}
+                    </span>
+                    <button
+                      onClick={goNext}
+                      aria-label="Next set"
+                      className="w-7 h-7 flex items-center justify-center border border-white/15 text-white/60 hover:border-white/40 hover:text-white transition-colors"
+                    >
+                      <ChevronRight className="w-3.5 h-3.5" />
+                    </button>
+                  </div>
+                </div>
+
                 <div className="flex flex-wrap gap-2 justify-center">
-                  {projectFaces.map((f, i) => (
+                  {projectFaces.map((_, i) => (
                     <button
                       key={i}
-                      onClick={() => setActiveFace(i)}
+                      onClick={() => setActiveIndex(i)}
                       className={`px-3 py-1.5 text-xs font-mono uppercase tracking-[0.15em] border transition-all ${
-                        activeFace === i
+                        activeIndex === i
                           ? 'bg-white text-black border-white'
                           : 'text-white/70 border-white/15 hover:border-white/40 hover:text-white'
                       }`}
@@ -160,7 +189,7 @@ export default function ContactPage() {
                   className="text-center mt-4 text-white/70 text-sm"
                   style={{ fontFamily: SERIF, fontStyle: 'italic' }}
                 >
-                  {projectFaces[activeFace].title}
+                  {active.title}
                 </p>
               </div>
             </motion.div>
