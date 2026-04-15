@@ -3,7 +3,7 @@
 import React, { useState, useMemo } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowUpRight, ExternalLink } from 'lucide-react';
+import { ArrowUpRight, ExternalLink, ChevronLeft, ChevronRight } from 'lucide-react';
 import InteractiveCube from '@/components/InteractiveCube';
 import {
   ChapterMarker,
@@ -34,7 +34,7 @@ type Project = {
   tags: string[];
 };
 
-const featured: Project[] = [
+const projects: Project[] = [
   {
     title: 'Binns Media Group',
     category: 'Media Platform',
@@ -128,67 +128,158 @@ const featured: Project[] = [
     ],
     tags: ['React', 'Node.js', 'AI/ML'],
   },
-];
-
-const archive = [
   {
     title: 'Ask Africa',
+    category: 'Research · Consultancy',
+    blurb:
+      "Commanding digital presence for one of Africa's leading research and consultancy firms.",
     image: 'https://ik.imagekit.io/qcvroy8xpd/image%202%20(1).png',
-    url: '/work/case-studies/ask-africa',
-  },
-  {
-    title: 'A Secure Annapolis',
-    image:
-      'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%201%20-%201x1(2).png?updatedAt=1767539579194',
-    url: '/work/case-studies/secure-annapolis',
+    liveUrl: 'https://askafrica.co.za/',
+    caseStudyUrl: '/work/case-studies/ask-africa',
+    stats: [
+      { value: '100%', label: 'Custom Build' },
+      { value: 'Pan', label: 'African Reach' },
+      { value: 'Ent.', label: 'Ready' },
+    ],
+    tags: ['React', 'Tailwind', 'Vite'],
   },
   {
     title: 'Friedman & Cohen',
+    category: 'B2B · Procurement',
+    blurb:
+      'Century-old retail legacy re-engineered for the digital procurement age. Real-time data, wholesale ops, role-based access.',
     image:
       'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%201%20-%201x1(3).png?updatedAt=1767539579776',
-    url: '/work/case-studies/friedman-cohen',
+    liveUrl: 'https://b2b.fandc.co.za',
+    caseStudyUrl: '/work/case-studies/friedman-cohen',
+    stats: [
+      { value: '100+', label: 'Years Legacy' },
+      { value: '4.4', label: 'Google' },
+      { value: 'B2B', label: 'Platform' },
+    ],
+    tags: ['React', 'Node.js', 'PostgreSQL'],
   },
   {
-    title: 'Tar & Chip',
+    title: 'A Secure Annapolis',
+    category: 'Local · Emergency Service',
+    blurb:
+      'Hyper-local lead generation engine. Emergency locksmith traffic turned into immediate phone calls.',
+    image:
+      'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%201%20-%201x1(2).png?updatedAt=1767539579194',
+    liveUrl: 'https://www.asecureannapolislocksmith.com',
+    caseStudyUrl: '/work/case-studies/secure-annapolis',
+    stats: [
+      { value: '+150%', label: 'Leads' },
+      { value: 'Top 3', label: 'Local Map' },
+      { value: '85%', label: 'Mobile Conv.' },
+    ],
+    tags: ['React', 'Local SEO', 'Node.js'],
+  },
+  {
+    title: 'Tar & Chip Paving',
+    category: 'Specialty · Contractor',
+    blurb:
+      'Specialized surface solutions showcase for premium tar and chip paving applications.',
     image:
       'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%204%20-%2016x9(5).png?updatedAt=1767539578933',
-    url: '/work/case-studies/tar-chip-paving',
+    liveUrl: 'https://cumberlandtarchip.org/',
+    caseStudyUrl: '/work/case-studies/tar-chip-paving',
+    stats: [
+      { value: 'Bento', label: 'Layout' },
+      { value: 'Mobile', label: 'First' },
+      { value: '100%', label: 'Custom' },
+    ],
+    tags: ['React', 'Tailwind', 'Responsive'],
   },
   {
-    title: 'Chad Le Clos',
+    title: 'Chad Le Clos Swimming',
+    category: 'Athlete · Bookings',
+    blurb:
+      "Olympic champion's swimming clinics platform with booking, athlete management, and clinic scheduling.",
     image: 'https://i.imgur.com/ApfYPlH.jpg',
-    url: '/work/case-studies/chad-le-clos',
+    liveUrl: 'https://chadleclosswimming.com',
+    caseStudyUrl: '/work/case-studies/chad-le-clos',
+    stats: [
+      { value: 'OLY', label: 'Champion' },
+      { value: 'Book', label: 'System' },
+      { value: '<2s', label: 'Load' },
+    ],
+    tags: ['Next.js', 'Tailwind', 'Booking'],
   },
   {
     title: 'Fleet Management',
+    category: 'SaaS · Logistics',
+    blurb:
+      'Enterprise fleet platform with real-time tracking, predictive maintenance, and intelligent route optimization.',
     image: 'https://i.imgur.com/EwgHAuK.png',
-    url: '/work/case-studies/fleet-management',
+    caseStudyUrl: '/work/case-studies/fleet-management',
+    stats: [
+      { value: '500+', label: 'Vehicles' },
+      { value: '35%', label: 'Cost ↓' },
+      { value: '95%', label: 'Satisfaction' },
+    ],
+    tags: ['React', 'Node.js', 'MongoDB'],
   },
   {
     title: 'MyTube',
+    category: 'AI · Metadata',
+    blurb:
+      'Video metadata management system for media and manufacturing. AI-powered insights and workflow automation.',
     image: 'https://i.imgur.com/QNHXpzT.jpeg',
-    url: '/work/case-studies/mytube',
+    caseStudyUrl: '/work/case-studies/mytube',
+    stats: [
+      { value: 'AI', label: 'Powered' },
+      { value: 'Fast', label: 'Metadata' },
+      { value: 'Team', label: 'Tooling' },
+    ],
+    tags: ['React', 'Node.js', 'AI/ML'],
   },
   {
     title: 'Videoleap',
+    category: 'Mobile · AI',
+    blurb:
+      'AI-powered video editing platform — redesigned onboarding, editor, and template marketplace flows.',
     image: 'https://i.imgur.com/SubVB9A.jpeg',
-    url: '/work/case-studies/videoleap',
+    caseStudyUrl: '/work/case-studies/videoleap',
+    stats: [
+      { value: '↑', label: 'Template Use' },
+      { value: '↑', label: 'Retention' },
+      { value: 'Mobile', label: 'First' },
+    ],
+    tags: ['React', 'AI/ML', 'AWS'],
   },
 ];
 
+const PAGE_SIZE = 6;
+
 export default function WorkPage() {
   const [activeIndex, setActiveIndex] = useState(0);
-  const active = featured[activeIndex];
+
+  const totalPages = Math.ceil(projects.length / PAGE_SIZE);
+  const currentPage = Math.floor(activeIndex / PAGE_SIZE);
+  const pageStart = currentPage * PAGE_SIZE;
+  const pageProjects = projects.slice(pageStart, pageStart + PAGE_SIZE);
+  const faceIndex = activeIndex - pageStart;
+  const active = projects[activeIndex];
 
   const cubeFaces = useMemo(
     () =>
-      featured.map((p) => ({
+      pageProjects.map((p) => ({
         image: p.image,
         category: p.category,
         title: p.title,
       })),
-    [],
+    [pageProjects],
   );
+
+  const goPrev = () =>
+    setActiveIndex((i) =>
+      i - PAGE_SIZE >= 0 ? i - PAGE_SIZE : (totalPages - 1) * PAGE_SIZE,
+    );
+  const goNext = () =>
+    setActiveIndex((i) =>
+      i + PAGE_SIZE < projects.length ? i + PAGE_SIZE : 0,
+    );
 
   return (
     <>
@@ -209,7 +300,7 @@ export default function WorkPage() {
         <div className="absolute top-1/3 left-[-10%] w-[700px] h-[700px] bg-[#A3D1FF]/8 rounded-full blur-[140px] pointer-events-none" />
 
         <div className="max-w-7xl mx-auto relative">
-          <ChapterMarker number="Portfolio · Vol. 01" label="Selected Work · 2026" />
+          <ChapterMarker number="Portfolio · Vol. 01" label={`${projects.length} Case Files · 2026`} />
 
           <motion.p
             initial={{ opacity: 0, x: -20 }}
@@ -217,7 +308,7 @@ export default function WorkPage() {
             transition={{ duration: 0.6 }}
             className="text-xs font-mono uppercase tracking-[0.35em] text-[#A3D1FF] mb-6"
           >
-            — Six case files. One operator.
+            — Fourteen case files. One operator.
           </motion.p>
 
           <motion.h1
@@ -241,8 +332,8 @@ export default function WorkPage() {
             transition={{ duration: 0.7, delay: 0.3 }}
             className="text-xl md:text-2xl text-white/70 max-w-2xl leading-snug mb-12"
           >
-            No templates. No WordPress. No shortcuts. Six selected case files below —
-            click a face, read the file.
+            No templates. No WordPress. No shortcuts. Every case file below — click a
+            face, read the file, drag the cube.
           </motion.p>
         </div>
       </section>
@@ -259,26 +350,52 @@ export default function WorkPage() {
         ]}
       />
 
-      {/* ===================== CUBE SHOWCASE ===================== */}
+      {/* ===================== CUBE SHOWCASE (PAGINATED · ALL 14) ===================== */}
       <section className="relative py-24 md:py-28 px-6 lg:px-12 bg-black border-t border-white/10 overflow-hidden">
         <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[900px] h-[600px] bg-[#A3D1FF]/8 rounded-full blur-[140px] pointer-events-none" />
 
         <div className="max-w-7xl mx-auto relative">
-          <ChapterMarker number="01" label="The Cube · 06 Files" />
+          <ChapterMarker
+            number="01"
+            label={`The Cube · Set ${String(currentPage + 1).padStart(2, '0')} of ${String(totalPages).padStart(2, '0')}`}
+          />
 
           <div className="grid lg:grid-cols-12 gap-8 lg:gap-10 items-center">
-            {/* Left — project list */}
+            {/* Left — project list for current page */}
             <div className="lg:col-span-3 order-2 lg:order-1">
-              <p className="text-[10px] font-mono uppercase tracking-[0.3em] text-white/40 mb-5">
-                — Case files
-              </p>
+              <div className="flex items-center justify-between mb-5">
+                <p className="text-[10px] font-mono uppercase tracking-[0.3em] text-white/40">
+                  — Case files
+                </p>
+                <div className="flex items-center gap-1">
+                  <button
+                    onClick={goPrev}
+                    aria-label="Previous set"
+                    className="w-7 h-7 flex items-center justify-center border border-white/15 text-white/60 hover:border-white/40 hover:text-white transition-colors"
+                  >
+                    <ChevronLeft className="w-3.5 h-3.5" />
+                  </button>
+                  <button
+                    onClick={goNext}
+                    aria-label="Next set"
+                    className="w-7 h-7 flex items-center justify-center border border-white/15 text-white/60 hover:border-white/40 hover:text-white transition-colors"
+                  >
+                    <ChevronRight className="w-3.5 h-3.5" />
+                  </button>
+                </div>
+              </div>
+
               <ul className="space-y-0 border-y border-white/10">
-                {featured.map((p, i) => {
-                  const isActive = i === activeIndex;
+                {pageProjects.map((p, i) => {
+                  const globalIdx = pageStart + i;
+                  const isActive = globalIdx === activeIndex;
                   return (
-                    <li key={p.title} className="border-b border-white/10 last:border-b-0">
+                    <li
+                      key={p.title}
+                      className="border-b border-white/10 last:border-b-0"
+                    >
                       <button
-                        onClick={() => setActiveIndex(i)}
+                        onClick={() => setActiveIndex(globalIdx)}
                         className={`group w-full text-left flex items-center gap-3 py-4 transition-colors ${
                           isActive ? 'text-white' : 'text-white/50 hover:text-white'
                         }`}
@@ -289,7 +406,7 @@ export default function WorkPage() {
                           }`}
                           style={{ fontVariantNumeric: 'tabular-nums' }}
                         >
-                          {String(i + 1).padStart(2, '0')}
+                          {String(globalIdx + 1).padStart(2, '0')}
                         </span>
                         <span
                           className="flex-1 leading-tight"
@@ -310,44 +427,30 @@ export default function WorkPage() {
                 })}
               </ul>
 
-              <div className="mt-8 grid grid-cols-2 gap-4 text-center lg:text-left">
-                <div>
-                  <div
-                    className="text-white leading-none"
-                    style={{
-                      fontFamily: SERIF,
-                      fontSize: 'clamp(1.5rem, 2.5vw, 2rem)',
-                      fontWeight: 500,
-                    }}
-                  >
-                    50+
-                  </div>
-                  <div className="text-[10px] font-mono uppercase tracking-[0.25em] text-white/40 mt-1">
-                    Shipped
-                  </div>
-                </div>
-                <div>
-                  <div
-                    className="text-white leading-none"
-                    style={{
-                      fontFamily: SERIF,
-                      fontSize: 'clamp(1.5rem, 2.5vw, 2rem)',
-                      fontWeight: 500,
-                    }}
-                  >
-                    03
-                  </div>
-                  <div className="text-[10px] font-mono uppercase tracking-[0.25em] text-white/40 mt-1">
-                    Continents
-                  </div>
-                </div>
+              {/* Page dots */}
+              <div className="flex items-center gap-2 mt-6">
+                {Array.from({ length: totalPages }).map((_, p) => (
+                  <button
+                    key={p}
+                    onClick={() => setActiveIndex(p * PAGE_SIZE)}
+                    className={`h-[2px] transition-all ${
+                      p === currentPage
+                        ? 'w-10 bg-[#A3D1FF]'
+                        : 'w-5 bg-white/15 hover:bg-white/30'
+                    }`}
+                    aria-label={`Go to set ${p + 1}`}
+                  />
+                ))}
+                <span className="ml-2 text-[10px] font-mono uppercase tracking-[0.25em] text-white/40">
+                  {String(currentPage + 1).padStart(2, '0')} / {String(totalPages).padStart(2, '0')}
+                </span>
               </div>
             </div>
 
             {/* Center — cube */}
             <div className="lg:col-span-5 order-1 lg:order-2">
               <div className="relative flex items-center justify-center min-h-[380px] lg:min-h-[500px]">
-                <InteractiveCube faces={cubeFaces} activeIndex={activeIndex} />
+                <InteractiveCube faces={cubeFaces} activeIndex={faceIndex} />
               </div>
               <p className="text-center text-[10px] font-mono uppercase tracking-[0.3em] text-white/40 mt-6">
                 — Drag to rotate · Click a case file
@@ -448,50 +551,70 @@ export default function WorkPage() {
       >
         <StatsBar
           stats={[
+            { value: `${projects.length}`, label: 'Case Files' },
             { value: '50+', label: 'Projects Shipped' },
-            { value: '14', label: 'Case Studies' },
             { value: '03', label: 'Continents' },
             { value: '100%', label: 'Built by Me' },
           ]}
         />
       </EditorialSection>
 
-      {/* ===================== ARCHIVE GRID ===================== */}
+      {/* ===================== FULL ARCHIVE IN CUBE-STYLE ===================== */}
       <EditorialSection
         chapter="03"
-        label="From the archive"
-        title="More"
-        italicTitle="from the vault."
-        lead="Not on the cube? Still worth a look. The full archive below."
+        label="The Full Archive"
+        title="Every"
+        italicTitle="case file."
+        lead="All 14 case studies laid out in the same cube-face visual language. Click through to read any of them."
       >
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-5">
-          {archive.map((p, i) => (
+          {projects.map((p, i) => (
             <motion.a
               key={p.title}
-              href={p.url}
+              href={p.caseStudyUrl}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-40px' }}
-              transition={{ duration: 0.6, delay: i * 0.05 }}
-              className="group block border border-white/10 hover:border-white/40 transition-colors overflow-hidden"
+              transition={{ duration: 0.6, delay: Math.min(i * 0.04, 0.4) }}
+              className="group relative block aspect-[4/5] overflow-hidden border border-white/10 hover:border-[#A3D1FF]/60 transition-colors"
             >
-              <div className="aspect-[4/3] overflow-hidden bg-black">
-                <img
-                  src={p.image}
-                  alt={p.title}
-                  className="w-full h-full object-cover group-hover:scale-[1.05] transition-transform duration-[900ms]"
-                  loading="lazy"
-                />
+              <img
+                src={p.image}
+                alt={p.title}
+                className="absolute inset-0 w-full h-full object-cover group-hover:scale-[1.06] transition-transform duration-[900ms]"
+                style={{ filter: 'brightness(0.75) contrast(1.1)' }}
+                loading="lazy"
+              />
+              <div
+                className="absolute inset-0"
+                style={{
+                  background:
+                    'linear-gradient(180deg, rgba(0,0,0,0.0) 0%, rgba(0,0,0,0.78) 100%)',
+                }}
+              />
+              <div className="absolute top-3 left-3 flex items-center gap-2 text-[9px] font-mono uppercase tracking-[0.25em] text-white/70">
+                <span className="w-4 h-[1px] bg-[#A3D1FF]" />
+                File {String(i + 1).padStart(2, '0')}
               </div>
-              <div className="px-4 py-3 flex items-center justify-between">
-                <span
-                  className="text-white text-sm leading-tight group-hover:text-[#A3D1FF] transition-colors"
-                  style={{ fontFamily: SERIF, fontWeight: 500 }}
+              <div className="absolute bottom-3 left-3 right-3">
+                <div
+                  className="text-[10px] font-mono uppercase tracking-[0.25em] mb-1"
+                  style={{ color: '#A3D1FF' }}
+                >
+                  {p.category}
+                </div>
+                <div
+                  className="text-white leading-[1.05]"
+                  style={{
+                    fontFamily: SERIF,
+                    fontSize: 'clamp(1rem, 1.4vw, 1.35rem)',
+                    fontWeight: 500,
+                  }}
                 >
                   {p.title}
-                </span>
-                <ArrowUpRight className="w-3 h-3 text-white/40 group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
+                </div>
               </div>
+              <ArrowUpRight className="absolute top-3 right-3 w-4 h-4 text-white/70 opacity-0 group-hover:opacity-100 transition-opacity" />
             </motion.a>
           ))}
         </div>
