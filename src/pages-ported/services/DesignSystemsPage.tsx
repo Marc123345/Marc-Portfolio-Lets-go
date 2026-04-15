@@ -12,8 +12,8 @@ import {
   ExternalLink,
   ShieldAlert,
   Truck,
-  Github,
 } from 'lucide-react';
+import Link from 'next/link';
 import ServiceLeadForm from '@/components/ServiceLeadForm';
 import { ServiceNavigator } from '@/components/ServiceEditorial';
 import { useRouter } from 'next/navigation';
@@ -93,14 +93,9 @@ function SentinelSystemCard() {
             </div>
           </div>
         </div>
-        <a
-          href="https://github.com/Marc123345/Cyber-Security-Design-System"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center gap-2 text-xs font-mono text-white/60 hover:text-white transition-colors border border-white/10 px-3 py-1.5 rounded-full"
-        >
-          <Github className="w-3.5 h-3.5" /> View repo
-        </a>
+        <span className="text-[10px] font-mono uppercase tracking-[0.25em] text-white/50">
+          Live · Components
+        </span>
       </div>
 
       {/* Tokens */}
@@ -506,16 +501,13 @@ export default function DesignSystemsPage() {
                   ),
                 )}
               </div>
-              <a
-                href="https://github.com/Marc123345/Cyber-Security-Design-System"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-white font-medium hover:text-[#A3D1FF] transition-colors"
+              <Link
+                href="/work/case-studies/sentinel-ds"
+                className="inline-flex items-center gap-2 text-white font-medium hover:text-[#A3D1FF] transition-colors border-b border-white/30 hover:border-[#A3D1FF] pb-1"
               >
-                <Github className="w-4 h-4" />
-                View on GitHub
-                <ExternalLink className="w-4 h-4" />
-              </a>
+                Read the case study
+                <ArrowRight className="w-4 h-4" />
+              </Link>
             </div>
             <SentinelSystemCard />
           </div>

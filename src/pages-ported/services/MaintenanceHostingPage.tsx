@@ -13,32 +13,34 @@ import {
   ServiceNavigator,
 } from '@/components/ServiceEditorial';
 
-export default function MonthlyRetainerPackage() {
+export default function MaintenanceHostingPage() {
   return (
     <>
       <ServiceMasthead
-        kicker="Package · Monthly Retainer"
-        title="Website,"
-        italicWord="Handled."
+        kicker="Service · Maintenance & Hosting"
+        title="Maintenance"
+        italicWord="& Hosting."
         volumeNumber="08"
         tagline={
           <>
-            For businesses who need a website that evolves — with someone who actually
-            knows the codebase. Monthly design, dev, and performance care.
+            Your website kept fast, secure, and online — by the same person who built it.
+            Monthly performance care, priority fixes, and Cloudflare-grade hosting
+            handled for you.
           </>
         }
-        meta={['Ongoing care', 'Same developer, every month', 'Predictable pricing']}
+        meta={['Same-day fixes', 'Cloudflare hosting', '99.99% uptime', 'Monthly report']}
         imageSrc="https://ik.imagekit.io/qcvroy8xpd/TTV8Liw.jpg"
       />
 
       <ServiceMarquee
         phrases={[
-          'Ongoing Care',
-          'Fixed Monthly',
-          'Design · Dev · SEO',
-          'Priority Fixes',
+          'Cloudflare Hosting',
+          'Same-day Fixes',
           'Performance Monitoring',
-          'Same Developer',
+          'Security Patches',
+          'Backups',
+          'CMS Care',
+          'One Developer',
         ]}
       />
 
@@ -206,7 +208,7 @@ export default function MonthlyRetainerPackage() {
         />
       </EditorialSection>
 
-      <ServiceNavigator currentSlug="monthly-retainer" />
+      <ServiceNavigator currentSlug="maintenance-hosting" />
       <ServiceColophon
         headline="One developer."
         italicHeadline="On retainer."

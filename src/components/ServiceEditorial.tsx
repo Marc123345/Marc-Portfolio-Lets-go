@@ -595,9 +595,13 @@ const ALL_SERVICES = [
   { slug: 'startup-mvp', title: 'Startup MVP', category: 'Launch' },
   { slug: 'ai-integration', title: 'AI Integration', category: 'AI' },
   { slug: 'cybersecurity', title: 'Cybersecurity UX', category: 'Security' },
+  { slug: 'seo-content-layout', title: 'SEO Content & Layout', category: 'SEO' },
+  { slug: 'aeo', title: 'AEO', category: 'Answer Engines' },
+  { slug: 'geo', title: 'GEO', category: 'Generative Search' },
+  { slug: 'local-seo', title: 'Local SEO', category: 'Local' },
   { slug: 'external-web-department', title: 'External Web Department', category: 'Retainer' },
   { slug: 'premium-web-package', title: 'Premium Web', category: 'Flagship' },
-  { slug: 'monthly-retainer', title: 'Monthly Retainer', category: 'Care' },
+  { slug: 'maintenance-hosting', title: 'Maintenance & Hosting', category: 'Care' },
 ];
 
 export function ServiceNavigator({ currentSlug }: { currentSlug: string }) {
@@ -670,7 +674,10 @@ export function ServiceNavigator({ currentSlug }: { currentSlug: string }) {
               Open the arc <ArrowUpRight className="w-3 h-3" />
             </Link>
           </div>
-          <ul className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-9 divide-x divide-white/10">
+          <ul
+            className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 divide-x divide-white/10"
+            style={{ gridTemplateColumns: undefined }}
+          >
             {ALL_SERVICES.map((s, i) => {
               const isActive = s.slug === currentSlug;
               return (

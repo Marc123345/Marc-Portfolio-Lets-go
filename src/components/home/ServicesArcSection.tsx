@@ -81,13 +81,49 @@ const services: ArcCard[] = [
     bullets: ['React + Next.js', 'CRM + analytics', 'Cloudflare hosting'],
   },
   {
-    id: 'monthly-retainer',
-    title: 'Monthly Retainer',
+    id: 'seo-content-layout',
+    title: 'SEO Content & Layout',
+    category: 'SEO',
+    blurb:
+      "Pages structured for search engines AND humans — content that ranks because it answers, layouts that convert.",
+    href: '/services/seo-content-layout',
+    bullets: ['On-page SEO', 'Conversion layouts', 'Schema.org'],
+  },
+  {
+    id: 'aeo',
+    title: 'AEO',
+    category: 'Answer Engines',
+    blurb:
+      'Get cited by ChatGPT, Perplexity, Claude, and Google AI Overviews. Structured content AI engines can extract.',
+    href: '/services/aeo',
+    bullets: ['ChatGPT + Perplexity', 'Schema-first', 'Citation tracking'],
+  },
+  {
+    id: 'geo',
+    title: 'GEO',
+    category: 'Generative Search',
+    blurb:
+      'Show up inside AI-generated answers across LLMs. The new SEO playbook for an AI-first search era.',
+    href: '/services/geo',
+    bullets: ['LLM-first content', 'Brand-as-entity', 'Cross-engine tracking'],
+  },
+  {
+    id: 'local-seo',
+    title: 'Local SEO',
+    category: 'Local',
+    blurb:
+      'Dominate Google Maps, win the Local 3-Pack, turn your Google Business Profile into your best landing page.',
+    href: '/services/local-seo',
+    bullets: ['GBP optimisation', 'Local 3-Pack', 'NAP + reviews'],
+  },
+  {
+    id: 'maintenance-hosting',
+    title: 'Maintenance & Hosting',
     category: 'Care',
     blurb:
-      'Website, handled. Monthly design, dev, and performance care from someone who knows your codebase.',
-    href: '/services/monthly-retainer',
-    bullets: ['Same-day fixes', 'Weekly cadence', 'Monthly perf report'],
+      'Your site kept fast, secure, and online — by the same person who built it. Cloudflare-grade hosting handled.',
+    href: '/services/maintenance-hosting',
+    bullets: ['Same-day fixes', 'Cloudflare hosting', 'Monthly perf report'],
   },
 ];
 
@@ -111,7 +147,7 @@ export default function ServicesArcSection() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1100px] h-[700px] bg-[#A3D1FF]/8 rounded-full blur-[160px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto relative">
-        <ChapterMarker number="Chapter · Services" label="09 Disciplines" />
+        <ChapterMarker number="Chapter · Services" label="13 Disciplines" />
 
         <div className="grid md:grid-cols-[1.2fr_1fr] gap-8 md:gap-16 items-end mb-12">
           <motion.h2

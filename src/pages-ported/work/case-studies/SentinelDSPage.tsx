@@ -2,7 +2,7 @@
 
 import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { ArrowUpRight, ExternalLink, Github, Mail, ShieldAlert } from 'lucide-react';
+import { ArrowUpRight, Mail, ShieldAlert } from 'lucide-react';
 import Link from 'next/link';
 import {
   ChapterMarker,
@@ -20,8 +20,6 @@ const SENTINEL = {
   info: '#3B82F6',
   muted: '#64748B',
 };
-
-const REPO = 'https://github.com/Marc123345/Cyber-Security-Design-System';
 
 function SentinelSystemCard() {
   return (
@@ -44,14 +42,12 @@ function SentinelSystemCard() {
             </div>
           </div>
         </div>
-        <a
-          href={REPO}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center gap-2 text-xs font-mono text-white/60 hover:text-white transition-colors border border-white/10 px-3 py-1.5"
+        <span
+          className="text-[10px] font-mono uppercase tracking-[0.25em]"
+          style={{ color: SENTINEL.muted }}
         >
-          <Github className="w-3.5 h-3.5" /> View repo
-        </a>
+          Live · Components
+        </span>
       </div>
 
       <div className="p-6 grid md:grid-cols-2 gap-6">
@@ -338,15 +334,9 @@ function Masthead() {
               </div>
             </div>
           ))}
-          <a
-            href={REPO}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="ml-auto inline-flex items-center gap-2 text-xs md:text-sm font-medium text-white border-b border-white/30 hover:text-[#3DD68C] hover:border-[#3DD68C] transition-colors pb-1"
-          >
-            <Github className="w-3.5 h-3.5" /> Open repo on GitHub
-            <ExternalLink className="w-3.5 h-3.5" />
-          </a>
+          <span className="ml-auto text-[10px] md:text-xs font-mono uppercase tracking-[0.25em] text-white/50">
+            Open Source · MIT
+          </span>
         </motion.div>
       </div>
     </section>
@@ -727,26 +717,23 @@ export default function SentinelDSPage() {
             </em>
           </motion.h2>
           <p className="text-xl text-white/70 max-w-3xl leading-relaxed mb-12">
-            Sentinel is open source. Use it, fork it, contribute. Or commission
-            a private design system tuned to your product&apos;s reality.
+            Want a private design system tuned to your product&apos;s reality —
+            tokens, components, documentation, the works? Let&apos;s build it.
           </p>
           <div className="flex flex-wrap items-center gap-6">
-            <a
-              href={REPO}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 bg-white text-black font-medium px-8 py-4 hover:bg-[#3DD68C] transition-colors group"
-            >
-              <Github className="w-4 h-4" />
-              Open the Repo
-              <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-            </a>
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 text-white font-medium border border-white/20 hover:border-white/60 px-8 py-4 transition-colors"
+              className="inline-flex items-center gap-3 bg-white text-black font-medium px-8 py-4 hover:bg-[#3DD68C] transition-colors group"
             >
               <Mail className="w-4 h-4" />
               Commission a Custom DS
+              <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+            </Link>
+            <Link
+              href="/services/design-systems"
+              className="inline-flex items-center gap-2 text-white font-medium border border-white/20 hover:border-white/60 px-8 py-4 transition-colors"
+            >
+              See Design Systems service
               <ArrowUpRight className="w-4 h-4" />
             </Link>
           </div>
