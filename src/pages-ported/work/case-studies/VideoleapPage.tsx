@@ -357,16 +357,6 @@ export default function VideoleapPage() {
             <p className="text-white mb-8">
               A personalized onboarding experience that helps users discover relevant templates and understand key features.
             </p>
-            <div className="bg-[#1b1b1b] p-8 rounded-xl border border-white/10">
-              <iframe 
-                style={{ border: "1px solid rgba(0, 0, 0, 0.1)" }} 
-                width="100%" 
-                height="600" 
-                src="https://embed.figma.com/proto/gxuN0lnbDFM9vLF6GupB8u/Videoleaps?node-id=2032-20108&scaling=scale-down&content-scaling=fixed&page-id=1183%3A10302&starting-point-node-id=2032%3A20223&show-proto-sidebar=1&embed-host=share" 
-                allowFullScreen
-                className="rounded-lg"
-              ></iframe>
-            </div>
             <div className="mt-8 space-y-4">
               <div className="flex items-start">
                 <CheckCircle2 className="w-5 h-5 text-[#A3D1FF] mt-1 mr-3" />
@@ -391,16 +381,6 @@ export default function VideoleapPage() {
             <p className="text-white mb-8">
               A dual-mode editor that caters to both beginners and advanced users, making video editing accessible to everyone.
             </p>
-            <div className="bg-[#1b1b1b] p-8 rounded-xl border border-white/10">
-              <iframe 
-                style={{ border: "1px solid rgba(0, 0, 0, 0.1)" }} 
-                width="100%" 
-                height="600" 
-                src="https://embed.figma.com/proto/gxuN0lnbDFM9vLF6GupB8u/Videoleaps?node-id=2022-13798&scaling=scale-down&content-scaling=fixed&page-id=1183%3A10302&starting-point-node-id=2022%3A13798&show-proto-sidebar=1&embed-host=share" 
-                allowFullScreen
-                className="rounded-lg"
-              ></iframe>
-            </div>
             <div className="mt-8 space-y-4">
               <div className="flex items-start">
                 <CheckCircle2 className="w-5 h-5 text-[#A3D1FF] mt-1 mr-3" />
@@ -425,16 +405,6 @@ export default function VideoleapPage() {
             <p className="text-white mb-8">
               A rewards system that encourages template creation and sharing, building an active community of creators.
             </p>
-            <div className="bg-[#1b1b1b] p-8 rounded-xl border border-white/10">
-              <iframe 
-                style={{ border: "1px solid rgba(0, 0, 0, 0.1)" }} 
-                width="100%" 
-                height="600" 
-                src="https://embed.figma.com/proto/gxuN0lnbDFM9vLF6GupB8u/Videoleaps?node-id=2444-16088&scaling=scale-down&content-scaling=fixed&page-id=1183%3A10302&starting-point-node-id=2444%3A16088&show-proto-sidebar=1&embed-host=share" 
-                allowFullScreen
-                className="rounded-lg"
-              ></iframe>
-            </div>
             <div className="mt-8 space-y-4">
               <div className="flex items-start">
                 <CheckCircle2 className="w-5 h-5 text-[#A3D1FF] mt-1 mr-3" />
