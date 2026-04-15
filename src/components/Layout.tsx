@@ -58,7 +58,6 @@ const navLinks: NavLink[] = [
 const tickerItems = [
   'Available for select projects — Q2 2026',
   'Awwwards recognised',
-  'Working globally',
   'Design · Development · Systems',
   'marcf@marcfriedmanwebdesign.com',
 ];
