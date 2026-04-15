@@ -43,6 +43,7 @@ const projectFaces = [
   { image: 'https://i.imgur.com/EwgHAuK.png', title: 'Fleet Management' },
   { image: 'https://i.imgur.com/QNHXpzT.jpeg', title: 'MyTube' },
   { image: 'https://i.imgur.com/SubVB9A.jpeg', title: 'Videoleap' },
+  { image: 'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%204%20-%2016_9.png?updatedAt=1767539579010', title: 'Sentinel DS' },
 ].map((p, i) => ({
   ...p,
   category: `Case File ${String(i + 1).padStart(2, '0')}`,

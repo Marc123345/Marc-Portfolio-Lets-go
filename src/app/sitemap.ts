@@ -41,6 +41,7 @@ const entries: Entry[] = [
   { path: 'work/case-studies/tar-chip-paving', priority: 0.8 },
   { path: 'work/case-studies/h2h-marketing', priority: 0.8 },
   { path: 'work/case-studies/ask-africa', priority: 0.8 },
+  { path: 'work/case-studies/sentinel-ds', priority: 0.8 },
 
   // Blog posts
   { path: 'blog/context-driven-design-decisions', priority: 0.8 },

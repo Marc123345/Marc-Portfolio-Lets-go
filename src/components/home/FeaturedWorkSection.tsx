@@ -233,6 +233,22 @@ const featured: Project[] = [
     ],
     tags: ['React', 'AI/ML', 'AWS'],
   },
+  {
+    title: 'Sentinel DS',
+    category: 'OSS · Design System',
+    blurb:
+      'Cybersecurity design system. Severity scale, dual themes, 15+ AA components — drop-in React, ~1,000 LOC.',
+    image:
+      'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%204%20-%2016_9.png?updatedAt=1767539579010',
+    liveUrl: 'https://github.com/Marc123345/Cyber-Security-Design-System',
+    caseStudyUrl: '/work/case-studies/sentinel-ds',
+    stats: [
+      { value: '15+', label: 'Components' },
+      { value: 'AA', label: 'A11y' },
+      { value: 'OSS', label: 'License' },
+    ],
+    tags: ['React', 'CSS Vars', 'OSS'],
+  },
 ];
 
 const PAGE_SIZE = 6;

@@ -107,10 +107,10 @@ const config: CaseStudyConfig = {
   ],
 
   next: {
-    title: 'Binns Media Group',
-    url: '/work/case-studies/binns-media',
+    title: 'Sentinel DS',
+    url: '/work/case-studies/sentinel-ds',
     image:
-      'https://ik.imagekit.io/qcvroy8xpd/Mockup%204%20-%2016x9.png?updatedAt=1767538713061',
+      'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%204%20-%2016_9.png?updatedAt=1767539579010',
   },
 };
 
