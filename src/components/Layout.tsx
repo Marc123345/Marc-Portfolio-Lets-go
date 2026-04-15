@@ -13,8 +13,8 @@ type NavLink = {
   label: string;
   to: string;
   number: string;
-  gradient: string;
-  tagline: string;
+  meta: string;
+  preview: string;
 };
 
 const navLinks: NavLink[] = [
@@ -22,36 +22,41 @@ const navLinks: NavLink[] = [
     label: 'Work',
     to: '/work',
     number: '01',
-    tagline: 'Selected case studies',
-    gradient: 'radial-gradient(120% 120% at 0% 0%, #A3D1FF 0%, #1b1b1b 55%, #000 100%)',
+    meta: '14 Case Files',
+    preview:
+      'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%204%20-%2016x9.png?updatedAt=1767539579710',
   },
   {
     label: 'Services',
     to: '/services',
     number: '02',
-    tagline: 'Design, development, systems',
-    gradient: 'radial-gradient(120% 120% at 100% 0%, #FFB800 0%, #1b1b1b 55%, #000 100%)',
+    meta: '09 Disciplines',
+    preview:
+      'https://ik.imagekit.io/qcvroy8xpd/uoq5Ztg.jpeg',
   },
   {
     label: 'Blog',
     to: '/blog',
     number: '03',
-    tagline: 'Notes on craft & strategy',
-    gradient: 'radial-gradient(120% 120% at 50% 100%, #1769FF 0%, #1b1b1b 55%, #000 100%)',
+    meta: '27 Essays',
+    preview:
+      'https://ik.imagekit.io/qcvroy8xpd/TTV8Liw.jpg',
   },
   {
     label: 'About',
     to: '/about',
     number: '04',
-    tagline: 'A decade of digital craft',
-    gradient: 'radial-gradient(120% 120% at 0% 100%, #C084FC 0%, #1b1b1b 55%, #000 100%)',
+    meta: 'Profile · Vol. 01',
+    preview:
+      'https://ik.imagekit.io/qcvroy8xpd/PW8VUKH.png?updatedAt=1759693058055&tr=f-webp',
   },
   {
     label: 'Contact',
     to: '/contact',
     number: '05',
-    tagline: "Let's build something",
-    gradient: 'radial-gradient(120% 120% at 100% 100%, #34D399 0%, #1b1b1b 55%, #000 100%)',
+    meta: 'Inbox · Q2 2026',
+    preview:
+      'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%201%20-%201x1(1).png?updatedAt=1767539579782',
   },
 ];
 
@@ -110,8 +115,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     setMenuOpen(false);
   };
 
-  const activeGradient =
-    hoveredIndex !== null ? navLinks[hoveredIndex].gradient : navLinks[0].gradient;
+  const previewIndex = hoveredIndex ?? 0;
 
   return (
     <div className="min-h-screen bg-black">
@@ -201,21 +205,28 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             exit={{ clipPath: 'circle(0% at calc(100% - 5rem) 2.5rem)' }}
             transition={{ duration: 0.7, ease: [0.76, 0, 0.24, 1] }}
           >
-            {/* Animated gradient background */}
-            <motion.div
-              className="absolute inset-0 transition-[background] duration-700 ease-out"
-              style={{ background: activeGradient }}
-            />
+            {/* Solid base */}
+            <div className="absolute inset-0 bg-black" />
+            {/* Subtle cyan glow — single ambient source, no random colors */}
+            <div className="absolute top-1/3 -left-40 w-[700px] h-[700px] bg-[#A3D1FF]/8 rounded-full blur-[160px] pointer-events-none" />
             {/* Grain overlay */}
             <div
-              className="absolute inset-0 opacity-[0.08] mix-blend-overlay pointer-events-none"
+              className="absolute inset-0 opacity-[0.06] mix-blend-overlay pointer-events-none"
               style={{
                 backgroundImage:
                   "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)' opacity='0.5'/></svg>\")",
               }}
             />
-            {/* Vignette */}
-            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_transparent_0%,_rgba(0,0,0,0.55)_100%)] pointer-events-none" />
+            {/* Corner frame guides */}
+            <div className="absolute inset-0 z-[5] pointer-events-none hidden md:block">
+              {['top-8 left-8', 'top-8 right-8', 'bottom-24 left-8', 'bottom-24 right-8'].map(
+                (pos, i) => (
+                  <div key={i} className={`absolute ${pos} w-4 h-4`}>
+                    <div className="absolute inset-0 border-l border-t border-white/20" />
+                  </div>
+                ),
+              )}
+            </div>
 
             <div className="relative h-full flex flex-col">
               {/* Main content area */}
@@ -276,57 +287,94 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                     </ul>
                   </nav>
 
-                  {/* Right preview panel */}
+                  {/* Right preview — grayscale image per hovered link */}
                   <motion.div
-                    className="hidden lg:flex flex-col justify-between h-full min-h-[420px] pl-8 border-l border-white/10"
+                    className="hidden lg:flex flex-col justify-between h-full min-h-[440px] pl-8 border-l border-white/10"
                     initial={{ opacity: 0, x: 40 }}
                     animate={{ opacity: 1, x: 0 }}
                     exit={{ opacity: 0, x: 40 }}
                     transition={{ delay: 0.5, duration: 0.6 }}
                   >
-                    <div>
-                      <p className="text-xs font-medium tracking-[0.3em] uppercase text-white/50 mb-6">
-                        Currently viewing
+                    <div className="flex items-center justify-between mb-6">
+                      <p className="text-[10px] font-mono uppercase tracking-[0.3em] text-white/50">
+                        — Preview
                       </p>
-                      <AnimatePresence mode="wait">
-                        <motion.div
-                          key={hoveredIndex ?? 'default'}
-                          initial={{ opacity: 0, y: 10 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          exit={{ opacity: 0, y: -10 }}
-                          transition={{ duration: 0.25 }}
-                        >
-                          <h3 className="text-5xl xl:text-6xl font-bold text-white leading-[1] tracking-tight mb-4">
-                            {hoveredIndex !== null
-                              ? navLinks[hoveredIndex].label
-                              : 'Explore'}
-                          </h3>
-                          <p className="text-lg text-white/70 max-w-sm leading-relaxed">
-                            {hoveredIndex !== null
-                              ? navLinks[hoveredIndex].tagline
-                              : 'Hover a link to preview.'}
-                          </p>
-                        </motion.div>
-                      </AnimatePresence>
+                      <p
+                        className="text-[10px] font-mono uppercase tracking-[0.3em] text-white/40"
+                        style={{ fontVariantNumeric: 'tabular-nums' }}
+                      >
+                        {String(previewIndex + 1).padStart(2, '0')} / 05
+                      </p>
                     </div>
 
-                    <div className="flex items-center gap-4 mt-8">
-                      <div className="flex items-center gap-2 text-xs font-medium tracking-[0.15em] uppercase text-white/70">
-                        <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-                        Available for work
+                    {/* Image stack — fades between previews */}
+                    <div className="relative aspect-[4/5] overflow-hidden border border-white/10">
+                      {navLinks.map((link, i) => (
+                        <motion.div
+                          key={link.label}
+                          className="absolute inset-0"
+                          animate={{ opacity: previewIndex === i ? 1 : 0 }}
+                          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+                        >
+                          <motion.img
+                            src={link.preview}
+                            alt=""
+                            className="w-full h-full object-cover grayscale contrast-125"
+                            animate={{ scale: previewIndex === i ? 1 : 1.06 }}
+                            transition={{ duration: 1.4, ease: [0.22, 1, 0.36, 1] }}
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent" />
+                        </motion.div>
+                      ))}
+
+                      {/* Corner film marks */}
+                      <div className="absolute top-3 left-3 w-3 h-3 border-l border-t border-white/40" />
+                      <div className="absolute top-3 right-3 w-3 h-3 border-r border-t border-white/40" />
+                      <div className="absolute bottom-3 left-3 w-3 h-3 border-l border-b border-white/40" />
+                      <div className="absolute bottom-3 right-3 w-3 h-3 border-r border-b border-white/40" />
+
+                      {/* Bottom overlay label */}
+                      <div className="absolute bottom-0 left-0 right-0 p-5">
+                        <AnimatePresence mode="wait">
+                          <motion.div
+                            key={previewIndex}
+                            initial={{ opacity: 0, y: 8 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: -8 }}
+                            transition={{ duration: 0.3 }}
+                          >
+                            <p className="text-[10px] font-mono uppercase tracking-[0.3em] text-[#A3D1FF] mb-1">
+                              {navLinks[previewIndex].meta}
+                            </p>
+                            <p
+                              className="text-white text-2xl leading-none"
+                              style={{
+                                fontFamily: "Georgia, 'Times New Roman', serif",
+                                fontWeight: 500,
+                              }}
+                            >
+                              {navLinks[previewIndex].label}
+                            </p>
+                          </motion.div>
+                        </AnimatePresence>
                       </div>
                     </div>
 
-                    <div>
-                      <p className="text-xs font-medium tracking-[0.3em] uppercase text-white/50 mb-4">
-                        Elsewhere
-                      </p>
+                    {/* Footer — availability + socials */}
+                    <div className="mt-8 space-y-5">
+                      <div className="flex items-center gap-2 text-[10px] font-mono uppercase tracking-[0.25em] text-white">
+                        <span className="relative flex w-2 h-2">
+                          <span className="absolute inset-0 rounded-full bg-green-400 animate-ping opacity-60" />
+                          <span className="relative w-2 h-2 rounded-full bg-green-400" />
+                        </span>
+                        Available — Q2 2026
+                      </div>
                       <div className="flex flex-wrap gap-3">
                         <a
                           href="https://www.linkedin.com/in/portfolio2/"
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="w-11 h-11 flex items-center justify-center rounded-full border border-white/20 text-white hover:bg-white hover:text-black transition-colors"
+                          className="w-10 h-10 flex items-center justify-center border border-white/20 text-white hover:bg-white hover:text-black transition-colors"
                           aria-label="LinkedIn"
                         >
                           <Linkedin className="w-4 h-4" />
@@ -335,7 +383,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                           href="https://www.behance.net/marcfriedmanweb"
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="w-11 h-11 flex items-center justify-center rounded-full border border-white/20 text-white hover:bg-white hover:text-black transition-colors"
+                          className="w-10 h-10 flex items-center justify-center border border-white/20 text-white hover:bg-white hover:text-black transition-colors"
                           aria-label="Behance"
                         >
                           <Palette className="w-4 h-4" />
@@ -344,7 +392,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                           href="https://www.awwwards.com/marc-friedman/"
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="w-11 h-11 flex items-center justify-center rounded-full border border-white/20 text-white hover:bg-white hover:text-black transition-colors"
+                          className="w-10 h-10 flex items-center justify-center border border-white/20 text-white hover:bg-white hover:text-black transition-colors"
                           aria-label="Awwwards"
                         >
                           <Trophy className="w-4 h-4" />
@@ -353,7 +401,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                           href={CALENDLY_LINK}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="w-11 h-11 flex items-center justify-center rounded-full border border-white/20 text-white hover:bg-white hover:text-black transition-colors"
+                          className="w-10 h-10 flex items-center justify-center border border-white/20 text-white hover:bg-white hover:text-black transition-colors"
                           aria-label="Schedule a call"
                         >
                           <Calendar className="w-4 h-4" />
@@ -372,16 +420,16 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                     Available
                   </div>
                   <div className="flex gap-2">
-                    <a href="https://www.linkedin.com/in/portfolio2/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="w-9 h-9 flex items-center justify-center rounded-full border border-white/20 text-white">
+                    <a href="https://www.linkedin.com/in/portfolio2/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="w-9 h-9 flex items-center justify-center border border-white/20 text-white">
                       <Linkedin className="w-3.5 h-3.5" />
                     </a>
-                    <a href="https://www.behance.net/marcfriedmanweb" target="_blank" rel="noopener noreferrer" aria-label="Behance" className="w-9 h-9 flex items-center justify-center rounded-full border border-white/20 text-white">
+                    <a href="https://www.behance.net/marcfriedmanweb" target="_blank" rel="noopener noreferrer" aria-label="Behance" className="w-9 h-9 flex items-center justify-center border border-white/20 text-white">
                       <Palette className="w-3.5 h-3.5" />
                     </a>
-                    <a href="https://www.awwwards.com/marc-friedman/" target="_blank" rel="noopener noreferrer" aria-label="Awwwards" className="w-9 h-9 flex items-center justify-center rounded-full border border-white/20 text-white">
+                    <a href="https://www.awwwards.com/marc-friedman/" target="_blank" rel="noopener noreferrer" aria-label="Awwwards" className="w-9 h-9 flex items-center justify-center border border-white/20 text-white">
                       <Trophy className="w-3.5 h-3.5" />
                     </a>
-                    <a href={CALENDLY_LINK} target="_blank" rel="noopener noreferrer" aria-label="Schedule" className="w-9 h-9 flex items-center justify-center rounded-full border border-white/20 text-white">
+                    <a href={CALENDLY_LINK} target="_blank" rel="noopener noreferrer" aria-label="Schedule" className="w-9 h-9 flex items-center justify-center border border-white/20 text-white">
                       <Calendar className="w-3.5 h-3.5" />
                     </a>
                   </div>
