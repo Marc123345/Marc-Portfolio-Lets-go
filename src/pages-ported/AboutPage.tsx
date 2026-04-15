@@ -4,6 +4,7 @@ import React, { useRef, useMemo } from 'react';
 import { ArrowUpRight, Mail } from 'lucide-react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import Link from 'next/link';
+import Globe from '@/components/Globe';
 
 /* Split a word into per-letter spans for kinetic reveal */
 function KineticWord({
@@ -621,6 +622,89 @@ export default function AboutPage() {
                   </span>
                 </div>
               ))}
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* ===================== CHAPTER · GLOBE ===================== */}
+      <section className="relative bg-black py-24 md:py-32 px-6 lg:px-12 border-t border-white/10 overflow-hidden">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[600px] bg-[#A3D1FF]/8 rounded-full blur-[160px] pointer-events-none" />
+        <div className="max-w-7xl mx-auto relative">
+          <ChapterMarker number="Interlude" label="Clients · Three Continents" />
+
+          <div className="grid lg:grid-cols-[1fr_1fr] gap-12 lg:gap-20 items-center">
+            {/* Left — editorial text */}
+            <div>
+              <motion.h2
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-80px' }}
+                transition={{ duration: 0.9 }}
+                className="text-white leading-[0.95] tracking-[-0.03em] mb-8"
+                style={{
+                  fontFamily: SERIF,
+                  fontSize: 'clamp(2.5rem, 6vw, 5rem)',
+                  fontWeight: 400,
+                }}
+              >
+                Clients where the <em className="italic text-[#A3D1FF]">sun rises.</em>
+              </motion.h2>
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: 0.15 }}
+                className="text-lg md:text-xl text-white/70 leading-relaxed mb-10 max-w-xl"
+              >
+                Shipped from — and to —{' '}
+                <strong className="text-white">US, Europe, and Africa</strong>. Time
+                zones sort themselves out. Good work travels.
+              </motion.p>
+
+              <motion.ul
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: 0.3 }}
+                className="grid grid-cols-2 gap-4 max-w-md"
+              >
+                {[
+                  { city: 'New York', country: 'USA' },
+                  { city: 'Washington D.C.', country: 'USA' },
+                  { city: 'Miami', country: 'USA' },
+                  { city: 'Los Angeles', country: 'USA' },
+                  { city: 'Tel Aviv', country: 'Israel' },
+                  { city: 'London', country: 'UK' },
+                  { city: 'Paris', country: 'France' },
+                  { city: 'Cape Town', country: 'South Africa' },
+                  { city: 'Nairobi', country: 'Kenya' },
+                ].map((l) => (
+                  <li
+                    key={l.city}
+                    className="border-b border-white/10 pb-3 text-sm"
+                  >
+                    <div className="text-white">{l.city}</div>
+                    <div className="text-[10px] font-mono uppercase tracking-[0.2em] text-white/40 mt-0.5">
+                      {l.country}
+                    </div>
+                  </li>
+                ))}
+              </motion.ul>
+            </div>
+
+            {/* Right — dot globe */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true, margin: '-80px' }}
+              transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
+              className="relative"
+            >
+              <Globe size={560} />
+              <p className="text-center mt-6 text-[10px] font-mono uppercase tracking-[0.3em] text-white/40">
+                — Drag to spin
+              </p>
             </motion.div>
           </div>
         </div>

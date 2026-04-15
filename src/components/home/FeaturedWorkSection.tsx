@@ -1,100 +1,117 @@
 "use client";
 
-import { ArrowUpRight, CircleCheck as CheckCircle } from 'lucide-react';
-import { motion, useScroll, useTransform } from 'framer-motion';
-import { useRef } from 'react';
-import MagneticButton from '@/components/MagneticButton';
-import FeaturedWorkCarousel from '@/components/FeaturedWorkCarousel';
+import { useState, useMemo } from 'react';
+import { ArrowUpRight, ExternalLink } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
+import InteractiveCube from '@/components/InteractiveCube';
 
 const SERIF = "Georgia, 'Times New Roman', serif";
 
-const portfolioProjects = [
+type Project = {
+  title: string;
+  category: string;
+  blurb: string;
+  image: string;
+  liveUrl?: string;
+  caseStudyUrl: string;
+  stats: { value: string; label: string }[];
+  tags: string[];
+};
+
+const featured: Project[] = [
   {
-    title: 'H2H Marketing',
-    image: 'https://ik.imagekit.io/qcvroy8xpd/image%201%20(5).png',
-    description:
-      'A bold digital presence for a social marketing agency connecting brands with audiences through authentic strategies',
-    tech: ['React', 'Tailwind CSS', 'Vite', 'Framer Motion'],
-    liveUrl: 'https://www.h2hsocialmarketing.com/',
-    caseStudy: '/work/case-studies/h2h-marketing',
-  },
-  {
-    title: 'Ask Africa',
-    image: 'https://ik.imagekit.io/qcvroy8xpd/image%202%20(1).png',
-    description:
-      "A commanding digital presence for one of Africa's leading research and consultancy firms",
-    tech: ['React', 'Tailwind CSS', 'Vite', 'Framer Motion'],
-    liveUrl: 'https://askafrica.co.za/',
-    caseStudy: '/work/case-studies/ask-africa',
-  },
-  {
-    title: 'Binns Media Group Platform',
+    title: 'Binns Media Group',
+    category: 'Media Platform',
+    blurb:
+      'Streaming-grade platform for authentic voices — Netflix-style UX on a lean production tech stack.',
     image:
       'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%204%20-%2016x9.png?updatedAt=1767539579710',
-    description:
-      'A cutting-edge digital media platform transforming the way content creators connect with audiences',
-    tech: ['React 18', 'TypeScript', 'Postgres', 'Framer Motion'],
     liveUrl: 'https://www.binnsmediagroup.com',
-    caseStudy: '/work/case-studies/binns-media',
+    caseStudyUrl: '/work/case-studies/binns-media',
+    stats: [
+      { value: '98', label: 'Lighthouse' },
+      { value: '4x', label: 'Engagement' },
+      { value: '18mo', label: 'Retainer' },
+    ],
+    tags: ['React 18', 'TypeScript', 'Postgres'],
+  },
+  {
+    title: 'Untapped Africa',
+    category: 'Impact / Storytelling',
+    blurb:
+      'A mission-first platform that helps bring clean water to 500,000+ people across 8 African countries.',
+    image:
+      'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%201%20-%201x1(1).png?updatedAt=1767539579782',
+    liveUrl: 'https://untappedafrica.co.za',
+    caseStudyUrl: '/work/case-studies/untapped-africa',
+    stats: [
+      { value: '500k+', label: 'People' },
+      { value: '08', label: 'Countries' },
+      { value: '250%', label: 'Engagement' },
+    ],
+    tags: ['Next.js', 'TypeScript', 'Mapbox GL'],
+  },
+  {
+    title: 'H2H Marketing',
+    category: 'Agency Brand',
+    blurb:
+      'Bold brand-first digital presence for a social marketing agency connecting brands with real audiences.',
+    image: 'https://ik.imagekit.io/qcvroy8xpd/image%201%20(5).png',
+    liveUrl: 'https://www.h2hsocialmarketing.com/',
+    caseStudyUrl: '/work/case-studies/h2h-marketing',
+    stats: [
+      { value: '100%', label: 'Custom' },
+      { value: '<2s', label: 'Load' },
+      { value: 'AA', label: 'A11y' },
+    ],
+    tags: ['React', 'Tailwind', 'Framer'],
   },
   {
     title: 'Paving Leads',
+    category: 'SEO / Lead Gen',
+    blurb:
+      'Failing Core Web Vitals → 98 Lighthouse. Organic leads doubled in the first month after launch.',
     image:
       'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%204%20-%2016_9.png?updatedAt=1767539579010',
-    description:
-      'High-velocity SEO engine ranked #1 on Google, generating qualified leads for paving contractors',
-    tech: ['React', 'Node.js', 'SEO Optimization', 'Lead Generation'],
     liveUrl: 'https://pavinglead.com/',
-    caseStudy: '/work/case-studies/paving-leads',
+    caseStudyUrl: '/work/case-studies/paving-leads',
+    stats: [
+      { value: '#1', label: 'Google' },
+      { value: '300%', label: 'Traffic' },
+      { value: '2x', label: 'Leads' },
+    ],
+    tags: ['Next.js', 'SEO', 'Lead Gen'],
   },
   {
-    title: 'A Secure Annapolis Locksmith',
-    image:
-      'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%201%20-%201x1(2).png?updatedAt=1767539579194',
-    description:
-      'Professional locksmith website with emergency service booking and local SEO dominance',
-    tech: ['React', 'Node.js', 'Tailwind CSS', 'Local SEO'],
-    liveUrl: 'https://www.asecureannapolislocksmith.com',
-    caseStudy: '/work/case-studies/secure-annapolis',
-  },
-  {
-    title: 'Friedman & Cohen',
-    image:
-      'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%201%20-%201x1(3).png?updatedAt=1767539579776',
-    description:
-      'B2B procurement platform streamlining wholesale operations for retail businesses',
-    tech: ['React', 'Node.js', 'PostgreSQL', 'Real-time Data'],
-    liveUrl: 'https://b2b.fandc.co.za',
-    caseStudy: '/work/case-studies/friedman-cohen',
+    title: 'AutoMarginX',
+    category: 'SaaS · Analytics',
+    blurb:
+      'Real-time dealer analytics platform. Dealerships saw 35% faster decisions and higher margins.',
+    image: 'https://i.imgur.com/PiKh199.png',
+    caseStudyUrl: '/work/case-studies/automarginx',
+    stats: [
+      { value: '35%', label: 'Decisions' },
+      { value: 'Live', label: 'Telemetry' },
+      { value: 'RBAC', label: 'Auth' },
+    ],
+    tags: ['React', 'Node.js', 'Postgres'],
   },
   {
     title: 'iLight Care',
+    category: 'AI · Healthcare',
+    blurb:
+      'Brand, website, MVP platform, and pitch deck. Founder went from vision to investor-ready in 6 weeks.',
     image:
       'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%201%20-%201x1(5).png?updatedAt=1767539579818',
-    description: 'AI-powered healthcare platform for patient care and medical diagnostics',
-    tech: ['React', 'Node.js', 'AI/ML', 'Healthcare Tech'],
     liveUrl: 'https://www.ilight.care',
-    caseStudy: '/work/case-studies/ilight',
-  },
-  {
-    title: 'Chad Le Clos Swimming',
-    image: 'https://i.imgur.com/ApfYPlH.jpg',
-    description:
-      "Olympic champion's swimming clinics platform with booking and athlete management",
-    tech: ['Next.js', 'Tailwind CSS', 'Framer Motion', 'Booking System'],
-    liveUrl: 'https://chadleclosswimming.com',
-    caseStudy: '/work/case-studies/chad-le-clos',
-  },
-  {
-    title: 'Tar & Chip Paving',
-    image:
-      'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%201%20-%201x1(6).png?updatedAt=1767539579420',
-    description:
-      'Specialized surface solutions showcase with project portfolio and instant quote generation',
-    tech: ['React', 'Tailwind CSS', 'Responsive Design', 'Quote System'],
-    liveUrl: 'https://cumberlandtarchip.org/',
-    caseStudy: '/work/case-studies/tar-chip-paving',
+    caseStudyUrl: '/work/case-studies/ilight',
+    stats: [
+      { value: '6wk', label: 'Vision→MVP' },
+      { value: 'LLM', label: 'Grounded' },
+      { value: 'Deck', label: 'Included' },
+    ],
+    tags: ['React', 'Node.js', 'AI/ML'],
   },
 ];
 
@@ -113,184 +130,202 @@ function ChapterMarker({ number, label }: { number: string; label: string }) {
 }
 
 export default function FeaturedWorkSection() {
-  const sectionRef = useRef<HTMLElement>(null);
-  const featuredRef = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: featuredRef,
-    offset: ['start end', 'end start'],
-  });
-  const imageY = useTransform(scrollYProgress, [0, 1], ['-8%', '8%']);
-  const imageScale = useTransform(scrollYProgress, [0, 0.5, 1], [1.05, 1, 1.05]);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const active = featured[activeIndex];
+
+  const cubeFaces = useMemo(
+    () =>
+      featured.map((p) => ({
+        image: p.image,
+        category: p.category,
+        title: p.title,
+      })),
+    [],
+  );
 
   return (
-    <section
-      ref={sectionRef}
-      className="relative py-28 md:py-36 px-6 lg:px-12 bg-[#0a0a0a] border-t border-white/10 overflow-hidden"
-    >
-      <div className="max-w-7xl mx-auto">
-        <ChapterMarker number="Chapter · Selected Work" label="Portfolio · Vol. 01" />
+    <section className="relative py-28 md:py-36 px-6 lg:px-12 bg-[#0a0a0a] border-t border-white/10 overflow-hidden">
+      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[900px] h-[500px] bg-[#A3D1FF]/8 rounded-full blur-[140px] pointer-events-none" />
 
-        <motion.h2
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-80px' }}
-          transition={{ duration: 0.9 }}
-          className="text-white leading-[0.95] tracking-[-0.03em] mb-8 max-w-5xl"
-          style={{
-            fontFamily: SERIF,
-            fontSize: 'clamp(2.75rem, 7vw, 6.5rem)',
-            fontWeight: 400,
-          }}
-        >
-          Real projects.{' '}
-          <em className="italic text-[#A3D1FF]">Real results.</em>
-        </motion.h2>
+      <div className="max-w-7xl mx-auto relative">
+        <ChapterMarker number="Chapter · Selected Work" label="Portfolio · 06 Files" />
 
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-xl text-white/60 mb-20 max-w-2xl"
-        >
-          No templates. No WordPress. No shortcuts. Everything hand-built from the tokens up.
-        </motion.p>
-      </div>
-
-      {/* ======== FEATURED PROJECT — magazine hero spread ======== */}
-      <div ref={featuredRef} className="max-w-7xl mx-auto mb-32">
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true, margin: '-80px' }}
-          transition={{ duration: 0.8 }}
-          className="relative grid lg:grid-cols-[1.3fr_1fr] gap-10 lg:gap-16 items-center"
-        >
-          {/* Image with parallax */}
-          <div className="relative aspect-[4/5] lg:aspect-[16/12] overflow-hidden lg:bg-[#1b1b1b]">
-            <motion.img
-              src="https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%201%20-%201x1(1).png?updatedAt=1767539579782"
-              alt="Untapped Africa"
-              className="absolute inset-0 w-full h-full object-cover"
-              style={{ y: imageY, scale: imageScale }}
-            />
-            <div className="absolute inset-0 bg-gradient-to-tr from-black/30 via-transparent to-transparent" />
-            <div className="absolute top-6 left-6 flex items-center gap-2 text-[10px] font-mono uppercase tracking-[0.3em] text-white/80">
-              <span className="w-6 h-[1px] bg-[#A3D1FF]" />
-              Featured
-            </div>
-            <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between text-[10px] font-mono uppercase tracking-[0.3em] text-white/70">
-              <span>File · 01</span>
-              <span>Untapped Africa · 2025</span>
-            </div>
-          </div>
-
-          {/* Content */}
-          <div>
-            <p className="text-xs font-mono uppercase tracking-[0.35em] text-[#A3D1FF] mb-4">
-              — Case File 01
-            </p>
-            <h3
-              className="text-white mb-8 leading-[0.95] tracking-[-0.02em]"
-              style={{
-                fontFamily: SERIF,
-                fontSize: 'clamp(2.5rem, 5vw, 4.5rem)',
-                fontWeight: 400,
-              }}
-            >
-              Untapped <em className="italic text-[#A3D1FF]">Africa</em>
-            </h3>
-            <p className="text-lg text-white/75 leading-relaxed mb-8">
-              A platform that brings clean water to{' '}
-              <strong className="text-white">500,000+ people across 8 African countries</strong>.
-              Built with Next.js and Mapbox to track, manage, and fund water infrastructure
-              projects at scale.
-            </p>
-
-            <div className="grid grid-cols-3 gap-4 mb-10 pb-10 border-b border-white/10">
-              {[
-                { n: '250%', l: 'engagement' },
-                { n: '8', l: 'countries' },
-                { n: '500k+', l: 'people served' },
-              ].map((s) => (
-                <div key={s.l}>
-                  <div
-                    className="text-white leading-none mb-2"
-                    style={{
-                      fontFamily: SERIF,
-                      fontSize: 'clamp(1.5rem, 3vw, 2.5rem)',
-                      fontWeight: 500,
-                      fontVariantNumeric: 'tabular-nums',
-                    }}
-                  >
-                    {s.n}
-                  </div>
-                  <div className="text-[10px] font-mono uppercase tracking-[0.2em] text-white/50">
-                    {s.l}
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            <div className="flex flex-wrap gap-2 mb-8">
-              {['Next.js', 'TypeScript', 'Postgres', 'Mapbox GL'].map((t) => (
-                <span
-                  key={t}
-                  className="px-3 py-1 border border-white/15 text-white/70 text-xs font-mono"
-                >
-                  {t}
-                </span>
-              ))}
-            </div>
-
-            <div className="flex flex-wrap gap-4">
-              <a
-                href="https://untappedafrica.co.za"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-white font-medium border-b border-white/30 hover:border-[#A3D1FF] hover:text-[#A3D1FF] transition-colors py-1"
-              >
-                View live
-                <ArrowUpRight className="w-4 h-4" />
-              </a>
-              <Link
-                href="/work/case-studies/untapped-africa"
-                className="inline-flex items-center gap-2 bg-white text-black font-medium px-6 py-3 hover:bg-[#A3D1FF] transition-colors"
-              >
-                Read case study
-                <ArrowUpRight className="w-4 h-4" />
-              </Link>
-            </div>
-          </div>
-        </motion.div>
-      </div>
-
-      {/* ======== OTHER PROJECTS — carousel ======== */}
-      <div className="max-w-7xl mx-auto">
-        <div className="flex items-end justify-between mb-10">
-          <p className="text-xs font-mono uppercase tracking-[0.3em] text-white/50">
-            — More from the archive
-          </p>
-          <span className="text-xs font-mono text-white/40">
-            {portfolioProjects.length} more files
-          </span>
+        <div className="grid md:grid-cols-[1.2fr_1fr] gap-8 md:gap-16 items-end mb-16">
+          <motion.h2
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '-80px' }}
+            transition={{ duration: 0.9 }}
+            className="text-white leading-[0.95] tracking-[-0.03em]"
+            style={{
+              fontFamily: SERIF,
+              fontSize: 'clamp(2.75rem, 7vw, 6.5rem)',
+              fontWeight: 400,
+            }}
+          >
+            Real projects.{' '}
+            <em className="italic text-[#A3D1FF]">Real results.</em>
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-white/60 text-lg leading-relaxed"
+          >
+            Six selected case files — drag the cube or click a project to rotate it
+            into view.
+          </motion.p>
         </div>
 
-        <FeaturedWorkCarousel
-          projects={portfolioProjects}
-          autoplayInterval={6000}
-        />
+        <div className="grid lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+          {/* List */}
+          <div className="lg:col-span-3 order-2 lg:order-1">
+            <p className="text-[10px] font-mono uppercase tracking-[0.3em] text-white/40 mb-5">
+              — Case files
+            </p>
+            <ul className="border-y border-white/10">
+              {featured.map((p, i) => {
+                const isActive = i === activeIndex;
+                return (
+                  <li
+                    key={p.title}
+                    className="border-b border-white/10 last:border-b-0"
+                  >
+                    <button
+                      onClick={() => setActiveIndex(i)}
+                      className={`group w-full text-left flex items-center gap-3 py-4 transition-colors ${
+                        isActive ? 'text-white' : 'text-white/50 hover:text-white'
+                      }`}
+                    >
+                      <span
+                        className={`text-[10px] font-mono tracking-[0.2em] w-6 shrink-0 ${
+                          isActive ? 'text-[#A3D1FF]' : 'text-white/30'
+                        }`}
+                        style={{ fontVariantNumeric: 'tabular-nums' }}
+                      >
+                        {String(i + 1).padStart(2, '0')}
+                      </span>
+                      <span
+                        className="flex-1 leading-tight"
+                        style={{
+                          fontFamily: SERIF,
+                          fontSize: 'clamp(1rem, 1.2vw, 1.15rem)',
+                          fontWeight: 500,
+                        }}
+                      >
+                        {p.title}
+                      </span>
+                      {isActive && (
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#A3D1FF]" />
+                      )}
+                    </button>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
 
-        <div className="mt-16 text-center">
-          <MagneticButton>
-            <Link
-              href="/work"
-              className="inline-flex items-center gap-3 bg-white text-black font-medium px-8 py-4 hover:bg-[#A3D1FF] transition-colors group"
-            >
-              <span>View the complete archive</span>
-              <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-            </Link>
-          </MagneticButton>
+          {/* Cube */}
+          <div className="lg:col-span-5 order-1 lg:order-2">
+            <div className="relative flex items-center justify-center min-h-[380px] lg:min-h-[460px]">
+              <InteractiveCube faces={cubeFaces} activeIndex={activeIndex} />
+            </div>
+          </div>
+
+          {/* Detail */}
+          <div className="lg:col-span-4 order-3">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={active.title}
+                initial={{ opacity: 0, y: 16 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+              >
+                <p className="text-[10px] font-mono uppercase tracking-[0.3em] text-[#A3D1FF] mb-4">
+                  — {active.category}
+                </p>
+                <h3
+                  className="text-white mb-4 leading-[1.0] tracking-tight"
+                  style={{
+                    fontFamily: SERIF,
+                    fontSize: 'clamp(1.75rem, 3vw, 2.75rem)',
+                    fontWeight: 500,
+                  }}
+                >
+                  {active.title}
+                </h3>
+                <p className="text-white/70 leading-relaxed mb-6">{active.blurb}</p>
+
+                <div className="grid grid-cols-3 gap-2 py-4 border-y border-white/10 mb-6">
+                  {active.stats.map((s) => (
+                    <div key={s.label}>
+                      <div
+                        className="text-white leading-none mb-1"
+                        style={{
+                          fontFamily: SERIF,
+                          fontSize: 'clamp(1.15rem, 1.6vw, 1.5rem)',
+                          fontWeight: 500,
+                          fontVariantNumeric: 'tabular-nums',
+                        }}
+                      >
+                        {s.value}
+                      </div>
+                      <div className="text-[9px] font-mono uppercase tracking-[0.15em] text-white/50">
+                        {s.label}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="flex flex-wrap gap-2 mb-6">
+                  {active.tags.map((t) => (
+                    <span
+                      key={t}
+                      className="px-2 py-0.5 text-[10px] font-mono uppercase tracking-[0.2em] border border-white/15 text-white/60"
+                    >
+                      {t}
+                    </span>
+                  ))}
+                </div>
+
+                <div className="flex flex-wrap gap-3">
+                  <Link
+                    href={active.caseStudyUrl}
+                    className="inline-flex items-center gap-2 bg-white text-black font-medium px-5 py-2.5 hover:bg-[#A3D1FF] transition-colors group"
+                  >
+                    Read case study
+                    <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                  </Link>
+                  {active.liveUrl && (
+                    <a
+                      href={active.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-white font-medium border border-white/20 hover:border-white/60 transition-colors px-5 py-2.5 group"
+                    >
+                      Live
+                      <ExternalLink className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                    </a>
+                  )}
+                </div>
+              </motion.div>
+            </AnimatePresence>
+          </div>
+        </div>
+
+        <div className="mt-20 flex items-center justify-between border-t border-white/10 pt-8">
+          <span className="text-[10px] font-mono uppercase tracking-[0.3em] text-white/40">
+            — End of spread
+          </span>
+          <Link
+            href="/work"
+            className="inline-flex items-center gap-2 text-white font-medium border-b border-white/30 hover:border-[#A3D1FF] hover:text-[#A3D1FF] transition-colors py-1"
+          >
+            View the complete archive
+            <ArrowUpRight className="w-4 h-4" />
+          </Link>
         </div>
       </div>
     </section>

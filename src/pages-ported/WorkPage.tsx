@@ -1,551 +1,507 @@
 "use client";
 
-import React, { useState, useEffect, useRef } from 'react';
-import { CircleCheck as CheckCircle2 } from 'lucide-react';
-import TextReveal from '@/components/TextReveal';
-import ProjectCard3D from '@/components/ProjectCard3D';
+import React, { useState, useMemo } from 'react';
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
+import { motion, AnimatePresence } from 'framer-motion';
+import { ArrowUpRight, ExternalLink } from 'lucide-react';
+import InteractiveCube from '@/components/InteractiveCube';
+import {
+  ChapterMarker,
+  ServiceMarquee,
+  EditorialSection,
+  StatsBar,
+  ServiceColophon,
+  SERIF,
+} from '@/components/ServiceEditorial';
 
-interface Project {
-  title: string;
-  description: string;
-  image: string;
-  liveUrl?: string;
-  caseStudyUrl?: string;
-  impact: string[];
-  technologies: string[];
-  category: 'website' | 'landing' | 'saas';
-  featured?: boolean;
-  customContent?: React.ReactNode;
-}
-
-const projects: Project[] = [
-  // Featured Project
-  {
-    title: "H2H Marketing",
-    description: "A bold digital presence for a social marketing agency that connects brands with their audiences through authentic, human-to-human strategies. Built to establish credibility and convert visitors into clients.",
-    image: "https://ik.imagekit.io/qcvroy8xpd/image%201%20(5).png",
-    liveUrl: "https://www.h2hsocialmarketing.com/",
-    caseStudyUrl: "/work/case-studies/h2h-marketing",
-    impact: [
-      "Modern brand-first design",
-      "Conversion-focused layout",
-      "Fully responsive experience"
-    ],
-    technologies: ["React", "Tailwind CSS", "Vite", "Framer Motion"],
-    category: "website",
-    featured: true
-  },
-  {
-    title: "Untapped Africa",
-    description: "Revolutionizing water infrastructure solutions across Africa with innovative technology and sustainable practices. A comprehensive platform for project management, data visualization, and community engagement.",
-    image: "https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%201%20-%201x1(1).png?updatedAt=1767539579782",
-    liveUrl: "https://untappedafrica.co.za",
-    caseStudyUrl: "/work/case-studies/untapped-africa",
-    impact: [
-      "250% increase in engagement",
-      "8 countries impacted",
-      "500,000+ people served"
-    ],
-    technologies: ["Next.js", "TypeScript", "Postgres", "Mapbox GL"],
-    category: "website"
-  },
-
-  {
-    title: "Ask Africa",
-    description: "A commanding digital presence for one of Africa's leading research and consultancy firms, built to reflect decades of expertise and continental reach.",
-    image: "https://ik.imagekit.io/qcvroy8xpd/image%202%20(1).png",
-    liveUrl: "https://askafrica.co.za/",
-    caseStudyUrl: "/work/case-studies/ask-africa",
-    impact: [
-      "Authority-driven design",
-      "Pan-African brand positioning",
-      "Enterprise-ready platform"
-    ],
-    technologies: ["React", "Tailwind CSS", "Vite", "Framer Motion"],
-    category: "website"
-  },
-
-  // Original Featured Project now as regular
-  {
-    title: "Binns Media Group Platform",
-    description: "A cutting-edge digital media platform designed to showcase BMG's diverse content portfolio including podcasts, TV shows, and exclusive content. The platform serves as both a content hub and a representation of BMG's commitment to amplifying diverse voices in media.",
-    image: "https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%204%20-%2016x9.png?updatedAt=1767539579710",
-    liveUrl: "https://www.binnsmediagroup.com",
-    caseStudyUrl: "/work/case-studies/binns-media",
-    impact: [
-      "High performance score",
-      "Increased engagement",
-      "Faster load times",
-      "Excellent uptime"
-    ],
-    technologies: ["React 18", "TypeScript", "Postgres", "GSAP"],
-    category: "website"
-  },
-  {
-    title: "Paving Leads",
-    description: "High-velocity SEO engine that dominated search results and ranked #1 on Google for competitive keywords.",
-    image: "https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%204%20-%2016_9.png?updatedAt=1767539579010",
-    liveUrl: "https://pavinglead.com/",
-    caseStudyUrl: "/work/case-studies/paving-leads",
-    impact: [
-      "#1 Google ranking",
-      "300% increase in organic traffic",
-      "Strong lead conversion"
-    ],
-    technologies: ["React", "Node.js", "SEO Optimization", "Analytics"],
-    category: "website"
-  },
-
-  // Websites
-  {
-    title: "A Secure Annapolis Locksmith",
-    description: "Professional locksmith website showcasing residential, commercial, and automotive services.",
-    image: "https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%201%20-%201x1(2).png?updatedAt=1767539579194",
-    liveUrl: "https://www.asecureannapolislocksmith.com",
-    caseStudyUrl: "/work/case-studies/secure-annapolis",
-    impact: [
-      "Increased leads",
-      "Strong mobile conversion",
-      "Excellent customer rating"
-    ],
-    technologies: ["React", "Node.js", "Tailwind CSS", "Local SEO"],
-    category: "website"
-  },
-  {
-    title: "Friedman & Cohen",
-    description: "Professional B2B procurement platform for property developers.",
-    image: "https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%201%20-%201x1(3).png?updatedAt=1767539579776",
-    liveUrl: "https://b2b.fandc.co.za",
-    caseStudyUrl: "/work/case-studies/friedman-cohen",
-    impact: [
-      "100+ years of excellence",
-      "High customer rating",
-      "Multiple property partners"
-    ],
-    technologies: ["React", "Node.js", "PostgreSQL"],
-    category: "saas"
-  },
-  {
-    title: "Tar & Chip Paving",
-    description: "Specialized surface solutions showcase for tar and chip paving applications.",
-    image: "https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%204%20-%2016x9(5).png?updatedAt=1767539578933",
-    liveUrl: "https://cumberlandtarchip.org/",
-    caseStudyUrl: "/work/case-studies/tar-chip-paving",
-    impact: [
-      "Professional web presence",
-      "Mobile-optimized design",
-      "Industry-focused aesthetic"
-    ],
-    technologies: ["React", "Tailwind CSS", "Responsive Design"],
-    category: "website"
-  },
-
-  // Landing Pages
-  {
-    title: "Chad Le Clos Swimming",
-    description: "Professional landing page for Olympic champion's swimming clinics.",
-    image: "https://i.imgur.com/ApfYPlH.jpg",
-    liveUrl: "https://chadleclosswimming.com",
-    caseStudyUrl: "/work/case-studies/chad-le-clos",
-    impact: [
-      "Numerous sign-ups in days",
-      "High form completion rate",
-      "Strong mobile conversion rate"
-    ],
-    technologies: ["Next.js", "Tailwind CSS", "Framer Motion"],
-    category: "landing"
-  },
-
-  // SaaS Projects
-  {
-    title: "iLight",
-    description: "Modern lighting e-commerce platform with seamless user experience.",
-    image: "https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%204%20-%2016x9(4).png?updatedAt=1767539579060",
-    liveUrl: "https://ilight.co.za",
-    caseStudyUrl: "/work/case-studies/ilight",
-    impact: [
-      "Modern shopping experience",
-      "Increased conversions",
-      "Excellent mobile performance"
-    ],
-    technologies: ["Next.js", "Shopify", "TypeScript"],
-    category: "saas"
-  },
-  {
-    title: "MyTube Platform",
-    description: "Video metadata management system for media and manufacturing.",
-    image: "https://ik.imagekit.io/qcvroy8xpd/QNHXpzT%20(1).jpeg",
-    caseStudyUrl: "/work/case-studies/mytube",
-    impact: [
-      "Faster metadata processing",
-      "High user satisfaction",
-      "Significant time saved in analysis"
-    ],
-    technologies: ["React", "Node.js", "AI/ML", "PostgreSQL"],
-    category: "saas"
-  },
-  {
-    title: "Fleet Management System",
-    description: "Comprehensive fleet tracking and management solution.",
-    image: "https://i.imgur.com/EwgHAuK.png",
-    caseStudyUrl: "/work/case-studies/fleet-management",
-    impact: [
-      "Improved fleet efficiency",
-      "Cost reduction",
-      "High user satisfaction"
-    ],
-    technologies: ["React Native", "Node.js", "MongoDB"],
-    category: "saas"
-  },
-  {
-    title: "AutoMarginX",
-    description: "Dealership management platform with real-time analytics.",
-    image: "https://i.imgur.com/PiKh199.png",
-    caseStudyUrl: "/work/case-studies/automarginx",
-    impact: [
-      "Faster decisions",
-      "Higher profits",
-      "Significant time saved"
-    ],
-    technologies: ["React", "Node.js", "PostgreSQL"],
-    category: "saas"
-  },
-  {
-    title: "Videoleap",
-    description: "AI-powered video editing platform with template marketplace.",
-    image: "https://i.imgur.com/SubVB9A.jpeg",
-    caseStudyUrl: "/work/case-studies/videoleap",
-    impact: [
-      "Increased template usage",
-      "Better user retention",
-      "Enhanced content sharing"
-    ],
-    technologies: ["React", "Node.js", "AI/ML", "AWS"],
-    category: "saas"
-  }
-];
-
-const portfolioSchema = {
-  "@context": "https://schema.org",
-  "@type": "CollectionPage",
-  "name": "Portfolio - Marc Friedman's Digital Design & Development Work",
-  "description": "Real projects. Real results. No templates, no WordPress, no shortcuts. Featured projects include websites, landing pages, and SaaS applications.",
-  "creator": {
-    "@type": "Person",
-    "name": "Marc Friedman",
-    "jobTitle": "Full Stack Designer & Developer",
-    "url": "https://marcfriedmanportfolio.com"
-  },
-  "mainEntity": {
-    "@type": "ItemList",
-    "itemListElement": projects.map((project, index) => ({
-      "@type": "ListItem",
-      "position": index + 1,
-      "item": {
-        "@type": "CreativeWork",
-        "name": project.title,
-        "description": project.description,
-        "image": project.image,
-        "url": project.liveUrl || `https://marcfriedmanportfolio.com/work/case-studies/${project.caseStudyUrl?.split('/').pop()}`,
-        "creator": {
-          "@type": "Person",
-          "name": "Marc Friedman"
-        }
-      }
-    }))
-  }
+const workSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: 'Portfolio — Marc Friedman',
+  description:
+    'Real projects. Real results. No templates, no WordPress, no shortcuts.',
+  url: 'https://www.marcfriedmanportfolio.com/work',
 };
 
-function FeaturedProjectCard({ project }: { project: Project }) {
-  const router = useRouter();
-  
-  return (
-    <div
-      className="bg-[#1b1b1b] rounded-xl overflow-hidden border border-white/10 hover:border-[#A3D1FF] transition-all group col-span-full mb-12"
-    >
-      <div className="grid md:grid-cols-2 gap-8">
-        <div className="aspect-[16/10] overflow-hidden relative">
-          <img
-            src={project.image}
-            alt={project.title}
-            className="w-full h-full object-cover"
-          />
-        </div>
-        <div className="p-6 md:p-8">
-          <div className="flex items-center justify-between mb-4">
-            <span className="text-[#A3D1FF] text-sm bg-[#A3D1FF]/10 px-4 py-2 rounded-full">Featured Project</span>
-          </div>
-          <h3 className="text-xl md:text-3xl font-bold text-white mb-3 md:mb-4">{project.title}</h3>
-          <p className="text-sm md:text-base text-white mb-4 md:mb-6">{project.description}</p>
-          <div className="space-y-3 md:space-y-4 mb-4 md:mb-6">
-            {project.impact.map((impact, index) => (
-              <div key={index} className="flex items-center text-xs md:text-sm">
-                <CheckCircle2 className="w-4 h-4 text-[#A3D1FF] mr-2 flex-shrink-0" />
-                <span className="text-gray-300">{impact}</span>
-              </div>
-            ))}
-          </div>
-          <div className="flex flex-wrap gap-2 mb-4 md:mb-6">
-            {project.technologies.map((tech, index) => (
-              <span 
-                key={index} 
-                className="px-2 md:px-3 py-1 bg-white/5 text-[#A3D1FF] rounded-full text-xs md:text-sm"
-              >
-                {tech}
-              </span>
-            ))}
-          </div>
-          <div className="flex flex-wrap gap-3">
-            {project.liveUrl && (
-              <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="mr_btn mr_btn_primary inline-flex items-center gap-2">
-                <span>View Website</span>
-              </a>
-            )}
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
+type Project = {
+  title: string;
+  category: string;
+  blurb: string;
+  image: string;
+  liveUrl?: string;
+  caseStudyUrl: string;
+  stats: { value: string; label: string }[];
+  tags: string[];
+};
 
-function CategoryButton({ children, isActive = false, onClick }: { 
-  children: React.ReactNode; 
-  isActive?: boolean;
-  onClick: () => void;
-}) {
-  return (
-    <button
-      onClick={onClick}
-      className={`px-4 md:px-6 py-2 rounded-full transition-all duration-300 text-sm ${
-        isActive
-          ? 'bg-[#A3D1FF] text-black'
-          : 'bg-white/5 text-gray-300 hover:bg-white/10'
-      }`}
-    >
-      {children}
-    </button>
-  );
-}
+const featured: Project[] = [
+  {
+    title: 'Binns Media Group',
+    category: 'Media Platform',
+    blurb:
+      'Streaming-grade platform for authentic voices — Netflix-style UX on a lean production tech stack.',
+    image:
+      'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%204%20-%2016x9.png?updatedAt=1767539579710',
+    liveUrl: 'https://www.binnsmediagroup.com',
+    caseStudyUrl: '/work/case-studies/binns-media',
+    stats: [
+      { value: '98', label: 'Lighthouse' },
+      { value: '4x', label: 'Engagement' },
+      { value: '18mo', label: 'On Retainer' },
+    ],
+    tags: ['React 18', 'TypeScript', 'Postgres', 'GSAP'],
+  },
+  {
+    title: 'Untapped Africa',
+    category: 'Impact / Storytelling',
+    blurb:
+      'A mission-first platform that helps bring clean water to 500,000+ people across 8 African countries.',
+    image:
+      'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%201%20-%201x1(1).png?updatedAt=1767539579782',
+    liveUrl: 'https://untappedafrica.co.za',
+    caseStudyUrl: '/work/case-studies/untapped-africa',
+    stats: [
+      { value: '500k+', label: 'People Served' },
+      { value: '08', label: 'Countries' },
+      { value: '250%', label: 'Engagement ↑' },
+    ],
+    tags: ['Next.js', 'TypeScript', 'Postgres', 'Mapbox GL'],
+  },
+  {
+    title: 'H2H Marketing',
+    category: 'Agency Brand',
+    blurb:
+      'Bold brand-first digital presence for a social marketing agency connecting brands with real audiences.',
+    image: 'https://ik.imagekit.io/qcvroy8xpd/image%201%20(5).png',
+    liveUrl: 'https://www.h2hsocialmarketing.com/',
+    caseStudyUrl: '/work/case-studies/h2h-marketing',
+    stats: [
+      { value: '100%', label: 'Custom Build' },
+      { value: '<2s', label: 'Load' },
+      { value: 'AA', label: 'A11y' },
+    ],
+    tags: ['React', 'Tailwind', 'Framer Motion'],
+  },
+  {
+    title: 'Paving Leads',
+    category: 'SEO / Lead Gen',
+    blurb:
+      'Failing Core Web Vitals → 98 Lighthouse. Organic leads doubled in the first month after launch.',
+    image:
+      'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%204%20-%2016_9.png?updatedAt=1767539579010',
+    liveUrl: 'https://pavinglead.com/',
+    caseStudyUrl: '/work/case-studies/paving-leads',
+    stats: [
+      { value: '#1', label: 'Google' },
+      { value: '300%', label: 'Traffic ↑' },
+      { value: '2x', label: 'Leads' },
+    ],
+    tags: ['Next.js', 'SEO', 'Lead Gen'],
+  },
+  {
+    title: 'AutoMarginX',
+    category: 'SaaS · Analytics',
+    blurb:
+      'Real-time dealer analytics platform. Dealerships saw 35% faster decisions and higher margins.',
+    image: 'https://i.imgur.com/PiKh199.png',
+    caseStudyUrl: '/work/case-studies/automarginx',
+    stats: [
+      { value: '35%', label: 'Faster Decisions' },
+      { value: 'Live', label: 'Telemetry' },
+      { value: 'RBAC', label: 'Auth' },
+    ],
+    tags: ['React', 'Node.js', 'PostgreSQL'],
+  },
+  {
+    title: 'iLight Care',
+    category: 'AI · Healthcare',
+    blurb:
+      'Brand, website, MVP platform, and pitch deck. Founder went from vision to investor-ready in 6 weeks.',
+    image:
+      'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%201%20-%201x1(5).png?updatedAt=1767539579818',
+    liveUrl: 'https://www.ilight.care',
+    caseStudyUrl: '/work/case-studies/ilight',
+    stats: [
+      { value: '6wk', label: 'Vision → MVP' },
+      { value: 'LLM', label: 'Grounded' },
+      { value: 'Deck', label: 'Included' },
+    ],
+    tags: ['React', 'Node.js', 'AI/ML'],
+  },
+];
+
+const archive = [
+  {
+    title: 'Ask Africa',
+    image: 'https://ik.imagekit.io/qcvroy8xpd/image%202%20(1).png',
+    url: '/work/case-studies/ask-africa',
+  },
+  {
+    title: 'A Secure Annapolis',
+    image:
+      'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%201%20-%201x1(2).png?updatedAt=1767539579194',
+    url: '/work/case-studies/secure-annapolis',
+  },
+  {
+    title: 'Friedman & Cohen',
+    image:
+      'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%201%20-%201x1(3).png?updatedAt=1767539579776',
+    url: '/work/case-studies/friedman-cohen',
+  },
+  {
+    title: 'Tar & Chip',
+    image:
+      'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%204%20-%2016x9(5).png?updatedAt=1767539578933',
+    url: '/work/case-studies/tar-chip-paving',
+  },
+  {
+    title: 'Chad Le Clos',
+    image: 'https://i.imgur.com/ApfYPlH.jpg',
+    url: '/work/case-studies/chad-le-clos',
+  },
+  {
+    title: 'Fleet Management',
+    image: 'https://i.imgur.com/EwgHAuK.png',
+    url: '/work/case-studies/fleet-management',
+  },
+  {
+    title: 'MyTube',
+    image: 'https://i.imgur.com/QNHXpzT.jpeg',
+    url: '/work/case-studies/mytube',
+  },
+  {
+    title: 'Videoleap',
+    image: 'https://i.imgur.com/SubVB9A.jpeg',
+    url: '/work/case-studies/videoleap',
+  },
+];
 
 export default function WorkPage() {
-  const router = useRouter();
-  const [activeFilter, setActiveFilter] = useState('all');
-  const heroRef = useRef<HTMLElement>(null);
-  
-  // Get filter from URL params
-  useEffect(() => {
-    const urlParams = new URLSearchParams(window.location.search);
-    const filter = urlParams.get('filter');
-    if (filter) {
-      setActiveFilter(filter);
-    }
-  }, []);
-  
-  const filteredProjects = activeFilter === 'all'
-    ? projects
-    : projects.filter(project => {
-        switch (activeFilter) {
-          case 'media':
-            return ['Binns Media Group Platform', 'Videoleap', 'MyTube Platform'].includes(project.title);
-          case 'saas':
-            return project.category === 'saas';
-          case 'ecommerce':
-            return ['Friedman & Cohen'].includes(project.title);
-          case 'automotive':
-            return ['AutoMarginX', 'Fleet Management System'].includes(project.title);
-          case 'professional':
-            return ['A Secure Annapolis Locksmith', 'Tar & Chip Paving', 'Paving Leads', 'H2H Marketing', 'Ask Africa'].includes(project.title);
-          case 'social-impact':
-            return ['Untapped Africa', 'Ask Africa'].includes(project.title);
-          case 'sports':
-            return ['Chad Le Clos Swimming'].includes(project.title);
-          default:
-            return true;
-        }
-      });
+  const [activeIndex, setActiveIndex] = useState(0);
+  const active = featured[activeIndex];
 
-  const filterOptions = [
-    { id: 'all', label: 'All Projects' },
-    { id: 'media', label: 'Media & Entertainment' },
-    { id: 'saas', label: 'SaaS & Technology' },
-    { id: 'ecommerce', label: 'E-commerce' },
-    { id: 'automotive', label: 'Automotive' },
-    { id: 'professional', label: 'Professional Services' },
-    { id: 'social-impact', label: 'Social Impact' },
-    { id: 'sports', label: 'Sports & Entertainment' }
-  ];
+  const cubeFaces = useMemo(
+    () =>
+      featured.map((p) => ({
+        image: p.image,
+        category: p.category,
+        title: p.title,
+      })),
+    [],
+  );
 
   return (
     <>
-      
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(workSchema) }}
+      />
 
-      <section
-        ref={heroRef}
-        className="relative min-h-[60vh] md:min-h-[80vh] flex items-center justify-center bg-black overflow-hidden"
-      >
-        <div className="absolute inset-0 z-0">
-          <img
-            src="https://i.imgur.com/IU0mmH7.jpeg"
-            alt="Featured portfolio projects by Marc Friedman - web development and design showcase"
-            className="w-full h-full object-cover"
-          />
-          <div 
-            className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/70 to-black/90"
-            style={{ backdropFilter: 'blur(2px)' }}
-          ></div>
-        </div>
+      {/* ===================== MASTHEAD ===================== */}
+      <section className="relative min-h-[90vh] bg-black overflow-hidden pt-28 pb-16 px-6 lg:px-12">
+        <div
+          className="absolute inset-0 opacity-[0.06] mix-blend-overlay pointer-events-none"
+          style={{
+            backgroundImage:
+              "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)' opacity='0.5'/></svg>\")",
+          }}
+        />
+        <div className="absolute top-1/3 left-[-10%] w-[700px] h-[700px] bg-[#A3D1FF]/8 rounded-full blur-[140px] pointer-events-none" />
 
-        <div className="container-custom relative z-10 py-16 md:py-0">
-          <TextReveal className="max-w-3xl">
-            <h1 className="font-heading text-[clamp(2.2rem,4vw,3rem)] font-semibold tracking-[-0.01em] text-white leading-[1.15] mb-4 md:mb-6">
-              Featured Work
-            </h1>
-            <p className="font-body text-base md:text-xl leading-[1.7] text-gray-300 mb-6 md:mb-8">
-              Real projects. Real results. No templates, no WordPress, no shortcuts.
-            </p>
-          </TextReveal>
+        <div className="max-w-7xl mx-auto relative">
+          <ChapterMarker number="Portfolio · Vol. 01" label="Selected Work · 2026" />
 
-          <div
-            className="grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-8 mt-8 md:mt-12"
+          <motion.p
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-xs font-mono uppercase tracking-[0.35em] text-[#A3D1FF] mb-6"
           >
-            <div className="bg-[#1b1b1b]/80 backdrop-blur-sm p-4 md:p-6 rounded-xl border border-white/10 hover:border-[#A3D1FF] transition-all text-center">
-              <div className="text-2xl md:text-4xl font-bold text-[#A3D1FF] mb-1 md:mb-2 counter">50+</div>
-              <div className="text-xs md:text-base text-white">Projects Completed</div>
-            </div>
-            <div className="bg-[#1b1b1b]/80 backdrop-blur-sm p-4 md:p-6 rounded-xl border border-white/10 hover:border-[#A3D1FF] transition-all text-center">
-              <div className="text-2xl md:text-4xl font-bold text-[#A3D1FF] mb-1 md:mb-2 counter">6+</div>
-              <div className="text-xs md:text-base text-white">Years Experience</div>
-            </div>
-            <div className="bg-[#1b1b1b]/80 backdrop-blur-sm p-4 md:p-6 rounded-xl border border-white/10 hover:border-[#A3D1FF] transition-all text-center">
-              <div className="text-2xl md:text-4xl font-bold text-[#A3D1FF] mb-1 md:mb-2 counter">99%</div>
-              <div className="text-xs md:text-base text-white">Client Satisfaction</div>
-            </div>
-          </div>
+            — Six case files. One operator.
+          </motion.p>
+
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.9, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
+            className="text-white leading-[0.9] tracking-[-0.04em] mb-8 max-w-5xl"
+            style={{
+              fontFamily: SERIF,
+              fontSize: 'clamp(3rem, 9vw, 8.5rem)',
+              fontWeight: 400,
+            }}
+          >
+            Real projects.{' '}
+            <em className="italic text-[#A3D1FF]">Real results.</em>
+          </motion.h1>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.3 }}
+            className="text-xl md:text-2xl text-white/70 max-w-2xl leading-snug mb-12"
+          >
+            No templates. No WordPress. No shortcuts. Six selected case files below —
+            click a face, read the file.
+          </motion.p>
         </div>
       </section>
 
-      {/* Filter Section */}
-      <section className="py-8 md:py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-black to-[#1b1b1b]">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8">
-            <h2 className="text-2xl font-bold text-white">Filter by Industry</h2>
-            <div className="flex flex-wrap gap-2">
-              {filterOptions.map((option) => (
-                <CategoryButton
-                  key={option.id}
-                  isActive={activeFilter === option.id}
-                  onClick={() => setActiveFilter(option.id)}
+      <ServiceMarquee
+        phrases={[
+          'React · Next.js',
+          'Hand-coded',
+          'Conversion-First',
+          'Design Systems',
+          'AI · Security',
+          'Three continents',
+          'Available Q2 2026',
+        ]}
+      />
+
+      {/* ===================== CUBE SHOWCASE ===================== */}
+      <section className="relative py-24 md:py-28 px-6 lg:px-12 bg-black border-t border-white/10 overflow-hidden">
+        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[900px] h-[600px] bg-[#A3D1FF]/8 rounded-full blur-[140px] pointer-events-none" />
+
+        <div className="max-w-7xl mx-auto relative">
+          <ChapterMarker number="01" label="The Cube · 06 Files" />
+
+          <div className="grid lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+            {/* Left — project list */}
+            <div className="lg:col-span-3 order-2 lg:order-1">
+              <p className="text-[10px] font-mono uppercase tracking-[0.3em] text-white/40 mb-5">
+                — Case files
+              </p>
+              <ul className="space-y-0 border-y border-white/10">
+                {featured.map((p, i) => {
+                  const isActive = i === activeIndex;
+                  return (
+                    <li key={p.title} className="border-b border-white/10 last:border-b-0">
+                      <button
+                        onClick={() => setActiveIndex(i)}
+                        className={`group w-full text-left flex items-center gap-3 py-4 transition-colors ${
+                          isActive ? 'text-white' : 'text-white/50 hover:text-white'
+                        }`}
+                      >
+                        <span
+                          className={`text-[10px] font-mono tracking-[0.2em] w-6 shrink-0 ${
+                            isActive ? 'text-[#A3D1FF]' : 'text-white/30'
+                          }`}
+                          style={{ fontVariantNumeric: 'tabular-nums' }}
+                        >
+                          {String(i + 1).padStart(2, '0')}
+                        </span>
+                        <span
+                          className="flex-1 leading-tight"
+                          style={{
+                            fontFamily: SERIF,
+                            fontSize: 'clamp(1rem, 1.2vw, 1.15rem)',
+                            fontWeight: 500,
+                          }}
+                        >
+                          {p.title}
+                        </span>
+                        {isActive && (
+                          <span className="w-1.5 h-1.5 rounded-full bg-[#A3D1FF]" />
+                        )}
+                      </button>
+                    </li>
+                  );
+                })}
+              </ul>
+
+              <div className="mt-8 grid grid-cols-2 gap-4 text-center lg:text-left">
+                <div>
+                  <div
+                    className="text-white leading-none"
+                    style={{
+                      fontFamily: SERIF,
+                      fontSize: 'clamp(1.5rem, 2.5vw, 2rem)',
+                      fontWeight: 500,
+                    }}
+                  >
+                    50+
+                  </div>
+                  <div className="text-[10px] font-mono uppercase tracking-[0.25em] text-white/40 mt-1">
+                    Shipped
+                  </div>
+                </div>
+                <div>
+                  <div
+                    className="text-white leading-none"
+                    style={{
+                      fontFamily: SERIF,
+                      fontSize: 'clamp(1.5rem, 2.5vw, 2rem)',
+                      fontWeight: 500,
+                    }}
+                  >
+                    03
+                  </div>
+                  <div className="text-[10px] font-mono uppercase tracking-[0.25em] text-white/40 mt-1">
+                    Continents
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Center — cube */}
+            <div className="lg:col-span-5 order-1 lg:order-2">
+              <div className="relative flex items-center justify-center min-h-[380px] lg:min-h-[500px]">
+                <InteractiveCube faces={cubeFaces} activeIndex={activeIndex} />
+              </div>
+              <p className="text-center text-[10px] font-mono uppercase tracking-[0.3em] text-white/40 mt-6">
+                — Drag to rotate · Click a case file
+              </p>
+            </div>
+
+            {/* Right — active project detail */}
+            <div className="lg:col-span-4 order-3">
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={active.title}
+                  initial={{ opacity: 0, y: 16 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -10 }}
+                  transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
                 >
-                  {option.label}
-                </CategoryButton>
-              ))}
+                  <p className="text-[10px] font-mono uppercase tracking-[0.3em] text-[#A3D1FF] mb-4">
+                    — {active.category}
+                  </p>
+                  <h3
+                    className="text-white mb-4 leading-[1.0] tracking-tight"
+                    style={{
+                      fontFamily: SERIF,
+                      fontSize: 'clamp(2rem, 3.5vw, 3.25rem)',
+                      fontWeight: 500,
+                    }}
+                  >
+                    {active.title}
+                  </h3>
+                  <p className="text-white/70 leading-relaxed mb-6">{active.blurb}</p>
+
+                  <div className="grid grid-cols-3 gap-3 py-5 border-y border-white/10 mb-6">
+                    {active.stats.map((s) => (
+                      <div key={s.label}>
+                        <div
+                          className="text-white leading-none mb-1"
+                          style={{
+                            fontFamily: SERIF,
+                            fontSize: 'clamp(1.25rem, 1.8vw, 1.75rem)',
+                            fontWeight: 500,
+                            fontVariantNumeric: 'tabular-nums',
+                          }}
+                        >
+                          {s.value}
+                        </div>
+                        <div className="text-[9px] font-mono uppercase tracking-[0.2em] text-white/50">
+                          {s.label}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+
+                  <div className="flex flex-wrap gap-2 mb-7">
+                    {active.tags.map((t) => (
+                      <span
+                        key={t}
+                        className="px-2 py-0.5 text-[10px] font-mono uppercase tracking-[0.2em] border border-white/15 text-white/60"
+                      >
+                        {t}
+                      </span>
+                    ))}
+                  </div>
+
+                  <div className="flex flex-wrap gap-3">
+                    <Link
+                      href={active.caseStudyUrl}
+                      className="inline-flex items-center gap-2 bg-white text-black font-medium px-6 py-3 hover:bg-[#A3D1FF] transition-colors group"
+                    >
+                      Read case study
+                      <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                    </Link>
+                    {active.liveUrl && (
+                      <a
+                        href={active.liveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 text-white font-medium border border-white/20 hover:border-white/60 transition-colors px-6 py-3 group"
+                      >
+                        Live site
+                        <ExternalLink className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                      </a>
+                    )}
+                  </div>
+                </motion.div>
+              </AnimatePresence>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Projects Grid */}
-      <section className="py-8 md:py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-bold text-white mb-8">Portfolio Projects</h2>
-          <div
-            className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"
-          >
-            {filteredProjects.map((project, index) => (
-              project.featured ? (
-                <FeaturedProjectCard key={index} project={project} />
-              ) : (
-                <ProjectCard3D 
-                  key={index}
-                  title={project.title}
-                  description={project.description}
-                  image={project.image}
-                  liveUrl={project.liveUrl}
-                  caseStudyUrl={project.caseStudyUrl}
-                  impact={project.impact}
-                  technologies={project.technologies}
-                  index={index}
+      {/* ===================== STATS ===================== */}
+      <EditorialSection
+        chapter="02"
+        label="By the numbers"
+        title="A decade of"
+        italicTitle="shipping."
+        bg="bg-[#0a0a0a]"
+      >
+        <StatsBar
+          stats={[
+            { value: '50+', label: 'Projects Shipped' },
+            { value: '14', label: 'Case Studies' },
+            { value: '03', label: 'Continents' },
+            { value: '100%', label: 'Built by Me' },
+          ]}
+        />
+      </EditorialSection>
+
+      {/* ===================== ARCHIVE GRID ===================== */}
+      <EditorialSection
+        chapter="03"
+        label="From the archive"
+        title="More"
+        italicTitle="from the vault."
+        lead="Not on the cube? Still worth a look. The full archive below."
+      >
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-5">
+          {archive.map((p, i) => (
+            <motion.a
+              key={p.title}
+              href={p.url}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-40px' }}
+              transition={{ duration: 0.6, delay: i * 0.05 }}
+              className="group block border border-white/10 hover:border-white/40 transition-colors overflow-hidden"
+            >
+              <div className="aspect-[4/3] overflow-hidden bg-black">
+                <img
+                  src={p.image}
+                  alt={p.title}
+                  className="w-full h-full object-cover group-hover:scale-[1.05] transition-transform duration-[900ms]"
+                  loading="lazy"
                 />
-              )
-            ))}
-          </div>
-          
-          {/* Related Content Links */}
-          <div className="mt-16 bg-[#1b1b1b] p-8 rounded-xl border border-white/10">
-            <h3 className="text-2xl font-bold text-white mb-6">Explore More</h3>
-            <div className="grid md:grid-cols-2 gap-6">
-              <div>
-                <h4 className="text-lg font-semibold text-white mb-4">My Services</h4>
-                <div className="space-y-2">
-                  <Link
-                    href="/services/web-development"
-                    className="block text-[#A3D1FF] hover:text-white transition-colors"
-                    title="Professional web development services"
-                  >
-                    Web Development Services
-                  </Link>
-                  <Link
-                    href="/services/design"
-                    className="block text-[#A3D1FF] hover:text-white transition-colors"
-                    title="UI/UX design solutions"
-                  >
-                    UI/UX Design Solutions
-                  </Link>
-                  <Link
-                    href="/services/design-systems"
-                    className="block text-[#A3D1FF] hover:text-white transition-colors"
-                    title="Design systems"
-                  >
-                    Design Systems
-                  </Link>
-                </div>
               </div>
-              <div>
-                <h4 className="text-lg font-semibold text-white mb-4">Learn More</h4>
-                <div className="space-y-2">
-                  <Link 
-                    href="/about" 
-                    className="block text-[#A3D1FF] hover:text-white transition-colors"
-                    title="About Marc Friedman"
-                  >
-                    About Marc Friedman
-                  </Link>
-                  <Link 
-                    href="/blog" 
-                    className="block text-[#A3D1FF] hover:text-white transition-colors"
-                    title="Design and development insights"
-                  >
-                    Design & Development Blog
-                  </Link>
-                  <Link 
-                    href="/contact" 
-                    className="block text-[#A3D1FF] hover:text-white transition-colors"
-                    title="Get in touch for your project"
-                  >
-                    Start Your Project
-                  </Link>
-                </div>
+              <div className="px-4 py-3 flex items-center justify-between">
+                <span
+                  className="text-white text-sm leading-tight group-hover:text-[#A3D1FF] transition-colors"
+                  style={{ fontFamily: SERIF, fontWeight: 500 }}
+                >
+                  {p.title}
+                </span>
+                <ArrowUpRight className="w-3 h-3 text-white/40 group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
               </div>
-            </div>
-          </div>
+            </motion.a>
+          ))}
         </div>
-      </section>
+      </EditorialSection>
 
-      <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#1b1b1b] to-black relative overflow-hidden">
-        <div className="max-w-7xl mx-auto text-center relative z-10">
-          <TextReveal>
-            <h2 className="font-heading text-[clamp(1.75rem,3.5vw,2.5rem)] font-semibold tracking-[-0.01em] text-white leading-[1.15] mb-4 md:mb-6">Ready to Create Your Success Story?</h2>
-            <p className="font-body text-base md:text-xl leading-[1.7] text-white mb-6 md:mb-10 max-w-2xl mx-auto">
-              Let's build something extraordinary together that drives real results for your business.
-            </p>
-            <Link href="/contact" className="mr_btn mr_btn_primary">
-              <span>Start Your Project</span>
-            </Link>
-          </TextReveal>
-        </div>
-      </section>
+      <ServiceColophon
+        headline="Want to be the"
+        italicHeadline="next case file?"
+        lead="Book a 30-minute call — I'll audit your current site live and show you exactly what we could ship together."
+      />
     </>
   );
 }
