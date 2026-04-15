@@ -100,14 +100,25 @@ const config: CaseStudyConfig = {
 
   gallery: [
     {
-      image: 'https://i.imgur.com/EwgHAuK.png',
-      caption: 'Fleet control dashboard',
+      image: 'https://i.imgur.com/ozcuJ2k.jpeg',
+      caption: 'Live map + telemetry',
       wide: true,
     },
     {
-      image: 'https://i.imgur.com/ozcuJ2k.jpeg',
-      caption: 'Map + telemetry',
-      wide: true,
+      image: 'https://i.imgur.com/EwgHAuK.png',
+      caption: 'Fleet control dashboard',
+    },
+    {
+      image: 'https://i.imgur.com/ACKUFLy.jpeg',
+      caption: 'Mobile dispatcher app',
+    },
+    {
+      image: 'https://i.imgur.com/gEbm2d0.png',
+      caption: 'Analytics & dynamic pricing',
+    },
+    {
+      image: 'https://i.imgur.com/0npIa3u.png',
+      caption: 'Vehicle tracking interface',
     },
   ],
 
