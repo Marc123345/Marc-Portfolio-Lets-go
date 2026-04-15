@@ -477,7 +477,7 @@ export default function FleetManagementPage() {
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-8">Future Development</h2>
           <p className="text-xl text-white mb-8">
-            As technology continues to advance, we're committed to evolving our platform to meet tomorrow's challenges:
+            As technology continues to advance, the platform is evolving to meet tomorrow&apos;s challenges:
           </p>
           <div className="grid md:grid-cols-3 gap-8">
             <Feature

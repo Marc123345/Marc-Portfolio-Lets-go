@@ -100,7 +100,7 @@ export default function MyTubePage() {
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-8">Data-Driven Design System</h2>
           <p className="text-xl text-gray-300 mb-12">
-            Our approach combines modular design principles with data analytics to create a scalable, user-friendly platform that evolves with user needs and business requirements.
+            My approach combines modular design principles with data analytics to create a scalable, user-friendly platform that evolves with user needs and business requirements.
           </p>
           
           <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -250,7 +250,7 @@ export default function MyTubePage() {
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
                   <p className="text-white mb-4">
-                    Our process began with comprehensive user research and stakeholder interviews:
+                    My process began with comprehensive user research and stakeholder interviews:
                   </p>
                   <ul className="space-y-3">
                     <li className="flex items-center text-gray-300">
@@ -337,7 +337,7 @@ export default function MyTubePage() {
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-8">Wireframe Designs</h2>
           <p className="text-xl text-white mb-12">
-            Our wireframe designs focus on creating intuitive user flows and clear information hierarchy, ensuring a seamless experience for both content creators and viewers.
+            My wireframe designs focus on creating intuitive user flows and clear information hierarchy, ensuring a seamless experience for both content creators and viewers.
           </p>
           
           <div className="grid md:grid-cols-2 gap-8">

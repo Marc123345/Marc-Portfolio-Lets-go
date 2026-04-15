@@ -139,7 +139,7 @@ export default function DesignPage() {
       {/* Services Grid */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-white mb-12 text-center">Our Design Services</h2>
+          <h2 className="text-3xl font-bold text-white mb-12 text-center">Design Services I Offer</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <DesignService
               icon={Layout}
@@ -209,7 +209,7 @@ export default function DesignPage() {
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-4">UX/UI Design Projects</h2>
           <p className="text-white mb-12 max-w-2xl">
-            See how our user-centered design approach has helped businesses increase engagement and conversions.
+            See how my user-centered design approach has helped businesses increase engagement and conversions.
           </p>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <Link
@@ -356,7 +356,7 @@ export default function DesignPage() {
           </div>
           <div className="mt-8 text-center">
             <p className="text-white">
-              Each project is unique. Contact us for a customized quote tailored to your specific needs.
+              Each project is unique. Get in touch for a customized quote tailored to your specific needs.
             </p>
           </div>
         </div>

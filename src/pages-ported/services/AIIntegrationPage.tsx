@@ -112,7 +112,7 @@ export default function AIIntegrationPage() {
       {/* Process Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#1b1b1b]">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-white mb-12">Our AI Integration Process</h2>
+          <h2 className="text-3xl font-bold text-white mb-12">My AI Integration Process</h2>
           <div className="space-y-12">
             <ProcessStep
               number="01"
@@ -151,7 +151,7 @@ export default function AIIntegrationPage() {
       {/* Service Categories */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-white mb-12 text-center">Our AI Services</h2>
+          <h2 className="text-3xl font-bold text-white mb-12 text-center">AI Services I Offer</h2>
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-[#1b1b1b] p-8 rounded-xl border border-white/10 hover:border-[#A3D1FF] transition-all">
               <h3 className="text-2xl font-bold text-white mb-4">AI Integration Services</h3>
@@ -265,7 +265,7 @@ export default function AIIntegrationPage() {
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-4">AI Integration Projects</h2>
           <p className="text-white mb-12 max-w-2xl">
-            Discover how we've integrated AI to transform business operations and user experiences.
+            A look at how I&apos;ve integrated AI to transform business operations and user experiences.
           </p>
           <div className="grid md:grid-cols-3 gap-8">
             <Link

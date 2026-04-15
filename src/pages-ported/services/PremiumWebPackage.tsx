@@ -77,7 +77,7 @@ export default function PremiumWebPackage() {
           <h2 className="text-3xl font-bold text-white mb-6">About this Service</h2>
           <div className="prose prose-invert max-w-none">
             <p className="text-lg text-gray-300 mb-6">
-              A complete, high-end website solution tailored for law firms, SaaS startups, and media teams. This package includes strategic planning, UX wireframes, custom UI design, and full frontend development using React. We integrate GSAP animations, SEO optimization, CRM workflows (like HubSpot or Salesforce), and host everything securely with Cloudflare. Designed for scale, speed, and conversion.
+              A complete, high-end website solution tailored for law firms, SaaS startups, and media teams. This package includes strategic planning, UX wireframes, custom UI design, and full frontend development using React. I integrate GSAP animations, SEO optimization, CRM workflows (like HubSpot or Salesforce), and host everything securely with Cloudflare. Designed for scale, speed, and conversion.
             </p>
           </div>
         </div>

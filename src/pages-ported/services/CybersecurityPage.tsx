@@ -189,7 +189,7 @@ export default function CybersecurityPage() {
       {/* Benefits Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#1b1b1b]">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-white mb-12 text-center">The Benefits of Our Approach</h2>
+          <h2 className="text-3xl font-bold text-white mb-12 text-center">The Benefits of My Approach</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="bg-[#2d3035] p-6 rounded-xl border border-white/10 text-center">
               <ShieldCheck className="w-12 h-12 text-[#A3D1FF] mx-auto mb-4" />
@@ -220,7 +220,7 @@ export default function CybersecurityPage() {
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-4">Security-Focused Projects</h2>
           <p className="text-white mb-12 max-w-2xl">
-            Explore projects where we've implemented enterprise-grade security measures.
+            Projects where I&apos;ve implemented enterprise-grade security measures.
           </p>
           <div className="grid md:grid-cols-3 gap-8">
             <Link

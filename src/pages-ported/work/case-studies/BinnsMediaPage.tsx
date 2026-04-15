@@ -77,7 +77,7 @@ const BinnsMediaMasterStudy = () => {
 
             <p className="text-xl md:text-2xl text-white max-w-2xl leading-relaxed border-l-4 border-[#cc000a] pl-8 mb-12">
               <span className="text-white font-bold block mb-2">From "Production House" to "Media Ecosystem".</span>
-              We re-engineered the digital home for authentic voices, turning a content library into a scalable, Netflix-style streaming platform.
+              I re-engineered the digital home for authentic voices, turning a content library into a scalable, Netflix-style streaming platform.
             </p>
 
             <div className="flex flex-wrap gap-4">
@@ -153,7 +153,7 @@ const BinnsMediaMasterStudy = () => {
             <h2 className="text-sm font-bold text-[#cc000a] uppercase tracking-widest mb-4">03 • Strategic Approach</h2>
             <h3 className="text-4xl md:text-5xl font-bold mb-6">The "Media Empire" Package</h3>
             <p className="text-xl text-white">
-              We deployed a custom React architecture designed to handle high-volume media assets while maintaining blazing fast load times.
+              I deployed a custom React architecture designed to handle high-volume media assets while maintaining blazing fast load times.
             </p>
           </div>
 
@@ -432,7 +432,7 @@ const BinnsMediaMasterStudy = () => {
             Building a <span className="text-[#cc000a]">Media Empire?</span>
           </h2>
           <p className="text-xl md:text-2xl text-white mb-12 max-w-2xl mx-auto">
-            The infrastructure we built for Binns Media is available as a specialized package.
+            The infrastructure I built for Binns Media is available as a specialized package.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">

@@ -95,7 +95,7 @@ export default function ILightCaseStudy() {
 
             <p className="text-xl md:text-2xl text-gray-300 max-w-2xl leading-relaxed border-l-4 border-[#00E0FF] pl-8 mb-12">
               Human and AI Powered Mental Health & Resilience. <br/>
-              <span className="text-white font-bold">We took a founder's vision and built the entire digital ecosystem: Brand, Website, MVP Platform, and Pitch Deck.</span>
+              <span className="text-white font-bold">I took a founder&apos;s vision and built the entire digital ecosystem: Brand, Website, MVP Platform, and Pitch Deck.</span>
             </p>
 
             <div className="flex flex-wrap gap-4">
@@ -189,7 +189,7 @@ export default function ILightCaseStudy() {
             <h2 className="text-sm font-bold text-[#00E0FF] uppercase tracking-widest mb-4">03 • The Solution</h2>
             <h3 className="text-4xl md:text-5xl font-bold mb-6">The "Vision to MVP" Package</h3>
             <p className="text-xl text-white">
-              We acted as the interim CTO and Product Team. We took the project from messy notes to a fully clickable product and investor-ready presentation in under 6 weeks.
+              I acted as the interim CTO and Product Team. I took the project from messy notes to a fully clickable product and investor-ready presentation in under 6 weeks.
             </p>
           </div>
 
@@ -280,7 +280,7 @@ export default function ILightCaseStudy() {
                   </div>
                   <h2 className="text-4xl md:text-5xl font-bold">The SaaS MVP</h2>
                   <p className="text-white mt-4 max-w-xl">
-                     We built the actual functioning platform. A secure environment where patients interact with AI tools and track their mental health journey.
+                     I built the actual functioning platform. A secure environment where patients interact with AI tools and track their mental health journey.
                   </p>
                </div>
                <div className="flex gap-2 mt-6 md:mt-0">

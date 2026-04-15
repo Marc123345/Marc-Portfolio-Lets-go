@@ -111,7 +111,7 @@ export default function H2HMarketingPage() {
       <section className="py-32 bg-[#080808] relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="max-w-3xl mb-16">
-            <h2 className="text-sm font-bold text-[#0ea5e9] uppercase tracking-widest mb-4">03 -- What We Delivered</h2>
+            <h2 className="text-sm font-bold text-[#0ea5e9] uppercase tracking-widest mb-4">03 -- What I Delivered</h2>
             <h3 className="text-4xl md:text-5xl font-bold mb-6">Built for Engagement</h3>
             <p className="text-xl text-white">
               A high-converting marketing agency website designed to inspire confidence and drive action.

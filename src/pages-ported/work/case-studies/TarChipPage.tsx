@@ -158,7 +158,7 @@ export default function TarChipPage() {
                 The client needed a professional web presence to showcase their expertise in <strong className="text-white">tar and chip paving</strong>, a specialized application in the asphalt industry.
               </p>
               <p className="text-white text-lg leading-relaxed mb-8">
-                We developed a clean, professional website that highlights their unique capabilities while maintaining an authentic connection to the paving industry. The design balances professionalism with approachability.
+                I developed a clean, professional website that highlights their unique capabilities while maintaining an authentic connection to the paving industry. The design balances professionalism with approachability.
               </p>
 
               <div className="space-y-4">

@@ -175,7 +175,7 @@ export default function UntappedAfricaCaseStudy() {
                 Untapped Africa had a powerful mission, but their website wasn't doing it justice. It was costing them donors and global attention.
               </p>
               <p className="text-white text-lg leading-relaxed mb-8">
-                We deployed the <span className="text-white font-bold">Impact Story Package</span>—a mission-first storytelling engine designed to build trust, inspire belief, and drive donation action.
+                I deployed the <span className="text-white font-bold">Impact Story Package</span>—a mission-first storytelling engine designed to build trust, inspire belief, and drive donation action.
               </p>
 
               <div className="space-y-4">
@@ -253,7 +253,7 @@ export default function UntappedAfricaCaseStudy() {
                {
                  icon: Droplets,
                  title: "Water-Inspired Motion",
-                 desc: "We implemented custom hover effects that resemble water rippling across the screen. It's a small touch, but it makes the site feel alive."
+                 desc: "I implemented custom hover effects that resemble water rippling across the screen. It's a small touch, but it makes the site feel alive."
                },
                {
                  icon: Layout,
@@ -263,7 +263,7 @@ export default function UntappedAfricaCaseStudy() {
                {
                  icon: Feather,
                  title: "Emotive Photography",
-                 desc: "We balanced the dark UI with warm, real-world photography to ensure the platform remained human-centric."
+                 desc: "I balanced the dark UI with warm, real-world photography to ensure the platform remained human-centric."
                },
                {
                  icon: Activity,

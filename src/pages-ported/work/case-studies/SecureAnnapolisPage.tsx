@@ -171,7 +171,7 @@ export default function SecureAnnapolisCaseStudy() {
                 Local businesses like locksmiths die on page 2 of Google. A Secure Annapolis needed immediate trust and zero friction.
               </p>
               <p className="text-white text-lg leading-relaxed mb-8">
-                We deployed the <span className="text-white font-bold">Niche Closer Package</span>—a premium site structure designed specifically to rank high in local maps and convert "emergency" traffic into revenue.
+                I deployed the <span className="text-white font-bold">Niche Closer Package</span>—a premium site structure designed specifically to rank high in local maps and convert &ldquo;emergency&rdquo; traffic into revenue.
               </p>
 
               <div className="space-y-4">
@@ -265,7 +265,7 @@ export default function SecureAnnapolisCaseStudy() {
                {
                  icon: Shield,
                  title: "Trust Stacking",
-                 desc: "We placed licenses, insurance badges, and review stars above the fold to instantly de-risk the service."
+                 desc: "I placed licenses, insurance badges, and review stars above the fold to instantly de-risk the service."
                },
                {
                  icon: Search,

@@ -225,7 +225,7 @@ export default function SaaSPage() {
           </div>
           <div className="mt-8 text-center">
             <p className="text-white">
-              Each SaaS project is unique. Contact us for a detailed quote tailored to your specific requirements.
+              Each SaaS project is unique. Get in touch for a detailed quote tailored to your specific requirements.
             </p>
           </div>
         </div>
@@ -236,7 +236,7 @@ export default function SaaSPage() {
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-4">Startup MVP Projects</h2>
           <p className="text-white mb-12 max-w-2xl">
-            See how we've helped startups launch their MVPs and validate their ideas quickly.
+            See how I&apos;ve helped startups launch their MVPs and validate their ideas quickly.
           </p>
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <Link

@@ -140,7 +140,7 @@ export default function DesignSystemsPage() {
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-4">Design System Projects</h2>
           <p className="text-white mb-12 max-w-2xl">
-            Explore how we've built scalable design systems for leading companies across different industries.
+            A look at scalable design systems I&apos;ve built for leading companies across different industries.
           </p>
           <div className="grid md:grid-cols-3 gap-8">
             <Link

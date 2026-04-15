@@ -186,7 +186,7 @@ export default function FriedmanCohenPage() {
               Friedman & Cohen is a cornerstone of the Western Cape community. But as the retail landscape shifted, they needed to evolve from a traditional department store into a digital-first procurement powerhouse.
             </p>
             <p className="text-white text-lg leading-relaxed mb-8">
-              Our mission was to build <span className="text-white font-bold">F&C Procurement</span>: A digital platform specializing in furnishing solutions for property developers, student accommodations, and the hospitality sector.
+              My mission was to build <span className="text-white font-bold">F&C Procurement</span>: A digital platform specializing in furnishing solutions for property developers, student accommodations, and the hospitality sector.
             </p>
             
             <div className="grid grid-cols-3 gap-4">
@@ -225,7 +225,7 @@ export default function FriedmanCohenPage() {
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-5xl font-bold mb-6">Digital Procurement</h2>
             <p className="text-white text-lg">
-              We abstracted the complexity of supply chain logistics into a clean, approachable user interface.
+              I abstracted the complexity of supply chain logistics into a clean, approachable user interface.
             </p>
           </div>
 
@@ -319,7 +319,7 @@ export default function FriedmanCohenPage() {
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Need a digital transformation?</h2>
           <p className="text-white text-lg mb-10">
-            We help legacy brands build modern digital infrastructure.
+            I help legacy brands build modern digital infrastructure.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <button

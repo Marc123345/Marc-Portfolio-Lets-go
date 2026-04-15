@@ -42,25 +42,27 @@ function TechnologyStack({ icon: Icon, name, description }: {
   );
 }
 
-function ServicePackage({ title, features, recommended = false }: {
+function ServicePackage({ title, description, features, recommended = false }: {
   title: string;
+  description?: string;
   features: string[];
   recommended?: boolean;
 }) {
-  const router = useRouter();
-  
   return (
-    <div className={`bg-[#1b1b1b] p-8 rounded-xl border ${recommended ? 'border-[#A3D1FF]' : 'border-white/10'} hover:border-[#A3D1FF] transition-all relative`}>
+    <div className={`bg-[#1b1b1b] p-8 rounded-xl border ${recommended ? 'border-[#A3D1FF]' : 'border-white/10'} hover:border-[#A3D1FF] transition-all relative flex flex-col`}>
       {recommended && (
         <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-[#A3D1FF] text-black px-4 py-1 rounded-full text-sm font-medium">
           Most Popular
         </div>
       )}
-      <h3 className="text-2xl font-bold text-white mb-6">{title}</h3>
+      <h3 className="text-2xl font-bold text-white mb-4">{title}</h3>
+      {description && (
+        <p className="text-gray-300 mb-6 leading-relaxed">{description}</p>
+      )}
       <ul className="space-y-3 mb-8">
         {features.map((feature, index) => (
           <li key={index} className="flex items-center text-gray-300">
-            <ArrowRight className="w-4 h-4 text-[#A3D1FF] mr-2" />
+            <ArrowRight className="w-4 h-4 text-[#A3D1FF] mr-2 flex-shrink-0" />
             <strong>{feature}</strong>
           </li>
         ))}
@@ -70,7 +72,7 @@ function ServicePackage({ title, features, recommended = false }: {
           const form = document.getElementById('contact-form');
           form?.scrollIntoView({ behavior: 'smooth' });
         }}
-        className="mr_btn mr_btn_primary w-full"
+        className="mr_btn mr_btn_primary w-full mt-auto"
       >
         <span>Request a Quote</span>
       </button>
@@ -106,8 +108,8 @@ export default function WebDevelopmentPage() {
             <h2 className="text-xl sm:text-2xl text-[#A3D1FF] mb-6">
               Custom Websites That Convert Visitors Into Customers
             </h2>
-            <p className="text-xl text-gray-300 mb-8">As a freelance website designer and developer, operating as a dedicated website design agency, I create <strong className="text-white">custom, high-performing websites</strong>.
-              <strong className="text-white">SEO-ready websites that load in under 2 seconds</strong> and drive more leads. Transform your digital presence with custom solutions that deliver measurable results.
+            <p className="text-xl text-gray-300 mb-8">
+              Your website should <strong className="text-white">load in under 2 seconds</strong>, rank on Google without paid ads, and turn strangers into customers while you sleep. That&apos;s not a fantasy — that&apos;s what custom-coded React sites do when they&apos;re built right. I&apos;ve built <strong className="text-white">50+ of them</strong>.
             </p>
             <div className="flex gap-4">
               <button 
@@ -133,7 +135,7 @@ export default function WebDevelopmentPage() {
       {/* Features Grid */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-white mb-12 text-center">Why Choose Our Web Design Services</h2>
+          <h2 className="text-3xl font-bold text-white mb-12 text-center">Why Hire Me</h2>
           <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
             <div>
               <div className="grid gap-8">
@@ -230,6 +232,7 @@ export default function WebDevelopmentPage() {
           <div className="grid md:grid-cols-3 gap-8">
             <ServicePackage
               title="Landing Page"
+              description="Perfect for testing a new offer, launching a campaign, or replacing a page that isn't converting. A single, focused page designed to do ONE thing — get the visitor to take action. SEO-optimized, fast as hell, delivered in 2 weeks."
               features={[
                 "Converts more visitors",
                 "Mobile responsive design",
@@ -241,6 +244,7 @@ export default function WebDevelopmentPage() {
             />
             <ServicePackage
               title="Business Website"
+              description="Your full online presence, built from scratch. 5-7 custom pages designed to walk visitors from 'who is this?' to 'I need to work with them.' Includes a blog (Google rewards fresh content), a CMS so you can edit without calling a developer, and a performance score your competitors will envy."
               features={[
                 "Increases leads",
                 "5-7 custom pages",
@@ -253,6 +257,7 @@ export default function WebDevelopmentPage() {
             />
             <ServicePackage
               title="Custom Web App"
+              description="For when a website isn't enough and you need software. Think booking systems, dashboards, internal tools, member portals. Custom-built to replace the 4 spreadsheets and 3 subscriptions you're currently duct-taping together."
               features={[
                 "Reduces operational costs",
                 "Custom functionality",
@@ -265,7 +270,7 @@ export default function WebDevelopmentPage() {
           </div>
           <div className="mt-8 text-center">
             <p className="text-white">
-              Need a custom solution? <button onClick={() => router.push('/contact')} className="text-[#A3D1FF] hover:underline">Contact us</button> for a personalized quote.
+              Need a custom solution? <button onClick={() => router.push('/contact')} className="text-[#A3D1FF] hover:underline">Get in touch</button> for a personalized quote.
             </p>
           </div>
         </div>
@@ -282,7 +287,7 @@ export default function WebDevelopmentPage() {
               </div>
               <div>
                 <h3 className="text-xl font-semibold text-white mb-2">Discovery & Planning</h3>
-                <p className="text-white"><strong className="text-white">More effective</strong> project outcomes through comprehensive research and planning.</p>
+                <p className="text-white">I dig into your business, your competitors, and your customers before writing a single line of code. Most developers skip this. That&apos;s why most websites don&apos;t convert.</p>
               </div>
             </div>
             <div className="flex items-start">
@@ -321,7 +326,7 @@ export default function WebDevelopmentPage() {
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-4">Web Design Projects</h2>
           <p className="text-white mb-12 max-w-2xl">
-            Explore our portfolio of high-performance websites that deliver exceptional results.
+            A look at some of my recent builds — all custom-coded, all performance-tuned.
           </p>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <Link

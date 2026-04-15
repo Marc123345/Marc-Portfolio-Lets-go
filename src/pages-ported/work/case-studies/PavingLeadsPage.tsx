@@ -169,10 +169,10 @@ export default function PavingLeadsPage() {
               </div>
               <h2 className="text-4xl font-bold mb-6">The "Niche Closer" Site</h2>
               <p className="text-white text-lg leading-relaxed mb-6">
-                Ezra came to us with a clear goal: <strong className="text-white">"Make me a professional website and get me ranked."</strong>
+                Ezra came to me with a clear goal: <strong className="text-white">"Make me a professional website and get me ranked."</strong>
               </p>
               <p className="text-white text-lg leading-relaxed mb-8">
-                We deployed the <span className="text-white font-bold">Niche Closer Package</span>. This isn't just a brochure; it's a funnel. We focused purely on speed, SEO hierarchy, and aggressive call-to-actions to dominate the paving niche.
+                I deployed the <span className="text-white font-bold">Niche Closer Package</span>. This isn&apos;t just a brochure; it&apos;s a funnel. I focused purely on speed, SEO hierarchy, and aggressive call-to-actions to dominate the paving niche.
               </p>
 
               <div className="space-y-4">
@@ -264,7 +264,7 @@ export default function PavingLeadsPage() {
                {
                  icon: BarChart3,
                  title: "SEO Foundation",
-                 desc: "We didn't just bolt SEO on; we baked it into the URL structure and page hierarchy."
+                 desc: "I didn't just bolt SEO on; I baked it into the URL structure and page hierarchy."
                },
                {
                  icon: Zap,

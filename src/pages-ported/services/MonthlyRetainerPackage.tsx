@@ -152,7 +152,7 @@ export default function MonthlyRetainerPackage() {
             <div className="bg-black/50 p-6 rounded-xl border border-white/10">
               <h3 className="text-xl font-semibold text-[#A3D1FF] mb-3">Peace of Mind</h3>
               <p className="text-gray-300">
-                Professional website management means you can focus on your business while we handle all technical aspects.
+                Professional website management means you can focus on your business while I handle all technical aspects.
               </p>
             </div>
           </div>

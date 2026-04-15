@@ -231,7 +231,7 @@ const portfolioSchema = {
   "@context": "https://schema.org",
   "@type": "CollectionPage",
   "name": "Portfolio - Marc Friedman's Digital Design & Development Work",
-  "description": "Explore our portfolio of results-driven digital solutions that combine thoughtful design with robust development. Featured projects include websites, landing pages, and SaaS applications.",
+  "description": "Real projects. Real results. No templates, no WordPress, no shortcuts. Featured projects include websites, landing pages, and SaaS applications.",
   "creator": {
     "@type": "Person",
     "name": "Marc Friedman",
@@ -403,7 +403,7 @@ export default function WorkPage() {
               Featured Work
             </h1>
             <p className="font-body text-base md:text-xl leading-[1.7] text-gray-300 mb-6 md:mb-8">
-              Explore our portfolio of results-driven digital solutions that combine thoughtful design with robust development.
+              Real projects. Real results. No templates, no WordPress, no shortcuts.
             </p>
           </TextReveal>
 
@@ -477,7 +477,7 @@ export default function WorkPage() {
             <h3 className="text-2xl font-bold text-white mb-6">Explore More</h3>
             <div className="grid md:grid-cols-2 gap-6">
               <div>
-                <h4 className="text-lg font-semibold text-white mb-4">Our Services</h4>
+                <h4 className="text-lg font-semibold text-white mb-4">My Services</h4>
                 <div className="space-y-2">
                   <Link
                     href="/services/web-development"

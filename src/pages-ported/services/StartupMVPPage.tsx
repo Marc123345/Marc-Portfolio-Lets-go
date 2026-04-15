@@ -81,10 +81,10 @@ export default function StartupMVPPage() {
         </div>
       </section>
 
-      {/* Why Choose Us */}
+      {/* Why Hire Me */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-white mb-12 text-center">Why Choose Us For Your MVP</h2>
+          <h2 className="text-3xl font-bold text-white mb-12 text-center">Why Hire Me For Your MVP</h2>
           <div className="grid md:grid-cols-3 gap-8">
             <FeatureCard
               icon={Target}
@@ -94,7 +94,7 @@ export default function StartupMVPPage() {
             <FeatureCard
               icon={Timer}
               title="30-Day Launch"
-              description="Faster time-to-market with our focused approach that prioritizes core features that validate your idea and impress investors."
+              description="Faster time-to-market with a focused approach that prioritizes core features — the ones that validate your idea and impress investors."
             />
             <FeatureCard
               icon={Users}
@@ -110,7 +110,7 @@ export default function StartupMVPPage() {
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-4">Startup MVP Success Stories</h2>
           <p className="text-white mb-12 max-w-2xl">
-            See how we've helped startups launch successful MVPs and scale their platforms.
+            See how I&apos;ve helped startups launch successful MVPs and scale their platforms.
           </p>
           <div className="grid md:grid-cols-3 gap-8">
             <Link

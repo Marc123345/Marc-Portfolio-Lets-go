@@ -34,7 +34,7 @@ const pressItems: PressItem[] = [
     title: "Marc Friedman Design Agency Profile",
     publication: "DesignRush",
     date: "2024",
-    description: "Comprehensive profile showcasing our design expertise and client success stories on DesignRush's platform.",
+    description: "Comprehensive profile showcasing my design expertise and client success stories on DesignRush's platform.",
     url: "https://www.designrush.com/agency/profile/marc-friedman-design-agency",
     category: "feature"
   }, 
@@ -171,7 +171,7 @@ export default function PressPage() {
               Recognition & Industry Features
             </h2>
             <p className="font-body text-xl leading-[1.7] text-white max-w-3xl">
-              Our work has been recognized by leading industry publications and platforms, showcasing the impact of our design and development solutions.
+              My work has been recognized by leading industry publications and platforms, showcasing the impact of my design and development solutions.
             </p>
           </TextReveal>
         </div>
@@ -285,7 +285,7 @@ export default function PressPage() {
             <div>
               <h2 className="text-3xl font-bold text-white mb-6">Media Kit & Resources</h2>
               <p className="text-white mb-6">
-                Looking to feature our work or interview Marc? Download our media kit with high-resolution images, 
+                Looking to feature my work or interview me? Download the media kit with high-resolution images,
                 project details, and background information.
               </p>
               

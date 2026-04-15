@@ -42,14 +42,14 @@ const processSteps = [
   {
     number: '01',
     title: 'Discovery & Empathy',
-    description: 'We dive deep into your cause, your community, and the change you want to create. We listen before we design.',
+    description: 'I dive deep into your cause, your community, and the change you want to create. I listen before I design.',
     image: 'https://ik.imagekit.io/qcvroy8xpd/PW8VUKH.png?updatedAt=1759693058055&tr=f-webp',
     imageAlt: 'Marc Friedman, web designer, during project discovery',
   },
   {
     number: '02',
     title: 'Creative Direction',
-    description: 'We define the visual language of your impact. Typography, color, motion -- every detail chosen to amplify your mission.',
+    description: 'I define the visual language of your impact. Typography, color, motion -- every detail chosen to amplify your mission.',
     image: 'https://ik.imagekit.io/qcvroy8xpd/uoq5Ztg.jpeg',
     imageAlt: 'Marc Friedman designing creative direction for a project',
   },
@@ -63,7 +63,7 @@ const processSteps = [
   {
     number: '04',
     title: 'Launch & Scale',
-    description: 'We equip your team to manage campaigns independently. Training, documentation, and ongoing support included.',
+    description: 'I equip your team to manage campaigns independently. Training, documentation, and ongoing support included.',
     image: 'https://i.imgur.com/PiKh199.png',
     imageAlt: 'Marc Friedman reviewing a launched website project',
   },
@@ -308,7 +308,7 @@ export default function ImpactStorySitePage() {
           <AnimatedSection>
             <div className="text-center mb-16">
               <p className="text-sm font-bold uppercase tracking-widest mb-6" style={{ color: ACCENT }}>
-                Our Framework
+                My Framework
               </p>
               <h2
                 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6"
@@ -441,7 +441,7 @@ export default function ImpactStorySitePage() {
                     ))}
                   </div>
                   <p className="text-white leading-relaxed mb-6">
-                    Untapped Africa had a world-changing mission but their digital presence wasn't doing it justice. As their web designer, we deployed the Impact Story framework to build a platform that moves hearts and opens wallets.
+                    Untapped Africa had a world-changing mission but their digital presence wasn&apos;t doing it justice. I deployed the Impact Story framework to build a platform that moves hearts and opens wallets.
                   </p>
                   <Link
                     href="/work/case-studies/untapped-africa"
@@ -563,10 +563,10 @@ export default function ImpactStorySitePage() {
                 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6"
                 style={{ fontFamily: 'Georgia, "Times New Roman", serif', textTransform: 'none' }}
               >
-                We're a Partner, Not a Vendor
+                I&apos;m a Partner, Not a Vendor
               </h2>
               <p className="text-lg text-white max-w-2xl mx-auto">
-                NGOs deserve a web designer who cares about the cause as much as the craft. Here's how we work together.
+                NGOs deserve a web designer who cares about the cause as much as the craft. Here&apos;s how we work together.
               </p>
             </div>
           </AnimatedSection>
@@ -632,7 +632,7 @@ export default function ImpactStorySitePage() {
               Ready to Scale Your Impact?
             </h2>
             <p className="text-lg text-white leading-relaxed mb-4">
-              We only take on <span className="text-white font-bold">4 mission-driven projects a year</span> to ensure every story gets the depth it deserves.
+              I only take on <span className="text-white font-bold">4 mission-driven projects a year</span> to ensure every story gets the depth it deserves.
             </p>
             <p className="text-gray-500 mb-10">
               Partnerships starting at $4,000.
