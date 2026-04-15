@@ -18,7 +18,7 @@ export default function DesignPage() {
       <ServiceMasthead
         kicker="Service · UI/UX Design"
         title="Interfaces"
-        italicWord="that convert."
+        italicWord="That Convert."
         volumeNumber="02"
         tagline={
           <>
