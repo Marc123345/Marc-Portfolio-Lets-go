@@ -58,7 +58,7 @@ const navLinks: NavLink[] = [
 const tickerItems = [
   'Available for select projects — Q2 2026',
   'Awwwards recognised',
-  'Based in Cape Town · Working globally',
+  'Working globally',
   'Design · Development · Systems',
   'marcf@marcfriedmanwebdesign.com',
 ];
@@ -224,15 +224,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 <div className="container-custom w-full grid lg:grid-cols-[1.1fr_0.9fr] gap-12 items-center py-8">
                   {/* Nav list */}
                   <nav aria-label="Primary">
-                    <motion.p
-                      className="text-xs font-medium tracking-[0.3em] uppercase text-white/50 mb-6 sm:mb-10"
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: 0.4, duration: 0.5 }}
-                    >
-                      Navigation — {new Date().getFullYear()}
-                    </motion.p>
-
                     <ul className="space-y-1 sm:space-y-2">
                       {navLinks.map((link, idx) => {
                         const isActive = pathname === link.to || pathname.startsWith(link.to + '/');
