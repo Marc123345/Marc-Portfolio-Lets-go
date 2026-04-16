@@ -5,6 +5,7 @@ import { Linkedin, Calendar, Trophy, ArrowUpRight, Palette } from 'lucide-react'
 import { useAppStore } from '@/stores/useAppStore';
 import { motion, AnimatePresence } from 'framer-motion';
 import ConsentBanner from '@/components/ConsentBanner';
+import TechStackStrip from '@/components/TechStackStrip';
 import { CALENDLY_LINK } from '@/lib/constants';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
@@ -152,11 +153,14 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <div className="flex items-center gap-4 sm:gap-6 z-[70] relative">
               <Link
                 href="/contact"
-                className={`hidden sm:inline-flex items-center gap-2 text-sm font-medium tracking-wide uppercase transition-colors ${
-                  isMenuOpen ? 'text-white/0 pointer-events-none' : 'text-white/80 hover:text-white'
+                className={`hidden sm:inline-flex items-center gap-2 text-[11px] font-mono tracking-[0.15em] uppercase transition-colors ${
+                  isMenuOpen ? 'text-white/0 pointer-events-none' : 'text-white/70 hover:text-[#A3D1FF]'
                 }`}
               >
-                <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+                <span className="relative flex w-2 h-2">
+                  <span className="absolute inset-0 rounded-full bg-green-400 animate-ping opacity-60" />
+                  <span className="relative w-2 h-2 rounded-full bg-green-400" />
+                </span>
                 Let&apos;s Talk
               </Link>
 
@@ -456,103 +460,162 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <main className="relative pt-[4.236rem]">{children}</main>
 
       {/* Footer */}
-      <footer className="bg-[#1b1b1b] border-t border-white/10">
-        <div className="container-custom section-spacing-sm">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8 lg:gap-12">
+      <footer className="relative bg-[#0a0a0a] border-t border-white/10 overflow-hidden">
+        {/* Ambient glow */}
+        <div className="absolute bottom-0 left-1/4 w-[800px] h-[400px] bg-[#A3D1FF]/6 rounded-full blur-[160px] pointer-events-none" />
+        {/* Grain overlay */}
+        <div
+          className="absolute inset-0 opacity-[0.05] mix-blend-overlay pointer-events-none"
+          style={{
+            backgroundImage:
+              "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)' opacity='0.5'/></svg>\")",
+          }}
+        />
+        {/* Corner frame guides */}
+        <div className="absolute inset-0 pointer-events-none hidden md:block">
+          {['top-8 left-8', 'top-8 right-8', 'bottom-8 left-8', 'bottom-8 right-8'].map(
+            (pos, i) => (
+              <div key={i} className={`absolute ${pos} w-4 h-4`}>
+                <div className="absolute inset-0 border-l border-t border-white/15" />
+              </div>
+            ),
+          )}
+        </div>
+
+        <div className="container-custom relative py-16 md:py-24">
+          {/* Chapter marker */}
+          <div className="flex items-center gap-4 mb-14">
+            <span className="text-white/40 text-[10px] font-mono tracking-[0.3em] uppercase">
+              Colophon
+            </span>
+            <span className="h-[1px] flex-1 bg-white/10 max-w-[60px]" />
+            <span className="text-white/40 text-[10px] font-mono tracking-[0.3em] uppercase">
+              Marc Friedman · {new Date().getFullYear()}
+            </span>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_1fr_1fr_1fr] gap-12 lg:gap-16">
+            {/* Brand column */}
             <div>
-              <div className="mb-6">
-                <img
-                  src="/images/marc-friedman-primary.svg"
-                  alt="Marc Friedman logo - Full Stack Designer & Developer"
-                  className="h-12 sm:h-16 w-auto object-contain mb-4 pt-2"
-                  width="80"
-                  height="32"
-                />
-                <p className="text-white text-sm leading-relaxed max-w-xs">
-                  Full-stack design and development solutions that transform your vision into exceptional digital experiences.
+              <img
+                src="/images/marc-friedman-primary.svg"
+                alt="Marc Friedman logo"
+                className="h-12 sm:h-16 w-auto object-contain mb-6 pt-2"
+                width="80"
+                height="32"
+              />
+              <p
+                className="text-white/60 text-base leading-relaxed max-w-xs mb-8"
+                style={{ fontFamily: "Georgia, 'Times New Roman', serif" }}
+              >
+                Full-stack design &amp; development — vision to launch, no handoffs.
+              </p>
+
+              <div className="flex items-center gap-2 text-[10px] font-mono uppercase tracking-[0.25em] text-white mb-5">
+                <span className="relative flex w-2 h-2">
+                  <span className="absolute inset-0 rounded-full bg-green-400 animate-ping opacity-60" />
+                  <span className="relative w-2 h-2 rounded-full bg-green-400" />
+                </span>
+                Available — Q2 2026
+              </div>
+
+              <div className="flex flex-wrap gap-3">
+                <a href="https://www.linkedin.com/in/portfolio2/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 flex items-center justify-center border border-white/20 text-white hover:bg-white hover:text-black transition-colors" aria-label="LinkedIn">
+                  <Linkedin className="w-4 h-4" />
+                </a>
+                <a href="https://www.behance.net/marcfriedmanweb" target="_blank" rel="noopener noreferrer" className="w-10 h-10 flex items-center justify-center border border-white/20 text-white hover:bg-white hover:text-black transition-colors" aria-label="Behance">
+                  <Palette className="w-4 h-4" />
+                </a>
+                <a href="https://www.awwwards.com/marc-friedman/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 flex items-center justify-center border border-white/20 text-white hover:bg-white hover:text-black transition-colors" aria-label="Awwwards">
+                  <Trophy className="w-4 h-4" />
+                </a>
+                <a href={CALENDLY_LINK} target="_blank" rel="noopener noreferrer" className="w-10 h-10 flex items-center justify-center border border-white/20 text-white hover:bg-white hover:text-black transition-colors" aria-label="Schedule a call">
+                  <Calendar className="w-4 h-4" />
+                </a>
+              </div>
+            </div>
+
+            {/* Services column */}
+            <div>
+              <p className="text-[10px] font-mono uppercase tracking-[0.3em] text-[#A3D1FF] mb-6">
+                — Services
+              </p>
+              <ul className="space-y-2.5">
+                <li><Link href="/services/web-development" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Web Development</Link></li>
+                <li><Link href="/services/design" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">UI/UX Design</Link></li>
+                <li><Link href="/services/design-systems" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Design Systems</Link></li>
+                <li><Link href="/services/ai-integration" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">AI Integration</Link></li>
+                <li><Link href="/services/cybersecurity" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Cybersecurity</Link></li>
+                <li><Link href="/services/startup-mvp" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Startup MVP</Link></li>
+                <li><Link href="/services/seo-content-layout" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">SEO &amp; Content Layout</Link></li>
+                <li><Link href="/services/aeo" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">AEO</Link></li>
+                <li><Link href="/services/geo" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">GEO</Link></li>
+                <li><Link href="/services/local-seo" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Local SEO</Link></li>
+                <li><Link href="/services/maintenance-hosting" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Maintenance &amp; Hosting</Link></li>
+              </ul>
+            </div>
+
+            {/* Work + Resources column */}
+            <div className="space-y-10">
+              <div>
+                <p className="text-[10px] font-mono uppercase tracking-[0.3em] text-[#A3D1FF] mb-6">
+                  — Work
                 </p>
+                <ul className="space-y-2.5">
+                  <li><Link href="/work" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">All Projects</Link></li>
+                  <li><Link href="/work/case-studies/binns-media" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Binns Media Group</Link></li>
+                  <li><Link href="/work/case-studies/untapped-africa" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Untapped Africa</Link></li>
+                  <li><Link href="/work/case-studies/automarginx" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">AutoMarginX</Link></li>
+                </ul>
               </div>
-
-              <div className="flex gap-3">
-                <a href="https://www.linkedin.com/in/portfolio2/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-[#2d3035] flex items-center justify-center text-white hover:text-[#0077B5] hover:bg-[#0077B5]/10 transition-all group" aria-label="LinkedIn">
-                  <Linkedin className="w-5 h-5 group-hover:scale-110 transition-transform" />
-                </a>
-                <a href="https://www.behance.net/marcfriedmanweb" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-[#2d3035] flex items-center justify-center text-white hover:text-[#1769FF] hover:bg-[#1769FF]/10 transition-all group" aria-label="Behance">
-                  <Palette className="w-5 h-5 group-hover:scale-110 transition-transform" />
-                </a>
-                <a href={CALENDLY_LINK} target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-[#2d3035] flex items-center justify-center text-white hover:text-[#00A2FF] hover:bg-[#00A2FF]/10 transition-all group" aria-label="Schedule a Call">
-                  <Calendar className="w-5 h-5 group-hover:scale-110 transition-transform" />
-                </a>
-                <a href="https://www.awwwards.com/marc-friedman/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-[#2d3035] flex items-center justify-center text-white hover:text-[#FFB800] hover:bg-[#FFB800]/10 transition-all group" aria-label="Awwwards">
-                  <Trophy className="w-5 h-5 group-hover:scale-110 transition-transform" />
-                </a>
+              <div>
+                <p className="text-[10px] font-mono uppercase tracking-[0.3em] text-[#A3D1FF] mb-6">
+                  — Resources
+                </p>
+                <ul className="space-y-2.5">
+                  <li><Link href="/blog" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Blog</Link></li>
+                  <li><a href="https://www.behance.net/marcfriedmanweb" target="_blank" rel="noopener noreferrer" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Behance</a></li>
+                  <li><a href="https://dribbble.com/marcf9199/about" target="_blank" rel="noopener noreferrer" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Dribbble</a></li>
+                  <li><a href="https://clutch.co/profile/marc-friedman-design-agency" target="_blank" rel="noopener noreferrer" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Clutch Reviews</a></li>
+                </ul>
               </div>
             </div>
 
+            {/* Company column */}
             <div>
-              <h3 className="text-white font-semibold mb-6 text-lg">Services</h3>
-              <ul className="space-y-2">
-                <li><Link href="/services/web-development" className="text-white hover:text-white transition-colors">Web Development</Link></li>
-                <li><Link href="/services/design" className="text-white hover:text-white transition-colors">UI/UX Design</Link></li>
-                <li><Link href="/services/design-systems" className="text-white hover:text-white transition-colors">Design Systems</Link></li>
-                <li><Link href="/services/ai-integration" className="text-white hover:text-white transition-colors">AI Integration</Link></li>
-                <li><Link href="/services/cybersecurity" className="text-white hover:text-white transition-colors">Cybersecurity</Link></li>
-                <li><Link href="/services/startup-mvp" className="text-white hover:text-white transition-colors">Startup MVP</Link></li>
-                <li><Link href="/services/seo-content-layout" className="text-white hover:text-white transition-colors">SEO Content & Layout</Link></li>
-                <li><Link href="/services/aeo" className="text-white hover:text-white transition-colors">AEO</Link></li>
-                <li><Link href="/services/geo" className="text-white hover:text-white transition-colors">GEO</Link></li>
-                <li><Link href="/services/local-seo" className="text-white hover:text-white transition-colors">Local SEO</Link></li>
-                <li><Link href="/services/external-web-department" className="text-white hover:text-white transition-colors">External Web Department</Link></li>
-                <li><Link href="/services/maintenance-hosting" className="text-white hover:text-white transition-colors">Maintenance & Hosting</Link></li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="text-white font-semibold mb-6 text-lg">Work</h3>
-              <ul className="space-y-2">
-                <li><Link href="/work" className="text-white hover:text-white transition-colors">All Projects</Link></li>
-                <li><Link href="/work/case-studies/binns-media" className="text-white hover:text-white transition-colors">Binns Media Group</Link></li>
-                <li><Link href="/work/case-studies/untapped-africa" className="text-white hover:text-white transition-colors">Untapped Africa</Link></li>
-                <li><Link href="/work/case-studies/automarginx" className="text-white hover:text-white transition-colors">AutoMarginX</Link></li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="text-white font-semibold mb-6 text-lg">Resources</h3>
-              <ul className="space-y-2">
-                <li><Link href="/blog" className="text-white hover:text-white transition-colors">Blog</Link></li>
-                <li><a href="https://www.behance.net/marcfriedmanweb" target="_blank" rel="noopener noreferrer" className="text-white hover:text-white transition-colors">Behance</a></li>
-                <li><a href="https://dribbble.com/marcf9199/about" target="_blank" rel="noopener noreferrer" className="text-white hover:text-white transition-colors">Dribbble</a></li>
-                <li><a href="https://clutch.co/profile/marc-friedman-design-agency" target="_blank" rel="noopener noreferrer" className="text-white hover:text-white transition-colors">Clutch Reviews</a></li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="text-white font-semibold mb-6 text-lg">Company</h3>
-              <ul className="space-y-2">
-                <li><Link href="/about" className="text-white hover:text-white transition-colors">About</Link></li>
-                <li><Link href="/contact" className="text-white hover:text-white transition-colors">Contact</Link></li>
-                <li><a href="mailto:marcf@marcfriedmanwebdesign.com" className="text-white hover:text-white transition-colors">Email Us</a></li>
+              <p className="text-[10px] font-mono uppercase tracking-[0.3em] text-[#A3D1FF] mb-6">
+                — Company
+              </p>
+              <ul className="space-y-2.5">
+                <li><Link href="/about" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">About</Link></li>
+                <li><Link href="/contact" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Contact</Link></li>
+                <li><Link href="/press" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Press</Link></li>
+                <li><a href="mailto:marcf@marcfriedmanwebdesign.com" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Email Us</a></li>
               </ul>
             </div>
           </div>
 
-          <div className="mt-12 pt-8 border-t border-white/10 text-center text-white">
+          {/* Tech stack strip */}
+          <div className="mt-14 pt-8 border-t border-white/10">
+            <p className="text-[10px] font-mono uppercase tracking-[0.3em] text-white/30 mb-2 text-center">
+              Built with
+            </p>
+            <TechStackStrip />
+          </div>
+
+          {/* Bottom bar */}
+          <div className="mt-8 pt-8 border-t border-white/10">
             <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-              <div className="flex flex-col sm:flex-row items-center gap-4">
-                <p className="text-sm">© {new Date().getFullYear()} Marc Friedman. All rights reserved.</p>
-                <div className="flex items-center gap-2 text-xs">
-                  <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
-                  <span>Available for new projects</span>
-                </div>
-              </div>
-              <div className="flex flex-wrap gap-4 text-sm">
-                <Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy</Link>
-                <Link href="/terms-and-conditions" className="hover:text-white transition-colors">Terms</Link>
-                <a href="/accessibility-statement.html" className="hover:text-white transition-colors">Accessibility</a>
-                <Link href="/cookies-policy" className="hover:text-white transition-colors">Cookies</Link>
-                <Link href="/disclaimer" className="hover:text-white transition-colors">Disclaimer</Link>
-                <a href="/sitemap.xml" className="hover:text-white transition-colors">Sitemap</a>
+              <p className="text-[10px] font-mono uppercase tracking-[0.25em] text-white/40">
+                © {new Date().getFullYear()} Marc Friedman. All rights reserved.
+              </p>
+              <div className="flex flex-wrap justify-center gap-x-6 gap-y-2">
+                <Link href="/privacy-policy" className="text-[10px] font-mono uppercase tracking-[0.2em] text-white/40 hover:text-[#A3D1FF] transition-colors">Privacy</Link>
+                <Link href="/terms-and-conditions" className="text-[10px] font-mono uppercase tracking-[0.2em] text-white/40 hover:text-[#A3D1FF] transition-colors">Terms</Link>
+                <a href="/accessibility-statement.html" className="text-[10px] font-mono uppercase tracking-[0.2em] text-white/40 hover:text-[#A3D1FF] transition-colors">Accessibility</a>
+                <Link href="/cookies-policy" className="text-[10px] font-mono uppercase tracking-[0.2em] text-white/40 hover:text-[#A3D1FF] transition-colors">Cookies</Link>
+                <Link href="/disclaimer" className="text-[10px] font-mono uppercase tracking-[0.2em] text-white/40 hover:text-[#A3D1FF] transition-colors">Disclaimer</Link>
+                <a href="/sitemap.xml" className="text-[10px] font-mono uppercase tracking-[0.2em] text-white/40 hover:text-[#A3D1FF] transition-colors">Sitemap</a>
               </div>
             </div>
           </div>

@@ -11,6 +11,7 @@ import {
   ServiceColophon,
   SERIF,
 } from '@/components/ServiceEditorial';
+import TechStackStrip from '@/components/TechStackStrip';
 
 const services: ArcCard[] = [
   {
@@ -66,24 +67,6 @@ const services: ArcCard[] = [
       'Security baked into the product — not bolted on after a breach. SOC dashboards, auth, access control.',
     href: '/services/cybersecurity',
     bullets: ['OWASP-aware', 'SOC-grade UX', 'Pen-test friendly'],
-  },
-  {
-    id: 'external-web-department',
-    title: 'External Web Department',
-    category: 'Retainer',
-    blurb:
-      'For multi-brand and multi-location companies that need to ship sites fast — without hiring a team.',
-    href: '/services/external-web-department',
-    bullets: ['Multi-brand', 'On-demand shipping', 'Free first landing page'],
-  },
-  {
-    id: 'premium-web-package',
-    title: 'Premium Web',
-    category: 'Flagship',
-    blurb:
-      "A complete, high-end website — strategic planning, custom design, React build, CRM, secure hosting.",
-    href: '/services/premium-web-package',
-    bullets: ['React + Next.js', 'CRM + analytics', 'Cloudflare hosting'],
   },
   {
     id: 'seo-content-layout',
@@ -147,7 +130,7 @@ export default function ServicesPage() {
         <div className="absolute top-1/3 left-[-10%] w-[700px] h-[700px] bg-[#A3D1FF]/8 rounded-full blur-[140px] pointer-events-none" />
 
         <div className="max-w-7xl mx-auto relative">
-          <ChapterMarker number="Chapter · Services" label="13 Disciplines · 2026" />
+          <ChapterMarker number="Chapter · Services" label="11 Disciplines · 2026" />
 
           <motion.p
             initial={{ opacity: 0, x: -20 }}
@@ -155,7 +138,7 @@ export default function ServicesPage() {
             transition={{ duration: 0.6 }}
             className="text-xs font-mono uppercase tracking-[0.35em] text-[#A3D1FF] mb-6"
           >
-            — Thirteen ways to work together
+            — Eleven ways to work together
           </motion.p>
 
           <motion.h1
@@ -203,6 +186,18 @@ export default function ServicesPage() {
           'Hand-coded',
         ]}
       />
+
+      {/* ===================== TECH STACK ===================== */}
+      <div className="relative bg-black border-t border-white/10 py-6">
+        <div className="flex items-center justify-center gap-3 mb-1">
+          <span className="h-[1px] w-8 bg-white/10" />
+          <span className="text-[9px] font-mono uppercase tracking-[0.35em] text-white/30">
+            Powered by
+          </span>
+          <span className="h-[1px] w-8 bg-white/10" />
+        </div>
+        <TechStackStrip />
+      </div>
 
       {/* ===================== INDEX (LIST FALLBACK) ===================== */}
       <section className="relative bg-[#0a0a0a] py-24 md:py-32 px-6 lg:px-12 border-t border-white/10">

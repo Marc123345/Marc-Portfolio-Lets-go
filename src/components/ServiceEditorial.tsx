@@ -599,8 +599,6 @@ const ALL_SERVICES = [
   { slug: 'aeo', title: 'AEO', category: 'Answer Engines' },
   { slug: 'geo', title: 'GEO', category: 'Generative Search' },
   { slug: 'local-seo', title: 'Local SEO', category: 'Local' },
-  { slug: 'external-web-department', title: 'External Web Department', category: 'Retainer' },
-  { slug: 'premium-web-package', title: 'Premium Web', category: 'Flagship' },
   { slug: 'maintenance-hosting', title: 'Maintenance & Hosting', category: 'Care' },
 ];
 

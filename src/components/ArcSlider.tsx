@@ -4,6 +4,7 @@ import React, { useEffect, useRef, useState, useCallback } from 'react';
 import { ArrowUpRight, ChevronLeft, ChevronRight } from 'lucide-react';
 import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 const SERIF = "Georgia, 'Times New Roman', serif";
 const ACCENT = '#A3D1FF';
@@ -23,6 +24,7 @@ interface ArcSliderProps {
 }
 
 export default function ArcSlider({ cards, initialIndex = 0 }: ArcSliderProps) {
+  const router = useRouter();
   const [activeIndex, setActiveIndex] = useState(initialIndex);
   const [isMobile, setIsMobile] = useState(false);
   const [hovering, setHovering] = useState(false);
@@ -164,10 +166,10 @@ export default function ArcSlider({ cards, initialIndex = 0 }: ArcSliderProps) {
         tiltY.set(0);
       }
     }
-    // Drag
+    // Drag — use a generous threshold so normal clicks aren't mistaken for drags
     if (!dragRef.current.isDragging) return;
     const dx = e.clientX - dragRef.current.startX;
-    if (Math.abs(dx) > 8) dragRef.current.hasMoved = true;
+    if (Math.abs(dx) > 30) dragRef.current.hasMoved = true;
   };
   const onPointerUp = (e: React.PointerEvent) => {
     if (!dragRef.current.isDragging) return;
@@ -282,7 +284,11 @@ export default function ArcSlider({ cards, initialIndex = 0 }: ArcSliderProps) {
               }}
               onClick={() => {
                 if (dragRef.current.hasMoved) return;
-                if (i !== activeIndex) navigateTo(i);
+                if (i !== activeIndex) {
+                  navigateTo(i);
+                } else {
+                  router.push(c.href);
+                }
               }}
             >
               <motion.div
@@ -349,10 +355,11 @@ export default function ArcSlider({ cards, initialIndex = 0 }: ArcSliderProps) {
                   <Link
                     href={c.href}
                     onClick={(e) => {
-                      // Block link if it was a drag, not a click
                       if (dragRef.current.hasMoved) {
                         e.preventDefault();
                       }
+                      // Stop propagation so the card's onClick doesn't also fire router.push
+                      e.stopPropagation();
                     }}
                     className="inline-flex items-center gap-2 text-white text-sm font-medium border-b border-white/30 hover:border-[#A3D1FF] hover:text-[#A3D1FF] pb-1 self-start transition-colors relative z-10"
                     style={{ cursor: 'pointer' }}

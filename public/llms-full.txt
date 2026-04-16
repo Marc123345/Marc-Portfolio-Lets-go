@@ -109,13 +109,6 @@ Component libraries, design tokens, style guides, and reusable component archite
 
 URL: https://www.marcfriedmanportfolio.com/services/design-systems
 
-### 8. Premium Web Development Package — $8,000
-All-inclusive package: Strategic discovery & SEO research, UX wireframes (up to 10 pages), UI design system, custom React frontend, GSAP & Framer Motion animations, responsive SEO-optimized layouts, CRM & automation integrations (HubSpot, Salesforce), Cloudflare hosting/DNS/SSL, QA testing + analytics/pixel integration.
-
-Optional add-ons: Supabase backend + auth, Stripe/Calendly integration, headless CMS, Cloudinary for media delivery, ongoing optimization.
-
-URL: https://www.marcfriedmanportfolio.com/services/premium-web-package
-
 ### 9. Monthly Website Retainer — $500/month
 Full website management, premium hosting, technical SEO, on-page SEO, content creation, landing page design, analytics, monthly optimization, UX improvements, unlimited landing pages, 24/7 lead-capture chatbot, monthly SEO blog posts, backlink building, performance monitoring, GA4 & conversion tracking.
 
@@ -125,11 +118,6 @@ URL: https://www.marcfriedmanportfolio.com/services/monthly-retainer
 Design & development execution for go-to-market strategy. High-converting landing pages for paid campaigns and funnels, sales-ready websites, white-label execution under the agency's brand, strategy-aligned implementation.
 
 URL: https://www.marcfriedmanportfolio.com/services/fractional-cmo
-
-### 11. External Web Department
-For multi-location and multi-brand companies, franchise and chain businesses, multi-brand groups, healthcare/education/service networks. Ongoing website production, redesigns, scalable design systems, continuous improvements. Free landing page for first-time partners.
-
-URL: https://www.marcfriedmanportfolio.com/services/external-web-department
 
 ### 12. UX/UI Mentorship & Tutoring
 Figma mastery, UI design skills, UX best practices, portfolio development, career growth, design systems.

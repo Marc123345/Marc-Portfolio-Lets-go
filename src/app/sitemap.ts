@@ -21,8 +21,6 @@ const entries: Entry[] = [
   { path: 'services/aeo', priority: 0.9 },
   { path: 'services/geo', priority: 0.9 },
   { path: 'services/local-seo', priority: 0.9 },
-  { path: 'services/external-web-department', priority: 0.9 },
-  { path: 'services/premium-web-package', priority: 0.9 },
   { path: 'services/maintenance-hosting', priority: 0.9 },
   { path: 'about', priority: 0.8 },
   { path: 'contact', priority: 0.8 },

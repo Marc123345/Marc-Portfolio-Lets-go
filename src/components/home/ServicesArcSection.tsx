@@ -63,24 +63,6 @@ const services: ArcCard[] = [
     bullets: ['OWASP-aware', 'SOC-grade UX', 'Pen-test friendly'],
   },
   {
-    id: 'external-web-department',
-    title: 'External Web Department',
-    category: 'Retainer',
-    blurb:
-      'For multi-brand and multi-location companies that need to ship sites fast — without hiring a team.',
-    href: '/services/external-web-department',
-    bullets: ['Multi-brand', 'On-demand shipping', 'Free first landing page'],
-  },
-  {
-    id: 'premium-web-package',
-    title: 'Premium Web',
-    category: 'Flagship',
-    blurb:
-      "A complete, high-end website — strategic planning, custom design, React build, CRM, secure hosting.",
-    href: '/services/premium-web-package',
-    bullets: ['React + Next.js', 'CRM + analytics', 'Cloudflare hosting'],
-  },
-  {
     id: 'seo-content-layout',
     title: 'SEO Content & Layout',
     category: 'SEO',
@@ -147,7 +129,7 @@ export default function ServicesArcSection() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1100px] h-[700px] bg-[#A3D1FF]/8 rounded-full blur-[160px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto relative">
-        <ChapterMarker number="Chapter · Services" label="13 Disciplines" />
+        <ChapterMarker number="Chapter · Services" label="11 Disciplines" />
 
         <div className="grid md:grid-cols-[1.2fr_1fr] gap-8 md:gap-16 items-end mb-12">
           <motion.h2

@@ -4,6 +4,7 @@ import React, { useMemo } from 'react';
 import { Quote, Star, Linkedin, User, ArrowUpRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import TechStackStrip from '@/components/TechStackStrip';
 
 const SERIF = "Georgia, 'Times New Roman', serif";
 
@@ -395,6 +396,18 @@ export default function TrustedBy() {
               </div>
             ))}
         </div>
+      </div>
+
+      {/* Tech Stack Strip */}
+      <div className="relative w-full mb-12 border-t border-b border-white/5 bg-white/[0.02]">
+        <div className="flex items-center justify-center gap-3 pt-4 pb-1">
+          <span className="h-[1px] w-8 bg-white/10" />
+          <span className="text-[9px] font-mono uppercase tracking-[0.35em] text-white/30">
+            Tools &amp; Stack
+          </span>
+          <span className="h-[1px] w-8 bg-white/10" />
+        </div>
+        <TechStackStrip />
       </div>
 
       {/* Section Heading */}
