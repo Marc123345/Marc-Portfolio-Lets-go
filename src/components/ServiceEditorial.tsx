@@ -40,8 +40,16 @@ export function KineticWord({
   if (italic) {
     return (
       <span
-        className="inline-block overflow-hidden align-bottom italic font-light"
-        style={{ paddingLeft: '0.08em', paddingRight: '0.04em' }}
+        className="inline-block overflow-hidden italic font-light"
+        style={{
+          paddingLeft: '0.08em',
+          paddingRight: '0.04em',
+          paddingTop: '0.15em',
+          paddingBottom: '0.1em',
+          marginTop: '-0.15em',
+          marginBottom: '-0.1em',
+          verticalAlign: 'top',
+        }}
       >
         <motion.span
           initial={{ y: '105%' }}
@@ -57,7 +65,17 @@ export function KineticWord({
   return (
     <span className="inline-block">
       {word.split('').map((ch, i) => (
-        <span key={i} className="inline-block overflow-hidden align-bottom">
+        <span
+          key={i}
+          className="inline-block overflow-hidden"
+          style={{
+            paddingTop: '0.15em',
+            paddingBottom: '0.1em',
+            marginTop: '-0.15em',
+            marginBottom: '-0.1em',
+            verticalAlign: 'top',
+          }}
+        >
           <motion.span
             initial={{ y: '105%' }}
             animate={{ y: 0 }}
@@ -195,11 +213,12 @@ export function ServiceMasthead({
           </motion.div>
 
           <h1
-            className="text-white leading-[0.88] tracking-[-0.04em] mb-8"
+            className="text-white tracking-[-0.04em] mb-8"
             style={{
               fontFamily: SERIF,
               fontSize: 'clamp(2.75rem, 8vw, 7rem)',
               fontWeight: 400,
+              lineHeight: 1.05,
             }}
           >
             <span className="block">
