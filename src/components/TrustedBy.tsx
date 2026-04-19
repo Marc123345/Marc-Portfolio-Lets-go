@@ -366,7 +366,6 @@ export default function TrustedBy() {
           {[
             { src: 'https://i.imgur.com/uliFOja.png', alt: 'Binns Media Group', invert: true },
             { src: 'https://ik.imagekit.io/qcvroy8xpd/GOLD%20TEXT%20LOGO%20NO%20GLOW%20EFFECT%20ADDED%201.png?updatedAt=1748753342858', alt: 'Untapped Africa' },
-            { src: 'https://ik.imagekit.io/qcvroy8xpd/image%201%20(5).png?updatedAt=1763319654171', alt: 'H2H Marketing', invert: true },
             { src: 'https://ik.imagekit.io/qcvroy8xpd/logo%20(1).svg?updatedAt=1763381682176', alt: 'Chad LeClos', invert: true },
             { src: 'https://ik.imagekit.io/qcvroy8xpd/image%201%20(7).png', alt: 'Secure Annapolis', invert: true },
             { src: 'https://ik.imagekit.io/qcvroy8xpd/9uafCUp%201%20(1).png?updatedAt=1755247790037', alt: 'Auto Margin', invert: true },
@@ -375,7 +374,6 @@ export default function TrustedBy() {
             .concat([
               { src: 'https://i.imgur.com/uliFOja.png', alt: 'Binns Media Group', invert: true },
               { src: 'https://ik.imagekit.io/qcvroy8xpd/GOLD%20TEXT%20LOGO%20NO%20GLOW%20EFFECT%20ADDED%201.png?updatedAt=1748753342858', alt: 'Untapped Africa' },
-                { src: 'https://ik.imagekit.io/qcvroy8xpd/image%201%20(5).png?updatedAt=1763319654171', alt: 'H2H Marketing', invert: true },
               { src: 'https://ik.imagekit.io/qcvroy8xpd/logo%20(1).svg?updatedAt=1763381682176', alt: 'Chad LeClos', invert: true },
               { src: 'https://ik.imagekit.io/qcvroy8xpd/image%201%20(7).png', alt: 'Secure Annapolis', invert: true },
               { src: 'https://ik.imagekit.io/qcvroy8xpd/9uafCUp%201%20(1).png?updatedAt=1755247790037', alt: 'Auto Margin', invert: true },

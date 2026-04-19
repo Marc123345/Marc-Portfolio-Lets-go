@@ -14,8 +14,6 @@ const studies = [
   { slug: 'ilight', label: 'iLight' },
   { slug: 'paving-leads', label: 'Paving Leads' },
   { slug: 'tar-chip-paving', label: 'Tar Chip Paving' },
-  { slug: 'h2h-marketing', label: 'H2H Marketing' },
-  { slug: 'ask-africa', label: 'Ask Africa' },
 ];
 
 export default function CaseStudiesPage() {
