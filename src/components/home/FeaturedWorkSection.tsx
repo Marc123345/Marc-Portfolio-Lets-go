@@ -53,6 +53,21 @@ const featured: Project[] = [
     tags: ['Next.js', 'TypeScript', 'Mapbox GL'],
   },
   {
+    title: 'H2H Marketing',
+    category: 'Agency Brand',
+    blurb:
+      'Bold brand-first digital presence for a social marketing agency connecting brands with real audiences.',
+    image: 'https://ik.imagekit.io/qcvroy8xpd/image%201%20(5).png',
+    liveUrl: 'https://www.h2hsocialmarketing.com/',
+    caseStudyUrl: '/work/case-studies/h2h-marketing',
+    stats: [
+      { value: '100%', label: 'Custom' },
+      { value: '<2s', label: 'Load' },
+      { value: 'AA', label: 'A11y' },
+    ],
+    tags: ['React', 'Tailwind', 'Framer'],
+  },
+  {
     title: 'Paving Leads',
     category: 'SEO / Lead Gen',
     blurb:
@@ -97,6 +112,21 @@ const featured: Project[] = [
       { value: 'Deck', label: 'Included' },
     ],
     tags: ['React', 'Node.js', 'AI/ML'],
+  },
+  {
+    title: 'Ask Africa',
+    category: 'Research · Consultancy',
+    blurb:
+      "Commanding digital presence for one of Africa's leading research and consultancy firms.",
+    image: 'https://ik.imagekit.io/qcvroy8xpd/image%202%20(1).png',
+    liveUrl: 'https://askafrica.co.za/',
+    caseStudyUrl: '/work/case-studies/ask-africa',
+    stats: [
+      { value: '100%', label: 'Custom' },
+      { value: 'Pan', label: 'African' },
+      { value: 'Ent.', label: 'Ready' },
+    ],
+    tags: ['React', 'Tailwind', 'Vite'],
   },
   {
     title: 'Friedman & Cohen',

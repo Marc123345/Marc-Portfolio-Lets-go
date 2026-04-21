@@ -31,9 +31,11 @@ const contactSchema = {
 const projectFaces = [
   { image: 'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%204%20-%2016x9.png?updatedAt=1767539579710', title: 'Binns Media Group' },
   { image: 'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%201%20-%201x1(1).png?updatedAt=1767539579782', title: 'Untapped Africa' },
+  { image: 'https://ik.imagekit.io/qcvroy8xpd/image%201%20(5).png', title: 'H2H Marketing' },
   { image: 'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%204%20-%2016_9.png?updatedAt=1767539579010', title: 'Paving Leads' },
   { image: 'https://i.imgur.com/PiKh199.png', title: 'AutoMarginX' },
   { image: 'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%201%20-%201x1(5).png?updatedAt=1767539579818', title: 'iLight Care' },
+  { image: 'https://ik.imagekit.io/qcvroy8xpd/image%202%20(1).png', title: 'Ask Africa' },
   { image: 'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%201%20-%201x1(3).png?updatedAt=1767539579776', title: 'Friedman & Cohen' },
   { image: 'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%201%20-%201x1(2).png?updatedAt=1767539579194', title: 'A Secure Annapolis' },
   { image: 'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%204%20-%2016x9(5).png?updatedAt=1767539578933', title: 'Tar & Chip Paving' },
