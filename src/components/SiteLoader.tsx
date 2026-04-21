@@ -91,7 +91,7 @@ export default function SiteLoader() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="absolute top-6 left-0 right-0 px-6 md:px-10 flex justify-between text-[10px] md:text-xs font-mono uppercase tracking-[0.3em] text-white/50"
           >
-            <span>Marc Friedman · Portfolio</span>
+            <span>Marc Friedman Web Design Agency</span>
             <span>Loading — Vol. 01</span>
           </motion.div>
 
