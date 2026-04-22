@@ -50,7 +50,7 @@ const chapters: Chapter[] = [
 // - Chapter 0: scroll 0 → 0.34
 // - Chapter 1: scroll 0.34 → 0.63
 // - Chapter 2: scroll 0.63 → 1
-const ACTIVE_THRESHOLDS = [0.34, 0.63];
+const ACTIVE_THRESHOLDS = [0.3, 0.6];
 
 export default function HowItWorksSection() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -59,11 +59,8 @@ export default function HowItWorksSection() {
     offset: ['start start', 'end end'],
   });
 
-  const trackX = useTransform(scrollYProgress, [0.05, 0.92], ['0vw', '-200vw']);
-  const scrubberW = useTransform(scrollYProgress, [0.05, 0.92], ['0%', '100%']);
-  const introOpacity = useTransform(scrollYProgress, [0, 0.04, 0.08], [1, 0.4, 0]);
-  const introScale = useTransform(scrollYProgress, [0, 0.08], [1, 1.15]);
-  const introY = useTransform(scrollYProgress, [0, 0.08], ['0%', '-8%']);
+  const trackX = useTransform(scrollYProgress, [0, 0.9], ['0vw', '-200vw']);
+  const scrubberW = useTransform(scrollYProgress, [0, 0.9], ['0%', '100%']);
 
   const [activeChapter, setActiveChapter] = useState(0);
   useMotionValueEvent(scrollYProgress, 'change', (v) => {
@@ -155,41 +152,6 @@ export default function HowItWorksSection() {
             {String(activeChapter + 1).padStart(2, '0')} / 03
           </div>
         </div>
-
-        {/* Intro title — visible at scroll start */}
-        <motion.div
-          className="absolute inset-0 flex flex-col items-center justify-center z-20 px-6 pointer-events-none"
-          style={{ opacity: introOpacity, scale: introScale, y: introY }}
-        >
-          <div className="flex items-center gap-4 mb-8">
-            <span className="h-[1px] w-10 bg-white/25" />
-            <span className="text-[10px] font-mono uppercase tracking-[0.3em] text-white/50">
-              Process · 03 Stages
-            </span>
-            <span className="h-[1px] w-10 bg-white/25" />
-          </div>
-          <h2
-            className="text-white text-center leading-[0.9] tracking-[-0.03em]"
-            style={{
-              fontFamily: SERIF,
-              fontSize: 'clamp(3rem, 8.5vw, 7.5rem)',
-              fontWeight: 400,
-            }}
-          >
-            Three steps.
-            <br />
-            <em className="italic text-[#A3D1FF]">No mysteries.</em>
-          </h2>
-          <div className="mt-10 flex items-center gap-3 text-[10px] font-mono uppercase tracking-[0.3em] text-white/55">
-            <span>Scroll to watch the reel</span>
-            <motion.span
-              animate={{ y: [0, 4, 0] }}
-              transition={{ duration: 1.6, repeat: Infinity, ease: 'easeInOut' }}
-            >
-              ↓
-            </motion.span>
-          </div>
-        </motion.div>
 
         {/* Horizontal track with 3 chapter panels */}
         <motion.div
