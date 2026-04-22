@@ -46,7 +46,7 @@ export default function AboutSection() {
   return (
     <section
       ref={sectionRef}
-      className="relative py-28 md:py-36 px-6 lg:px-12 bg-black border-t border-white/10 overflow-hidden"
+      className="relative py-28 md:py-36 px-6 lg:px-12 bg-[#0a0a0a] border-t border-white/10 overflow-hidden"
     >
       {/* Ambient glow */}
       <div className="absolute top-1/3 -right-40 w-[640px] h-[640px] bg-[#A3D1FF]/8 rounded-full blur-[160px] pointer-events-none" />
@@ -166,16 +166,16 @@ export default function AboutSection() {
               }}
             >
               I&apos;m the{' '}
-              <span className="relative inline-block align-baseline overflow-hidden">
+              <span className="relative inline-block align-baseline leading-[1.15]">
                 {/* Ghost-size spacer so layout doesn't jump */}
-                <span className="invisible italic">strategist.</span>
+                <span className="invisible italic whitespace-nowrap">strategist.</span>
                 <AnimatePresence mode="wait">
                   <motion.span
                     key={ROLES[roleIndex]}
-                    initial={{ y: '100%', opacity: 0 }}
-                    animate={{ y: '0%', opacity: 1 }}
-                    exit={{ y: '-100%', opacity: 0 }}
-                    transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
+                    initial={{ y: 16, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    exit={{ y: -16, opacity: 0 }}
+                    transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
                     className="absolute inset-0 italic text-[#A3D1FF] whitespace-nowrap"
                   >
                     {ROLES[roleIndex]}.
