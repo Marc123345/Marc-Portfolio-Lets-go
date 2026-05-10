@@ -1,10 +1,23 @@
 "use client";
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
-type JotformWindow = Window & { jotformEmbedHandler?: (sel: string, url: string) => void };
+type JotformWindow = Window & {
+  jotformEmbedHandler?: (sel: string, url: string) => void;
+  plausible?: (event: string, options?: object) => void;
+};
+
+function trackFormSubmit() {
+  const w = window as JotformWindow;
+  if (w.plausible) {
+    w.plausible('Contact Form Submitted');
+  }
+}
 
 export default function ContactForm() {
+  const hasLoadedOnce = useRef(false);
+  const [loaded, setLoaded] = useState(false);
+
   useEffect(() => {
     const script = document.createElement('script');
     script.src = 'https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js';
@@ -13,27 +26,68 @@ export default function ContactForm() {
       const w = window as JotformWindow;
       if (w.jotformEmbedHandler) {
         w.jotformEmbedHandler(
-          "iframe[id='JotFormIFrame-261032780539053']",
+          "iframe[id='JotFormIFrame-261231977107053']",
           "https://form.jotform.com/"
         );
       }
     };
     document.body.appendChild(script);
-
-    return () => {
-      document.body.removeChild(script);
-    };
+    return () => { document.body.removeChild(script); };
   }, []);
 
+  useEffect(() => {
+    const handleMessage = (event: MessageEvent) => {
+      if (!String(event.origin).includes('jotform')) return;
+      let data = event.data;
+      if (typeof data === 'string') {
+        try { data = JSON.parse(data); } catch { /* not JSON */ }
+      }
+      if (
+        data?.action === 'submission' ||
+        data?.type === 'form:submitCompleted' ||
+        (typeof event.data === 'string' && event.data === 'reloadPage')
+      ) {
+        trackFormSubmit();
+      }
+    };
+    window.addEventListener('message', handleMessage);
+    return () => window.removeEventListener('message', handleMessage);
+  }, []);
+
+  const handleLoad = () => {
+    try { window.parent.scrollTo(0, 0); } catch { /* cross-origin safe */ }
+    if (hasLoadedOnce.current) {
+      trackFormSubmit();
+    }
+    hasLoadedOnce.current = true;
+    setLoaded(true);
+  };
+
   return (
-    <iframe
-      id="JotFormIFrame-261032780539053"
-      title="Marc Friedman Contact Form"
-      onLoad={() => { try { window.parent.scrollTo(0, 0); } catch { /* cross-origin safe */ } }}
-      allow="geolocation; microphone; camera; fullscreen; payment"
-      src="https://form.jotform.com/261032780539053"
-      style={{ minWidth: '100%', maxWidth: '100%', height: '539px', border: 'none' }}
-      scrolling="no"
-    />
+    <div style={{ position: 'relative', minHeight: '539px' }}>
+      {!loaded && (
+        <div className="absolute inset-0 flex flex-col items-center justify-center gap-4"
+          style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.08)' }}>
+          <div className="w-8 h-8 rounded-full border-2 border-t-[#A3D1FF] animate-spin"
+            style={{ borderColor: 'rgba(163,209,255,0.15)', borderTopColor: '#A3D1FF' }} />
+          <span style={{ fontSize: '0.8rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(163,209,255,0.5)' }}>
+            Loading form
+          </span>
+        </div>
+      )}
+      <iframe
+        id="JotFormIFrame-261231977107053"
+        title="Contact Inquiry Form for Web Design & Development"
+        onLoad={handleLoad}
+        allow="geolocation; microphone; camera; fullscreen; payment"
+        src="https://form.jotform.com/261231977107053"
+        style={{
+          minWidth: '100%', maxWidth: '100%', height: '539px', border: 'none',
+          opacity: loaded ? 1 : 0,
+          transition: 'opacity 0.3s ease',
+        }}
+        scrolling="no"
+      />
+    </div>
   );
 }
