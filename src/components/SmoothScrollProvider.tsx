@@ -16,6 +16,9 @@ export default function SmoothScrollProvider() {
       touchMultiplier: 1.2,
     });
 
+    // Expose on window so SiteLoader can pause/resume during load sequence
+    (window as unknown as Record<string, unknown>).__lenis = lenis;
+
     let raf = 0;
     const loop = (time: number) => {
       lenis.raf(time);
@@ -26,6 +29,7 @@ export default function SmoothScrollProvider() {
     return () => {
       cancelAnimationFrame(raf);
       lenis.destroy();
+      delete (window as unknown as Record<string, unknown>).__lenis;
     };
   }, []);
 

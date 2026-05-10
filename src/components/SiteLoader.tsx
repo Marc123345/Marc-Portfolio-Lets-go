@@ -51,10 +51,13 @@ export default function SiteLoader() {
 
   useEffect(() => {
     if (visible) {
-      const prev = document.body.style.overflow;
       document.body.style.overflow = 'hidden';
+      // Pause Lenis so queued wheel delta doesn't fire all at once on loader exit
+      const lenis = (window as unknown as Record<string, unknown>).__lenis as { stop: () => void; start: () => void } | undefined;
+      lenis?.stop();
       return () => {
-        document.body.style.overflow = prev;
+        document.body.style.overflow = '';
+        lenis?.start();
       };
     }
   }, [visible]);

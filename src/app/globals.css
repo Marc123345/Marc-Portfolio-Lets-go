@@ -83,11 +83,13 @@
   }
 
   html {
-    scroll-behavior: smooth;
+    /* scroll-behavior must be auto — Lenis handles all smoothing.
+       Setting smooth here causes double-easing and stutter. */
+    scroll-behavior: auto;
     -webkit-tap-highlight-color: transparent;
     font-size: 100%;
   }
-  
+
   body {
     @apply antialiased font-normal leading-relaxed bg-black text-white;
     font-family: var(--font-primary);
@@ -96,6 +98,7 @@
     -moz-osx-font-smoothing: grayscale;
     letter-spacing: var(--letter-spacing-normal);
     line-height: 1.5; /* 150% for body text */
+    overscroll-behavior: none;
   }
 
   h1, h2, h3, h4, h5, h6,
