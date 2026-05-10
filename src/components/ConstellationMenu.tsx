@@ -21,9 +21,11 @@ const orbs: Orb[] = [
   { label: 'Blog', to: '/blog', number: '03', meta: '27 Essays', x: 80, y: 58 },
   { label: 'About', to: '/about', number: '04', meta: 'Profile · Vol. 01', x: 20, y: 64 },
   { label: 'Contact', to: '/contact', number: '05', meta: 'Inbox · Q2 2026', x: 50, y: 84 },
+  { label: 'Free Audit', to: '/free-website-analyzer', number: '06', meta: 'Free Tool', x: 45, y: 14 },
+  { label: 'GEO Audit', to: '/free-geo-audit', number: '07', meta: 'Free · AI Visibility', x: 55, y: 48 },
 ];
 
-// Constellation edges — closes the pentagon
+// Constellation edges — connects the 7-point map
 const edges: [number, number][] = [
   [0, 1],
   [1, 2],
@@ -32,6 +34,11 @@ const edges: [number, number][] = [
   [3, 0],
   [0, 4],
   [1, 3],
+  [0, 5],
+  [5, 1],
+  [5, 6],
+  [6, 2],
+  [6, 4],
 ];
 
 export default function ConstellationMenu({
@@ -358,12 +365,6 @@ export default function ConstellationMenu({
             </div>
           </motion.div>
 
-          <style jsx>{`
-            @keyframes orbpulse {
-              0%, 100% { transform: scale(1); opacity: 0.55; }
-              50% { transform: scale(1.5); opacity: 0.15; }
-            }
-          `}</style>
         </motion.div>
       )}
     </AnimatePresence>

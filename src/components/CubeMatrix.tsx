@@ -101,6 +101,7 @@ export default function CubeMatrix({
         width: size,
         height: size,
         perspective: 1400,
+        perspectiveOrigin: '50% 50%',
         touchAction: 'none',
       }}
       onPointerMove={onPointerMove}
