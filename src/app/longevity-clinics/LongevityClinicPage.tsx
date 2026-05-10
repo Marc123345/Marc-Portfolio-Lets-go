@@ -108,16 +108,20 @@ function SchemaMarkup() {
 // ─── jotform embed ────────────────────────────────────────────────────────────
 
 function JotformEmbedCard() {
-  const containerRef = useRef<HTMLDivElement>(null);
+  const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
-    const el = containerRef.current;
-    if (!el) return;
     const script = document.createElement('script');
-    script.type = 'text/javascript';
-    script.src = 'https://form.jotform.com/jsform/261293298209060';
-    el.appendChild(script);
-    return () => { el.innerHTML = ''; };
+    script.src = 'https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js';
+    script.async = true;
+    script.onload = () => {
+      (window as unknown as Record<string, unknown> & { jotformEmbedHandler?: (sel: string, base: string) => void }).jotformEmbedHandler?.(
+        "iframe[id='JotFormIFrame-261231977107053']",
+        'https://form.jotform.com/'
+      );
+    };
+    document.body.appendChild(script);
+    return () => { document.body.removeChild(script); };
   }, []);
 
   return (
@@ -142,7 +146,30 @@ function JotformEmbedCard() {
           </span>
         </div>
 
-        <div ref={containerRef} />
+        {/* Loader */}
+        {!loaded && (
+          <div className="flex items-center justify-center py-16">
+            <div className="w-6 h-6 rounded-full border-2 border-white/15 border-t-[#A3D1FF] animate-spin" />
+          </div>
+        )}
+
+        <iframe
+          id="JotFormIFrame-261231977107053"
+          title="Contact Inquiry Form for Web Design & Development"
+          onLoad={() => { setLoaded(true); }}
+          allowTransparency
+          allow="geolocation; microphone; camera; fullscreen; payment"
+          src="https://form.jotform.com/261231977107053"
+          frameBorder={0}
+          scrolling="no"
+          style={{
+            minWidth: '100%',
+            maxWidth: '100%',
+            height: '539px',
+            border: 'none',
+            display: loaded ? 'block' : 'none',
+          }}
+        />
       </div>
     </motion.div>
   );
