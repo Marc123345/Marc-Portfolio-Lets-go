@@ -2,7 +2,7 @@ import type { MetadataRoute } from 'next';
 
 export const dynamic = 'force-static';
 
-const BASE = 'https://marcfriedmanportfolio.com';
+const BASE = 'https://www.marcfriedmanportfolio.com';
 
 type Entry = { path: string; priority: number };
 
@@ -27,6 +27,9 @@ const entries: Entry[] = [
   { path: 'press', priority: 0.7 },
   { path: 'blog', priority: 0.8 },
   { path: 'lab', priority: 0.6 },
+  { path: 'free-website-analyzer', priority: 0.9 },
+  { path: 'free-geo-audit', priority: 0.9 },
+  { path: 'longevity-clinics', priority: 0.95 },
 
   // Case studies
   { path: 'work/case-studies/automarginx', priority: 0.8 },
@@ -46,6 +49,7 @@ const entries: Entry[] = [
   { path: 'work/case-studies/sentinel-ds', priority: 0.8 },
 
   // Blog posts
+  { path: 'blog/biohacking-clinic-web-design-miami', priority: 0.8 },
   { path: 'blog/context-driven-design-decisions', priority: 0.8 },
   { path: 'blog/ai-ready-design-systems', priority: 0.8 },
   { path: 'blog/ai-native-ux-personalization', priority: 0.8 },
@@ -73,6 +77,8 @@ const entries: Entry[] = [
   { path: 'blog/minimal-fast-sustainable-ux', priority: 0.8 },
   { path: 'blog/google-search-console-ai-reports', priority: 0.8 },
   { path: 'blog/conversational-ui-chat-interfaces', priority: 0.8 },
+  { path: 'blog/google-march-april-2026-seo-updates', priority: 0.8 },
+  { path: 'blog/dopamine-aesthetic-bold-retro-design', priority: 0.8 },
 
   // Legal
   { path: 'privacy-policy', priority: 0.5 },
@@ -86,7 +92,7 @@ const entries: Entry[] = [
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
   return entries.map((e) => ({
-    url: e.path ? `${BASE}/${e.path}` : BASE,
+    url: e.path ? `${BASE}/${e.path}/` : `${BASE}/`,
     lastModified,
     priority: e.priority,
   }));
