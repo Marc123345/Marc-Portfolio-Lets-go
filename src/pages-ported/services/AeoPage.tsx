@@ -11,6 +11,7 @@ import {
   ServiceColophon,
   ServiceNavigator,
 } from '@/components/ServiceEditorial';
+import AuditFormEmbed from '@/components/AuditFormEmbed';
 
 export default function AeoPage() {
   return (
@@ -139,6 +140,17 @@ export default function AeoPage() {
           ]}
         />
       </EditorialSection>
+
+      {/* ── Free AEO audit form ── */}
+      <section className="relative bg-[#0a0a0a] border-t border-white/10 py-24 px-6 lg:px-12">
+        <div className="max-w-2xl mx-auto">
+          <p className="text-xs font-mono uppercase tracking-[0.35em] text-[#A3D1FF] mb-4 text-center">— Free · No signup</p>
+          <h2 className="text-center text-white mb-10" style={{ fontFamily: "Georgia, 'Times New Roman', serif", fontSize: 'clamp(1.8rem, 3.5vw, 3rem)', fontWeight: 400 }}>
+            Request your free AEO audit
+          </h2>
+          <AuditFormEmbed />
+        </div>
+      </section>
 
       <ServiceNavigator currentSlug="aeo" />
       <ServiceColophon
