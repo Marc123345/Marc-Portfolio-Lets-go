@@ -46,14 +46,11 @@ export default function Spotlight({
   return (
     <div ref={containerRef} className={`relative ${className}`}>
       <motion.div
-        className="absolute inset-0 pointer-events-none transition-opacity duration-300"
+        className="absolute inset-0 pointer-events-none"
         style={{
           background: `radial-gradient(circle 600px at ${mousePosition.x}% ${mousePosition.y}%, ${spotlightColor}, transparent 40%)`,
-          opacity: isHovering ? 1 : 0,
         }}
-        animate={{
-          opacity: isHovering ? 1 : 0,
-        }}
+        animate={{ opacity: isHovering ? 1 : 0 }}
         transition={{ duration: 0.3 }}
       />
       {children}

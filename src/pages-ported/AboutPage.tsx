@@ -489,20 +489,6 @@ export default function AboutPage() {
 
       {/* ===================== KINETIC MARQUEE STRIP ===================== */}
       <section className="relative bg-black border-y border-white/10 overflow-hidden">
-        <style>{`
-          @keyframes about-marquee {
-            from { transform: translateX(0); }
-            to { transform: translateX(-50%); }
-          }
-          .about-marquee {
-            animation: about-marquee 32s linear infinite;
-            display: flex;
-            width: max-content;
-          }
-          @media (prefers-reduced-motion: reduce) {
-            .about-marquee { animation: none; }
-          }
-        `}</style>
         <div className="about-marquee py-6 md:py-8">
           {[...Array(2)].map((_, dup) => (
             <div key={dup} className="flex items-center gap-10 md:gap-16 pr-10 md:pr-16">

@@ -110,7 +110,7 @@ export default function ProjectCard3D({
       transition={{ 
         duration: 0.8, 
         ease: [0.22, 1, 0.36, 1],
-        delay: index * 0.1
+        delay: Math.min(index * 0.1, 0.5)
       }}
       viewport={{ once: true, amount: 0.2 }}
       onMouseMove={isEnabled ? handleMouseMove : undefined}
@@ -128,9 +128,9 @@ export default function ProjectCard3D({
         <motion.img 
           src={image} 
           alt={title} 
-          className={`w-full h-full object-cover transform group-hover:scale-105 transition-all duration-500 ${
+          className={`w-full h-full object-cover ${
             isLoaded ? 'opacity-100' : 'opacity-0'
-          }`}
+          } transition-opacity duration-300`}
           style={isEnabled ? {
             x: imgSpringX,
             y: imgSpringY,

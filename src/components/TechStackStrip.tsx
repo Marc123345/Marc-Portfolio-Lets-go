@@ -80,25 +80,6 @@ const tools = [
 export default function TechStackStrip() {
   return (
     <div className="relative w-full overflow-hidden py-5">
-      <style>{`
-        @keyframes scroll-tech {
-          0% { transform: translateX(0); }
-          100% { transform: translateX(-50%); }
-        }
-        .tech-scroll {
-          animation: scroll-tech 35s linear infinite;
-          display: flex;
-          width: max-content;
-        }
-        .tech-scroll:hover { animation-play-state: paused; }
-        @media (prefers-reduced-motion: reduce) {
-          .tech-scroll { animation: none; }
-        }
-        .tech-marquee-mask {
-          mask-image: linear-gradient(to right, transparent 0, black 60px, black calc(100% - 60px), transparent 100%);
-          -webkit-mask-image: linear-gradient(to right, transparent 0, black 60px, black calc(100% - 60px), transparent 100%);
-        }
-      `}</style>
       <div className="tech-marquee-mask">
         <div className="tech-scroll items-center gap-10 lg:gap-14">
           {[...tools, ...tools].map((tool, i) => (

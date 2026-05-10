@@ -147,7 +147,8 @@ export const AnimatedHeading: React.FC<{
           <motion.span
             className="inline-block"
             initial={prefersReducedMotion ? { y: 0 } : { y: '100%' }}
-            animate={{ y: 0 }}
+            whileInView={{ y: 0 }}
+            viewport={{ once: true, amount: 0.5 }}
             transition={{
               delay: prefersReducedMotion ? 0 : i * 0.1,
               duration: prefersReducedMotion ? 0 : 0.8,

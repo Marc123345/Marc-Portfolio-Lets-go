@@ -273,18 +273,6 @@ export function ServiceMasthead({
 export function ServiceMarquee({ phrases }: { phrases: string[] }) {
   return (
     <section className="relative bg-black border-y border-white/10 overflow-hidden">
-      <style>{`
-        @keyframes svc-marquee {
-          from { transform: translateX(0); }
-          to { transform: translateX(-50%); }
-        }
-        .svc-marquee {
-          animation: svc-marquee 36s linear infinite;
-          display: flex;
-          width: max-content;
-        }
-        @media (prefers-reduced-motion: reduce) { .svc-marquee { animation: none; } }
-      `}</style>
       <div className="svc-marquee py-6 md:py-8">
         {[...Array(2)].map((_, dup) => (
           <div key={dup} className="flex items-center gap-10 md:gap-16 pr-10 md:pr-16">
