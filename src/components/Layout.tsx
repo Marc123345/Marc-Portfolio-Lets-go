@@ -60,6 +60,22 @@ const navLinks: NavLink[] = [
     preview:
       'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%201%20-%201x1(1).png?updatedAt=1767539579782',
   },
+  {
+    label: 'Free Audit',
+    to: '/free-website-analyzer',
+    number: '06',
+    meta: 'Free Tool',
+    preview:
+      'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%204%20-%2016x9.png?updatedAt=1767539579710',
+  },
+  {
+    label: 'GEO Audit',
+    to: '/free-geo-audit',
+    number: '07',
+    meta: 'Free · AI Visibility',
+    preview:
+      'https://ik.imagekit.io/qcvroy8xpd/uoq5Ztg.jpeg',
+  },
 ];
 
 const tickerItems = [
@@ -300,6 +316,13 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 <li><Link href="/services/local-seo" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Local SEO</Link></li>
                 <li><Link href="/services/maintenance-hosting" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Maintenance &amp; Hosting</Link></li>
               </ul>
+              <p className="text-[10px] font-mono uppercase tracking-[0.3em] text-[#A3D1FF] mt-8 mb-4">
+                — Industry Pages
+              </p>
+              <ul className="space-y-2.5">
+                <li><Link href="/longevity-clinics" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Longevity Clinics</Link></li>
+                <li><Link href="/biohacking-clinics" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Biohacking Studios</Link></li>
+              </ul>
             </div>
 
             {/* Work + Resources column */}
@@ -324,6 +347,15 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                   <li><a href="https://www.behance.net/marcfriedmanweb" target="_blank" rel="noopener noreferrer" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Behance</a></li>
                   <li><a href="https://dribbble.com/marcf9199/about" target="_blank" rel="noopener noreferrer" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Dribbble</a></li>
                   <li><a href="https://clutch.co/profile/marc-friedman-design-agency" target="_blank" rel="noopener noreferrer" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Clutch Reviews</a></li>
+                </ul>
+              </div>
+              <div>
+                <p className="text-[10px] font-mono uppercase tracking-[0.3em] text-[#A3D1FF] mb-6">
+                  — Free Tools
+                </p>
+                <ul className="space-y-2.5">
+                  <li><Link href="/free-website-analyzer" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Free Website Analyzer</Link></li>
+                  <li><Link href="/free-geo-audit" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Free GEO Audit</Link></li>
                 </ul>
               </div>
             </div>
