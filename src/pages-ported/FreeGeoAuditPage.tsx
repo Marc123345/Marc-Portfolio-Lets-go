@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Brain, Bot, MessageSquare, FileText, CircleCheck as CheckCircle, Sparkles, Search } from 'lucide-react';
+import { ArrowRight, Brain, Bot, MessageSquare, FileText, Sparkles, Search } from 'lucide-react';
 import AuditFormEmbed from '@/components/AuditFormEmbed';
 
 const SERIF = "Georgia, 'Times New Roman', serif";
@@ -241,82 +241,6 @@ export default function FreeGeoAuditPage() {
                 <p className="text-white/65 text-sm leading-relaxed">{s.label}</p>
               </motion.div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="relative bg-[#0a0a0a] py-24 px-6 lg:px-12 border-t border-white/10">
-        <div className="max-w-4xl mx-auto">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: '-60px' }}
-            transition={{ duration: 0.7 }}
-            className="text-white leading-[1.0] tracking-[-0.02em] mb-12 text-center"
-            style={{
-              fontFamily: SERIF,
-              fontSize: 'clamp(2rem, 4vw, 3.25rem)',
-              fontWeight: 500,
-            }}
-          >
-            How it <em className="italic text-[#A3D1FF]">works.</em>
-          </motion.h2>
-
-          <div className="grid sm:grid-cols-3 gap-6">
-            {[
-              { n: '01', t: 'Drop your URL', d: 'Paste your website above and hit Run.' },
-              { n: '02', t: 'Leave your details', d: 'Quick contact form so we can deliver the audit.' },
-              { n: '03', t: 'Get your GEO report', d: 'Hand-reviewed audit + recommendations within 48 hours.' },
-            ].map((s, i) => (
-              <motion.div
-                key={s.n}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.08 }}
-                className="border-l-2 border-[#A3D1FF]/30 pl-5"
-              >
-                <p
-                  className="text-[#A3D1FF]/60 font-mono text-xs tracking-[0.25em] mb-3"
-                  style={{ fontVariantNumeric: 'tabular-nums' }}
-                >
-                  {s.n}
-                </p>
-                <h3 className="text-white text-xl font-semibold mb-2">{s.t}</h3>
-                <p className="text-white/60 text-sm leading-relaxed">{s.d}</p>
-              </motion.div>
-            ))}
-          </div>
-
-          <div className="mt-16 grid sm:grid-cols-2 gap-3 max-w-3xl mx-auto">
-            {[
-              'Reviewed personally by Marc',
-              'Delivered within 48 hours',
-              'Tailored to your industry',
-              '100% free — no credit card',
-            ].map((b) => (
-              <div
-                key={b}
-                className="flex items-center gap-2 px-4 py-3 border border-white/10 bg-white/[0.02]"
-              >
-                <CheckCircle className="w-4 h-4 text-[#A3D1FF] flex-shrink-0" />
-                <span className="text-sm text-white/75">{b}</span>
-              </div>
-            ))}
-          </div>
-
-          <div className="mt-12 text-center">
-            <a
-              href="#top"
-              onClick={(e) => {
-                e.preventDefault();
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-              }}
-              className="mr_btn mr_btn_primary inline-flex items-center gap-2"
-            >
-              <span>Run My Free GEO Audit</span>
-              <ArrowRight className="w-4 h-4" />
-            </a>
           </div>
         </div>
       </section>
