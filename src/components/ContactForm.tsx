@@ -55,7 +55,6 @@ export default function ContactForm() {
   }, []);
 
   const handleLoad = () => {
-    try { window.parent.scrollTo(0, 0); } catch { /* cross-origin safe */ }
     if (hasLoadedOnce.current) {
       trackFormSubmit();
     }
