@@ -4,6 +4,7 @@ import { useState, useEffect, useRef, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 import { X, Linkedin, Palette, Trophy, Calendar } from 'lucide-react';
+import { usePathname } from 'next/navigation';
 import { CALENDLY_LINK } from '@/lib/constants';
 
 type Orb = {
@@ -48,6 +49,7 @@ export default function ConstellationMenu({
   open: boolean;
   onClose: () => void;
 }) {
+  const pathname = usePathname();
   const [cursor, setCursor] = useState({ x: -9999, y: -9999 });
   const [viewport, setViewport] = useState({ w: 1200, h: 800 });
   const containerRef = useRef<HTMLDivElement>(null);
@@ -238,6 +240,11 @@ export default function ConstellationMenu({
             const ox = within ? (dx / dist) * pullStrength : 0;
             const oy = within ? (dy / dist) * pullStrength : 0;
             const near = dist < 140;
+            // Guideline #5: current location indicator
+            const isActive =
+              o.to === '/'
+                ? pathname === '/'
+                : pathname === o.to || pathname.startsWith(o.to + '/');
 
             return (
               <motion.div
@@ -263,29 +270,32 @@ export default function ConstellationMenu({
                   href={o.to}
                   onClick={onClose}
                   className="group flex flex-col items-center"
+                  aria-current={isActive ? 'page' : undefined}
                 >
-                  {/* Orb */}
-                  <span className="relative w-6 h-6 flex items-center justify-center mb-3 md:mb-4">
-                    <span className="absolute inset-[-10px] rounded-full bg-[#A3D1FF]/20 blur-md" />
-                    <span className="absolute inset-0 rounded-full bg-[#A3D1FF]/50 animate-[orbpulse_3s_ease-in-out_infinite]" />
+                  {/* Orb — larger hit area wraps the dot for guideline #11 */}
+                  <span className="relative w-10 h-10 flex items-center justify-center mb-2 md:mb-3">
+                    <span className={`absolute inset-[-4px] rounded-full blur-md ${isActive ? 'bg-white/25' : 'bg-[#A3D1FF]/20'}`} />
+                    <span className={`absolute inset-0 rounded-full animate-[orbpulse_3s_ease-in-out_infinite] ${isActive ? 'bg-white/40' : 'bg-[#A3D1FF]/50'}`} />
                     <span
-                      className={`relative w-2.5 h-2.5 rounded-full bg-[#A3D1FF] transition-all duration-500 ${
-                        near ? 'scale-[2.2] shadow-[0_0_24px_rgba(163,209,255,0.8)]' : ''
-                      } group-hover:scale-[2.4]`}
+                      className={`relative w-2.5 h-2.5 rounded-full transition-all duration-500 ${
+                        isActive
+                          ? 'bg-white scale-[2] shadow-[0_0_20px_rgba(255,255,255,0.9)]'
+                          : `bg-[#A3D1FF] group-hover:scale-[2.4] ${near ? 'scale-[2.2] shadow-[0_0_24px_rgba(163,209,255,0.8)]' : ''}`
+                      }`}
                     />
                   </span>
                   {/* Meta label */}
                   <div
                     className={`text-[9px] md:text-[10px] font-mono uppercase tracking-[0.3em] transition-colors duration-300 mb-1.5 md:mb-2 ${
-                      near ? 'text-[#A3D1FF]' : 'text-white/50'
+                      isActive ? 'text-white' : near ? 'text-[#A3D1FF]' : 'text-white/50'
                     } group-hover:text-[#A3D1FF]`}
                   >
-                    {o.number} · {o.meta}
+                    {isActive ? '← Here' : `${o.number} · ${o.meta}`}
                   </div>
                   {/* Title */}
                   <div
-                    className={`text-white text-[2rem] md:text-[3.5rem] leading-none italic transition-all duration-500 ${
-                      near ? 'tracking-[-0.01em]' : 'tracking-[-0.02em]'
+                    className={`text-[2rem] md:text-[3.5rem] leading-none italic transition-all duration-500 ${
+                      isActive ? 'text-white tracking-[-0.01em]' : `text-white ${near ? 'tracking-[-0.01em]' : 'tracking-[-0.02em]'}`
                     }`}
                     style={{
                       fontFamily: "Georgia, 'Times New Roman', serif",

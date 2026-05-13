@@ -151,7 +151,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
       >
         <div className="container-custom">
-          <div className="flex items-center justify-between h-[4.236rem]">
+          <div className="flex items-center h-[4.236rem]">
             <button
               onClick={() => handleNavigation('/')}
               className="site-logo block z-[70] relative"
@@ -167,12 +167,44 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               />
             </button>
 
-            <div className="flex items-center gap-4 sm:gap-6 z-[70] relative">
+            {/* Desktop primary navigation — guideline #1: visible on large screens, not hidden */}
+            <nav
+              className="hidden lg:flex items-center gap-8 flex-1 justify-center"
+              aria-label="Primary navigation"
+            >
+              {navLinks.slice(0, 5).map((link) => {
+                const isActive =
+                  link.to === '/'
+                    ? pathname === '/'
+                    : pathname === link.to || pathname.startsWith(link.to + '/');
+                return (
+                  <Link
+                    key={link.to}
+                    href={link.to}
+                    className={`relative py-2 text-[11px] font-mono tracking-[0.15em] uppercase transition-colors group ${
+                      isActive ? 'text-[#A3D1FF]' : 'text-white/60 hover:text-white'
+                    }`}
+                    aria-current={isActive ? 'page' : undefined}
+                  >
+                    {link.label}
+                    {/* Guideline #5: current location indicator */}
+                    <span
+                      className={`absolute bottom-0 left-0 h-[1px] bg-[#A3D1FF] transition-all duration-300 ${
+                        isActive ? 'w-full' : 'w-0 group-hover:w-full'
+                      }`}
+                    />
+                  </Link>
+                );
+              })}
+            </nav>
+
+            <div className="flex items-center gap-4 sm:gap-6 z-[70] relative ml-auto lg:ml-0">
               <Link
                 href="/contact"
                 className={`hidden sm:inline-flex items-center gap-2 text-[11px] font-mono tracking-[0.15em] uppercase transition-colors ${
                   isMenuOpen ? 'text-white/0 pointer-events-none' : 'text-white/70 hover:text-[#A3D1FF]'
-                }`}
+                } ${pathname === '/contact' ? '!text-[#A3D1FF]' : ''}`}
+                aria-current={pathname === '/contact' ? 'page' : undefined}
               >
                 <span className="relative flex w-2 h-2">
                   <span className="absolute inset-0 rounded-full bg-green-400 animate-ping opacity-60" />
@@ -181,9 +213,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 Let&apos;s Talk
               </Link>
 
+              {/* Guideline #1: hamburger only on mobile/tablet — hidden on lg+ where nav is visible */}
               <button
                 onClick={() => setMenuOpen(!isMenuOpen)}
-                className="group relative flex items-center gap-3 px-4 py-2.5 border border-white/15 hover:border-white/40 transition-colors"
+                className="lg:hidden group relative flex items-center gap-3 px-4 py-2.5 border border-white/15 hover:border-white/40 transition-colors"
                 aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
                 aria-expanded={isMenuOpen}
               >

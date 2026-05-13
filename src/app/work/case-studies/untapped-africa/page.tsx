@@ -4,11 +4,11 @@ import UntappedAfricaPage from '@/pages-ported/work/case-studies/UntappedAfricaP
 export const metadata: Metadata = {
   title: { absolute: 'Untapped Africa Case Study | 250% Engagement Increase | Marc Friedman' },
   description: 'How we built a water infrastructure platform serving 500,000+ people across 8 African countries with Next.js, TypeScript, and Mapbox GL.',
-  alternates: { canonical: 'https://marcfriedmanportfolio.com/work/case-studies/untapped-africa/' },
+  alternates: { canonical: 'https://www.marcfriedmanportfolio.com/work/case-studies/untapped-africa/' },
   openGraph: {
     title: 'Untapped Africa Case Study | 250% Engagement Increase | Marc Friedman',
     description: 'How we built a water infrastructure platform serving 500,000+ people across 8 African countries with Next.js, TypeScript, and Mapbox GL.',
-    url: 'https://marcfriedmanportfolio.com/work/case-studies/untapped-africa/',
+    url: 'https://www.marcfriedmanportfolio.com/work/case-studies/untapped-africa/',
     type: 'website',
   },
   twitter: {

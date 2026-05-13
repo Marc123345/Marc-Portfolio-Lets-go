@@ -38,6 +38,37 @@ type Post = {
 
 const posts: Post[] = [
   {
+    id: 'google-march-april-2026-seo-updates',
+    title: "Google's March–April 2026 SEO Updates: What Really Changed and How to Protect Your Traffic",
+    excerpt:
+      "In six weeks Google pushed out more change than many sites see in a year. Here's what the March core, March spam, and April core updates actually changed — and the step-by-step action plan to protect your rankings.",
+    date: 'May 4, 2026',
+    readTime: '14 min read',
+    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=2000&q=80',
+    categories: ['SEO', 'Google', 'Content Strategy'],
+  },
+  {
+    id: 'dopamine-aesthetic-bold-retro-design',
+    title: "The New \"Dopamine\" Aesthetic: How Bold, Retro, Tactile Design Beats Samey Minimal SaaS",
+    excerpt:
+      "Pale backgrounds and polite blues are invisible in 2026. Here's what the dopamine aesthetic actually is, why minimal SaaS design is losing its edge, and how to use bold, tactile design strategically for service brands.",
+    date: 'May 4, 2026',
+    readTime: '12 min read',
+    image: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=2000&q=80',
+    categories: ['Design', 'Branding', 'Web Design'],
+  },
+  {
+    id: 'biohacking-clinic-web-design-miami',
+    title:
+      'How High-Converting Web Design Drives Growth for Biohacking Clinics in Miami (SEO + AEO Strategy)',
+    excerpt:
+      'Why Miami biohacking clinics are losing high-ticket leads to outdated websites — and the SEO and AEO strategy that turns a site into a revenue engine.',
+    date: 'April 25, 2026',
+    readTime: '13 min read',
+    image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=2000&q=80',
+    categories: ['Web Design', 'SEO', 'AEO'],
+  },
+  {
     id: 'conversational-ui-chat-interfaces',
     title: 'Conversational UI: When Chat Interfaces Help — and When They Hurt — Your UX',
     excerpt:

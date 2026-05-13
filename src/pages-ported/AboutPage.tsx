@@ -939,7 +939,7 @@ export default function AboutPage() {
                   <em className="text-[#A3D1FF]" style={{ fontFamily: SERIF }}>
                     Galilee
                   </em>
-                  , hunting for the best coffee in Tel Aviv, or helping junior
+                  , hunting for the best coffee, or helping junior
                   designers build their first portfolios.
                 </p>
                 <p>

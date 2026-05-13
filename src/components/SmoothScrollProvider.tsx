@@ -9,11 +9,11 @@ export default function SmoothScrollProvider() {
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
     const lenis = new Lenis({
-      duration: 1.15,
-      easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      lerp: 0.1,
       smoothWheel: true,
-      wheelMultiplier: 1,
-      touchMultiplier: 1.2,
+      wheelMultiplier: 1.1,
+      touchMultiplier: 2.0,
+      overscroll: false,
     });
 
     // Expose on window so SiteLoader can pause/resume during load sequence

@@ -8,6 +8,7 @@ interface SplitTextRevealProps {
   staggerDelay?: number;
   className?: string;
   splitBy?: 'words' | 'characters';
+  animate?: boolean;
 }
 
 export default function SplitTextReveal({
@@ -16,6 +17,7 @@ export default function SplitTextReveal({
   staggerDelay = 0.05,
   className = '',
   splitBy = 'words',
+  animate: forceAnimate = false,
 }: SplitTextRevealProps) {
   const shouldReduceMotion = useReducedMotion();
 
@@ -75,8 +77,7 @@ export default function SplitTextReveal({
   return (
     <motion.div
       initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, amount: 0.3 }}
+      {...(forceAnimate ? { animate: 'visible' } : { whileInView: 'visible', viewport: { once: true, amount: 0.2 } })}
       variants={containerVariants}
       className={className}
     >
