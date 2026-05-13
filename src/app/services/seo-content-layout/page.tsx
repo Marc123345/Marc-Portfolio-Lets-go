@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description:
     'Pages structured for search engines AND humans. Content that ranks because it answers, layouts that convert because they don\'t make visitors think.',
   alternates: {
-    canonical: 'https://www.marcfriedmanportfolio.com/services/seo-content-layout/',
+    canonical: 'https://marcfriedmanportfolio.com/services/seo-content-layout/',
   },
 };
 

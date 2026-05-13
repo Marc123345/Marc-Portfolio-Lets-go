@@ -140,9 +140,6 @@ export default function ArcSlider({ cards, initialIndex = 0 }: ArcSliderProps) {
   // Pointer drag + cursor + tilt
   const onPointerDown = (e: React.PointerEvent) => {
     dragRef.current = { startX: e.clientX, hasMoved: false, isDragging: true };
-    (containerRef.current as HTMLElement)?.setPointerCapture(e.pointerId);
-    const lenis = (window as unknown as Record<string, unknown>).__lenis as { stop: () => void } | undefined;
-    lenis?.stop();
   };
   const onPointerMove = (e: React.PointerEvent) => {
     // Cursor follower position (relative to stage)
@@ -175,8 +172,6 @@ export default function ArcSlider({ cards, initialIndex = 0 }: ArcSliderProps) {
     if (Math.abs(dx) > 30) dragRef.current.hasMoved = true;
   };
   const onPointerUp = (e: React.PointerEvent) => {
-    const lenis = (window as unknown as Record<string, unknown>).__lenis as { start: () => void } | undefined;
-    lenis?.start();
     if (!dragRef.current.isDragging) return;
     const dx = e.clientX - dragRef.current.startX;
     dragRef.current.isDragging = false;
@@ -236,7 +231,6 @@ export default function ArcSlider({ cards, initialIndex = 0 }: ArcSliderProps) {
           perspective: '1600px',
           height: 540,
           cursor: 'none',
-          touchAction: 'none',
         }}
         onPointerDown={onPointerDown}
         onPointerMove={onPointerMove}

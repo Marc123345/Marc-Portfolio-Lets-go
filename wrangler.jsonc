@@ -1,7 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "marcagencysite",
-  "account_id": "3c28b6d8c0d865a9ca258d1d7144a5da",
   "compatibility_date": "2026-04-15",
   "assets": {
     "directory": "./out",

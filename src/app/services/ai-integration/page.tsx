@@ -4,11 +4,11 @@ import AIIntegrationPage from '@/pages-ported/services/AIIntegrationPage';
 export const metadata: Metadata = {
   title: { absolute: 'AI Integration Services | OpenAI, Google Cloud AI & AWS | Marc Friedman' },
   description: 'Custom AI integration for websites and apps. Chatbots, recommendation engines, predictive analytics. OpenAI, Google Cloud AI, AWS SageMaker expertise.',
-  alternates: { canonical: 'https://www.marcfriedmanportfolio.com/services/ai-integration/' },
+  alternates: { canonical: 'https://marcfriedmanportfolio.com/services/ai-integration/' },
   openGraph: {
     title: 'AI Integration Services | OpenAI, Google Cloud AI & AWS | Marc Friedman',
     description: 'Custom AI integration for websites and apps. Chatbots, recommendation engines, predictive analytics. OpenAI, Google Cloud AI, AWS SageMaker expertise.',
-    url: 'https://www.marcfriedmanportfolio.com/services/ai-integration/',
+    url: 'https://marcfriedmanportfolio.com/services/ai-integration/',
     type: 'website',
   },
   twitter: {

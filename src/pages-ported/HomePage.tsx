@@ -12,8 +12,8 @@ import CTASection from '@/components/home/CTASection';
 const homeSchema = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
-  "name": "Marc Friedman - Freelance Website Designer",
-  "description": "Freelance website designer and Google website designer creating high-performance React/Next.js websites for agencies, ecommerce, and B2B companies. Expert in web development and conversion optimization.",
+  "name": "Marc Friedman - Web Designer Tel Aviv",
+  "description": "Professional web designer in Tel Aviv creating high-performance React/Node websites for agencies, ecommerce, and B2B companies. Expert in web development and conversion optimization.",
   "image": "https://marcfriedmanportfolio.com/wp-content/uploads/2024/12/image-1.webp",
   "url": "https://marcfriedmanportfolio.com",
   "address": {
@@ -35,9 +35,8 @@ const homeSchema = {
   "founder": {
     "@type": "Person",
     "name": "Marc Friedman",
-    "jobTitle": "Freelance Website Designer | Google Website Designer | Full Stack Developer | בונה אתרים"
+    "jobTitle": "Web Designer Tel Aviv | Full Stack Designer & Developer"
   },
-  "keywords": "Website Designer, Freelance Website Designer, Google Website Designer, בונה אתרים",
   "areaServed": {
     "@type": "GeoCircle",
     "geoMidpoint": {
@@ -81,14 +80,6 @@ export default function HomePage() {
     <>
       
 
-      {/* SR-only landmark for Hebrew keyword indexing */}
-      <span
-        aria-label="בונה אתרים"
-        lang="he"
-        style={{ position: 'absolute', width: 1, height: 1, padding: 0, margin: -1, overflow: 'hidden', clip: 'rect(0,0,0,0)', whiteSpace: 'nowrap', border: 0 }}
-      >
-        בונה אתרים
-      </span>
       <AccessibilityPanel />
       <HeroSection />
       <TrustedBy />

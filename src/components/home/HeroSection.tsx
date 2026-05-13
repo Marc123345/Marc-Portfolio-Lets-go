@@ -143,9 +143,8 @@ export default function HeroSection() {
               >
                 <SplitTextReveal
                   text="Your Website Should Be Your Best Salesperson. Is It?"
-                  delay={0.5}
-                  staggerDelay={0.04}
-                  animate={true}
+                  delay={0.2}
+                  staggerDelay={0.05}
                 />
               </h1>
             </div>
