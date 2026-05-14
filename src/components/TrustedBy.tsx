@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import TechStackStrip from '@/components/TechStackStrip';
 
-const SERIF = "Georgia, 'Times New Roman', serif";
+const SERIF = "var(--font-heading)";
 
 type Review = {
   name: string;

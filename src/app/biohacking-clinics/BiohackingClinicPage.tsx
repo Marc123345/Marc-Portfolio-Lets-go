@@ -13,7 +13,7 @@ import ContactForm from '@/components/ContactForm';
 
 // ─── constants ────────────────────────────────────────────────────────────────
 
-const SERIF = "Georgia, 'Times New Roman', serif";
+const SERIF = "var(--font-heading)";
 const ACCENT = '#A3D1FF';
 const CALENDLY = 'https://calendly.com/marc-friedman-web-design--meeting-link/30min';
 const PORTRAIT =
@@ -200,7 +200,7 @@ function HeroSection() {
             <span className="w-2 h-2 rounded-full" style={{ backgroundColor: ACCENT }} />
             <span
               className="uppercase tracking-[0.28em] text-[12px]"
-              style={{ color: '#C1C3FF', fontFamily: 'Inter, sans-serif', fontWeight: 400 }}
+              style={{ color: '#C1C3FF', fontFamily: 'var(--font-body)', fontWeight: 400 }}
             >
               Websites for Biohacking Studios &amp; Performance Clinics
             </span>
@@ -236,7 +236,7 @@ function HeroSection() {
             style={{
               color: 'rgba(255,255,255,0.60)',
               fontSize: '17px',
-              fontFamily: 'Inter, sans-serif',
+              fontFamily: 'var(--font-body)',
               fontWeight: 300,
               lineHeight: '1.7',
               letterSpacing: '0.02em',
@@ -267,7 +267,7 @@ function HeroSection() {
               >
                 <span
                   style={{
-                    fontFamily: 'Inter, sans-serif',
+                    fontFamily: 'var(--font-body)',
                     fontSize: '15px',
                     fontWeight: 500,
                     color: '#F5F5F0',
@@ -279,7 +279,7 @@ function HeroSection() {
                 <span style={{ color: ACCENT, fontSize: '13px', flexShrink: 0 }}>→</span>
                 <span
                   style={{
-                    fontFamily: 'Inter, sans-serif',
+                    fontFamily: 'var(--font-body)',
                     fontSize: '14px',
                     fontWeight: 300,
                     color: 'rgba(255,255,255,0.50)',
@@ -299,7 +299,7 @@ function HeroSection() {
             transition={{ duration: 0.6, delay: 0.84 }}
             className="mb-8"
             style={{
-              fontFamily: 'Inter, sans-serif',
+              fontFamily: 'var(--font-body)',
               fontSize: '12px',
               fontWeight: 400,
               color: 'rgba(255,255,255,0.35)',
@@ -321,7 +321,7 @@ function HeroSection() {
               target="_blank"
               rel="noopener noreferrer"
               className="hero-cta-btn inline-flex items-center gap-2 bg-white text-black hover:bg-[#A3D1FF] transition-colors px-7 py-3.5"
-              style={{ fontFamily: 'Inter, sans-serif', fontSize: '14px', fontWeight: 500, letterSpacing: '0.01em' }}
+              style={{ fontFamily: 'var(--font-body)', fontSize: '14px', fontWeight: 500, letterSpacing: '0.01em' }}
             >
               Book the call
               <ArrowRight className="w-4 h-4" />
@@ -330,7 +330,7 @@ function HeroSection() {
             <Link
               href="/work"
               className="inline-flex items-center gap-2 border-b border-white/25 hover:border-[#A3D1FF] hover:text-[#A3D1FF] transition-colors pb-0.5"
-              style={{ fontFamily: 'Inter, sans-serif', fontSize: '14px', fontWeight: 400, color: 'rgba(255,255,255,0.70)' }}
+              style={{ fontFamily: 'var(--font-body)', fontSize: '14px', fontWeight: 400, color: 'rgba(255,255,255,0.70)' }}
             >
               See the work
             </Link>
@@ -342,7 +342,7 @@ function HeroSection() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 1.05 }}
             style={{
-              fontFamily: 'Inter, sans-serif',
+              fontFamily: 'var(--font-body)',
               fontSize: '12px',
               fontWeight: 400,
               color: 'rgba(255,255,255,0.35)',
@@ -381,7 +381,7 @@ function HeroSection() {
                   ? 'border-[#A3D1FF] text-white'
                   : 'border-transparent text-white/40 hover:text-white/70'
               }`}
-              style={{ fontFamily: 'Inter, sans-serif', fontWeight: 400 }}
+              style={{ fontFamily: 'var(--font-body)', fontWeight: 400 }}
             >
               {tag}
             </button>

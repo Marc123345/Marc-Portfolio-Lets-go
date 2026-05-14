@@ -81,7 +81,7 @@ function AmbientDust() {
   );
 }
 
-const SERIF = "Georgia, 'Times New Roman', serif";
+const SERIF = "var(--font-heading)";
 
 const personSchema = {
   '@context': 'https://schema.org',

@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import Globe from '@/components/Globe';
 
-const SERIF = "Georgia, 'Times New Roman', serif";
+const SERIF = "var(--font-heading)";
 
 function ChapterMarker({ number, label }: { number: string; label: string }) {
   return (

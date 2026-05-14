@@ -6,7 +6,7 @@ import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 
-const SERIF = "Georgia, 'Times New Roman', serif";
+const SERIF = "var(--font-heading)";
 const ACCENT = '#A3D1FF';
 
 export type ArcCard = {

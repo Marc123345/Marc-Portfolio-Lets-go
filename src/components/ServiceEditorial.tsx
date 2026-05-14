@@ -5,7 +5,7 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import { ArrowUpRight, Mail } from 'lucide-react';
 import Link from 'next/link';
 
-export const SERIF = "Georgia, 'Times New Roman', serif";
+export const SERIF = "var(--font-heading)";
 const CALENDLY = 'https://calendly.com/marc-friedman-web-design--meeting-link/30min';
 
 /* ---------------- Chapter Marker ---------------- */

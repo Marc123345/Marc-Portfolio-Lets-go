@@ -166,7 +166,7 @@ export default function PressPage() {
           <TextReveal>
             <h1
               className="text-[clamp(2.75rem,7vw,6rem)] tracking-[-0.03em] text-white leading-[0.95] mb-6"
-              style={{ fontFamily: "Georgia, 'Times New Roman', serif", fontWeight: 400 }}
+              style={{ fontFamily: "var(--font-heading)", fontWeight: 400 }}
             >
               Press & <em className="italic text-[#A3D1FF]">recognition.</em>
             </h1>

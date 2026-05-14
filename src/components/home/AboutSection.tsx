@@ -5,7 +5,7 @@ import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion'
 import { ArrowUpRight, MessageSquare } from 'lucide-react';
 import Link from 'next/link';
 
-const SERIF = "Georgia, 'Times New Roman', serif";
+const SERIF = "var(--font-heading)";
 const CALENDLY_LINK = 'https://calendly.com/marc-friedman-web-design--meeting-link/30min';
 const PORTRAIT =
   'https://ik.imagekit.io/qcvroy8xpd/PW8VUKH.png?updatedAt=1759693058055&tr=f-webp';

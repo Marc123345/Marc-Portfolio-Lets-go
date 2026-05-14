@@ -48,7 +48,7 @@ function AuditForm() {
   );
 }
 
-const SERIF = "Georgia, 'Times New Roman', serif";
+const SERIF = "var(--font-heading)";
 const ACCENT = '#A3D1FF';
 
 const GRAIN =

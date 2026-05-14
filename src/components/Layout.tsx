@@ -269,7 +269,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               />
               <p
                 className="text-white/60 text-base leading-relaxed max-w-xs mb-8"
-                style={{ fontFamily: "Georgia, 'Times New Roman', serif" }}
+                style={{ fontFamily: "var(--font-heading)" }}
               >
                 Full-stack design &amp; development — vision to launch, no handoffs.
               </p>

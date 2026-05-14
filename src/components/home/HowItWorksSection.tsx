@@ -4,7 +4,7 @@ import { motion, useScroll, useTransform, useMotionValueEvent, AnimatePresence }
 import { useRef, useState } from 'react';
 import { Phone, Rocket, Check } from 'lucide-react';
 
-const SERIF = "Georgia, 'Times New Roman', serif";
+const SERIF = "var(--font-heading)";
 
 type Chapter = {
   numeral: string;

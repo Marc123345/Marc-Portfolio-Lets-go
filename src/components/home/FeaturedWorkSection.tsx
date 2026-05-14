@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 import InteractiveCube from '@/components/InteractiveCube';
 
-const SERIF = "Georgia, 'Times New Roman', serif";
+const SERIF = "var(--font-heading)";
 
 type Project = {
   title: string;

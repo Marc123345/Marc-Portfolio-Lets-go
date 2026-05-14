@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { ArrowUpRight } from 'lucide-react';
 import ArcSlider, { ArcCard } from '@/components/ArcSlider';
 
-const SERIF = "Georgia, 'Times New Roman', serif";
+const SERIF = "var(--font-heading)";
 
 const services: ArcCard[] = [
   {

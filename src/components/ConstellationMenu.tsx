@@ -288,7 +288,7 @@ export default function ConstellationMenu({
                       near ? 'tracking-[-0.01em]' : 'tracking-[-0.02em]'
                     }`}
                     style={{
-                      fontFamily: "Georgia, 'Times New Roman', serif",
+                      fontFamily: "var(--font-heading)",
                     }}
                   >
                     {o.label}

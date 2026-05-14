@@ -6,7 +6,7 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 import ContactForm from '@/components/ContactForm';
 import InteractiveCube from '@/components/InteractiveCube';
 
-const SERIF = "Georgia, 'Times New Roman', serif";
+const SERIF = "var(--font-heading)";
 
 const contactSchema = {
   '@context': 'https://schema.org',

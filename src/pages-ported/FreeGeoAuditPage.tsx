@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import { ArrowRight, Brain, Bot, MessageSquare, FileText, Sparkles, Search } from 'lucide-react';
 import AuditFormEmbed from '@/components/AuditFormEmbed';
 
-const SERIF = "Georgia, 'Times New Roman', serif";
+const SERIF = "var(--font-heading)";
 
 const toolSchema = {
   '@context': 'https://schema.org',

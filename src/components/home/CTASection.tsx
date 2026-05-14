@@ -6,7 +6,7 @@ import ContactForm from '@/components/ContactForm';
 import Link from 'next/link';
 import { ArrowUpRight } from 'lucide-react';
 
-const SERIF = "Georgia, 'Times New Roman', serif";
+const SERIF = "var(--font-heading)";
 const CALENDLY_LINK = 'https://calendly.com/marc-friedman-web-design--meeting-link/30min';
 
 function ChapterMarker({ number, label }: { number: string; label: string }) {
