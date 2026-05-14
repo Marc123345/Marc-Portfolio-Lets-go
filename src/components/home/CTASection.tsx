@@ -193,10 +193,6 @@ export default function CTASection() {
                 </Link>
               </div>
             </div>
-
-            <div className="text-[10px] font-mono uppercase tracking-[0.3em] text-white/40 pt-6 border-t border-white/10">
-              Thanks for scrolling this far. · Marc Friedman · 2026
-            </div>
           </motion.aside>
         </div>
       </div>

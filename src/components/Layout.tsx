@@ -96,9 +96,18 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
 
   useEffect(() => {
+    /* Skip hide-on-scroll-down behavior on mobile — with reduced
+       motion forced on, the framer 'y: -100' animation would
+       snap, making the header appear/disappear abruptly. Always
+       keep the header pinned on mobile. */
+    const mobileMq = window.matchMedia('(max-width: 768px)');
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      if (currentScrollY > lastScrollY.current && currentScrollY > 100) {
+      if (
+        !mobileMq.matches &&
+        currentScrollY > lastScrollY.current &&
+        currentScrollY > 100
+      ) {
         setIsHeaderVisible(false);
       } else {
         setIsHeaderVisible(true);

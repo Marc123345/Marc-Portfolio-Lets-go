@@ -91,26 +91,6 @@ export default function GlobeSection() {
               ))}
             </motion.ul>
 
-            <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.45 }}
-              className="mt-10 flex flex-wrap gap-x-8 gap-y-3 text-[10px] font-mono uppercase tracking-[0.25em] text-white/50"
-            >
-              <span>
-                <span className="text-white">50+</span> projects
-              </span>
-              <span>
-                <span className="text-white">09</span> cities
-              </span>
-              <span>
-                <span className="text-white">03</span> continents
-              </span>
-              <span>
-                <span className="text-white">100%</span> built by one person
-              </span>
-            </motion.div>
           </div>
 
           {/* Globe — desktop only (skipped on mobile for perf) */}
