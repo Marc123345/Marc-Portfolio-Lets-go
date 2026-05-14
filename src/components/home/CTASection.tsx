@@ -11,7 +11,7 @@ const CALENDLY_LINK = 'https://calendly.com/marc-friedman-web-design--meeting-li
 
 function ChapterMarker({ number, label }: { number: string; label: string }) {
   return (
-    <div className="flex items-center gap-4 mb-10">
+    <div className="flex items-center gap-3 mb-8">
       <span className="text-white/50 text-xs font-mono tracking-[0.3em] uppercase">
         {number}
       </span>
@@ -53,7 +53,7 @@ export default function CTASection() {
         <ChapterMarker number="Colophon · End Matter" label="Let's Build · 2026" />
 
         {/* Dramatic headline */}
-        <motion.div style={{ y: typeY }} className="mb-16">
+        <motion.div style={{ y: typeY }} className="mb-8">
           <motion.h2
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -76,7 +76,7 @@ export default function CTASection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-xl md:text-2xl text-white/70 leading-relaxed max-w-3xl mb-20"
+          className="text-xl md:text-2xl text-white/70 leading-relaxed max-w-3xl mb-8"
         >
           Let&apos;s fix that. Book 30 minutes — I&apos;ll audit your current site{' '}
           <em className="text-white" style={{ fontFamily: SERIF }}>
@@ -85,7 +85,7 @@ export default function CTASection() {
           and show you exactly what&apos;s costing you customers.
         </motion.p>
 
-        <div className="grid lg:grid-cols-[1.1fr_1fr] gap-12 lg:gap-20 items-start">
+        <div className="grid lg:grid-cols-[1.1fr_1fr] gap-8 items-start">
           {/* Left — form */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -94,16 +94,16 @@ export default function CTASection() {
             transition={{ duration: 0.9, delay: 0.1 }}
             className="relative"
           >
-            <div className="relative bg-[#111418] border border-white/10 p-8 md:p-10">
+            <div className="relative bg-[#111418] border border-white/10 p-8">
               {/* Corner bolts */}
               <div className="absolute top-4 left-4 w-2 h-2 rounded-full bg-white/20" />
               <div className="absolute top-4 right-4 w-2 h-2 rounded-full bg-white/20" />
               <div className="absolute bottom-4 left-4 w-2 h-2 rounded-full bg-white/20" />
               <div className="absolute bottom-4 right-4 w-2 h-2 rounded-full bg-white/20" />
 
-              <div className="flex items-center justify-between mb-6 text-[10px] font-mono uppercase tracking-[0.3em] text-white/50">
+              <div className="flex items-center justify-between mb-8 text-[10px] font-mono uppercase tracking-[0.3em] text-white/50">
                 <span>Form · 01</span>
-                <span className="flex items-center gap-2">
+                <span className="flex items-center gap-3">
                   <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
                   Accepting inquiries
                 </span>
@@ -111,7 +111,7 @@ export default function CTASection() {
 
               <ContactForm />
 
-              <p className="text-center text-sm text-white/60 mt-6">
+              <p className="text-center text-sm text-white/60 mt-8">
                 Or{' '}
                 <a
                   href={CALENDLY_LINK}
@@ -131,10 +131,10 @@ export default function CTASection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-80px' }}
             transition={{ duration: 0.9, delay: 0.25 }}
-            className="space-y-10"
+            className="space-y-8"
           >
             <div>
-              <ol className="space-y-5">
+              <ol className="space-y-3">
                 {[
                   {
                     n: '01',
@@ -152,7 +152,7 @@ export default function CTASection() {
                     d: 'I audit your site live. You walk away with a plan.',
                   },
                 ].map((s) => (
-                  <li key={s.n} className="flex gap-5 items-baseline border-b border-white/10 pb-5">
+                  <li key={s.n} className="flex gap-3 items-baseline border-b border-white/10 pb-3">
                     <span
                       className="text-[#A3D1FF]/70 text-xs font-mono tracking-[0.2em] shrink-0"
                       style={{ fontVariantNumeric: 'tabular-nums' }}
@@ -179,14 +179,14 @@ export default function CTASection() {
                   href={CALENDLY_LINK}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-white text-black font-medium px-6 py-3 hover:bg-[#A3D1FF] transition-colors group"
+                  className="inline-flex items-center gap-3 bg-white text-black font-medium px-6 py-3 hover:bg-[#A3D1FF] transition-colors group"
                 >
                   Book the 30-min call
                   <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                 </a>
                 <Link
                   href="/work"
-                  className="inline-flex items-center gap-2 text-white font-medium border-b border-white/30 hover:border-[#A3D1FF] hover:text-[#A3D1FF] transition-colors py-1"
+                  className="inline-flex items-center gap-3 text-white font-medium border-b border-white/30 hover:border-[#A3D1FF] hover:text-[#A3D1FF] transition-colors py-1"
                 >
                   See the work first
                   <ArrowUpRight className="w-4 h-4" />

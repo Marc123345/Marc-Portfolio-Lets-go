@@ -311,7 +311,7 @@ function MarqueeRow({
           .${loopId} { animation: none; }
         }
       `}</style>
-      <div className={`${loopId} flex gap-5 py-2`} style={{ width: 'max-content' }}>
+      <div className={`${loopId} flex gap-3 py-2`} style={{ width: 'max-content' }}>
         {[...items, ...items].map((r, i) => (
           <MarqueeCard key={`${r.name}-${i}`} review={r} />
         ))}
@@ -365,8 +365,8 @@ export default function TrustedBy() {
       `}</style>
 
       {/* Logo Marquee */}
-      <div className="relative w-full py-6 mb-16 overflow-hidden testimonial-marquee-mask">
-        <div className="flex items-center gap-12 lg:gap-16 logo-scroll-tb">
+      <div className="relative w-full py-8 mb-8 overflow-hidden testimonial-marquee-mask">
+        <div className="flex items-center gap-8 logo-scroll-tb">
           {[
             { src: 'https://i.imgur.com/uliFOja.png', alt: 'Binns Media Group', invert: true },
             { src: 'https://ik.imagekit.io/qcvroy8xpd/GOLD%20TEXT%20LOGO%20NO%20GLOW%20EFFECT%20ADDED%201.png?updatedAt=1748753342858', alt: 'Untapped Africa' },
@@ -401,8 +401,8 @@ export default function TrustedBy() {
       </div>
 
       {/* Tech Stack Strip */}
-      <div className="relative w-full mb-12 border-t border-b border-white/5 bg-white/[0.02]">
-        <div className="flex items-center justify-center gap-3 pt-4 pb-1">
+      <div className="relative w-full mb-8 border-t border-b border-white/5 bg-white/[0.02]">
+        <div className="flex items-center justify-center gap-3 pt-3 pb-1">
           <span className="h-[1px] w-8 bg-white/10" />
           <span className="text-[9px] font-mono uppercase tracking-[0.35em] text-white/30">
             Tools &amp; Stack
@@ -415,7 +415,7 @@ export default function TrustedBy() {
       {/* Section Heading */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         {/* Chapter marker */}
-        <div className="flex items-center gap-4 mb-10">
+        <div className="flex items-center gap-3 mb-8">
           <span className="text-white/50 text-xs font-mono tracking-[0.3em] uppercase">
             Chapter · Proof
           </span>
@@ -430,7 +430,7 @@ export default function TrustedBy() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-80px' }}
           transition={{ duration: 0.9 }}
-          className="text-white leading-[0.95] tracking-[-0.03em] mb-16 max-w-5xl"
+          className="text-white leading-[0.95] tracking-[-0.03em] mb-8 max-w-5xl"
           style={{
             fontFamily: SERIF,
             fontSize: 'clamp(2.75rem, 7vw, 6.5rem)',
@@ -443,7 +443,7 @@ export default function TrustedBy() {
 
         {/* Featured spotlight */}
         <motion.div
-          className="relative grid lg:grid-cols-[0.9fr_1.1fr] gap-10 lg:gap-16 items-center mb-20"
+          className="relative grid lg:grid-cols-[0.9fr_1.1fr] gap-8 items-center mb-8"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-80px' }}
@@ -472,7 +472,7 @@ export default function TrustedBy() {
               <div className="absolute bottom-4 left-4 w-4 h-4 border-l border-b border-white/30" />
               <div className="absolute bottom-4 right-4 w-4 h-4 border-r border-b border-white/30" />
 
-              <div className="absolute bottom-0 left-0 right-0 p-6">
+              <div className="absolute bottom-0 left-0 right-0 p-8">
                 <Stars />
                 <div className="mt-3">
                   <div
@@ -494,7 +494,7 @@ export default function TrustedBy() {
                     href={featuredClient.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 mt-4 px-3 py-1.5 bg-white/10 hover:bg-white/20 text-white text-[10px] font-mono uppercase tracking-[0.2em] backdrop-blur-sm transition-colors"
+                    className="inline-flex items-center gap-3 mt-3 px-3 py-1.5 bg-white/10 hover:bg-white/20 text-white text-[10px] font-mono uppercase tracking-[0.2em] backdrop-blur-sm transition-colors"
                   >
                     <Linkedin className="w-3 h-3" /> Verify on LinkedIn
                     <ArrowUpRight className="w-3 h-3" />
@@ -524,7 +524,7 @@ export default function TrustedBy() {
               to the client, ensuring the client is completely satisfied at each step of
               the process.&rdquo;
             </blockquote>
-            <div className="mt-8 flex flex-wrap items-center gap-4 text-xs text-white/50 font-mono uppercase tracking-[0.25em]">
+            <div className="mt-8 flex flex-wrap items-center gap-3 text-xs text-white/50 font-mono uppercase tracking-[0.25em]">
               <span>Case study</span>
               <span className="w-1 h-1 rounded-full bg-white/30" />
               <Link
@@ -538,7 +538,7 @@ export default function TrustedBy() {
         </motion.div>
 
         {/* Aggregate stats strip */}
-        <div className="mb-14 py-8 border-y border-white/10 grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-4">
+        <div className="mb-8 py-8 border-y border-white/10 grid grid-cols-2 md:grid-cols-4 gap-3">
           {[
             { value: '5.0', label: 'Google Rating' },
             { value: '4.8', label: 'Clutch Rating' },
@@ -547,7 +547,7 @@ export default function TrustedBy() {
           ].map((s) => (
             <div key={s.label} className="text-center md:text-left">
               <div
-                className="text-white leading-none mb-2"
+                className="text-white leading-none mb-1"
                 style={{
                   fontFamily: SERIF,
                   fontSize: 'clamp(2rem, 3.5vw, 3rem)',
@@ -566,15 +566,15 @@ export default function TrustedBy() {
       </div>
 
       {/* Infinite marquee rows */}
-      <div className="space-y-5">
+      <div className="space-y-3">
         <MarqueeRow items={rowA} direction="left" speed={80} />
         <MarqueeRow items={rowB} direction="right" speed={90} />
       </div>
 
       {/* Bottom CTA */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16 text-center">
-        <p className="text-white/70 mb-5 text-lg">Ready to add your story to the list?</p>
-        <div className="flex flex-wrap justify-center gap-4">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 text-center">
+        <p className="text-white/70 mb-3 text-lg">Ready to add your story to the list?</p>
+        <div className="flex flex-wrap justify-center gap-3">
           <Link href="/contact" className="mr_btn mr_btn_primary">
             <span>Start Your Project</span>
           </Link>

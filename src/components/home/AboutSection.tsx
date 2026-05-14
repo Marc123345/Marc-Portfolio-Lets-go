@@ -14,7 +14,7 @@ const ROLES = ['designer', 'developer', 'strategist', 'operator'];
 
 function ChapterMarker({ number, label }: { number: string; label: string }) {
   return (
-    <div className="flex items-center gap-4 mb-10">
+    <div className="flex items-center gap-3 mb-8">
       <span className="text-white/50 text-xs font-mono tracking-[0.3em] uppercase">
         {number}
       </span>
@@ -62,7 +62,7 @@ export default function AboutSection() {
       <div className="max-w-7xl mx-auto relative">
         <ChapterMarker number="Chapter · The Operator" label="About · One Person" />
 
-        <div className="grid lg:grid-cols-[0.85fr_1.15fr] gap-12 lg:gap-20 items-center">
+        <div className="grid lg:grid-cols-[0.85fr_1.15fr] gap-8 items-center">
           {/* Left — portrait */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -88,7 +88,7 @@ export default function AboutSection() {
 
               {/* Top meta */}
               <div className="absolute top-5 left-5 right-5 flex items-center justify-between text-[9px] font-mono uppercase tracking-[0.3em] text-white/70">
-                <span className="flex items-center gap-2">
+                <span className="flex items-center gap-3">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#A3D1FF]" />
                   Profile · 01
                 </span>
@@ -96,9 +96,9 @@ export default function AboutSection() {
               </div>
 
               {/* Bottom caption + signature */}
-              <div className="absolute bottom-0 left-0 right-0 p-5 md:p-6 flex items-end justify-between">
+              <div className="absolute bottom-0 left-0 right-0 p-8 flex items-end justify-between">
                 <div>
-                  <div className="text-[9px] font-mono uppercase tracking-[0.3em] text-white/55 mb-2">
+                  <div className="text-[9px] font-mono uppercase tracking-[0.3em] text-white/55 mb-1">
                     The Operator
                   </div>
                   <div
@@ -146,7 +146,7 @@ export default function AboutSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-80px' }}
               transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-              className="text-white leading-[0.95] tracking-[-0.03em] mb-10"
+              className="text-white leading-[0.95] tracking-[-0.03em] mb-8"
               style={{
                 fontFamily: SERIF,
                 fontSize: 'clamp(2.25rem, 5.5vw, 5rem)',
@@ -180,7 +180,7 @@ export default function AboutSection() {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="flex flex-wrap items-center gap-2 mb-10"
+              className="flex flex-wrap items-center gap-3 mb-8"
             >
               {ROLES.map((r, i) => (
                 <span
@@ -202,7 +202,7 @@ export default function AboutSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="space-y-5 text-base md:text-lg text-white/75 leading-relaxed mb-10 max-w-xl"
+              className="space-y-3 text-base md:text-lg text-white/75 leading-relaxed mb-8 max-w-xl"
             >
               <p>
                 At an agency, your project gets passed between a designer, a developer, a
@@ -225,16 +225,16 @@ export default function AboutSection() {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.3 }}
-              className="flex items-stretch divide-x divide-white/10 border-y border-white/10 py-6 mb-10"
+              className="flex items-stretch divide-x divide-white/10 border-y border-white/10 py-8 mb-8"
             >
               {[
                 { n: '01', l: 'Contact' },
                 { n: '00', l: 'Handoffs' },
                 { n: '50+', l: 'Shipped' },
               ].map((s) => (
-                <div key={s.l} className="flex-1 px-4 first:pl-0">
+                <div key={s.l} className="flex-1 px-3 first:pl-0">
                   <div
-                    className="text-white italic leading-none mb-2"
+                    className="text-white italic leading-none mb-1"
                     style={{
                       fontFamily: SERIF,
                       fontSize: 'clamp(1.75rem, 3.2vw, 2.75rem)',
@@ -257,13 +257,13 @@ export default function AboutSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7, delay: 0.4 }}
-              className="flex flex-wrap items-center gap-5"
+              className="flex flex-wrap items-center gap-3"
             >
               <a
                 href={CALENDLY_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-white text-black font-medium px-8 py-4 hover:bg-[#A3D1FF] transition-colors group"
+                className="inline-flex items-center gap-3 bg-white text-black font-medium px-8 py-4 hover:bg-[#A3D1FF] transition-colors group"
               >
                 <MessageSquare className="w-4 h-4" />
                 Let&apos;s talk
@@ -271,7 +271,7 @@ export default function AboutSection() {
               </a>
               <Link
                 href="/about"
-                className="inline-flex items-center gap-2 text-white font-medium border-b border-white/30 hover:border-[#A3D1FF] hover:text-[#A3D1FF] transition-colors py-1"
+                className="inline-flex items-center gap-3 text-white font-medium border-b border-white/30 hover:border-[#A3D1FF] hover:text-[#A3D1FF] transition-colors py-1"
               >
                 Full profile
                 <ArrowUpRight className="w-4 h-4" />

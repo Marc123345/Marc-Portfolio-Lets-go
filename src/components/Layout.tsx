@@ -296,7 +296,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
         <div className="container-custom relative py-16 md:py-24">
           {/* Chapter marker */}
-          <div className="flex items-center gap-4 mb-14">
+          <div className="flex items-center gap-3 mb-8">
             <span className="text-white/40 text-[10px] font-mono tracking-[0.3em] uppercase">
               Colophon
             </span>
@@ -306,13 +306,13 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             </span>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_1fr_1fr_1fr] gap-12 lg:gap-16">
+          <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_1fr_1fr_1fr] gap-8">
             {/* Brand column */}
             <div>
               <img
                 src="/images/marc-friedman-primary.svg"
                 alt="Marc Friedman logo"
-                className="h-12 sm:h-16 w-auto object-contain mb-6 pt-2"
+                className="h-12 sm:h-16 w-auto object-contain mb-3 pt-2"
                 width="80"
                 height="32"
               />
@@ -323,7 +323,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 Full-stack design &amp; development — vision to launch, no handoffs.
               </p>
 
-              <div className="flex items-center gap-2 text-[10px] font-mono uppercase tracking-[0.25em] text-white mb-5">
+              <div className="flex items-center gap-3 text-[10px] font-mono uppercase tracking-[0.25em] text-white mb-8">
                 <span className="relative flex w-2 h-2">
                   <span className="absolute inset-0 rounded-full bg-green-400 animate-ping opacity-60" />
                   <span className="relative w-2 h-2 rounded-full bg-green-400" />
@@ -349,10 +349,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
             {/* Services column */}
             <div>
-              <p className="text-[10px] font-mono uppercase tracking-[0.3em] text-[#A3D1FF] mb-6">
+              <p className="text-[10px] font-mono uppercase tracking-[0.3em] text-[#A3D1FF] mb-3">
                 — Services
               </p>
-              <ul className="space-y-2.5">
+              <ul className="space-y-3">
                 <li><Link href="/services/web-development" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Web Development</Link></li>
                 <li><Link href="/services/design" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">UI/UX Design</Link></li>
                 <li><Link href="/services/design-systems" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Design Systems</Link></li>
@@ -365,22 +365,22 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 <li><Link href="/services/local-seo" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Local SEO</Link></li>
                 <li><Link href="/services/maintenance-hosting" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Maintenance &amp; Hosting</Link></li>
               </ul>
-              <p className="text-[10px] font-mono uppercase tracking-[0.3em] text-[#A3D1FF] mt-8 mb-4">
+              <p className="text-[10px] font-mono uppercase tracking-[0.3em] text-[#A3D1FF] mt-8 mb-3">
                 — Industry Pages
               </p>
-              <ul className="space-y-2.5">
+              <ul className="space-y-3">
                 <li><Link href="/longevity-clinics" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Longevity Clinics</Link></li>
                 <li><Link href="/biohacking-clinics" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Biohacking Studios</Link></li>
               </ul>
             </div>
 
             {/* Work + Resources column */}
-            <div className="space-y-10">
+            <div className="space-y-8">
               <div>
-                <p className="text-[10px] font-mono uppercase tracking-[0.3em] text-[#A3D1FF] mb-6">
+                <p className="text-[10px] font-mono uppercase tracking-[0.3em] text-[#A3D1FF] mb-3">
                   — Work
                 </p>
-                <ul className="space-y-2.5">
+                <ul className="space-y-3">
                   <li><Link href="/work" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">All Projects</Link></li>
                   <li><Link href="/work/case-studies/binns-media" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Binns Media Group</Link></li>
                   <li><Link href="/work/case-studies/untapped-africa" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Untapped Africa</Link></li>
@@ -388,33 +388,24 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 </ul>
               </div>
               <div>
-                <p className="text-[10px] font-mono uppercase tracking-[0.3em] text-[#A3D1FF] mb-6">
+                <p className="text-[10px] font-mono uppercase tracking-[0.3em] text-[#A3D1FF] mb-3">
                   — Resources
                 </p>
-                <ul className="space-y-2.5">
+                <ul className="space-y-3">
                   <li><Link href="/blog" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Blog</Link></li>
                   <li><a href="https://www.behance.net/marcfriedmanweb" target="_blank" rel="noopener noreferrer" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Behance</a></li>
                   <li><a href="https://dribbble.com/marcf9199/about" target="_blank" rel="noopener noreferrer" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Dribbble</a></li>
                   <li><a href="https://clutch.co/profile/marc-friedman-design-agency" target="_blank" rel="noopener noreferrer" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Clutch Reviews</a></li>
                 </ul>
               </div>
-              <div>
-                <p className="text-[10px] font-mono uppercase tracking-[0.3em] text-[#A3D1FF] mb-6">
-                  — Free Tools
-                </p>
-                <ul className="space-y-2.5">
-                  <li><Link href="/free-website-analyzer" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Free Website Analyzer</Link></li>
-                  <li><Link href="/free-geo-audit" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Free GEO Audit</Link></li>
-                </ul>
-              </div>
             </div>
 
             {/* Company column */}
             <div>
-              <p className="text-[10px] font-mono uppercase tracking-[0.3em] text-[#A3D1FF] mb-6">
+              <p className="text-[10px] font-mono uppercase tracking-[0.3em] text-[#A3D1FF] mb-3">
                 — Company
               </p>
-              <ul className="space-y-2.5">
+              <ul className="space-y-3">
                 <li><Link href="/about" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">About</Link></li>
                 <li><Link href="/contact" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Contact</Link></li>
                 <li><Link href="/press" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Press</Link></li>
@@ -424,8 +415,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           </div>
 
           {/* Tech stack strip */}
-          <div className="mt-14 pt-8 border-t border-white/10">
-            <p className="text-[10px] font-mono uppercase tracking-[0.3em] text-white/30 mb-2 text-center">
+          <div className="mt-8 pt-8 border-t border-white/10">
+            <p className="text-[10px] font-mono uppercase tracking-[0.3em] text-white/30 mb-1 text-center">
               Built with
             </p>
             <TechStackStrip />
@@ -433,11 +424,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
           {/* Bottom bar */}
           <div className="mt-8 pt-8 border-t border-white/10">
-            <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+            <div className="flex flex-col md:flex-row justify-between items-center gap-8">
               <p className="text-[10px] font-mono uppercase tracking-[0.25em] text-white/40">
                 © {new Date().getFullYear()} Marc Friedman. All rights reserved.
               </p>
-              <div className="flex flex-wrap justify-center gap-x-6 gap-y-2">
+              <div className="flex flex-wrap justify-center gap-x-3 gap-y-1">
                 <Link href="/privacy-policy" className="text-[10px] font-mono uppercase tracking-[0.2em] text-white/40 hover:text-[#A3D1FF] transition-colors">Privacy</Link>
                 <Link href="/terms-and-conditions" className="text-[10px] font-mono uppercase tracking-[0.2em] text-white/40 hover:text-[#A3D1FF] transition-colors">Terms</Link>
                 <a href="/accessibility-statement.html" className="text-[10px] font-mono uppercase tracking-[0.2em] text-white/40 hover:text-[#A3D1FF] transition-colors">Accessibility</a>

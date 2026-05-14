@@ -7,7 +7,7 @@ const SERIF = "var(--font-heading)";
 
 function ChapterMarker({ number, label }: { number: string; label: string }) {
   return (
-    <div className="flex items-center gap-4 mb-10">
+    <div className="flex items-center gap-3 mb-8">
       <span className="text-white/50 text-xs font-mono tracking-[0.3em] uppercase">
         {number}
       </span>
@@ -39,7 +39,7 @@ export default function GlobeSection() {
       <div className="max-w-7xl mx-auto relative">
         <ChapterMarker number="Chapter · Reach" label="Clients · Three Continents" />
 
-        <div className="grid lg:grid-cols-[1.1fr_1fr] gap-12 lg:gap-20 items-center">
+        <div className="grid lg:grid-cols-[1.1fr_1fr] gap-8 items-center">
           {/* Left column */}
           <div>
             <motion.h2
@@ -63,7 +63,7 @@ export default function GlobeSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.15 }}
-              className="text-lg md:text-xl text-white/70 leading-relaxed mb-10 max-w-xl"
+              className="text-lg md:text-xl text-white/70 leading-relaxed mb-8 max-w-xl"
             >
               Clients in <strong className="text-white">the US, Europe, and Africa</strong>.
               Time zones sort themselves out. Good work travels.
@@ -74,7 +74,7 @@ export default function GlobeSection() {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.3 }}
-              className="grid grid-cols-2 sm:grid-cols-3 gap-4 max-w-xl border-t border-white/10 pt-6"
+              className="grid grid-cols-2 sm:grid-cols-3 gap-3 max-w-xl border-t border-white/10 pt-8"
             >
               {cities.map((l) => (
                 <li key={l.city} className="border-b border-white/10 pb-3">
@@ -102,7 +102,7 @@ export default function GlobeSection() {
             className="hidden md:block relative"
           >
             <Globe size={600} />
-            <p className="text-center mt-6 text-[10px] font-mono uppercase tracking-[0.3em] text-white/40">
+            <p className="text-center mt-8 text-[10px] font-mono uppercase tracking-[0.3em] text-white/40">
               — Drag to spin · auto-rotates when idle
             </p>
           </motion.div>

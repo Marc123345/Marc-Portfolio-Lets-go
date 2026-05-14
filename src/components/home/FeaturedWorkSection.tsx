@@ -255,7 +255,7 @@ const PAGE_SIZE = 6;
 
 function ChapterMarker({ number, label }: { number: string; label: string }) {
   return (
-    <div className="flex items-center gap-4 mb-10">
+    <div className="flex items-center gap-3 mb-8">
       <span className="text-white/50 text-xs font-mono tracking-[0.3em] uppercase">
         {number}
       </span>
@@ -305,7 +305,7 @@ export default function FeaturedWorkSection() {
           label={`Portfolio · ${featured.length} Files`}
         />
 
-        <div className="grid md:grid-cols-[1.2fr_1fr] gap-8 md:gap-16 items-end mb-16">
+        <div className="grid md:grid-cols-[1.2fr_1fr] gap-8 items-end mb-8">
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -332,10 +332,10 @@ export default function FeaturedWorkSection() {
           </motion.p>
         </div>
 
-        <div className="grid lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+        <div className="grid lg:grid-cols-12 gap-8 items-center">
           {/* List */}
           <div className="lg:col-span-3 order-2 lg:order-1">
-            <div className="flex items-center justify-between mb-5">
+            <div className="flex items-center justify-between mb-3">
               <p className="text-[10px] font-mono uppercase tracking-[0.3em] text-white/40">
                 — Case files
               </p>
@@ -367,7 +367,7 @@ export default function FeaturedWorkSection() {
                   >
                     <button
                       onClick={() => setActiveIndex(globalIdx)}
-                      className={`group w-full text-left flex items-center gap-3 py-4 transition-colors ${
+                      className={`group w-full text-left flex items-center gap-3 py-3 transition-colors ${
                         isActive ? 'text-white' : 'text-white/50 hover:text-white'
                       }`}
                     >
@@ -399,7 +399,7 @@ export default function FeaturedWorkSection() {
             </ul>
 
             {/* Page dots */}
-            <div className="flex items-center gap-2 mt-6">
+            <div className="flex items-center gap-3 mt-8">
               {Array.from({ length: totalPages }).map((_, p) => (
                 <button
                   key={p}
@@ -412,7 +412,7 @@ export default function FeaturedWorkSection() {
                   aria-label={`Go to set ${p + 1}`}
                 />
               ))}
-              <span className="ml-2 text-[10px] font-mono uppercase tracking-[0.25em] text-white/40">
+              <span className="ml-3 text-[10px] font-mono uppercase tracking-[0.25em] text-white/40">
                 {String(currentPage + 1).padStart(2, '0')} / {String(totalPages).padStart(2, '0')}
               </span>
             </div>
@@ -436,7 +436,7 @@ export default function FeaturedWorkSection() {
                 transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
               >
                 <h3
-                  className="text-white mb-4 leading-[1.0] tracking-tight"
+                  className="text-white mb-3 leading-[1.0] tracking-tight"
                   style={{
                     fontFamily: SERIF,
                     fontSize: 'clamp(1.75rem, 3vw, 2.75rem)',
@@ -445,9 +445,9 @@ export default function FeaturedWorkSection() {
                 >
                   {active.title}
                 </h3>
-                <p className="text-white/70 leading-relaxed mb-6">{active.blurb}</p>
+                <p className="text-white/70 leading-relaxed mb-8">{active.blurb}</p>
 
-                <div className="grid grid-cols-3 gap-2 py-4 border-y border-white/10 mb-6">
+                <div className="grid grid-cols-3 gap-3 py-8 border-y border-white/10 mb-8">
                   {active.stats.map((s) => (
                     <div key={s.label}>
                       <div
@@ -468,11 +468,11 @@ export default function FeaturedWorkSection() {
                   ))}
                 </div>
 
-                <div className="flex flex-wrap gap-2 mb-6">
+                <div className="flex flex-wrap gap-3 mb-8">
                   {active.tags.map((t) => (
                     <span
                       key={t}
-                      className="px-2 py-0.5 text-[10px] font-mono uppercase tracking-[0.2em] border border-white/15 text-white/60"
+                      className="px-3 py-0.5 text-[10px] font-mono uppercase tracking-[0.2em] border border-white/15 text-white/60"
                     >
                       {t}
                     </span>
@@ -482,7 +482,7 @@ export default function FeaturedWorkSection() {
                 <div className="flex flex-wrap gap-3">
                   <Link
                     href={active.caseStudyUrl}
-                    className="inline-flex items-center gap-2 bg-white text-black font-medium px-5 py-2.5 hover:bg-[#A3D1FF] transition-colors group"
+                    className="inline-flex items-center gap-3 bg-white text-black font-medium px-5 py-2.5 hover:bg-[#A3D1FF] transition-colors group"
                   >
                     Read case study
                     <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
@@ -492,7 +492,7 @@ export default function FeaturedWorkSection() {
                       href={active.liveUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 text-white font-medium border border-white/20 hover:border-white/60 transition-colors px-5 py-2.5 group"
+                      className="inline-flex items-center gap-3 text-white font-medium border border-white/20 hover:border-white/60 transition-colors px-5 py-2.5 group"
                     >
                       Live
                       <ExternalLink className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
@@ -504,13 +504,13 @@ export default function FeaturedWorkSection() {
           </div>
         </div>
 
-        <div className="mt-20 flex items-center justify-between border-t border-white/10 pt-8">
+        <div className="mt-8 flex items-center justify-between border-t border-white/10 pt-8">
           <span className="text-[10px] font-mono uppercase tracking-[0.3em] text-white/40">
             — End of spread
           </span>
           <Link
             href="/work"
-            className="inline-flex items-center gap-2 text-white font-medium border-b border-white/30 hover:border-[#A3D1FF] hover:text-[#A3D1FF] transition-colors py-1"
+            className="inline-flex items-center gap-3 text-white font-medium border-b border-white/30 hover:border-[#A3D1FF] hover:text-[#A3D1FF] transition-colors py-1"
           >
             View the complete archive
             <ArrowUpRight className="w-4 h-4" />

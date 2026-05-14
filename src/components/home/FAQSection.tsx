@@ -31,7 +31,7 @@ const faqItems = [
 
 function ChapterMarker({ number, label }: { number: string; label: string }) {
   return (
-    <div className="flex items-center gap-4 mb-10">
+    <div className="flex items-center gap-3 mb-8">
       <span className="text-white/50 text-xs font-mono tracking-[0.3em] uppercase">
         {number}
       </span>
@@ -65,9 +65,9 @@ function FAQRow({
       <button
         onClick={onToggle}
         aria-expanded={open}
-        className="w-full flex items-start justify-between gap-6 py-8 text-left"
+        className="w-full flex items-start justify-between gap-8 py-8 text-left"
       >
-        <div className="flex items-start gap-6 md:gap-10 flex-1 min-w-0">
+        <div className="flex items-start gap-8 flex-1 min-w-0">
           <span
             className="text-[#A3D1FF] font-mono text-xs tracking-[0.3em] pt-3 w-10 shrink-0"
             style={{ fontVariantNumeric: 'tabular-nums' }}
@@ -128,7 +128,7 @@ export default function FAQSection() {
       <div className="max-w-7xl mx-auto relative">
         <ChapterMarker number="Chapter · Q&A" label="Frequently Asked" />
 
-        <div className="grid md:grid-cols-[1fr_1.3fr] gap-10 md:gap-16">
+        <div className="grid md:grid-cols-[1fr_1.3fr] gap-8">
           {/* Left — sticky header */}
           <div>
             <div className="md:sticky md:top-32">

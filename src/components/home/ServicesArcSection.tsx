@@ -111,7 +111,7 @@ const services: ArcCard[] = [
 
 function ChapterMarker({ number, label }: { number: string; label: string }) {
   return (
-    <div className="flex items-center gap-4 mb-10">
+    <div className="flex items-center gap-3 mb-8">
       <span className="text-white/50 text-xs font-mono tracking-[0.3em] uppercase">
         {number}
       </span>
@@ -131,7 +131,7 @@ export default function ServicesArcSection() {
       <div className="max-w-7xl mx-auto relative">
         <ChapterMarker number="Chapter · Services" label="11 Disciplines" />
 
-        <div className="grid md:grid-cols-[1.2fr_1fr] gap-8 md:gap-16 items-end mb-12">
+        <div className="grid md:grid-cols-[1.2fr_1fr] gap-8 items-end mb-8">
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -160,13 +160,13 @@ export default function ServicesArcSection() {
 
         <ArcSlider cards={services} />
 
-        <div className="mt-16 flex items-center justify-between border-t border-white/10 pt-8">
+        <div className="mt-8 flex items-center justify-between border-t border-white/10 pt-8">
           <span className="text-[10px] font-mono uppercase tracking-[0.3em] text-white/40">
             — End of arc
           </span>
           <Link
             href="/services"
-            className="inline-flex items-center gap-2 text-white font-medium border-b border-white/30 hover:border-[#A3D1FF] hover:text-[#A3D1FF] transition-colors py-1"
+            className="inline-flex items-center gap-3 text-white font-medium border-b border-white/30 hover:border-[#A3D1FF] hover:text-[#A3D1FF] transition-colors py-1"
           >
             See all services in detail
             <ArrowUpRight className="w-4 h-4" />

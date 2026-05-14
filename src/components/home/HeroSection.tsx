@@ -63,7 +63,7 @@ export default function HeroSection() {
         </motion.div>
 
         {/* Row 2 — 3 columns: reviews · photo · tagline+CTA */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-6 items-start mt-6">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mt-8">
           {/* Left — client reviews */}
           <motion.div
             className="lg:col-span-3 pt-8"
@@ -92,7 +92,7 @@ export default function HeroSection() {
               ))}
             </ul>
             <div
-              className="mt-5 block"
+              className="mt-3 block"
               style={{
                 fontFamily: 'var(--font-body)',
                 fontSize: 20,
@@ -156,7 +156,7 @@ export default function HeroSection() {
                 fontSize: 16,
                 lineHeight: '28px',
                 fontWeight: 400,
-                marginBottom: 24,
+                marginBottom: 32,
               }}
             >
               Hi, I&rsquo;m Marc — a web designer in Tel Aviv building custom
@@ -166,7 +166,7 @@ export default function HeroSection() {
             <MagneticButton strength={20}>
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 bg-white text-black font-medium px-6 py-3 hover:bg-[#A3D1FF] transition-colors group"
+                className="inline-flex items-center gap-3 bg-white text-black font-medium px-6 py-3 hover:bg-[#A3D1FF] transition-colors group"
               >
                 <span>Get In Touch</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
