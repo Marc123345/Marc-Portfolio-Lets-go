@@ -4,7 +4,6 @@ import HeroSection from '@/components/home/HeroSection';
 import FeaturedWorkSection from '@/components/home/FeaturedWorkSection';
 import GlobeSection from '@/components/home/GlobeSection';
 import ServicesArcSection from '@/components/home/ServicesArcSection';
-import HowItWorksSection from '@/components/home/HowItWorksSection';
 import AboutSection from '@/components/home/AboutSection';
 import FAQSection from '@/components/home/FAQSection';
 import CTASection from '@/components/home/CTASection';
@@ -86,7 +85,6 @@ export default function HomePage() {
       <FeaturedWorkSection />
       <GlobeSection />
       <ServicesArcSection />
-      <HowItWorksSection />
       <AboutSection />
       <FAQSection />
       <CTASection />
