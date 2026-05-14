@@ -193,13 +193,13 @@ export default function ArcSlider({ cards, initialIndex = 0 }: ArcSliderProps) {
                 key={c.id}
                 href={c.href}
                 onClick={() => setActiveIndex(i)}
-                className="snap-center shrink-0 w-[80vw] max-w-[340px] aspect-[3/4] border border-white/15 bg-[#0f1116] p-6 flex flex-col"
+                className="snap-center shrink-0 w-[80vw] max-w-[340px] aspect-[3/4] border border-white/15 bg-[#0f1116] p-8 flex flex-col"
               >
-                <div className="text-[10px] font-mono uppercase tracking-[0.3em] text-[#A3D1FF] mb-3">
+                <div className="text-[10px] font-mono uppercase tracking-[0.3em] text-[#A3D1FF] mb-8">
                   {String(i + 1).padStart(2, '0')} · {c.category}
                 </div>
                 <h3
-                  className="text-white leading-[1.0] tracking-tight mb-4 mt-auto"
+                  className="text-white leading-[1.0] tracking-tight mb-3 mt-auto"
                   style={{
                     fontFamily: SERIF,
                     fontSize: 'clamp(2rem, 6vw, 2.75rem)',
@@ -208,8 +208,8 @@ export default function ArcSlider({ cards, initialIndex = 0 }: ArcSliderProps) {
                 >
                   {c.title}
                 </h3>
-                <p className="text-white/65 text-sm mb-4">{c.blurb}</p>
-                <div className="inline-flex items-center gap-2 text-white text-sm font-medium border-b border-white/30 pb-1 self-start">
+                <p className="text-white/65 text-sm mb-8">{c.blurb}</p>
+                <div className="inline-flex items-center gap-3 text-white text-sm font-medium border-b border-white/30 pb-1 self-start">
                   Open service <ArrowUpRight className="w-4 h-4" />
                 </div>
               </Link>
@@ -292,7 +292,7 @@ export default function ArcSlider({ cards, initialIndex = 0 }: ArcSliderProps) {
               }}
             >
               <motion.div
-                className="relative w-full h-full border border-white/12 bg-[#0e1116] flex flex-col p-7 overflow-hidden"
+                className="relative w-full h-full border border-white/12 bg-[#0e1116] flex flex-col p-8 overflow-hidden"
                 style={{
                   background: isActive
                     ? `linear-gradient(140deg, #14181f 0%, #0a0c10 100%)`
@@ -311,7 +311,11 @@ export default function ArcSlider({ cards, initialIndex = 0 }: ArcSliderProps) {
                   }}
                 />
 
-                <div className="flex items-center justify-between mb-6">
+                {/* 4/12/32 rhythm:
+                   - 4px gap within a label (line spacing implicit)
+                   - 12px between title + blurb (one cluster)
+                   - 32px between distinct content groups */}
+                <div className="flex items-center justify-between mb-8">
                   <span
                     className="text-[10px] font-mono uppercase tracking-[0.3em]"
                     style={{ color: ACCENT }}
@@ -325,7 +329,7 @@ export default function ArcSlider({ cards, initialIndex = 0 }: ArcSliderProps) {
 
                 <div className="flex-1 flex flex-col justify-end">
                   <h3
-                    className="text-white leading-[0.95] tracking-tight mb-5"
+                    className="text-white leading-[0.95] tracking-tight mb-3"
                     style={{
                       fontFamily: SERIF,
                       fontSize: 'clamp(2rem, 3vw, 3rem)',
@@ -334,16 +338,19 @@ export default function ArcSlider({ cards, initialIndex = 0 }: ArcSliderProps) {
                   >
                     {c.title}
                   </h3>
-                  <p className="text-white/65 text-sm leading-relaxed mb-6">
+                  <p className="text-white/65 text-sm leading-relaxed mb-8">
                     {c.blurb}
                   </p>
 
                   {c.bullets && (
-                    <ul className="space-y-1.5 mb-6">
+                    /* Bullets are a different content LAYER from the blurb:
+                       smaller, mono, uppercase, tracked — feels like spec
+                       under prose. 4px gap within the list (within-group). */
+                    <ul className="space-y-1 mb-8">
                       {c.bullets.slice(0, 3).map((b) => (
                         <li
                           key={b}
-                          className="text-white/70 text-xs flex gap-2 items-start"
+                          className="text-[10px] font-mono uppercase tracking-[0.18em] text-white/50 flex gap-3 items-start"
                         >
                           <span style={{ color: ACCENT }}>—</span>
                           <span>{b}</span>
@@ -361,7 +368,7 @@ export default function ArcSlider({ cards, initialIndex = 0 }: ArcSliderProps) {
                       // Stop propagation so the card's onClick doesn't also fire router.push
                       e.stopPropagation();
                     }}
-                    className="inline-flex items-center gap-2 text-white text-sm font-medium border-b border-white/30 hover:border-[#A3D1FF] hover:text-[#A3D1FF] pb-1 self-start transition-colors relative z-10"
+                    className="inline-flex items-center gap-3 text-white text-sm font-medium border-b border-white/30 hover:border-[#A3D1FF] hover:text-[#A3D1FF] pb-1 self-start transition-colors relative z-10"
                     style={{ cursor: 'pointer' }}
                   >
                     Open service

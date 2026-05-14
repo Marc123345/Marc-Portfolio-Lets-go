@@ -230,15 +230,19 @@ function Stars({ count = 5 }: { count?: number }) {
 function MarqueeCard({ review }: { review: Review }) {
   const client = clientInfo[review.name] ?? { role: 'Client', image: '' };
   return (
-    <div className="w-[340px] sm:w-[380px] shrink-0 bg-[#111418] border border-white/10 p-6 hover:border-[#A3D1FF]/60 hover:bg-[#14181d] transition-all group">
-      <div className="flex items-start justify-between mb-4">
+    /* 4/12/32 vertical rhythm:
+       - 4px: within a label (name → role tiny gap)
+       - 12px: within a tight group (avatar + name+role cluster)
+       - 32px: between distinct content groups (meta row | quote | footer) */
+    <div className="w-[340px] sm:w-[380px] shrink-0 bg-[#111418] border border-white/10 p-8 hover:border-[#A3D1FF]/60 hover:bg-[#14181d] transition-all group">
+      <div className="flex items-start justify-between mb-8">
         <Stars />
         <Quote className="w-5 h-5 text-[#A3D1FF]/40 -scale-x-100 group-hover:text-[#A3D1FF] transition-colors" />
       </div>
-      <p className="text-white/85 text-[15px] leading-relaxed mb-6 line-clamp-4">
+      <p className="text-white/85 text-[15px] leading-relaxed mb-8 line-clamp-4">
         {review.content}
       </p>
-      <div className="flex items-center justify-between pt-4 border-t border-white/5">
+      <div className="flex items-center justify-between pt-8 border-t border-white/10">
         <div className="flex items-center gap-3 min-w-0">
           <div className="w-10 h-10 rounded-full overflow-hidden bg-white/5 flex-shrink-0 ring-1 ring-white/10">
             {client.image ? (
@@ -255,7 +259,7 @@ function MarqueeCard({ review }: { review: Review }) {
             )}
           </div>
           <div className="min-w-0">
-            <div className="text-white text-sm font-semibold truncate">{review.name}</div>
+            <div className="text-white text-sm font-semibold truncate mb-1">{review.name}</div>
             <div className="text-[#A3D1FF]/80 text-[11px] truncate">{client.role}</div>
           </div>
         </div>
@@ -265,7 +269,7 @@ function MarqueeCard({ review }: { review: Review }) {
             target="_blank"
             rel="noopener noreferrer"
             aria-label={`${review.name} on LinkedIn`}
-            className="p-2 rounded-full hover:bg-[#0077B5]/10 text-white/50 hover:text-[#0077B5] transition-colors"
+            className="p-3 rounded-full hover:bg-[#0077B5]/10 text-white/50 hover:text-[#0077B5] transition-colors"
           >
             <Linkedin className="w-4 h-4" />
           </a>
