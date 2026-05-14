@@ -351,15 +351,6 @@ export default function BlogPage() {
         <div className="max-w-7xl mx-auto relative">
           <ChapterMarker number="Journal · Vol. 01" label="Notes · 2024–26" />
 
-          <motion.p
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-xs font-mono uppercase tracking-[0.35em] text-[#A3D1FF] mb-6"
-          >
-            — {posts.length} essays on craft
-          </motion.p>
-
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}

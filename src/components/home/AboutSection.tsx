@@ -140,18 +140,6 @@ export default function AboutSection() {
 
           {/* Right — editorial composition */}
           <div>
-            {/* Kicker */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7 }}
-              className="flex items-center gap-3 mb-8 text-[10px] font-mono uppercase tracking-[0.35em] text-[#A3D1FF]"
-            >
-              <span>— In one sentence</span>
-              <span className="h-[1px] w-8 bg-[#A3D1FF]/50" />
-            </motion.div>
-
             {/* Headline with kinetic word */}
             <motion.h2
               initial={{ opacity: 0, y: 20 }}

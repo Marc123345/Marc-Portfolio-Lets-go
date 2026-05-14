@@ -47,15 +47,6 @@ export default function LabPage() {
           <div className="grid lg:grid-cols-[1fr_1fr] gap-12 items-center flex-1">
             {/* Left — title */}
             <div>
-              <motion.p
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                className="text-xs font-mono uppercase tracking-[0.4em] text-[#A3D1FF] mb-6"
-              >
-                — A living cube system
-              </motion.p>
-
               <motion.h1
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}

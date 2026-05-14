@@ -146,24 +146,6 @@ function CaseMasthead({
         </motion.div>
 
         <div className="max-w-5xl">
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.15, duration: 0.6 }}
-            className="flex items-center gap-4 mb-6"
-          >
-            <motion.span
-              className="inline-block w-10 h-[1px] bg-[#A3D1FF]"
-              initial={{ scaleX: 0 }}
-              animate={{ scaleX: 1 }}
-              transition={{ delay: 0.2, duration: 0.7 }}
-              style={{ transformOrigin: 'left' }}
-            />
-            <p className="text-xs font-mono uppercase tracking-[0.4em] text-[#A3D1FF]">
-              Case File
-            </p>
-          </motion.div>
-
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -511,9 +493,6 @@ export default function CaseStudyLayout({ config }: { config: CaseStudyConfig })
               />
             </div>
             <div className="p-8 md:p-12">
-              <p className="text-xs font-mono uppercase tracking-[0.3em] text-[#A3D1FF] mb-4">
-                — Up next
-              </p>
               <h3
                 className="text-white leading-[1.0] tracking-[-0.03em] mb-6 group-hover:text-[#A3D1FF] transition-colors"
                 style={{

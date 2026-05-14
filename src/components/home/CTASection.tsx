@@ -134,9 +134,6 @@ export default function CTASection() {
             className="space-y-10"
           >
             <div>
-              <p className="text-xs font-mono uppercase tracking-[0.35em] text-[#A3D1FF] mb-4">
-                — What happens next
-              </p>
               <ol className="space-y-5">
                 {[
                   {
@@ -177,9 +174,6 @@ export default function CTASection() {
             </div>
 
             <div>
-              <p className="text-xs font-mono uppercase tracking-[0.35em] text-[#A3D1FF] mb-4">
-                — Or skip the form
-              </p>
               <div className="flex flex-wrap gap-3">
                 <a
                   href={CALENDLY_LINK}

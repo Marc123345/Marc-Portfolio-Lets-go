@@ -194,24 +194,6 @@ export function ServiceMasthead({
 
         {/* Title block */}
         <div className="max-w-5xl">
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.15, duration: 0.6 }}
-            className="flex items-center gap-4 mb-6"
-          >
-            <motion.span
-              className="inline-block w-10 h-[1px] bg-[#A3D1FF]"
-              initial={{ scaleX: 0 }}
-              animate={{ scaleX: 1 }}
-              transition={{ delay: 0.2, duration: 0.7 }}
-              style={{ transformOrigin: 'left' }}
-            />
-            <p className="text-xs font-mono uppercase tracking-[0.4em] text-[#A3D1FF]">
-              {kicker}
-            </p>
-          </motion.div>
-
           <h1
             className="text-white tracking-[-0.04em] mb-8"
             style={{

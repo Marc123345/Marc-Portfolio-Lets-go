@@ -429,9 +429,6 @@ function GapSection() {
           <div className="grid md:grid-cols-2 mb-16">
             {/* Left — inside */}
             <div className="border border-white/10 p-10 md:p-14">
-              <p className="text-[10px] font-mono uppercase tracking-[0.35em] text-[#A3D1FF] mb-10">
-                — Inside your clinic
-              </p>
               <div className="space-y-4">
                 {inside.map((item) => (
                   <div

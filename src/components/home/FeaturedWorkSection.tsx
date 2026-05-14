@@ -435,9 +435,6 @@ export default function FeaturedWorkSection() {
                 exit={{ opacity: 0, y: -10 }}
                 transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
               >
-                <p className="text-[10px] font-mono uppercase tracking-[0.3em] text-[#A3D1FF] mb-4">
-                  — {active.category}
-                </p>
                 <h3
                   className="text-white mb-4 leading-[1.0] tracking-tight"
                   style={{
