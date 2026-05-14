@@ -79,24 +79,18 @@ const tools = [
 
 export default function TechStackStrip() {
   return (
-    <div className="relative w-full overflow-hidden py-5">
-      <div className="tech-marquee-mask">
-        <div className="tech-scroll items-center gap-10 lg:gap-14">
-          {[...tools, ...tools].map((tool, i) => (
-            <div
-              key={`${tool.name}-${i}`}
-              className="flex items-center gap-2.5 flex-shrink-0 group"
-            >
-              <div className="w-5 h-5 text-white/40 group-hover:text-white transition-colors duration-300">
-                {tool.svg}
-              </div>
-              <span className="text-[11px] font-mono uppercase tracking-[0.2em] text-white/40 group-hover:text-white/80 transition-colors duration-300 whitespace-nowrap">
-                {tool.name}
-              </span>
-              <span className="ml-6 w-1 h-1 rounded-full bg-white/20 flex-shrink-0" aria-hidden="true" />
+    <div className="relative w-full py-5">
+      <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-4 lg:gap-x-12">
+        {tools.map((tool) => (
+          <div key={tool.name} className="flex items-center gap-2.5 group">
+            <div className="w-5 h-5 text-white/40 group-hover:text-white transition-colors duration-300">
+              {tool.svg}
             </div>
-          ))}
-        </div>
+            <span className="text-[11px] font-mono uppercase tracking-[0.2em] text-white/50 group-hover:text-white/80 transition-colors duration-300 whitespace-nowrap">
+              {tool.name}
+            </span>
+          </div>
+        ))}
       </div>
     </div>
   );

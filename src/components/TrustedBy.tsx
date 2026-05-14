@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useMemo } from 'react';
+import React from 'react';
 import { Quote, Star, Linkedin, User, ArrowUpRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
@@ -20,19 +20,11 @@ type ClientMeta = {
   linkedin?: string;
 };
 
+/* Curated to 6 strongest reviews — each with a verifiable LinkedIn
+   link in clientInfo. Past 5 testimonials, diminishing returns
+   make further proof read as noise. Remaining 25+ reviews live on
+   Google (linked at the bottom of the section). */
 const reviews: Review[] = [
-  {
-    name: 'Darren Youngleson',
-    rating: 5,
-    content:
-      'Marc is an absolute winner. No limits to his depth of expertise, unwavering customer service and quality of his product and creativity. Highly recommend working with Marc.',
-  },
-  {
-    name: 'Royi Mazor',
-    rating: 5,
-    content:
-      'Very professional wonderful customer service, thank you Marc for all the work you put in, will definitely be using for future projects!',
-  },
   {
     name: 'Omar Turner',
     rating: 5,
@@ -46,51 +38,10 @@ const reviews: Review[] = [
       "Marc is an incredible ally. We found him to be highly responsive with quick solutions as he built our landing page. This was a high-stakes project for us that did not lend itself to a template solution. Marc is that rare creative that excels at design AND wordsmithing. He's the real deal, a true professional.",
   },
   {
-    name: 'Jayden Youngleson',
+    name: 'Darren Youngleson',
     rating: 5,
     content:
-      'It has been an absolute pleasure working alongside Marc. His deep knowledge, strong work ethic, and commitment to delivering results have made a significant impact on our team. Marc consistently went above and beyond.',
-  },
-  {
-    name: 'Yaron Peretz',
-    rating: 5,
-    content:
-      'Marc was absolutely phenomenal in building the landing page for my business. His care for client satisfaction is unparalleled. He was timely, and took great attention to learning my business & my brand thoroughly.',
-  },
-  {
-    name: 'Guneet K. Singh',
-    rating: 5,
-    content:
-      "My team and I loved working with Marc!! He took the time to understand our goals with our website and adapt as needed. His professionalism, patience and openness to our feedback at every stage made the entire process a seamless collaboration.",
-  },
-  {
-    name: 'Ezra Rubinson',
-    rating: 5,
-    content: 'Fantastic work Marc — thank you for building my dream website!!',
-  },
-  {
-    name: 'Elior Daniely',
-    rating: 5,
-    content:
-      'Marc did an amazing job on my website! He was professional, responsive, and delivered a design that exceeded my expectations. Highly recommend!',
-  },
-  {
-    name: 'Benny Even Ari',
-    rating: 5,
-    content:
-      'Marc demonstrated exceptional skill in creating a sophisticated platform that perfectly aligns with our investment and real estate needs.',
-  },
-  {
-    name: 'Hilla Dayan',
-    rating: 5,
-    content:
-      'Working with him was professional, precise, and enjoyable from the very first moment. He built a website that exceeded my expectations and has a great eye for design.',
-  },
-  {
-    name: 'Bar Levy',
-    rating: 5,
-    content:
-      'Marc did a great job studying and elaborating about the various solutions offered nowadays. He initiated and led UX & UI tasks and provided valuable insights during the entire process.',
+      'Marc is an absolute winner. No limits to his depth of expertise, unwavering customer service and quality of his product and creativity. Highly recommend working with Marc.',
   },
   {
     name: 'Stallone Sweeney',
@@ -99,27 +50,15 @@ const reviews: Review[] = [
       'Loved working with Marc. He listened carefully to my ideas and needs, ensuring that the final website perfectly reflected my vision. His attention to detail is incredible.',
   },
   {
-    name: 'Lior Shimon',
+    name: 'Ezra Rubinson',
     rating: 5,
-    content: 'Marc built my dream website — he is great at what he does and a great guy.',
+    content: 'Fantastic work Marc — thank you for building my dream website!!',
   },
   {
-    name: 'Yosi Lugassy',
+    name: 'Bar Levy',
     rating: 5,
     content:
-      'Marc built me the website I dreamed of. He was patient, timely, and professional. Thank you and good luck.',
-  },
-  {
-    name: 'Shalom Landman',
-    rating: 5,
-    content:
-      "Marc designed and created my website, and I couldn't be happier with the result! The site looks absolutely amazing, runs smoothly, and perfectly captures what I was looking for.",
-  },
-  {
-    name: 'Julia Friedman',
-    rating: 5,
-    content:
-      'Marc is super helpful, very knowledgeable and an expert in field. I highly recommend him.',
+      'Marc did a great job studying and elaborating about the various solutions offered nowadays. He initiated and led UX & UI tasks and provided valuable insights during the entire process.',
   },
 ];
 
@@ -275,54 +214,10 @@ function MarqueeCard({ review }: { review: Review }) {
   );
 }
 
-function MarqueeRow({
-  items,
-  direction = 'left',
-  speed = 60,
-}: {
-  items: Review[];
-  direction?: 'left' | 'right';
-  speed?: number;
-}) {
-  const loopId = useMemo(
-    () => `testimonial-${direction}-${Math.random().toString(36).slice(2, 8)}`,
-    [direction],
-  );
-
-  return (
-    <div className="relative overflow-hidden testimonial-marquee-mask">
-      <style>{`
-        @keyframes ${loopId} {
-          from { transform: translateX(${direction === 'left' ? '0' : '-50%'}); }
-          to { transform: translateX(${direction === 'left' ? '-50%' : '0'}); }
-        }
-        .${loopId} {
-          animation: ${loopId} ${speed}s linear infinite;
-          will-change: transform;
-        }
-        .${loopId}:hover {
-          animation-play-state: paused;
-        }
-        @media (prefers-reduced-motion: reduce) {
-          .${loopId} { animation: none; }
-        }
-      `}</style>
-      <div className={`${loopId} flex gap-5 py-2`} style={{ width: 'max-content' }}>
-        {[...items, ...items].map((r, i) => (
-          <MarqueeCard key={`${r.name}-${i}`} review={r} />
-        ))}
-      </div>
-    </div>
-  );
-}
-
 export default function TrustedBy() {
   const featured = reviews.find((r) => r.name === FEATURED_NAME)!;
   const featuredClient = clientInfo[featured.name];
   const rest = reviews.filter((r) => r.name !== FEATURED_NAME);
-  const half = Math.ceil(rest.length / 2);
-  const rowA = rest.slice(0, half);
-  const rowB = rest.slice(half);
 
   return (
     <section className="relative py-20 md:py-28 bg-black overflow-hidden">
@@ -561,10 +456,26 @@ export default function TrustedBy() {
         </div>
       </div>
 
-      {/* Infinite marquee rows */}
-      <div className="space-y-5">
-        <MarqueeRow items={rowA} direction="left" speed={80} />
-        <MarqueeRow items={rowB} direction="right" speed={90} />
+      {/* Remaining reviews — static grid, no marquee */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+          {rest.map((review) => (
+            <MarqueeCard key={review.name} review={review} />
+          ))}
+        </div>
+
+        {/* See more on Google */}
+        <div className="mt-10 flex justify-center">
+          <a
+            href="https://share.google/eF48yRJKqiZppBvfN"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-white/70 hover:text-[#A3D1FF] transition-colors text-sm border-b border-white/20 hover:border-[#A3D1FF] py-1"
+          >
+            25+ more reviews on Google
+            <ArrowUpRight className="w-4 h-4" />
+          </a>
+        </div>
       </div>
 
       {/* Bottom CTA */}
