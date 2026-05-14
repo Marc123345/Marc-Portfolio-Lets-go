@@ -167,6 +167,46 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               />
             </button>
 
+            {/* Desktop primary navigation (NN/g #1 — visible on larger screens).
+                Active state per NN/g #5 (current-location indicator). */}
+            <nav
+              className={`hidden lg:flex items-center gap-10 z-[70] relative transition-opacity ${
+                isMenuOpen ? 'opacity-0 pointer-events-none' : 'opacity-100'
+              }`}
+              aria-label="Primary"
+            >
+              {[
+                { label: 'Work', to: '/work' },
+                { label: 'Services', to: '/services' },
+                { label: 'Blog', to: '/blog' },
+                { label: 'About', to: '/about' },
+                { label: 'Contact', to: '/contact' },
+              ].map(({ label, to }) => {
+                const isActive =
+                  pathname === to || (to !== '/' && pathname.startsWith(`${to}/`));
+                return (
+                  <Link
+                    key={to}
+                    href={to}
+                    aria-current={isActive ? 'page' : undefined}
+                    className={`relative text-sm font-medium tracking-wide py-2 transition-colors ${
+                      isActive
+                        ? 'text-white'
+                        : 'text-white/70 hover:text-white'
+                    }`}
+                  >
+                    {label}
+                    <span
+                      aria-hidden
+                      className={`absolute left-0 right-0 -bottom-0.5 h-[2px] bg-[#A3D1FF] origin-left transition-transform duration-300 ${
+                        isActive ? 'scale-x-100' : 'scale-x-0'
+                      }`}
+                    />
+                  </Link>
+                );
+              })}
+            </nav>
+
             <div className="flex items-center gap-4 sm:gap-6 z-[70] relative">
               <Link
                 href="/contact"
@@ -181,9 +221,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 Let&apos;s Talk
               </Link>
 
+              {/* Hamburger only on mobile (NN/g #1 — desktop has inline nav) */}
               <button
                 onClick={() => setMenuOpen(!isMenuOpen)}
-                className="group relative flex items-center gap-3 px-4 py-2.5 border border-white/15 hover:border-white/40 transition-colors"
+                className="lg:hidden group relative flex items-center gap-3 px-4 py-2.5 border border-white/15 hover:border-white/40 transition-colors"
                 aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
                 aria-expanded={isMenuOpen}
               >
