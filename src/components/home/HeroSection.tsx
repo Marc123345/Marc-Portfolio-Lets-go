@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 import MagneticButton from '@/components/MagneticButton';
 
@@ -23,38 +24,46 @@ export default function HeroSection() {
   return (
     <section
       id="home"
-      className="main-hero-area relative w-full overflow-hidden"
-      style={{ backgroundColor: '#F4F3ED', paddingTop: '115px' }}
+      className="relative w-full overflow-hidden bg-[#0a0a0a]"
+      style={{ paddingTop: '140px', paddingBottom: '80px' }}
     >
-      <div className="container mx-auto max-w-[1320px] px-4 sm:px-6 lg:px-8">
+      {/* Soft accent glow — matches other sections */}
+      <div
+        aria-hidden
+        className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[1200px] h-[700px] bg-[#A3D1FF]/10 rounded-full blur-[160px] pointer-events-none"
+      />
+      <div
+        aria-hidden
+        className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-[#A3D1FF]/5 rounded-full blur-[120px] pointer-events-none"
+      />
+
+      <div className="container mx-auto max-w-[1320px] px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Row 1 — giant centered name */}
-        <div className="w-full">
-          <motion.div
-            className="text-center"
-            initial={fadeUp.initial}
-            animate={fadeUp.animate}
-            transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+        <motion.div
+          className="text-center"
+          initial={fadeUp.initial}
+          animate={fadeUp.animate}
+          transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+        >
+          <h1
+            className="font-heading uppercase leading-[0.9] m-0"
+            style={{
+              fontFamily: 'var(--font-heading)',
+              fontWeight: 500,
+              fontSize: 'clamp(4rem, 18vw, 230px)',
+              color: '#FCFCFB',
+              letterSpacing: '-0.025em',
+              fontFeatureSettings: '"kern" 1, "liga" 1, "calt" 1',
+              fontKerning: 'normal',
+              textWrap: 'balance',
+            }}
           >
-            <h2
-              className="font-heading uppercase leading-[0.9] m-0"
-              style={{
-                fontFamily: 'var(--font-oswald), Oswald, sans-serif',
-                fontWeight: 500,
-                fontSize: 'clamp(4rem, 18vw, 230px)',
-                color: '#070707',
-                letterSpacing: '-0.025em',
-                fontFeatureSettings: '"kern" 1, "liga" 1, "calt" 1',
-                fontKerning: 'normal',
-                textWrap: 'balance',
-              }}
-            >
-              Marc Friedman
-            </h2>
-          </motion.div>
-        </div>
+            Marc Friedman
+          </h1>
+        </motion.div>
 
         {/* Row 2 — 3 columns: reviews · photo · tagline+CTA */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-6 items-start mt-4">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-6 items-start mt-6">
           {/* Left — client reviews */}
           <motion.div
             className="lg:col-span-3 pt-8"
@@ -62,49 +71,46 @@ export default function HeroSection() {
             animate={fadeUp.animate}
             transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
           >
-            <div className="clienti-reviews">
-              <ul className="flex p-0 m-0 list-none">
-                {CLIENT_AVATARS.map((src, i) => (
-                  <li
-                    key={src}
-                    className="rounded-full overflow-hidden"
-                    style={{
-                      flex: '0 0 60px',
-                      width: 60,
-                      height: 60,
-                      marginLeft: i === 0 ? 0 : -15,
-                    }}
-                  >
-                    <img
-                      src={src}
-                      alt="Happy client"
-                      className="w-full h-full object-cover rounded-full"
-                    />
-                  </li>
-                ))}
-              </ul>
-              <div
-                className="mt-5 block"
-                style={{
-                  fontFamily: 'var(--font-poppins), Poppins, sans-serif',
-                  fontSize: 20,
-                  fontWeight: 500,
-                  color: '#070707',
-                }}
-              >
-                25+ reviews <span style={{ color: '#969696' }}>(4.9 of 5)</span>
-                <p
-                  className="mt-5"
+            <ul className="flex p-0 m-0 list-none">
+              {CLIENT_AVATARS.map((src, i) => (
+                <li
+                  key={src}
+                  className="rounded-full overflow-hidden border-2 border-[#0a0a0a]"
                   style={{
-                    fontSize: 16,
-                    color: '#070707',
-                    lineHeight: '28px',
-                    fontWeight: 400,
+                    flex: '0 0 60px',
+                    width: 60,
+                    height: 60,
+                    marginLeft: i === 0 ? 0 : -15,
                   }}
                 >
-                  Five-star reviews on Google, Clutch &amp; LinkedIn from clients across 3 continents.
-                </p>
-              </div>
+                  <img
+                    src={src}
+                    alt="Happy client"
+                    className="w-full h-full object-cover rounded-full"
+                  />
+                </li>
+              ))}
+            </ul>
+            <div
+              className="mt-5 block"
+              style={{
+                fontFamily: 'var(--font-body)',
+                fontSize: 20,
+                fontWeight: 500,
+                color: '#FCFCFB',
+              }}
+            >
+              25+ reviews <span className="text-white/50">(4.9 of 5)</span>
+              <p
+                className="mt-3 text-white/70"
+                style={{
+                  fontSize: 15,
+                  lineHeight: '26px',
+                  fontWeight: 400,
+                }}
+              >
+                Five-star reviews on Google, Clutch &amp; LinkedIn from clients across 3 continents.
+              </p>
             </div>
           </motion.div>
 
@@ -116,7 +122,7 @@ export default function HeroSection() {
             transition={{ duration: 1, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
             whileHover={{ rotate: 0, transition: { duration: 0.4 } }}
           >
-            <div className="hero-image relative text-center">
+            <div className="relative text-center">
               <Image
                 src={MARC_PORTRAIT}
                 alt="Marc Friedman — Web Designer Tel Aviv"
@@ -128,8 +134,9 @@ export default function HeroSection() {
                   width: 'min(400px, 80vw)',
                   height: 'auto',
                   borderRadius: 20,
-                  border: '3px solid #fff',
+                  border: '3px solid rgba(255,255,255,0.12)',
                   marginTop: '-40px',
+                  boxShadow: '0 30px 80px -20px rgba(0,0,0,0.6)',
                 }}
               />
             </div>
@@ -143,9 +150,9 @@ export default function HeroSection() {
             transition={{ duration: 0.8, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
           >
             <p
+              className="text-white/80"
               style={{
-                fontFamily: 'var(--font-poppins), Poppins, sans-serif',
-                color: '#070707',
+                fontFamily: 'var(--font-body)',
                 fontSize: 16,
                 lineHeight: '28px',
                 fontWeight: 400,
@@ -159,22 +166,10 @@ export default function HeroSection() {
             <MagneticButton strength={20}>
               <Link
                 href="/contact"
-                className="inline-block text-center"
-                style={{
-                  background: '#070707',
-                  color: '#F4F3ED',
-                  border: '1px solid rgba(119,119,125,.2)',
-                  fontFamily: 'var(--font-poppins), Poppins, sans-serif',
-                  fontSize: 14,
-                  fontWeight: 500,
-                  lineHeight: '20px',
-                  borderRadius: 2,
-                  padding: '20px 34px',
-                  textDecoration: 'none',
-                  transition: '.3s',
-                }}
+                className="inline-flex items-center gap-2 bg-white text-black font-medium px-6 py-3 hover:bg-[#A3D1FF] transition-colors group"
               >
-                Get In Touch
+                <span>Get In Touch</span>
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>
             </MagneticButton>
           </motion.div>
