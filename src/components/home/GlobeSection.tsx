@@ -113,13 +113,13 @@ export default function GlobeSection() {
             </motion.div>
           </div>
 
-          {/* Globe */}
+          {/* Globe — desktop only (skipped on mobile for perf) */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true, margin: '-80px' }}
             transition={{ duration: 1.3, ease: [0.22, 1, 0.36, 1] }}
-            className="relative"
+            className="hidden md:block relative"
           >
             <Globe size={600} />
             <p className="text-center mt-6 text-[10px] font-mono uppercase tracking-[0.3em] text-white/40">

@@ -1131,6 +1131,14 @@
   .about-marquee {
     animation: none !important;
   }
+  /* Kill decorative blurred glow orbs on mobile.
+     Each blur-[120px+] layer is an expensive off-screen paint;
+     12+ of them across the home page were the single biggest
+     mobile perf hit. Catches anything absolutely positioned,
+     pointer-events-none, with a Tailwind blur-[Xpx] class. */
+  .absolute.pointer-events-none[class*="blur-["] {
+    display: none !important;
+  }
 }
 
 /* Mobile-specific styles */

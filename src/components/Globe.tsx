@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 interface GlobeProps {
   size?: number;
@@ -101,12 +101,22 @@ export default function Globe({ size = 600, className = '' }: GlobeProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const globeRef = useRef<any>(null);
   const destroyedRef = useRef(false);
+  /* Don't load Three.js or render the WebGL globe on mobile.
+     Three.js + globe.gl is ~600KB gz, plus a continuously
+     animating canvas — the single heaviest thing on the home
+     page for low-end devices. */
+  const [skip, setSkip] = useState(false);
+  useEffect(() => {
+    const mq = window.matchMedia('(max-width: 768px)');
+    setSkip(mq.matches);
+  }, []);
 
   useEffect(() => {
+    if (skip) return;
     if (!containerRef.current) return;
     destroyedRef.current = false;
 
-    const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
+    const isMobile = false;
 
     Promise.all([import('globe.gl'), import('three')]).then(
       ([GlobeModule, THREE]) => {
@@ -206,6 +216,8 @@ export default function Globe({ size = 600, className = '' }: GlobeProps) {
     window.addEventListener('resize', onResize);
     return () => window.removeEventListener('resize', onResize);
   }, []);
+
+  if (skip) return null;
 
   return (
     <div

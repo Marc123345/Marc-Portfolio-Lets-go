@@ -472,7 +472,7 @@ export default function AboutPage() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true, margin: '-80px' }}
               transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
-              className="relative"
+              className="hidden md:block relative"
             >
               <Globe size={560} />
               <p className="text-center mt-6 text-[10px] font-mono uppercase tracking-[0.3em] text-white/40">
