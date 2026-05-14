@@ -737,48 +737,19 @@ export default function AboutPage() {
               </div>
             </div>
 
-            {/* Photo collage */}
-            <div className="grid grid-cols-2 gap-3 md:gap-4">
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.7, delay: 0.1 }}
-                className="aspect-[3/4] overflow-hidden col-span-2"
-              >
-                <img
-                  src="https://ik.imagekit.io/qcvroy8xpd/uoq5Ztg.jpeg"
-                  alt="Marc at work"
-                  className="w-full h-full object-cover"
-                />
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.7, delay: 0.2 }}
-                className="aspect-square overflow-hidden"
-              >
-                <img
-                  src="https://ik.imagekit.io/qcvroy8xpd/TTV8Liw.jpg"
-                  alt="Workspace"
-                  className="w-full h-full object-cover"
-                />
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.7, delay: 0.3 }}
-                className="aspect-square overflow-hidden"
-              >
-                <img
-                  src="https://ik.imagekit.io/qcvroy8xpd/PW8VUKH.png?updatedAt=1759693058055&tr=f-webp"
-                  alt="Marc Friedman"
-                  className="w-full h-full object-cover"
-                />
-              </motion.div>
-            </div>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7, delay: 0.1 }}
+              className="aspect-[3/4] overflow-hidden"
+            >
+              <img
+                src="https://ik.imagekit.io/qcvroy8xpd/uoq5Ztg.jpeg"
+                alt="Marc at work"
+                className="w-full h-full object-cover"
+              />
+            </motion.div>
           </div>
         </div>
       </section>
