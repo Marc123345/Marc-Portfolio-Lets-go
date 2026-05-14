@@ -9,7 +9,6 @@ import {
   ChapterMarker,
   ServiceMarquee,
   EditorialSection,
-  StatsBar,
   ServiceColophon,
   SERIF,
 } from '@/components/ServiceEditorial';
@@ -556,24 +555,6 @@ export default function WorkPage() {
           </div>
         </div>
       </section>
-
-      {/* ===================== STATS ===================== */}
-      <EditorialSection
-        chapter="02"
-        label="By the numbers"
-        title="A decade of"
-        italicTitle="shipping."
-        bg="bg-[#0a0a0a]"
-      >
-        <StatsBar
-          stats={[
-            { value: `${projects.length}`, label: 'Case Files' },
-            { value: '50+', label: 'Projects Shipped' },
-            { value: '03', label: 'Continents' },
-            { value: '100%', label: 'Built by Me' },
-          ]}
-        />
-      </EditorialSection>
 
       {/* ===================== FULL ARCHIVE IN CUBE-STYLE ===================== */}
       <EditorialSection
