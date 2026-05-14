@@ -1,6 +1,6 @@
 "use client";
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { ErrorBoundary } from 'react-error-boundary';
 import { Toaster } from 'sonner';
 import { MotionConfig } from 'framer-motion';
@@ -26,10 +26,28 @@ function ErrorFallback({ error, resetErrorBoundary }: { error: Error; resetError
   );
 }
 
+/* Force framer-motion to skip animations on mobile.
+   reducedMotion="always" snaps every motion component to its
+   target frame instantly, killing entrance fades, parallax,
+   useScroll/useTransform output, etc. without rewriting every
+   component. */
+function useIsMobile(breakpoint = 768) {
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    const mq = window.matchMedia(`(max-width: ${breakpoint}px)`);
+    const update = () => setIsMobile(mq.matches);
+    update();
+    mq.addEventListener('change', update);
+    return () => mq.removeEventListener('change', update);
+  }, [breakpoint]);
+  return isMobile;
+}
+
 export function AppProviders({ children }: Props) {
+  const isMobile = useIsMobile();
   return (
     <ErrorBoundary FallbackComponent={ErrorFallback}>
-      <MotionConfig reducedMotion="user">
+      <MotionConfig reducedMotion={isMobile ? 'always' : 'user'}>
         {children}
         <Toaster position="top-right" expand={true} richColors />
       </MotionConfig>

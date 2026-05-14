@@ -1114,6 +1114,25 @@
   }
 }
 
+/* Kill heavy CSS animations on mobile.
+   Native mobile rendering is constrained — continuous keyframe
+   loops (marquees, orb pulses, glows, glitches) waste battery,
+   trigger layout work, and rarely add value on a small screen.
+   This block fires for every viewport <=768px, regardless of
+   prefers-reduced-motion. */
+@media (max-width: 768px) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .tech-scroll,
+  .svc-marquee,
+  .about-marquee {
+    animation: none !important;
+  }
+}
+
 /* Mobile-specific styles */
 @media (max-width: 768px) {
   .container-custom {
