@@ -16,10 +16,8 @@ type ServiceGroup = {
 };
 
 /* Hick's-Law-friendly grouping: 11 disciplines collapsed into 4
-   decision-bearing parent categories. Serial-position-ordered:
-   highest-value (Build, Specialize) anchor positions 1 and 4 so
-   primacy + recency carry the strongest groups; the lower-leverage
-   Care group is buried in the middle. */
+   decision-bearing parent categories. The deeper /services page
+   keeps the full detail. */
 const groups: ServiceGroup[] = [
   {
     id: 'build',
@@ -50,17 +48,6 @@ const groups: ServiceGroup[] = [
     ],
   },
   {
-    id: 'care',
-    parent: 'Care',
-    icon: Wrench,
-    blurb:
-      'Keep your site fast, secure, and online — by the same person who built it.',
-    href: '/services',
-    services: [
-      { label: 'Maintenance & Hosting', href: '/services/maintenance-hosting' },
-    ],
-  },
-  {
     id: 'specialize',
     parent: 'Specialize',
     icon: Cpu,
@@ -70,6 +57,17 @@ const groups: ServiceGroup[] = [
     services: [
       { label: 'AI Integration', href: '/services/ai-integration' },
       { label: 'Cybersecurity UX', href: '/services/cybersecurity' },
+    ],
+  },
+  {
+    id: 'care',
+    parent: 'Care',
+    icon: Wrench,
+    blurb:
+      'Keep your site fast, secure, and online — by the same person who built it.',
+    href: '/services',
+    services: [
+      { label: 'Maintenance & Hosting', href: '/services/maintenance-hosting' },
     ],
   },
 ];

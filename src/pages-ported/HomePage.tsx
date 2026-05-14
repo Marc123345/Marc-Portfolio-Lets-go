@@ -83,8 +83,8 @@ export default function HomePage() {
       <HeroSection />
       <TrustedBy />
       <FeaturedWorkSection />
-      <ServicesArcSection />
       <GlobeSection />
+      <ServicesArcSection />
       <AboutSection />
       <FAQSection />
       <CTASection />
