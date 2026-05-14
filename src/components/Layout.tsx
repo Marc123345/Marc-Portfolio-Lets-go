@@ -209,13 +209,13 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <div className="flex items-center gap-4 sm:gap-6 z-[70] relative">
               <Link
                 href="/contact"
-                className={`hidden sm:inline-flex items-center gap-2 text-[11px] font-mono tracking-[0.15em] uppercase transition-colors ${
-                  isMenuOpen ? 'text-white/0 pointer-events-none' : 'text-white/70 hover:text-[#A3D1FF]'
+                className={`hidden sm:inline-flex items-center gap-2 bg-white text-black text-xs font-medium tracking-[0.12em] uppercase px-5 py-2.5 hover:bg-[#A3D1FF] transition-colors ${
+                  isMenuOpen ? 'opacity-0 pointer-events-none' : ''
                 }`}
               >
                 <span className="relative flex w-2 h-2">
-                  <span className="absolute inset-0 rounded-full bg-green-400 animate-ping opacity-60" />
-                  <span className="relative w-2 h-2 rounded-full bg-green-400" />
+                  <span className="absolute inset-0 rounded-full bg-green-500 animate-ping opacity-60" />
+                  <span className="relative w-2 h-2 rounded-full bg-green-500" />
                 </span>
                 Let&apos;s Talk
               </Link>
