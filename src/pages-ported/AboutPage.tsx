@@ -1,85 +1,10 @@
 "use client";
 
-import React, { useRef, useMemo } from 'react';
+import React from 'react';
 import { ArrowUpRight, Mail } from 'lucide-react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Globe from '@/components/Globe';
-
-/* Split a word into per-letter spans for kinetic reveal */
-function KineticWord({
-  word,
-  delay = 0,
-  italic = false,
-}: {
-  word: string;
-  delay?: number;
-  italic?: boolean;
-}) {
-  return (
-    <span className={`inline-block ${italic ? 'italic font-light' : ''}`}>
-      {word.split('').map((ch, i) => (
-        <span key={i} className="inline-block overflow-hidden align-bottom">
-          <motion.span
-            initial={{ y: '105%' }}
-            animate={{ y: 0 }}
-            transition={{
-              duration: 0.9,
-              delay: delay + i * 0.04,
-              ease: [0.22, 1, 0.36, 1],
-            }}
-            className="inline-block"
-          >
-            {ch === ' ' ? '\u00A0' : ch}
-          </motion.span>
-        </span>
-      ))}
-    </span>
-  );
-}
-
-/* Floating ambient dust */
-function AmbientDust() {
-  const dots = useMemo(
-    () =>
-      Array.from({ length: 18 }, (_, i) => ({
-        id: i,
-        x: Math.random() * 100,
-        y: Math.random() * 100,
-        size: Math.random() * 3 + 1,
-        duration: Math.random() * 12 + 12,
-        delay: Math.random() * 8,
-      })),
-    [],
-  );
-  return (
-    <div className="absolute inset-0 z-10 pointer-events-none">
-      {dots.map((d) => (
-        <motion.span
-          key={d.id}
-          className="absolute rounded-full bg-[#A3D1FF]/40"
-          style={{
-            left: `${d.x}%`,
-            top: `${d.y}%`,
-            width: d.size,
-            height: d.size,
-            filter: 'blur(0.5px)',
-          }}
-          animate={{
-            y: [-20, 20, -20],
-            opacity: [0.2, 0.7, 0.2],
-          }}
-          transition={{
-            duration: d.duration,
-            delay: d.delay,
-            repeat: Infinity,
-            ease: 'easeInOut',
-          }}
-        />
-      ))}
-    </div>
-  );
-}
 
 const SERIF = "var(--font-heading)";
 
@@ -245,15 +170,6 @@ function ProcessChapter({
 
 /* ---------------- Main Page ---------------- */
 export default function AboutPage() {
-  const heroRef = useRef<HTMLElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: heroRef,
-    offset: ['start start', 'end start'],
-  });
-  const heroY = useTransform(scrollYProgress, [0, 1], ['0%', '30%']);
-  const heroOpacity = useTransform(scrollYProgress, [0, 0.8], [1, 0.3]);
-  const heroScale = useTransform(scrollYProgress, [0, 1], [1, 1.15]);
-
   const problems = [
     {
       text: 'Our website looks like it was built in 2018 and we\'re embarrassed to send people there.',
@@ -310,180 +226,51 @@ export default function AboutPage() {
       />
 
       {/* ===================== MASTHEAD ===================== */}
-      <section
-        ref={heroRef}
-        className="relative min-h-screen bg-black overflow-hidden"
-      >
-        {/* Portrait layer — parallax + slow zoom */}
-        <motion.div
-          className="absolute inset-0 z-0"
-          style={{ y: heroY, opacity: heroOpacity, scale: heroScale }}
-        >
-          <motion.div
-            initial={{ scale: 1.25, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 2.2, ease: [0.22, 1, 0.36, 1] }}
-            className="absolute inset-0 lg:left-[38%]"
-          >
-            <img
-              src="https://ik.imagekit.io/qcvroy8xpd/PW8VUKH.png?updatedAt=1759693058055&tr=f-webp"
-              alt="Marc Friedman"
-              className="w-full h-full object-cover object-top grayscale contrast-125"
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-black/20 lg:from-black lg:via-black/50 lg:to-black/20" />
-            <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/40" />
-          </motion.div>
-        </motion.div>
-
-        {/* Ambient dust particles */}
-        <AmbientDust />
-
-        {/* Subtle spotlight glow behind name */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 2.5, delay: 0.3 }}
-          className="absolute top-1/2 left-0 lg:left-[5%] -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-[#A3D1FF]/10 blur-[140px] z-[5] pointer-events-none"
-        />
-
-        {/* Grain */}
+      <section className="relative bg-black overflow-hidden pt-28 pb-12 px-6 lg:px-12 border-b border-white/10">
         <div
-          className="absolute inset-0 z-10 opacity-[0.07] mix-blend-overlay pointer-events-none"
+          className="absolute inset-0 opacity-[0.06] mix-blend-overlay pointer-events-none"
           style={{
             backgroundImage:
               "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)' opacity='0.5'/></svg>\")",
           }}
         />
+        <div className="absolute top-1/3 left-[-10%] w-[700px] h-[700px] bg-[#A3D1FF]/8 rounded-full blur-[140px] pointer-events-none" />
 
-        {/* Frame guides — subtle corner marks */}
-        <div className="absolute inset-0 z-[15] pointer-events-none hidden md:block">
-          {[
-            'top-8 left-8',
-            'top-8 right-8',
-            'bottom-8 left-8',
-            'bottom-8 right-8',
-          ].map((pos, i) => (
-            <div key={i} className={`absolute ${pos} w-4 h-4`}>
-              <div className="absolute inset-0 border-l border-t border-white/20" />
-            </div>
-          ))}
-        </div>
+        <div className="max-w-7xl mx-auto relative">
+          <ChapterMarker number="Profile · Vol. 01" label="Full-Stack Designer · 2026" />
 
-        <div className="container-custom relative z-20 min-h-screen flex flex-col justify-between pt-32 pb-10">
-          {/* Top meta bar */}
-          <motion.div
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.1 }}
-            className="flex justify-between items-start text-[10px] md:text-xs font-mono uppercase tracking-[0.3em] text-white/60"
+          <motion.p
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-xs font-mono uppercase tracking-[0.35em] text-[#A3D1FF] mb-6"
           >
-            <div className="flex items-center gap-3">
-              <span className="w-6 h-[1px] bg-white/40" />
-              <span>Profile · Vol. 01</span>
-            </div>
-            <span className="text-right">
-              Full-Stack Designer
-              <br />
-              <span className="text-white/40">Est. 2018</span>
-            </span>
-          </motion.div>
+            — Meet the designer
+          </motion.p>
 
-          {/* Name block */}
-          <div className="max-w-5xl">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.15, duration: 0.6 }}
-              className="flex items-center gap-4 mb-6"
-            >
-              <motion.span
-                className="inline-block w-10 h-[1px] bg-[#A3D1FF]"
-                initial={{ scaleX: 0 }}
-                animate={{ scaleX: 1 }}
-                transition={{ delay: 0.2, duration: 0.7 }}
-                style={{ transformOrigin: 'left' }}
-              />
-              <p className="text-xs font-mono uppercase tracking-[0.4em] text-[#A3D1FF]">
-                Meet the designer
-              </p>
-            </motion.div>
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.9, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
+            className="text-white leading-[0.9] tracking-[-0.04em] mb-8 max-w-5xl"
+            style={{
+              fontFamily: SERIF,
+              fontSize: 'clamp(2.75rem, 7vw, 6rem)',
+              fontWeight: 400,
+            }}
+          >
+            Marc <em className="italic text-[#A3D1FF]">Friedman.</em>
+          </motion.h1>
 
-            <h1
-              className="text-white leading-[0.88] tracking-[-0.04em] mb-8"
-              style={{
-                fontFamily: SERIF,
-                fontSize: 'clamp(3rem, 8.5vw, 7.5rem)',
-                fontWeight: 400,
-              }}
-            >
-              <span className="block text-white/70">
-                <KineticWord word="Marc" delay={0.25} italic />
-              </span>
-              <span className="block">
-                <KineticWord word="Friedman." delay={0.5} />
-              </span>
-            </h1>
-
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 1.1, duration: 0.7 }}
-              className="text-xl md:text-2xl text-white/75 max-w-xl leading-snug mb-2"
-            >
-              A designer and developer who builds websites that{' '}
-              <em className="text-white" style={{ fontFamily: SERIF }}>
-                bring in customers
-              </em>{' '}
-              — not just compliments.
-            </motion.p>
-          </div>
-
-          {/* Bottom row — meta + scroll indicator */}
-          <div>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 1.3, duration: 0.6 }}
-              className="flex flex-wrap items-center gap-x-8 gap-y-3 pt-6 border-t border-white/10 text-[10px] md:text-xs font-mono uppercase tracking-[0.25em] text-white/60"
-            >
-              <span className="flex items-center gap-2 text-white">
-                <span className="relative flex w-2 h-2">
-                  <span className="absolute inset-0 rounded-full bg-green-400 animate-ping opacity-60" />
-                  <span className="relative w-2 h-2 rounded-full bg-green-400" />
-                </span>
-                Available — Q2 2026
-              </span>
-              <span>50+ Projects</span>
-              <span>US · EU · Africa</span>
-              <span className="hidden md:inline">Design + Development</span>
-              <Link
-                href="#story"
-                className="ml-auto flex items-center gap-2 text-white hover:text-[#A3D1FF] transition-colors group"
-              >
-                Read the story
-                <ArrowUpRight className="w-3 h-3 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-              </Link>
-            </motion.div>
-
-            {/* Scroll indicator */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 1.6, duration: 0.8 }}
-              className="flex items-center gap-3 mt-6 text-white/40"
-            >
-              <span className="text-[10px] font-mono uppercase tracking-[0.3em]">
-                Scroll
-              </span>
-              <div className="relative w-20 h-[2px] bg-white/10 overflow-hidden">
-                <motion.div
-                  className="absolute inset-y-0 left-0 w-8 bg-white/60"
-                  animate={{ x: [0, 48, 0] }}
-                  transition={{ duration: 2.4, repeat: Infinity, ease: 'easeInOut' }}
-                />
-              </div>
-            </motion.div>
-          </div>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.3 }}
+            className="text-xl md:text-2xl text-white/70 max-w-2xl leading-snug"
+          >
+            A designer and developer who builds websites that bring in
+            customers — not just compliments.
+          </motion.p>
         </div>
       </section>
 

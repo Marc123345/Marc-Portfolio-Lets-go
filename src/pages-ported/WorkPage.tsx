@@ -305,7 +305,7 @@ export default function WorkPage() {
       />
 
       {/* ===================== MASTHEAD ===================== */}
-      <section className="relative min-h-[90vh] bg-black overflow-hidden pt-28 pb-16 px-6 lg:px-12">
+      <section className="relative bg-black overflow-hidden pt-28 pb-12 px-6 lg:px-12 border-b border-white/10">
         <div
           className="absolute inset-0 opacity-[0.06] mix-blend-overlay pointer-events-none"
           style={{
@@ -346,7 +346,7 @@ export default function WorkPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.3 }}
-            className="text-xl md:text-2xl text-white/70 max-w-2xl leading-snug mb-12"
+            className="text-xl md:text-2xl text-white/70 max-w-2xl leading-snug"
           >
             No templates. No WordPress. No shortcuts. Every case file below — click a
             face, read the file, drag the cube.
