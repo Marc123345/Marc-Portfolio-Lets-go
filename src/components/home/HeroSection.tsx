@@ -42,7 +42,10 @@ export default function HeroSection() {
                 fontWeight: 500,
                 fontSize: 'clamp(4rem, 18vw, 230px)',
                 color: '#070707',
-                letterSpacing: '-0.01em',
+                letterSpacing: '-0.025em',
+                fontFeatureSettings: '"kern" 1, "liga" 1, "calt" 1',
+                fontKerning: 'normal',
+                textWrap: 'balance',
               }}
             >
               Marc Friedman
