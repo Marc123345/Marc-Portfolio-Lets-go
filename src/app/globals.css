@@ -1,6 +1,4 @@
-/* Marc Friedman Design Agency - Typography System */
-/* Font Imports */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+/* Marc Friedman Design Agency - Typography System (Nino-style: Oswald + Poppins) */
 
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
@@ -8,10 +6,10 @@
 @theme {
   --breakpoint-xs: 475px;
 
-  --font-body: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-heading: Georgia, 'Times New Roman', serif;
-  --font-inter: 'Inter', sans-serif;
-  --font-impact: Georgia, 'Times New Roman', serif;
+  --font-body: var(--font-poppins), 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-heading: var(--font-oswald), 'Oswald', sans-serif;
+  --font-inter: var(--font-poppins), 'Poppins', sans-serif;
+  --font-impact: var(--font-oswald), 'Oswald', sans-serif;
 
   --color-primary: #A3D1FF;
   --color-dark: #1b1b1b;
@@ -30,11 +28,11 @@
 
 @layer base {
   :root {
-    /* Font Families */
-    --font-body: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-    --font-heading: Georgia, 'Times New Roman', serif;
-    --font-primary: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-    --font-display: Georgia, 'Times New Roman', serif;
+    /* Font Families (Nino-style: Oswald headings, Poppins body) */
+    --font-body: var(--font-poppins), 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-heading: var(--font-oswald), 'Oswald', sans-serif;
+    --font-primary: var(--font-poppins), 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-display: var(--font-oswald), 'Oswald', sans-serif;
 
     /* Font Sizes (Fluid Typography) */
     --text-size-80: clamp(0.694rem, 0.5vw + 0.5rem, 0.833rem);
@@ -514,7 +512,7 @@
   .mr_btn {
     @apply relative inline-flex items-center justify-center gap-2 transition-colors focus:outline-none focus:ring-1 focus:ring-[#A3D1FF]/50 focus:ring-offset-2 focus:ring-offset-black overflow-hidden;
     padding: 0.85rem 1.5rem;
-    font-family: 'Inter', sans-serif;
+    font-family: var(--font-poppins), 'Poppins', sans-serif;
     font-size: 0.8125rem;
     font-weight: 500;
     letter-spacing: 0.15em;
