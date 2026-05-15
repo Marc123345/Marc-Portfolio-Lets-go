@@ -1121,10 +1121,14 @@
    This block fires for every viewport <=768px, regardless of
    prefers-reduced-motion. */
 @media (max-width: 768px) {
+  /* Kill heavy continuous keyframe animations on mobile (marquees,
+     orb pulses, ambient floats) — but DO NOT touch transitions.
+     Transitions provide interaction feedback (button taps, color
+     changes, drawer slides) and removing them makes the UI feel
+     dead. */
   *, ::before, ::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
   }
   .tech-scroll,
   .svc-marquee,
