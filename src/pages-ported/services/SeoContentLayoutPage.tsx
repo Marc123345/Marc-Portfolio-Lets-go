@@ -32,18 +32,7 @@ export default function SeoContentLayoutPage() {
         imageSrc="https://ik.imagekit.io/qcvroy8xpd/uoq5Ztg.jpeg"
       />
 
-      <ServiceMarquee
-        phrases={[
-          'On-page SEO',
-          'Content Architecture',
-          'Schema.org',
-          'Core Web Vitals',
-          'Conversion-Focused',
-          'Topical Authority',
-        ]}
-      />
-
-      <EditorialSection
+<EditorialSection
         chapter="01"
         label="Who it's for"
         title="If your traffic"

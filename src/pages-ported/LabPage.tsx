@@ -113,19 +113,7 @@ export default function LabPage() {
         </div>
       </section>
 
-      <ServiceMarquee
-        phrases={[
-          'CSS 3D',
-          'transform: preserve-3d',
-          'requestAnimationFrame',
-          'Lerp Interpolation',
-          'Zero Dependencies',
-          'No WebGL',
-          'Built in an afternoon',
-        ]}
-      />
-
-      {/* ===================== CHAPTER 01 — WHY ===================== */}
+{/* ===================== CHAPTER 01 — WHY ===================== */}
       <EditorialSection
         chapter="01"
         label="The Why"

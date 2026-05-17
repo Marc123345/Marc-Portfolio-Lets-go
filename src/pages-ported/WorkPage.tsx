@@ -344,19 +344,7 @@ export default function WorkPage() {
         </div>
       </section>
 
-      <ServiceMarquee
-        phrases={[
-          'React · Next.js',
-          'Hand-coded',
-          'Conversion-First',
-          'Design Systems',
-          'AI · Security',
-          'Three continents',
-          'Available Q2 2026',
-        ]}
-      />
-
-      {/* ===================== CUBE SHOWCASE (PAGINATED · ALL 14) ===================== */}
+{/* ===================== CUBE SHOWCASE (PAGINATED · ALL 14) ===================== */}
       <section className="relative py-24 md:py-28 px-6 lg:px-12 bg-black border-t border-white/10 overflow-hidden">
         <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[900px] h-[600px] bg-[#A3D1FF]/8 rounded-full blur-[140px] pointer-events-none" />
 

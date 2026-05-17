@@ -31,18 +31,7 @@ export default function AIIntegrationPage() {
         imageSrc="https://ik.imagekit.io/qcvroy8xpd/uoq5Ztg.jpeg"
       />
 
-      <ServiceMarquee
-        phrases={[
-          'LLMs · RAG · Agents',
-          'Workflow Automation',
-          'Production-Ready',
-          'Anthropic · OpenAI',
-          'Evaluated + Guardrailed',
-          'Measurable Outcomes',
-        ]}
-      />
-
-      <EditorialSection
+<EditorialSection
         chapter="01"
         label="Who it's for"
         title="If you&apos;ve been told"

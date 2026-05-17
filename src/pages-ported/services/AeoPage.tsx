@@ -32,11 +32,7 @@ export default function AeoPage() {
         imageSrc="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=2000&q=80"
       />
 
-      <ServiceMarquee
-        phrases={['ChatGPT', 'Perplexity', 'Claude', 'Google AI', 'Schema.org', 'Structured Data', 'Citation-Ready']}
-      />
-
-      <EditorialSection
+<EditorialSection
         chapter="01"
         label="Who it's for"
         title="If AI engines"

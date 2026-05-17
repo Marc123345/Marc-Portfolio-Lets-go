@@ -32,19 +32,7 @@ export default function LocalSeoPage() {
         imageSrc="https://images.unsplash.com/photo-1562577309-4932fdd64cd1?auto=format&fit=crop&w=2000&q=80"
       />
 
-      <ServiceMarquee
-        phrases={[
-          'Google Business Profile',
-          'Local 3-Pack',
-          'Map Rankings',
-          'NAP Consistency',
-          'Review Strategy',
-          'Service Area Pages',
-          'Schema · LocalBusiness',
-        ]}
-      />
-
-      <EditorialSection
+<EditorialSection
         chapter="01"
         label="Who it's for"
         title="If you serve"

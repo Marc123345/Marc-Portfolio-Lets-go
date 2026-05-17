@@ -31,19 +31,7 @@ export default function WebDevelopmentPage() {
         imageSrc="https://ik.imagekit.io/qcvroy8xpd/uoq5Ztg.jpeg"
       />
 
-      <ServiceMarquee
-        phrases={[
-          'Hand-coded',
-          'No Templates',
-          'Sub-2s Loads',
-          'SEO-Native',
-          'React · Next.js',
-          'Conversion-First',
-          'One Point of Contact',
-        ]}
-      />
-
-      {/* Chapter 01 — Who it's for */}
+{/* Chapter 01 — Who it's for */}
       <EditorialSection
         chapter="01"
         label="Who it's for"

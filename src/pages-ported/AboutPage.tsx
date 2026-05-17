@@ -265,42 +265,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ===================== KINETIC MARQUEE STRIP ===================== */}
-      <section className="relative bg-black border-y border-white/10 overflow-hidden">
-        <div className="about-marquee py-6 md:py-8">
-          {[...Array(2)].map((_, dup) => (
-            <div key={dup} className="flex items-center gap-10 md:gap-16 pr-10 md:pr-16">
-              {[
-                'Full-Stack',
-                'Design Systems',
-                'React · Next.js',
-                'Conversion-First',
-                'Hand-coded',
-                'No Templates',
-                'Available Q2 2026',
-                'Based Globally',
-                'Shipped 50+',
-              ].map((phrase, i) => (
-                <span key={i} className="flex items-center gap-10 md:gap-16 shrink-0">
-                  <span
-                    className="text-white/80 leading-none whitespace-nowrap"
-                    style={{
-                      fontFamily: SERIF,
-                      fontSize: 'clamp(1.75rem, 4vw, 3rem)',
-                      fontWeight: 500,
-                      fontStyle: i % 2 === 0 ? 'italic' : 'normal',
-                    }}
-                  >
-                    {phrase}
-                  </span>
-                  <span className="text-[#A3D1FF] text-3xl md:text-5xl">✦</span>
-                </span>
-              ))}
-            </div>
-          ))}
-        </div>
-      </section>
-
       {/* ===================== CHAPTER 01 — THE STORY ===================== */}
       <section id="story" className="relative bg-black py-24 md:py-32 px-6 lg:px-12 border-t border-white/10">
         <div className="max-w-7xl mx-auto">

@@ -31,18 +31,7 @@ export default function CybersecurityPage() {
         imageSrc="https://ik.imagekit.io/qcvroy8xpd/TTV8Liw.jpg"
       />
 
-      <ServiceMarquee
-        phrases={[
-          'OWASP Top 10',
-          'Zero-Trust',
-          'SOC Dashboards',
-          'Compliance-Ready',
-          'Pen-test Friendly',
-          'Secure Auth',
-        ]}
-      />
-
-      <EditorialSection
+<EditorialSection
         chapter="01"
         label="Who it's for"
         title="If security"

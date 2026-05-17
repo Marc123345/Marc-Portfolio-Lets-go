@@ -32,19 +32,7 @@ export default function MaintenanceHostingPage() {
         imageSrc="https://ik.imagekit.io/qcvroy8xpd/TTV8Liw.jpg"
       />
 
-      <ServiceMarquee
-        phrases={[
-          'Cloudflare Hosting',
-          'Same-day Fixes',
-          'Performance Monitoring',
-          'Security Patches',
-          'Backups',
-          'CMS Care',
-          'One Developer',
-        ]}
-      />
-
-      <EditorialSection
+<EditorialSection
         chapter="01"
         label="Who it's for"
         title="When your site"

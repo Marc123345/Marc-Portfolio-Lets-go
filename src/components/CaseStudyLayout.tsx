@@ -278,9 +278,7 @@ export default function CaseStudyLayout({ config }: { config: CaseStudyConfig })
         liveUrl={liveUrl}
       />
 
-      <ServiceMarquee phrases={marquee} />
-
-      {/* ============== CHAPTER 01 — THE CHALLENGE ============== */}
+{/* ============== CHAPTER 01 — THE CHALLENGE ============== */}
       <section className="relative py-24 md:py-32 px-6 lg:px-12 bg-black border-t border-white/10">
         <div className="max-w-7xl mx-auto">
           <ChapterMarker number="01" label="The Challenge" />

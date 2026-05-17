@@ -348,19 +348,7 @@ export default function SentinelDSPage() {
     <>
       <Masthead />
 
-      <ServiceMarquee
-        phrases={[
-          'React',
-          'CSS Variables',
-          'Dual Themes',
-          'Severity Scale',
-          'AA Accessibility',
-          'Open Source',
-          'Drop-in DS',
-        ]}
-      />
-
-      {/* Mobile-only system card (since hero shows it inline on desktop) */}
+{/* Mobile-only system card (since hero shows it inline on desktop) */}
       <section className="lg:hidden bg-black px-6 py-12 border-t border-white/10">
         <SentinelSystemCard />
       </section>

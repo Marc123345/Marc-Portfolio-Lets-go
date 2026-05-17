@@ -31,19 +31,7 @@ export default function StartupMVPPage() {
         imageSrc="https://ik.imagekit.io/qcvroy8xpd/TTV8Liw.jpg"
       />
 
-      <ServiceMarquee
-        phrases={[
-          'Founder-built',
-          'Investor-ready',
-          '30-Day Launches',
-          'Scalable Stack',
-          'Lean UX',
-          'Design + Dev in One',
-          'Ships Fast',
-        ]}
-      />
-
-      <EditorialSection
+<EditorialSection
         chapter="01"
         label="Who it's for"
         title="If you need"

@@ -166,19 +166,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <ServiceMarquee
-        phrases={[
-          'React · Next.js',
-          'Design Systems',
-          'AI · Security',
-          'Startup MVP',
-          'Retainer · Care',
-          'Multi-brand',
-          'Hand-coded',
-        ]}
-      />
-
-      {/* ===================== TECH STACK ===================== */}
+{/* ===================== TECH STACK ===================== */}
       <div className="relative bg-black border-t border-white/10 py-6">
         <div className="flex items-center justify-center gap-3 mb-1">
           <span className="h-[1px] w-8 bg-white/10" />

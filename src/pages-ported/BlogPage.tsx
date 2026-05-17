@@ -377,18 +377,7 @@ export default function BlogPage() {
         </div>
       </section>
 
-      <ServiceMarquee
-        phrases={[
-          'Design · Systems',
-          'AI · GEO · AEO',
-          'SEO · Performance',
-          'UX Writing',
-          'Product Craft',
-          'Written while shipping',
-        ]}
-      />
-
-      {/* ===================== FILTER BAR ===================== */}
+{/* ===================== FILTER BAR ===================== */}
       <section className="sticky top-0 z-30 bg-black/90 backdrop-blur-md border-y border-white/10 py-4 px-6 lg:px-12">
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center gap-2 overflow-x-auto whitespace-nowrap scrollbar-hide">

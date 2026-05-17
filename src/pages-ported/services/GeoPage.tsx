@@ -31,11 +31,7 @@ export default function GeoPage() {
         imageSrc="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=2000&q=80"
       />
 
-      <ServiceMarquee
-        phrases={['ChatGPT', 'Gemini', 'Claude', 'Perplexity', 'AI Overviews', 'LLM-first', 'Brand-as-Entity']}
-      />
-
-      <EditorialSection
+<EditorialSection
         chapter="01"
         label="Who it's for"
         title="If your brand"

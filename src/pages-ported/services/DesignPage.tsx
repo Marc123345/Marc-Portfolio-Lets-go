@@ -31,19 +31,7 @@ export default function DesignPage() {
         imageSrc="https://ik.imagekit.io/qcvroy8xpd/TTV8Liw.jpg"
       />
 
-      <ServiceMarquee
-        phrases={[
-          'UI · UX',
-          'Wireframes · Prototypes',
-          'User Research',
-          'Conversion-First',
-          'Design Systems',
-          'Figma → Code',
-          'Accessibility AA',
-        ]}
-      />
-
-      <EditorialSection
+<EditorialSection
         chapter="01"
         label="Who it's for"
         title="If users"
