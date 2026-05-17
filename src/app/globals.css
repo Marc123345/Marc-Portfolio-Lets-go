@@ -1,38 +1,104 @@
-/* Marc Friedman Design Agency - Typography System (Nino-style: Oswald + Poppins) */
+/*
+ * ─────────────────────────────────────────────────────────────────────────────
+ * MARC FRIEDMAN DESIGN SYSTEM
+ * Single source of truth for design tokens. All values flow from @theme below.
+ *
+ * Categories:
+ *   COLOR     — semantic surfaces + accent + legacy primitives
+ *   TYPOGRAPHY — font families, fluid sizes, line-heights, tracking
+ *   SPACING   — 4/12/32 rhythm tokens (within-label / within-group / between-groups)
+ *   RADIUS    — border-radius scale
+ *   SHADOW    — content shadows + accent glows
+ *   ANIMATION — named keyframes + breakpoints
+ *
+ * Usage:
+ *   Tailwind utility ........ <div class="bg-surface text-ink">
+ *   Raw CSS ................. background: var(--color-surface);
+ *
+ * Add new values to @theme — never inline hex codes in components.
+ * ─────────────────────────────────────────────────────────────────────────────
+ */
 
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
 @theme {
+  /* ── BREAKPOINTS ─────────────────────────────────────────────────── */
   --breakpoint-xs: 475px;
 
-  --font-body: var(--font-poppins), 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-heading: var(--font-oswald), 'Oswald', sans-serif;
-  --font-inter: var(--font-poppins), 'Poppins', sans-serif;
-  --font-impact: var(--font-oswald), 'Oswald', sans-serif;
+  /* ── COLOR · SEMANTIC SURFACES ───────────────────────────────────── */
+  --color-ink: #FCFCFB;                          /* primary text / on-dark fg */
+  --color-ink-muted: rgba(255, 255, 255, 0.70);  /* secondary text */
+  --color-ink-soft:  rgba(255, 255, 255, 0.50);  /* tertiary text */
+  --color-paper: #000000;                        /* page background */
+  --color-surface: #0a0a0a;                      /* section background */
+  --color-surface-elevated: #111418;             /* card background */
+  --color-surface-hover: #14181d;                /* card hover background */
+  --color-border: rgba(255, 255, 255, 0.10);
+  --color-border-strong: rgba(255, 255, 255, 0.20);
 
-  --color-primary: #A3D1FF;
+  /* ── COLOR · ACCENT ──────────────────────────────────────────────── */
+  --color-accent: #A3D1FF;                       /* canonical brand accent */
+  --color-accent-hover: #92bce6;
+  --color-accent-soft: rgba(163, 209, 255, 0.10);
+
+  /* ── COLOR · LEGACY ALIASES (kept so components don't break) ─────── */
+  --color-primary: var(--color-accent);
+  --color-primary-transparent: var(--color-accent-soft);
   --color-dark: #1b1b1b;
   --color-dark-lighter: #212529;
   --color-gray-custom: #9CA3AF;
-  --color-primary-transparent: #A3D1FF1A;
 
+  /* ── TYPOGRAPHY · FONT FAMILIES ──────────────────────────────────── */
+  --font-heading: var(--font-oswald), 'Oswald', sans-serif;
+  --font-body: var(--font-poppins), 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: ui-monospace, 'SF Mono', Menlo, Monaco, Consolas, monospace;
+
+  /* Legacy aliases (Inter / Impact / etc. — same values, kept for back-compat) */
+  --font-inter: var(--font-body);
+  --font-impact: var(--font-heading);
+
+  /* ── SPACING · 4 / 12 / 32 RHYTHM TOKENS ─────────────────────────── */
+  /* These mirror the rule: between-groups > within-groups > within-label.
+     Use them in CSS (var(--space-loose)) or via Tailwind utilities
+     (mb-1, mb-3, mb-8 — same numeric values). */
+  --space-tight: 0.25rem;   /* 4px  — within-label (name → role, list ticks) */
+  --space-snug: 0.75rem;    /* 12px — within-group (title → blurb, inline pairs) */
+  --space-loose: 2rem;      /* 32px — between-groups (section → footer, card padding) */
+
+  /* ── RADIUS ──────────────────────────────────────────────────────── */
+  --radius-none: 0;
+  --radius-sm: 2px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+
+  /* ── SHADOW · CONTENT ────────────────────────────────────────────── */
+  --shadow-card: 0 1px 3px rgba(0,0,0,0.35), 0 10px 30px rgba(0,0,0,0.30);
+  --shadow-elevated: 0 30px 80px -20px rgba(0,0,0,0.60);
+
+  /* ── SHADOW · ACCENT GLOW (legacy, kept for utility components) ──── */
+  --shadow-glow-sm: 0 0 15px -3px rgba(163, 209, 255, 0.10);
+  --shadow-glow:    0 0 25px -5px rgba(163, 209, 255, 0.10);
+  --shadow-glow-lg: 0 0 35px -7px rgba(163, 209, 255, 0.10);
+
+  /* ── ANIMATION ───────────────────────────────────────────────────── */
   --animate-pulse-glow: pulse-glow 2s ease-in-out infinite;
-
-  --shadow-glow-sm: 0 0 15px -3px rgba(163, 209, 255, 0.1);
-  --shadow-glow: 0 0 25px -5px rgba(163, 209, 255, 0.1);
-  --shadow-glow-lg: 0 0 35px -7px rgba(163, 209, 255, 0.1);
 
   --backdrop-blur-xs: 2px;
 }
 
 @layer base {
   :root {
-    /* Font Families (Nino-style: Oswald headings, Poppins body) */
-    --font-body: var(--font-poppins), 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-    --font-heading: var(--font-oswald), 'Oswald', sans-serif;
-    --font-primary: var(--font-poppins), 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-    --font-display: var(--font-oswald), 'Oswald', sans-serif;
+    /* Mirrors of @theme tokens for use in raw <style> tags and inline JS.
+       (Tailwind v4 already exposes the @theme values as CSS vars, so most
+       usage goes through there; the few values below are extras Tailwind
+       doesn't need its own utility for — fluid-typography clamps, line-
+       height + letter-spacing presets, legacy color names.) */
+
+    /* Font family aliases — internal naming used across the codebase. */
+    --font-primary: var(--font-body);
+    --font-display: var(--font-heading);
 
     /* Font Sizes (Fluid Typography) */
     --text-size-80: clamp(0.694rem, 0.5vw + 0.5rem, 0.833rem);
@@ -66,18 +132,18 @@
     --letter-spacing-wider: 0.04em;
     --letter-spacing-widest: 0.1em;
 
-    /* Color Palette */
-    --color-text-primary: #FCFCFB;
-    --color-text-secondary: #FFFFFF;
+    /* Legacy color names → point at canonical @theme tokens above.
+       Existing components keep working; new code should prefer the
+       semantic names (ink / paper / surface / accent). */
+    --color-text-primary: var(--color-ink);
+    --color-text-secondary: var(--color-ink);
     --color-muted: #6b6b6b;
-    --color-bg: #000000;
-    --color-primary: #A3D1FF;
-    --color-primary-hover: #92bce6;
-    --color-black: #000000;
-    --color-dark: #1b1b1b;
+    --color-bg: var(--color-paper);
+    --color-primary-hover: var(--color-accent-hover);
+    --color-black: var(--color-paper);
     --color-medium: #2d3035;
-    --color-light-gray: #FFFFFF;
-    --color-white: #FCFCFB;
+    --color-light-gray: var(--color-ink);
+    --color-white: var(--color-ink);
   }
 
   html {
