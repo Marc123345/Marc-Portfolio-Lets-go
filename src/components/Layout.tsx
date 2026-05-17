@@ -6,7 +6,6 @@ import { useAppStore } from '@/stores/useAppStore';
 import { motion, AnimatePresence } from 'framer-motion';
 import ConsentBanner from '@/components/ConsentBanner';
 import ConstellationMenu from '@/components/ConstellationMenu';
-import TechStackStrip from '@/components/TechStackStrip';
 import { CALENDLY_LINK } from '@/lib/constants';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
@@ -412,14 +411,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 <li><a href="mailto:marcf@marcfriedmanwebdesign.com" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Email Us</a></li>
               </ul>
             </div>
-          </div>
-
-          {/* Tech stack strip */}
-          <div className="mt-8 pt-8 border-t border-white/10">
-            <p className="text-[10px] font-mono uppercase tracking-[0.3em] text-white/30 mb-1 text-center">
-              Built with
-            </p>
-            <TechStackStrip />
           </div>
 
           {/* Bottom bar */}
