@@ -20,7 +20,8 @@ function AuditForm() {
   }, []);
 
   return (
-    <div style={{ position: 'relative', minHeight: '480px' }}>
+    /* Mobile-first iframe sizing — see ContactForm for rationale. */
+    <div className="relative min-h-[820px] md:min-h-[480px]">
       {!loaded && (
         <div className="absolute inset-0 flex flex-col items-center justify-center gap-4"
           style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.08)' }}>
@@ -35,10 +36,11 @@ function AuditForm() {
         id="JotFormIFrame-261294575681063"
         title="Free Website Audit Request"
         onLoad={() => setLoaded(true)}
+        loading="lazy"
         allow="geolocation; microphone; camera; fullscreen; payment"
         src="https://form.jotform.com/261294575681063"
+        className="w-full block border-0 h-[820px] md:h-[480px]"
         style={{
-          minWidth: '100%', maxWidth: '100%', height: '480px', border: 'none',
           opacity: loaded ? 1 : 0,
           transition: 'opacity 0.3s ease',
         }}

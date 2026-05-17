@@ -63,7 +63,12 @@ export default function ContactForm() {
   };
 
   return (
-    <div style={{ position: 'relative', minHeight: '539px' }}>
+    /* Mobile fields stack vertically — needs ~900px to fit before
+       Jotform's auto-resize handler shrinks the iframe to the
+       reported content height. Desktop fits in ~540px. Using
+       responsive min-height + responsive iframe height prevents
+       the brief clipping flash on slow mobile networks. */
+    <div className="relative min-h-[900px] md:min-h-[540px]">
       {!loaded && (
         <div className="absolute inset-0 flex flex-col items-center justify-center gap-4"
           style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.08)' }}>
@@ -78,10 +83,11 @@ export default function ContactForm() {
         id="JotFormIFrame-261231977107053"
         title="Contact Inquiry Form for Web Design & Development"
         onLoad={handleLoad}
+        loading="lazy"
         allow="geolocation; microphone; camera; fullscreen; payment"
         src="https://form.jotform.com/261231977107053"
+        className="w-full block border-0 h-[900px] md:h-[540px]"
         style={{
-          minWidth: '100%', maxWidth: '100%', height: '539px', border: 'none',
           opacity: loaded ? 1 : 0,
           transition: 'opacity 0.3s ease',
         }}
