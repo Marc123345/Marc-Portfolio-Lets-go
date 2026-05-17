@@ -4,7 +4,6 @@ import React, { useMemo } from 'react';
 import { Quote, Star, Linkedin, User, ArrowUpRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import TechStackStrip from '@/components/TechStackStrip';
 
 const SERIF = "var(--font-heading)";
 
@@ -400,31 +399,8 @@ export default function TrustedBy() {
         </div>
       </div>
 
-      {/* Tech Stack Strip */}
-      <div className="relative w-full mb-8 border-t border-b border-white/5 bg-white/[0.02]">
-        <div className="flex items-center justify-center gap-3 pt-3 pb-1">
-          <span className="h-[1px] w-8 bg-white/10" />
-          <span className="text-[9px] font-mono uppercase tracking-[0.35em] text-white/30">
-            Tools &amp; Stack
-          </span>
-          <span className="h-[1px] w-8 bg-white/10" />
-        </div>
-        <TechStackStrip />
-      </div>
-
       {/* Section Heading */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-        {/* Chapter marker */}
-        <div className="flex items-center gap-3 mb-8">
-          <span className="text-white/50 text-xs font-mono tracking-[0.3em] uppercase">
-            Chapter · Proof
-          </span>
-          <span className="h-[1px] flex-1 bg-white/15 max-w-[60px]" />
-          <span className="text-white/50 text-xs font-mono tracking-[0.3em] uppercase">
-            Testimonials · 25 verified
-          </span>
-        </div>
-
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
