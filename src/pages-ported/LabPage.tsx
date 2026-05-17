@@ -17,7 +17,7 @@ export default function LabPage() {
   return (
     <>
       {/* ===================== MASTHEAD ===================== */}
-      <section className="relative min-h-screen bg-black overflow-hidden pt-28 pb-16 px-6 lg:px-12">
+      <section className="relative min-h-[100svh] bg-black overflow-hidden pt-28 pb-16 px-6 lg:px-12">
         <div
           className="absolute inset-0 opacity-[0.06] mix-blend-overlay pointer-events-none"
           style={{

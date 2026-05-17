@@ -82,7 +82,7 @@ function CaseMasthead({
   const scale = useTransform(scrollYProgress, [0, 1], [1, 1.15]);
 
   return (
-    <section ref={ref} className="relative min-h-screen bg-black overflow-hidden">
+    <section ref={ref} className="relative min-h-[100svh] bg-black overflow-hidden">
       <motion.div className="absolute inset-0 z-0" style={{ y, opacity, scale }}>
         <motion.div
           initial={{ scale: 1.25, opacity: 0 }}
@@ -125,7 +125,7 @@ function CaseMasthead({
         )}
       </div>
 
-      <div className="container-custom relative z-20 min-h-screen flex flex-col justify-between pt-32 pb-10">
+      <div className="container-custom relative z-20 min-h-[100svh] flex flex-col justify-between pt-32 pb-10">
         <motion.div
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}

@@ -24,8 +24,7 @@ export default function HeroSection() {
   return (
     <section
       id="home"
-      className="relative w-full overflow-hidden bg-[#0a0a0a]"
-      style={{ paddingTop: '140px', paddingBottom: '80px' }}
+      className="relative w-full overflow-hidden bg-[#0a0a0a] pt-24 pb-12 md:pt-[140px] md:pb-20"
     >
       {/* Soft accent glow — matches other sections */}
       <div

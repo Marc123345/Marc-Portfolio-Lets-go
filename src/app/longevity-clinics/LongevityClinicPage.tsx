@@ -158,7 +158,7 @@ function HeroSection() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex flex-col overflow-hidden"
+      className="relative min-h-[100svh] flex flex-col overflow-hidden"
       style={{ backgroundColor: '#0A0A0A' }}
     >
       {/* Background image */}

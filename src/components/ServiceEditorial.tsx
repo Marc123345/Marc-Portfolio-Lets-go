@@ -122,7 +122,7 @@ export function ServiceMasthead({
   const scale = useTransform(scrollYProgress, [0, 1], [1, 1.15]);
 
   return (
-    <section ref={ref} className="relative min-h-screen bg-black overflow-hidden">
+    <section ref={ref} className="relative min-h-[100svh] bg-black overflow-hidden">
       {imageSrc && (
         <motion.div
           className="absolute inset-0 z-0"
@@ -173,7 +173,7 @@ export function ServiceMasthead({
         )}
       </div>
 
-      <div className="container-custom relative z-20 min-h-screen flex flex-col justify-between pt-32 pb-10">
+      <div className="container-custom relative z-20 min-h-[100svh] flex flex-col justify-between pt-32 pb-10">
         {/* Top ribbon */}
         <motion.div
           initial={{ opacity: 0, y: -10 }}
