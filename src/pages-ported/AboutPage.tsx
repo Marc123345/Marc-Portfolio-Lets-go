@@ -658,14 +658,17 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto">
           <ChapterMarker number="05" label="Off the Clock" />
 
-          <div className="grid md:grid-cols-[1fr_1fr] gap-12 md:gap-20 items-start">
+          <div className="grid md:grid-cols-[1fr_1fr] gap-8 md:gap-12 items-center">
+            {/* Left — heading + copy + structured 'where you'll find me' list.
+               The list adds vertical weight so the text column rises to meet
+               the portrait's height — both end at roughly the same baseline. */}
             <div>
               <motion.h2
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-80px' }}
                 transition={{ duration: 0.8 }}
-                className="text-white leading-[1.0] tracking-[-0.03em] mb-10"
+                className="text-white leading-[1.0] tracking-[-0.03em] mb-8"
                 style={{
                   fontFamily: SERIF,
                   fontSize: 'clamp(2.25rem, 5vw, 4.5rem)',
@@ -674,7 +677,7 @@ export default function AboutPage() {
               >
                 Beyond the screen.
               </motion.h2>
-              <div className="space-y-6 text-lg md:text-xl text-white/80 leading-relaxed">
+              <div className="space-y-3 text-lg md:text-xl text-white/80 leading-relaxed mb-8">
                 <p>
                   When I&apos;m not shipping websites, I&apos;m usually hiking
                   somewhere in the{' '}
@@ -690,6 +693,27 @@ export default function AboutPage() {
                   actually use.
                 </p>
               </div>
+
+              {/* Anchor list — fills the text column so it matches the
+                  portrait's height. Mono-uppercase reads as 'spec' under
+                  prose, doesn't compete with the headline. */}
+              <ul className="border-t border-white/10 divide-y divide-white/10">
+                {[
+                  { k: 'Trails', v: 'Upper Galilee · weekly' },
+                  { k: 'Coffee', v: 'Cafelix · Streetwise · Aroma roaster hunt' },
+                  { k: 'Mentoring', v: '20+ junior designers, 1:1' },
+                  { k: 'Open Source', v: 'Contributing to tools devs actually use' },
+                ].map((row) => (
+                  <li key={row.k} className="flex items-baseline gap-8 py-3">
+                    <span className="w-28 shrink-0 text-[10px] font-mono uppercase tracking-[0.2em] text-[#A3D1FF]">
+                      {row.k}
+                    </span>
+                    <span className="text-white/70 text-sm leading-snug">
+                      {row.v}
+                    </span>
+                  </li>
+                ))}
+              </ul>
             </div>
 
             <motion.div
@@ -697,13 +721,21 @@ export default function AboutPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7, delay: 0.1 }}
-              className="aspect-[3/4] overflow-hidden"
+              className="relative"
             >
-              <img
-                src="https://ik.imagekit.io/qcvroy8xpd/uoq5Ztg.jpeg"
-                alt="Marc at work"
-                className="w-full h-full object-cover"
-              />
+              <div className="aspect-[3/4] overflow-hidden">
+                <img
+                  src="https://ik.imagekit.io/qcvroy8xpd/uoq5Ztg.jpeg"
+                  alt="Marc at work"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              {/* Caption gives the photo column a finished, editorial bottom
+                  edge — mirrors the spec rows in the text column. */}
+              <div className="flex items-baseline justify-between mt-3 text-[10px] font-mono uppercase tracking-[0.25em] text-white/40">
+                <span>Off the clock · 2026</span>
+                <span>Tel Aviv</span>
+              </div>
             </motion.div>
           </div>
         </div>
