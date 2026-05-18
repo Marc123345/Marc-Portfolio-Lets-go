@@ -88,7 +88,7 @@ const featured: Project[] = [
     category: 'SaaS · Analytics',
     blurb:
       'Real-time dealer analytics platform. Dealerships saw 35% faster decisions and higher margins.',
-    image: 'https://i.imgur.com/PiKh199.png',
+    image: 'https://ik.imagekit.io/qcvroy8xpd/1732717492455.jpeg',
     caseStudyUrl: '/work/case-studies/automarginx',
     stats: [
       { value: '35%', label: 'Decisions' },

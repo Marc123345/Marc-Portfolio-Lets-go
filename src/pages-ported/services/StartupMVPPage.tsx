@@ -187,8 +187,7 @@ export default function StartupMVPPage() {
               href: '/work/case-studies/automarginx',
               title: 'AutoMarginX',
               blurb: 'Real-time dealer analytics MVP. Raised first round after launch.',
-              image:
-                'https://ik.imagekit.io/qcvroy8xpd/PW8VUKH.png?updatedAt=1759693058055&tr=f-webp',
+              image: 'https://ik.imagekit.io/qcvroy8xpd/1732717492455.jpeg',
               tags: ['MVP', 'Analytics'],
             },
           ]}

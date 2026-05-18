@@ -13,7 +13,7 @@ const config: CaseStudyConfig = {
       live dashboards. Dealerships saw 35% faster decisions and higher margins.
     </>
   ),
-  heroImage: 'https://i.imgur.com/PiKh199.png',
+  heroImage: 'https://ik.imagekit.io/qcvroy8xpd/1732717492455.jpeg',
   metaStats: [
     { value: '35%', label: 'Faster Decisions' },
     { value: 'Live', label: 'Telemetry' },
@@ -105,9 +105,17 @@ const config: CaseStudyConfig = {
 
   gallery: [
     {
-      image: 'https://i.imgur.com/PiKh199.png',
+      image: 'https://ik.imagekit.io/qcvroy8xpd/1732717492455.jpeg',
       caption: 'Dealer dashboard',
       wide: true,
+    },
+    {
+      image: 'https://ik.imagekit.io/qcvroy8xpd/1702831771840.jpeg',
+      caption: 'Analytics view',
+    },
+    {
+      image: 'https://ik.imagekit.io/qcvroy8xpd/1723363527294.jpeg',
+      caption: 'Decision flow',
     },
   ],
 

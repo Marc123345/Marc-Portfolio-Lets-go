@@ -33,7 +33,7 @@ const projectFaces = [
   { image: 'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%201%20-%201x1(1).png?updatedAt=1767539579782', title: 'Untapped Africa' },
   { image: 'https://ik.imagekit.io/qcvroy8xpd/image%201%20(5).png', title: 'H2H Marketing' },
   { image: 'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%204%20-%2016_9.png?updatedAt=1767539579010', title: 'Paving Leads' },
-  { image: 'https://i.imgur.com/PiKh199.png', title: 'AutoMarginX' },
+  { image: 'https://ik.imagekit.io/qcvroy8xpd/1732717492455.jpeg', title: 'AutoMarginX' },
   { image: 'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%201%20-%201x1(5).png?updatedAt=1767539579818', title: 'iLight Care' },
   { image: 'https://ik.imagekit.io/qcvroy8xpd/image%202%20(1).png', title: 'Ask Africa' },
   { image: 'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%201%20-%201x1(3).png?updatedAt=1767539579776', title: 'Friedman & Cohen' },
