@@ -12,28 +12,28 @@ import {
 const STEPS = [
   {
     op: "",
-    metric: "Year-1 organic visits / month",
+    metric: "Monthly visits, Year 1",
     value: "500",
-    basis: "vs 23 today · proven via #2 rankings",
+    basis: "vs 23 today · already ranking #2",
   },
   {
     op: "×",
-    metric: "RFQ conversion rate",
+    metric: "Quote-request rate",
     value: "2%",
-    basis: "Industrial B2B benchmark",
+    basis: "Industrial average",
   },
   {
     op: "=",
-    metric: "Monthly RFQs",
+    metric: "Monthly quote requests",
     value: "10",
-    basis: "From organic alone",
+    basis: "From search alone",
     accent: true,
   },
   {
     op: "×",
     metric: "Close rate",
     value: "15%",
-    basis: "Industrial warm-inbound average",
+    basis: "Industrial average",
   },
   {
     op: "=",
@@ -44,7 +44,7 @@ const STEPS = [
   },
   {
     op: "×",
-    metric: "Avg. customer value",
+    metric: "Average customer value",
     value: "$10,000",
     basis: "Conservative — industrial",
   },
@@ -58,10 +58,10 @@ export default function Slide16Roi() {
         color="rgba(163,209,255,0.18)"
       />
 
-      <Eyebrow number="ACT V · 16">Return · Why this makes commercial sense</Eyebrow>
+      <Eyebrow number="ACT V · 16">The math</Eyebrow>
       <SlideTitle>
-        Not vanity traffic.{" "}
-        <span className="text-[#A3D1FF]">Pipeline math.</span>
+        Real buyers.{" "}
+        <span className="text-[#A3D1FF]">Real numbers.</span>
       </SlideTitle>
 
       <div className="mt-10 grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
@@ -150,7 +150,7 @@ export default function Slide16Roi() {
                 fontWeight: 500,
               }}
             >
-              Net new revenue · Year 1
+New revenue · Year 1
             </span>
             <span
               className="col-span-2 text-right tabular-nums"
@@ -184,7 +184,7 @@ export default function Slide16Roi() {
               className="text-[10px] tracking-[0.3em] uppercase text-[#A3D1FF]"
               style={{ fontFamily: "var(--font-body)" }}
             >
-              ROI · Year 1 · Industrial baseline
+Year-1 return · industrial
             </div>
             <div
               className="mt-3 text-white leading-none"
@@ -202,7 +202,7 @@ export default function Slide16Roi() {
               className="mt-2 text-white/55 text-sm"
               style={{ fontFamily: "var(--font-body)" }}
             >
-              On $17,000 total · $5K build + $12K retainer
+On $17,000 total · $5K build + $12K monthly
             </div>
           </motion.div>
 
@@ -216,7 +216,7 @@ export default function Slide16Roi() {
               className="text-[10px] tracking-[0.3em] uppercase text-white/45"
               style={{ fontFamily: "var(--font-body)" }}
             >
-              If avg. customer · $25K (dental)
+If a dental customer = $25K
             </div>
             <div
               className="mt-3 text-white leading-none"
@@ -233,7 +233,7 @@ export default function Slide16Roi() {
               className="mt-2 text-white/45 text-sm"
               style={{ fontFamily: "var(--font-body)" }}
             >
-              ROI · realistic for dental accounts
+Year-1 return · dental
             </div>
           </motion.div>
 

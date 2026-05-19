@@ -11,39 +11,39 @@ import {
 
 const WAVES = [
   {
-    label: "Wave 01",
+    label: "Phase 01",
     range: "Weeks 1–8",
-    title: "Foundation",
+    title: "Build the site",
     items: [
       "Homepage redesign",
-      "About / proof positioning",
+      "About + trust pages",
       "Product page rebuilds",
       "QC page improvements",
-      "RFQ + sample flow",
+      "Quote + sample forms",
     ],
   },
   {
-    label: "Wave 02",
+    label: "Phase 02",
     range: "Weeks 9–14",
-    title: "Funnel content",
+    title: "Add growth content",
     items: [
-      "Application landing pages",
-      "Dental vertical pages",
+      "Use-case pages",
+      "Dental section pages",
       "Case studies",
       "Comparison articles",
-      "Resource hub",
+      "Resource library",
     ],
   },
   {
-    label: "Wave 03",
+    label: "Phase 03",
     range: "Month 4+",
-    title: "Growth & retention",
+    title: "Grow and retain",
     items: [
-      "Ongoing SEO / AEO",
-      "CRO refinement",
-      "Segmented email capture",
-      "Customer support expansion",
-      "Quarterly review cadence",
+      "Ongoing search work",
+      "Conversion testing",
+      "Email capture by audience",
+      "Better customer support",
+      "Quarterly reviews",
     ],
   },
 ];
@@ -53,9 +53,9 @@ export default function Slide14Roadmap() {
     <SlideShell>
       <Glow className="top-[10%] right-[10%] w-[500px] h-[500px]" />
 
-      <Eyebrow number="ACT III · 14">Solution · Execution Roadmap</Eyebrow>
+      <Eyebrow number="ACT III · 14">Project plan</Eyebrow>
       <SlideTitle>
-        Three waves. <span className="text-[#A3D1FF]">Compounding output.</span>
+        Three phases. <span className="text-[#A3D1FF]">Results that build.</span>
       </SlideTitle>
 
       <div className="mt-12 relative">

@@ -11,10 +11,10 @@ import {
 } from "./_primitives";
 
 const STEPS = [
-  { num: "01", title: "Where EID stands today", note: "Diagnosis" },
+  { num: "01", title: "Where EID stands today", note: "Where you are" },
   { num: "02", title: "Where the growth opportunity is", note: "Opportunity" },
   { num: "03", title: "What I would build", note: "Solution" },
-  { num: "04", title: "Investment & expected return", note: "Economics" },
+  { num: "04", title: "Investment & expected return", note: "The numbers" },
 ];
 
 export default function Slide02Framing() {
@@ -22,8 +22,8 @@ export default function Slide02Framing() {
     <SlideShell>
       <Glow className="top-[20%] right-[10%] w-[500px] h-[500px]" />
 
-      <Eyebrow number="02">Executive Framing</Eyebrow>
-      <SlideTitle>What this presentation will show</SlideTitle>
+      <Eyebrow number="02">Overview</Eyebrow>
+      <SlideTitle>What this deck covers</SlideTitle>
 
       <div className="mt-10 grid grid-cols-1 md:grid-cols-4 gap-0 border-t border-white/10 max-w-6xl">
         {STEPS.map((s, i) => (
@@ -72,9 +72,9 @@ export default function Slide02Framing() {
 
       <div className="mt-10">
         <SlideLede>
-          This isn’t a design critique. It’s a commercial strategy —
+          Not a design critique. A business plan —
           problem, opportunity, solution, investment, and return — built around
-          what your website already proves the market is asking for.
+          what your website already proves the market wants.
         </SlideLede>
       </div>
     </SlideShell>

@@ -14,7 +14,7 @@ export default function Slide07Opportunity() {
     <SlideShell>
       <Glow className="top-[10%] left-[20%] w-[600px] h-[600px]" color="rgba(163,209,255,0.16)" />
 
-      <Eyebrow number="ACT II · 07">Opportunity · Core Insight</Eyebrow>
+      <Eyebrow number="ACT II · 07">The opportunity</Eyebrow>
 
       <SlideTitle>
         Google already trusts EID.{" "}
@@ -27,18 +27,18 @@ export default function Slide07Opportunity() {
             {[
               {
                 num: "01",
-                t: "Existing rankings are proof of concept",
-                d: "A 2020-style Wix site ranks #2 for buyer-intent technical phrases. The model works.",
+                t: "Your rankings already prove it works",
+                d: "A 6-year-old Wix site ranks #2 for real buyer searches. The model works.",
               },
               {
                 num: "02",
-                t: "Authority is real — coverage is thin",
-                d: "Structured content can multiply current opportunities by 10–20×.",
+                t: "Google trusts you — there just aren’t enough pages",
+                d: "More pages can grow the opportunity 10–20×.",
               },
               {
                 num: "03",
-                t: "Market accepts EID as relevant",
-                d: "Technical sourcing queries are already surfacing EID — without help.",
+                t: "The market already knows you",
+                d: "Buyer searches find EID today — by accident.",
               },
             ].map((p, i) => (
               <motion.li
@@ -87,7 +87,7 @@ export default function Slide07Opportunity() {
             className="text-[10px] tracking-[0.3em] uppercase text-white/45 mb-6"
             style={{ fontFamily: "var(--font-body)" }}
           >
-            Multiplier potential
+Growth potential
           </div>
           <div className="relative w-full max-w-sm aspect-square flex items-center justify-center">
             {[1, 2, 3, 4].map((ring, i) => (
@@ -121,7 +121,7 @@ export default function Slide07Opportunity() {
                 className="mt-2 text-[10px] tracking-[0.3em] uppercase text-white/55"
                 style={{ fontFamily: "var(--font-body)" }}
               >
-                Discovery surface — Year 1
+More search visibility · Year 1
               </div>
             </div>
           </div>

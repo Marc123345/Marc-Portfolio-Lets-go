@@ -14,7 +14,7 @@ export default function Slide08DentalGap() {
     <SlideShell>
       <Glow className="bottom-[10%] right-[15%] w-[600px] h-[600px]" color="rgba(163,209,255,0.18)" />
 
-      <Eyebrow number="ACT II · 08">Opportunity · Biggest Gap</Eyebrow>
+      <Eyebrow number="ACT II · 08">The biggest gap</Eyebrow>
       <SlideTitle>
         Dental is the clearest{" "}
         <span className="text-[#A3D1FF]">growth opportunity.</span>
@@ -30,7 +30,7 @@ export default function Slide08DentalGap() {
             className="text-[10px] tracking-[0.3em] uppercase text-white/45 mb-6"
             style={{ fontFamily: "var(--font-body)" }}
           >
-            Current site coverage by audience
+Who the site speaks to today
           </div>
 
           <div className="space-y-8">
@@ -101,7 +101,7 @@ export default function Slide08DentalGap() {
                 className="mt-3 text-white/55 text-sm"
                 style={{ fontFamily: "var(--font-body)", lineHeight: 1.6 }}
               >
-                Half the stated target market is effectively unaddressed online.
+                Half your target market is invisible to you online.
               </p>
             </div>
           </div>
@@ -111,9 +111,9 @@ export default function Slide08DentalGap() {
         <motion.div variants={FADE_UP} className="lg:col-span-5 flex flex-col justify-between">
           <ul className="space-y-5 list-none p-0">
             {[
-              "EID states its audiences include industrial AND dental tool makers.",
+              "EID sells to industrial AND dental tool makers.",
               "Site is built almost entirely around the industrial side.",
-              "No dental landing experience. No dental content cluster. No dental proof journey.",
+              "No dental homepage. No dental section. No dental story.",
               "Zero dental pages exist today.",
             ].map((t) => (
               <motion.li
@@ -144,7 +144,7 @@ export default function Slide08DentalGap() {
               className="text-[10px] tracking-[0.3em] uppercase text-[#A3D1FF]"
               style={{ fontFamily: "var(--font-body)" }}
             >
-              The single biggest strategic gap
+The biggest gap in the business online
             </span>
             <p
               className="mt-2 mb-0 text-white"
@@ -154,7 +154,7 @@ export default function Slide08DentalGap() {
                 lineHeight: 1.55,
               }}
             >
-              Half the target market — unaddressed online.
+Half the market — invisible online.
             </p>
           </motion.div>
         </motion.div>

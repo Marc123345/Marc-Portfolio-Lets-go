@@ -12,23 +12,23 @@ import {
 const LAYERS = [
   {
     n: "L1",
-    name: "Awareness",
-    detail: "Category · Glossary · Comparison · Educational content",
+    name: "Discover",
+    detail: "Category pages · Glossary · Comparisons · Educational content",
   },
   {
     n: "L2",
-    name: "Consideration",
-    detail: "Product comparisons · QC methodology · Application guides",
+    name: "Compare",
+    detail: "Product comparisons · QC process · Use-case guides",
   },
   {
     n: "L3",
-    name: "Decision",
-    detail: "Supplier pages · RFQ-focused product pages · Trust pages",
+    name: "Decide",
+    detail: "Supplier pages · Quote-ready product pages · Trust pages",
   },
   {
     n: "L4",
-    name: "Retention",
-    detail: "Datasheets · MSDS · Technical hub · Reordering support",
+    name: "Reorder",
+    detail: "Datasheets · MSDS · Technical library · Reorder support",
   },
 ];
 
@@ -37,10 +37,10 @@ export default function Slide13SeoAeo() {
     <SlideShell>
       <Glow className="bottom-[10%] left-[5%] w-[600px] h-[600px]" />
 
-      <Eyebrow number="ACT III · 13">Solution · SEO / AEO System</Eyebrow>
+      <Eyebrow number="ACT III · 13">Search system</Eyebrow>
       <SlideTitle>
-        Growth comes from <span className="text-[#A3D1FF]">architecture</span> —
-        not blogging.
+        Growth comes from <span className="text-[#A3D1FF]">the right pages</span> —
+        not just blogging.
       </SlideTitle>
 
       <div className="mt-12 grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
@@ -108,7 +108,7 @@ export default function Slide13SeoAeo() {
             className="text-[10px] tracking-[0.3em] uppercase text-[#A3D1FF]"
             style={{ fontFamily: "var(--font-body)" }}
           >
-            + AEO / GEO Layer
++ AI Search Layer
           </div>
           <h3
             className="mt-3 text-white"
@@ -119,7 +119,7 @@ export default function Slide13SeoAeo() {
               fontWeight: 500,
             }}
           >
-            Win the AI answer engines.
+Win ChatGPT and Google AI.
           </h3>
           <p
             className="mt-3 text-white/65"
@@ -129,8 +129,8 @@ export default function Slide13SeoAeo() {
               lineHeight: 1.6,
             }}
           >
-            FAQ schema · Structured Q&A · Entity-rich author bios — so EID
-            gets cited inside ChatGPT and Google AI Overview answers.
+FAQ pages · Q&A content · Named expert authors — so EID
+            shows up inside ChatGPT and Google AI answers.
           </p>
 
           <div className="mt-6 grid grid-cols-2 gap-3">
@@ -139,7 +139,7 @@ export default function Slide13SeoAeo() {
                 className="text-white/40 font-mono text-[10px] tracking-[0.25em]"
                 style={{ fontFamily: "var(--font-mono)" }}
               >
-                CITATIONS TODAY
+MENTIONS TODAY
               </div>
               <div
                 className="text-white mt-2"
@@ -163,7 +163,7 @@ export default function Slide13SeoAeo() {
                 className="text-[#A3D1FF]/70 font-mono text-[10px] tracking-[0.25em]"
                 style={{ fontFamily: "var(--font-mono)" }}
               >
-                CITATIONS · TARGET
+TARGET
               </div>
               <div
                 className="text-[#A3D1FF] mt-2"
@@ -174,7 +174,7 @@ export default function Slide13SeoAeo() {
                   textShadow: "0 0 16px rgba(163,209,255,0.5)",
                 }}
               >
-                The cited supplier
+The named supplier
               </div>
             </div>
           </div>

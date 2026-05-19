@@ -25,10 +25,10 @@ export default function Slide09DentalSearch() {
     <SlideShell>
       <Glow className="top-[10%] right-[5%] w-[600px] h-[600px]" color="rgba(163,209,255,0.15)" />
 
-      <Eyebrow number="ACT II · 09">Opportunity · Dental Search</Eyebrow>
+      <Eyebrow number="ACT II · 09">Dental — wide open</Eyebrow>
       <SlideTitle>
-        Under-owned territory.{" "}
-        <span className="text-[#A3D1FF]">No credible supplier wins it.</span>
+        No supplier owns this space.{" "}
+        <span className="text-[#A3D1FF]">EID could.</span>
       </SlideTitle>
 
       <div className="mt-12 grid grid-cols-1 lg:grid-cols-12 gap-10">
@@ -38,7 +38,7 @@ export default function Slide09DentalSearch() {
             className="text-[10px] tracking-[0.3em] uppercase text-white/45 mb-5"
             style={{ fontFamily: "var(--font-body)" }}
           >
-            Uncontested dental queries
+Dental searches no one wins
           </div>
           <div className="flex flex-wrap gap-3 max-w-2xl">
             {DENTAL_TERMS.map((t, i) => (
@@ -68,8 +68,8 @@ export default function Slide09DentalSearch() {
               lineHeight: 1.55,
             }}
           >
-            EID makes the raw material that goes into these products — but is
-            largely absent from this entire search universe.
+            EID makes the raw material that goes into these products — but
+            doesn’t show up when buyers search for them.
           </p>
         </motion.div>
 
@@ -118,7 +118,7 @@ export default function Slide09DentalSearch() {
               className="text-[10px] tracking-[0.3em] uppercase text-[#A3D1FF]"
               style={{ fontFamily: "var(--font-body)" }}
             >
-              Verdict
+Bottom line
             </div>
             <div
               className="text-white mt-2"
@@ -128,7 +128,7 @@ export default function Slide09DentalSearch() {
                 letterSpacing: "-0.01em",
               }}
             >
-              Uncontested territory — worth searching for, worth owning.
+Open territory. Worth claiming first.
             </div>
           </div>
         </motion.div>

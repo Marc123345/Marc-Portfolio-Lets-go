@@ -60,7 +60,7 @@ export default function Slide05Search() {
     <SlideShell>
       <Glow className="top-[20%] right-[5%] w-[500px] h-[500px]" />
 
-      <Eyebrow number="ACT I · 05">Problem · Search Diagnosis</Eyebrow>
+      <Eyebrow number="ACT I · 05">Search results today</Eyebrow>
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
         <div className="lg:col-span-5">
@@ -76,10 +76,9 @@ export default function Slide05Search() {
               lineHeight: 1.6,
             }}
           >
-            Google already trusts EID on technical phrases. Where a real page
+            Google already trusts EID on technical searches. Where a real page
             exists, it ranks <span className="text-white">#2 or #3</span>. The
-            problem isn’t authority — it’s that there aren’t
-            enough pages.
+            problem isn’t trust — there just aren’t enough pages.
           </p>
 
           <div className="mt-10 flex flex-col gap-3">
@@ -98,7 +97,7 @@ export default function Slide05Search() {
                 className="text-[11px] tracking-[0.2em] uppercase text-white/60"
                 style={{ fontFamily: "var(--font-body)" }}
               >
-                Reachable — within striking distance
+                Close — could rank with work
               </span>
             </div>
           </div>
@@ -134,7 +133,7 @@ export default function Slide05Search() {
                           className="ml-2 text-[9px] tracking-[0.2em] uppercase text-[#A3D1FF]/80"
                           style={{ fontFamily: "var(--font-body)" }}
                         >
-                          · reachable
+                          · within reach
                         </span>
                       )}
                     </div>

@@ -63,7 +63,7 @@ function AuthorityGauge() {
           className="mt-2 text-[10px] tracking-[0.3em] uppercase text-white/50"
           style={{ fontFamily: "var(--font-body)" }}
         >
-          Authority Score
+          Domain trust
         </div>
       </div>
     </div>
@@ -150,7 +150,7 @@ function VisitsChart() {
         style={{ fontFamily: "var(--font-body)" }}
       >
         <span className="font-mono text-[#A3D1FF]">↑ 21×</span>
-        <span>reachable expansion</span>
+        <span>growth potential</span>
       </div>
     </div>
   );
@@ -215,7 +215,7 @@ function KeywordGrid() {
           className="text-[10px] tracking-[0.25em] uppercase text-white/45"
           style={{ fontFamily: "var(--font-body)" }}
         >
-          Visible coverage
+          Site coverage
         </span>
       </div>
     </div>
@@ -234,7 +234,7 @@ function StalenessTimeline() {
         className="text-[10px] tracking-[0.3em] uppercase text-white/45 mb-6"
         style={{ fontFamily: "var(--font-body)" }}
       >
-        Time since last meaningful update
+        Last meaningful site update
       </div>
 
       <div className="relative pt-2">
@@ -307,7 +307,7 @@ function StalenessTimeline() {
             className="mt-1 text-[10px] tracking-[0.25em] uppercase text-white/45"
             style={{ fontFamily: "var(--font-body)" }}
           >
-            Footer copyright frozen at 2020
+            Footer still says 2020
           </div>
         </div>
 
@@ -316,7 +316,7 @@ function StalenessTimeline() {
           style={{ fontFamily: "var(--font-body)" }}
         >
           <span className="w-1.5 h-1.5 rounded-full bg-red-400" />
-          Stack · Wix
+          Built on Wix
         </div>
       </div>
     </div>
@@ -332,9 +332,9 @@ export default function Slide03Reality() {
       />
       <Glow className="bottom-[10%] left-[10%] w-[400px] h-[400px]" />
 
-      <Eyebrow number="ACT I · 03">Problem · Current Reality</Eyebrow>
+      <Eyebrow number="ACT I · 03">Where you are today</Eyebrow>
       <SlideTitle>
-        Technical depth — <span className="text-[#A3D1FF]">no visibility.</span>
+        Strong product — <span className="text-[#A3D1FF]">invisible online.</span>
       </SlideTitle>
 
       <motion.div

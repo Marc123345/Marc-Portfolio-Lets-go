@@ -70,9 +70,9 @@ export default function Slide01Title() {
           }}
         >
           From a brochure site to a{" "}
-          <span className="text-white">proof-driven sales engine</span>. The
-          credibility already exists. The system to convert it into discovery,
-          trust, and pipeline does not.
+          <span className="text-white">site that wins business</span>. The
+          credibility already exists. The system to turn it into more visits,
+          more inquiries, and more orders does not.
         </motion.p>
 
         <motion.div

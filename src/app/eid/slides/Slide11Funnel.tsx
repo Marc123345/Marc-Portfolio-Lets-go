@@ -11,24 +11,24 @@ import {
 
 const STAGES = [
   {
-    stage: "Awareness",
+    stage: "Discover",
     width: 100,
     proof: "50+ years · ISO 9001 · Customers on every continent",
   },
   {
-    stage: "Consideration",
+    stage: "Compare",
     width: 80,
-    proof: "Datasheets · QC methodology · Comparisons · Expert bios",
+    proof: "Datasheets · QC process · Comparisons · Team bios",
   },
   {
-    stage: "Decision",
+    stage: "Decide",
     width: 56,
-    proof: "Sample policy · Lead times · Response SLA · Regional contacts",
+    proof: "Sample policy · Lead times · Response guarantee · Regional contacts",
   },
   {
-    stage: "Retention",
+    stage: "Reorder",
     width: 36,
-    proof: "Customer portal · Datasheet library · Quarterly briefings",
+    proof: "Customer portal · Datasheet library · Quarterly updates",
   },
 ];
 
@@ -37,7 +37,7 @@ export default function Slide11Funnel() {
     <SlideShell>
       <Glow className="top-[20%] right-[20%] w-[500px] h-[500px]" color="rgba(163,209,255,0.16)" />
 
-      <Eyebrow number="ACT III · 11">Solution · Strategic Model</Eyebrow>
+      <Eyebrow number="ACT III · 11">How it should work</Eyebrow>
       <SlideTitle>
         Proof <span className="text-[#A3D1FF]">before</span> pitch.
       </SlideTitle>

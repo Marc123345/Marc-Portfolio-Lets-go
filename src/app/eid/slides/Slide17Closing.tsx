@@ -5,9 +5,9 @@ import { ArrowRight } from "lucide-react";
 import { Eyebrow, FADE_UP, Glow, SlideShell } from "./_primitives";
 
 const POINTS = [
-  "EID already has the technical depth.",
-  "The market is still open.",
-  "The digital system is not built to capture the opportunity yet.",
+  "You already have the product depth.",
+  "The market is still wide open.",
+  "The website isn’t built to win it yet.",
 ];
 
 export default function Slide17Closing() {
@@ -22,7 +22,7 @@ export default function Slide17Closing() {
         color="rgba(163,209,255,0.08)"
       />
 
-      <Eyebrow number="ACT V · 17">Closing Ask</Eyebrow>
+      <Eyebrow number="ACT V · 17">The ask</Eyebrow>
 
       <motion.h2
         variants={FADE_UP}
@@ -36,9 +36,9 @@ export default function Slide17Closing() {
           textWrap: "balance",
         }}
       >
-        Keep operating as a brochure —
+Stay a brochure —
         <br />
-        <span className="text-[#A3D1FF]">or build the sales engine.</span>
+        <span className="text-[#A3D1FF]">or build a site that wins business.</span>
       </motion.h2>
 
       <div className="mt-12 grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
@@ -86,10 +86,9 @@ export default function Slide17Closing() {
                 lineHeight: 1.25,
               }}
             >
-              “EID already has the authority. The opportunity is to build
-              the digital system that turns it into{" "}
+“You already have the trust. We turn it into{" "}
               <span className="text-[#A3D1FF]">
-                discovery, trust, and qualified revenue.
+                more visits, more inquiries, more orders.
               </span>
               ”
             </p>
@@ -118,7 +117,7 @@ export default function Slide17Closing() {
               lineHeight: 1.1,
             }}
           >
-            Greenlight Tier II.
+            Greenlight the build.
             <br />
             Kick off in 2 weeks.
           </h3>
@@ -130,17 +129,16 @@ export default function Slide17Closing() {
               lineHeight: 1.6,
             }}
           >
-            Discovery + audience interviews in week 1. Wireframes + content
-            architecture in week 2. First Foundation wave live within 8 weeks of
-            sign-off.
+            Week 1: interviews and discovery. Week 2: wireframes and content.
+            Site live within 8 weeks.
           </p>
 
           <div className="mt-8 flex flex-col gap-3">
             <a
-              href="mailto:marcfriedmancm@gmail.com?subject=EID%20%E2%80%94%20Greenlight%20Tier%20II"
+              href="mailto:marcfriedmancm@gmail.com?subject=EID%20%E2%80%94%20Greenlight%20the%20Build"
               className="mr_btn mr_btn_primary hero-cta-btn justify-between w-full"
             >
-              <span>Greenlight the engagement</span>
+              <span>Greenlight the build</span>
               <ArrowRight className="w-4 h-4" />
             </a>
             <a

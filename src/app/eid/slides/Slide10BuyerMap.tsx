@@ -13,36 +13,36 @@ const PERSONAS = [
   {
     num: "01",
     name: "Tooling Engineer",
-    role: "Technical evaluator",
+    role: "Technical buyer",
     detail:
-      "R&D / applications lead. Specs grade by application. Reads datasheets. Already finds EID via technical terms.",
+      "Engineer who picks grade by use. Reads datasheets. Already finds EID through technical searches.",
     state: "Reachable today",
     accent: true,
   },
   {
     num: "02",
     name: "Procurement Manager",
-    role: "Commercial validator",
+    role: "Procurement buyer",
     detail:
-      "Shortlists 2–3 suppliers. Validates ISO 9001, lead times, reliability. Wants fast reasons to trust or eliminate.",
-    state: "Half-served",
+      "Shortlists 2–3 suppliers. Checks ISO 9001, lead times, reliability. Wants fast reasons to trust — or move on.",
+    state: "Partly served",
   },
   {
     num: "03",
     name: "Dental Bur Manufacturer",
-    role: "Underserved growth",
+    role: "The missing market",
     detail:
-      "B2B maker of dental burs & instruments. Today cannot find EID. Largest blind spot in the strategy.",
+      "Makes dental burs and instruments. Today, can’t find EID. The biggest blind spot.",
     state: "Blind spot",
     danger: true,
   },
   {
     num: "04",
     name: "Distributor / Partner",
-    role: "Channel buyer",
+    role: "Distributors",
     detail:
-      "Worldwide partner adding brands to catalogue. Evaluates brand before product. Needs polish and collateral.",
-    state: "Under-equipped",
+      "International partners adding suppliers to their catalogue. Judges the brand before the product. Needs marketing material.",
+    state: "Under-served",
   },
 ];
 
@@ -55,10 +55,10 @@ export default function Slide10BuyerMap() {
         color="rgba(163,209,255,0.08)"
       />
 
-      <Eyebrow number="ACT II · 10">Opportunity · Buyer Map</Eyebrow>
+      <Eyebrow number="ACT II · 10">Who buys from you</Eyebrow>
       <SlideTitle>
         Four buyers.{" "}
-        <span className="text-[#A3D1FF]">Four proof paths.</span>
+        <span className="text-[#A3D1FF]">Four different needs.</span>
       </SlideTitle>
 
       <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-px bg-white/10 border border-white/10 max-w-6xl">
@@ -86,7 +86,7 @@ export default function Slide10BuyerMap() {
                   }`}
                   style={{ fontFamily: "var(--font-mono)" }}
                 >
-                  PERSONA · {p.num}
+BUYER · {p.num}
                 </span>
               </div>
               <span

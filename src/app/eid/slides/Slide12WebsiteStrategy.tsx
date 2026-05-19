@@ -12,33 +12,33 @@ import {
 const BUILD = [
   {
     n: "01",
-    title: "Audience split on first scroll",
-    text: "Industrial vs Dental — buyers route themselves into the right proof path.",
+    title: "Industrial vs. dental from the start",
+    text: "Each buyer sees what they need on the homepage.",
   },
   {
     n: "02",
-    title: "Proof above the fold",
-    text: "Heritage, ISO, taxonomy, manufacturing footprint — surfaced before the pitch.",
+    title: "Trust at the top",
+    text: "50 years, ISO 9001, product range, factories — visible first.",
   },
   {
     n: "03",
     title: "Rebuilt product pages",
-    text: "Spec tables, applications, technical FAQs, datasheets — decision-ready content.",
+    text: "Spec tables, use-cases, FAQs, datasheets — everything they need to decide.",
   },
   {
     n: "04",
-    title: "Dedicated dental vertical",
-    text: "A landing experience matched to bur and instrument manufacturers.",
+    title: "Dental section",
+    text: "Built for bur and instrument makers.",
   },
   {
     n: "05",
-    title: "RFQ + sample flows",
-    text: "Multiple intent paths, segmented forms, response SLAs.",
+    title: "Quote + sample forms",
+    text: "Smart forms by buyer type, with response promises.",
   },
   {
     n: "06",
-    title: "Custom React / Next.js",
-    text: "Under 2s load. Lighthouse 95+. Schema-rich. AEO-ready.",
+    title: "Custom-coded site",
+    text: "Loads in under 2 seconds. Built for Google and AI search.",
   },
 ];
 
@@ -47,8 +47,8 @@ export default function Slide12WebsiteStrategy() {
     <SlideShell>
       <Glow className="top-[10%] left-[10%] w-[500px] h-[500px]" />
 
-      <Eyebrow number="ACT III · 12">Solution · Website Strategy</Eyebrow>
-      <SlideTitle>What I would build.</SlideTitle>
+      <Eyebrow number="ACT III · 12">What I’d build</Eyebrow>
+      <SlideTitle>The website.</SlideTitle>
 
       <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-white/10 border border-white/10 max-w-6xl">
         {BUILD.map((b) => (

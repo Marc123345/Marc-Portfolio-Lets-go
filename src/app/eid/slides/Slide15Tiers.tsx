@@ -17,31 +17,31 @@ const TIERS = [
     price: "$5,000",
     priceNote: "Design · Dev · Copy · SEO",
     items: [
-      "Custom React / Next.js build",
-      "Conversion-focused design",
+      "Custom-coded site",
+      "Designed to win business",
       "All copywriting",
-      "On-page SEO + schema",
+      "On-page SEO",
       "Technical SEO setup",
-      "Indexing + GA4 + Search Console",
+      "Google indexing + analytics",
       "QA, testing, launch",
     ],
   },
   {
-    name: "Growth Engine",
+    name: "Growth Plan",
     tag: "Phase 02",
     timeline: "Ongoing · monthly",
     price: "$1,000",
     priceUnit: "/ month",
-    priceNote: "SEO + AEO retainer",
+    priceNote: "Monthly search + AI work",
     recommended: true,
     items: [
-      "Monthly SEO + AEO program",
-      "Content production · 2–4 pieces / mo",
-      "Schema + entity work for AI engines",
-      "Backlink outreach",
+      "Monthly SEO work",
+      "2–4 new pages / month",
+      "Built for AI search",
+      "Earning links from other sites",
       "Monthly performance report",
-      "Quarterly CRO sprints",
-      "Cancel anytime · 6-mo recommended",
+      "Quarterly conversion testing",
+      "Cancel anytime · 6 months suggested",
     ],
   },
 ];
@@ -54,9 +54,9 @@ export default function Slide15Tiers() {
         color="rgba(163,209,255,0.14)"
       />
 
-      <Eyebrow number="ACT IV · 15">Investment · Engagement</Eyebrow>
+      <Eyebrow number="ACT IV · 15">Investment</Eyebrow>
       <SlideTitle>
-        One build. <span className="text-[#A3D1FF]">One growth engine.</span>
+        One build. <span className="text-[#A3D1FF]">One monthly plan.</span>
       </SlideTitle>
 
       <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl">
