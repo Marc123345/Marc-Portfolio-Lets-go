@@ -72,7 +72,7 @@ export default function Slide02Framing() {
 
       <div className="mt-10">
         <SlideLede>
-          This isn&rsquo;t a design critique. It&rsquo;s a commercial strategy —
+          This isn’t a design critique. It’s a commercial strategy —
           problem, opportunity, solution, investment, and return — built around
           what your website already proves the market is asking for.
         </SlideLede>

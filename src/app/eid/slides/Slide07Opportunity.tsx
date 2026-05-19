@@ -18,7 +18,7 @@ export default function Slide07Opportunity() {
 
       <SlideTitle>
         Google already trusts EID.{" "}
-        <span className="text-[#A3D1FF]">There aren&rsquo;t enough pages.</span>
+        <span className="text-[#A3D1FF]">There aren’t enough pages.</span>
       </SlideTitle>
 
       <div className="mt-12 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">

@@ -23,7 +23,7 @@ const ISSUES = [
   {
     tag: "Audience",
     title: "No industrial vs. dental split",
-    detail: "Dental buyers can&rsquo;t find themselves on the homepage.",
+    detail: "Dental buyers can’t find themselves on the homepage.",
   },
   {
     tag: "Story",
@@ -49,7 +49,7 @@ export default function Slide04Website() {
 
       <Eyebrow number="ACT I · 04">Problem · Website Diagnosis</Eyebrow>
       <SlideTitle>
-        The site isn&rsquo;t built for{" "}
+        The site isn’t built for{" "}
         <span className="text-[#A3D1FF]">the buying journey.</span>
       </SlideTitle>
 

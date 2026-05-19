@@ -129,7 +129,7 @@ export default function Slide13SeoAeo() {
               lineHeight: 1.6,
             }}
           >
-            FAQ schema · Structured Q&amp;A · Entity-rich author bios — so EID
+            FAQ schema · Structured Q&A · Entity-rich author bios — so EID
             gets cited inside ChatGPT and Google AI Overview answers.
           </p>
 

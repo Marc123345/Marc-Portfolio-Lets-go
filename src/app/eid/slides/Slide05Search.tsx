@@ -78,7 +78,7 @@ export default function Slide05Search() {
           >
             Google already trusts EID on technical phrases. Where a real page
             exists, it ranks <span className="text-white">#2 or #3</span>. The
-            problem isn&rsquo;t authority — it&rsquo;s that there aren&rsquo;t
+            problem isn’t authority — it’s that there aren’t
             enough pages.
           </p>
 

@@ -86,12 +86,12 @@ export default function Slide17Closing() {
                 lineHeight: 1.25,
               }}
             >
-              &ldquo;EID already has the authority. The opportunity is to build
+              “EID already has the authority. The opportunity is to build
               the digital system that turns it into{" "}
               <span className="text-[#A3D1FF]">
                 discovery, trust, and qualified revenue.
               </span>
-              &rdquo;
+              ”
             </p>
           </motion.figure>
         </div>
