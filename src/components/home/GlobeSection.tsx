@@ -1,7 +1,18 @@
 "use client";
 
 import { motion } from 'framer-motion';
-import Globe from '@/components/Globe';
+import dynamic from 'next/dynamic';
+
+const Globe = dynamic(() => import('@/components/Globe'), {
+  ssr: false,
+  loading: () => (
+    <div
+      aria-hidden="true"
+      className="mx-auto rounded-full"
+      style={{ width: 600, height: 600, maxWidth: '100%' }}
+    />
+  ),
+});
 
 const SERIF = "var(--font-heading)";
 

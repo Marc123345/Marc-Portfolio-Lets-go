@@ -139,9 +139,9 @@ export default function ConsentBanner() {
                                   </span>
                                 )}
                                 {isExpanded ? (
-                                  <ChevronUp className="w-4 h-4 text-gray-500 ml-auto" />
+                                  <ChevronUp className="w-4 h-4 text-gray-400 ml-auto" />
                                 ) : (
-                                  <ChevronDown className="w-4 h-4 text-gray-500 ml-auto" />
+                                  <ChevronDown className="w-4 h-4 text-gray-400 ml-auto" />
                                 )}
                               </button>
 
@@ -179,7 +179,7 @@ export default function ConsentBanner() {
                                       {cat.services.map((service) => (
                                         <span
                                           key={service}
-                                          className="text-[11px] text-gray-500 bg-white/5 px-2 py-1"
+                                          className="text-[11px] text-gray-300 bg-white/5 px-2 py-1"
                                         >
                                           {service}
                                         </span>
@@ -236,21 +236,21 @@ export default function ConsentBanner() {
               <div className="flex items-center justify-center gap-3 mt-4 pt-3 border-t border-white/5">
                 <Link
                   href="/cookies-policy"
-                  className="text-xs text-gray-500 hover:text-gray-300 transition-colors"
+                  className="text-xs text-gray-300 hover:text-white transition-colors"
                 >
                   Cookie Policy
                 </Link>
-                <span className="text-gray-700 text-xs">|</span>
+                <span aria-hidden="true" className="text-gray-500 text-xs">|</span>
                 <Link
                   href="/privacy-policy"
-                  className="text-xs text-gray-500 hover:text-gray-300 transition-colors"
+                  className="text-xs text-gray-300 hover:text-white transition-colors"
                 >
                   Privacy Policy
                 </Link>
-                <span className="text-gray-700 text-xs">|</span>
+                <span aria-hidden="true" className="text-gray-500 text-xs">|</span>
                 <Link
                   href="/terms-and-conditions"
-                  className="text-xs text-gray-500 hover:text-gray-300 transition-colors"
+                  className="text-xs text-gray-300 hover:text-white transition-colors"
                 >
                   Terms & Conditions
                 </Link>

@@ -124,7 +124,7 @@ export default function ProjectCard3D({
       } : undefined}
     >
       <div className="aspect-[16/10] overflow-hidden relative">
-        <div className={`absolute inset-0 bg-gray-800 animate-pulse ${isLoaded ? 'opacity-0' : 'opacity-100'} transition-opacity duration-300`} />
+        <div aria-hidden="true" className={`absolute inset-0 bg-gray-800 animate-pulse ${isLoaded ? 'opacity-0' : 'opacity-100'} transition-opacity duration-300`} />
         <motion.img 
           src={image} 
           alt={title} 

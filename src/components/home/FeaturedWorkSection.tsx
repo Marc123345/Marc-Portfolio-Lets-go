@@ -238,7 +238,7 @@ const featured: Project[] = [
     category: 'OSS · Design System',
     blurb:
       'Cybersecurity design system. Severity scale, dual themes, 15+ AA components — drop-in React, ~1,000 LOC.',
-    image: '/images/sentinel-ds-preview.svg',
+    image: 'https://ik.imagekit.io/qcvroy8xpd/image%201%20(10).png',
     liveUrl: 'https://github.com/Marc123345/Cyber-Security-Design-System',
     caseStudyUrl: '/work/case-studies/sentinel-ds',
     stats: [

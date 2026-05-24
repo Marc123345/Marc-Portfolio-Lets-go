@@ -170,6 +170,11 @@ export default function InteractiveCube({
     },
   ];
 
+  const labels = faces
+    .map((f) => [f.category, f.title].filter(Boolean).join(' — '))
+    .filter(Boolean)
+    .join('; ');
+
   return (
     <div
       ref={containerRef}
@@ -184,6 +189,8 @@ export default function InteractiveCube({
       onPointerUp={handlePointerUp}
       onPointerLeave={handlePointerUp}
       onPointerCancel={handlePointerUp}
+      role="group"
+      aria-label={labels ? `Featured project cube: ${labels}` : 'Featured project cube'}
     >
       <div
         style={{
@@ -205,6 +212,7 @@ export default function InteractiveCube({
             }}
           >
             <div
+              aria-hidden="true"
               className="absolute inset-0 bg-cover bg-center"
               style={{
                 backgroundImage: cfg.face.image ? `url("${cfg.face.image}")` : undefined,
@@ -213,6 +221,7 @@ export default function InteractiveCube({
               }}
             />
             <div
+              aria-hidden="true"
               className="absolute inset-0"
               style={{
                 background:

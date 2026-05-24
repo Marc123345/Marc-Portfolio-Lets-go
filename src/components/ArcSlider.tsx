@@ -27,19 +27,16 @@ export default function ArcSlider({ cards, initialIndex = 0 }: ArcSliderProps) {
   const router = useRouter();
   const [activeIndex, setActiveIndex] = useState(initialIndex);
   const [isMobile, setIsMobile] = useState(false);
-  const [hovering, setHovering] = useState(false);
   const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
   const containerRef = useRef<HTMLDivElement>(null);
   const activeCardRef = useRef<HTMLDivElement | null>(null);
+  const activeRectRef = useRef<DOMRect | null>(null);
+  const rafRef = useRef(0);
   const dragRef = useRef({ startX: 0, hasMoved: false, isDragging: false });
 
-  // Magnetic cursor follower
-  const cursorX = useMotionValue(0);
-  const cursorY = useMotionValue(0);
-  const smoothCursorX = useSpring(cursorX, { stiffness: 250, damping: 30, mass: 0.6 });
-  const smoothCursorY = useSpring(cursorY, { stiffness: 250, damping: 30, mass: 0.6 });
-
-  // Pointer-driven tilt for the active card (subtle 3D parallax)
+  // Pointer-driven tilt for the active card (subtle 3D parallax).
+  // Single shared MotionValue pair — reset on activeIndex change so the
+  // new active card doesn't inherit the previous card's tilt.
   const tiltX = useMotionValue(0);
   const tiltY = useMotionValue(0);
   const smoothTiltX = useSpring(tiltX, { stiffness: 150, damping: 18, mass: 0.4 });
@@ -88,11 +85,11 @@ export default function ArcSlider({ cards, initialIndex = 0 }: ArcSliderProps) {
         if (absOffset === 0) {
           translateX = 0; rotateY = 0; translateZ = 0; scale = 1; opacity = 1; zIndex = 10; blur = 0;
         } else if (absOffset === 1) {
-          translateX = offset * spreadStep1; rotateY = offset < 0 ? 32 : -32; translateZ = -120; scale = 0.82; opacity = 0.55; zIndex = 5; blur = 1.5;
+          translateX = offset * spreadStep1; rotateY = offset < 0 ? 32 : -32; translateZ = -120; scale = 0.82; opacity = 0.55; zIndex = 5; blur = 0;
         } else if (absOffset === 2) {
-          translateX = offset * spreadStep2; rotateY = offset < 0 ? 48 : -48; translateZ = -240; scale = 0.64; opacity = 0.18; zIndex = 2; blur = 4;
+          translateX = offset * spreadStep2; rotateY = offset < 0 ? 48 : -48; translateZ = -240; scale = 0.64; opacity = 0.18; zIndex = 2; blur = 0;
         } else {
-          translateX = offset * spreadStep3; rotateY = offset < 0 ? 55 : -55; translateZ = -350; scale = 0.5; opacity = 0; zIndex = 1; blur = 8;
+          translateX = offset * spreadStep3; rotateY = offset < 0 ? 55 : -55; translateZ = -350; scale = 0.5; opacity = 0; zIndex = 1; blur = 0;
         }
 
         const transform = `translateX(${translateX}px) rotateY(${rotateY}deg) translateZ(${translateZ}px) scale(${scale})`;
@@ -118,13 +115,27 @@ export default function ArcSlider({ cards, initialIndex = 0 }: ArcSliderProps) {
 
   useEffect(() => {
     positionCards(activeIndex, true);
-  }, [activeIndex, positionCards]);
+    // Reset tilt + invalidate cached rect when the active card changes
+    tiltX.set(0);
+    tiltY.set(0);
+    activeRectRef.current = null;
+  }, [activeIndex, positionCards, tiltX, tiltY]);
 
-  // Re-position on resize
+  // Re-position on resize, invalidate cached rect on resize + scroll
   useEffect(() => {
-    const onResize = () => positionCards(activeIndex, false);
+    const invalidate = () => {
+      activeRectRef.current = null;
+    };
+    const onResize = () => {
+      positionCards(activeIndex, false);
+      invalidate();
+    };
     window.addEventListener('resize', onResize);
-    return () => window.removeEventListener('resize', onResize);
+    window.addEventListener('scroll', invalidate, { passive: true });
+    return () => {
+      window.removeEventListener('resize', onResize);
+      window.removeEventListener('scroll', invalidate);
+    };
   }, [activeIndex, positionCards]);
 
   // Keyboard navigation
@@ -137,39 +148,46 @@ export default function ArcSlider({ cards, initialIndex = 0 }: ArcSliderProps) {
     return () => window.removeEventListener('keydown', onKey);
   }, [activeIndex, navigateTo]);
 
-  // Pointer drag + cursor + tilt
+  // Pointer drag + tilt — rAF-throttled, with cached rects
   const onPointerDown = (e: React.PointerEvent) => {
     dragRef.current = { startX: e.clientX, hasMoved: false, isDragging: true };
   };
   const onPointerMove = (e: React.PointerEvent) => {
-    // Cursor follower position (relative to stage)
-    const stage = containerRef.current?.getBoundingClientRect();
-    if (stage) {
-      cursorX.set(e.clientX - stage.left);
-      cursorY.set(e.clientY - stage.top);
+    const clientX = e.clientX;
+    const clientY = e.clientY;
+
+    // Drag tracking is cheap — run synchronously
+    if (dragRef.current.isDragging) {
+      const dx = clientX - dragRef.current.startX;
+      if (Math.abs(dx) > 30) dragRef.current.hasMoved = true;
     }
-    // Tilt — only when over the active card
-    if (activeCardRef.current) {
-      const rect = activeCardRef.current.getBoundingClientRect();
-      const cx = rect.left + rect.width / 2;
-      const cy = rect.top + rect.height / 2;
-      const nx = (e.clientX - cx) / (rect.width / 2);
-      const ny = (e.clientY - cy) / (rect.height / 2);
-      const inside =
-        Math.abs(e.clientX - cx) < rect.width / 2 + 40 &&
-        Math.abs(e.clientY - cy) < rect.height / 2 + 40;
+
+    // Tilt updates are visual-only — coalesce to the next animation frame
+    if (rafRef.current) return;
+    rafRef.current = requestAnimationFrame(() => {
+      rafRef.current = 0;
+      const card = activeCardRef.current;
+      if (!card) return;
+      // Cache rect — recompute only when invalidated (resize/scroll/index change)
+      if (!activeRectRef.current) {
+        activeRectRef.current = card.getBoundingClientRect();
+      }
+      const rect = activeRectRef.current;
+      const halfW = rect.width / 2;
+      const halfH = rect.height / 2;
+      const cx = rect.left + halfW;
+      const cy = rect.top + halfH;
+      const nx = (clientX - cx) / halfW;
+      const ny = (clientY - cy) / halfH;
+      const inside = Math.abs(clientX - cx) < halfW + 40 && Math.abs(clientY - cy) < halfH + 40;
       if (inside) {
-        tiltX.set(Math.max(-1, Math.min(1, nx)));
-        tiltY.set(Math.max(-1, Math.min(1, ny)));
+        tiltX.set(nx < -1 ? -1 : nx > 1 ? 1 : nx);
+        tiltY.set(ny < -1 ? -1 : ny > 1 ? 1 : ny);
       } else {
         tiltX.set(0);
         tiltY.set(0);
       }
-    }
-    // Drag — use a generous threshold so normal clicks aren't mistaken for drags
-    if (!dragRef.current.isDragging) return;
-    const dx = e.clientX - dragRef.current.startX;
-    if (Math.abs(dx) > 30) dragRef.current.hasMoved = true;
+    });
   };
   const onPointerUp = (e: React.PointerEvent) => {
     if (!dragRef.current.isDragging) return;
@@ -179,6 +197,12 @@ export default function ArcSlider({ cards, initialIndex = 0 }: ArcSliderProps) {
       navigateTo(activeIndex + (dx < 0 ? 1 : -1));
     }
   };
+
+  useEffect(() => {
+    return () => {
+      if (rafRef.current) cancelAnimationFrame(rafRef.current);
+    };
+  }, []);
 
   const active = cards[activeIndex];
 
@@ -230,39 +254,16 @@ export default function ArcSlider({ cards, initialIndex = 0 }: ArcSliderProps) {
         style={{
           perspective: '1600px',
           height: 540,
-          cursor: 'none',
         }}
         onPointerDown={onPointerDown}
         onPointerMove={onPointerMove}
         onPointerUp={onPointerUp}
-        onPointerEnter={() => setHovering(true)}
         onPointerLeave={(e) => {
-          setHovering(false);
           tiltX.set(0);
           tiltY.set(0);
           if (dragRef.current.isDragging) onPointerUp(e);
         }}
       >
-        {/* Magnetic cursor follower */}
-        <motion.div
-          className="absolute z-40 pointer-events-none"
-          style={{
-            left: 0,
-            top: 0,
-            x: smoothCursorX,
-            y: smoothCursorY,
-            translateX: '-50%',
-            translateY: '-50%',
-            opacity: hovering ? 1 : 0,
-            transition: 'opacity 0.25s ease',
-          }}
-        >
-          <div className="w-20 h-20 rounded-full border border-[#A3D1FF]/60 bg-[#A3D1FF]/10 backdrop-blur-md flex items-center justify-center text-[10px] font-mono uppercase tracking-[0.2em] text-white">
-            <span className="flex items-center gap-1">
-              Open <ArrowUpRight className="w-3 h-3" />
-            </span>
-          </div>
-        </motion.div>
         <div
           className="absolute inset-0 flex items-center justify-center"
           style={{ transformStyle: 'preserve-3d' }}
@@ -292,14 +293,13 @@ export default function ArcSlider({ cards, initialIndex = 0 }: ArcSliderProps) {
               }}
             >
               <motion.div
-                className="relative w-full h-full border border-white/12 bg-[#0e1116] flex flex-col p-8 overflow-hidden"
+                className="relative w-full h-full border border-white/12 flex flex-col p-8 overflow-hidden"
                 style={{
                   background: isActive
                     ? `linear-gradient(140deg, #14181f 0%, #0a0c10 100%)`
                     : '#0e1116',
                   transformStyle: 'preserve-3d',
-                  rotateX: isActive ? tiltRotateX : 0,
-                  rotateY: isActive ? tiltRotateY : 0,
+                  ...(isActive ? { rotateX: tiltRotateX, rotateY: tiltRotateY } : null),
                 }}
               >
                 <div

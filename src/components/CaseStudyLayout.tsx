@@ -1,7 +1,7 @@
 "use client";
 
-import React, { useRef } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import React from 'react';
+import { motion } from 'framer-motion';
 import { ArrowUpRight, ExternalLink, Mail } from 'lucide-react';
 import Link from 'next/link';
 import {
@@ -72,24 +72,10 @@ function CaseMasthead({
   CaseStudyConfig,
   'kicker' | 'pkg' | 'title' | 'italicWord' | 'tagline' | 'heroImage' | 'metaStats' | 'liveUrl'
 >) {
-  const ref = useRef<HTMLElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ['start start', 'end start'],
-  });
-  const y = useTransform(scrollYProgress, [0, 1], ['0%', '30%']);
-  const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0.3]);
-  const scale = useTransform(scrollYProgress, [0, 1], [1, 1.15]);
-
   return (
-    <section ref={ref} className="relative min-h-[100svh] bg-black overflow-hidden">
-      <motion.div className="absolute inset-0 z-0" style={{ y, opacity, scale }}>
-        <motion.div
-          initial={{ scale: 1.25, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 2.2, ease: [0.22, 1, 0.36, 1] }}
-          className="absolute inset-0 lg:left-[38%]"
-        >
+    <section className="relative min-h-[100svh] bg-black overflow-hidden">
+      <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 lg:left-[38%]">
           <img
             src={heroImage}
             alt=""
@@ -97,8 +83,8 @@ function CaseMasthead({
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-black/20 lg:from-black lg:via-black/55 lg:to-black/20" />
           <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/40" />
-        </motion.div>
-      </motion.div>
+        </div>
+      </div>
 
       <motion.div
         initial={{ opacity: 0 }}

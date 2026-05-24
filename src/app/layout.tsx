@@ -4,7 +4,6 @@ import "./globals.css";
 import { AppProviders } from "@/providers/AppProviders";
 import Layout from "@/components/Layout";
 import SiteLoader from "@/components/SiteLoader";
-import SmoothScrollProvider from "@/components/SmoothScrollProvider";
 
 const oswald = Oswald({
   variable: "--font-oswald",
@@ -72,7 +71,6 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://cdn.jotfor.ms" />
       </head>
       <body className="min-h-screen bg-black text-white antialiased">
-        <SmoothScrollProvider />
         <SiteLoader />
         <AppProviders>
           <Layout>{children}</Layout>
