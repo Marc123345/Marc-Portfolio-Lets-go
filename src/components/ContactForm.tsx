@@ -83,7 +83,6 @@ export default function ContactForm() {
         id="JotFormIFrame-261231977107053"
         title="Contact Inquiry Form for Web Design & Development"
         onLoad={handleLoad}
-        loading="lazy"
         allow="geolocation; microphone; camera; fullscreen; payment"
         src="https://form.jotform.com/261231977107053"
         className="w-full block border-0 h-[900px] md:h-[540px]"
