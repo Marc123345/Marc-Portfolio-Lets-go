@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
 import BlogConversationalUI from '@/pages-ported/blog/conversational-ui-chat-interfaces';
 
-const title = 'Conversational UI: When Chat Interfaces Help — and Hurt — Your UX';
+const title = 'Conversational UI Design: When Chat Interfaces Help or Hurt UX';
 const description =
-  'When chat interfaces actually improve UX, the failure patterns to avoid, and a framework for deciding whether the chat box belongs on your product at all.';
+  'Conversational UI design done right: when chat interfaces and conversational UI patterns improve UX, the failure modes to avoid, and a framework for deciding if your product needs a conversational interface at all.';
 const url = 'https://www.marcfriedmanportfolio.com/blog/conversational-ui-chat-interfaces/';
 
 export const metadata: Metadata = {

@@ -51,7 +51,7 @@ export default function BrutalismAntiDesignPage() {
           </button>
 
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">
-            Brutalism & Anti-Design: The Raw, Unpolished Web Design Revolution
+            Digital Brutalism in Web Design: The Raw, Anti-Design Revolution
           </h1>
 
           <div className="flex items-center gap-4 mb-8">
@@ -79,7 +79,7 @@ export default function BrutalismAntiDesignPage() {
         <div className="max-w-4xl mx-auto">
           <div className="prose prose-lg prose-invert max-w-none">
             <h2>The Rebellion Against Perfect Design</h2>
-            <p>In an era dominated by polished interfaces, rounded corners, and carefully curated color palettes, a counter-movement is gaining momentum. Brutalist web design and anti-design principles are emerging as powerful alternatives to the homogenized aesthetics that have come to define the modern web.</p>
+            <p>Digital brutalism is having a moment. In an era dominated by polished interfaces, rounded corners, and carefully curated color palettes, brutalist web design and anti-design principles are emerging as powerful alternatives to the homogenized aesthetics that have come to define the modern web.</p>
 
             <p>This isn't just about being different for the sake of it. Brutalism and anti-design represent a fundamental shift in how we think about digital experiences—prioritizing authenticity, directness, and human imperfection over algorithmic perfection. It's a rejection of design-by-committee approaches in favor of bold, uncompromising creative vision.</p>
 

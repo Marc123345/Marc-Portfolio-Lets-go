@@ -97,7 +97,7 @@ export default function ConversationalUIChatInterfaces() {
           </button>
 
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">
-            Conversational UI: When Chat Interfaces Help — and When They Hurt — Your UX
+            Conversational UI Design: When Chat Interfaces Help — and When They Hurt — Your UX
           </h1>
 
           <div className="flex items-center gap-4 mb-8">
@@ -125,7 +125,7 @@ export default function ConversationalUIChatInterfaces() {
         <div className="max-w-4xl mx-auto">
           <div className="prose prose-lg prose-invert max-w-none">
 
-            <p className="text-xl text-gray-300 leading-relaxed">Chat interfaces are everywhere. AI assistants are being bolted onto products at an unprecedented pace. But more conversational UI doesn't automatically mean better UX — it often means slower, more frustrating, and more confusing interactions. <strong className="text-white">This is a practical, honest look at when conversational design genuinely helps users, when it gets in the way, and how to make the call.</strong></p>
+            <p className="text-xl text-gray-300 leading-relaxed">Conversational UI design has exploded. Chat interfaces and AI assistants are being bolted onto every product at an unprecedented pace — but more conversational UI doesn't automatically mean better UX. It often means slower, more frustrating, more confusing interactions. <strong className="text-white">This is a practical, honest look at when a conversational interface genuinely helps users, when it gets in the way, and how to make the call.</strong></p>
 
             <h2>What Conversational UI Actually Is</h2>
 
