@@ -4,7 +4,7 @@ import BlogDataDrivenDesign from '@/pages-ported/blog/building-data-driven-desig
 const title = 'Building Data-Driven Design Systems for Scale';
 const description =
   'Track component usage, performance, and user feedback to build design systems that evolve with the product instead of rotting in a Figma library.';
-const url = 'https://marcfriedmanportfolio.com/blog/building-data-driven-design-systems/';
+const url = 'https://www.marcfriedmanportfolio.com/blog/building-data-driven-design-systems/';
 
 export const metadata: Metadata = {
   title,

@@ -4,7 +4,7 @@ import BlogAutomotiveDealers from '@/pages-ported/blog/designing-platforms-for-a
 const title = 'From Concept to Profit: Designing Platforms for Automotive Dealers';
 const description =
   'Design patterns for dealer-facing platforms. Inventory, lead flow, and reporting screens dealers actually use day to day.';
-const url = 'https://marcfriedmanportfolio.com/blog/designing-platforms-for-automotive-dealers/';
+const url = 'https://www.marcfriedmanportfolio.com/blog/designing-platforms-for-automotive-dealers/';
 
 export const metadata: Metadata = {
   title,

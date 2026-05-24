@@ -4,7 +4,7 @@ import AskAfricaPage from '@/pages-ported/work/case-studies/AskAfricaPage';
 const title = 'Ask Africa Case Study | Pan-African Research Platform | Marc Friedman';
 const description =
   'Enterprise research platform positioning Ask Africa as the continent\'s leading consultancy. Authority-driven design and content architecture built for enterprise decision-makers.';
-const url = 'https://marcfriedmanportfolio.com/work/case-studies/ask-africa/';
+const url = 'https://www.marcfriedmanportfolio.com/work/case-studies/ask-africa/';
 
 export const metadata: Metadata = {
   title: { absolute: title },

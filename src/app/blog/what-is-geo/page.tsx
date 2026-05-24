@@ -4,7 +4,7 @@ import BlogGEO from '@/pages-ported/blog/what-is-geo';
 const title = 'What Is GEO? Generative Engine Optimization Explained';
 const description =
   'Generative Engine Optimization for AI-driven search results. Getting content surfaced in Google AI Overviews and other generative answers.';
-const url = 'https://marcfriedmanportfolio.com/blog/what-is-geo/';
+const url = 'https://www.marcfriedmanportfolio.com/blog/what-is-geo/';
 
 export const metadata: Metadata = {
   title,

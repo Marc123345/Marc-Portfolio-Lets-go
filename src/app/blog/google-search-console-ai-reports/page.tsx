@@ -4,7 +4,7 @@ import BlogGSCAI from '@/pages-ported/blog/google-search-console-ai-reports';
 const title = 'Stop Guessing in GSC: AI-Powered Reports for SEOs';
 const description =
   'Google Search Console now ships AI reports. Prompts and workflows for faster diagnosis, traffic analysis, and finding the AI-search opportunities you\'re missing.';
-const url = 'https://marcfriedmanportfolio.com/blog/google-search-console-ai-reports/';
+const url = 'https://www.marcfriedmanportfolio.com/blog/google-search-console-ai-reports/';
 
 export const metadata: Metadata = {
   title,

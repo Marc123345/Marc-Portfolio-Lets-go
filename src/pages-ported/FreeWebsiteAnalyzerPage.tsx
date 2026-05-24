@@ -71,11 +71,11 @@ const schema = {
   name: 'Free Website Analyzer',
   applicationCategory: 'BusinessApplication',
   operatingSystem: 'All',
-  url: 'https://marcfriedmanportfolio.com/free-website-analyzer',
+  url: 'https://www.marcfriedmanportfolio.com/free-website-analyzer',
   offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
   description:
     'Get a free, hand-reviewed audit of your website covering speed, SEO, mobile usability, conversions, and credibility.',
-  provider: { '@type': 'Person', name: 'Marc Friedman', url: 'https://marcfriedmanportfolio.com' },
+  provider: { '@type': 'Person', name: 'Marc Friedman', url: 'https://www.marcfriedmanportfolio.com' },
 };
 
 function Reveal({ children, delay = 0, className = '' }: { children: React.ReactNode; delay?: number; className?: string }) {

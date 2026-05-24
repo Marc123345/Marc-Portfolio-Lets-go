@@ -4,7 +4,7 @@ import BlogAICrawlers from '@/pages-ported/blog/optimizing-websites-for-ai-crawl
 const title = 'Optimizing Your Website for AI Crawlers';
 const description =
   'AI crawlers from OpenAI, Anthropic, Perplexity, and Google read your site differently than Googlebot. How to be readable to both without bloating the page.';
-const url = 'https://marcfriedmanportfolio.com/blog/optimizing-websites-for-ai-crawlers/';
+const url = 'https://www.marcfriedmanportfolio.com/blog/optimizing-websites-for-ai-crawlers/';
 
 export const metadata: Metadata = {
   title,

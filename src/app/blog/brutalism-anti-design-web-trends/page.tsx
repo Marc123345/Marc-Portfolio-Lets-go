@@ -4,7 +4,7 @@ import BlogBrutalism from '@/pages-ported/blog/brutalism-anti-design-web-trends'
 const title = 'Brutalism & Anti-Design: The Raw, Unpolished Web Revolution';
 const description =
   'Raw grids, minimal imagery, deliberately imperfect layouts. How anti-design rejects algorithmic perfection in favor of work that reads authentic.';
-const url = 'https://marcfriedmanportfolio.com/blog/brutalism-anti-design-web-trends/';
+const url = 'https://www.marcfriedmanportfolio.com/blog/brutalism-anti-design-web-trends/';
 
 export const metadata: Metadata = {
   title,

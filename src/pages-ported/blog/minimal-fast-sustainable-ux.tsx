@@ -20,19 +20,19 @@ export default function MinimalFastSustainableUXPage() {
     "author": {
       "@type": "Person",
       "name": "Marc Friedman",
-      "url": "https://marcfriedmanportfolio.com/about"
+      "url": "https://www.marcfriedmanportfolio.com/about"
     },
     "publisher": {
       "@type": "Organization",
       "name": "Marc Friedman Design & Development",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://marcfriedmanportfolio.com/apple-touch-icon.png"
+        "url": "https://www.marcfriedmanportfolio.com/apple-touch-icon.png"
       }
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://marcfriedmanportfolio.com/blog/minimal-fast-sustainable-ux"
+      "@id": "https://www.marcfriedmanportfolio.com/blog/minimal-fast-sustainable-ux"
     }
   };
 

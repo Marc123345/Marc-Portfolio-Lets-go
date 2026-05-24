@@ -5,12 +5,12 @@ export const metadata: Metadata = {
   title: { absolute: 'Free GEO Audit | AI Visibility Across ChatGPT, Perplexity, Google AI Overviews' },
   description:
     'A free, expert-reviewed Generative Engine Optimization (GEO) audit covering AI visibility across ChatGPT, Perplexity, Google AI Overviews, and Gemini.',
-  alternates: { canonical: 'https://marcfriedmanportfolio.com/free-geo-audit/' },
+  alternates: { canonical: 'https://www.marcfriedmanportfolio.com/free-geo-audit/' },
   openGraph: {
     title: 'Free GEO Audit | AI Visibility Across ChatGPT, Perplexity, Google AI Overviews',
     description:
       'A free, expert-reviewed Generative Engine Optimization (GEO) audit covering AI visibility across ChatGPT, Perplexity, Google AI Overviews, and Gemini.',
-    url: 'https://marcfriedmanportfolio.com/free-geo-audit/',
+    url: 'https://www.marcfriedmanportfolio.com/free-geo-audit/',
     type: 'website',
   },
   twitter: {

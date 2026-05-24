@@ -4,7 +4,7 @@ import BlogAIEcommerce from '@/pages-ported/blog/ai-personalization-ecommerce';
 const title = 'AI-Driven Personalization in Ecommerce: A Practical Guide';
 const description =
   'AI personalization patterns that have moved conversion rates 20–30%. Implementation strategies for small teams, privacy-first design, omnichannel personalization.';
-const url = 'https://marcfriedmanportfolio.com/blog/ai-personalization-ecommerce/';
+const url = 'https://www.marcfriedmanportfolio.com/blog/ai-personalization-ecommerce/';
 
 export const metadata: Metadata = {
   title,

@@ -4,7 +4,7 @@ import BlogCloudflare from '@/pages-ported/blog/getting-the-best-out-of-cloudfla
 const title = 'Getting the Best Out of Cloudflare: A Practical Guide';
 const description =
   'Caching, security, Workers, and the configurations most sites get wrong. How to use Cloudflare beyond just pointing the nameservers and forgetting it.';
-const url = 'https://marcfriedmanportfolio.com/blog/getting-the-best-out-of-cloudflare/';
+const url = 'https://www.marcfriedmanportfolio.com/blog/getting-the-best-out-of-cloudflare/';
 
 export const metadata: Metadata = {
   title,

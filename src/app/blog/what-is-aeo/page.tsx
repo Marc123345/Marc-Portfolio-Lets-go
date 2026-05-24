@@ -4,7 +4,7 @@ import BlogAEO from '@/pages-ported/blog/what-is-aeo';
 const title = 'What Is AEO? Answer Engine Optimization Explained';
 const description =
   'Answer Engine Optimization for ChatGPT, Perplexity, Claude, and Google AI Overviews. How AEO differs from SEO, and what content structure actually gets cited.';
-const url = 'https://marcfriedmanportfolio.com/blog/what-is-aeo/';
+const url = 'https://www.marcfriedmanportfolio.com/blog/what-is-aeo/';
 
 export const metadata: Metadata = {
   title,

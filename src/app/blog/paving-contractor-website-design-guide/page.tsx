@@ -4,7 +4,7 @@ import BlogPavingGuide from '@/pages-ported/blog/paving-contractor-website-desig
 const title = 'Website Design for Paving Contractors: Converting Visitors to Quotes';
 const description =
   'How a paving contractor site should be laid out. Hero choices, trust signals, work galleries, and the quote-request flow that actually converts.';
-const url = 'https://marcfriedmanportfolio.com/blog/paving-contractor-website-design-guide/';
+const url = 'https://www.marcfriedmanportfolio.com/blog/paving-contractor-website-design-guide/';
 
 export const metadata: Metadata = {
   title,

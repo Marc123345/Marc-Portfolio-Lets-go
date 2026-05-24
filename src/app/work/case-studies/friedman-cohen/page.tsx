@@ -4,7 +4,7 @@ import FriedmanCohenPage from '@/pages-ported/work/case-studies/FriedmanCohenPag
 const title = 'Friedman & Cohen Case Study | 100-Year B2B Transformation | Marc Friedman';
 const description =
   'Century-old retail legacy re-engineered into a digital procurement platform. Self-serve portal for developers and hospitality buyers with live inventory.';
-const url = 'https://marcfriedmanportfolio.com/work/case-studies/friedman-cohen/';
+const url = 'https://www.marcfriedmanportfolio.com/work/case-studies/friedman-cohen/';
 
 export const metadata: Metadata = {
   title: { absolute: title },

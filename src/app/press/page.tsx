@@ -4,11 +4,11 @@ import PressPage from '@/pages-ported/PressPage';
 export const metadata: Metadata = {
   title: { absolute: 'Press & Awards | Awwwards Nominee & DesignRush Featured | Marc Friedman' },
   description: 'Featured on Awwwards, DesignRush, and Clutch. Recognized for excellence in web design, UI/UX, and conversion-focused development.',
-  alternates: { canonical: 'https://marcfriedmanportfolio.com/press/' },
+  alternates: { canonical: 'https://www.marcfriedmanportfolio.com/press/' },
   openGraph: {
     title: 'Press & Awards | Awwwards Nominee & DesignRush Featured | Marc Friedman',
     description: 'Featured on Awwwards, DesignRush, and Clutch. Recognized for excellence in web design, UI/UX, and conversion-focused development.',
-    url: 'https://marcfriedmanportfolio.com/press/',
+    url: 'https://www.marcfriedmanportfolio.com/press/',
     type: 'website',
   },
   twitter: {

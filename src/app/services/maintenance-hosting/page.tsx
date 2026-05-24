@@ -4,7 +4,7 @@ import MaintenanceHostingPage from '@/pages-ported/services/MaintenanceHostingPa
 const title = 'Website Maintenance & Hosting | Marc Friedman';
 const description =
   'Monthly maintenance and hosting: performance care, priority fixes, same-day support, and Cloudflare hosting with a 99.99% uptime SLA.';
-const url = 'https://marcfriedmanportfolio.com/services/maintenance-hosting/';
+const url = 'https://www.marcfriedmanportfolio.com/services/maintenance-hosting/';
 
 export const metadata: Metadata = {
   title: { absolute: title },

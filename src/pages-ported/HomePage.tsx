@@ -13,8 +13,8 @@ const homeSchema = {
   "@type": "ProfessionalService",
   "name": "Marc Friedman - Web Designer Tel Aviv",
   "description": "Professional web designer in Tel Aviv creating high-performance React/Node websites for agencies, ecommerce, and B2B companies. Expert in web development and conversion optimization.",
-  "image": "https://marcfriedmanportfolio.com/wp-content/uploads/2024/12/image-1.webp",
-  "url": "https://marcfriedmanportfolio.com",
+  "image": "https://www.marcfriedmanportfolio.com/wp-content/uploads/2024/12/image-1.webp",
+  "url": "https://www.marcfriedmanportfolio.com",
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Tel Aviv",

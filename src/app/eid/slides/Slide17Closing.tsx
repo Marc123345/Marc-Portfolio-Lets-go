@@ -142,7 +142,7 @@ Stay a brochure —
               <ArrowRight className="w-4 h-4" />
             </a>
             <a
-              href="https://marcfriedmanportfolio.com"
+              href="https://www.marcfriedmanportfolio.com"
               target="_blank"
               rel="noopener noreferrer"
               className="mr_btn mr_btn_outline justify-between w-full"

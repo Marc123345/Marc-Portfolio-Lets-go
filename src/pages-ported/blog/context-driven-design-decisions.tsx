@@ -25,19 +25,19 @@ export default function ContextDrivenDesignDecisionsPage() {
     "author": {
       "@type": "Person",
       "name": "Marc Friedman",
-      "url": "https://marcfriedmanportfolio.com/about"
+      "url": "https://www.marcfriedmanportfolio.com/about"
     },
     "publisher": {
       "@type": "Organization",
       "name": "Marc Friedman Design & Development",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://marcfriedmanportfolio.com/apple-touch-icon.png"
+        "url": "https://www.marcfriedmanportfolio.com/apple-touch-icon.png"
       }
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://marcfriedmanportfolio.com/blog/context-driven-design-decisions"
+      "@id": "https://www.marcfriedmanportfolio.com/blog/context-driven-design-decisions"
     }
   };
 
@@ -758,7 +758,7 @@ export default function ContextDrivenDesignDecisionsPage() {
               <div className="flex items-center gap-4">
                 <span className="text-white text-sm">Share:</span>
                 <a
-                  href={`https://twitter.com/intent/tweet?text=${encodeURIComponent('Why Context Matters: A Junior Designer\'s Guide')}&url=${encodeURIComponent('https://marcfriedmanportfolio.com/blog/context-driven-design-decisions')}`}
+                  href={`https://twitter.com/intent/tweet?text=${encodeURIComponent('Why Context Matters: A Junior Designer\'s Guide')}&url=${encodeURIComponent('https://www.marcfriedmanportfolio.com/blog/context-driven-design-decisions')}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-white hover:text-[#A3D1FF] transition-colors"
@@ -767,7 +767,7 @@ export default function ContextDrivenDesignDecisionsPage() {
                   <TwitterIcon className="w-5 h-5" />
                 </a>
                 <a
-                  href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent('https://marcfriedmanportfolio.com/blog/context-driven-design-decisions')}`}
+                  href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent('https://www.marcfriedmanportfolio.com/blog/context-driven-design-decisions')}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-white hover:text-[#A3D1FF] transition-colors"

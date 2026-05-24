@@ -21,7 +21,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://marcfriedmanportfolio.com"),
+  metadataBase: new URL("https://www.marcfriedmanportfolio.com"),
   title: {
     default: "Marc Friedman — Web Designer Tel Aviv",
     template: "%s | Marc Friedman",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     title: "Marc Friedman — Web Designer Tel Aviv",
     description:
       "Professional web designer in Tel Aviv creating high-performance React/Next.js websites for agencies, ecommerce, and B2B companies.",
-    url: "https://marcfriedmanportfolio.com",
+    url: "https://www.marcfriedmanportfolio.com",
     siteName: "Marc Friedman",
     images: [
       {

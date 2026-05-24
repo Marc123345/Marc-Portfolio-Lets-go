@@ -5,12 +5,12 @@ export const metadata: Metadata = {
   title: { absolute: 'Free Website Analyzer | Hand-Reviewed Audit | Marc Friedman' },
   description:
     'Get a free, hand-reviewed audit of your website — speed, SEO, mobile, conversions, credibility, schema. Delivered by a human, not a script.',
-  alternates: { canonical: 'https://marcfriedmanportfolio.com/free-website-analyzer/' },
+  alternates: { canonical: 'https://www.marcfriedmanportfolio.com/free-website-analyzer/' },
   openGraph: {
     title: 'Free Website Analyzer | Hand-Reviewed Audit | Marc Friedman',
     description:
       'Get a free, hand-reviewed audit of your website — speed, SEO, mobile, conversions, credibility, schema. Delivered by a human, not a script.',
-    url: 'https://marcfriedmanportfolio.com/free-website-analyzer/',
+    url: 'https://www.marcfriedmanportfolio.com/free-website-analyzer/',
     type: 'website',
   },
   twitter: {

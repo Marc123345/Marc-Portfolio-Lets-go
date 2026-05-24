@@ -13,7 +13,7 @@ const toolSchema = {
   name: 'Free GEO Audit',
   applicationCategory: 'BusinessApplication',
   operatingSystem: 'All',
-  url: 'https://marcfriedmanportfolio.com/free-geo-audit',
+  url: 'https://www.marcfriedmanportfolio.com/free-geo-audit',
   offers: {
     '@type': 'Offer',
     price: '0',
@@ -24,7 +24,7 @@ const toolSchema = {
   provider: {
     '@type': 'Person',
     name: 'Marc Friedman',
-    url: 'https://marcfriedmanportfolio.com',
+    url: 'https://www.marcfriedmanportfolio.com',
   },
 };
 

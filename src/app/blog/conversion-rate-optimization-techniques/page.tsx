@@ -4,7 +4,7 @@ import BlogCRO from '@/pages-ported/blog/conversion-rate-optimization-techniques
 const title = '7 Conversion Rate Optimization Techniques That Actually Move the Number';
 const description =
   'Seven tested CRO patterns and the situations they apply to. Specific changes, the metrics they move, and how to know whether they work for your site.';
-const url = 'https://marcfriedmanportfolio.com/blog/conversion-rate-optimization-techniques/';
+const url = 'https://www.marcfriedmanportfolio.com/blog/conversion-rate-optimization-techniques/';
 
 export const metadata: Metadata = {
   title,

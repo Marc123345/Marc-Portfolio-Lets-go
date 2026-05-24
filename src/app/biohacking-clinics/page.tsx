@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description:
     'Custom React websites for biohacking studios and performance optimization clinics. 14-day delivery. Free Google Business setup and 3 months of SEO included.',
   alternates: {
-    canonical: 'https://www.marcfriedmanportfolio.com/biohacking-clinics',
+    canonical: 'https://www.marcfriedmanportfolio.com/biohacking-clinics/',
   },
   openGraph: {
     title: 'Web Design for Biohacking Studios & Performance Clinics | Marc Friedman',

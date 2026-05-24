@@ -21,19 +21,19 @@ export default function MobileFirstDesignPrinciplesPage() {
     "author": {
       "@type": "Person",
       "name": "Marc Friedman",
-      "url": "https://marcfriedmanportfolio.com/about"
+      "url": "https://www.marcfriedmanportfolio.com/about"
     },
     "publisher": {
       "@type": "Organization",
       "name": "Marc Friedman Design & Development",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://marcfriedmanportfolio.com/apple-touch-icon.png"
+        "url": "https://www.marcfriedmanportfolio.com/apple-touch-icon.png"
       }
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://marcfriedmanportfolio.com/blog/mobile-first-design-principles"
+      "@id": "https://www.marcfriedmanportfolio.com/blog/mobile-first-design-principles"
     }
   };
 
