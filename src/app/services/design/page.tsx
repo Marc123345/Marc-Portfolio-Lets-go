@@ -2,19 +2,19 @@ import type { Metadata } from 'next';
 import DesignPage from '@/pages-ported/services/DesignPage';
 
 export const metadata: Metadata = {
-  title: { absolute: 'UI/UX Design Services | User-Centered Design & Prototyping | Tel Aviv' },
-  description: 'Professional UI/UX design services. Wireframing, prototyping, design systems, and user research. Boost conversions with data-driven, user-centered design.',
+  title: { absolute: 'Professional UI UX Design Services | UX Design Consultancy | Marc Friedman' },
+  description: 'Professional UI UX design services and UX design consultancy. UI UX web design services, design systems, prototyping, and user research from a custom UI UX design company in Tel Aviv.',
   alternates: { canonical: 'https://www.marcfriedmanportfolio.com/services/design/' },
   openGraph: {
-    title: 'UI/UX Design Services | User-Centered Design & Prototyping | Tel Aviv',
-    description: 'Professional UI/UX design services. Wireframing, prototyping, design systems, and user research. Boost conversions with data-driven, user-centered design.',
+    title: 'Professional UI UX Design Services | UX Design Consultancy | Marc Friedman',
+    description: 'Professional UI UX design services and UX design consultancy. UI UX web design services, design systems, prototyping, and user research from a custom UI UX design company in Tel Aviv.',
     url: 'https://www.marcfriedmanportfolio.com/services/design/',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'UI/UX Design Services | User-Centered Design & Prototyping | Tel Aviv',
-    description: 'Professional UI/UX design services. Wireframing, prototyping, design systems, and user research. Boost conversions with data-driven, user-centered design.',
+    title: 'Professional UI UX Design Services | UX Design Consultancy | Marc Friedman',
+    description: 'Professional UI UX design services and UX design consultancy. UI UX web design services, design systems, prototyping, and user research from a custom UI UX design company in Tel Aviv.',
   },
 };
 

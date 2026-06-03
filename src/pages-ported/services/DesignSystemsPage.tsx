@@ -502,7 +502,7 @@ export default function DesignSystemsPage() {
                 )}
               </div>
               <Link
-                href="/work/case-studies/sentinel-ds"
+                href="/work/case-studies/sentinel-ds/"
                 className="inline-flex items-center gap-2 text-white font-medium hover:text-[#A3D1FF] transition-colors border-b border-white/30 hover:border-[#A3D1FF] pb-1"
               >
                 Read the case study
@@ -559,7 +559,7 @@ export default function DesignSystemsPage() {
                 )}
               </div>
               <a
-                href="/work/case-studies/fleet-management"
+                href="/work/case-studies/fleet-management/"
                 className="inline-flex items-center gap-2 text-white font-medium hover:text-[#A3D1FF] transition-colors"
               >
                 Read full case study
@@ -688,7 +688,7 @@ export default function DesignSystemsPage() {
             onClick={() => router.push('/contact')}
             className="mr_btn mr_btn_primary group relative overflow-hidden"
           >
-            <span className="relative z-10">Start Your Project</span>
+            <span className="relative z-10">Book a Call</span>
             <div className="absolute inset-0 bg-white transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300"></div>
             <ArrowRight className="ml-2 w-5 h-5 relative z-10 group-hover:rotate-45 transition-transform duration-300" />
           </button>

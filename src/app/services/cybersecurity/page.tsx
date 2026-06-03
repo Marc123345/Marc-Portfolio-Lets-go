@@ -2,19 +2,19 @@ import type { Metadata } from 'next';
 import CybersecurityPage from '@/pages-ported/services/CybersecurityPage';
 
 export const metadata: Metadata = {
-  title: { absolute: 'Website Security & Cybersecurity Services | OWASP Audits | Marc Friedman' },
-  description: 'Cybersecurity assessment and secure development. OWASP Top 10 analysis, penetration testing, GDPR compliance, 24/7 monitoring. Protect your web assets.',
+  title: { absolute: 'Cybersecurity Assessment Services | IT Security Assessments & Penetration Testing | Marc Friedman' },
+  description: 'Cybersecurity assessment services, IT security assessments, cyber security audit and compliance, and cyber security penetration testing services. OWASP, GDPR, SOC 2 ready.',
   alternates: { canonical: 'https://www.marcfriedmanportfolio.com/services/cybersecurity/' },
   openGraph: {
-    title: 'Website Security & Cybersecurity Services | OWASP Audits | Marc Friedman',
-    description: 'Cybersecurity assessment and secure development. OWASP Top 10 analysis, penetration testing, GDPR compliance, 24/7 monitoring. Protect your web assets.',
+    title: 'Cybersecurity Assessment Services | IT Security Assessments & Penetration Testing | Marc Friedman',
+    description: 'Cybersecurity assessment services, IT security assessments, cyber security audit and compliance, and cyber security penetration testing services. OWASP, GDPR, SOC 2 ready.',
     url: 'https://www.marcfriedmanportfolio.com/services/cybersecurity/',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Website Security & Cybersecurity Services | OWASP Audits | Marc Friedman',
-    description: 'Cybersecurity assessment and secure development. OWASP Top 10 analysis, penetration testing, GDPR compliance, 24/7 monitoring. Protect your web assets.',
+    title: 'Cybersecurity Assessment Services | IT Security Assessments & Penetration Testing | Marc Friedman',
+    description: 'Cybersecurity assessment services, IT security assessments, cyber security audit and compliance, and cyber security penetration testing services. OWASP, GDPR, SOC 2 ready.',
   },
 };
 

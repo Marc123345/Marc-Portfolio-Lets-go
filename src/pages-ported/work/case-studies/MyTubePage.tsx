@@ -116,7 +116,7 @@ const config: CaseStudyConfig = {
 
   next: {
     title: 'Videoleap',
-    url: '/work/case-studies/videoleap',
+    url: '/work/case-studies/videoleap/',
     image: 'https://i.imgur.com/SubVB9A.jpeg',
   },
 };

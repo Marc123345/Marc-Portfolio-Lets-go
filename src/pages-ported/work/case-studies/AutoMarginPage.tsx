@@ -121,7 +121,7 @@ const config: CaseStudyConfig = {
 
   next: {
     title: 'Fleet Management',
-    url: '/work/case-studies/fleet-management',
+    url: '/work/case-studies/fleet-management/',
     image: 'https://i.imgur.com/EwgHAuK.png',
   },
 };

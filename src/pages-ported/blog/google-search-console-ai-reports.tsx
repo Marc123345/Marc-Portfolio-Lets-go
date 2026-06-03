@@ -439,7 +439,7 @@ export default function GoogleSearchConsoleAIReports() {
                 I can configure your Search Console AI reports, build a monthly reporting template around your actual business goals (leads, revenue, not just clicks), and translate the findings into a growth roadmap you can check in 10 minutes per week.
               </p>
               <Link
-                href="/contact"
+                href="/contact/"
                 className="inline-flex items-center gap-2 bg-[#A3D1FF] hover:bg-[#92bce6] text-black px-6 py-3 transition-colors font-medium"
               >
                 Get a GSC AI Audit
@@ -472,10 +472,10 @@ export default function GoogleSearchConsoleAIReports() {
                   <p className="text-white text-sm mt-1">7 proven techniques for 2025</p>
                 </Link>
                 <Link
-                  href="/contact"
+                  href="/contact/"
                   className="p-4 bg-[#1b1b1b] border border-white/10 hover:border-[#A3D1FF] transition-colors group"
                 >
-                  <h4 className="text-white font-medium group-hover:text-[#A3D1FF] transition-colors">Get in Touch</h4>
+                  <h4 className="text-white font-medium group-hover:text-[#A3D1FF] transition-colors">Book a Call</h4>
                   <p className="text-white text-sm mt-1">Discuss your project</p>
                 </Link>
               </div>

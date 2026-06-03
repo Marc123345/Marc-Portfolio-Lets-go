@@ -237,7 +237,7 @@ export default function AboutPage() {
         <div className="absolute top-1/3 left-[-10%] w-[700px] h-[700px] bg-[#A3D1FF]/8 rounded-full blur-[140px] pointer-events-none" />
 
         <div className="max-w-7xl mx-auto relative">
-          <ChapterMarker number="Profile · Vol. 01" label="Full-Stack Designer · 2026" />
+          <ChapterMarker number="Profile · Vol. 01" label="Senior Full-Stack Developer · Tel Aviv" />
 
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
@@ -259,8 +259,17 @@ export default function AboutPage() {
             transition={{ duration: 0.7, delay: 0.3 }}
             className="text-xl md:text-2xl text-white/70 max-w-2xl leading-snug"
           >
-            A designer and developer who builds websites that bring in
-            customers — not just compliments.
+            Freelance full stack developer and designer based in Tel Aviv, Israel —
+            building websites that bring in customers, not just compliments.
+          </motion.p>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.45 }}
+            className="mt-6 text-[11px] font-mono uppercase tracking-[0.3em] text-white/40"
+          >
+            Full stack developer Tel Aviv · Web developer Israel · Remote worldwide
           </motion.p>
         </div>
       </section>
@@ -303,15 +312,21 @@ export default function AboutPage() {
                   >
                     I
                   </span>
-                  &apos;m Marc. I design and build websites that bring in customers —
-                  not just compliments. Over the past 6 years, I&apos;ve shipped{' '}
+                  &apos;m Marc — a senior web developer and freelance full stack
+                  developer based in Tel Aviv, Israel. I design and build websites
+                  that bring in customers, not just compliments. Over the past 6
+                  years, as a full stack web developer working hands-on with React,
+                  Next.js, Node, and Postgres, I&apos;ve shipped{' '}
                   <strong className="text-white">50+ projects</strong> for startups,
                   agencies, and brands across the US, Europe, and Africa.
                 </p>
                 <p>
                   Every one of them was designed, coded, and launched by me
-                  personally. No handoffs. No junior devs. No project managers playing
-                  telephone.
+                  personally. As a fullstack developer covering design, frontend,
+                  backend, and DevOps in one set of hands, I&apos;m the rare fullstack
+                  web developer who actually ships the brand identity too. No
+                  handoffs. No junior devs. No project managers playing telephone —
+                  just one web developer in Israel, focused on your build.
                 </p>
               </motion.div>
             </div>
@@ -766,7 +781,7 @@ export default function AboutPage() {
 
           <div className="flex flex-wrap items-center gap-6 mb-16">
             <Link
-              href="/contact"
+              href="/contact/"
               className="inline-flex items-center gap-3 bg-white text-black font-medium px-8 py-4 hover:bg-[#A3D1FF] transition-colors group"
             >
               <Mail className="w-4 h-4" />
@@ -774,7 +789,7 @@ export default function AboutPage() {
               <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
             </Link>
             <Link
-              href="/work"
+              href="/work/"
               className="inline-flex items-center gap-2 text-white font-medium px-8 py-4 border border-white/20 hover:border-white/60 transition-colors group"
             >
               See the Work

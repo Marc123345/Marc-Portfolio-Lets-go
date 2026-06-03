@@ -108,7 +108,7 @@ const config: CaseStudyConfig = {
 
   next: {
     title: 'Sentinel DS',
-    url: '/work/case-studies/sentinel-ds',
+    url: '/work/case-studies/sentinel-ds/',
     image:
       'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%204%20-%2016_9.png?updatedAt=1767539579010',
   },

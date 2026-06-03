@@ -321,7 +321,7 @@ font-size: clamp(1rem, 0.5rem + 2vw, 1.5rem);`}
               onClick={() => router.push('/contact')}
               className="mr_btn mr_btn_primary inline-flex items-center gap-2"
             >
-              <span>Start Your Project</span>
+              <span>Book a Call</span>
               <ArrowRight className="w-5 h-5" />
             </button>
           </MagneticButton>

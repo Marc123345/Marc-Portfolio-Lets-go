@@ -29,6 +29,7 @@ const entries: Entry[] = [
   { path: 'lab', priority: 0.6 },
   { path: 'free-website-analyzer', priority: 0.9 },
   { path: 'free-geo-audit', priority: 0.9 },
+  { path: 'resources', priority: 0.8 },
   { path: 'longevity-clinics', priority: 0.95 },
   { path: 'biohacking-clinics', priority: 0.95 },
 
@@ -50,6 +51,7 @@ const entries: Entry[] = [
   { path: 'work/case-studies/sentinel-ds', priority: 0.8 },
 
   // Blog posts
+  { path: 'blog/css-eating-javascript-lunch', priority: 0.8 },
   { path: 'blog/biohacking-clinic-web-design-miami', priority: 0.8 },
   { path: 'blog/context-driven-design-decisions', priority: 0.8 },
   { path: 'blog/ai-ready-design-systems', priority: 0.8 },

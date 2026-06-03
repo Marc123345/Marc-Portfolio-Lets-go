@@ -738,7 +738,7 @@ export default function ContextDrivenDesignDecisionsPage() {
                   onClick={() => router.push('/contact')}
                   className="mr_btn mr_btn_primary inline-flex items-center gap-2"
                 >
-                  <span>Get in Touch</span>
+                  <span>Book a Call</span>
                   <TrendingUp className="w-5 h-5" />
                 </button>
               </MagneticButton>

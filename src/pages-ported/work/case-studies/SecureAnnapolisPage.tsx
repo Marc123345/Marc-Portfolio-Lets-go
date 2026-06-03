@@ -130,7 +130,7 @@ const config: CaseStudyConfig = {
 
   next: {
     title: 'Tar & Chip Paving',
-    url: '/work/case-studies/tar-chip-paving',
+    url: '/work/case-studies/tar-chip-paving/',
     image:
       'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%204%20-%2016x9(5).png?updatedAt=1767539578933',
   },

@@ -688,7 +688,7 @@ export default function AINativeUXPersonalizationPage() {
                 I specialize in designing and developing intelligent, adaptive interfaces that leverage cutting-edge AI while maintaining ethical standards and user control. Let's create something extraordinary together.
               </p>
               <Link
-                href="/contact"
+                href="/contact/"
                 className="inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 transition-colors font-medium"
               >
                 Start Your AI-Native Project

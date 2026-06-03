@@ -181,11 +181,11 @@ export default function CTASection() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-3 bg-white text-black font-medium px-6 py-3 hover:bg-[#A3D1FF] transition-colors group"
                 >
-                  Book the 30-min call
+                  Book a Call
                   <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                 </a>
                 <Link
-                  href="/work"
+                  href="/work/"
                   className="inline-flex items-center gap-3 text-white font-medium border-b border-white/30 hover:border-[#A3D1FF] hover:text-[#A3D1FF] transition-colors py-1"
                 >
                   See the work first

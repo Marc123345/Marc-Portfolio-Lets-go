@@ -17,13 +17,14 @@ export default function AIIntegrationPage() {
   return (
     <>
       <ServiceMasthead
-        kicker="Service · AI Integration"
+        kicker="Service · AI Integration Services"
         title="AI That"
         italicWord="Actually Ships."
         volumeNumber="04"
         tagline={
           <>
-            Real AI integrations into real products — not demos. Measurable outcomes,
+            AI integration services for real products — not demos. OpenAI integration,
+            AI chatbot integration, and custom LLM pipelines with measurable outcomes,
             production-ready architecture, zero hype.
           </>
         }
@@ -81,8 +82,8 @@ export default function AIIntegrationPage() {
         <div className="border-t border-white/10">
           <DeliverableRow
             number="01"
-            title="LLM + RAG Integration"
-            description="Chat interfaces, document Q&A, intelligent search — grounded in your data, with citations, guardrails, and evaluation pipelines."
+            title="OpenAI Integration + RAG"
+            description="OpenAI integration for chat interfaces, document Q&A, and intelligent search — grounded in your data, with citations, guardrails, and evaluation pipelines. Same pattern with Anthropic, Google, or local models."
           />
           <DeliverableRow
             number="02"
@@ -91,8 +92,8 @@ export default function AIIntegrationPage() {
           />
           <DeliverableRow
             number="03"
-            title="Agents + Tool Use"
-            description="Purpose-built agents that take action — not just generate text. With proper scoping, logging, and human-in-the-loop checkpoints."
+            title="AI Chatbot Integration + Agents"
+            description="AI chatbot integration done right — purpose-built chatbots and agents that take action, not just generate text. With proper scoping, logging, and human-in-the-loop checkpoints."
           />
           <DeliverableRow
             number="04"
@@ -176,7 +177,7 @@ export default function AIIntegrationPage() {
         <WorkRow
           items={[
             {
-              href: '/work/case-studies/ilight',
+              href: '/work/case-studies/ilight/',
               title: 'iLight Care',
               blurb: 'AI mental health companion with grounded responses and clinician safety checks.',
               image:
@@ -184,7 +185,7 @@ export default function AIIntegrationPage() {
               tags: ['LLM', 'Healthcare', 'RAG'],
             },
             {
-              href: '/work/case-studies/videoleap',
+              href: '/work/case-studies/videoleap/',
               title: 'Videoleap',
               blurb: 'AI-assisted video editing flows with personalized template recommendations.',
               image: 'https://i.imgur.com/SubVB9A.jpeg',
@@ -198,7 +199,7 @@ export default function AIIntegrationPage() {
       <ServiceColophon
         headline="Ship AI your"
         italicHeadline="users actually use."
-        lead="Book a call and we'll scope your AI feature properly — with a plan to ship it, not a slide to admire it."
+        lead="Book a call and we'll scope your AI integration services properly — OpenAI integration, AI chatbot integration, or custom pipelines — with a plan to ship it, not a slide to admire it."
       />
     </>
   );

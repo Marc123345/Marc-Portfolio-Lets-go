@@ -328,7 +328,7 @@ function HeroSection() {
             </a>
 
             <Link
-              href="/work"
+              href="/work/"
               className="inline-flex items-center gap-2 border-b border-white/25 hover:border-[#A3D1FF] hover:text-[#A3D1FF] transition-colors pb-0.5"
               style={{ fontFamily: 'var(--font-body)', fontSize: '14px', fontWeight: 400, color: 'rgba(255,255,255,0.70)' }}
             >

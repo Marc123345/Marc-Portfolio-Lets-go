@@ -28,7 +28,7 @@ const featured: Project[] = [
     image:
       'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%204%20-%2016x9.png?updatedAt=1767539579710',
     liveUrl: 'https://www.binnsmediagroup.com',
-    caseStudyUrl: '/work/case-studies/binns-media',
+    caseStudyUrl: '/work/case-studies/binns-media/',
     stats: [
       { value: '98', label: 'Lighthouse' },
       { value: '4x', label: 'Engagement' },
@@ -44,7 +44,7 @@ const featured: Project[] = [
     image:
       'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%201%20-%201x1(1).png?updatedAt=1767539579782',
     liveUrl: 'https://untappedafrica.co.za',
-    caseStudyUrl: '/work/case-studies/untapped-africa',
+    caseStudyUrl: '/work/case-studies/untapped-africa/',
     stats: [
       { value: '500k+', label: 'People' },
       { value: '08', label: 'Countries' },
@@ -59,7 +59,7 @@ const featured: Project[] = [
       'Bold brand-first digital presence for a social marketing agency connecting brands with real audiences.',
     image: 'https://ik.imagekit.io/qcvroy8xpd/image%201%20(5).png',
     liveUrl: 'https://www.h2hsocialmarketing.com/',
-    caseStudyUrl: '/work/case-studies/h2h-marketing',
+    caseStudyUrl: '/work/case-studies/h2h-marketing/',
     stats: [
       { value: '100%', label: 'Custom' },
       { value: '<2s', label: 'Load' },
@@ -75,7 +75,7 @@ const featured: Project[] = [
     image:
       'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%204%20-%2016_9.png?updatedAt=1767539579010',
     liveUrl: 'https://pavinglead.com/',
-    caseStudyUrl: '/work/case-studies/paving-leads',
+    caseStudyUrl: '/work/case-studies/paving-leads/',
     stats: [
       { value: '#1', label: 'Google' },
       { value: '300%', label: 'Traffic' },
@@ -89,7 +89,7 @@ const featured: Project[] = [
     blurb:
       'Real-time dealer analytics platform. Dealerships saw 35% faster decisions and higher margins.',
     image: 'https://ik.imagekit.io/qcvroy8xpd/1732717492455.jpeg',
-    caseStudyUrl: '/work/case-studies/automarginx',
+    caseStudyUrl: '/work/case-studies/automarginx/',
     stats: [
       { value: '35%', label: 'Decisions' },
       { value: 'Live', label: 'Telemetry' },
@@ -105,7 +105,7 @@ const featured: Project[] = [
     image:
       'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%201%20-%201x1(5).png?updatedAt=1767539579818',
     liveUrl: 'https://www.ilight.care',
-    caseStudyUrl: '/work/case-studies/ilight',
+    caseStudyUrl: '/work/case-studies/ilight/',
     stats: [
       { value: '6wk', label: 'Vision→MVP' },
       { value: 'LLM', label: 'Grounded' },
@@ -120,7 +120,7 @@ const featured: Project[] = [
       "Commanding digital presence for one of Africa's leading research and consultancy firms.",
     image: 'https://ik.imagekit.io/qcvroy8xpd/image%202%20(1).png',
     liveUrl: 'https://askafrica.co.za/',
-    caseStudyUrl: '/work/case-studies/ask-africa',
+    caseStudyUrl: '/work/case-studies/ask-africa/',
     stats: [
       { value: '100%', label: 'Custom' },
       { value: 'Pan', label: 'African' },
@@ -136,7 +136,7 @@ const featured: Project[] = [
     image:
       'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%201%20-%201x1(3).png?updatedAt=1767539579776',
     liveUrl: 'https://b2b.fandc.co.za',
-    caseStudyUrl: '/work/case-studies/friedman-cohen',
+    caseStudyUrl: '/work/case-studies/friedman-cohen/',
     stats: [
       { value: '100+', label: 'Years' },
       { value: '4.4', label: 'Google' },
@@ -152,7 +152,7 @@ const featured: Project[] = [
     image:
       'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%201%20-%201x1(2).png?updatedAt=1767539579194',
     liveUrl: 'https://www.asecureannapolislocksmith.com',
-    caseStudyUrl: '/work/case-studies/secure-annapolis',
+    caseStudyUrl: '/work/case-studies/secure-annapolis/',
     stats: [
       { value: '+150%', label: 'Leads' },
       { value: 'Top 3', label: 'Local' },
@@ -168,7 +168,7 @@ const featured: Project[] = [
     image:
       'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%204%20-%2016x9(5).png?updatedAt=1767539578933',
     liveUrl: 'https://cumberlandtarchip.org/',
-    caseStudyUrl: '/work/case-studies/tar-chip-paving',
+    caseStudyUrl: '/work/case-studies/tar-chip-paving/',
     stats: [
       { value: 'Bento', label: 'Layout' },
       { value: 'Mobile', label: 'First' },
@@ -183,7 +183,7 @@ const featured: Project[] = [
       "Olympic champion's swim clinics platform with self-serve booking and clinic scheduling.",
     image: 'https://i.imgur.com/ApfYPlH.jpg',
     liveUrl: 'https://chadleclosswimming.com',
-    caseStudyUrl: '/work/case-studies/chad-le-clos',
+    caseStudyUrl: '/work/case-studies/chad-le-clos/',
     stats: [
       { value: 'OLY', label: 'Champion' },
       { value: 'Live', label: 'Bookings' },
@@ -197,7 +197,7 @@ const featured: Project[] = [
     blurb:
       'Enterprise fleet platform with real-time tracking and predictive maintenance.',
     image: 'https://i.imgur.com/EwgHAuK.png',
-    caseStudyUrl: '/work/case-studies/fleet-management',
+    caseStudyUrl: '/work/case-studies/fleet-management/',
     stats: [
       { value: '500+', label: 'Vehicles' },
       { value: '35%', label: 'Cost ↓' },
@@ -211,7 +211,7 @@ const featured: Project[] = [
     blurb:
       'Video metadata management with AI-powered insights and workflow automation.',
     image: 'https://i.imgur.com/QNHXpzT.jpeg',
-    caseStudyUrl: '/work/case-studies/mytube',
+    caseStudyUrl: '/work/case-studies/mytube/',
     stats: [
       { value: 'AI', label: 'Powered' },
       { value: 'Fast', label: 'Metadata' },
@@ -225,7 +225,7 @@ const featured: Project[] = [
     blurb:
       'AI-powered video editing platform — redesigned onboarding, editor, and template flows.',
     image: 'https://i.imgur.com/SubVB9A.jpeg',
-    caseStudyUrl: '/work/case-studies/videoleap',
+    caseStudyUrl: '/work/case-studies/videoleap/',
     stats: [
       { value: '↑', label: 'Templates' },
       { value: '↑', label: 'Retention' },
@@ -240,7 +240,7 @@ const featured: Project[] = [
       'Cybersecurity design system. Severity scale, dual themes, 15+ AA components — drop-in React, ~1,000 LOC.',
     image: 'https://ik.imagekit.io/qcvroy8xpd/image%201%20(10).png',
     liveUrl: 'https://github.com/Marc123345/Cyber-Security-Design-System',
-    caseStudyUrl: '/work/case-studies/sentinel-ds',
+    caseStudyUrl: '/work/case-studies/sentinel-ds/',
     stats: [
       { value: '15+', label: 'Components' },
       { value: 'AA', label: 'A11y' },
@@ -508,7 +508,7 @@ export default function FeaturedWorkSection() {
             — End of spread
           </span>
           <Link
-            href="/work"
+            href="/work/"
             className="inline-flex items-center gap-3 text-white font-medium border-b border-white/30 hover:border-[#A3D1FF] hover:text-[#A3D1FF] transition-colors py-1"
           >
             View the complete archive

@@ -110,7 +110,7 @@ const config: CaseStudyConfig = {
 
   next: {
     title: 'Friedman & Cohen',
-    url: '/work/case-studies/friedman-cohen',
+    url: '/work/case-studies/friedman-cohen/',
     image:
       'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%201%20-%201x1(3).png?updatedAt=1767539579776',
   },

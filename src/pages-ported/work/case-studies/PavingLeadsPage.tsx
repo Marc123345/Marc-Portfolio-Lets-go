@@ -132,7 +132,7 @@ const config: CaseStudyConfig = {
 
   next: {
     title: 'A Secure Annapolis',
-    url: '/work/case-studies/secure-annapolis',
+    url: '/work/case-studies/secure-annapolis/',
     image:
       'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%201%20-%201x1(2).png?updatedAt=1767539579194',
   },

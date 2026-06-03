@@ -134,7 +134,7 @@ const config: CaseStudyConfig = {
 
   next: {
     title: 'iLight Care',
-    url: '/work/case-studies/ilight',
+    url: '/work/case-studies/ilight/',
     image:
       'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%201%20-%201x1(5).png?updatedAt=1767539579818',
   },

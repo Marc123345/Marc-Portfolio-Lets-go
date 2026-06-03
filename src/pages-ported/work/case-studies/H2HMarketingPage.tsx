@@ -96,12 +96,6 @@ const config: CaseStudyConfig = {
       { value: 'AA', label: 'Accessibility' },
       { value: 'All', label: 'Devices' },
     ],
-    testimonial: {
-      quote:
-        "Marc is an incredible ally. Highly responsive with quick solutions. This was a high-stakes project that did not lend itself to a template solution. He's the real deal, a true professional.",
-      author: 'Bradley Thompson',
-      role: 'Marketing Director',
-    },
   },
 
   gallery: [
@@ -114,7 +108,7 @@ const config: CaseStudyConfig = {
 
   next: {
     title: 'Ask Africa',
-    url: '/work/case-studies/ask-africa',
+    url: '/work/case-studies/ask-africa/',
     image: 'https://ik.imagekit.io/qcvroy8xpd/image%202%20(1).png',
   },
 };

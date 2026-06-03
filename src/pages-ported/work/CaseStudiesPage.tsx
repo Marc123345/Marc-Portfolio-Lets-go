@@ -30,7 +30,7 @@ export default function CaseStudiesPage() {
           {studies.map((s) => (
             <li key={s.slug}>
               <Link
-                href={`/work/case-studies/${s.slug}`}
+                href={`/work/case-studies/${s.slug}/`}
                 className="block p-6 border border-white/10 hover:border-[#A3D1FF] hover:bg-white/5 transition-all"
               >
                 <span className="text-lg font-medium">{s.label}</span>

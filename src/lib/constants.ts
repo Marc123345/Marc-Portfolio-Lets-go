@@ -4,7 +4,7 @@ export const CALENDLY_LINK = 'https://calendly.com/marc-friedman-web-design--mee
 
 export const SOCIAL_LINKS = {
   TWITTER: 'https://twitter.com/marcfriedman',
-  LINKEDIN: 'https://linkedin.com/in/marcfriedman',
+  LINKEDIN: 'https://www.linkedin.com/in/portfolio2/',
   GITHUB: 'https://github.com/marcfriedman',
 } as const;
 

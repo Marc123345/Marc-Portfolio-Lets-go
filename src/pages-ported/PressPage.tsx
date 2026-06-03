@@ -346,7 +346,7 @@ export default function PressPage() {
             </p>
             <MagneticButton>
               <button onClick={() => router.push('/contact')} className="mr_btn mr_btn_primary">
-                <span>Start Your Project</span>
+                <span>Book a Call</span>
               </button>
             </MagneticButton>
           </motion.div>

@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from 'react';
-import { Linkedin, Calendar, Trophy, ArrowUpRight, Palette } from 'lucide-react';
+import { Linkedin, Calendar, Trophy, ArrowUpRight, Palette, Youtube, Building2 } from 'lucide-react';
 import { useAppStore } from '@/stores/useAppStore';
 import { motion, AnimatePresence } from 'framer-motion';
 import ConsentBanner from '@/components/ConsentBanner';
@@ -9,6 +9,7 @@ import ConstellationMenu from '@/components/ConstellationMenu';
 import { CALENDLY_LINK } from '@/lib/constants';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
+import CalendlyBadge, { openCalendlyPopup } from '@/components/CalendlyBadge';
 
 type NavLink = {
   label: string;
@@ -136,6 +137,32 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     return () => { document.body.style.overflow = ''; };
   }, [isMenuOpen]);
 
+  // Hijack every /contact link sitewide → open Calendly popup.
+  // Single CTA goal across the portfolio without rewriting every CTA. Falls
+  // through on cmd/ctrl/middle-click (new tab) or if Calendly hasn't loaded.
+  useEffect(() => {
+    const handler = (e: MouseEvent) => {
+      if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+      const anchor = (e.target as HTMLElement)?.closest?.('a');
+      if (!anchor) return;
+      const href = anchor.getAttribute('href') || '';
+      const isContact =
+        href === '/contact' ||
+        href === '/contact/' ||
+        href.startsWith('/contact?') ||
+        href.startsWith('/contact#') ||
+        href === `${window.location.origin}/contact` ||
+        href === `${window.location.origin}/contact/`;
+      if (!isContact) return;
+      const Calendly = (window as unknown as { Calendly?: { initPopupWidget: (o: { url: string }) => void } }).Calendly;
+      if (!Calendly?.initPopupWidget) return;
+      e.preventDefault();
+      openCalendlyPopup();
+    };
+    document.addEventListener('click', handler, true);
+    return () => document.removeEventListener('click', handler, true);
+  }, []);
+
   const handleNavigation = (to: string) => {
     router.push(to);
     setMenuOpen(false);
@@ -143,8 +170,21 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
   const previewIndex = hoveredIndex ?? 0;
 
+  // Pure-landing routes opt out of the global nav/footer AND the floating
+  // Calendly badge (1:1 attention ratio — the page's own CTA is the single
+  // conversion goal).
+  const isBareLanding =
+    pathname === '/dental-audit' ||
+    pathname === '/dental-audit/' ||
+    pathname === '/youtube-assets' ||
+    pathname === '/youtube-assets/';
+  if (isBareLanding) {
+    return <>{children}</>;
+  }
+
   return (
     <div className="min-h-screen bg-black">
+      <CalendlyBadge />
       {/* Top Bar */}
       <motion.header
         ref={headerRef}
@@ -216,7 +256,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
             <div className="flex items-center gap-4 sm:gap-6 z-[70] relative">
               <Link
-                href="/contact"
+                href="/contact/"
                 className={`hidden sm:inline-flex items-center gap-2 bg-white text-black text-xs font-medium tracking-[0.12em] uppercase px-5 py-2.5 hover:bg-[#A3D1FF] transition-colors ${
                   isMenuOpen ? 'opacity-0 pointer-events-none' : ''
                 }`}
@@ -225,7 +265,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                   <span className="absolute inset-0 rounded-full bg-green-500 animate-ping opacity-60" />
                   <span className="relative w-2 h-2 rounded-full bg-green-500" />
                 </span>
-                Let&apos;s Talk
+                Book a Call
               </Link>
 
               {/* Hamburger only on mobile (NN/g #1 — desktop has inline nav) */}
@@ -334,8 +374,14 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 <a href="https://www.linkedin.com/in/portfolio2/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 flex items-center justify-center border border-white/20 text-white hover:bg-white hover:text-black transition-colors" aria-label="LinkedIn">
                   <Linkedin className="w-4 h-4" />
                 </a>
+                <a href="https://www.linkedin.com/company/105745552/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 flex items-center justify-center border border-white/20 text-white hover:bg-white hover:text-black transition-colors" aria-label="LinkedIn — Company page">
+                  <Building2 className="w-4 h-4" />
+                </a>
                 <a href="https://www.behance.net/marcfriedmanweb" target="_blank" rel="noopener noreferrer" className="w-10 h-10 flex items-center justify-center border border-white/20 text-white hover:bg-white hover:text-black transition-colors" aria-label="Behance">
                   <Palette className="w-4 h-4" />
+                </a>
+                <a href="https://www.youtube.com/@MarcFriedmanWebDesign" target="_blank" rel="noopener noreferrer" className="w-10 h-10 flex items-center justify-center border border-white/20 text-white hover:bg-white hover:text-black transition-colors" aria-label="YouTube">
+                  <Youtube className="w-4 h-4" />
                 </a>
                 <a href="https://www.awwwards.com/marc-friedman/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 flex items-center justify-center border border-white/20 text-white hover:bg-white hover:text-black transition-colors" aria-label="Awwwards">
                   <Trophy className="w-4 h-4" />
@@ -353,8 +399,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               </p>
               <ul className="space-y-3">
                 <li><Link href="/services/web-development" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Web Development</Link></li>
-                <li><Link href="/services/design" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">UI/UX Design</Link></li>
-                <li><Link href="/services/design-systems" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Design Systems</Link></li>
+                <li><Link href="/services/design/" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">UI/UX Design</Link></li>
+                <li><Link href="/services/design-systems/" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Design Systems</Link></li>
                 <li><Link href="/services/ai-integration" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">AI Integration</Link></li>
                 <li><Link href="/services/cybersecurity" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Cybersecurity</Link></li>
                 <li><Link href="/services/startup-mvp" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Startup MVP</Link></li>
@@ -380,10 +426,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                   — Work
                 </p>
                 <ul className="space-y-3">
-                  <li><Link href="/work" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">All Projects</Link></li>
-                  <li><Link href="/work/case-studies/binns-media" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Binns Media Group</Link></li>
-                  <li><Link href="/work/case-studies/untapped-africa" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Untapped Africa</Link></li>
-                  <li><Link href="/work/case-studies/automarginx" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">AutoMarginX</Link></li>
+                  <li><Link href="/work/" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">All Projects</Link></li>
+                  <li><Link href="/work/case-studies/binns-media/" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Binns Media Group</Link></li>
+                  <li><Link href="/work/case-studies/untapped-africa/" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Untapped Africa</Link></li>
+                  <li><Link href="/work/case-studies/automarginx/" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">AutoMarginX</Link></li>
                 </ul>
               </div>
               <div>
@@ -406,7 +452,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               </p>
               <ul className="space-y-3">
                 <li><Link href="/about" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">About</Link></li>
-                <li><Link href="/contact" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Contact</Link></li>
+                <li><Link href="/contact/" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Contact</Link></li>
                 <li><Link href="/press" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Press</Link></li>
                 <li><a href="mailto:marcf@marcfriedmanwebdesign.com" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Email Us</a></li>
               </ul>
@@ -422,7 +468,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               <div className="flex flex-wrap justify-center gap-x-3 gap-y-1">
                 <Link href="/privacy-policy" className="text-[10px] font-mono uppercase tracking-[0.2em] text-white/40 hover:text-[#A3D1FF] transition-colors">Privacy</Link>
                 <Link href="/terms-and-conditions" className="text-[10px] font-mono uppercase tracking-[0.2em] text-white/40 hover:text-[#A3D1FF] transition-colors">Terms</Link>
-                <a href="/accessibility-statement.html" className="text-[10px] font-mono uppercase tracking-[0.2em] text-white/40 hover:text-[#A3D1FF] transition-colors">Accessibility</a>
+                <Link href="/accessibility-statement" className="text-[10px] font-mono uppercase tracking-[0.2em] text-white/40 hover:text-[#A3D1FF] transition-colors">Accessibility</Link>
                 <Link href="/cookies-policy" className="text-[10px] font-mono uppercase tracking-[0.2em] text-white/40 hover:text-[#A3D1FF] transition-colors">Cookies</Link>
                 <Link href="/disclaimer" className="text-[10px] font-mono uppercase tracking-[0.2em] text-white/40 hover:text-[#A3D1FF] transition-colors">Disclaimer</Link>
                 <a href="/sitemap.xml" className="text-[10px] font-mono uppercase tracking-[0.2em] text-white/40 hover:text-[#A3D1FF] transition-colors">Sitemap</a>

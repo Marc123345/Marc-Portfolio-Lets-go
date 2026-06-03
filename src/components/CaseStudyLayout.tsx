@@ -518,7 +518,7 @@ export default function CaseStudyLayout({ config }: { config: CaseStudyConfig })
           </motion.h2>
           <div className="flex flex-wrap items-center gap-6">
             <Link
-              href="/contact"
+              href="/contact/"
               className="inline-flex items-center gap-3 bg-white text-black font-medium px-8 py-4 hover:bg-[#A3D1FF] transition-colors group"
             >
               <Mail className="w-4 h-4" />
@@ -526,7 +526,7 @@ export default function CaseStudyLayout({ config }: { config: CaseStudyConfig })
               <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
             </Link>
             <Link
-              href="/work"
+              href="/work/"
               className="inline-flex items-center gap-2 text-white font-medium border border-white/20 hover:border-white/60 px-8 py-4 transition-colors"
             >
               See all cases

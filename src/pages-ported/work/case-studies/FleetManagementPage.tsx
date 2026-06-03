@@ -124,7 +124,7 @@ const config: CaseStudyConfig = {
 
   next: {
     title: 'MyTube',
-    url: '/work/case-studies/mytube',
+    url: '/work/case-studies/mytube/',
     image: 'https://i.imgur.com/QNHXpzT.jpeg',
   },
 };

@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
 import { Oswald, Poppins } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import { AppProviders } from "@/providers/AppProviders";
 import Layout from "@/components/Layout";
 import SiteLoader from "@/components/SiteLoader";
+
+const GA_MEASUREMENT_ID = "G-CV8EEZJLCW";
 
 const oswald = Oswald({
   variable: "--font-oswald",
@@ -52,6 +55,15 @@ export const metadata: Metadata = {
     images: ["/og-image.jpg"],
   },
   robots: { index: true, follow: true },
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/favicon-96x96.png', sizes: '96x96', type: 'image/png' },
+    ],
+    apple: { url: '/apple-touch-icon.png', sizes: '180x180' },
+  },
+  manifest: '/site.webmanifest',
 };
 
 export default function RootLayout({
@@ -67,10 +79,30 @@ export default function RootLayout({
            up form first paint by 150–400ms on mobile. */}
         <link rel="preconnect" href="https://form.jotform.com" />
         <link rel="preconnect" href="https://cdn.jotfor.ms" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://www.jotform.com" />
         <link rel="dns-prefetch" href="https://form.jotform.com" />
         <link rel="dns-prefetch" href="https://cdn.jotfor.ms" />
+        <link rel="dns-prefetch" href="https://www.jotform.com" />
       </head>
       <body className="min-h-screen bg-black text-white antialiased">
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="ga-init" strategy="afterInteractive">
+          {`window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', '${GA_MEASUREMENT_ID}');`}
+        </Script>
+        <Script
+          src="https://plausible.io/js/pa-cJaHKLdcf_juKwU38ajEk.js"
+          strategy="afterInteractive"
+        />
+        <Script id="plausible-init" strategy="afterInteractive">
+          {`window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+plausible.init()`}
+        </Script>
         <SiteLoader />
         <AppProviders>
           <Layout>{children}</Layout>

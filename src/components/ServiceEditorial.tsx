@@ -30,68 +30,24 @@ export function ChapterMarker({ number, label }: { number: string; label: string
 */
 export function KineticWord({
   word,
-  delay = 0,
+  // delay and italic kept for API compatibility with callers
+  delay: _delay = 0,
   italic = false,
 }: {
   word: string;
   delay?: number;
   italic?: boolean;
 }) {
+  // Plain text rendering \u2014 no entrance animation. The previous
+  // per-character mask animation SSR'd a translateY(105%) initial state,
+  // which left the text pushed below the visible mask whenever the
+  // framer-motion animation didn't run (prefers-reduced-motion, slow JS,
+  // hydration race) \u2014 appearing as "cut off" hero text. Visibility is
+  // non-negotiable; the entrance animation was decorative.
   if (italic) {
-    return (
-      <span
-        className="inline-block overflow-hidden italic font-light"
-        style={{
-          paddingLeft: '0.08em',
-          paddingRight: '0.04em',
-          paddingTop: '0.15em',
-          paddingBottom: '0.1em',
-          marginTop: '-0.15em',
-          marginBottom: '-0.1em',
-          verticalAlign: 'top',
-        }}
-      >
-        <motion.span
-          initial={{ y: '105%' }}
-          animate={{ y: 0 }}
-          transition={{ duration: 0.95, delay, ease: [0.22, 1, 0.36, 1] }}
-          className="inline-block"
-        >
-          {word}
-        </motion.span>
-      </span>
-    );
+    return <span className="italic font-light">{word}</span>;
   }
-  return (
-    <span className="inline-block">
-      {word.split('').map((ch, i) => (
-        <span
-          key={i}
-          className="inline-block overflow-hidden"
-          style={{
-            paddingTop: '0.15em',
-            paddingBottom: '0.1em',
-            marginTop: '-0.15em',
-            marginBottom: '-0.1em',
-            verticalAlign: 'top',
-          }}
-        >
-          <motion.span
-            initial={{ y: '105%' }}
-            animate={{ y: 0 }}
-            transition={{
-              duration: 0.9,
-              delay: delay + i * 0.04,
-              ease: [0.22, 1, 0.36, 1],
-            }}
-            className="inline-block"
-          >
-            {ch === ' ' ? '\u00A0' : ch}
-          </motion.span>
-        </span>
-      ))}
-    </span>
-  );
+  return <>{word}</>;
 }
 
 /* ---------------- Service Masthead ---------------- */
@@ -173,14 +129,10 @@ export function ServiceMasthead({
         )}
       </div>
 
-      <div className="container-custom relative z-20 min-h-[100svh] flex flex-col justify-between pt-32 pb-10">
-        {/* Top ribbon */}
-        <motion.div
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.1 }}
-          className="flex justify-between items-start text-[10px] md:text-xs font-mono uppercase tracking-[0.3em] text-white/60"
-        >
+      <div className="container-custom relative z-20 flex flex-col justify-between gap-y-10 md:gap-y-0 md:min-h-[100svh] pt-28 md:pt-32 pb-10">
+        {/* Top ribbon — no SSR-hidden initial state; visible by default,
+           framer is decorative only. */}
+        <div className="flex justify-between items-start text-[10px] md:text-xs font-mono uppercase tracking-[0.3em] text-white/60">
           <div className="flex items-center gap-3">
             <span className="w-6 h-[1px] bg-white/40" />
             <span>Service · Vol. {volumeNumber}</span>
@@ -190,15 +142,15 @@ export function ServiceMasthead({
             <br />
             <span className="text-white/40">Est. 2018</span>
           </span>
-        </motion.div>
+        </div>
 
         {/* Title block */}
         <div className="max-w-5xl">
           <h1
-            className="text-white tracking-[-0.04em] mb-8"
+            className="text-white tracking-[-0.04em] mb-8 break-words [overflow-wrap:break-word] [hyphens:auto]"
             style={{
               fontFamily: SERIF,
-              fontSize: 'clamp(2.75rem, 8vw, 7rem)',
+              fontSize: 'clamp(1.875rem, 6.5vw, 5rem)',
               fontWeight: 400,
               lineHeight: 1.05,
             }}
@@ -211,21 +163,13 @@ export function ServiceMasthead({
             </span>
           </h1>
 
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1.1, duration: 0.7 }}
-            className="text-xl md:text-2xl text-white/75 max-w-2xl leading-snug"
-          >
+          <p className="text-xl md:text-2xl text-white/75 max-w-2xl leading-snug">
             {tagline}
-          </motion.p>
+          </p>
         </div>
 
         {/* Meta bar */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.3, duration: 0.6 }}
+        <div
           className="flex flex-wrap items-center gap-x-8 gap-y-3 pt-6 border-t border-white/10 text-[10px] md:text-xs font-mono uppercase tracking-[0.25em] text-white/60"
         >
           <span className="flex items-center gap-2 text-white">
@@ -245,7 +189,7 @@ export function ServiceMasthead({
             Start a project
             <ArrowUpRight className="w-3 h-3 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
           </Link>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
@@ -305,11 +249,7 @@ export function EditorialSection({
     >
       <div className="max-w-7xl mx-auto">
         <ChapterMarker number={chapter} label={label} />
-        <motion.h2
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-80px' }}
-          transition={{ duration: 0.9 }}
+        <h2
           className="text-white leading-[0.95] tracking-[-0.03em] mb-8 max-w-5xl"
           style={{
             fontFamily: SERIF,
@@ -324,17 +264,11 @@ export function EditorialSection({
               <em className="italic text-[#A3D1FF]">{italicTitle}</em>
             </>
           )}
-        </motion.h2>
+        </h2>
         {lead && (
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-lg md:text-xl text-white/70 max-w-3xl mb-16 leading-relaxed"
-          >
+          <p className="text-lg md:text-xl text-white/70 max-w-3xl mb-16 leading-relaxed">
             {lead}
-          </motion.p>
+          </p>
         )}
         {children}
       </div>
@@ -609,7 +543,7 @@ export function ServiceNavigator({ currentSlug }: { currentSlug: string }) {
         {/* Prev / Next big links */}
         <div className="grid md:grid-cols-2 gap-px bg-white/10 mb-12 border border-white/10">
           <Link
-            href={`/services/${prev.slug}`}
+            href={`/services/${prev.slug}/`}
             className="group bg-black hover:bg-[#0e1116] transition-colors p-6 md:p-8 flex flex-col gap-3"
           >
             <div className="flex items-center gap-3 text-[10px] font-mono uppercase tracking-[0.3em] text-white/40 group-hover:text-[#A3D1FF] transition-colors">
@@ -628,7 +562,7 @@ export function ServiceNavigator({ currentSlug }: { currentSlug: string }) {
             </h3>
           </Link>
           <Link
-            href={`/services/${next.slug}`}
+            href={`/services/${next.slug}/`}
             className="group bg-black hover:bg-[#0e1116] transition-colors p-6 md:p-8 flex flex-col gap-3 md:items-end md:text-right"
           >
             <div className="flex items-center gap-3 text-[10px] font-mono uppercase tracking-[0.3em] text-white/40 group-hover:text-[#A3D1FF] transition-colors">
@@ -670,7 +604,7 @@ export function ServiceNavigator({ currentSlug }: { currentSlug: string }) {
               return (
                 <li key={s.slug} className="border-b border-white/10 lg:border-b-0">
                   <Link
-                    href={`/services/${s.slug}`}
+                    href={`/services/${s.slug}/`}
                     className={`group block p-4 transition-colors ${
                       isActive
                         ? 'bg-[#A3D1FF]/10'
@@ -756,7 +690,7 @@ export function ServiceColophon({
         </motion.p>
         <div className="flex flex-wrap items-center gap-6 mb-16">
           <Link
-            href="/contact"
+            href="/contact/"
             className="inline-flex items-center gap-3 bg-white text-black font-medium px-8 py-4 hover:bg-[#A3D1FF] transition-colors group"
           >
             <Mail className="w-4 h-4" />

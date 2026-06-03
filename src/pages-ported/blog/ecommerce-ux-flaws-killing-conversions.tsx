@@ -720,7 +720,7 @@ export default function EcommerceUXFlawsKillingConversionsPage() {
               </p>
               <div className="flex flex-wrap gap-4">
                 <MagneticButton>
-                  <Link href="/contact" className="mr_btn mr_btn_primary">
+                  <Link href="/contact/" className="mr_btn mr_btn_primary">
                     <span>Get a Free UX Audit</span>
                   </Link>
                 </MagneticButton>

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 
 type JotformWindow = Window & {
   jotformEmbedHandler?: (sel: string, url: string) => void;
@@ -16,7 +16,6 @@ function trackFormSubmit() {
 
 export default function ContactForm() {
   const hasLoadedOnce = useRef(false);
-  const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
     const script = document.createElement('script');
@@ -59,37 +58,38 @@ export default function ContactForm() {
       trackFormSubmit();
     }
     hasLoadedOnce.current = true;
-    setLoaded(true);
   };
 
   return (
-    /* Mobile fields stack vertically — needs ~900px to fit before
-       Jotform's auto-resize handler shrinks the iframe to the
-       reported content height. Desktop fits in ~540px. Using
-       responsive min-height + responsive iframe height prevents
-       the brief clipping flash on slow mobile networks. */
-    <div className="relative min-h-[900px] md:min-h-[540px]">
-      {!loaded && (
-        <div className="absolute inset-0 flex flex-col items-center justify-center gap-4"
-          style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.08)' }}>
-          <div className="w-8 h-8 rounded-full border-2 border-t-[#A3D1FF] animate-spin"
-            style={{ borderColor: 'rgba(163,209,255,0.15)', borderTopColor: '#A3D1FF' }} />
-          <span style={{ fontSize: '0.8rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(163,209,255,0.5)' }}>
-            Loading form
-          </span>
-        </div>
-      )}
+    <div className="relative w-full h-[900px] md:h-[540px]">
+      {/* Loading skeleton sits behind the iframe — no state-based opacity
+         gating, just z-index layering. When the iframe finishes loading,
+         Jotform's own white background covers the skeleton naturally.
+         Even if the iframe takes 2-3s, users see structured shapes
+         immediately instead of empty space. */}
+      <div
+        aria-hidden
+        className="absolute inset-0 z-0 p-6 flex flex-col gap-4 bg-white"
+        style={{ pointerEvents: 'none' }}
+      >
+        <div className="h-4 w-1/3 bg-gray-200 rounded animate-pulse" />
+        <div className="h-10 w-full bg-gray-100 rounded" />
+        <div className="h-4 w-1/3 bg-gray-200 rounded animate-pulse" />
+        <div className="h-10 w-full bg-gray-100 rounded" />
+        <div className="h-4 w-1/3 bg-gray-200 rounded animate-pulse" />
+        <div className="h-24 w-full bg-gray-100 rounded" />
+        <div className="h-10 w-32 bg-gray-300 rounded mt-2" />
+      </div>
       <iframe
         id="JotFormIFrame-261231977107053"
         title="Contact Inquiry Form for Web Design & Development"
         onLoad={handleLoad}
         allow="geolocation; microphone; camera; fullscreen; payment"
         src="https://form.jotform.com/261231977107053"
-        className="w-full block border-0 h-[900px] md:h-[540px]"
-        style={{
-          opacity: loaded ? 1 : 0,
-          transition: 'opacity 0.3s ease',
-        }}
+        loading="eager"
+        fetchPriority="high"
+        className="relative z-10 w-full h-full block border-0"
+        style={{ minWidth: '100%', maxWidth: '100%', border: 'none' }}
         scrolling="no"
       />
     </div>

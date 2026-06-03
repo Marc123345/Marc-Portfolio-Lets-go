@@ -17,14 +17,15 @@ export default function StartupMVPPage() {
   return (
     <>
       <ServiceMasthead
-        kicker="Service · Startup MVP"
+        kicker="Service · Startup MVP Development"
         title="Validate"
         italicWord="In 30 Days."
         volumeNumber="03"
         tagline={
           <>
-            Ship the product that proves your thesis — fast. Built to raise a round, win
-            first users, or kill an idea before it eats your savings.
+            MVP development for startups — built to prove your thesis fast. Ship a real
+            product to raise a round, win first users, or kill an idea before it eats
+            your savings.
           </>
         }
         meta={['30-day launches', 'Investor-ready', 'React + Node + Cloud']}
@@ -76,6 +77,7 @@ export default function StartupMVPPage() {
         label="What you get"
         title="An MVP that"
         italicTitle="actually validates."
+        lead="Startup MVP development that ships in 30 days, not 6 months. Every project includes the four pillars below — scoped to prove one thing, then get out of your way."
         bg="bg-[#0a0a0a]"
       >
         <div className="border-t border-white/10">
@@ -176,7 +178,7 @@ export default function StartupMVPPage() {
         <WorkRow
           items={[
             {
-              href: '/work/case-studies/ilight',
+              href: '/work/case-studies/ilight/',
               title: 'iLight Care',
               blurb: 'Brand, website, MVP platform, and pitch deck — shipped in under 6 weeks.',
               image:
@@ -184,7 +186,7 @@ export default function StartupMVPPage() {
               tags: ['MVP', 'AI', 'Healthcare'],
             },
             {
-              href: '/work/case-studies/automarginx',
+              href: '/work/case-studies/automarginx/',
               title: 'AutoMarginX',
               blurb: 'Real-time dealer analytics MVP. Raised first round after launch.',
               image: 'https://ik.imagekit.io/qcvroy8xpd/1732717492455.jpeg',
@@ -194,11 +196,90 @@ export default function StartupMVPPage() {
         />
       </EditorialSection>
 
+      <EditorialSection
+        chapter="05"
+        label="Pricing"
+        title="Startup MVP"
+        italicTitle="development packages."
+        lead="Three ways to start, depending on where you are. All pricing is fixed up-front — no hourly billing, no scope creep, no surprise invoices."
+      >
+        <div className="grid md:grid-cols-3 gap-px bg-white/10 border border-white/10">
+          <div className="bg-black p-8 flex flex-col">
+            <div className="text-[10px] font-mono uppercase tracking-[0.3em] text-white/40 mb-4">
+              Package 01
+            </div>
+            <h3 className="text-white text-2xl mb-2" style={{ fontFamily: 'var(--font-heading)' }}>
+              Validation Sprint
+            </h3>
+            <div className="text-[#A3D1FF] text-3xl mb-6" style={{ fontFamily: 'var(--font-heading)' }}>
+              From $4,999
+            </div>
+            <p className="text-white/70 leading-relaxed mb-6">
+              Two weeks. Brand, landing page, clickable prototype. Built to test demand
+              before you build anything real.
+            </p>
+            <ul className="text-white/60 text-sm space-y-2 mt-auto">
+              <li>— Brand identity</li>
+              <li>— Marketing site</li>
+              <li>— Interactive prototype</li>
+              <li>— Waitlist + analytics</li>
+            </ul>
+          </div>
+
+          <div className="bg-black p-8 flex flex-col relative">
+            <div className="absolute top-0 right-0 bg-[#A3D1FF] text-black text-[10px] font-mono uppercase tracking-[0.2em] px-3 py-1">
+              Most Popular
+            </div>
+            <div className="text-[10px] font-mono uppercase tracking-[0.3em] text-white/40 mb-4">
+              Package 02
+            </div>
+            <h3 className="text-white text-2xl mb-2" style={{ fontFamily: 'var(--font-heading)' }}>
+              Full MVP
+            </h3>
+            <div className="text-[#A3D1FF] text-3xl mb-6" style={{ fontFamily: 'var(--font-heading)' }}>
+              From $14,999
+            </div>
+            <p className="text-white/70 leading-relaxed mb-6">
+              30 days. Production-grade MVP development for startups serious about
+              launching — built to win first users and raise a round.
+            </p>
+            <ul className="text-white/60 text-sm space-y-2 mt-auto">
+              <li>— Everything in Validation Sprint</li>
+              <li>— React + Node + Postgres build</li>
+              <li>— Auth, payments, admin</li>
+              <li>— 30-day hypercare</li>
+            </ul>
+          </div>
+
+          <div className="bg-black p-8 flex flex-col">
+            <div className="text-[10px] font-mono uppercase tracking-[0.3em] text-white/40 mb-4">
+              Package 03
+            </div>
+            <h3 className="text-white text-2xl mb-2" style={{ fontFamily: 'var(--font-heading)' }}>
+              MVP + Fundraise
+            </h3>
+            <div className="text-[#A3D1FF] text-3xl mb-6" style={{ fontFamily: 'var(--font-heading)' }}>
+              From $24,999
+            </div>
+            <p className="text-white/70 leading-relaxed mb-6">
+              For founders building an MVP for startups in active fundraising mode.
+              Product plus the materials to pitch it.
+            </p>
+            <ul className="text-white/60 text-sm space-y-2 mt-auto">
+              <li>— Everything in Full MVP</li>
+              <li>— Pitch deck + financial model</li>
+              <li>— Investor demo polish</li>
+              <li>— Post-launch growth sprint</li>
+            </ul>
+          </div>
+        </div>
+      </EditorialSection>
+
       <ServiceNavigator currentSlug="startup-mvp" />
       <ServiceColophon
         headline="Stop pitching decks."
         italicHeadline="Start shipping product."
-        lead="Book a call and we'll scope your MVP in 30 minutes. No deck, no pitch — just the shortest path from idea to signal."
+        lead="Book a call and we'll scope your startup MVP in 30 minutes. No deck, no pitch — just the shortest path from idea to signal."
       />
     </>
   );

@@ -38,6 +38,16 @@ type Post = {
 
 const posts: Post[] = [
   {
+    id: 'css-eating-javascript-lunch',
+    title: "CSS Is Eating JavaScript's Lunch",
+    excerpt:
+      "Scroll-driven animations, @starting-style, and :has() have quietly made huge chunks of UI JavaScript obsolete. A field guide to what's shippable today and what it replaces.",
+    date: 'June 2, 2026',
+    readTime: '8 min read',
+    image: 'https://ik.imagekit.io/qcvroy8xpd/8ce5c50b-8af1-4e99-b2b0-f7f29cd0abd3.avif',
+    categories: ['Development', 'CSS', 'Performance'],
+  },
+  {
     id: 'conversational-ui-chat-interfaces',
     title: 'Conversational UI: When Chat Interfaces Help — and When They Hurt — Your UX',
     excerpt:
@@ -418,7 +428,7 @@ export default function BlogPage() {
                 exit={{ opacity: 0, y: -10 }}
                 transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
               >
-                <Link href={`/blog/${hero.id}`} className="group block">
+                <Link href={`/blog/${hero.id}/`} className="group block">
                   <div className="grid lg:grid-cols-[1.3fr_1fr] gap-10 lg:gap-16 items-center">
                     {/* Image */}
                     <div className="relative aspect-[16/11] overflow-hidden bg-[#1b1b1b]">
@@ -492,7 +502,7 @@ export default function BlogPage() {
                   viewport={{ once: true, margin: '-60px' }}
                   transition={{ duration: 0.7, delay: i * 0.08 }}
                 >
-                  <Link href={`/blog/${p.id}`} className="group block">
+                  <Link href={`/blog/${p.id}/`} className="group block">
                     <div className="relative aspect-[16/10] overflow-hidden bg-[#1b1b1b] mb-6">
                       <img
                         src={p.image}
@@ -558,7 +568,7 @@ export default function BlogPage() {
                   className="border-b border-white/10 group"
                 >
                   <Link
-                    href={`/blog/${p.id}`}
+                    href={`/blog/${p.id}/`}
                     className="grid md:grid-cols-[80px_1fr_180px_160px_24px] gap-4 md:gap-8 items-center py-5 md:py-6"
                   >
                     <span

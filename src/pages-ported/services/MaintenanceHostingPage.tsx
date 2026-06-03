@@ -177,7 +177,7 @@ export default function MaintenanceHostingPage() {
         <WorkRow
           items={[
             {
-              href: '/work/case-studies/paving-leads',
+              href: '/work/case-studies/paving-leads/',
               title: 'Paving Leads',
               blurb: 'Ongoing SEO-page factory with monthly performance reviews.',
               image:
@@ -185,7 +185,7 @@ export default function MaintenanceHostingPage() {
               tags: ['Retainer', 'SEO'],
             },
             {
-              href: '/work/case-studies/binns-media',
+              href: '/work/case-studies/binns-media/',
               title: 'Binns Media Group',
               blurb: 'Flagship platform on monthly care — features shipped continuously.',
               image:

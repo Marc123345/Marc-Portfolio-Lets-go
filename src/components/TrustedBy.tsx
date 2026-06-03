@@ -504,7 +504,7 @@ export default function TrustedBy() {
               <span>Case study</span>
               <span className="w-1 h-1 rounded-full bg-white/30" />
               <Link
-                href="/work/case-studies/binns-media"
+                href="/work/case-studies/binns-media/"
                 className="text-white hover:text-[#A3D1FF] transition-colors flex items-center gap-1"
               >
                 Binns Media Group <ArrowUpRight className="w-3 h-3" />
@@ -551,10 +551,10 @@ export default function TrustedBy() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 text-center">
         <p className="text-white/70 mb-3 text-lg">Ready to add your story to the list?</p>
         <div className="flex flex-wrap justify-center gap-3">
-          <Link href="/contact" className="mr_btn mr_btn_primary">
-            <span>Start Your Project</span>
+          <Link href="/contact/" className="mr_btn mr_btn_primary">
+            <span>Book a Call</span>
           </Link>
-          <Link href="/work" className="mr_btn mr_btn_outline">
+          <Link href="/work/" className="mr_btn mr_btn_outline">
             <span>View My Work</span>
           </Link>
         </div>

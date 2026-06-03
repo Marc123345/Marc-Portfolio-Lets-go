@@ -11,6 +11,8 @@ import {
   Trophy,
   Calendar,
   ArrowUpRight,
+  Youtube,
+  Building2,
 } from 'lucide-react';
 import { CALENDLY_LINK } from '@/lib/constants';
 
@@ -30,6 +32,7 @@ const primary: NavItem[] = [
 const secondary: NavItem[] = [
   { label: 'Free Audit', to: '/free-website-analyzer' },
   { label: 'GEO Audit', to: '/free-geo-audit' },
+  { label: 'Resources', to: '/resources' },
 ];
 
 export default function ConstellationMenu({
@@ -157,11 +160,11 @@ export default function ConstellationMenu({
           {/* Footer — CTA + availability + socials */}
           <div className="border-t border-white/10 px-6 py-5">
             <Link
-              href="/contact"
+              href="/contact/"
               onClick={onClose}
               className="flex items-center justify-center gap-2 bg-white text-black font-medium py-4 hover:bg-[#A3D1FF] transition-colors mb-4"
             >
-              Let&apos;s Talk
+              Book a Call
               <ArrowUpRight className="w-4 h-4" />
             </Link>
 
@@ -184,6 +187,15 @@ export default function ConstellationMenu({
                   <Linkedin className="w-3.5 h-3.5" />
                 </a>
                 <a
+                  href="https://www.linkedin.com/company/105745552/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-9 h-9 flex items-center justify-center border border-white/20 text-white hover:bg-[#A3D1FF] hover:text-black hover:border-[#A3D1FF] transition-colors"
+                  aria-label="LinkedIn — Company page"
+                >
+                  <Building2 className="w-3.5 h-3.5" />
+                </a>
+                <a
                   href="https://www.behance.net/marcfriedmanweb"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -191,6 +203,15 @@ export default function ConstellationMenu({
                   aria-label="Behance"
                 >
                   <Palette className="w-3.5 h-3.5" />
+                </a>
+                <a
+                  href="https://www.youtube.com/@MarcFriedmanWebDesign"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-9 h-9 flex items-center justify-center border border-white/20 text-white hover:bg-[#A3D1FF] hover:text-black hover:border-[#A3D1FF] transition-colors"
+                  aria-label="YouTube"
+                >
+                  <Youtube className="w-3.5 h-3.5" />
                 </a>
                 <a
                   href="https://www.awwwards.com/marc-friedman/"

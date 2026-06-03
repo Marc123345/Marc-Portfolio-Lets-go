@@ -5,6 +5,7 @@ import FeaturedWorkSection from '@/components/home/FeaturedWorkSection';
 import GlobeSection from '@/components/home/GlobeSection';
 import ServicesArcSection from '@/components/home/ServicesArcSection';
 import AboutSection from '@/components/home/AboutSection';
+import YouTubeSection from '@/components/home/YouTubeSection';
 import FAQSection from '@/components/home/FAQSection';
 import CTASection from '@/components/home/CTASection';
 
@@ -83,6 +84,7 @@ export default function HomePage() {
       <HeroSection />
       <TrustedBy />
       <FeaturedWorkSection />
+      <YouTubeSection />
       <GlobeSection />
       <ServicesArcSection />
       <AboutSection />

@@ -14,7 +14,7 @@ const services: ArcCard[] = [
     category: 'Build',
     blurb:
       'Custom-coded React sites that load in under 2 seconds, rank on Google, and convert.',
-    href: '/services/web-development',
+    href: '/services/web-development/',
     bullets: ['React + Next.js', 'CMS + integrations', '4–12 week builds'],
   },
   {
@@ -23,7 +23,7 @@ const services: ArcCard[] = [
     category: 'Design',
     blurb:
       'Interfaces grounded in research, built to move the number that actually matters.',
-    href: '/services/design',
+    href: '/services/design/',
     bullets: ['Research → wireframe → ship', 'Conversion-focused', 'A11y AA'],
   },
   {
@@ -32,7 +32,7 @@ const services: ArcCard[] = [
     category: 'Systems',
     blurb:
       'Tokens, components, documentation. The opinionated rules that keep a product consistent.',
-    href: '/services/design-systems',
+    href: '/services/design-systems/',
     bullets: ['Audit → tokens → ship', 'Storybook + docs', 'OSS-friendly'],
   },
   {
@@ -41,7 +41,7 @@ const services: ArcCard[] = [
     category: 'Launch',
     blurb:
       'Ship the product that proves your thesis — fast. Built to raise, win first users, or kill an idea.',
-    href: '/services/startup-mvp',
+    href: '/services/startup-mvp/',
     bullets: ['30-day launches', 'Investor-ready', 'Founder-built'],
   },
   {
@@ -50,7 +50,7 @@ const services: ArcCard[] = [
     category: 'AI',
     blurb:
       'Real AI in real products — not demos. Measurable outcomes, production-ready architecture.',
-    href: '/services/ai-integration',
+    href: '/services/ai-integration/',
     bullets: ['LLM + RAG + agents', 'Evals + guardrails', 'Anthropic / OpenAI'],
   },
   {
@@ -59,7 +59,7 @@ const services: ArcCard[] = [
     category: 'Security',
     blurb:
       'Security baked into the product — not bolted on after a breach. SOC dashboards, auth, access control.',
-    href: '/services/cybersecurity',
+    href: '/services/cybersecurity/',
     bullets: ['OWASP-aware', 'SOC-grade UX', 'Pen-test friendly'],
   },
   {
@@ -68,7 +68,7 @@ const services: ArcCard[] = [
     category: 'SEO',
     blurb:
       "Pages structured for search engines AND humans — content that ranks because it answers, layouts that convert.",
-    href: '/services/seo-content-layout',
+    href: '/services/seo-content-layout/',
     bullets: ['On-page SEO', 'Conversion layouts', 'Schema.org'],
   },
   {
@@ -77,7 +77,7 @@ const services: ArcCard[] = [
     category: 'Answer Engines',
     blurb:
       'Get cited by ChatGPT, Perplexity, Claude, and Google AI Overviews. Structured content AI engines can extract.',
-    href: '/services/aeo',
+    href: '/services/aeo/',
     bullets: ['ChatGPT + Perplexity', 'Schema-first', 'Citation tracking'],
   },
   {
@@ -86,7 +86,7 @@ const services: ArcCard[] = [
     category: 'Generative Search',
     blurb:
       'Show up inside AI-generated answers across LLMs. The new SEO playbook for an AI-first search era.',
-    href: '/services/geo',
+    href: '/services/geo/',
     bullets: ['LLM-first content', 'Brand-as-entity', 'Cross-engine tracking'],
   },
   {
@@ -95,7 +95,7 @@ const services: ArcCard[] = [
     category: 'Local',
     blurb:
       'Dominate Google Maps, win the Local 3-Pack, turn your Google Business Profile into your best landing page.',
-    href: '/services/local-seo',
+    href: '/services/local-seo/',
     bullets: ['GBP optimisation', 'Local 3-Pack', 'NAP + reviews'],
   },
   {
@@ -104,7 +104,7 @@ const services: ArcCard[] = [
     category: 'Care',
     blurb:
       'Your site kept fast, secure, and online — by the same person who built it. Cloudflare-grade hosting handled.',
-    href: '/services/maintenance-hosting',
+    href: '/services/maintenance-hosting/',
     bullets: ['Same-day fixes', 'Cloudflare hosting', 'Monthly perf report'],
   },
 ];

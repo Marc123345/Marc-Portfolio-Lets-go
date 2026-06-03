@@ -375,7 +375,7 @@ export default function GoogleAlgorithmUpdate2026() {
                 Navigating Google's algorithm changes requires expertise, strategic thinking, and technical know-how. If you're struggling to maintain or improve your search rankings, I can help.
               </p>
               <Link
-                href="/contact"
+                href="/contact/"
                 className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 transition-colors font-medium"
               >
                 Get Expert SEO Help

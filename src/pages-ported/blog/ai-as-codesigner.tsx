@@ -561,7 +561,7 @@ export default function AIAsCoDesigner() {
                 Interested in exploring how AI-augmented design can transform your projects? I combine human expertise with cutting-edge AI tools to deliver exceptional results.
               </p>
               <Link
-                href="/contact"
+                href="/contact/"
                 className="inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 transition-colors font-medium"
               >
                 Start a Conversation

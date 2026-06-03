@@ -103,7 +103,7 @@ export default function LabPage() {
             <span>Auto-rotates when idle</span>
             <span>CSS · transform3d · preserve-3d</span>
             <Link
-              href="/work"
+              href="/work/"
               className="ml-auto flex items-center gap-2 text-white hover:text-[#A3D1FF] transition-colors group"
             >
               See client work

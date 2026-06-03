@@ -164,10 +164,10 @@ export default function HeroSection() {
             </p>
             <MagneticButton strength={20}>
               <Link
-                href="/contact"
+                href="/contact/"
                 className="inline-flex items-center gap-3 bg-white text-black font-medium px-6 py-3 hover:bg-[#A3D1FF] transition-colors group"
               >
-                <span>Get In Touch</span>
+                <span>Book a Call</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>
             </MagneticButton>

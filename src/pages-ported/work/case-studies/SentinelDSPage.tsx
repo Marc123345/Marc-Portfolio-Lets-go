@@ -121,7 +121,7 @@ const config: CaseStudyConfig = {
 
   next: {
     title: 'Binns Media Group',
-    url: '/work/case-studies/binns-media',
+    url: '/work/case-studies/binns-media/',
     image:
       'https://ik.imagekit.io/qcvroy8xpd/Mockup%204%20-%2016x9.png?updatedAt=1767538713061',
   },

@@ -17,14 +17,15 @@ export default function WebDevelopmentPage() {
   return (
     <>
       <ServiceMasthead
-        kicker="Service · Web Development"
+        kicker="Service · Custom Website Development"
         title="Custom"
         italicWord="Websites."
         volumeNumber="01"
         tagline={
           <>
-            Custom-coded React sites that load in under 2 seconds, rank on Google, and
-            turn strangers into customers. I&apos;ve built 50+ of them.
+            Custom website development services built on React and Next.js —
+            SEO-friendly websites that load in under 2 seconds, rank on Google, and
+            turn strangers into customers. 50+ shipped.
           </>
         }
         meta={['4–12 week builds', '50+ shipped', 'React · Next.js · Node']}
@@ -82,7 +83,7 @@ export default function WebDevelopmentPage() {
         label="What you get"
         title="Three ways"
         italicTitle="to work together."
-        lead="Most projects fit into one of these. Not sure? Book a call and we'll figure it out in 30 minutes."
+        lead="Most custom website development projects fit into one of these three packages. Not sure which is right? Book a call and we'll scope it together in 30 minutes."
         bg="bg-[#0a0a0a]"
       >
         <div className="border-t border-white/10">
@@ -138,7 +139,7 @@ export default function WebDevelopmentPage() {
           <ProcessChapter
             numeral="III."
             title="Build"
-            description="React + Next.js, clean code, fast load times, baked-in SEO. Weekly demo links so you're never in the dark."
+            description="React JS web development services done right — clean code, fast load times, and SEO-friendly website development from the first commit. Weekly demo links so you're never in the dark."
             items={[
               'Hand-coded components',
               'Core Web Vitals in the 90s',
@@ -180,7 +181,7 @@ export default function WebDevelopmentPage() {
         <WorkRow
           items={[
             {
-              href: '/work/case-studies/binns-media',
+              href: '/work/case-studies/binns-media/',
               title: 'Binns Media Group',
               blurb: 'Production-house → streaming platform. React + TypeScript + Postgres.',
               image:
@@ -188,7 +189,7 @@ export default function WebDevelopmentPage() {
               tags: ['React 18', 'TypeScript', 'Postgres'],
             },
             {
-              href: '/work/case-studies/paving-leads',
+              href: '/work/case-studies/paving-leads/',
               title: 'Paving Leads',
               blurb: 'Failing Core Web Vitals → 98 Lighthouse. Leads doubled month one.',
               image:
@@ -199,11 +200,76 @@ export default function WebDevelopmentPage() {
         />
       </EditorialSection>
 
+      {/* Chapter 05 — Specialties (SEO keyword anchors + value-add) */}
+      <EditorialSection
+        chapter="05"
+        label="Specialties"
+        title="A custom website development"
+        italicTitle="company built for the SEO age."
+        lead="Most agencies treat SEO and engineering as separate disciplines. I don't. Every project bundles web development SEO into the build — that's how a custom website development company should work in 2026."
+      >
+        <div className="grid md:grid-cols-2 gap-px bg-white/10 border border-white/10">
+          <div className="bg-black p-8">
+            <div className="text-[10px] font-mono uppercase tracking-[0.3em] text-white/40 mb-3">
+              01
+            </div>
+            <h3 className="text-white text-xl mb-3" style={{ fontFamily: 'var(--font-heading)' }}>
+              SEO-friendly website development
+            </h3>
+            <p className="text-white/70 leading-relaxed">
+              Server-rendered HTML, clean semantic markup, Core Web Vitals greens,
+              structured data, sitemap.xml, robots, canonical tags. SEO friendly website
+              development — done at the code level, not bolted on after launch.
+            </p>
+          </div>
+          <div className="bg-black p-8">
+            <div className="text-[10px] font-mono uppercase tracking-[0.3em] text-white/40 mb-3">
+              02
+            </div>
+            <h3 className="text-white text-xl mb-3" style={{ fontFamily: 'var(--font-heading)' }}>
+              React JS web development services
+            </h3>
+            <p className="text-white/70 leading-relaxed">
+              React 18, Next.js 15 App Router, TypeScript, Tailwind. Custom website
+              development services tuned for performance — static export where it fits,
+              SSR where it counts.
+            </p>
+          </div>
+          <div className="bg-black p-8">
+            <div className="text-[10px] font-mono uppercase tracking-[0.3em] text-white/40 mb-3">
+              03
+            </div>
+            <h3 className="text-white text-xl mb-3" style={{ fontFamily: 'var(--font-heading)' }}>
+              Customized web development
+            </h3>
+            <p className="text-white/70 leading-relaxed">
+              No templates, no themes, no page-builder bloat. Every component is
+              hand-coded for your business — customized web development and custom web
+              development that doesn&apos;t look like the same Webflow template as your
+              competitors.
+            </p>
+          </div>
+          <div className="bg-black p-8">
+            <div className="text-[10px] font-mono uppercase tracking-[0.3em] text-white/40 mb-3">
+              04
+            </div>
+            <h3 className="text-white text-xl mb-3" style={{ fontFamily: 'var(--font-heading)' }}>
+              Custom web design and development
+            </h3>
+            <p className="text-white/70 leading-relaxed">
+              Design and engineering by one person. No agency handoff, no scope
+              creep — custom web design and development from wireframe to production
+              under one set of hands.
+            </p>
+          </div>
+        </div>
+      </EditorialSection>
+
       <ServiceNavigator currentSlug="web-development" />
       <ServiceColophon
         headline="Let's ship something"
         italicHeadline="your competitors will resent."
-        lead="Book 30 minutes — I'll audit your current site live on the call and show you exactly what's costing you customers."
+        lead="Book 30 minutes — I'll audit your current site live on the call and show you exactly what's costing you customers in custom website development."
       />
     </>
   );

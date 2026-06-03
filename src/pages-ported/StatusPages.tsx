@@ -36,7 +36,7 @@ export function NotFoundPage() {
               Go Home
             </Link>
             <Link 
-              href="/work"
+              href="/work/"
               className="inline-flex items-center px-6 py-3 bg-[#2d3035] text-white hover:bg-[#3d4045] transition-colors"
             >
               View Portfolio
@@ -48,9 +48,9 @@ export function NotFoundPage() {
             <h3 className="text-lg font-semibold text-white mb-4">Popular Pages</h3>
             <div className="grid grid-cols-2 gap-3">
               <Link href="/services" className="text-[#A3D1FF] hover:underline">Services</Link>
-              <Link href="/work" className="text-[#A3D1FF] hover:underline">Portfolio</Link>
+              <Link href="/work/" className="text-[#A3D1FF] hover:underline">Portfolio</Link>
               <Link href="/about" className="text-[#A3D1FF] hover:underline">About</Link>
-              <Link href="/contact" className="text-[#A3D1FF] hover:underline">Contact</Link>
+              <Link href="/contact/" className="text-[#A3D1FF] hover:underline">Contact</Link>
               <Link href="/blog" className="text-[#A3D1FF] hover:underline">Blog</Link>
             </div>
           </div>

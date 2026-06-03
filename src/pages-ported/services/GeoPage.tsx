@@ -16,15 +16,15 @@ export default function GeoPage() {
   return (
     <>
       <ServiceMasthead
-        kicker="Service · Generative Engine Optimization"
+        kicker="Service · Generative AI SEO"
         title="Generative Engine"
         italicWord="Optimization."
         volumeNumber="09"
         tagline={
           <>
-            Show up inside AI-generated answers across LLMs and answer engines.
-            The new SEO playbook for an AI-first search era — written for ChatGPT,
-            Gemini, Claude, and Perplexity, not just Google.
+            Generative AI SEO that gets your brand cited inside AI-generated answers
+            across LLMs and answer engines. AI visibility SEO strategies built for
+            ChatGPT, Gemini, Claude, and Perplexity — not just Google.
           </>
         }
         meta={['LLM-first', 'Generative search', 'Brand mentions']}
@@ -57,6 +57,7 @@ export default function GeoPage() {
         label="What you get"
         title="An engine that"
         italicTitle="picks you."
+        lead="Generative AI SEO is content, entity, and authority work bundled together. Every project ships with these four pieces — AI generated content SEO, brand-as-entity infrastructure, source authority, and ongoing visibility tracking."
         bg="bg-[#0a0a0a]"
       >
         <div className="border-t border-white/10">
@@ -67,8 +68,8 @@ export default function GeoPage() {
           />
           <DeliverableRow
             number="02"
-            title="Generative-friendly content"
-            description="Long-form content with clear definitions, original data, and quotable lines. The format LLMs are statistically more likely to lift verbatim."
+            title="AI generated content for SEO + human-edited copy"
+            description="Long-form content with clear definitions, original data, and quotable lines. AI content SEO done right — AI generated content for SEO that&apos;s then human-edited for accuracy, voice, and originality. The format LLMs are statistically more likely to lift verbatim."
           />
           <DeliverableRow
             number="03"
@@ -136,11 +137,76 @@ export default function GeoPage() {
         />
       </EditorialSection>
 
+      {/* Chapter 05 — AI Visibility SEO Strategies (long-tail keyword anchors) */}
+      <EditorialSection
+        chapter="05"
+        label="Strategies"
+        title="AI visibility SEO"
+        italicTitle="strategies that work."
+        lead="Generative AI for SEO and AI SEO optimization are still being figured out by every brand in the world. Here's the four-pillar AI based SEO approach to artificial intelligence and SEO that I've found actually moves the needle — built from real testing against live LLM responses, not theory. If you're trying to learn AI SEO from the trenches, this is the playbook. SEO and generative AI aren't separate disciplines anymore."
+      >
+        <div className="grid md:grid-cols-2 gap-px bg-white/10 border border-white/10">
+          <div className="bg-black p-8">
+            <div className="text-[10px] font-mono uppercase tracking-[0.3em] text-white/40 mb-3">
+              Strategy 01
+            </div>
+            <h3 className="text-white text-xl mb-3" style={{ fontFamily: 'var(--font-heading)' }}>
+              Generative AI SEO content
+            </h3>
+            <p className="text-white/70 leading-relaxed">
+              Long-form, structured, quotable. The intersection of generative AI and SEO
+              is content LLMs can lift verbatim — clear definitions, original data, and
+              statements that read like the citation they&apos;ll become. AI generated
+              SEO content with human editorial discipline on top.
+            </p>
+          </div>
+          <div className="bg-black p-8">
+            <div className="text-[10px] font-mono uppercase tracking-[0.3em] text-white/40 mb-3">
+              Strategy 02
+            </div>
+            <h3 className="text-white text-xl mb-3" style={{ fontFamily: 'var(--font-heading)' }}>
+              Brand-as-entity infrastructure
+            </h3>
+            <p className="text-white/70 leading-relaxed">
+              Wikipedia presence, Wikidata, consistent schema.org markup, sameAs links.
+              How SEO machine learning artificial intelligence systems learn that
+              you&apos;re a real, distinct brand worth citing.
+            </p>
+          </div>
+          <div className="bg-black p-8">
+            <div className="text-[10px] font-mono uppercase tracking-[0.3em] text-white/40 mb-3">
+              Strategy 03
+            </div>
+            <h3 className="text-white text-xl mb-3" style={{ fontFamily: 'var(--font-heading)' }}>
+              Source authority for AI
+            </h3>
+            <p className="text-white/70 leading-relaxed">
+              An AI and SEO strategy that builds upstream citations — get mentioned in
+              the sites LLMs already cite. Strategic placements, original research,
+              digital PR.
+            </p>
+          </div>
+          <div className="bg-black p-8">
+            <div className="text-[10px] font-mono uppercase tracking-[0.3em] text-white/40 mb-3">
+              Strategy 04
+            </div>
+            <h3 className="text-white text-xl mb-3" style={{ fontFamily: 'var(--font-heading)' }}>
+              Cross-engine monitoring
+            </h3>
+            <p className="text-white/70 leading-relaxed">
+              SEO strategy with AI needs measurement. We test 50+ target queries
+              monthly against ChatGPT, Gemini, Claude, and Perplexity — tracking
+              brand mentions, citation positioning, and competitor share-of-voice.
+            </p>
+          </div>
+        </div>
+      </EditorialSection>
+
       <ServiceNavigator currentSlug="geo" />
       <ServiceColophon
         headline="Be the answer"
         italicHeadline="not just a result."
-        lead="Book a call — I'll run live tests against your brand in ChatGPT, Gemini, and Perplexity and show you where you stand."
+        lead="Book a call — I'll run live generative AI SEO tests against your brand in ChatGPT, Gemini, and Perplexity and show you where you stand."
       />
     </>
   );

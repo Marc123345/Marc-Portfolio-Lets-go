@@ -18,7 +18,7 @@ export default function ServiceLeadForm({ benefits }: Props) {
       <div className="grid md:grid-cols-2 gap-8 sm:gap-12">
         {/* Left Column: Benefits */}
         <div>
-          <h2 className="text-2xl sm:text-3xl font-bold text-white mb-6">Start Your Project</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold text-white mb-6">Book a Call</h2>
           <div className="space-y-8">
             <div>
               <h3 className="text-xl font-semibold text-white mb-4">Why Choose Us</h3>

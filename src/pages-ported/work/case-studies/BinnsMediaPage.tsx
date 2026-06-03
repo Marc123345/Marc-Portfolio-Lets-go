@@ -136,7 +136,7 @@ const config: CaseStudyConfig = {
 
   next: {
     title: 'Untapped Africa',
-    url: '/work/case-studies/untapped-africa',
+    url: '/work/case-studies/untapped-africa/',
     image:
       'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%201%20-%201x1(1).png?updatedAt=1767539579782',
   },

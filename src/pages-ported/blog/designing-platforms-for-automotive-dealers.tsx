@@ -273,7 +273,7 @@ export default function DesigningPlatformsForAutomotiveDealersPage() {
               onClick={() => router.push('/contact')}
               className="mr_btn mr_btn_primary inline-flex items-center gap-2"
             >
-              <span>Start Your Project</span>
+              <span>Book a Call</span>
               <ArrowRight className="w-5 h-5" />
             </button>
           </MagneticButton>

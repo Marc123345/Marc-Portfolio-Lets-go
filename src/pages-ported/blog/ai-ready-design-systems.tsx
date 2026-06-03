@@ -712,7 +712,7 @@ export function validateComponent(tree) {
                 I specialize in building design systems that work seamlessly with AI tools while maintaining brand consistency. Let's discuss how to evolve your system for the AI-assisted development workflow.
               </p>
               <Link
-                href="/contact"
+                href="/contact/"
                 className="inline-flex items-center gap-2 bg-[#A3D1FF] text-black px-8 py-3 font-semibold hover:bg-[#8BB8E8] transition-colors"
               >
                 Get in Touch

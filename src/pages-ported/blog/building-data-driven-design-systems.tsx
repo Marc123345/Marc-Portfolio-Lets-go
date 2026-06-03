@@ -272,21 +272,21 @@ export default function BuildingDataDrivenDesignSystemsPage() {
               <h4 className="text-lg font-semibold text-white mb-4">Explore More Resources</h4>
               <div className="grid md:grid-cols-3 gap-4">
                 <Link 
-                  href="/services/design" 
+                  href="/services/design/" 
                   className="text-[#A3D1FF] hover:text-white transition-colors"
                   title="Professional UI/UX design services"
                 >
                   UI/UX Design Services →
                 </Link>
                 <Link 
-                  href="/work" 
+                  href="/work/" 
                   className="text-[#A3D1FF] hover:text-white transition-colors"
                   title="View our design portfolio"
                 >
                   Design Portfolio →
                 </Link>
                 <Link 
-                  href="/contact" 
+                  href="/contact/" 
                   className="text-[#A3D1FF] hover:text-white transition-colors"
                   title="Analyze your website design"
                 >
@@ -310,7 +310,7 @@ export default function BuildingDataDrivenDesignSystemsPage() {
               onClick={() => router.push('/contact')}
               className="mr_btn mr_btn_primary inline-flex items-center gap-2"
             >
-              <span>Start Your Project</span>
+              <span>Book a Call</span>
               <ArrowRight className="w-5 h-5" />
             </button>
           </MagneticButton>
