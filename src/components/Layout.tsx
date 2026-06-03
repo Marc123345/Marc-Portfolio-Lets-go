@@ -10,6 +10,7 @@ import { CALENDLY_LINK } from '@/lib/constants';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import CalendlyBadge, { openCalendlyPopup } from '@/components/CalendlyBadge';
+import ResourcePopup from '@/components/ResourcePopup';
 
 type NavLink = {
   label: string;
@@ -185,6 +186,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div className="min-h-screen bg-black">
       <CalendlyBadge />
+      <ResourcePopup />
       {/* Top Bar */}
       <motion.header
         ref={headerRef}
@@ -437,6 +439,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                   — Resources
                 </p>
                 <ul className="space-y-3">
+                  <li><Link href="/resources" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Free Landing Page Guide</Link></li>
                   <li><Link href="/blog" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Blog</Link></li>
                   <li><a href="https://www.behance.net/marcfriedmanweb" target="_blank" rel="noopener noreferrer" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Behance</a></li>
                   <li><a href="https://dribbble.com/marcf9199/about" target="_blank" rel="noopener noreferrer" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Dribbble</a></li>
