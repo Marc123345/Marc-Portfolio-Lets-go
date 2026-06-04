@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 const FORM_ID = '261536844219058';
 
@@ -13,6 +13,25 @@ const FORM_ID = '261536844219058';
  */
 export default function LeadMagnetFormEmbed() {
   const [loaded, setLoaded] = useState(false);
+  const iframeRef = useRef<HTMLIFrameElement>(null);
+
+  // The iframe often fires its `load` event from the server-rendered HTML
+  // before React hydrates and attaches the JSX `onLoad` handler, leaving the
+  // "Loading form" overlay stuck on top of an already-loaded form. Attach the
+  // listener imperatively here, and add a fallback timeout in case the event
+  // has already fired by the time this effect runs.
+  useEffect(() => {
+    const iframe = iframeRef.current;
+    const reveal = () => setLoaded(true);
+
+    iframe?.addEventListener('load', reveal);
+    const fallback = window.setTimeout(reveal, 4000);
+
+    return () => {
+      iframe?.removeEventListener('load', reveal);
+      window.clearTimeout(fallback);
+    };
+  }, []);
 
   useEffect(() => {
     const script = document.createElement('script');
@@ -51,6 +70,7 @@ export default function LeadMagnetFormEmbed() {
         </div>
       )}
       <iframe
+        ref={iframeRef}
         id={`JotFormIFrame-${FORM_ID}`}
         title="Get the Free Landing Page Guide"
         src={`https://form.jotform.com/${FORM_ID}`}
