@@ -7,7 +7,10 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 const STORAGE_KEY = 'lm_popup_dismissed_at';
-const SHOW_DELAY_MS = 4000;
+// Non-aggressive: only after the visitor has spent real time AND engaged
+// by scrolling. Both must be true before the popup ever shows.
+const MIN_TIME_MS = 30000;
+const SCROLL_THRESHOLD_PX = 500;
 // Re-offer the guide a week after it was last dismissed.
 const COOLDOWN_MS = 7 * 24 * 60 * 60 * 1000;
 const ACCENT = '#A3D1FF';
@@ -31,8 +34,35 @@ export default function ResourcePopup() {
     }
     if (recentlyDismissed) return;
 
-    const timer = window.setTimeout(() => setOpen(true), SHOW_DELAY_MS);
-    return () => window.clearTimeout(timer);
+    // Gate on BOTH conditions: enough time on page AND a real scroll.
+    let timeReady = false;
+    let scrolled = false;
+    let fired = false;
+
+    const cleanup = () => {
+      window.clearTimeout(timer);
+      window.removeEventListener('scroll', onScroll);
+    };
+    const maybeOpen = () => {
+      if (fired || !timeReady || !scrolled) return;
+      fired = true;
+      setOpen(true);
+      cleanup();
+    };
+    const onScroll = () => {
+      if (window.scrollY > SCROLL_THRESHOLD_PX) {
+        scrolled = true;
+        maybeOpen();
+      }
+    };
+
+    const timer = window.setTimeout(() => {
+      timeReady = true;
+      maybeOpen();
+    }, MIN_TIME_MS);
+    window.addEventListener('scroll', onScroll, { passive: true });
+
+    return cleanup;
   }, [onResources]);
 
   const dismiss = () => {

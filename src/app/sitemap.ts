@@ -30,6 +30,11 @@ const entries: Entry[] = [
   { path: 'free-website-analyzer', priority: 0.9 },
   { path: 'free-geo-audit', priority: 0.9 },
   { path: 'resources', priority: 0.8 },
+  { path: 'tools', priority: 0.8 },
+  { path: 'tools/website-analyzer', priority: 0.9 },
+  { path: 'tools/roi-calculator', priority: 0.9 },
+  { path: 'tools/ai-crawler-optimization', priority: 0.7 },
+  { path: 'tools/project-timeline', priority: 0.7 },
   { path: 'longevity-clinics', priority: 0.95 },
   { path: 'biohacking-clinics', priority: 0.95 },
 

@@ -230,6 +230,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 { label: 'Services', to: '/services' },
                 { label: 'Blog', to: '/blog' },
                 { label: 'About', to: '/about' },
+                { label: 'Resources', to: '/resources' },
               ].map(({ label, to }) => {
                 const isActive =
                   pathname === to || (to !== '/' && pathname.startsWith(`${to}/`));

@@ -32,6 +32,9 @@ const primary: NavItem[] = [
 const secondary: NavItem[] = [
   { label: 'Free Audit', to: '/free-website-analyzer' },
   { label: 'GEO Audit', to: '/free-geo-audit' },
+  { label: 'Website Analyzer', to: '/tools/website-analyzer' },
+  { label: 'ROI Calculator', to: '/tools/roi-calculator' },
+  { label: 'Tools', to: '/tools' },
   { label: 'Resources', to: '/resources' },
 ];
 
