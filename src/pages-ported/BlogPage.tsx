@@ -38,6 +38,16 @@ type Post = {
 
 const posts: Post[] = [
   {
+    id: 'empty-isnt-minimal',
+    title: "Empty Isn't Minimal",
+    excerpt:
+      "Minimalism is the most faked skill in web design. Empty pages aren't minimal — here's why hierarchy is the real product, where minimal aesthetics quietly die, and the only test that counts.",
+    date: 'June 8, 2026',
+    readTime: '6 min read',
+    image: 'https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=2000&q=80',
+    categories: ['Design', 'UI/UX', 'Minimalism'],
+  },
+  {
     id: 'css-eating-javascript-lunch',
     title: "CSS Is Eating JavaScript's Lunch",
     excerpt:

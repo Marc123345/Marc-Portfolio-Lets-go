@@ -56,6 +56,7 @@ const entries: Entry[] = [
   { path: 'work/case-studies/sentinel-ds', priority: 0.8 },
 
   // Blog posts
+  { path: 'blog/empty-isnt-minimal', priority: 0.8 },
   { path: 'blog/css-eating-javascript-lunch', priority: 0.8 },
   { path: 'blog/biohacking-clinic-web-design-miami', priority: 0.8 },
   { path: 'blog/context-driven-design-decisions', priority: 0.8 },
