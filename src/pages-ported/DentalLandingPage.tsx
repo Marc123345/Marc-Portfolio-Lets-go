@@ -85,26 +85,9 @@ export default function DentalLandingPage() {
     }
   }, []);
 
-  // Fire a GA4 conversion event when a Calendly booking completes.
-  // Calendly posts a `calendly.event_scheduled` message on the confirmation
-  // step; we forward it to GA4 as `calendly_booking` for import into Google
-  // Ads as a conversion. Only fires on completion, never on widget load.
-  useEffect(() => {
-    const onMessage = (e: MessageEvent) => {
-      if (e.data && e.data.event === 'calendly.event_scheduled') {
-        const gtag = (window as unknown as { gtag?: (...args: unknown[]) => void }).gtag;
-        if (typeof gtag === 'function') {
-          gtag('event', 'calendly_booking', {
-            event_category: 'conversion',
-            event_label: 'dental_audit_booking',
-            send_to: 'G-CV8EEZJLCW',
-          });
-        }
-      }
-    };
-    window.addEventListener('message', onMessage);
-    return () => window.removeEventListener('message', onMessage);
-  }, []);
+  // Conversion tracking removed — this audit page is superseded by the new
+  // standalone site (Dental repo). The new conversion fires on its /thank-you
+  // page after the Jotform submit redirect.
 
   return (
     <div className="min-h-screen bg-[#0a0a0a] text-white antialiased">

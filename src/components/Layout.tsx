@@ -9,7 +9,7 @@ import ConstellationMenu from '@/components/ConstellationMenu';
 import { CALENDLY_LINK } from '@/lib/constants';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
-import CalendlyBadge, { openCalendlyPopup } from '@/components/CalendlyBadge';
+import { openCalendlyPopup } from '@/components/CalendlyBadge';
 import ResourcePopup from '@/components/ResourcePopup';
 
 type NavLink = {
@@ -185,7 +185,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
   return (
     <div className="min-h-screen bg-black">
-      <CalendlyBadge />
       <ResourcePopup />
       {/* Top Bar */}
       <motion.header
