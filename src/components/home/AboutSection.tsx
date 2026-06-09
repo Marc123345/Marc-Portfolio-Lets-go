@@ -6,7 +6,6 @@ import { ArrowUpRight, MessageSquare } from 'lucide-react';
 import Link from 'next/link';
 
 const SERIF = "var(--font-heading)";
-const CALENDLY_LINK = 'https://calendly.com/marc-friedman-web-design--meeting-link/30min';
 const PORTRAIT =
   'https://ik.imagekit.io/qcvroy8xpd/PW8VUKH.png?updatedAt=1759693058055&tr=f-webp';
 
@@ -260,9 +259,7 @@ export default function AboutSection() {
               className="flex flex-wrap items-center gap-3"
             >
               <a
-                href={CALENDLY_LINK}
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/contact/"
                 className="inline-flex items-center gap-3 bg-white text-black font-medium px-8 py-4 hover:bg-[#A3D1FF] transition-colors group"
               >
                 <MessageSquare className="w-4 h-4" />

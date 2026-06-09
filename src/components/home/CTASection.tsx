@@ -7,7 +7,6 @@ import Link from 'next/link';
 import { ArrowUpRight } from 'lucide-react';
 
 const SERIF = "var(--font-heading)";
-const CALENDLY_LINK = 'https://calendly.com/marc-friedman-web-design--meeting-link/30min';
 
 function ChapterMarker({ number, label }: { number: string; label: string }) {
   return (
@@ -114,9 +113,7 @@ export default function CTASection() {
               <p className="text-center text-sm text-white/60 mt-8">
                 Or{' '}
                 <a
-                  href={CALENDLY_LINK}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="/contact/"
                   className="text-[#A3D1FF] font-medium hover:underline"
                 >
                   book directly on my calendar
@@ -176,9 +173,7 @@ export default function CTASection() {
             <div>
               <div className="flex flex-wrap gap-3">
                 <a
-                  href={CALENDLY_LINK}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="/contact/"
                   className="inline-flex items-center gap-3 bg-white text-black font-medium px-6 py-3 hover:bg-[#A3D1FF] transition-colors group"
                 >
                   Book a Call

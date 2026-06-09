@@ -162,15 +162,25 @@ export default function HeroSection() {
               React &amp; Next.js sites that load in under 2 seconds and turn
               visitors into customers.
             </p>
-            <MagneticButton strength={20}>
+            <div className="flex flex-wrap items-center gap-x-6 gap-y-3">
+              <MagneticButton strength={20}>
+                <Link
+                  href="/contact/"
+                  className="inline-flex items-center gap-3 bg-white text-black font-medium px-6 py-3 hover:bg-[#A3D1FF] transition-colors group"
+                >
+                  <span>Book a Call</span>
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </MagneticButton>
+              {/* Skip-the-tour path for high-intent visitors */}
               <Link
-                href="/contact/"
-                className="inline-flex items-center gap-3 bg-white text-black font-medium px-6 py-3 hover:bg-[#A3D1FF] transition-colors group"
+                href="/work/"
+                className="inline-flex items-center gap-2 text-white/70 hover:text-[#A3D1FF] text-sm font-medium border-b border-white/20 hover:border-[#A3D1FF] pb-0.5 transition-colors group"
               >
-                <span>Book a Call</span>
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                <span>Just show me the work</span>
+                <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
               </Link>
-            </MagneticButton>
+            </div>
           </motion.div>
         </div>
       </div>

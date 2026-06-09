@@ -6,11 +6,10 @@ import { useAppStore } from '@/stores/useAppStore';
 import { motion, AnimatePresence } from 'framer-motion';
 import ConsentBanner from '@/components/ConsentBanner';
 import ConstellationMenu from '@/components/ConstellationMenu';
-import { CALENDLY_LINK } from '@/lib/constants';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
-import { openCalendlyPopup } from '@/components/CalendlyBadge';
 import ResourcePopup from '@/components/ResourcePopup';
+import NavDropdown from '@/components/NavDropdown';
 
 type NavLink = {
   label: string;
@@ -141,28 +140,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   // Hijack every /contact link sitewide → open Calendly popup.
   // Single CTA goal across the portfolio without rewriting every CTA. Falls
   // through on cmd/ctrl/middle-click (new tab) or if Calendly hasn't loaded.
-  useEffect(() => {
-    const handler = (e: MouseEvent) => {
-      if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
-      const anchor = (e.target as HTMLElement)?.closest?.('a');
-      if (!anchor) return;
-      const href = anchor.getAttribute('href') || '';
-      const isContact =
-        href === '/contact' ||
-        href === '/contact/' ||
-        href.startsWith('/contact?') ||
-        href.startsWith('/contact#') ||
-        href === `${window.location.origin}/contact` ||
-        href === `${window.location.origin}/contact/`;
-      if (!isContact) return;
-      const Calendly = (window as unknown as { Calendly?: { initPopupWidget: (o: { url: string }) => void } }).Calendly;
-      if (!Calendly?.initPopupWidget) return;
-      e.preventDefault();
-      openCalendlyPopup();
-    };
-    document.addEventListener('click', handler, true);
-    return () => document.removeEventListener('click', handler, true);
-  }, []);
+  // CTA consistency: all "Book a Call" / contact CTAs route to the /contact
+  // page (one canonical destination + one tracking surface). The previous
+  // global interceptor that hijacked /contact clicks into a Calendly popup
+  // was removed deliberately.
 
   const handleNavigation = (to: string) => {
     router.push(to);
@@ -229,7 +210,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 { label: 'Services', to: '/services' },
                 { label: 'Blog', to: '/blog' },
                 { label: 'About', to: '/about' },
-                { label: 'Resources', to: '/resources' },
               ].map(({ label, to }) => {
                 const isActive =
                   pathname === to || (to !== '/' && pathname.startsWith(`${to}/`));
@@ -254,6 +234,24 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                   </Link>
                 );
               })}
+              <NavDropdown
+                label="Tools"
+                items={[
+                  { label: 'Website Analyzer', href: '/tools/website-analyzer' },
+                  { label: 'ROI Calculator', href: '/tools/roi-calculator' },
+                  { label: 'AI Crawler Optimization', href: '/tools/ai-crawler-optimization' },
+                  { label: 'Project Timeline', href: '/tools/project-timeline' },
+                ]}
+              />
+              <NavDropdown
+                label="Resources"
+                items={[
+                  { label: 'Free Landing Page Guide', href: '/resources' },
+                  { label: 'Clutch Reviews', href: 'https://clutch.co/profile/marc-friedman-design-agency', external: true },
+                  { label: 'Behance', href: 'https://www.behance.net/marcfriedmanweb', external: true },
+                  { label: 'Dribbble', href: 'https://dribbble.com/marcf9199/about', external: true },
+                ]}
+              />
             </nav>
 
             <div className="flex items-center gap-4 sm:gap-6 z-[70] relative">
@@ -388,7 +386,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 <a href="https://www.awwwards.com/marc-friedman/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 flex items-center justify-center border border-white/20 text-white hover:bg-white hover:text-black transition-colors" aria-label="Awwwards">
                   <Trophy className="w-4 h-4" />
                 </a>
-                <a href={CALENDLY_LINK} target="_blank" rel="noopener noreferrer" className="w-10 h-10 flex items-center justify-center border border-white/20 text-white hover:bg-white hover:text-black transition-colors" aria-label="Schedule a call">
+                <a href="/contact/" className="w-10 h-10 flex items-center justify-center border border-white/20 text-white hover:bg-white hover:text-black transition-colors" aria-label="Schedule a call">
                   <Calendar className="w-4 h-4" />
                 </a>
               </div>

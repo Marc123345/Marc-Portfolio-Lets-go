@@ -14,7 +14,6 @@ import {
   Youtube,
   Building2,
 } from 'lucide-react';
-import { CALENDLY_LINK } from '@/lib/constants';
 
 type NavItem = {
   label: string;
@@ -34,7 +33,8 @@ const secondary: NavItem[] = [
   { label: 'GEO Audit', to: '/free-geo-audit' },
   { label: 'Website Analyzer', to: '/tools/website-analyzer' },
   { label: 'ROI Calculator', to: '/tools/roi-calculator' },
-  { label: 'Tools', to: '/tools' },
+  { label: 'AI Crawler Optimization', to: '/tools/ai-crawler-optimization' },
+  { label: 'Project Timeline', to: '/tools/project-timeline' },
   { label: 'Resources', to: '/resources' },
 ];
 
@@ -226,9 +226,7 @@ export default function ConstellationMenu({
                   <Trophy className="w-3.5 h-3.5" />
                 </a>
                 <a
-                  href={CALENDLY_LINK}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="/contact/"
                   className="w-9 h-9 flex items-center justify-center border border-white/20 text-white hover:bg-[#A3D1FF] hover:text-black hover:border-[#A3D1FF] transition-colors"
                   aria-label="Schedule a call"
                 >

@@ -153,8 +153,8 @@ export default function ServicesArcSection() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-white/60 text-lg leading-relaxed"
           >
-            Drag the arc, click any card, or use the arrows. Each opens the
-            full service page.
+            Click any service or use the arrows to explore — each opens the
+            full page. Prefer to spin it? Drag the arc.
           </motion.p>
         </div>
 

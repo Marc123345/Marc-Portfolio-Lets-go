@@ -114,7 +114,7 @@ export default function GlobeSection() {
           >
             <Globe size={600} />
             <p className="text-center mt-8 text-[10px] font-mono uppercase tracking-[0.3em] text-white/40">
-              — Drag to spin · auto-rotates when idle
+              — Spins on its own · drag to explore
             </p>
           </motion.div>
         </div>

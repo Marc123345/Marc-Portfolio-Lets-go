@@ -327,7 +327,7 @@ export default function FeaturedWorkSection() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-white/60 text-lg leading-relaxed"
           >
-            All {featured.length} case files — drag the cube, click a project, or page through the deck.
+            All {featured.length} case files — click any project or page through with the arrows. Drag the cube to spin it.
           </motion.p>
         </div>
 
