@@ -38,6 +38,16 @@ type Post = {
 
 const posts: Post[] = [
   {
+    id: 'what-is-eeat',
+    title: "What Is E-E-A-T? Experience, Expertise, Authoritativeness & Trustworthiness",
+    excerpt:
+      "Google's E-E-A-T framework, explained: what the four pillars mean, why Trust matters most, how it ties to YMYL, and how to build it into a website.",
+    date: 'June 10, 2026',
+    readTime: '9 min read',
+    image: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=2000&q=80',
+    categories: ['SEO', 'Content', 'AI Search'],
+  },
+  {
     id: 'empty-isnt-minimal',
     title: "Empty Isn't Minimal",
     excerpt:
