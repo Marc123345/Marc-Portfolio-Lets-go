@@ -249,6 +249,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                   { label: 'Free Landing Page Guide', href: '/resources' },
                   { label: 'Clutch Reviews', href: 'https://clutch.co/profile/marc-friedman-design-agency', external: true },
                   { label: 'CSS Design Awards', href: 'https://www.cssdesignawards.com/sites/marc-friedman-web-design-agency/49357/', external: true },
+                  { label: 'Awwwards', href: 'https://www.awwwards.com/marc-friedman/', external: true },
                   { label: 'Behance', href: 'https://www.behance.net/marcfriedmanweb', external: true },
                   { label: 'Dribbble', href: 'https://dribbble.com/marcf9199/about', external: true },
                 ]}
@@ -444,6 +445,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                   <li><a href="https://dribbble.com/marcf9199/about" target="_blank" rel="noopener noreferrer" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Dribbble</a></li>
                   <li><a href="https://clutch.co/profile/marc-friedman-design-agency" target="_blank" rel="noopener noreferrer" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Clutch Reviews</a></li>
                   <li><a href="https://www.cssdesignawards.com/sites/marc-friedman-web-design-agency/49357/" target="_blank" rel="noopener noreferrer" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">CSS Design Awards</a></li>
+                  <li><a href="https://www.awwwards.com/marc-friedman/" target="_blank" rel="noopener noreferrer" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Awwwards</a></li>
                 </ul>
               </div>
               <div>
