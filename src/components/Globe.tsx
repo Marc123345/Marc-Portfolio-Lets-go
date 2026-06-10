@@ -137,7 +137,7 @@ export default function Globe({ size = 600, className = '' }: GlobeProps) {
           .atmosphereColor('rgba(163,209,255,0.55)')
           .atmosphereAltitude(isMobile ? 0.18 : 0.25)
           .globeImageUrl(
-            '//cdn.jsdelivr.net/npm/three-globe/example/img/earth-night.jpg',
+            '/images/earth-night.jpg',
           );
 
         globe

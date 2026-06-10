@@ -188,7 +188,7 @@ export default function AIIntegrationPage() {
               href: '/work/case-studies/videoleap/',
               title: 'Videoleap',
               blurb: 'AI-assisted video editing flows with personalized template recommendations.',
-              image: 'https://i.imgur.com/SubVB9A.jpeg',
+              image: '/images/clients/SubVB9A.jpeg',
               tags: ['AI/ML', 'Mobile'],
             },
           ]}

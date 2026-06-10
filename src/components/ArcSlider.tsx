@@ -370,6 +370,7 @@ export default function ArcSlider({ cards, initialIndex = 0 }: ArcSliderProps) {
                     }}
                     className="inline-flex items-center gap-3 text-white text-sm font-medium border-b border-white/30 hover:border-[#A3D1FF] hover:text-[#A3D1FF] pb-1 self-start transition-colors relative z-10"
                     style={{ cursor: 'pointer' }}
+                    aria-label={`Open ${c.title}`}
                   >
                     Open service
                     <ArrowUpRight className="w-4 h-4" />

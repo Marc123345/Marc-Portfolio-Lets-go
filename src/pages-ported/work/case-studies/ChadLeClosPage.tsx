@@ -14,7 +14,7 @@ const config: CaseStudyConfig = {
       pressure.
     </>
   ),
-  heroImage: 'https://i.imgur.com/ApfYPlH.jpg',
+  heroImage: '/images/clients/ApfYPlH.jpg',
   metaStats: [
     { value: 'OLY', label: 'Champion' },
     { value: 'Live', label: 'Bookings' },
@@ -97,7 +97,7 @@ const config: CaseStudyConfig = {
 
   gallery: [
     {
-      image: 'https://i.imgur.com/ApfYPlH.jpg',
+      image: '/images/clients/ApfYPlH.jpg',
       caption: 'Homepage',
       wide: true,
     },
@@ -106,7 +106,7 @@ const config: CaseStudyConfig = {
   next: {
     title: 'Fleet Management',
     url: '/work/case-studies/fleet-management/',
-    image: 'https://i.imgur.com/EwgHAuK.png',
+    image: '/images/clients/EwgHAuK.png',
   },
 };
 

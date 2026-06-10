@@ -124,7 +124,7 @@ const config: CaseStudyConfig = {
   next: {
     title: 'Chad Le Clos Swimming',
     url: '/work/case-studies/chad-le-clos/',
-    image: 'https://i.imgur.com/ApfYPlH.jpg',
+    image: '/images/clients/ApfYPlH.jpg',
   },
 };
 

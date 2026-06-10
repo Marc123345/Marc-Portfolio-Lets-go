@@ -14,7 +14,7 @@ const config: CaseStudyConfig = {
       consuming video content.
     </>
   ),
-  heroImage: 'https://i.imgur.com/SubVB9A.jpeg',
+  heroImage: '/images/clients/SubVB9A.jpeg',
   metaStats: [
     { value: '↑', label: 'Template Use' },
     { value: '↑', label: 'Retention' },
@@ -100,7 +100,7 @@ const config: CaseStudyConfig = {
 
   gallery: [
     {
-      image: 'https://i.imgur.com/SubVB9A.jpeg',
+      image: '/images/clients/SubVB9A.jpeg',
       caption: 'Editor redesign',
       wide: true,
     },

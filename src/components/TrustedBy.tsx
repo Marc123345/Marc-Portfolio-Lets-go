@@ -125,7 +125,7 @@ const reviews: Review[] = [
 const clientInfo: Record<string, ClientMeta> = {
   'Omar Turner': {
     role: 'CEO, Binns Media Group · New York',
-    image: 'https://i.imgur.com/NKjkUC9.jpeg',
+    image: '/images/clients/NKjkUC9.jpeg',
     linkedin: 'https://www.linkedin.com/in/omar-turner-92b188130',
   },
   'Gabriel Sher': {
@@ -150,17 +150,17 @@ const clientInfo: Record<string, ClientMeta> = {
   },
   'Bar Levy': {
     role: 'Co-Founder & PM at Sumit-AI',
-    image: 'https://i.imgur.com/ja6oGvJ.jpg',
+    image: '/images/clients/ja6oGvJ.jpg',
     linkedin: 'https://www.linkedin.com/in/bar-levy',
   },
   'Ezra Rubinson': {
     role: 'Digital Marketing Agency Owner · Boston',
-    image: 'https://i.imgur.com/rkHCwAv.jpeg',
+    image: '/images/clients/rkHCwAv.jpeg',
     linkedin: 'https://www.linkedin.com/in/ezra-rubinson/',
   },
   'Yaron Peretz': {
     role: 'CEO, Tech Startup',
-    image: 'https://i.imgur.com/cP2GDPD.jpg',
+    image: '/images/clients/cP2GDPD.jpg',
     linkedin: 'https://www.linkedin.com/in/yaron-peretz-ghostwriter',
   },
   'Stallone Sweeney': {
@@ -170,7 +170,7 @@ const clientInfo: Record<string, ClientMeta> = {
   },
   'Lior Shimon': {
     role: 'Algorithm Engineer · AI',
-    image: 'https://i.imgur.com/vYZWYcu.jpeg',
+    image: '/images/clients/vYZWYcu.jpeg',
     linkedin: 'https://www.linkedin.com/in/liorshimon',
   },
   'Yosi Lugassy': {
@@ -179,17 +179,17 @@ const clientInfo: Record<string, ClientMeta> = {
   },
   'Elior Daniely': {
     role: 'Real Estate Entrepreneur',
-    image: 'https://i.imgur.com/EDJ9b8P.jpeg',
+    image: '/images/clients/EDJ9b8P.jpeg',
     linkedin: 'https://www.linkedin.com/in/elior-daniely-59b554237',
   },
   'Shalom Landman': {
     role: 'Real Estate Developer · Florida',
-    image: 'https://i.imgur.com/N6MTFbh.jpeg',
+    image: '/images/clients/N6MTFbh.jpeg',
     linkedin: 'https://www.linkedin.com/in/shalom-landman-74a492220',
   },
   'Julia Friedman': {
     role: 'Holistic Wellness Coach',
-    image: 'https://i.imgur.com/wCpW4uW.jpg',
+    image: '/images/clients/wCpW4uW.jpg',
     linkedin: 'https://www.linkedin.com/in/julia-friedman-9b374b53',
   },
   'Hilla Dayan': {
@@ -198,7 +198,7 @@ const clientInfo: Record<string, ClientMeta> = {
   },
   'Benny Even Ari': {
     role: 'Investment Banker · Real Estate',
-    image: 'https://i.imgur.com/s3S0EXG.jpg',
+    image: '/images/clients/s3S0EXG.jpg',
     linkedin: 'https://www.linkedin.com/in/benny-even-ari',
   },
   'Jayden Youngleson': {
@@ -367,7 +367,7 @@ export default function TrustedBy() {
       <div className="relative w-full py-8 mb-8 overflow-hidden testimonial-marquee-mask">
         <div className="flex items-center gap-8 logo-scroll-tb">
           {[
-            { src: 'https://i.imgur.com/uliFOja.png', alt: 'Binns Media Group', invert: true },
+            { src: '/images/clients/uliFOja.png', alt: 'Binns Media Group', invert: true },
             { src: 'https://ik.imagekit.io/qcvroy8xpd/GOLD%20TEXT%20LOGO%20NO%20GLOW%20EFFECT%20ADDED%201.png?updatedAt=1748753342858', alt: 'Untapped Africa' },
             { src: 'https://ik.imagekit.io/qcvroy8xpd/logo%20(1).svg?updatedAt=1763381682176', alt: 'Chad LeClos', invert: true },
             { src: 'https://ik.imagekit.io/qcvroy8xpd/image%201%20(7).png', alt: 'Secure Annapolis', invert: true },
@@ -375,7 +375,7 @@ export default function TrustedBy() {
             { src: 'https://ik.imagekit.io/qcvroy8xpd/White%20logo%20-%20no%20background.svg?updatedAt=1749030562412', alt: 'iLight' },
           ]
             .concat([
-              { src: 'https://i.imgur.com/uliFOja.png', alt: 'Binns Media Group', invert: true },
+              { src: '/images/clients/uliFOja.png', alt: 'Binns Media Group', invert: true },
               { src: 'https://ik.imagekit.io/qcvroy8xpd/GOLD%20TEXT%20LOGO%20NO%20GLOW%20EFFECT%20ADDED%201.png?updatedAt=1748753342858', alt: 'Untapped Africa' },
                 { src: 'https://ik.imagekit.io/qcvroy8xpd/logo%20(1).svg?updatedAt=1763381682176', alt: 'Chad LeClos', invert: true },
               { src: 'https://ik.imagekit.io/qcvroy8xpd/image%201%20(7).png', alt: 'Secure Annapolis', invert: true },

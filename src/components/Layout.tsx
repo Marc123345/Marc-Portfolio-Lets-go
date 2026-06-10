@@ -56,7 +56,7 @@ const navLinks: NavLink[] = [
     label: 'Contact',
     to: '/contact',
     number: '05',
-    meta: 'Inbox · Q2 2026',
+    meta: 'Inbox · Now',
     preview:
       'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%201%20-%201x1(1).png?updatedAt=1767539579782',
   },
@@ -79,7 +79,7 @@ const navLinks: NavLink[] = [
 ];
 
 const tickerItems = [
-  'Available for select projects — Q2 2026',
+  'Available for select projects — Now',
   'Awwwards recognised',
   'Design · Development · Systems',
   'marcf@marcfriedmanwebdesign.com',
@@ -248,6 +248,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 items={[
                   { label: 'Free Landing Page Guide', href: '/resources' },
                   { label: 'Clutch Reviews', href: 'https://clutch.co/profile/marc-friedman-design-agency', external: true },
+                  { label: 'CSS Design Awards', href: 'https://www.cssdesignawards.com/sites/marc-friedman-web-design-agency/49357/', external: true },
                   { label: 'Behance', href: 'https://www.behance.net/marcfriedmanweb', external: true },
                   { label: 'Dribbble', href: 'https://dribbble.com/marcf9199/about', external: true },
                 ]}
@@ -367,7 +368,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                   <span className="absolute inset-0 rounded-full bg-green-400 animate-ping opacity-60" />
                   <span className="relative w-2 h-2 rounded-full bg-green-400" />
                 </span>
-                Available — Q2 2026
+                Available — Now
               </div>
 
               <div className="flex flex-wrap gap-3">
@@ -442,6 +443,18 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                   <li><a href="https://www.behance.net/marcfriedmanweb" target="_blank" rel="noopener noreferrer" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Behance</a></li>
                   <li><a href="https://dribbble.com/marcf9199/about" target="_blank" rel="noopener noreferrer" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Dribbble</a></li>
                   <li><a href="https://clutch.co/profile/marc-friedman-design-agency" target="_blank" rel="noopener noreferrer" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Clutch Reviews</a></li>
+                  <li><a href="https://www.cssdesignawards.com/sites/marc-friedman-web-design-agency/49357/" target="_blank" rel="noopener noreferrer" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">CSS Design Awards</a></li>
+                </ul>
+              </div>
+              <div>
+                <p className="text-[10px] font-mono uppercase tracking-[0.3em] text-[#A3D1FF] mb-3">
+                  — Tools
+                </p>
+                <ul className="space-y-3">
+                  <li><Link href="/tools/website-analyzer" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Website Analyzer</Link></li>
+                  <li><Link href="/tools/roi-calculator" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">ROI Calculator</Link></li>
+                  <li><Link href="/tools/ai-crawler-optimization" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">AI Crawler Optimization</Link></li>
+                  <li><Link href="/tools/project-timeline" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Project Timeline</Link></li>
                 </ul>
               </div>
             </div>

@@ -181,7 +181,7 @@ const featured: Project[] = [
     category: 'Athlete · Bookings',
     blurb:
       "Olympic champion's swim clinics platform with self-serve booking and clinic scheduling.",
-    image: 'https://i.imgur.com/ApfYPlH.jpg',
+    image: '/images/clients/ApfYPlH.jpg',
     liveUrl: 'https://chadleclosswimming.com',
     caseStudyUrl: '/work/case-studies/chad-le-clos/',
     stats: [
@@ -196,7 +196,7 @@ const featured: Project[] = [
     category: 'SaaS · Logistics',
     blurb:
       'Enterprise fleet platform with real-time tracking and predictive maintenance.',
-    image: 'https://i.imgur.com/EwgHAuK.png',
+    image: '/images/clients/EwgHAuK.png',
     caseStudyUrl: '/work/case-studies/fleet-management/',
     stats: [
       { value: '500+', label: 'Vehicles' },
@@ -210,7 +210,7 @@ const featured: Project[] = [
     category: 'AI · Metadata',
     blurb:
       'Video metadata management with AI-powered insights and workflow automation.',
-    image: 'https://i.imgur.com/QNHXpzT.jpeg',
+    image: '/images/clients/QNHXpzT.jpeg',
     caseStudyUrl: '/work/case-studies/mytube/',
     stats: [
       { value: 'AI', label: 'Powered' },
@@ -224,7 +224,7 @@ const featured: Project[] = [
     category: 'Mobile · AI',
     blurb:
       'AI-powered video editing platform — redesigned onboarding, editor, and template flows.',
-    image: 'https://i.imgur.com/SubVB9A.jpeg',
+    image: '/images/clients/SubVB9A.jpeg',
     caseStudyUrl: '/work/case-studies/videoleap/',
     stats: [
       { value: '↑', label: 'Templates' },

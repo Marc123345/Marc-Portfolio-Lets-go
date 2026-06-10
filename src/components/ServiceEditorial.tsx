@@ -146,6 +146,12 @@ export function ServiceMasthead({
 
         {/* Title block */}
         <div className="max-w-5xl">
+          {/* Eyebrow — the plain-language service label (was passed but never shown) */}
+          <div className="flex items-center gap-3 mb-6 text-[10px] md:text-xs font-mono uppercase tracking-[0.3em] text-[#A3D1FF]">
+            <span className="w-7 h-[1px] bg-[#A3D1FF]/50" />
+            <span>{kicker}</span>
+          </div>
+
           <h1
             className="text-white tracking-[-0.04em] mb-8 break-words [overflow-wrap:break-word] [hyphens:auto]"
             style={{
@@ -166,6 +172,23 @@ export function ServiceMasthead({
           <p className="text-xl md:text-2xl text-white/75 max-w-2xl leading-snug">
             {tagline}
           </p>
+
+          {/* Primary CTA — unmissable, replaces the buried meta-bar text link */}
+          <div className="mt-9 flex flex-wrap items-center gap-x-6 gap-y-3">
+            <Link
+              href="#start"
+              className="inline-flex items-center gap-3 bg-white text-black font-medium px-7 py-3.5 hover:bg-[#A3D1FF] transition-colors group"
+            >
+              <span>Start a project</span>
+              <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+            </Link>
+            <Link
+              href="/work/"
+              className="inline-flex items-center gap-2 text-white/70 hover:text-[#A3D1FF] text-sm font-medium border-b border-white/20 hover:border-[#A3D1FF] pb-0.5 transition-colors"
+            >
+              See related work
+            </Link>
+          </div>
         </div>
 
         {/* Meta bar */}
@@ -177,7 +200,7 @@ export function ServiceMasthead({
               <span className="absolute inset-0 rounded-full bg-green-400 animate-ping opacity-60" />
               <span className="relative w-2 h-2 rounded-full bg-green-400" />
             </span>
-            Taking bookings — Q2 2026
+            Taking bookings — Now
           </span>
           {meta.map((m) => (
             <span key={m}>{m}</span>

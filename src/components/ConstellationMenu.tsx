@@ -177,7 +177,7 @@ export default function ConstellationMenu({
                   <span className="absolute inset-0 rounded-full bg-green-400 animate-ping opacity-60" />
                   <span className="relative w-2 h-2 rounded-full bg-green-400" />
                 </span>
-                Available — Q2 2026
+                Available — Now
               </div>
               <div className="flex gap-2">
                 <a

@@ -181,7 +181,7 @@ export default function DesignPage() {
               href: '/work/case-studies/videoleap/',
               title: 'Videoleap',
               blurb: 'Redesigned onboarding, editor, and gamification for a flagship mobile app.',
-              image: 'https://i.imgur.com/SubVB9A.jpeg',
+              image: '/images/clients/SubVB9A.jpeg',
               tags: ['UX', 'Mobile'],
             },
             {

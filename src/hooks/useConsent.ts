@@ -2,7 +2,6 @@
 
 import { useState, useEffect, useCallback } from 'react';
 import { optOutPlausible, optInPlausible } from '@/lib/plausible';
-import { initMetaPixel, removeMetaPixel } from '@/lib/metaPixel';
 
 export interface ConsentPreferences {
   analytics: boolean;
@@ -42,11 +41,8 @@ function applyPreferences(prefs: ConsentPreferences) {
     optOutPlausible();
   }
 
-  if (prefs.marketing) {
-    initMetaPixel();
-  } else {
-    removeMetaPixel();
-  }
+  // Meta (Facebook) Pixel removed — no FB/IG ad tracking. The `marketing`
+  // preference is retained in the model but currently controls no tags.
 }
 
 export function useConsent() {

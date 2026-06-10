@@ -14,7 +14,7 @@ const config: CaseStudyConfig = {
       time saved in analysis.
     </>
   ),
-  heroImage: 'https://i.imgur.com/QNHXpzT.jpeg',
+  heroImage: '/images/clients/QNHXpzT.jpeg',
   metaStats: [
     { value: 'AI', label: 'Powered' },
     { value: 'Fast', label: 'Metadata' },
@@ -95,20 +95,20 @@ const config: CaseStudyConfig = {
 
   gallery: [
     {
-      image: 'https://i.imgur.com/QNHXpzT.jpeg',
+      image: '/images/clients/QNHXpzT.jpeg',
       caption: 'Dashboard',
       wide: true,
     },
     {
-      image: 'https://i.imgur.com/ZGLdkzN.jpeg',
+      image: '/images/clients/ZGLdkzN.jpeg',
       caption: 'Analytics view',
     },
     {
-      image: 'https://i.imgur.com/ZDPU1yO.png',
+      image: '/images/clients/ZDPU1yO.png',
       caption: 'Content management',
     },
     {
-      image: 'https://i.imgur.com/Vt1rIYu.jpeg',
+      image: '/images/clients/Vt1rIYu.jpeg',
       caption: 'User interface',
       wide: true,
     },
@@ -117,7 +117,7 @@ const config: CaseStudyConfig = {
   next: {
     title: 'Videoleap',
     url: '/work/case-studies/videoleap/',
-    image: 'https://i.imgur.com/SubVB9A.jpeg',
+    image: '/images/clients/SubVB9A.jpeg',
   },
 };
 
