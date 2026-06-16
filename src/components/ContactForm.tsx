@@ -61,12 +61,12 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="relative w-full h-[900px] md:h-[540px]">
-      {/* Loading skeleton sits behind the iframe — no state-based opacity
-         gating, just z-index layering. When the iframe finishes loading,
-         Jotform's own white background covers the skeleton naturally.
-         Even if the iframe takes 2-3s, users see structured shapes
-         immediately instead of empty space. */}
+    // Height is driven by the iframe itself — Jotform's embed handler resizes
+    // the iframe to match its content, so the wrapper must NOT pin a fixed
+    // height (that clipped the form and bled it into the footer). The skeleton
+    // sits behind the iframe and is covered by Jotform's white background once
+    // it loads.
+    <div className="relative w-full">
       <div
         aria-hidden
         className="absolute inset-0 z-0 p-6 flex flex-col gap-4 bg-white"
@@ -88,8 +88,13 @@ export default function ContactForm() {
         src="https://form.jotform.com/261231977107053"
         loading="eager"
         fetchPriority="high"
-        className="relative z-10 w-full h-full block border-0"
-        style={{ minWidth: '100%', maxWidth: '100%', border: 'none' }}
+        className="relative z-10 w-full block border-0"
+        style={{
+          minWidth: '100%',
+          maxWidth: '100%',
+          border: 'none',
+          height: '900px',
+        }}
         scrolling="no"
       />
     </div>

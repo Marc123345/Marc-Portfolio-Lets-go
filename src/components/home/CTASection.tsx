@@ -93,33 +93,17 @@ export default function CTASection() {
             transition={{ duration: 0.9, delay: 0.1 }}
             className="relative"
           >
-            <div className="relative bg-[#111418] border border-white/10 p-8">
-              {/* Corner bolts */}
-              <div className="absolute top-4 left-4 w-2 h-2 rounded-full bg-white/20" />
-              <div className="absolute top-4 right-4 w-2 h-2 rounded-full bg-white/20" />
-              <div className="absolute bottom-4 left-4 w-2 h-2 rounded-full bg-white/20" />
-              <div className="absolute bottom-4 right-4 w-2 h-2 rounded-full bg-white/20" />
+            <ContactForm />
 
-              <div className="flex items-center justify-between mb-8 text-[10px] font-mono uppercase tracking-[0.3em] text-white/50">
-                <span>Form · 01</span>
-                <span className="flex items-center gap-3">
-                  <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
-                  Accepting inquiries
-                </span>
-              </div>
-
-              <ContactForm />
-
-              <p className="text-center text-sm text-white/60 mt-8">
-                Or{' '}
-                <a
-                  href="/contact/"
-                  className="text-[#A3D1FF] font-medium hover:underline"
-                >
-                  book directly on my calendar
-                </a>
-              </p>
-            </div>
+            <p className="text-center text-sm text-white/60 mt-8">
+              Or{' '}
+              <a
+                href="/contact/"
+                className="text-[#A3D1FF] font-medium hover:underline"
+              >
+                book directly on my calendar
+              </a>
+            </p>
           </motion.div>
 
           {/* Right — editorial sidebar */}
