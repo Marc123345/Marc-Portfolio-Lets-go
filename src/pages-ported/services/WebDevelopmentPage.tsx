@@ -13,6 +13,49 @@ import {
   ServiceNavigator,
 } from '@/components/ServiceEditorial';
 
+const MARC_PORTRAIT =
+  'https://ik.imagekit.io/qcvroy8xpd/PW8VUKH.png?updatedAt=1759693058055&tr=f-webp';
+
+// Real, attributed reviews (mirrors src/data/testimonials.ts). Leading with
+// clients tied to the case studies shown above so the proof is verifiable.
+const PROOF_TESTIMONIALS = [
+  {
+    name: 'Omar Turner',
+    role: 'CEO, Binns Media Group · New York',
+    linkedin: 'https://www.linkedin.com/in/omar-turner-92b188130',
+    content:
+      "Marc was able to execute the vision perfectly. He's big on communication and dedicates his time to the client, ensuring you're completely satisfied at each step. I highly recommend Marc to anyone who needs a web developer who can execute on a vision and deliver a professional finished product.",
+  },
+  {
+    name: 'Bradley Thompson',
+    role: 'Marketing Director',
+    linkedin: 'https://www.linkedin.com/in/bradleethompson/',
+    content:
+      'Marc is an incredible ally — highly responsive with quick solutions as he built our landing page. This was a high-stakes project that did not lend itself to a template. Marc is that rare creative who excels at design AND wordsmithing. The real deal.',
+  },
+  {
+    name: 'Darren Youngleson',
+    role: 'Serial Entrepreneur',
+    linkedin: 'https://www.linkedin.com/in/darren-youngleson-27a17310/',
+    content:
+      'Marc is an absolute winner. No limits to his depth of expertise, unwavering customer service, and the quality and creativity of his product. Highly recommend working with Marc.',
+  },
+];
+
+// Third-party validation — real profiles linked from the site footer.
+const AWARDS = [
+  { label: 'Clutch', href: 'https://clutch.co/profile/marc-friedman-design-agency' },
+  { label: 'Awwwards', href: 'https://www.awwwards.com/marc-friedman/' },
+  {
+    label: 'CSS Design Awards',
+    href: 'https://www.cssdesignawards.com/sites/marc-friedman-web-design-agency/49357/',
+  },
+  {
+    label: 'DesignRush',
+    href: 'https://www.designrush.com/agency/profile/marc-friedman-design-agency',
+  },
+];
+
 export default function WebDevelopmentPage() {
   return (
     <>
@@ -23,9 +66,9 @@ export default function WebDevelopmentPage() {
         volumeNumber="01"
         tagline={
           <>
-            Custom website development services built on React and Next.js —
-            SEO-friendly websites that load in under 2 seconds, rank on Google, and
-            turn strangers into customers. 50+ shipped.
+            Built on React and Next.js — SEO-friendly websites that load in under
+            2 seconds, rank on Google, and turn strangers into customers. 50+
+            shipped.
           </>
         }
         meta={['4–12 week builds', '50+ shipped', 'React · Next.js · Node']}
@@ -83,7 +126,7 @@ export default function WebDevelopmentPage() {
         label="What you get"
         title="Three ways"
         italicTitle="to work together."
-        lead="Most custom website development projects fit into one of these three packages. Not sure which is right? Book a call and we'll scope it together in 30 minutes."
+        lead="Most projects fit into one of these three packages. Not sure which is right? Book a call and we'll scope it together in 30 minutes."
         bg="bg-[#0a0a0a]"
       >
         <div className="border-t border-white/10">
@@ -139,7 +182,7 @@ export default function WebDevelopmentPage() {
           <ProcessChapter
             numeral="III."
             title="Build"
-            description="React JS web development services done right — clean code, fast load times, and SEO-friendly website development from the first commit. Weekly demo links so you're never in the dark."
+            description="Clean, hand-written React — fast load times and search-ready, server-rendered HTML from the first commit. Weekly demo links so you're never in the dark."
             items={[
               'Hand-coded components',
               'Core Web Vitals in the 90s',
@@ -170,6 +213,44 @@ export default function WebDevelopmentPage() {
         italicTitle="not the promises."
         bg="bg-[#0a0a0a]"
       >
+        {/* Practitioner block — the person behind the work (Experience signal) */}
+        <div className="mb-14 flex flex-col sm:flex-row sm:items-center gap-5 border border-white/10 bg-[#111418] p-6 md:p-8">
+          <img
+            src={MARC_PORTRAIT}
+            alt="Marc Friedman — full-stack designer and developer"
+            className="w-20 h-20 rounded-full object-cover object-top ring-1 ring-white/15 flex-shrink-0"
+            loading="lazy"
+            width={80}
+            height={80}
+          />
+          <div>
+            <p
+              className="text-white text-xl mb-1"
+              style={{ fontFamily: 'var(--font-heading)' }}
+            >
+              Built by Marc Friedman
+            </p>
+            <p className="text-white/65 text-sm md:text-base leading-relaxed max-w-2xl">
+              Senior full-stack designer &amp; developer based in Tel Aviv — six
+              years shipping React &amp; Next.js. Every project runs from discovery
+              to launch under one set of hands: no agency handoff, no offshore team.
+            </p>
+            <div className="flex gap-5 mt-3 text-[11px] font-mono uppercase tracking-[0.2em]">
+              <a href="/about/" className="text-[#A3D1FF] hover:underline">
+                About
+              </a>
+              <a
+                href="https://www.linkedin.com/in/portfolio2/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#A3D1FF] hover:underline"
+              >
+                LinkedIn
+              </a>
+            </div>
+          </div>
+        </div>
+
         <StatsBar
           stats={[
             { value: '50+', label: 'Sites Shipped' },
@@ -198,28 +279,68 @@ export default function WebDevelopmentPage() {
             },
           ]}
         />
+
+        {/* Attributed testimonials (Trust signal) */}
+        <div className="mt-16 grid md:grid-cols-3 gap-px bg-white/10 border border-white/10">
+          {PROOF_TESTIMONIALS.map((t) => (
+            <figure key={t.name} className="bg-black p-8 flex flex-col">
+              <div className="flex items-center gap-1 mb-4 text-[#FFD700]">
+                {'★★★★★'}
+              </div>
+              <blockquote className="text-white/80 text-sm leading-relaxed flex-1">
+                “{t.content}”
+              </blockquote>
+              <figcaption className="mt-5 pt-5 border-t border-white/10">
+                <a
+                  href={t.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white text-sm font-semibold hover:text-[#A3D1FF] transition-colors"
+                >
+                  {t.name}
+                </a>
+                <div className="text-[#A3D1FF]/80 text-[11px] mt-0.5">{t.role}</div>
+              </figcaption>
+            </figure>
+          ))}
+        </div>
+
+        {/* Third-party validation (Authoritativeness signal) */}
+        <div className="mt-10 flex flex-wrap items-center gap-x-3 gap-y-3 text-[11px] font-mono uppercase tracking-[0.2em]">
+          <span className="text-white/40">Reviewed &amp; awarded on</span>
+          {AWARDS.map((a) => (
+            <a
+              key={a.label}
+              href={a.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="border border-white/15 px-3 py-1.5 text-white/70 hover:border-[#A3D1FF]/60 hover:text-white transition-colors"
+            >
+              {a.label}
+            </a>
+          ))}
+        </div>
       </EditorialSection>
 
-      {/* Chapter 05 — Specialties (SEO keyword anchors + value-add) */}
+      {/* Chapter 05 — Specialties */}
       <EditorialSection
         chapter="05"
         label="Specialties"
-        title="A custom website development"
-        italicTitle="company built for the SEO age."
-        lead="Most agencies treat SEO and engineering as separate disciplines. I don't. Every project bundles web development SEO into the build — that's how a custom website development company should work in 2026."
+        title="Engineering and SEO,"
+        italicTitle="built as one discipline."
+        lead="Most teams treat SEO and engineering as separate phases. I build them together — search-readiness is part of the architecture, not a checklist bolted on after the site is done."
       >
-        <div className="grid md:grid-cols-2 gap-px bg-white/10 border border-white/10">
+        <div className="grid md:grid-cols-3 gap-px bg-white/10 border border-white/10">
           <div className="bg-black p-8">
             <div className="text-[10px] font-mono uppercase tracking-[0.3em] text-white/40 mb-3">
               01
             </div>
             <h3 className="text-white text-xl mb-3" style={{ fontFamily: 'var(--font-heading)' }}>
-              SEO-friendly website development
+              SEO at the code level
             </h3>
             <p className="text-white/70 leading-relaxed">
-              Server-rendered HTML, clean semantic markup, Core Web Vitals greens,
-              structured data, sitemap.xml, robots, canonical tags. SEO friendly website
-              development — done at the code level, not bolted on after launch.
+              Server-rendered HTML, semantic markup, structured data, canonicals and
+              sitemaps — shipped from the first commit, not bolted on after launch.
             </p>
           </div>
           <div className="bg-black p-8">
@@ -227,12 +348,11 @@ export default function WebDevelopmentPage() {
               02
             </div>
             <h3 className="text-white text-xl mb-3" style={{ fontFamily: 'var(--font-heading)' }}>
-              React JS web development services
+              Performance budgets
             </h3>
             <p className="text-white/70 leading-relaxed">
-              React 18, Next.js 15 App Router, TypeScript, Tailwind. Custom website
-              development services tuned for performance — static export where it fits,
-              SSR where it counts.
+              Static export where it fits, SSR where it counts. Core Web Vitals in the
+              green before a site goes live — not after a client complains it feels slow.
             </p>
           </div>
           <div className="bg-black p-8">
@@ -240,26 +360,12 @@ export default function WebDevelopmentPage() {
               03
             </div>
             <h3 className="text-white text-xl mb-3" style={{ fontFamily: 'var(--font-heading)' }}>
-              Customized web development
+              Hand-coded, no builder bloat
             </h3>
             <p className="text-white/70 leading-relaxed">
-              No templates, no themes, no page-builder bloat. Every component is
-              hand-coded for your business — customized web development and custom web
-              development that doesn&apos;t look like the same Webflow template as your
-              competitors.
-            </p>
-          </div>
-          <div className="bg-black p-8">
-            <div className="text-[10px] font-mono uppercase tracking-[0.3em] text-white/40 mb-3">
-              04
-            </div>
-            <h3 className="text-white text-xl mb-3" style={{ fontFamily: 'var(--font-heading)' }}>
-              Custom web design and development
-            </h3>
-            <p className="text-white/70 leading-relaxed">
-              Design and engineering by one person. No agency handoff, no scope
-              creep — custom web design and development from wireframe to production
-              under one set of hands.
+              React 18, Next.js 15 App Router, TypeScript, Tailwind. Every component is
+              built for your business — never lifted from a page-builder template your
+              competitors also use.
             </p>
           </div>
         </div>
@@ -269,7 +375,7 @@ export default function WebDevelopmentPage() {
       <ServiceColophon
         headline="Let's ship something"
         italicHeadline="your competitors will resent."
-        lead="Book 30 minutes — I'll audit your current site live on the call and show you exactly what's costing you customers in custom website development."
+        lead="Book 30 minutes — I'll audit your current site live on the call and show you exactly what's costing you customers."
       />
     </>
   );
