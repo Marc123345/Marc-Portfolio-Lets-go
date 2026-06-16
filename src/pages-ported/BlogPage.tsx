@@ -38,6 +38,16 @@ type Post = {
 
 const posts: Post[] = [
   {
+    id: 'best-nextjs-developers-b2b-service-businesses-2026',
+    title: 'Best Next.js Developers for B2B & Service Businesses (2026)',
+    excerpt:
+      'An honest, criteria-based guide to the best Next.js developers and agencies for B2B and service businesses — who each one is best for, their stack, and how to choose.',
+    date: 'June 16, 2026',
+    readTime: '8 min read',
+    image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=2000&q=80',
+    categories: ['Next.js', 'Development', 'B2B'],
+  },
+  {
     id: 'what-is-eeat',
     title: "What Is E-E-A-T? Experience, Expertise, Authoritativeness & Trustworthiness",
     excerpt:

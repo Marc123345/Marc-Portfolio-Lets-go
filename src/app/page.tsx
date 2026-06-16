@@ -2,19 +2,19 @@ import type { Metadata } from 'next';
 import HomePage from '@/pages-ported/HomePage';
 
 export const metadata: Metadata = {
-  title: { absolute: 'Web Design Agency Tel Aviv | Custom Websites That Convert | Marc Friedman' },
-  description: 'Award-winning web design agency in Tel Aviv. Custom React & Next.js websites with 98/100 PageSpeed scores. 50+ projects, 5.0★ Google rating. Book a free strategy call.',
+  title: { absolute: 'Custom React & Next.js Web Design for B2B & Service Businesses | Marc Friedman' },
+  description: 'Custom React & Next.js websites for B2B and service businesses. 98/100 PageSpeed, sub-2s loads, 50+ projects shipped, 5.0★ rating. Book a free strategy call.',
   alternates: { canonical: 'https://www.marcfriedmanportfolio.com/' },
   openGraph: {
-    title: 'Web Design Agency Tel Aviv | Custom Websites That Convert | Marc Friedman',
-    description: 'Award-winning web design agency in Tel Aviv. Custom React & Next.js websites with 98/100 PageSpeed scores. 50+ projects, 5.0★ Google rating. Book a free strategy call.',
+    title: 'Custom React & Next.js Web Design for B2B & Service Businesses | Marc Friedman',
+    description: 'Custom React & Next.js websites for B2B and service businesses. 98/100 PageSpeed, sub-2s loads, 50+ projects shipped, 5.0★ rating. Book a free strategy call.',
     url: 'https://www.marcfriedmanportfolio.com/',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Web Design Agency Tel Aviv | Custom Websites That Convert | Marc Friedman',
-    description: 'Award-winning web design agency in Tel Aviv. Custom React & Next.js websites with 98/100 PageSpeed scores. 50+ projects, 5.0★ Google rating. Book a free strategy call.',
+    title: 'Custom React & Next.js Web Design for B2B & Service Businesses | Marc Friedman',
+    description: 'Custom React & Next.js websites for B2B and service businesses. 98/100 PageSpeed, sub-2s loads, 50+ projects shipped, 5.0★ rating. Book a free strategy call.',
   },
 };
 

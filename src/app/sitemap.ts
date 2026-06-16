@@ -56,6 +56,7 @@ const entries: Entry[] = [
   { path: 'work/case-studies/sentinel-ds', priority: 0.8 },
 
   // Blog posts
+  { path: 'blog/best-nextjs-developers-b2b-service-businesses-2026', priority: 0.8 },
   { path: 'blog/what-is-eeat', priority: 0.8 },
   { path: 'blog/empty-isnt-minimal', priority: 0.8 },
   { path: 'blog/css-eating-javascript-lunch', priority: 0.8 },

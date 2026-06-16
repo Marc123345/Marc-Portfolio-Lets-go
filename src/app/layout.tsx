@@ -26,15 +26,15 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.marcfriedmanportfolio.com"),
   title: {
-    default: "Marc Friedman — Web Designer Tel Aviv",
+    default: "Marc Friedman — Custom Web Design for B2B & Service Businesses",
     template: "%s | Marc Friedman",
   },
   description:
-    "Professional web designer in Tel Aviv creating high-performance React/Next.js websites for agencies, ecommerce, and B2B companies.",
+    "Custom React & Next.js websites for B2B and service businesses. 98/100 PageSpeed, sub-2-second loads, 50+ projects shipped. Book a free strategy call.",
   openGraph: {
-    title: "Marc Friedman — Web Designer Tel Aviv",
+    title: "Marc Friedman — Custom Web Design for B2B & Service Businesses",
     description:
-      "Professional web designer in Tel Aviv creating high-performance React/Next.js websites for agencies, ecommerce, and B2B companies.",
+      "Custom React & Next.js websites for B2B and service businesses. 98/100 PageSpeed, sub-2-second loads, 50+ projects shipped. Book a free strategy call.",
     url: "https://www.marcfriedmanportfolio.com",
     siteName: "Marc Friedman",
     images: [
@@ -42,16 +42,16 @@ export const metadata: Metadata = {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Marc Friedman — Web Designer Tel Aviv",
+        alt: "Marc Friedman — Custom Web Design for B2B & Service Businesses",
       },
     ],
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Marc Friedman — Web Designer Tel Aviv",
+    title: "Marc Friedman — Custom Web Design for B2B & Service Businesses",
     description:
-      "Professional web designer in Tel Aviv creating high-performance React/Next.js websites for agencies, ecommerce, and B2B companies.",
+      "Custom React & Next.js websites for B2B and service businesses. 98/100 PageSpeed, sub-2-second loads, 50+ projects shipped. Book a free strategy call.",
     images: ["/og-image.jpg"],
   },
   robots: { index: true, follow: true },
