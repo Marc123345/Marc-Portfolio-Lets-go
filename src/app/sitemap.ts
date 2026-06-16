@@ -37,6 +37,7 @@ const entries: Entry[] = [
   { path: 'tools/project-timeline', priority: 0.7 },
   { path: 'longevity-clinics', priority: 0.95 },
   { path: 'biohacking-clinics', priority: 0.95 },
+  { path: 'dental-audit', priority: 0.9 },
 
   // Case studies
   { path: 'work/case-studies/automarginx', priority: 0.8 },
@@ -60,7 +61,6 @@ const entries: Entry[] = [
   { path: 'blog/what-is-eeat', priority: 0.8 },
   { path: 'blog/empty-isnt-minimal', priority: 0.8 },
   { path: 'blog/css-eating-javascript-lunch', priority: 0.8 },
-  { path: 'blog/biohacking-clinic-web-design-miami', priority: 0.8 },
   { path: 'blog/context-driven-design-decisions', priority: 0.8 },
   { path: 'blog/ai-ready-design-systems', priority: 0.8 },
   { path: 'blog/ai-native-ux-personalization', priority: 0.8 },
@@ -88,8 +88,6 @@ const entries: Entry[] = [
   { path: 'blog/minimal-fast-sustainable-ux', priority: 0.8 },
   { path: 'blog/google-search-console-ai-reports', priority: 0.8 },
   { path: 'blog/conversational-ui-chat-interfaces', priority: 0.8 },
-  { path: 'blog/google-march-april-2026-seo-updates', priority: 0.8 },
-  { path: 'blog/dopamine-aesthetic-bold-retro-design', priority: 0.8 },
 
   // Legal
   { path: 'privacy-policy', priority: 0.5 },
