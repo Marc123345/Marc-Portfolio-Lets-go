@@ -159,7 +159,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     pathname === '/dental-audit' ||
     pathname === '/dental-audit/' ||
     pathname === '/youtube-assets' ||
-    pathname === '/youtube-assets/';
+    pathname === '/youtube-assets/' ||
+    pathname === '/rfc' ||
+    pathname === '/rfc/';
   if (isBareLanding) {
     return <>{children}</>;
   }
