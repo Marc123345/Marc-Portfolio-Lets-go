@@ -161,7 +161,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     pathname === '/youtube-assets' ||
     pathname === '/youtube-assets/' ||
     pathname === '/rfc' ||
-    pathname === '/rfc/';
+    pathname === '/rfc/' ||
+    pathname === '/gramercy' ||
+    pathname === '/gramercy/';
   if (isBareLanding) {
     return <>{children}</>;
   }
