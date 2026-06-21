@@ -1415,24 +1415,25 @@ const S20 = () => (
           title="Included"
           items={[
             "Design & build of all eight pages, responsive across devices",
+            "Copywriting for all eight pages, to the agreed direction",
+            "Photography, video and media production for the site",
             "Headless CMS setup for cities, partners, benefits and tiers",
             "Internationalisation / RTL readiness; accessibility to WCAG AA",
             "Analytics, conversion tracking, SEO / AEO foundation, deployment",
             "Hosting & maintenance free for the first year (uptime, security, backups, minor edits)",
             "Defined revision rounds per phase; launch support and handoff",
           ]}
-          size={17}
+          size={16}
         />
         <DetailCard
           title="Excluded (available separately)"
           items={[
             "Ongoing content, iteration or growth after launch, recommended as a monthly retainer since the platform compounds",
             "Hosting & maintenance after the first year, on a retainer or THRIVE’s own accounts",
-            "Photography, video production and licensed media",
-            "Copywriting beyond core site copy; legal, privacy & compliance text",
+            "Legal, privacy & compliance copy",
             "Third-party CMS & integration fees, on THRIVE’s own accounts",
           ]}
-          size={17}
+          size={16}
           highlight
         />
       </div>
