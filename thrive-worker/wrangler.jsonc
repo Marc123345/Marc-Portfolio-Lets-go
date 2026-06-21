@@ -1,0 +1,17 @@
+{
+  "$schema": "../node_modules/wrangler/config-schema.json",
+  "name": "thrive-proposal",
+  "main": "index.js",
+  "compatibility_date": "2026-04-15",
+  "workers_dev": true,
+  "routes": [
+    { "pattern": "thrive.marcfriedmanportfolio.com", "custom_domain": true }
+  ],
+  "assets": {
+    "directory": "../out",
+    "binding": "ASSETS",
+    "not_found_handling": "404-page",
+    "html_handling": "auto-trailing-slash",
+    "run_worker_first": true
+  }
+}

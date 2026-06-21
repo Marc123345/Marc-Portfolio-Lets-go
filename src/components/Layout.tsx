@@ -163,7 +163,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     pathname === '/rfc' ||
     pathname === '/rfc/' ||
     pathname === '/gramercy' ||
-    pathname === '/gramercy/';
+    pathname === '/gramercy/' ||
+    pathname === '/thrive' ||
+    pathname === '/thrive/';
   if (isBareLanding) {
     return <>{children}</>;
   }
