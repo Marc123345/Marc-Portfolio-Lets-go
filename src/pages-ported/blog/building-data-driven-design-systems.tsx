@@ -86,7 +86,7 @@ export default function BuildingDataDrivenDesignSystemsPage() {
             
             <p>The answer lies in data. By treating your design system as a product that responds to usage patterns, performance metrics, and user feedback, you create a living system that grows and adapts rather than becoming obsolete.</p>
             
-            <p>A truly scalable design system isn't just a collection of components and guidelines—it's an ecosystem that continuously improves based on real-world usage and measurable outcomes. This data-driven approach transforms design systems from static libraries into dynamic tools that evolve alongside your product and organization.</p>
+            <p>A scalable design system is an ecosystem that keeps improving from real-world usage and measurable outcomes, not a static collection of components and guidelines. This data-driven approach transforms design systems from static libraries into dynamic tools that evolve alongside your product and organization.</p>
 
             <h2>Key Components of Data-Driven Design Systems</h2>
             
@@ -159,7 +159,7 @@ export default function BuildingDataDrivenDesignSystemsPage() {
               <li><strong>Version control strategies</strong> that allow for evolution while maintaining backward compatibility</li>
             </ul>
             
-            <p>Effective governance strikes a balance between centralized control and distributed ownership. While some level of oversight is necessary to maintain quality and consistency, empowering teams to contribute to the system creates a sense of ownership and ensures the system meets diverse needs.</p>
+            <p>Effective governance strikes a balance between centralized control and distributed ownership. While some level of oversight is necessary to maintain quality and consistency, giving teams a real hand in the system creates ownership and keeps it meeting a range of needs.</p>
             
             <p>Data plays a crucial role in governance by providing objective criteria for decision-making. When discussions about component changes or additions can reference actual usage data and performance metrics, the conversation shifts from subjective preferences to objective impact.</p>
 
@@ -232,7 +232,7 @@ export default function BuildingDataDrivenDesignSystemsPage() {
                 </div>
                 <div className="p-6">
                   <h4 className="text-lg font-semibold text-white mb-2 group-hover:text-[#A3D1FF] transition-colors">The Future of SaaS Web Design: Merging Aesthetics with Functionality</h4>
-                  <p className="text-white text-sm mb-4">Explore the evolving landscape of SaaS web design and how it's shaping the future of digital products.</p>
+                  <p className="text-white text-sm mb-4">How SaaS web design is changing, and what it means for digital products.</p>
                   <button 
                     onClick={() => router.push('/blog/future-of-saas-web-design')}
                     className="text-[#A3D1FF] text-sm flex items-center gap-1 hover:underline"

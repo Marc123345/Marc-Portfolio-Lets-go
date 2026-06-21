@@ -640,7 +640,7 @@ export default function AboutPage() {
             <ProcessChapter
               numeral="III."
               title="Design"
-              description="Creating intuitive interfaces and seamless user experiences grounded in the strategy."
+              description="Creating intuitive interfaces and smooth user experiences grounded in the strategy."
               items={[
                 'Data-driven wireframing',
                 'Conversion-focused UI design',
@@ -653,7 +653,7 @@ export default function AboutPage() {
             <ProcessChapter
               numeral="IV."
               title="Develop"
-              description="Shipping robust, scalable, measurable solutions using modern technologies."
+              description="Shipping reliable, scalable, measurable solutions using modern technologies."
               items={[
                 'SEO-optimized frontend development',
                 'Secure backend integration',

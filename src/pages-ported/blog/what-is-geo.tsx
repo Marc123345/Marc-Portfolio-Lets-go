@@ -125,7 +125,7 @@ export default function WhatIsGEOPage() {
         <div className="max-w-4xl mx-auto">
           <div className="prose prose-lg prose-invert max-w-none">
 
-            <p className="text-xl text-gray-300 leading-relaxed">Search has been quietly reinvented. Not with a press conference or a product launch, but through a fundamental shift in how people discover information. Instead of scanning ten blue links and clicking through to websites, a growing number of users ask an AI system a question and receive a synthesized, conversational answer -- often without ever visiting a single webpage. <strong className="text-white">This is the world Generative Engine Optimization was built for.</strong></p>
+            <p className="text-xl text-gray-300 leading-relaxed">Search has been reinvented without much fanfare — no press conference, no product launch, just a real change in how people discover information. Instead of scanning ten blue links and clicking through to websites, a growing number of users ask an AI system a question and receive a synthesized, conversational answer -- often without ever visiting a single webpage. <strong className="text-white">This is the world Generative Engine Optimization was built for.</strong></p>
 
             <h2>What Is Generative Engine Optimization?</h2>
 
@@ -188,7 +188,7 @@ export default function WhatIsGEOPage() {
               </div>
             </div>
 
-            <h2>GEO vs. SEO: The Fundamental Shift</h2>
+            <h2>GEO vs. SEO: How They Differ</h2>
 
             <p>Traditional SEO and GEO share common DNA -- both are about making content discoverable. But the mechanics diverge in critical ways.</p>
 
@@ -323,7 +323,7 @@ export default function WhatIsGEOPage() {
               </div>
             </div>
 
-            <p>The research makes one thing clear: <strong className="text-white">the strategies that work for GEO are fundamentally about content quality, specificity, and authority</strong> -- not about gaming an algorithm.</p>
+            <p>The research makes one thing clear: <strong className="text-white">the strategies that work for GEO come down to content quality, specificity, and authority</strong> -- not about gaming an algorithm.</p>
 
             <h2>The Nine Pillars of GEO Strategy</h2>
 
@@ -617,7 +617,7 @@ export default function WhatIsGEOPage() {
 
             <p>Generative Engine Optimization represents the most significant shift in digital visibility since the rise of mobile search. It does not replace what came before -- technical SEO, content quality, domain authority -- but it adds a new dimension to how that work translates into visibility.</p>
 
-            <p>The organizations that thrive in this new landscape will be those that understand a simple truth: in the age of generative search, you are not optimizing for rankings. You are optimizing to become a source that AI systems trust, extract from, and cite.</p>
+            <p>The organizations that thrive in this new world will be those that understand a simple truth: in the age of generative search, you are not optimizing for rankings. You are optimizing to become a source that AI systems trust, extract from, and cite.</p>
 
             <p><strong className="text-white">The question is no longer "where do we rank?" It is: "when an AI generates an answer about our industry, are we part of that answer?"</strong></p>
 

@@ -61,7 +61,7 @@ const posts: Post[] = [
     id: 'empty-isnt-minimal',
     title: "Empty Isn't Minimal",
     excerpt:
-      "Minimalism is the most faked skill in web design. Empty pages aren't minimal — here's why hierarchy is the real product, where minimal aesthetics quietly die, and the only test that counts.",
+      "Minimalism is the most faked skill in web design. Empty pages aren't minimal: hierarchy is the real product, minimal aesthetics fall apart in predictable places, and one test settles it.",
     date: 'June 8, 2026',
     readTime: '6 min read',
     image: 'https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=2000&q=80',
@@ -71,7 +71,7 @@ const posts: Post[] = [
     id: 'css-eating-javascript-lunch',
     title: "CSS Is Eating JavaScript's Lunch",
     excerpt:
-      "Scroll-driven animations, @starting-style, and :has() have quietly made huge chunks of UI JavaScript obsolete. A field guide to what's shippable today and what it replaces.",
+      "Scroll-driven animations, @starting-style, and :has() have made huge chunks of UI JavaScript obsolete. A field guide to what's shippable today and what it replaces.",
     date: 'June 2, 2026',
     readTime: '8 min read',
     image: 'https://ik.imagekit.io/qcvroy8xpd/8ce5c50b-8af1-4e99-b2b0-f7f29cd0abd3.avif',
@@ -154,7 +154,7 @@ const posts: Post[] = [
     id: 'ai-native-ux-personalization',
     title: 'AI-Native UX and Personalization: Designing Experiences That Adapt',
     excerpt:
-      'The paradigm shift from AI features to AI-native experiences designed around adaptive, personalized intelligence.',
+      'The shift from AI features to AI-native experiences designed around adaptive, personalized intelligence.',
     date: 'January 27, 2026',
     readTime: '18 min read',
     image: 'https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=2000&q=80',
@@ -264,7 +264,7 @@ const posts: Post[] = [
     id: 'future-of-saas-web-design',
     title: 'The Future of SaaS Web Design: Aesthetics Meets Functionality',
     excerpt:
-      'The evolving landscape of SaaS web design and how it’s shaping the future of digital products.',
+      'How SaaS web design is changing, and what it means for digital products.',
     date: 'May 15, 2025',
     readTime: '6 min read',
     image: 'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=2000&q=80',
@@ -304,7 +304,7 @@ const posts: Post[] = [
     id: 'designing-platforms-for-automotive-dealers',
     title: 'From Concept to Profit: Designing Platforms That Empower Automotive Dealers',
     excerpt:
-      'The automotive industry is no stranger to disruption — a look at how dealers operate and thrive in the new landscape.',
+      'The automotive industry is no stranger to disruption — a look at how dealers operate and compete as the market shifts.',
     date: 'March 30, 2025',
     readTime: '8 min read',
     image: 'https://images.unsplash.com/photo-1560179707-f14e90ef3623?auto=format&fit=crop&w=2000&q=80',

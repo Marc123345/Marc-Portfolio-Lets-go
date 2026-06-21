@@ -74,7 +74,7 @@ export default function LocalSeoPage() {
           <DeliverableRow
             number="03"
             title="Citations + NAP consistency"
-            description="Name / Address / Phone scrubbed across the directories that matter. Inconsistent citations are quietly killing your rankings."
+            description="Name / Address / Phone scrubbed across the directories that matter. Inconsistent citations drag your rankings down."
           />
           <DeliverableRow
             number="04"

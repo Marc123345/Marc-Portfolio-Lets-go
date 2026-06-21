@@ -72,15 +72,15 @@ export default function AIAsCoDesigner() {
             <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 border border-purple-500/30 p-6 mb-8">
               <p className="text-white font-medium mb-2 flex items-center gap-2">
                 <Sparkles className="w-5 h-5 text-purple-400" />
-                The Paradigm Shift
+                The Shift
               </p>
               <p className="text-gray-300 mb-0">
-                We're witnessing a fundamental shift in how AI integrates into the creative process. AI is no longer just a tool that follows commands—it's becoming a collaborative partner that suggests ideas, challenges assumptions, and co-creates alongside human designers.
+                The way AI fits into the creative process is changing. It used to follow commands and wait; now it suggests ideas, challenges assumptions, and co-creates alongside human designers as a genuine collaborator.
               </p>
             </div>
 
             <p className="text-gray-300 leading-relaxed mb-6">
-              For decades, designers have used tools: Photoshop, Figma, Sketch, and countless others. These tools are powerful, but they're fundamentally passive. They wait for commands, execute instructions, and require the designer to drive every decision. AI is different. AI can initiate, suggest, iterate, and respond—making it less of a tool and more of a creative partner.
+              For decades, designers have used tools: Photoshop, Figma, Sketch, and countless others. They're powerful, but passive — they wait for commands, execute instructions, and leave every decision to the designer. AI is different. It can initiate, suggest, iterate, and respond, which makes it closer to a creative partner than a tool.
             </p>
 
             <h2 className="text-3xl font-bold text-white mt-12 mb-6 flex items-center gap-3">
@@ -89,7 +89,7 @@ export default function AIAsCoDesigner() {
             </h2>
 
             <p className="text-gray-300 leading-relaxed mb-6">
-              The distinction between a tool and a co-designer isn't just semantic—it represents a fundamental change in how we approach creative work.
+              The distinction between a tool and a co-designer is more than semantic; it changes how we approach creative work.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
@@ -233,7 +233,7 @@ export default function AIAsCoDesigner() {
             </h2>
 
             <p className="text-gray-300 leading-relaxed mb-6">
-              Let's explore how human-AI co-design actually works in practice across different design disciplines.
+              Here's how human-AI co-design actually works in practice across different design disciplines.
             </p>
 
             <h3 className="text-2xl font-bold text-white mt-10 mb-4">1. Divergent Exploration Phase</h3>
@@ -252,7 +252,7 @@ export default function AIAsCoDesigner() {
                 </ol>
               </div>
               <p className="text-gray-300">
-                Notice how this isn't about the AI doing the work for you—it's about the AI helping you explore a wider possibility space faster than you could alone.
+                Notice that the AI isn't doing the work for you here. It's helping you explore a wider possibility space, faster than you could alone.
               </p>
             </div>
 
@@ -552,13 +552,13 @@ export default function AIAsCoDesigner() {
             </p>
 
             <p className="text-gray-300 leading-relaxed mb-6">
-              This is just the beginning. As AI continues to evolve, so will the nature of our creative partnerships. The question isn't whether to embrace AI in design—it's how to build the most productive, creative, and human-centered collaborations possible.
+              This is just the beginning. As AI keeps evolving, so will the nature of our creative partnerships. Whether to embrace AI in design isn't really the question; how to build the most productive, creative, and human-centered collaborations is.
             </p>
 
             <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 border border-purple-500/30 p-8 mt-10">
               <h3 className="text-2xl font-bold text-white mb-4">Let's Design Together</h3>
               <p className="text-gray-300 mb-6">
-                Interested in exploring how AI-augmented design can transform your projects? I combine human expertise with cutting-edge AI tools to deliver exceptional results.
+                Curious how AI-augmented design could change your projects? I combine human expertise with modern AI tools to deliver strong results.
               </p>
               <Link
                 href="/contact/"

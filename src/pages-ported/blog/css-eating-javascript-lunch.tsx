@@ -16,7 +16,7 @@ export default function CssEatingJavascriptLunchPage() {
     '@type': 'BlogPosting',
     headline: "CSS Is Eating JavaScript's Lunch",
     description:
-      "Scroll-driven animations, @starting-style, and :has() have quietly made huge chunks of UI JavaScript obsolete. A field guide to what's shippable in CSS today and what it replaces.",
+      "Scroll-driven animations, @starting-style, and :has() have made huge chunks of UI JavaScript obsolete. A field guide to what's shippable in CSS today and what it replaces.",
     image: HERO_IMAGE,
     datePublished: '2026-06-02T08:00:00+00:00',
     dateModified: '2026-06-02T08:00:00+00:00',

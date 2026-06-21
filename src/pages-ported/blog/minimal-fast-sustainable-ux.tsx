@@ -172,7 +172,7 @@ export default function MinimalFastSustainableUXPage() {
 
             <h3>Image Optimization: The Biggest Quick Win</h3>
 
-            <p>Images account for roughly 50% of the average page weight. Modern optimization is not just about compression -- it is a complete pipeline:</p>
+            <p>Images account for roughly 50% of the average page weight. Modern optimization runs well past compression into a complete pipeline:</p>
 
             <ul>
               <li><strong>Format selection:</strong> WebP offers 25-35% smaller files than JPEG at equivalent quality. AVIF pushes that further with 50% savings, though browser support is still catching up. Use <code>&lt;picture&gt;</code> elements with format fallbacks.</li>
@@ -186,7 +186,7 @@ export default function MinimalFastSustainableUXPage() {
 
             <p>The internet produces approximately 3.7% of global carbon emissions -- roughly equivalent to the airline industry. Every page load triggers a chain of energy consumption: data center servers process the request, network infrastructure transmits the data, and the user's device renders the result. Heavier pages consume more energy at every step.</p>
 
-            <p>Green UX is not a marketing gimmick. It is a recognition that design decisions have physical consequences. When you reduce a page from 3 MB to 500 KB, you are not just improving load times. You are reducing the energy required to serve and render that page by roughly 80%.</p>
+            <p>Green UX is not a marketing gimmick. It is a recognition that design decisions have physical consequences. When you reduce a page from 3 MB to 500 KB, you improve load times and cut the energy needed to serve and render that page by roughly 80%.</p>
 
             <h3>Measuring Your Digital Carbon Footprint</h3>
 
@@ -244,7 +244,7 @@ export default function MinimalFastSustainableUXPage() {
             <p>Beyond technical optimization, sustainable design requires rethinking common patterns:</p>
 
             <ul>
-              <li><strong>Dark mode by default.</strong> On OLED screens, dark interfaces consume up to 60% less energy than light ones. Offering dark mode is not just a preference -- it is an energy-saving feature.</li>
+              <li><strong>Dark mode by default.</strong> On OLED screens, dark interfaces consume up to 60% less energy than light ones. Offering dark mode is an energy-saving feature, not only a preference.</li>
               <li><strong>Pagination over infinite scroll.</strong> Infinite scroll loads content the user may never see, wasting bandwidth and energy. Pagination lets users load only what they need.</li>
               <li><strong>Text over video where possible.</strong> A 60-second auto-playing background video can add 5-15 MB to a page. If the same information can be communicated with text and a static image, the page weight drops by 90%.</li>
               <li><strong>System fonts over custom fonts.</strong> Every custom font file is 20-100 KB that must be downloaded. System fonts cost zero additional bytes and render instantly.</li>
@@ -286,7 +286,7 @@ export default function MinimalFastSustainableUXPage() {
 
             <h3>Focused Hierarchy to Reduce Cognitive Load</h3>
 
-            <p>Calm design is fundamentally about hierarchy -- making it immediately obvious what matters most on any given screen.</p>
+            <p>Calm design comes down to hierarchy -- making it immediately obvious what matters most on any given screen.</p>
 
             <p>The best calm interfaces follow a strict visual hierarchy:</p>
 

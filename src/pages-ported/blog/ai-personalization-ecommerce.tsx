@@ -454,7 +454,7 @@ export default function AIPersonalizationEcommercePage() {
 
             <p>If your personalization doesn't follow customers across this journey, it fails.</p>
 
-            <h3>Building Seamless Cross-Device Experiences</h3>
+            <h3>Building Smooth Cross-Device Experiences</h3>
 
             <h4>1. Device Fingerprinting and Identity Resolution</h4>
 
@@ -716,7 +716,7 @@ export default function AIPersonalizationEcommercePage() {
 
             <h2>Conclusion: Personalization as a Competitive Necessity</h2>
 
-            <p>AI-driven personalization has evolved from a luxury to a baseline expectation. Brands that deliver relevant, personalized experiences win customer loyalty and drive revenue growth. Those that don't risk becoming irrelevant in an increasingly competitive landscape.</p>
+            <p>AI-driven personalization has evolved from a luxury to a baseline expectation. Brands that deliver relevant, personalized experiences win customer loyalty and drive revenue growth. Those that don't risk becoming irrelevant as competition intensifies.</p>
 
             <p>The good news: personalization technology is more accessible than ever. You don't need Amazon's resources to deliver Amazon-level personalization. Start with the fundamentals—clean data, clear goals, and customer-centric thinking—then layer in AI capabilities as you grow.</p>
 
@@ -732,7 +732,7 @@ export default function AIPersonalizationEcommercePage() {
 
             <p>The brands winning in 2025 are those that use AI not to manipulate customers, but to genuinely serve them better—understanding their needs, respecting their preferences, and making shopping easier, faster, and more enjoyable.</p>
 
-            <p>The question isn't whether to implement AI personalization—it's how quickly you can do it effectively. Your customers expect it. Your competitors are doing it. The technology is ready. What are you waiting for?</p>
+            <p>Implementing AI personalization isn't really the question anymore — how quickly you can do it well is. Customers expect it, competitors already offer it, and the technology is ready.</p>
           </div>
 
           <div className="mt-12 pt-8 border-t border-white/10">

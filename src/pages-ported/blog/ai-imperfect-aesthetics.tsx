@@ -88,7 +88,7 @@ export default function AIImperfectAestheticsPage() {
             <h2>The Rise of Intentional Imperfection</h2>
 
             <h3>Why Imperfection Matters Now</h3>
-            <p>The push toward imperfect aesthetics isn't just contrarian rebellion—it's a response to a genuine need for authenticity in an increasingly automated world. When everything can be algorithmically perfect, perfection itself becomes boring, suspicious, and inhuman.</p>
+            <p>The push toward imperfect aesthetics is less contrarian rebellion than a response to a real need for authenticity in an increasingly automated world. When everything can be algorithmically perfect, perfection itself becomes boring, suspicious, and inhuman.</p>
 
             <p>Imperfection serves several critical functions in contemporary design:</p>
 
@@ -232,7 +232,7 @@ export default function AIImperfectAestheticsPage() {
             </ul>
 
             <h3>The Strategic Value of Playfulness</h3>
-            <p>Playful design isn't just fun—it's strategically valuable:</p>
+            <p>Playful design is strategically valuable, not only fun:</p>
 
             <ul>
               <li><strong>Brand Personality:</strong> Humor and playfulness make brands feel approachable and human</li>
@@ -277,7 +277,7 @@ export default function AIImperfectAestheticsPage() {
             <h2>Technical Implementation</h2>
 
             <h3>Workflow for AI + Human Hybrid Design</h3>
-            <p>Creating effective AI-human hybrid designs requires a deliberate workflow that leverages AI efficiency while maintaining creative control:</p>
+            <p>Creating effective AI-human hybrid designs takes a deliberate workflow that uses AI's efficiency while keeping creative control:</p>
 
             <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
               <h4 className="text-white font-semibold mb-2">Five-Stage Hybrid Design Process</h4>
@@ -401,7 +401,7 @@ export default function AIImperfectAestheticsPage() {
             <h2>Conclusion: The Best of Both Worlds</h2>
             <p>The movement toward imperfect aesthetics layered on AI-generated content represents a maturation of our relationship with artificial intelligence. We're moving past the initial fascination with what AI can do and starting to think critically about how it should be used.</p>
 
-            <p>AI offers incredible efficiency and technical capability, but it lacks the ineffable qualities that make design feel human, personal, and emotionally resonant. By deliberately introducing imperfection, messiness, tactile elements, and playful absurdity, designers are creating work that leverages AI's strengths while maintaining human authenticity.</p>
+            <p>AI offers remarkable efficiency and technical capability, but it lacks the qualities that make design feel human, personal, and emotionally resonant. By deliberately introducing imperfection, messiness, tactile elements, and playful absurdity, designers make work that draws on AI's strengths while keeping human authenticity.</p>
 
             <p>This isn't about rejecting AI or pretending it doesn't exist. It's about finding a synthesis where AI handles what it does best—technical execution, rapid iteration, baseline content—while humans add what only we can provide: taste, judgment, emotional intelligence, cultural awareness, and the beautiful imperfections that make work feel alive.</p>
 
@@ -495,7 +495,7 @@ export default function AIImperfectAestheticsPage() {
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Ready to Create Something Uniquely Human?</h2>
           <p className="text-xl text-white mb-8 max-w-2xl mx-auto">
-            Let's combine cutting-edge AI capabilities with authentic human creativity to build digital experiences that truly resonate with your audience.
+            Let's combine modern AI capabilities with genuine human creativity to build digital experiences that resonate with your audience.
           </p>
           <MagneticButton>
             <button

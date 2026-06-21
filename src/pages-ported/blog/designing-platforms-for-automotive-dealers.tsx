@@ -81,10 +81,10 @@ export default function DesigningPlatformsForAutomotiveDealersPage() {
       <section className="py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <div className="prose prose-lg prose-invert max-w-none">
-            <h2>The Changing Landscape of Automotive Dealerships</h2>
+            <h2>How Automotive Dealerships Are Changing</h2>
             <p>Modern automotive dealers face challenges that demand innovative solutions. Rising customer expectations, fluctuating market dynamics, and the increasing complexity of inventory management require dealerships to rethink their operational strategies. Platforms like Tesla Finder and Automargin are stepping up to meet these needs, providing dealers with tools to navigate the market with precision and confidence.</p>
             
-            <p>The traditional dealership model—relying on intuition, experience, and weekly market reports—is rapidly becoming obsolete. Today's successful dealerships leverage real-time data and analytics to make informed decisions about pricing, inventory, and customer engagement. This shift represents not just a technological evolution but a fundamental change in how dealerships operate and compete.</p>
+            <p>The traditional dealership model—relying on intuition, experience, and weekly market reports—is rapidly becoming obsolete. Today's successful dealerships use real-time data and analytics to make informed decisions about pricing, inventory, and customer engagement. That shift is more than a technology upgrade; it changes how dealerships operate and compete.</p>
             
             <p>The stakes are high: dealerships that embrace digital transformation can gain significant competitive advantages, while those that cling to outdated methods risk falling behind. The difference often comes down to having the right tools and platforms to turn data into actionable insights.</p>
 
@@ -115,7 +115,7 @@ export default function DesigningPlatformsForAutomotiveDealersPage() {
             <ul>
               <li><strong>Increase Profit Margins:</strong> By identifying pricing sweet spots, dealers optimized their pricing strategies, resulting in an average profit increase per vehicle.</li>
               <li><strong>Reduce Inventory Costs:</strong> Insights into market demand reduced overstock and ensured timely sales, decreasing carrying costs.</li>
-              <li><strong>Improve Decision-Making:</strong> Data visualization tools empowered dealers with the information needed to make confident decisions, reducing the average time to price a vehicle from 45 minutes to just 12 minutes.</li>
+              <li><strong>Improve Decision-Making:</strong> Data visualization tools gave dealers the information to make confident decisions, reducing the average time to price a vehicle from 45 minutes to just 12 minutes.</li>
             </ul>
             
             <p>The platform's impact extended beyond immediate financial gains. Dealerships reported increased confidence in their Tesla inventory strategy, leading to more aggressive acquisition policies and expanded EV offerings. This strategic shift positioned these dealerships as leaders in the growing electric vehicle market.</p>
@@ -146,7 +146,7 @@ export default function DesigningPlatformsForAutomotiveDealersPage() {
             
             <ul>
               <li><strong>Revenue Growth:</strong> Dealers reported an average increase in revenue due to optimized pricing and inventory strategies.</li>
-              <li><strong>Operational Efficiency:</strong> Streamlined inventory tools reduced manual errors and improved turnaround times, saving an average of 10 hours per week per dealership.</li>
+              <li><strong>Operational Efficiency:</strong> Leaner inventory tools reduced manual errors and improved turnaround times, saving an average of 10 hours per week per dealership.</li>
               <li><strong>Customer Satisfaction:</strong> Competitive pricing and improved stock availability enhanced customer experiences, leading to an increase in repeat business.</li>
             </ul>
             
@@ -155,11 +155,11 @@ export default function DesigningPlatformsForAutomotiveDealersPage() {
             <h2>Key Takeaways for Automotive Dealerships</h2>
             <ul>
               <li><strong>Adopt Technology Early:</strong> Dealers who embrace technology stay ahead of the curve, leveraging tools that simplify operations and boost profitability. The early adopters of both Tesla Finder and Automargin gained significant competitive advantages in their markets.</li>
-              <li><strong>Invest in Data-Driven Solutions:</strong> Platforms built on robust data insights empower dealerships to make smarter decisions. The most successful dealerships are those that have transitioned from intuition-based to data-driven decision-making.</li>
+              <li><strong>Invest in Data-Driven Solutions:</strong> Platforms built on solid data insights help dealerships make smarter decisions. The most successful dealerships are the ones that have moved from intuition-based to data-driven decision-making.</li>
               <li><strong>Focus on Customer Needs:</strong> By optimizing pricing and stock availability, dealerships can enhance customer satisfaction and loyalty. Data-driven platforms enable a more customer-centric approach by helping dealers anticipate and respond to market demands.</li>
             </ul>
             
-            <p>These takeaways highlight a fundamental shift in the automotive retail industry: success increasingly depends not just on what you sell, but on how effectively you use data to inform your sales strategy. Dealerships that recognize and adapt to this reality are positioning themselves for long-term success in a rapidly evolving market.</p>
+            <p>These takeaways point to a real shift in automotive retail: success now depends as much on how well you use data to guide sales strategy as on what you sell. Dealerships that recognize and adapt to this are positioning themselves for long-term success in a fast-moving market.</p>
 
             <h2>The Road Ahead</h2>
             <p>The future of automotive dealerships lies in platforms that combine innovation, scalability, and user-centric design. Tesla Finder and Automargin are just the beginning, paving the way for a new era of data-driven decision-making in the industry.</p>
@@ -169,7 +169,7 @@ export default function DesigningPlatformsForAutomotiveDealersPage() {
             <ul>
               <li><strong>Predictive Analytics:</strong> Moving beyond real-time data to forecast market trends weeks or months in advance</li>
               <li><strong>AI-Powered Customer Matching:</strong> Automatically identifying the optimal inventory for specific customer segments</li>
-              <li><strong>Integrated Digital Retailing:</strong> Seamlessly connecting the online shopping experience with in-dealership processes</li>
+              <li><strong>Integrated Digital Retailing:</strong> Connecting the online shopping experience cleanly with in-dealership processes</li>
             </ul>
             
             <p>Dealerships that invest in these technologies now will be well-positioned to thrive in an increasingly competitive and technology-driven market. The transformation of automotive retail is just beginning, and data-driven platforms will be at the center of this evolution.</p>
@@ -225,7 +225,7 @@ export default function DesigningPlatformsForAutomotiveDealersPage() {
                 </div>
                 <div className="p-6">
                   <h4 className="text-lg font-semibold text-white mb-2 group-hover:text-[#A3D1FF] transition-colors">The Future of SaaS Web Design: Merging Aesthetics with Functionality</h4>
-                  <p className="text-white text-sm mb-4">Explore the evolving landscape of SaaS web design and how it's shaping the future of digital products.</p>
+                  <p className="text-white text-sm mb-4">How SaaS web design is changing, and what it means for digital products.</p>
                   <button 
                     onClick={() => router.push('/blog/future-of-saas-web-design')}
                     className="text-[#A3D1FF] text-sm flex items-center gap-1 hover:underline"

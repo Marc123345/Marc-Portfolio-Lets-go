@@ -80,7 +80,7 @@ export default function AIReadyDesignSystems() {
             </div>
 
             <p className="text-gray-300 leading-relaxed mb-6">
-              Design systems have evolved from style guides to comprehensive component libraries, documentation sites, and design token systems. Now, they need to take the next leap: becoming AI-readable and AI-friendly while remaining human-centric. This isn't about replacing designers—it's about creating systems that both humans and AI can understand and apply consistently.
+              Design systems have evolved from style guides to comprehensive component libraries, documentation sites, and design token systems. Now, they need to take the next leap: becoming AI-readable and AI-friendly while remaining human-centric. The goal is to build systems both humans and AI can read and apply consistently, without taking designers out of the loop.
             </p>
 
             <h2 className="text-2xl sm:text-3xl font-bold text-white mt-12 mb-6 flex items-center gap-3">
@@ -194,7 +194,7 @@ export default function AIReadyDesignSystems() {
             </h2>
 
             <p className="text-gray-300 leading-relaxed mb-6">
-              Components are the building blocks of your interface, but if AI can't understand when and how to use them, it will create Frankenstein UIs that technically work but feel fundamentally wrong.
+              Components are the building blocks of your interface, but if AI can't understand when and how to use them, it will create Frankenstein UIs that technically work but feel wrong.
             </p>
 
             <h3 className="text-xl font-semibold text-white mt-8 mb-4">The Problem: Implicit Knowledge</h3>
@@ -709,7 +709,7 @@ export function validateComponent(tree) {
             <div className="border-t border-gray-800 pt-8 mt-12">
               <h3 className="text-xl font-semibold text-white mb-4">Ready to make your design system AI-ready?</h3>
               <p className="text-gray-300 mb-6">
-                I specialize in building design systems that work seamlessly with AI tools while maintaining brand consistency. Let's discuss how to evolve your system for the AI-assisted development workflow.
+                I specialize in building design systems that work smoothly with AI tools while keeping brand consistency. Let's talk about how to evolve your system for the AI-assisted development workflow.
               </p>
               <Link
                 href="/contact/"

@@ -82,7 +82,7 @@ export default function MobileFirstDesignPrinciplesPage() {
         <div className="max-w-4xl mx-auto">
           <div className="prose prose-lg prose-invert max-w-none">
             <h2>Why Mobile-First Design Matters in 2025</h2>
-            <p>Mobile-first design is no longer just a trend—it's a fundamental approach to creating websites that work for everyone. With mobile devices accounting for over 60% of web traffic globally, designing for mobile first isn't just good practice; it's essential for business success.</p>
+            <p>Mobile-first design has moved from trend to default. With mobile devices driving over 60% of web traffic globally, building for the small screen first is table stakes for any site that needs to perform.</p>
             
             <p>The mobile-first approach means exactly what it sounds like: designing for the smallest screen first, then progressively enhancing the experience for larger screens. This approach forces designers and developers to focus on the core content and functionality, ensuring that the mobile experience isn't an afterthought but the foundation of the design.</p>
             
@@ -142,7 +142,7 @@ export default function MobileFirstDesignPrinciplesPage() {
               <li><strong>Feedback Mechanisms:</strong> Provide clear visual feedback for all interactions to confirm user actions.</li>
             </ul>
             
-            <p>Touch-friendly design isn't just about making elements big enough to tap—it's about creating an interface that feels natural and intuitive on touch devices while still working well with mouse and keyboard navigation.</p>
+            <p>Touch-friendly design goes past making elements big enough to tap. The interface has to feel natural on touch devices while still working with a mouse and keyboard.</p>
             
             <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
               <h4 className="text-white font-semibold mb-2">Implementation Tip</h4>
@@ -159,7 +159,7 @@ export default function MobileFirstDesignPrinciplesPage() {
               <li><strong>Caching Strategies:</strong> Implement appropriate caching to reduce unnecessary downloads.</li>
             </ul>
             
-            <p>Performance isn't just a technical concern—it directly impacts user experience and conversion rates. Studies consistently show that faster sites have lower bounce rates and higher engagement, especially on mobile devices where users are often more impatient.</p>
+            <p>Performance shapes user experience and conversion rates directly, not only load times in a report. Studies consistently show that faster sites have lower bounce rates and higher engagement, especially on mobile where users are quicker to leave.</p>
             
             <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
               <h4 className="text-white font-semibold mb-2">Case Study: Binns Media Group</h4>
@@ -176,7 +176,7 @@ export default function MobileFirstDesignPrinciplesPage() {
               <li><strong>Container Queries:</strong> Use container queries (where supported) to style elements based on their parent container's size rather than the viewport.</li>
             </ul>
             
-            <p>The goal is to create designs that respond not just to different screen sizes but to different viewing contexts. This approach ensures that content remains accessible and readable regardless of how it's being viewed.</p>
+            <p>The goal is design that responds to viewing context, not screen size alone. That keeps content accessible and readable regardless of how someone is looking at it.</p>
             
             <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
               <h4 className="text-white font-semibold mb-2">Implementation Example</h4>
@@ -192,13 +192,13 @@ font-size: clamp(1rem, 0.5rem + 2vw, 1.5rem);`}
             <p>Mobile users often have different contexts and goals compared to desktop users. Effective mobile-first design acknowledges these differences:</p>
             
             <ul>
-              <li><strong>Location Awareness:</strong> Leverage geolocation when appropriate to provide location-specific content or functionality.</li>
+              <li><strong>Location Awareness:</strong> Use geolocation when appropriate to provide location-specific content or functionality.</li>
               <li><strong>Device Capability Detection:</strong> Adapt experiences based on device capabilities (camera, touch, etc.).</li>
               <li><strong>Connection-Aware Loading:</strong> Implement adaptive loading strategies based on connection quality.</li>
               <li><strong>Mode-Specific Optimizations:</strong> Consider different usage modes (one-handed use, reading while in transit, etc.).</li>
             </ul>
             
-            <p>Context-aware design recognizes that mobile users aren't just desktop users on smaller screens—they have different needs, constraints, and opportunities based on their context. By designing with these factors in mind, you can create more relevant and useful experiences.</p>
+            <p>Context-aware design treats mobile users as their own audience, not desktop users on a smaller screen. Their needs, constraints, and opportunities shift with where and how they're using the phone. Designing around those factors produces more relevant, useful experiences.</p>
 
             <h2>7. Comprehensive Testing Across Devices</h2>
             <p>Mobile-first design requires thorough testing across a range of devices and conditions:</p>
@@ -217,8 +217,8 @@ font-size: clamp(1rem, 0.5rem + 2vw, 1.5rem);`}
               <p className="text-gray-300">Create a device testing matrix that includes at minimum: a small Android phone, a large Android phone, an iPhone, and a tablet. For each device, test both portrait and landscape orientations. This basic matrix will catch the majority of layout and interaction issues.</p>
             </div>
 
-            <h2>Conclusion: Mobile-First as a Mindset</h2>
-            <p>Mobile-first design is more than just a technical approach—it's a mindset that prioritizes simplicity, focus, and performance. By starting with the constraints of mobile and then progressively enhancing the experience for larger screens, you create websites that are more resilient, more focused, and ultimately more effective.</p>
+            <h2>Mobile-First as a Mindset</h2>
+            <p>Mobile-first design is a mindset as much as a technique: it prioritizes simplicity, focus, and performance. By starting with the constraints of mobile and then progressively enhancing the experience for larger screens, you create websites that are more resilient, more focused, and ultimately more effective.</p>
             
             <p>The principles outlined in this article provide a foundation for mobile-first design, but the most important principle is to always keep the user at the center of your process. Understand their needs, contexts, and goals, and let those insights guide your design decisions.</p>
             

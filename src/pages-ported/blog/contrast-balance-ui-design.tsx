@@ -82,7 +82,7 @@ export default function ContrastBalanceUIDesignPage() {
         <div className="max-w-4xl mx-auto">
           <div className="prose prose-lg prose-invert max-w-none">
             <h2>The Critical Role of Contrast in Modern UI Design</h2>
-            <p>Contrast and balance form the invisible foundation of every successful interface. While users may not consciously notice good contrast, they immediately feel its absence—struggling to read text, missing important buttons, or feeling visually fatigued after extended use. In an era where digital accessibility is both a legal requirement and a moral imperative, mastering contrast isn't just about aesthetics; it's about creating inclusive experiences that work for everyone.</p>
+            <p>Contrast and balance form the invisible foundation of every successful interface. While users may not consciously notice good contrast, they immediately feel its absence—struggling to read text, missing important buttons, or feeling visually fatigued after extended use. In an era where digital accessibility is both a legal requirement and a moral imperative, mastering contrast is really about building inclusive experiences that work for everyone, not just attractive ones.</p>
             
             <p>Effective contrast serves multiple purposes: it ensures readability for users with visual impairments, creates clear visual hierarchy that guides user attention, and establishes the overall tone and personality of your interface. When done well, contrast becomes an invisible force that makes interfaces feel effortless to use.</p>
             
@@ -268,7 +268,7 @@ export default function ContrastBalanceUIDesignPage() {
               <li><strong>Strategic Brightness:</strong> Use brightness variations rather than color changes to create hierarchy</li>
             </ul>
             
-            <p>Dark themes aren't just inverted light themes—they require their own design considerations and optimization strategies. The goal is to create interfaces that feel comfortable for extended use while maintaining all the functionality and clarity of their light counterparts.</p>
+            <p>Dark themes are not inverted light themes. They need their own design considerations and optimization strategies. The goal is to create interfaces that feel comfortable for extended use while maintaining all the functionality and clarity of their light counterparts.</p>
             
             <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
               <h4 className="text-white font-semibold mb-2">Dark Theme Color System</h4>
@@ -358,7 +358,7 @@ export default function ContrastBalanceUIDesignPage() {
               <li><strong>Luminance Contrast:</strong> Use brightness differences to create distinction even when colors appear similar</li>
               <li><strong>Pattern and Texture:</strong> Incorporate subtle patterns or textures to differentiate elements</li>
               <li><strong>Size and Weight Variations:</strong> Use typography weight and sizing to create hierarchy independent of color</li>
-              <li><strong>Shape and Form:</strong> Leverage different shapes and forms to distinguish interface elements</li>
+              <li><strong>Shape and Form:</strong> Use different shapes and forms to distinguish interface elements</li>
             </ul>
             
             <p>This approach ensures that your interface remains functional and clear for all users, regardless of their color perception abilities.</p>
@@ -575,7 +575,7 @@ export default function ContrastBalanceUIDesignPage() {
             
             <p>The investment in proper contrast design pays dividends in user satisfaction, accessibility compliance, and overall interface quality. In a world where digital experiences are increasingly central to business success, contrast becomes a competitive advantage that sets exceptional products apart from merely functional ones.</p>
             
-            <p>Remember that contrast is not just about meeting accessibility guidelines—though that's essential—it's about creating interfaces that feel effortless to use, regardless of the user's abilities, environment, or device. When contrast is done right, it becomes invisible, allowing users to focus on their goals rather than struggling with the interface.</p>
+            <p>Contrast does more than satisfy accessibility guidelines, essential as that is. Done right, it makes interfaces feel effortless to use, regardless of the user's abilities, environment, or device. It turns invisible, letting users focus on their goals instead of fighting the interface.</p>
             
             <p>As we move forward, the most successful interfaces will be those that treat contrast not as a constraint but as a design tool that enhances both aesthetics and functionality. By embracing the principles outlined in this guide, you can create interfaces that are both visually striking and universally accessible.</p>
           </div>

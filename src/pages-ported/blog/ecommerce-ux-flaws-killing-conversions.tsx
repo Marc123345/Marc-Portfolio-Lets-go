@@ -161,7 +161,7 @@ export default function EcommerceUXFlawsKillingConversionsPage() {
             <h3 className="text-[#A3D1FF]">The Problem: Users Can't Find What They're Looking For</h3>
 
             <p>
-              The average eCommerce site loses <strong className="text-white">30-40% of potential customers</strong> simply because they can't find the products they want. This isn't just about having a search bar — it's about information architecture that matches how customers actually think and shop.
+              The average eCommerce site loses <strong className="text-white">30-40% of potential customers</strong> simply because they can't find the products they want. The fix is information architecture that matches how customers actually think and shop, not just adding a search bar.
             </p>
 
             <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">

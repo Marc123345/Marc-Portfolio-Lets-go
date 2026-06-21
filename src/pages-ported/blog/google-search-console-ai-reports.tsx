@@ -124,7 +124,7 @@ export default function GoogleSearchConsoleAIReports() {
             </div>
 
             <p className="text-gray-300 leading-relaxed mb-6">
-              An important distinction: this feature does not give you access to new data or affect your rankings in any way. It is purely a faster interface for reaching the same data views you could always build manually. Think of it as a shortcut, not a new data source.
+              An important distinction: this feature does not give you access to new data or affect your rankings in any way. It is purely a faster interface for reaching the same data views you could always build manually. It's a shortcut, not a new data source.
             </p>
 
             <div className="bg-gray-800/50 p-6 mb-8">

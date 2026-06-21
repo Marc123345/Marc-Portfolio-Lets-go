@@ -101,11 +101,11 @@ export default function ContextDrivenDesignDecisionsPage() {
             <h2 className="text-3xl font-bold text-white mt-16 mb-6">What Is Design Context?</h2>
 
             <p className="text-gray-300 leading-relaxed">
-              Context is the complete picture of circumstances surrounding a design decision. It's not just about what looks good—it's about what works for specific users, in specific situations, with specific constraints.
+              Context is the complete picture of circumstances surrounding a design decision. It's about what works for specific users, in specific situations, with specific constraints, not only what looks good.
             </p>
 
             <p className="text-gray-300 leading-relaxed">
-              Think of it like cooking. A recipe for chocolate cake isn't just "mix ingredients and bake." A professional chef considers: Who's eating this? What's the occasion? What's the kitchen equipment? What's the budget? What's the climate? The same ingredients produce different results based on context.
+              Cooking works the same way. A recipe for chocolate cake is more than "mix ingredients and bake." A professional chef weighs who's eating it, the occasion, the kitchen equipment, the budget, even the climate. The same ingredients produce different results depending on context.
             </p>
 
             <h2 className="text-3xl font-bold text-white mt-16 mb-6">The Four Pillars of Design Context</h2>

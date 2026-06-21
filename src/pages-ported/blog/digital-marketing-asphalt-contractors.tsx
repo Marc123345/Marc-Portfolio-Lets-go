@@ -393,7 +393,7 @@ export default function DigitalMarketingAsphaltContractorsPage() {
             </ul>
 
             <h3>Showcasing Reviews</h3>
-            <p>Don't let great reviews sit on Google—leverage them everywhere:</p>
+            <p>Don't let great reviews sit on Google—put them to work everywhere:</p>
 
             <ul>
               <li>Feature on homepage of website</li>
@@ -551,11 +551,11 @@ export default function DigitalMarketingAsphaltContractorsPage() {
             </div>
 
             <h2>Conclusion: Building a Marketing System That Works Year-Round</h2>
-            <p>Successful digital marketing isn't about doing one thing perfectly—it's about consistently executing multiple strategies that work together to keep your pipeline full.</p>
+            <p>Successful digital marketing comes from consistently running several strategies that work together to keep your pipeline full, rather than doing one thing perfectly.</p>
 
             <p>Start with the fundamentals: a professional website, optimized Google Business Profile, and Google Ads targeting your most profitable services. Layer in social media presence, email nurturing, and content marketing as you grow. Most importantly, track everything so you know what's working and what's not.</p>
 
-            <p>Remember, your competitors are already marketing digitally. The question isn't whether you should invest in digital marketing—it's whether you can afford not to. Every day you wait is another day potential customers find your competition instead of you.</p>
+            <p>Your competitors are already marketing digitally. At this point the real question is whether you can afford not to. Every day you wait, potential customers find them instead of you.</p>
 
             <p>The most successful paving contractors treat marketing as an essential business function, not an optional expense. They budget for it, measure it, optimize it, and reap the rewards of consistent lead generation and business growth.</p>
 

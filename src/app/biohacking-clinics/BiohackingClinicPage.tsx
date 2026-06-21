@@ -221,7 +221,7 @@ function HeroSection() {
               color: '#F5F5F0',
             }}
           >
-            A website as cutting-edge as{' '}
+            A website as sharp as{' '}
             <em className="italic" style={{ color: ACCENT, fontWeight: 400 }}>
               the tech behind it.
             </em>

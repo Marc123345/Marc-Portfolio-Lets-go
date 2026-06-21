@@ -78,7 +78,7 @@ export default function PavingContractorWebsiteDesignGuidePage() {
         <div className="max-w-4xl mx-auto">
           <div className="prose prose-lg prose-invert max-w-none">
             <h2>Why Your Paving Company Needs a Professional Website</h2>
-            <p>In today's digital-first world, your website is often the first interaction potential customers have with your paving business. When a homeowner needs driveway repair or a property manager searches for parking lot resurfacing, they're turning to Google—not the Yellow Pages.</p>
+            <p>Today, your website is often the first interaction potential customers have with your paving business. When a homeowner needs driveway repair or a property manager searches for parking lot resurfacing, they're turning to Google—not the Yellow Pages.</p>
 
             <p>A professional website does more than just look good. It establishes credibility, showcases your expertise, and most importantly, converts visitors into paying customers. For paving contractors competing in local markets across the US, your website is your 24/7 salesperson working to generate leads even when you're on the job site.</p>
 
@@ -175,7 +175,7 @@ export default function PavingContractorWebsiteDesignGuidePage() {
             </ul>
 
             <h3>5. Trust Signals and Social Proof</h3>
-            <p>Paving projects represent significant investments. Build confidence with robust trust signals:</p>
+            <p>Paving projects represent significant investments. Build confidence with strong trust signals:</p>
 
             <ul>
               <li><strong>Customer Reviews and Testimonials:</strong> Feature authentic reviews prominently. Include the customer's name, location, and specific details about their project.</li>
@@ -473,7 +473,7 @@ export default function PavingContractorWebsiteDesignGuidePage() {
 
             <p>Remember, your website should evolve with your business. What starts as a simple 5-page site can grow into a comprehensive resource that establishes you as the go-to paving expert in your area.</p>
 
-            <p>The question isn't whether you can afford a professional website—it's whether you can afford not to have one when your competitors do.</p>
+            <p>Your competitors already have professional websites. The real cost isn't building one — it's everything you lose by going without.</p>
           </div>
 
           <div className="mt-12 pt-8 border-t border-white/10">

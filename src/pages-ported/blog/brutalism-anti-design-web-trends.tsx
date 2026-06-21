@@ -81,7 +81,7 @@ export default function BrutalismAntiDesignPage() {
             <h2>The Rebellion Against Perfect Design</h2>
             <p>Digital brutalism is having a moment. In an era dominated by polished interfaces, rounded corners, and carefully curated color palettes, brutalist web design and anti-design principles are emerging as powerful alternatives to the homogenized aesthetics that have come to define the modern web.</p>
 
-            <p>This isn't just about being different for the sake of it. Brutalism and anti-design represent a fundamental shift in how we think about digital experiences—prioritizing authenticity, directness, and human imperfection over algorithmic perfection. It's a rejection of design-by-committee approaches in favor of bold, uncompromising creative vision.</p>
+            <p>This isn't difference for its own sake. Brutalism and anti-design mark a real shift in how we think about digital experiences, prioritizing authenticity, directness, and human imperfection over algorithmic polish. They reject design-by-committee in favor of bold, uncompromising creative vision.</p>
 
             <p>The movement draws inspiration from brutalist architecture of the mid-20th century, which emphasized raw materials, structural honesty, and functional purity. In web design, this translates to raw HTML, exposed grids, minimal imagery, stark contrasts, and deliberately imperfect layouts that feel more human and direct than their polished counterparts.</p>
 
@@ -204,7 +204,7 @@ export default function BrutalismAntiDesignPage() {
             </div>
 
             <h3>Breaking the Grid Intentionally</h3>
-            <p>The most effective brutalist designs don't just show the grid—they deliberately break it in strategic ways. Content might overflow grid boundaries, overlap cells, or ignore alignment altogether. These "violations" create visual tension and draw attention to important elements.</p>
+            <p>The most effective brutalist designs deliberately break the grid in strategic ways rather than simply showing it. Content might overflow grid boundaries, overlap cells, or ignore alignment altogether. These "violations" create visual tension and draw attention to important elements.</p>
 
             <p>The key is that these breaks must be intentional and purposeful. Random chaos isn't brutalism—it's just poor design. Effective anti-design uses rule-breaking as a communication tool, not an excuse for laziness.</p>
 
@@ -548,7 +548,7 @@ export default function BrutalismAntiDesignPage() {
 
             <p>As we move forward, the challenge will be maintaining the authentic spirit of brutalism and anti-design as they become more mainstream. The goal isn't to create a new set of conventions to replace the old ones, but to keep questioning, experimenting, and finding new ways to make the web feel more direct, more honest, and more human.</p>
 
-            <p>Whether you fully embrace brutalist principles or simply incorporate elements of raw design into more traditional frameworks, the movement offers valuable lessons: question conventions, prioritize authenticity, embrace imperfection, and never forget that the web is fundamentally made of text, links, and human ideas—everything else is optional.</p>
+            <p>Whether you fully embrace brutalist principles or simply incorporate elements of raw design into more traditional frameworks, the movement offers valuable lessons: question conventions, prioritize authenticity, embrace imperfection, and never forget that the web is made of text, links, and human ideas—everything else is optional.</p>
           </div>
 
           <div className="mt-12 pt-8 border-t border-white/10">

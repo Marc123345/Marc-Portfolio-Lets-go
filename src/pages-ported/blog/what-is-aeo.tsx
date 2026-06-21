@@ -118,7 +118,7 @@ export default function WhatIsAEOPage() {
         <div className="max-w-4xl mx-auto">
           <div className="prose prose-lg prose-invert max-w-none">
 
-            <p className="text-xl text-gray-300 leading-relaxed">For two decades, digital visibility meant one thing: ranking on Google. You researched keywords, optimized title tags, built backlinks, and hoped to land on page one. That model still matters -- but it is no longer the whole picture. A new class of discovery platform has emerged, and it is fundamentally changing how people find information online. <strong className="text-white">Welcome to the era of Answer Engine Optimization.</strong></p>
+            <p className="text-xl text-gray-300 leading-relaxed">For two decades, digital visibility meant one thing: ranking on Google. You researched keywords, optimized title tags, built backlinks, and hoped to land on page one. That model still matters -- but it is no longer the whole picture. A new class of discovery platform has emerged, and it is changing how people find information online. <strong className="text-white">Welcome to the era of Answer Engine Optimization.</strong></p>
 
             <h2>Defining AEO: What It Actually Means</h2>
 
@@ -304,7 +304,7 @@ export default function WhatIsAEOPage() {
                 </div>
                 <div className="bg-black/30 p-4">
                   <p className="text-[#A3D1FF] font-semibold text-sm mb-1">Layer 3: Evidence and Examples (detailed section)</p>
-                  <p className="text-white text-sm">Offer data, case studies, expert quotes, or real-world examples that substantiate the answer. This is what elevates your content from generic to citation-worthy.</p>
+                  <p className="text-white text-sm">Offer data, case studies, expert quotes, or real-world examples that substantiate the answer. This is what lifts your content from generic to citation-worthy.</p>
                 </div>
                 <div className="bg-black/30 p-4">
                   <p className="text-[#A3D1FF] font-semibold text-sm mb-1">Layer 4: Related Questions (expanded coverage)</p>
@@ -479,7 +479,7 @@ export default function WhatIsAEOPage() {
 
             <h2>Conclusion</h2>
 
-            <p>AEO is not a fad, a buzzword, or a replacement for SEO. It is the natural evolution of digital visibility in a world where AI mediates an increasing share of information discovery. The organizations that invest in AEO now -- building citation-worthy content, implementing robust structured data, establishing clear entity authority, and monitoring their presence across AI platforms -- will have a significant advantage as this shift accelerates.</p>
+            <p>AEO is not a fad, a buzzword, or a replacement for SEO. It is the natural evolution of digital visibility in a world where AI mediates an increasing share of information discovery. The organizations that invest in AEO now -- building citation-worthy content, implementing solid structured data, establishing clear entity authority, and monitoring their presence across AI platforms -- will have a significant advantage as this shift accelerates.</p>
 
             <p>The fundamental principle remains unchanged: create genuinely valuable content that serves your audience better than anyone else. What has changed is how that content needs to be structured, signaled, and positioned so that both humans and AI systems can find, understand, and trust it.</p>
 
@@ -572,7 +572,7 @@ export default function WhatIsAEOPage() {
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Ready to Be the Answer?</h2>
           <p className="text-xl text-white mb-8 max-w-2xl mx-auto">
-            Let's optimize your digital presence for the AI-powered search landscape -- so when your audience asks, you're the source that gets cited.
+            Let's optimize your digital presence for AI-powered search -- so when your audience asks, you're the source that gets cited.
           </p>
           <MagneticButton>
             <button
