@@ -56,7 +56,7 @@ export const reviews: Review[] = [
   {
     name: 'Ezra Rubinson',
     rating: 5,
-    content: 'Fantastic work Marc — thank you for building my dream website!!',
+    content: 'Fantastic work Marc, thank you for building my dream website!!',
   },
   {
     name: 'Elior Daniely',
@@ -91,7 +91,7 @@ export const reviews: Review[] = [
   {
     name: 'Lior Shimon',
     rating: 5,
-    content: 'Marc built my dream website — he is great at what he does and a great guy.',
+    content: 'Marc built my dream website, he is great at what he does and a great guy.',
   },
   {
     name: 'Yosi Lugassy',

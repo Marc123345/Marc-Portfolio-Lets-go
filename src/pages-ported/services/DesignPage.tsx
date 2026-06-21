@@ -16,7 +16,7 @@ import {
 const MARC_PORTRAIT =
   'https://ik.imagekit.io/qcvroy8xpd/PW8VUKH.png?updatedAt=1759693058055&tr=f-webp';
 
-// Real, attributed reviews (mirrors src/data/testimonials.ts) — chosen for the
+// Real, attributed reviews (mirrors src/data/testimonials.ts), chosen for the
 // ones that speak to design / UX collaboration specifically.
 const PROOF_TESTIMONIALS = [
   {
@@ -42,7 +42,7 @@ const PROOF_TESTIMONIALS = [
   },
 ];
 
-// Third-party validation — real profiles linked from the site footer.
+// Third-party validation, real profiles linked from the site footer.
 const AWARDS = [
   { label: 'Clutch', href: 'https://clutch.co/profile/marc-friedman-design-agency' },
   { label: 'Awwwards', href: 'https://www.awwwards.com/marc-friedman/' },
@@ -63,7 +63,7 @@ export default function DesignPage() {
         volumeNumber="02"
         tagline={
           <>
-            Intuitive interfaces grounded in real user research — designed to move the
+            Intuitive interfaces grounded in real user research, designed to move the
             one number that actually matters to your business.
           </>
         }
@@ -116,7 +116,7 @@ export default function DesignPage() {
         label="What you get"
         title="Design services,"
         italicTitle="delivered."
-        lead="Research, UI design, prototyping, and dev-ready handoff — bundled into every engagement, under one set of hands instead of split across four people. No à la carte, no scope creep, no extra invoices for the basics."
+        lead="Research, UI design, prototyping, and dev-ready handoff, bundled into every engagement, under one set of hands instead of split across four people. No à la carte, no scope creep, no extra invoices for the basics."
         bg="bg-[#0a0a0a]"
       >
         <div className="border-t border-white/10">
@@ -206,11 +206,11 @@ export default function DesignPage() {
         italicTitle="in the wild."
         bg="bg-[#0a0a0a]"
       >
-        {/* Practitioner block — the person behind the work (Experience signal) */}
+        {/* Practitioner block, the person behind the work (Experience signal) */}
         <div className="mb-14 flex flex-col sm:flex-row sm:items-center gap-5 border border-white/10 bg-[#111418] p-6 md:p-8">
           <img
             src={MARC_PORTRAIT}
-            alt="Marc Friedman — designer and developer"
+            alt="Marc Friedman, designer and developer"
             className="w-20 h-20 rounded-full object-cover object-top ring-1 ring-white/15 flex-shrink-0"
             loading="lazy"
             width={80}
@@ -225,7 +225,7 @@ export default function DesignPage() {
             </p>
             <p className="text-white/65 text-sm md:text-base leading-relaxed max-w-2xl">
               Senior designer &amp; developer based in Tel Aviv, running a Figma-to-code
-              workflow since 2020. Research, UI, and the front-end that ships it — all
+              workflow since 2020. Research, UI, and the front-end that ships it, all
               under one set of hands, so nothing gets lost in a designer-to-dev handoff.
             </p>
             <div className="flex gap-5 mt-3 text-[11px] font-mono uppercase tracking-[0.2em]">
@@ -314,13 +314,13 @@ export default function DesignPage() {
         </div>
       </EditorialSection>
 
-      {/* Chapter 05 — Specialties */}
+      {/* Chapter 05, Specialties */}
       <EditorialSection
         chapter="05"
         label="Specialties"
         title="Research, design, and code,"
         italicTitle="in the same hands."
-        lead="Most teams split UX research, UI design, and front-end across three or four people. I run them as one continuous craft — which is why the design actually survives contact with production."
+        lead="Most teams split UX research, UI design, and front-end across three or four people. I run them as one continuous craft, which is why the design actually survives contact with production."
       >
         <div className="grid md:grid-cols-3 gap-px bg-white/10 border border-white/10">
           <div className="bg-black p-8">
@@ -343,7 +343,7 @@ export default function DesignPage() {
               Design systems that scale
             </h3>
             <p className="text-white/70 leading-relaxed">
-              Tokens, reusable components, documented states, and AA accessibility — so
+              Tokens, reusable components, documented states, and AA accessibility, so
               the product stays consistent as it grows instead of fragmenting screen by
               screen.
             </p>
@@ -357,7 +357,7 @@ export default function DesignPage() {
             </h3>
             <p className="text-white/70 leading-relaxed">
               Figma-to-code in the same hands. No lossy handoff between a designer who
-              draws it and a separate team that rebuilds it — what you approve is what
+              draws it and a separate team that rebuilds it, what you approve is what
               goes live.
             </p>
           </div>

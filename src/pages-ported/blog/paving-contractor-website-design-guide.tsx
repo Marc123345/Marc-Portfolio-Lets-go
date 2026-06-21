@@ -78,7 +78,7 @@ export default function PavingContractorWebsiteDesignGuidePage() {
         <div className="max-w-4xl mx-auto">
           <div className="prose prose-lg prose-invert max-w-none">
             <h2>Why Your Paving Company Needs a Professional Website</h2>
-            <p>Today, your website is often the first interaction potential customers have with your paving business. When a homeowner needs driveway repair or a property manager searches for parking lot resurfacing, they're turning to Google—not the Yellow Pages.</p>
+            <p>Today, your website is often the first interaction potential customers have with your paving business. When a homeowner needs driveway repair or a property manager searches for parking lot resurfacing, they're turning to Google, not the Yellow Pages.</p>
 
             <p>A professional website does more than just look good. It establishes credibility, showcases your expertise, and most importantly, converts visitors into paying customers. For paving contractors competing in local markets across the US, your website is your 24/7 salesperson working to generate leads even when you're on the job site.</p>
 
@@ -124,7 +124,7 @@ export default function PavingContractorWebsiteDesignGuidePage() {
             <ul>
               <li><strong>Before and After Galleries:</strong> Nothing sells paving services better than dramatic transformations. Show cracked, worn surfaces next to your beautiful finished work.</li>
               <li><strong>High-Resolution Images:</strong> Invest in professional photography or learn to take quality photos with proper lighting and angles.</li>
-              <li><strong>Variety of Projects:</strong> Display residential driveways, commercial parking lots, tennis courts, walkways—show the full scope of your capabilities.</li>
+              <li><strong>Variety of Projects:</strong> Display residential driveways, commercial parking lots, tennis courts, walkways, show the full scope of your capabilities.</li>
               <li><strong>Local Projects:</strong> When possible, mention the neighborhood or city where each project was completed to boost local relevance.</li>
             </ul>
 
@@ -217,11 +217,11 @@ export default function PavingContractorWebsiteDesignGuidePage() {
             <p>Colors influence emotions and decisions. Choose your website palette strategically:</p>
 
             <ul>
-              <li><strong>Blue:</strong> Conveys trust, professionalism, and reliability—excellent primary color choice</li>
-              <li><strong>Orange:</strong> Creates urgency and excitement—great for CTA buttons</li>
-              <li><strong>Green:</strong> Represents growth and eco-friendliness—perfect if you offer green paving solutions</li>
-              <li><strong>Gray/Black:</strong> Professional and sophisticated—works well for commercial-focused contractors</li>
-              <li><strong>Red:</strong> Attention-grabbing—use sparingly for urgent CTAs</li>
+              <li><strong>Blue:</strong> Conveys trust, professionalism, and reliability, excellent primary color choice</li>
+              <li><strong>Orange:</strong> Creates urgency and excitement, great for CTA buttons</li>
+              <li><strong>Green:</strong> Represents growth and eco-friendliness, perfect if you offer green paving solutions</li>
+              <li><strong>Gray/Black:</strong> Professional and sophisticated, works well for commercial-focused contractors</li>
+              <li><strong>Red:</strong> Attention-grabbing, use sparingly for urgent CTAs</li>
             </ul>
 
             <p>Maintain consistency across your website, matching your logo and vehicle branding when possible.</p>
@@ -233,7 +233,7 @@ export default function PavingContractorWebsiteDesignGuidePage() {
               <li>Use clean, sans-serif fonts for body text (16px minimum)</li>
               <li>Make headings substantially larger (24-36px) for clear hierarchy</li>
               <li>Ensure high contrast between text and background</li>
-              <li>Break up long paragraphs—aim for 2-3 sentences per paragraph</li>
+              <li>Break up long paragraphs, aim for 2-3 sentences per paragraph</li>
               <li>Use bullet points and lists for easy scanning</li>
             </ul>
 
@@ -247,7 +247,7 @@ export default function PavingContractorWebsiteDesignGuidePage() {
               <li><strong>Say:</strong> "Your new driveway will last 20+ years with our proven installation process"</li>
             </ul>
 
-            <p>Focus on benefits, not features. Customers don't care about your equipment—they care about getting a beautiful, long-lasting driveway at a fair price.</p>
+            <p>Focus on benefits, not features. Customers don't care about your equipment, they care about getting a beautiful, long-lasting driveway at a fair price.</p>
 
             <h3>Educational Content Builds Authority</h3>
             <p>Create content that answers common questions and positions you as the local expert:</p>
@@ -349,7 +349,7 @@ export default function PavingContractorWebsiteDesignGuidePage() {
             <p>Using stock photos of random driveways and parking lots destroys credibility. Visitors can tell these aren't your actual projects. Always use real photos of your work, even if they're taken with a smartphone.</p>
 
             <h3>2. Outdated Copyright Dates</h3>
-            <p>A website footer showing "© 2019" signals you don't maintain your site—or maybe your business. Keep copyright dates current or use dynamic dates that update automatically.</p>
+            <p>A website footer showing "© 2019" signals you don't maintain your site, or maybe your business. Keep copyright dates current or use dynamic dates that update automatically.</p>
 
             <h3>3. No Clear Service Area</h3>
             <p>Visitors from 100 miles away shouldn't have to guess whether you serve their location. State your service area prominently and save everyone time.</p>
@@ -465,7 +465,7 @@ export default function PavingContractorWebsiteDesignGuidePage() {
             </div>
 
             <h2>Conclusion: Your Website is an Investment in Growth</h2>
-            <p>A professional website isn't an expense—it's a growth tool that works around the clock to generate leads and build your reputation. While word-of-mouth and truck lettering still matter, your website reaches customers actively searching for paving services right now.</p>
+            <p>A professional website isn't an expense, it's a growth tool that works around the clock to generate leads and build your reputation. While word-of-mouth and truck lettering still matter, your website reaches customers actively searching for paving services right now.</p>
 
             <p>The paving industry is competitive, and contractors with professional, well-designed websites consistently win more bids and charge premium prices. Homeowners and property managers associate website quality with work quality, fair or not.</p>
 
@@ -473,7 +473,7 @@ export default function PavingContractorWebsiteDesignGuidePage() {
 
             <p>Remember, your website should evolve with your business. What starts as a simple 5-page site can grow into a comprehensive resource that establishes you as the go-to paving expert in your area.</p>
 
-            <p>Your competitors already have professional websites. The real cost isn't building one — it's everything you lose by going without.</p>
+            <p>Your competitors already have professional websites. The real cost isn't building one, it's everything you lose by going without.</p>
           </div>
 
           <div className="mt-12 pt-8 border-t border-white/10">

@@ -78,7 +78,7 @@ export default function DigitalMarketingAsphaltContractorsPage() {
         <div className="max-w-4xl mx-auto">
           <div className="prose prose-lg prose-invert max-w-none">
             <h2>Why Digital Marketing Matters for Paving Contractors</h2>
-            <p>The days of relying solely on word-of-mouth referrals and Yellow Pages ads are over. Today's homeowners and property managers start their search for paving contractors online—typically on Google, Facebook, or local review sites. If you're not actively marketing your business digitally, you're invisible to the vast majority of potential customers.</p>
+            <p>The days of relying solely on word-of-mouth referrals and Yellow Pages ads are over. Today's homeowners and property managers start their search for paving contractors online, typically on Google, Facebook, or local review sites. If you're not actively marketing your business digitally, you're invisible to the vast majority of potential customers.</p>
 
             <p>Digital marketing isn't just for big corporations with massive budgets. In fact, local contractors often see better returns than larger companies because they can target their exact service area with precision. A well-executed digital marketing strategy means more leads, higher-quality customers, and the ability to charge premium prices because you're positioned as the expert in your market.</p>
 
@@ -140,7 +140,7 @@ export default function DigitalMarketingAsphaltContractorsPage() {
             <h2>Pay-Per-Click Advertising (Google Ads)</h2>
 
             <h3>Why Google Ads Works for Paving Contractors</h3>
-            <p>Google Ads puts you at the top of search results immediately—above even the best organic rankings. When someone searches "driveway paving [your city]," your ad appears first, capturing high-intent customers actively looking to hire.</p>
+            <p>Google Ads puts you at the top of search results immediately, above even the best organic rankings. When someone searches "driveway paving [your city]," your ad appears first, capturing high-intent customers actively looking to hire.</p>
 
             <h3>Setting Up Your First Campaign</h3>
 
@@ -195,9 +195,9 @@ export default function DigitalMarketingAsphaltContractorsPage() {
             <ul>
               <li><strong>Starting Budget:</strong> $500-1,500/month minimum for meaningful results</li>
               <li><strong>Bid Strategy:</strong> Start with "Maximize Clicks" to gather data, then switch to "Target CPA"</li>
-              <li><strong>Geographic Targeting:</strong> Target only your service area—don't waste money on areas you don't serve</li>
+              <li><strong>Geographic Targeting:</strong> Target only your service area, don't waste money on areas you don't serve</li>
               <li><strong>Time Targeting:</strong> Increase bids during business hours when you can answer calls</li>
-              <li><strong>Device Targeting:</strong> Mobile searchers have highest intent—consider mobile bid adjustments</li>
+              <li><strong>Device Targeting:</strong> Mobile searchers have highest intent, consider mobile bid adjustments</li>
             </ul>
 
             <h3>Negative Keywords</h3>
@@ -363,12 +363,12 @@ export default function DigitalMarketingAsphaltContractorsPage() {
               <li><strong>FAQ Answers:</strong> Address common questions on camera</li>
             </ul>
 
-            <p>Don't worry about Hollywood production quality—authentic smartphone videos often perform better than overly polished content.</p>
+            <p>Don't worry about Hollywood production quality, authentic smartphone videos often perform better than overly polished content.</p>
 
             <h2>Reputation Management</h2>
 
             <h3>Proactive Review Generation</h3>
-            <p>Reviews directly impact your bottom line—make them a priority:</p>
+            <p>Reviews directly impact your bottom line, make them a priority:</p>
 
             <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
               <h4 className="text-white font-semibold mb-3">Review Generation System:</h4>
@@ -393,7 +393,7 @@ export default function DigitalMarketingAsphaltContractorsPage() {
             </ul>
 
             <h3>Showcasing Reviews</h3>
-            <p>Don't let great reviews sit on Google—put them to work everywhere:</p>
+            <p>Don't let great reviews sit on Google, put them to work everywhere:</p>
 
             <ul>
               <li>Feature on homepage of website</li>
@@ -428,7 +428,7 @@ export default function DigitalMarketingAsphaltContractorsPage() {
             </div>
 
             <h3>Lead Nurture Sequences</h3>
-            <p>Most prospects don't hire immediately—nurture them with automated sequences:</p>
+            <p>Most prospects don't hire immediately, nurture them with automated sequences:</p>
 
             <ul>
               <li><strong>Day 0:</strong> Immediate auto-response confirming receipt of inquiry</li>
@@ -470,7 +470,7 @@ export default function DigitalMarketingAsphaltContractorsPage() {
             </div>
 
             <h3>Call Tracking</h3>
-            <p>Phone calls are often your most valuable leads—track them properly:</p>
+            <p>Phone calls are often your most valuable leads, track them properly:</p>
 
             <ul>
               <li>Use unique phone numbers for each marketing channel</li>
@@ -559,7 +559,7 @@ export default function DigitalMarketingAsphaltContractorsPage() {
 
             <p>The most successful paving contractors treat marketing as an essential business function, not an optional expense. They budget for it, measure it, optimize it, and reap the rewards of consistent lead generation and business growth.</p>
 
-            <p>Start small if you need to, but start now. Implement one strategy at a time, master it, then add the next. Within 6-12 months, you'll have a complete digital marketing system that generates qualified leads on autopilot—allowing you to focus on what you do best: delivering exceptional paving services.</p>
+            <p>Start small if you need to, but start now. Implement one strategy at a time, master it, then add the next. Within 6-12 months, you'll have a complete digital marketing system that generates qualified leads on autopilot, allowing you to focus on what you do best: delivering exceptional paving services.</p>
           </div>
 
           <div className="mt-12 pt-8 border-t border-white/10">

@@ -9,7 +9,7 @@ const config: CaseStudyConfig = {
   italicWord: 'Swimming.',
   tagline: (
     <>
-      Olympic champion&apos;s swimming clinics platform — with booking, athlete
+      Olympic champion&apos;s swimming clinics platform, with booking, athlete
       management, and clinic scheduling designed for real parents under real time
       pressure.
     </>
@@ -75,7 +75,7 @@ const config: CaseStudyConfig = {
       {
         title: 'Editorial athlete profile',
         description:
-          'Long-form editorial layout that does justice to the athletic career — cinematic imagery, event history, career stats.',
+          'Long-form editorial layout that does justice to the athletic career, cinematic imagery, event history, career stats.',
       },
       {
         title: 'Mobile-first',

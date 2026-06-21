@@ -66,7 +66,7 @@ const config: CaseStudyConfig = {
       {
         title: 'Self-serve procurement portal',
         description:
-          'Developers log in, browse the catalogue, request quotes, and track orders — without needing to email a rep.',
+          'Developers log in, browse the catalogue, request quotes, and track orders, without needing to email a rep.',
       },
       {
         title: 'Live inventory + pricing',

@@ -10,12 +10,12 @@ interface CubeMatrixProps {
 }
 
 /**
- * CORE — a 3×3×3 matrix of mini cubes forming a living structure.
+ * CORE, a 3×3×3 matrix of mini cubes forming a living structure.
  * The whole assembly auto-rotates on Y and responds to pointer X/Y
  * with smooth lerp. Each mini cube rotates on its own axis at a
  * phase-shifted cadence. A light wave sweeps through periodically.
  *
- * Pure CSS 3D transforms — no Three.js, no physics.
+ * Pure CSS 3D transforms, no Three.js, no physics.
  */
 export default function CubeMatrix({
   size = 420,

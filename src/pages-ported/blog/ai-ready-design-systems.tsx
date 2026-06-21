@@ -89,7 +89,7 @@ export default function AIReadyDesignSystems() {
             </h2>
 
             <p className="text-gray-300 leading-relaxed mb-6">
-              Design tokens are the atomic units of your design system—the colors, spacing, typography, and other visual properties that define your brand. But traditional token systems often fail when AI tries to interpret them.
+              Design tokens are the atomic units of your design system, the colors, spacing, typography, and other visual properties that define your brand. But traditional token systems often fail when AI tries to interpret them.
             </p>
 
             <h3 className="text-xl font-semibold text-white mt-8 mb-4">What Goes Wrong</h3>
@@ -107,7 +107,7 @@ export default function AIReadyDesignSystems() {
                     </code>
                   </div>
                   <p className="text-white text-sm mb-0">
-                    AI sees "blue-500" and doesn't know if it's for primary actions, informational messages, or decorative elements. It guesses—and often guesses wrong.
+                    AI sees "blue-500" and doesn't know if it's for primary actions, informational messages, or decorative elements. It guesses, and often guesses wrong.
                   </p>
                 </div>
               </div>
@@ -667,7 +667,7 @@ export function validateComponent(tree) {
             <h2 className="text-2xl sm:text-3xl font-bold text-white mt-12 mb-6">The Path Forward</h2>
 
             <p className="text-gray-300 leading-relaxed mb-6">
-              AI-ready design systems aren't about replacing human designers—they're about scaling design decisions and maintaining consistency as AI becomes a standard part of the development workflow. The key is treating AI as a team member who needs clear guidance, not as a magic tool that will figure everything out.
+              AI-ready design systems aren't about replacing human designers, they're about scaling design decisions and maintaining consistency as AI becomes a standard part of the development workflow. The key is treating AI as a team member who needs clear guidance, not as a magic tool that will figure everything out.
             </p>
 
             <p className="text-gray-300 leading-relaxed mb-6">
@@ -699,7 +699,7 @@ export function validateComponent(tree) {
 
             <div className="bg-gradient-to-r from-[#A3D1FF]/10 to-purple-600/10 border border-[#A3D1FF]/30 p-8 mb-8">
               <p className="text-white text-lg font-medium mb-4">
-                The future belongs to design systems that serve both humans and AI—systems that maintain brand consistency regardless of who (or what) is implementing them.
+                The future belongs to design systems that serve both humans and AI, systems that maintain brand consistency regardless of who (or what) is implementing them.
               </p>
               <p className="text-gray-300 mb-0">
                 By structuring your tokens semantically, documenting components comprehensively, establishing clear content guidelines, and implementing programmatic guardrails, you create a system that AI can understand and apply reliably. The result is faster development, better consistency, and the freedom to focus on high-level design decisions instead of policing every implementation detail.

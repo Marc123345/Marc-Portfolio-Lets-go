@@ -180,7 +180,7 @@ export default function HowItWorksSection() {
           ))}
         </div>
 
-        {/* End-of-reel indicator — visible only on last chapter */}
+        {/* End-of-reel indicator, visible only on last chapter */}
         <AnimatePresence>
           {activeChapter === 2 && (
             <motion.div
@@ -215,7 +215,7 @@ function ChapterPanel({
 }) {
   return (
     <div className="relative w-screen h-full flex items-center">
-      {/* Giant ghost numeral — centered, won't clip */}
+      {/* Giant ghost numeral, centered, won't clip */}
       <div
         aria-hidden="true"
         className="pointer-events-none select-none absolute inset-0 flex items-center overflow-hidden"

@@ -44,7 +44,7 @@ export default function WhatIsGEOPage() {
         "name": "What is GEO (Generative Engine Optimization)?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "GEO (Generative Engine Optimization) is the practice of optimizing web content so that generative AI systems — such as Google AI Overviews, ChatGPT, Perplexity, and Copilot — include, reference, or cite it when generating answers to user queries. Unlike traditional SEO which optimizes for ranking in a list, GEO optimizes for inclusion in AI-synthesized responses."
+          "text": "GEO (Generative Engine Optimization) is the practice of optimizing web content so that generative AI systems, such as Google AI Overviews, ChatGPT, Perplexity, and Copilot, include, reference, or cite it when generating answers to user queries. Unlike traditional SEO which optimizes for ranking in a list, GEO optimizes for inclusion in AI-synthesized responses."
         }
       },
       {
@@ -60,7 +60,7 @@ export default function WhatIsGEOPage() {
         "name": "How is GEO different from AEO?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "GEO and AEO are closely related and sometimes used interchangeably. The main distinction: AEO (Answer Engine Optimization) focuses on optimizing for platforms that answer questions directly. GEO (Generative Engine Optimization) is broader, focusing on any AI system that generates content using web sources — including summarization, creative tasks, research, and multi-step reasoning, not just direct Q&A."
+          "text": "GEO and AEO are closely related and sometimes used interchangeably. The main distinction: AEO (Answer Engine Optimization) focuses on optimizing for platforms that answer questions directly. GEO (Generative Engine Optimization) is broader, focusing on any AI system that generates content using web sources, including summarization, creative tasks, research, and multi-step reasoning, not just direct Q&A."
         }
       },
       {
@@ -76,7 +76,7 @@ export default function WhatIsGEOPage() {
         "name": "Does GEO replace traditional SEO?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "No. GEO builds on top of traditional SEO foundations. Strong technical SEO, quality content, and domain authority remain essential — they are also signals that generative AI systems use when selecting sources. GEO adds a new optimization layer focused specifically on how AI models discover, parse, and cite content."
+          "text": "No. GEO builds on top of traditional SEO foundations. Strong technical SEO, quality content, and domain authority remain essential, they are also signals that generative AI systems use when selecting sources. GEO adds a new optimization layer focused specifically on how AI models discover, parse, and cite content."
         }
       }
     ]
@@ -125,7 +125,7 @@ export default function WhatIsGEOPage() {
         <div className="max-w-4xl mx-auto">
           <div className="prose prose-lg prose-invert max-w-none">
 
-            <p className="text-xl text-gray-300 leading-relaxed">Search has been reinvented without much fanfare — no press conference, no product launch, just a real change in how people discover information. Instead of scanning ten blue links and clicking through to websites, a growing number of users ask an AI system a question and receive a synthesized, conversational answer -- often without ever visiting a single webpage. <strong className="text-white">This is the world Generative Engine Optimization was built for.</strong></p>
+            <p className="text-xl text-gray-300 leading-relaxed">Search has been reinvented without much fanfare, no press conference, no product launch, just a real change in how people discover information. Instead of scanning ten blue links and clicking through to websites, a growing number of users ask an AI system a question and receive a synthesized, conversational answer, often without ever visiting a single webpage. <strong className="text-white">This is the world Generative Engine Optimization was built for.</strong></p>
 
             <h2>What Is Generative Engine Optimization?</h2>
 
@@ -134,14 +134,14 @@ export default function WhatIsGEOPage() {
             <p>The term "generative engine" refers to any AI-powered system that generates new text by synthesizing information from multiple sources. This includes:</p>
 
             <ul>
-              <li><strong>Google AI Overviews</strong> -- AI-generated summaries displayed above traditional search results, synthesizing information from multiple web pages into a single narrative answer</li>
-              <li><strong>ChatGPT</strong> (with web browsing) -- OpenAI's conversational AI that searches the web, reads pages, and generates detailed responses with source citations</li>
-              <li><strong>Perplexity AI</strong> -- a purpose-built generative search engine that combines real-time web search with LLM-powered synthesis</li>
-              <li><strong>Microsoft Copilot</strong> -- integrated across Bing, Edge, and Microsoft 365, generating answers from web and enterprise data</li>
-              <li><strong>Gemini</strong> (Google), <strong>Claude</strong> (Anthropic), <strong>Grok</strong> (xAI) -- large language models with varying degrees of web access and citation capability</li>
+              <li><strong>Google AI Overviews</strong>, AI-generated summaries displayed above traditional search results, synthesizing information from multiple web pages into a single narrative answer</li>
+              <li><strong>ChatGPT</strong> (with web browsing), OpenAI's conversational AI that searches the web, reads pages, and generates detailed responses with source citations</li>
+              <li><strong>Perplexity AI</strong>, a purpose-built generative search engine that combines real-time web search with LLM-powered synthesis</li>
+              <li><strong>Microsoft Copilot</strong>, integrated across Bing, Edge, and Microsoft 365, generating answers from web and enterprise data</li>
+              <li><strong>Gemini</strong> (Google), <strong>Claude</strong> (Anthropic), <strong>Grok</strong> (xAI), large language models with varying degrees of web access and citation capability</li>
             </ul>
 
-            <p>What makes these "generative" rather than "traditional" engines is the output format. A traditional search engine retrieves and ranks existing pages. A generative engine creates a new piece of text that did not exist before, assembled from information it found across the web. Your content is no longer the destination -- it is the raw material.</p>
+            <p>What makes these "generative" rather than "traditional" engines is the output format. A traditional search engine retrieves and ranks existing pages. A generative engine creates a new piece of text that did not exist before, assembled from information it found across the web. Your content is no longer the destination, it is the raw material.</p>
 
             <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
               <h4 className="text-white font-semibold mb-3 flex items-center">
@@ -175,14 +175,14 @@ export default function WhatIsGEOPage() {
                   <span className="text-[#A3D1FF] font-bold text-lg shrink-0">4.</span>
                   <div>
                     <p className="text-white font-semibold">Synthesis and Generation</p>
-                    <p className="text-white text-sm">The LLM weaves extracted information into a coherent, original response -- resolving conflicts, adding context, and organizing the answer logically.</p>
+                    <p className="text-white text-sm">The LLM weaves extracted information into a coherent, original response, resolving conflicts, adding context, and organizing the answer logically.</p>
                   </div>
                 </div>
                 <div className="flex gap-3">
                   <span className="text-[#A3D1FF] font-bold text-lg shrink-0">5.</span>
                   <div>
                     <p className="text-white font-semibold">Attribution</p>
-                    <p className="text-white text-sm">Sources are linked or cited (the specifics vary by platform). This is where your content either gets credited -- or remains invisible.</p>
+                    <p className="text-white text-sm">Sources are linked or cited (the specifics vary by platform). This is where your content either gets credited, or remains invisible.</p>
                   </div>
                 </div>
               </div>
@@ -190,7 +190,7 @@ export default function WhatIsGEOPage() {
 
             <h2>GEO vs. SEO: How They Differ</h2>
 
-            <p>Traditional SEO and GEO share common DNA -- both are about making content discoverable. But the mechanics diverge in critical ways.</p>
+            <p>Traditional SEO and GEO share common DNA, both are about making content discoverable. But the mechanics diverge in critical ways.</p>
 
             <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8 overflow-x-auto">
               <table className="w-full text-sm">
@@ -241,7 +241,7 @@ export default function WhatIsGEOPage() {
               </table>
             </div>
 
-            <p>The critical insight: in traditional SEO, your page is the destination. In GEO, your page is a source. The AI engine does not send users to your page to find the answer -- it extracts the answer and presents it directly. Getting cited (with a link) is the new "ranking first."</p>
+            <p>The critical insight: in traditional SEO, your page is the destination. In GEO, your page is a source. The AI engine does not send users to your page to find the answer, it extracts the answer and presents it directly. Getting cited (with a link) is the new "ranking first."</p>
 
             <h2>GEO vs. AEO: Clarifying the Terminology</h2>
 
@@ -260,7 +260,7 @@ export default function WhatIsGEOPage() {
                 </div>
                 <div className="bg-black/30 p-5">
                   <h4 className="text-emerald-400 font-semibold mb-3">GEO (Generative Engine Optimization)</h4>
-                  <p className="text-white text-sm mb-3">Broader scope. Focuses on <strong className="text-gray-300">any AI system that generates content</strong> using web sources -- including summaries, research, comparisons, and creative tasks.</p>
+                  <p className="text-white text-sm mb-3">Broader scope. Focuses on <strong className="text-gray-300">any AI system that generates content</strong> using web sources, including summaries, research, comparisons, and creative tasks.</p>
                   <ul className="text-white text-sm space-y-1">
                     <li>Optimizes for: all generative outputs</li>
                     <li>Core format: any content AI might synthesize</li>
@@ -273,7 +273,7 @@ export default function WhatIsGEOPage() {
 
             <h2>The Research Behind GEO</h2>
 
-            <p>GEO is not just a marketing buzzword. It is grounded in academic research. A landmark 2024 paper from researchers at Georgia Tech, Princeton, the Allen Institute for AI, and IIT Delhi -- titled "GEO: Generative Engine Optimization" -- formally introduced the concept and provided the first empirical framework for understanding how content visibility changes in generative search.</p>
+            <p>GEO is not just a marketing buzzword. It is grounded in academic research. A landmark 2024 paper from researchers at Georgia Tech, Princeton, the Allen Institute for AI, and IIT Delhi, titled "GEO: Generative Engine Optimization", formally introduced the concept and provided the first empirical framework for understanding how content visibility changes in generative search.</p>
 
             <h3>Key Findings from the Research</h3>
 
@@ -323,7 +323,7 @@ export default function WhatIsGEOPage() {
               </div>
             </div>
 
-            <p>The research makes one thing clear: <strong className="text-white">the strategies that work for GEO come down to content quality, specificity, and authority</strong> -- not about gaming an algorithm.</p>
+            <p>The research makes one thing clear: <strong className="text-white">the strategies that work for GEO come down to content quality, specificity, and authority</strong>, not about gaming an algorithm.</p>
 
             <h2>The Nine Pillars of GEO Strategy</h2>
 
@@ -381,7 +381,7 @@ export default function WhatIsGEOPage() {
 
             <ul>
               <li>Referencing specific studies, reports, or datasets by name (not just "studies show")</li>
-              <li>Linking to primary sources -- government data, peer-reviewed research, official industry reports</li>
+              <li>Linking to primary sources, government data, peer-reviewed research, official industry reports</li>
               <li>Naming the organizations behind the data (e.g., "according to Forrester Research" rather than "according to analysts")</li>
               <li>Including publication dates to signal freshness</li>
               <li>Using in-line citations rather than footnotes, since AI models parse body text more reliably</li>
@@ -400,7 +400,7 @@ export default function WhatIsGEOPage() {
 
             <h3>5. Build Topical Depth, Not Just Breadth</h3>
 
-            <p>Generative engines assess topical authority by evaluating the depth and interconnectedness of your content on a subject. A single blog post about AI is not enough -- you need a content ecosystem:</p>
+            <p>Generative engines assess topical authority by evaluating the depth and interconnectedness of your content on a subject. A single blog post about AI is not enough, you need a content ecosystem:</p>
 
             <ul>
               <li><strong>Hub-and-spoke content architecture.</strong> A comprehensive pillar page supported by detailed articles on every subtopic, all interlinked.</li>
@@ -414,13 +414,13 @@ export default function WhatIsGEOPage() {
             <p>Schema markup translates your content into a language machines already understand. For GEO, the priority schemas are:</p>
 
             <ul>
-              <li><strong>Article / BlogPosting</strong> -- identifies the content type, author, date, and topic</li>
-              <li><strong>FAQPage</strong> -- explicitly maps questions to answers in a machine-readable format</li>
-              <li><strong>HowTo</strong> -- structures step-by-step instructions for easy extraction</li>
-              <li><strong>Organization / Person</strong> -- establishes entity identity and credentials</li>
-              <li><strong>ClaimReview</strong> -- for fact-checking content, signals high editorial rigor</li>
-              <li><strong>Dataset</strong> -- marks up original data, research results, or statistical collections</li>
-              <li><strong>Speakable</strong> -- identifies sections suitable for voice synthesis (relevant as AI answers move to voice interfaces)</li>
+              <li><strong>Article / BlogPosting</strong>, identifies the content type, author, date, and topic</li>
+              <li><strong>FAQPage</strong>, explicitly maps questions to answers in a machine-readable format</li>
+              <li><strong>HowTo</strong>, structures step-by-step instructions for easy extraction</li>
+              <li><strong>Organization / Person</strong>, establishes entity identity and credentials</li>
+              <li><strong>ClaimReview</strong>, for fact-checking content, signals high editorial rigor</li>
+              <li><strong>Dataset</strong>, marks up original data, research results, or statistical collections</li>
+              <li><strong>Speakable</strong>, identifies sections suitable for voice synthesis (relevant as AI answers move to voice interfaces)</li>
             </ul>
 
             <h3>7. Optimize Technical Access</h3>
@@ -452,7 +452,7 @@ export default function WhatIsGEOPage() {
             <ul>
               <li><strong>Unique data.</strong> Original research, proprietary statistics, survey results, or case study outcomes that exist nowhere else on the web.</li>
               <li><strong>Novel frameworks.</strong> Original models, classification systems, or analytical approaches that add genuine intellectual value.</li>
-              <li><strong>Practitioner depth.</strong> Insights that only come from hands-on experience -- specific workflows, real failure stories, implementation details that generic content misses.</li>
+              <li><strong>Practitioner depth.</strong> Insights that only come from hands-on experience, specific workflows, real failure stories, implementation details that generic content misses.</li>
               <li><strong>Definitive comprehensiveness.</strong> The most thorough, well-organized treatment of a topic available online.</li>
               <li><strong>Timeliness.</strong> Coverage of recent developments, updated statistics, or fresh analysis of evolving topics.</li>
             </ul>
@@ -537,10 +537,10 @@ export default function WhatIsGEOPage() {
 
             <ul>
               <li><strong>Confusing GEO with prompt manipulation.</strong> GEO is about making your content more worthy of citation, not about embedding hidden instructions or prompts in your pages. AI models are trained to ignore such tactics, and attempting them can damage your credibility.</li>
-              <li><strong>Neglecting content quality for structure.</strong> Perfect schema markup on thin content will not earn citations. Structure enhances quality -- it does not replace it.</li>
+              <li><strong>Neglecting content quality for structure.</strong> Perfect schema markup on thin content will not earn citations. Structure enhances quality, it does not replace it.</li>
               <li><strong>Blocking AI crawlers out of fear.</strong> Legitimate concerns about content scraping exist, but blocking all AI crawlers means your content will not appear in any AI-generated answers. Evaluate the trade-off strategically.</li>
               <li><strong>Treating GEO as separate from SEO.</strong> GEO is an additional optimization layer, not an alternative strategy. The fundamentals of technical SEO, content quality, and domain authority still apply and still matter.</li>
-              <li><strong>Optimizing for one platform only.</strong> Each generative engine has different characteristics, but the core GEO principles -- quality, structure, authority, data -- work across all of them. Platform-specific tricks are fragile; principles are durable.</li>
+              <li><strong>Optimizing for one platform only.</strong> Each generative engine has different characteristics, but the core GEO principles, quality, structure, authority, data, work across all of them. Platform-specific tricks are fragile; principles are durable.</li>
               <li><strong>Ignoring content freshness.</strong> Generative engines increasingly weight recency. A comprehensive guide from 2023 with outdated statistics will lose ground to a less comprehensive but current article from 2026.</li>
             </ul>
 
@@ -615,7 +615,7 @@ export default function WhatIsGEOPage() {
 
             <h2>Conclusion</h2>
 
-            <p>Generative Engine Optimization represents the most significant shift in digital visibility since the rise of mobile search. It does not replace what came before -- technical SEO, content quality, domain authority -- but it adds a new dimension to how that work translates into visibility.</p>
+            <p>Generative Engine Optimization represents the most significant shift in digital visibility since the rise of mobile search. It does not replace what came before, technical SEO, content quality, domain authority, but it adds a new dimension to how that work translates into visibility.</p>
 
             <p>The organizations that thrive in this new world will be those that understand a simple truth: in the age of generative search, you are not optimizing for rankings. You are optimizing to become a source that AI systems trust, extract from, and cite.</p>
 
@@ -708,7 +708,7 @@ export default function WhatIsGEOPage() {
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Ready to Optimize for Generative Search?</h2>
           <p className="text-xl text-white mb-8 max-w-2xl mx-auto">
-            Let's make your content the source AI systems trust and cite -- so your expertise becomes part of the answer.
+            Let's make your content the source AI systems trust and cite, so your expertise becomes part of the answer.
           </p>
           <MagneticButton>
             <button

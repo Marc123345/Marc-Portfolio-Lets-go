@@ -73,7 +73,7 @@ export default function EmptyIsntMinimalPage() {
           <div className="aspect-[21/9] overflow-hidden mb-8">
             <img
               src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=2000&q=80"
-              alt="A near-empty white workspace — the look most people mistake for minimalism"
+              alt="A near-empty white workspace, the look most people mistake for minimalism"
               className="w-full h-full object-cover"
             />
           </div>
@@ -88,13 +88,13 @@ export default function EmptyIsntMinimalPage() {
 
             <p>Looks clean. Looks expensive. Looks like nobody made a single decision.</p>
 
-            <p>That&rsquo;s the whole problem with minimalism. It&rsquo;s the most faked skill in web design, because the fake version photographs beautifully and the real version is basically invisible &mdash; it just works, and nobody notices the work that went in. So everyone copies the symptoms (space, restraint, one font) and skips the cause (deciding what actually matters and killing everything else).</p>
+            <p>That&rsquo;s the whole problem with minimalism. It&rsquo;s the most faked skill in web design, because the fake version photographs beautifully and the real version is basically invisible, it just works, and nobody notices the work that went in. So everyone copies the symptoms (space, restraint, one font) and skips the cause (deciding what actually matters and killing everything else).</p>
 
             <p><strong>Empty is easy. Minimal is hard. They are not the same thing.</strong></p>
 
             <h2>The screenshot trap</h2>
             <p>Here&rsquo;s why bad minimalism spreads so fast: it wins in a screenshot.</p>
-            <p>A static frame on Dribbble rewards space and silence. No interaction, no scroll, no real person trying to actually do something. Just a pretty composition sitting still. So designers optimize for the frame &mdash; they remove and remove until it looks calm &mdash; and then ship a product where you genuinely cannot find the button.</p>
+            <p>A static frame on Dribbble rewards space and silence. No interaction, no scroll, no real person trying to actually do something. Just a pretty composition sitting still. So designers optimize for the frame, they remove and remove until it looks calm, and then ship a product where you genuinely cannot find the button.</p>
             <p>Real minimalism isn&rsquo;t optimized for the screenshot. It&rsquo;s optimized for the person scrolling at 11pm trying to work out if your thing solves their problem. Different goal. Completely different design.</p>
             <p>If your minimalism falls apart the second someone tries to use it, you didn&rsquo;t design a minimal product. You designed a poster.</p>
 
@@ -105,7 +105,7 @@ export default function EmptyIsntMinimalPage() {
 
             <h2>Hierarchy is the actual product</h2>
             <p>Here&rsquo;s the part everyone skips.</p>
-            <p>When you take away decoration, color, borders, boxes &mdash; all the stuff weaker designs lean on to fake structure &mdash; something still has to do that job. Something has to tell the eye where to go first, second, third.</p>
+            <p>When you take away decoration, color, borders, boxes, all the stuff weaker designs lean on to fake structure, something still has to do that job. Something has to tell the eye where to go first, second, third.</p>
             <p>That something is hierarchy. Type scale, weight, and spacing. That&rsquo;s the toolkit. That&rsquo;s all of it.</p>
             <p>In a busy design you can hide weak hierarchy behind a colored card and a drop shadow and nobody&rsquo;s the wiser. In a minimal one, there&rsquo;s nowhere to hide. If your headline and your body copy are too close in size, the page reads flat and the user has no idea where to look. If your spacing is inconsistent by a few pixels here and there, the whole thing feels cheap in a way people can feel but can&rsquo;t name.</p>
             <p>This is why minimalism is hard. You took away every crutch, and now the bones have to be perfect. Most &ldquo;minimal&rdquo; sites just have terrible bones wearing a nice outfit.</p>
@@ -113,14 +113,14 @@ export default function EmptyIsntMinimalPage() {
             <h2>Constraints aren&rsquo;t the sacrifice. They&rsquo;re the point.</h2>
             <p>One typeface. Two weights. A palette you can count on one hand. People treat these like limitations they&rsquo;re heroically working within.</p>
             <p>They&rsquo;re not limitations. They&rsquo;re the engine.</p>
-            <p>When you only get two type weights, you have to actually think about which words deserve the bold one. When you can&rsquo;t reach for a new color every time you want to grab attention, you&rsquo;re forced to use position and size and space like an adult. Constraints manufacture the decisions that make work good. Remove them and you&rsquo;ll fill the space. Every time. Everyone does &mdash; it&rsquo;s not a willpower thing, it&rsquo;s gravity.</p>
+            <p>When you only get two type weights, you have to actually think about which words deserve the bold one. When you can&rsquo;t reach for a new color every time you want to grab attention, you&rsquo;re forced to use position and size and space like an adult. Constraints manufacture the decisions that make work good. Remove them and you&rsquo;ll fill the space. Every time. Everyone does, it&rsquo;s not a willpower thing, it&rsquo;s gravity.</p>
 
             <h2>Where it quietly dies</h2>
             <p>Minimal aesthetics have a body count, and it&rsquo;s almost always the same three deaths.</p>
 
             <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
               <h4 className="text-white font-semibold mb-2">Affordances</h4>
-              <p className="text-gray-300 mb-0">You stripped the button down until it&rsquo;s just text &mdash; no background, no border, nothing that says &ldquo;click me.&rdquo; Looks slick. Nobody clicks it. A button that doesn&rsquo;t look like a button isn&rsquo;t minimal, it&rsquo;s broken.</p>
+              <p className="text-gray-300 mb-0">You stripped the button down until it&rsquo;s just text, no background, no border, nothing that says &ldquo;click me.&rdquo; Looks slick. Nobody clicks it. A button that doesn&rsquo;t look like a button isn&rsquo;t minimal, it&rsquo;s broken.</p>
             </div>
 
             <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
@@ -130,16 +130,16 @@ export default function EmptyIsntMinimalPage() {
 
             <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
               <h4 className="text-white font-semibold mb-2">Mystery-meat navigation</h4>
-              <p className="text-gray-300 mb-0">You buried the nav behind a hamburger on a wide desktop screen because the menu &ldquo;cluttered the hero.&rdquo; Now people can&rsquo;t find your pricing page. Congratulations &mdash; you made the single most important link on the site invisible, to look tidy.</p>
+              <p className="text-gray-300 mb-0">You buried the nav behind a hamburger on a wide desktop screen because the menu &ldquo;cluttered the hero.&rdquo; Now people can&rsquo;t find your pricing page. Congratulations, you made the single most important link on the site invisible, to look tidy.</p>
             </div>
 
             <p>Every one of these comes from the same mistake: treating minimalism as fewer things instead of less noise. The goal was never to own fewer elements. It was to have nothing on the page competing with the thing that matters.</p>
 
             <h2>The only test that counts</h2>
             <p>Forget how it looks parked in a frame. Ask the real question instead:</p>
-            <p>Stripped down like this &mdash; does it still work? Can a stranger land on it cold and instantly know what it is, what to do, and where to click? Does the one action you want them to take feel inevitable?</p>
+            <p>Stripped down like this, does it still work? Can a stranger land on it cold and instantly know what it is, what to do, and where to click? Does the one action you want them to take feel inevitable?</p>
             <p>If yes, you nailed it, and almost nobody will ever compliment you on it, because good minimalism is invisible by design. If no, you don&rsquo;t have a minimal design. You have an empty one with good lighting.</p>
-            <p>Minimalism isn&rsquo;t restraint for the vibes. It&rsquo;s confidence &mdash; the confidence that the few things you left on the page are the right things, and you don&rsquo;t need to hide behind anything else.</p>
+            <p>Minimalism isn&rsquo;t restraint for the vibes. It&rsquo;s confidence, the confidence that the few things you left on the page are the right things, and you don&rsquo;t need to hide behind anything else.</p>
             <p>Most people aren&rsquo;t confident. They&rsquo;re just removing stuff and hoping it reads as taste.</p>
             <p><strong>Don&rsquo;t be most people.</strong></p>
           </div>
@@ -233,7 +233,7 @@ export default function EmptyIsntMinimalPage() {
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Want a site that&rsquo;s actually minimal?</h2>
           <p className="text-xl text-white mb-8 max-w-2xl mx-auto">
-            Not empty &mdash; minimal. Clear hierarchy, one obvious action, and nothing on the page competing with it. Let&rsquo;s build it.
+            Not empty, minimal. Clear hierarchy, one obvious action, and nothing on the page competing with it. Let&rsquo;s build it.
           </p>
           <MagneticButton>
             <button

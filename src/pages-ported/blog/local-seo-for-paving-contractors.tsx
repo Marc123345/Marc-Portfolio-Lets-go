@@ -78,7 +78,7 @@ export default function LocalSEOForPavingContractorsPage() {
         <div className="max-w-4xl mx-auto">
           <div className="prose prose-lg prose-invert max-w-none">
             <h2>Why Local SEO is Critical for Paving Contractors</h2>
-            <p>When a homeowner's driveway starts cracking or a property manager needs parking lot repairs, they don't search "paving contractors worldwide." They search "asphalt paving near me" or "driveway repair in [city name]." These local searches represent customers ready to buy—and local SEO determines whether they find you or your competition.</p>
+            <p>When a homeowner's driveway starts cracking or a property manager needs parking lot repairs, they don't search "paving contractors worldwide." They search "asphalt paving near me" or "driveway repair in [city name]." These local searches represent customers ready to buy, and local SEO determines whether they find you or your competition.</p>
 
             <p>Local SEO (Search Engine Optimization) is the practice of optimizing your online presence to attract customers from your specific geographic service area. For paving contractors, this means appearing in Google's "Local Pack" (the map results showing three businesses), ranking high in local search results, and maintaining a strong presence across online directories.</p>
 
@@ -100,12 +100,12 @@ export default function LocalSEOForPavingContractorsPage() {
             <h2>Google Business Profile: Your Most Important Tool</h2>
 
             <h3>Setting Up Your Google Business Profile (Formerly Google My Business)</h3>
-            <p>Your Google Business Profile is the foundation of local SEO. It determines whether you appear in Google Maps and the Local Pack—prime real estate for attracting customers.</p>
+            <p>Your Google Business Profile is the foundation of local SEO. It determines whether you appear in Google Maps and the Local Pack, prime real estate for attracting customers.</p>
 
             <h4>Step 1: Claim and Verify Your Business</h4>
             <ul>
               <li>Go to google.com/business and sign in with your Google account</li>
-              <li>Search for your business name—you may find it already listed</li>
+              <li>Search for your business name, you may find it already listed</li>
               <li>If listed, claim it; if not, add your business</li>
               <li>Choose verification method (usually postcard to your business address)</li>
               <li>Wait for verification postcard (5-14 days) and enter the code</li>
@@ -174,7 +174,7 @@ export default function LocalSEOForPavingContractorsPage() {
 
             <h4>Getting More Reviews</h4>
             <ul>
-              <li><strong>Ask at the right time:</strong> Request reviews when customers are happiest—right after project completion</li>
+              <li><strong>Ask at the right time:</strong> Request reviews when customers are happiest, right after project completion</li>
               <li><strong>Make it easy:</strong> Create a short link to your Google review page and text it to customers</li>
               <li><strong>Personal requests work best:</strong> Ask face-to-face or via personal text, not mass emails</li>
               <li><strong>Follow up:</strong> If a customer agrees to leave a review but doesn't, send a friendly reminder</li>
@@ -206,10 +206,10 @@ export default function LocalSEOForPavingContractorsPage() {
 
             <h4>Never:</h4>
             <ul>
-              <li>Buy fake reviews—Google detects and penalizes this</li>
+              <li>Buy fake reviews, Google detects and penalizes this</li>
               <li>Argue with negative reviewers publicly</li>
               <li>Offer incentives for reviews (violates Google's policies)</li>
-              <li>Leave reviews generic—personalize each response</li>
+              <li>Leave reviews generic, personalize each response</li>
               <li>Let reviews sit unanswered for weeks</li>
             </ul>
 
@@ -342,7 +342,7 @@ export default function LocalSEOForPavingContractorsPage() {
               <li><strong>Use exact same format:</strong> If your address is "123 Main Street" on one site, don't use "123 Main St." elsewhere</li>
               <li><strong>Suite numbers:</strong> Include consistently (e.g., "Suite 200" or "Ste 200" everywhere)</li>
               <li><strong>Phone format:</strong> Pick one format (555-555-5555 or (555) 555-5555) and stick with it</li>
-              <li><strong>Business name:</strong> No variations—use official registered business name</li>
+              <li><strong>Business name:</strong> No variations, use official registered business name</li>
             </ul>
 
             <h2>Content Marketing for Local SEO</h2>
@@ -455,7 +455,7 @@ export default function LocalSEOForPavingContractorsPage() {
             <p>Cramming "paving contractor near me best asphalt driveway cheap" into every sentence looks spammy. Write naturally for humans first, search engines second.</p>
 
             <h3>4. Buying Reviews</h3>
-            <p>Fake reviews get detected and result in penalties or profile suspension. The risk isn't worth it—earn real reviews instead.</p>
+            <p>Fake reviews get detected and result in penalties or profile suspension. The risk isn't worth it, earn real reviews instead.</p>
 
             <h3>5. Ignoring Negative Reviews</h3>
             <p>Leaving negative reviews unanswered signals you don't care about customer service. Always respond professionally and offer to make things right.</p>
@@ -538,7 +538,7 @@ export default function LocalSEOForPavingContractorsPage() {
             </div>
 
             <h2>Conclusion: Dominate Your Local Market</h2>
-            <p>Local SEO isn't a one-time project—it's an ongoing process that compounds over time. The contractors who consistently show up on the first page of Google are those who treat local SEO as a critical part of their business strategy, not an afterthought.</p>
+            <p>Local SEO isn't a one-time project, it's an ongoing process that compounds over time. The contractors who consistently show up on the first page of Google are those who treat local SEO as a critical part of their business strategy, not an afterthought.</p>
 
             <p>Start with the fundamentals: a fully optimized Google Business Profile, consistent NAP across directories, and a steady stream of positive reviews. Build on that foundation with location-specific content, local links, and regular engagement with your audience.</p>
 

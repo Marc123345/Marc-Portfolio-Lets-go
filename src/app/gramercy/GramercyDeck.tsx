@@ -1,15 +1,14 @@
 "use client";
-/* eslint-disable @next/next/no-img-element -- design-deck art direction; next/image adds nothing on a static-export slide */
+/* eslint-disable @next/next/no-img-element, design-deck art direction; next/image adds nothing on a static-export slide */
 
 /* ─────────────────────────────────────────────────────────────────────────────
- * THE GRAMERCY — PROPOSAL PRESENTATION (detailed edition)
+ * THE GRAMERCY, PROPOSAL PRESENTATION (detailed edition)
  * 18 slides, 16:9. Send-ready / leave-behind. Copy drawn from the full 19-section
  * proposal. Oswald display + Poppins body for continuity with the RFC deck.
  *
  * Tokens: #0A0A0B page · #141417 cards · #1C1C21 alt rows · off-white #FCFCFB ·
  * readable #C9C9D0 secondary · muted #9A9AA2 labels · accent #A3D1FF (used
- * sparingly). Tabular figures on every price. Whitespace + tinted cards only —
- * no rules under titles, no side stripes.
+ * sparingly). Tabular figures on every price. Whitespace + tinted cards only, * no rules under titles, no side stripes.
  *
  * Drive with ← / → / Space, click zones, or the rail. F toggles fullscreen.
  * ───────────────────────────────────────────────────────────────────────────── */
@@ -155,7 +154,7 @@ const Price: React.FC<{ children: React.ReactNode; big?: boolean; accent?: boole
   </span>
 );
 
-/* Bullet list — neutral dash markers so the blue stays reserved for one moment */
+/* Bullet list, neutral dash markers so the blue stays reserved for one moment */
 const Bullets: React.FC<{ items: string[]; size?: number; gap?: number }> = ({
   items,
   size = 17,
@@ -174,7 +173,7 @@ const Bullets: React.FC<{ items: string[]; size?: number; gap?: number }> = ({
   </ul>
 );
 
-/* Detail card — title + bullets, used across scope & growth slides */
+/* Detail card, title + bullets, used across scope & growth slides */
 const DetailCard: React.FC<{
   n?: string;
   title: string;
@@ -209,7 +208,7 @@ const DetailCard: React.FC<{
 );
 
 /* ═══════════════════════════════════════════════════════════════════════════
- * 1 — COVER
+ * 1, COVER
  * ══════════════════════════════════════════════════════════════════════════ */
 const PHOTO = (n: string) => `https://ik.imagekit.io/qcvroy8xpd/Copy%20of%20DSC_${n}.jpg`;
 
@@ -253,7 +252,7 @@ const S1 = () => (
     <R>
       <p style={{ ...lead, fontSize: 23, maxWidth: 1120 }}>
         A complete rebuild, an AI-assisted leasing experience, and the search &amp; marketing
-        engine to fill the building — and keep it full.
+        engine to fill the building, and keep it full.
       </p>
     </R>
     <R>
@@ -272,7 +271,7 @@ const S1 = () => (
 );
 
 /* ═══════════════════════════════════════════════════════════════════════════
- * 2 — EXECUTIVE SUMMARY
+ * 2, EXECUTIVE SUMMARY
  * ══════════════════════════════════════════════════════════════════════════ */
 const Figure: React.FC<{ value: string; label: string; accent?: boolean }> = ({
   value,
@@ -300,13 +299,13 @@ const S2 = () => (
     <Kicker>01 · Executive Summary</Kicker>
     <R style={{ marginTop: 22 }}>
       <h2 style={{ ...h, maxWidth: 1560 }}>
-        A 60-home lease-up in Koreatown — and a site that should be doing the heavy lifting.
+        A 60-home lease-up in Koreatown, and a site that should be doing the heavy lifting.
       </h2>
     </R>
     <R style={{ marginTop: 22, maxWidth: 1480 }}>
       <p style={lead}>
         The Gramercy has solid technical bones but isn’t yet built to convert the renters who
-        land on it — or to be found by the much larger group still searching. This is one
+        land on it, or to be found by the much larger group still searching. This is one
         integrated engagement that fixes both, deliberately itemized so you see where every
         dollar goes.
       </p>
@@ -338,17 +337,17 @@ const S2 = () => (
     <div style={{ flex: 1 }} />
     <R>
       <div style={{ display: "flex", gap: 20 }}>
-        <Figure value="$8,500" label="Rebuild — one-time, 50/40/10" />
-        <Figure value="$2,000–3,500" label="Growth engine — per month" />
-        <Figure value="$32,500" label="Route A — year one + add-ons" />
-        <Figure value="$50,500" label="Route B — year one, all-in" accent />
+        <Figure value="$8,500" label="Rebuild, one-time, 50/40/10" />
+        <Figure value="$2,000–3,500" label="Growth engine, per month" />
+        <Figure value="$32,500" label="Route A, year one + add-ons" />
+        <Figure value="$50,500" label="Route B, year one, all-in" accent />
       </div>
     </R>
   </Frame>
 );
 
 /* ═══════════════════════════════════════════════════════════════════════════
- * 3 — UNDERSTANDING THE LEASE-UP
+ * 3, UNDERSTANDING THE LEASE-UP
  * ══════════════════════════════════════════════════════════════════════════ */
 const FACTS = [
   {
@@ -369,7 +368,7 @@ const FACTS = [
   {
     n: "04",
     title: "Discovery is shifting",
-    items: ["Renters start in Maps, local search — and AI assistants", "Invisible there = invisible to a growing share of the market"],
+    items: ["Renters start in Maps, local search, and AI assistants", "Invisible there = invisible to a growing share of the market"],
   },
 ];
 const S3 = () => (
@@ -383,7 +382,7 @@ const S3 = () => (
     <R style={{ marginTop: 18, maxWidth: 1520 }}>
       <p style={{ ...lead, fontSize: 20 }}>
         Six storeys · 60 residences · 16 layouts · rooftop deck, fitness center, secured EV
-        parking, in-unit laundry, smart-home features. A strong product — the commercial
+        parking, in-unit laundry, smart-home features. A strong product, the commercial
         reality of a lease-up shapes everything that follows:
       </p>
     </R>
@@ -398,7 +397,7 @@ const S3 = () => (
 );
 
 /* ═══════════════════════════════════════════════════════════════════════════
- * 4 — CURRENT SITE ASSESSMENT
+ * 4, CURRENT SITE ASSESSMENT
  * ══════════════════════════════════════════════════════════════════════════ */
 const S4 = () => (
   <Frame>
@@ -410,7 +409,7 @@ const S4 = () => (
     </R>
     <R style={{ marginTop: 16, maxWidth: 1520 }}>
       <p style={{ ...lead, fontSize: 20 }}>
-        Already on Next.js / Vercel with the right page types — this is a rebuild and
+        Already on Next.js / Vercel with the right page types, this is a rebuild and
         elevation, not a start-from-nothing. Four things the rebuild addresses:
       </p>
     </R>
@@ -425,7 +424,7 @@ const S4 = () => (
       >
         <DetailCard
           title="Design & experience"
-          items={["Functional, but doesn’t signal a premium Koreatown address", "Rebuild treats every template as a path to one action — a tour"]}
+          items={["Functional, but doesn’t signal a premium Koreatown address", "Rebuild treats every template as a path to one action, a tour"]}
           size={16}
         />
         <DetailCard
@@ -434,7 +433,7 @@ const S4 = () => (
           size={16}
         />
         <DetailCard
-          title="Findability — SEO, local & AI"
+          title="Findability, SEO, local & AI"
           items={["New domain: no organic footprint, limited structured data", "No local-search or AI-answer presence for the searches that matter"]}
           size={16}
         />
@@ -449,7 +448,7 @@ const S4 = () => (
 );
 
 /* ═══════════════════════════════════════════════════════════════════════════
- * 5 — STRATEGIC APPROACH
+ * 5, STRATEGIC APPROACH
  * ══════════════════════════════════════════════════════════════════════════ */
 const S5 = () => (
   <Frame>
@@ -461,7 +460,7 @@ const S5 = () => (
       <p style={{ ...lead, fontSize: 20 }}>
         A beautiful site no one finds is a brochure no one reads. Traffic with nowhere to
         convert is wasted spend. Findability, trust, and conversion are treated as one
-        connected system — built and run together.
+        connected system, built and run together.
       </p>
     </R>
     <R style={{ marginTop: 32, flex: 1 }}>
@@ -469,7 +468,7 @@ const S5 = () => (
         <DetailCard
           n="01"
           title="Get found"
-          items={["Search & AI-answer visibility for the right renters", "Google, Maps & local results — and the AI assistants people ask first", "Own the specific, high-intent searches large operators ignore"]}
+          items={["Search & AI-answer visibility for the right renters", "Google, Maps & local results, and the AI assistants people ask first", "Own the specific, high-intent searches large operators ignore"]}
         />
         <DetailCard
           n="02"
@@ -487,7 +486,7 @@ const S5 = () => (
 );
 
 /* ═══════════════════════════════════════════════════════════════════════════
- * 6 — THE SYSTEM (chips)
+ * 6, THE SYSTEM (chips)
  * ══════════════════════════════════════════════════════════════════════════ */
 const CHIPS = [
   { icon: LayoutTemplate, label: "Complete rebuild", note: "Ground-up Next.js" },
@@ -534,7 +533,7 @@ const S6 = () => (
 );
 
 /* ═══════════════════════════════════════════════════════════════════════════
- * 7 — THE REBUILD (6 components)
+ * 7, THE REBUILD (6 components)
  * ══════════════════════════════════════════════════════════════════════════ */
 const REBUILD_CARDS = [
   { n: "01", title: "Design (UI/UX)", items: ["Refined editorial system, homepage + all templates", "Mobile-first, accessibility considered from the start"] },
@@ -542,7 +541,7 @@ const REBUILD_CARDS = [
   { n: "03", title: "Tour booking", items: ["24/7 scheduling mapped to leasing availability", "Confirmations & reminders, tracked as a conversion"] },
   { n: "04", title: "Floor-plan system", items: ["60 residences / 16 layouts, filter by beds, price, availability", "Photos + 3D/360°, one structured availability source of truth"] },
   { n: "05", title: "Application flow", items: ["Low-friction Apply Now from any entry point", "Handoff into the leasing pipeline, tracked"] },
-  { n: "06", title: "AI leasing chatbot", items: ["Custom assistant grounded in live availability data", "Answers, books tours, qualifies leads — detail next"] },
+  { n: "06", title: "AI leasing chatbot", items: ["Custom assistant grounded in live availability data", "Answers, books tours, qualifies leads, detail next"] },
 ];
 const S7 = () => (
   <Frame>
@@ -552,7 +551,7 @@ const S7 = () => (
     </R>
     <R style={{ marginTop: 14, maxWidth: 1480 }}>
       <p style={{ ...lead, fontSize: 19 }}>
-        A ground-up rebuild on Next.js — fast, secure, designed for a luxury Koreatown
+        A ground-up rebuild on Next.js, fast, secure, designed for a luxury Koreatown
         address, with search and structured data baked in from day one.
       </p>
     </R>
@@ -567,7 +566,7 @@ const S7 = () => (
 );
 
 /* ═══════════════════════════════════════════════════════════════════════════
- * 8 — THE AI LEASING CHATBOT (deep dive)
+ * 8, THE AI LEASING CHATBOT (deep dive)
  * ══════════════════════════════════════════════════════════════════════════ */
 const Bubble: React.FC<{ who: "renter" | "ai"; children: React.ReactNode }> = ({ who, children }) => {
   const ai = who === "ai";
@@ -608,7 +607,7 @@ const S8 = () => (
             size={18}
             gap={16}
             items={[
-              "Grounded in the building’s own live data — never quotes a home that’s gone",
+              "Grounded in the building’s own live data, never quotes a home that’s gone",
               "Answers pricing, availability, pet & parking policy, amenities, neighborhood",
               "Books tours and starts applications inside the conversation",
               "Qualifies beds / budget / move-in date and routes the strongest leads to leasing",
@@ -625,7 +624,7 @@ const S8 = () => (
           <Bubble who="renter">“Do you have a 2-bed under $3,200 for a July move-in?”</Bubble>
           <Bubble who="ai">
             Checks live availability, replies with matching homes (or the closest), surfaces the
-            floor plan, photos &amp; a 3D tour — then offers the next open tour slot.
+            floor plan, photos &amp; a 3D tour, then offers the next open tour slot.
           </Bubble>
           <Bubble who="renter">“Yes, book me in.”</Bubble>
           <Bubble who="ai">
@@ -639,7 +638,7 @@ const S8 = () => (
 );
 
 /* ═══════════════════════════════════════════════════════════════════════════
- * 9 — SEO & STRUCTURED DATA, BUILT IN
+ * 9, SEO & STRUCTURED DATA, BUILT IN
  * ══════════════════════════════════════════════════════════════════════════ */
 const S9 = () => (
   <Frame>
@@ -651,8 +650,7 @@ const S9 = () => (
     </R>
     <R style={{ marginTop: 16, maxWidth: 1520 }}>
       <p style={{ ...lead, fontSize: 20 }}>
-        So Google and AI systems can read and represent The Gramercy correctly from day one —
-        not bolted on months later.
+        So Google and AI systems can read and represent The Gramercy correctly from day one,        not bolted on months later.
       </p>
     </R>
     <R style={{ marginTop: 30, flex: 1 }}>
@@ -663,7 +661,7 @@ const S9 = () => (
         />
         <DetailCard
           title="Structured data (schema.org)"
-          items={["Organization — who the building is", "ApartmentComplex — the property itself", "FloorPlan — each individual layout", "FAQ — the questions renters ask"]}
+          items={["Organization, who the building is", "ApartmentComplex, the property itself", "FloorPlan, each individual layout", "FAQ, the questions renters ask"]}
         />
         <DetailCard
           title="Why it matters"
@@ -676,20 +674,19 @@ const S9 = () => (
 );
 
 /* ═══════════════════════════════════════════════════════════════════════════
- * 10 — GROWTH ENGINE · SEARCH & VISIBILITY (the SEO work, itemized)
+ * 10, GROWTH ENGINE · SEARCH & VISIBILITY (the SEO work, itemized)
  * ══════════════════════════════════════════════════════════════════════════ */
 const S10 = () => (
   <Frame>
-    <Kicker>Scope · The Growth Engine — Search &amp; Visibility</Kicker>
+    <Kicker>Scope · The Growth Engine, Search &amp; Visibility</Kicker>
     <R style={{ marginTop: 20 }}>
       <h2 style={{ ...h, fontSize: 48, maxWidth: 1540 }}>
-        The monthly SEO work that gets the building found — and keeps it found.
+        The monthly SEO work that gets the building found, and keeps it found.
       </h2>
     </R>
     <R style={{ marginTop: 14, maxWidth: 1500 }}>
       <p style={{ ...lead, fontSize: 18 }}>
-        For a single building the strategy is precise: don’t outspend portals on broad terms —
-        own the specific, high-intent searches by layout, amenity, and exact neighborhood.
+        For a single building the strategy is precise: don’t outspend portals on broad terms,        own the specific, high-intent searches by layout, amenity, and exact neighborhood.
       </p>
     </R>
     <R style={{ marginTop: 24, flex: 1 }}>
@@ -714,7 +711,7 @@ const S10 = () => (
         />
         <DetailCard
           n="7.4"
-          title="GEO — AI visibility"
+          title="GEO, AI visibility"
           items={["Make the building visible & accurate inside AI assistants", "Build on structured data + content", "Be in the answer when renters ask AI first"]}
           size={15}
           highlight
@@ -725,11 +722,11 @@ const S10 = () => (
 );
 
 /* ═══════════════════════════════════════════════════════════════════════════
- * 11 — GROWTH ENGINE · CONTENT, CARE & OVERSIGHT
+ * 11, GROWTH ENGINE · CONTENT, CARE & OVERSIGHT
  * ══════════════════════════════════════════════════════════════════════════ */
 const S11 = () => (
   <Frame>
-    <Kicker>Scope · The Growth Engine — Content, Care &amp; Oversight</Kicker>
+    <Kicker>Scope · The Growth Engine, Content, Care &amp; Oversight</Kicker>
     <R style={{ marginTop: 20 }}>
       <h2 style={{ ...h, fontSize: 48 }}>The work that compounds, and keeps the site honest.</h2>
     </R>
@@ -738,13 +735,13 @@ const S11 = () => (
         <DetailCard
           n="7.5"
           title="Content engine"
-          items={["2–4 SEO posts / month", "Neighborhood guides, amenity & building features, renter resources", "Researched with pro tooling — compounds & feeds GEO"]}
+          items={["2–4 SEO posts / month", "Neighborhood guides, amenity & building features, renter resources", "Researched with pro tooling, compounds & feeds GEO"]}
           size={15}
         />
         <DetailCard
           n="7.6"
           title="Site care"
-          items={["Edits, updates, security & dependencies", "Uptime & backups", "Availability & pricing swaps — defined allowance, no per-task invoicing"]}
+          items={["Edits, updates, security & dependencies", "Uptime & backups", "Availability & pricing swaps, defined allowance, no per-task invoicing"]}
           size={15}
         />
         <DetailCard
@@ -765,7 +762,7 @@ const S11 = () => (
       <div style={{ ...cardBase, background: ALT, padding: "18px 26px" }}>
         <p style={{ ...caption, fontSize: 16, color: SOFT }}>
           <strong style={{ color: ACCENT }}>The first 90 days are front-loaded.</strong> The
-          opening quarter concentrates on the fastest wins — Local + Google Business Profile,
+          opening quarter concentrates on the fastest wins, Local + Google Business Profile,
           the highest-intent neighborhood &amp; floor-plan pages, the schema that makes the
           building legible to AI, and the first wave of content.
         </p>
@@ -775,11 +772,11 @@ const S11 = () => (
 );
 
 /* ═══════════════════════════════════════════════════════════════════════════
- * 12 — PRICING · THE REBUILD
+ * 12, PRICING · THE REBUILD
  * ══════════════════════════════════════════════════════════════════════════ */
 const REBUILD: [string, string, string][] = [
   ["Design (UI/UX)", "Full-site design in a refined dark-editorial system; homepage and all key templates, high-fidelity", "$2,500"],
-  ["Web development — base", "Next.js rebuild of all standard pages; responsive, performance-tuned, on-page SEO + schema throughout", "$2,500"],
+  ["Web development, base", "Next.js rebuild of all standard pages; responsive, performance-tuned, on-page SEO + schema throughout", "$2,500"],
   ["Tour booking integration", "24/7 scheduling flow with handoff to the leasing calendar; tracked as a conversion", "$700"],
   ["Floor-plan system", "60 residences / 16 layouts; interactive viewer, photos, 3D/360° tours, structured availability data", "$1,400"],
   ["Online application flow", "Streamlined Apply Now journey wired into the leasing pipeline", "$500"],
@@ -787,7 +784,7 @@ const REBUILD: [string, string, string][] = [
 ];
 const S12 = () => (
   <Frame>
-    <Kicker>Pricing · The Rebuild — one-time</Kicker>
+    <Kicker>Pricing · The Rebuild, one-time</Kicker>
     <R style={{ marginTop: 22 }}>
       <h2 style={{ ...h, fontSize: 48 }}>Every line itemized, so the investment is transparent.</h2>
     </R>
@@ -829,7 +826,7 @@ const S12 = () => (
     </R>
     <R style={{ marginTop: 22 }}>
       <p style={{ ...caption, fontSize: 16, color: SOFT }}>
-        Billed in milestones — <strong style={{ color: INK }}>50% to begin · 40% at staging · 10% at launch.</strong>{" "}
+        Billed in milestones, <strong style={{ color: INK }}>50% to begin · 40% at staging · 10% at launch.</strong>{" "}
         Hosting sits on RFC’s own account, so no infrastructure cost is carried into the build.
       </p>
     </R>
@@ -837,7 +834,7 @@ const S12 = () => (
 );
 
 /* ═══════════════════════════════════════════════════════════════════════════
- * 13 — PRICING · THE GROWTH ENGINE
+ * 13, PRICING · THE GROWTH ENGINE
  * ══════════════════════════════════════════════════════════════════════════ */
 const LineItem: React.FC<{ children: React.ReactNode; note?: string }> = ({ children, note }) => (
   <li
@@ -917,22 +914,22 @@ const PlanCard: React.FC<{
 );
 const S13 = () => (
   <Frame>
-    <Kicker>Pricing · The Growth Engine — monthly</Kicker>
+    <Kicker>Pricing · The Growth Engine, monthly</Kicker>
     <R style={{ marginTop: 22 }}>
-      <h2 style={{ ...h, fontSize: 50 }}>Two levels — Core, or the full partner.</h2>
+      <h2 style={{ ...h, fontSize: 50 }}>Two levels, Core, or the full partner.</h2>
     </R>
     <R style={{ marginTop: 36, flex: 1 }}>
       <div style={{ display: "flex", gap: 28, height: "100%" }}>
         <PlanCard tag="Core" price="$2,000" per="/ month">
           <LineItem>Technical &amp; on-page SEO</LineItem>
           <LineItem>Local SEO + Google Business Profile management</LineItem>
-          <LineItem>GEO — visibility inside AI answers</LineItem>
+          <LineItem>GEO, visibility inside AI answers</LineItem>
           <LineItem>Monthly reporting + live dashboard</LineItem>
         </PlanCard>
         <PlanCard tag="Full Partner" price="$3,500" per="/ month" recommended>
           <LineItem note="$2,000">Everything in Core</LineItem>
-          <LineItem note="$800">Content engine — 2–4 SEO posts / month</LineItem>
-          <LineItem note="$400">Site care &amp; maintenance — edits, security, uptime, backups</LineItem>
+          <LineItem note="$800">Content engine, 2–4 SEO posts / month</LineItem>
+          <LineItem note="$400">Site care &amp; maintenance, edits, security, uptime, backups</LineItem>
           <LineItem note="$300">AI chatbot hosting &amp; tuning</LineItem>
           <LineItem note="included">On-call priority + lease-up marketing oversight</LineItem>
         </PlanCard>
@@ -942,7 +939,7 @@ const S13 = () => (
 );
 
 /* ═══════════════════════════════════════════════════════════════════════════
- * 14 — ENGAGEMENT OPTIONS
+ * 14, ENGAGEMENT OPTIONS
  * ══════════════════════════════════════════════════════════════════════════ */
 const RouteCard: React.FC<{
   tag: string;
@@ -1018,7 +1015,7 @@ const S14 = () => (
   <Frame>
     <Kicker>Engagement Options</Kicker>
     <R style={{ marginTop: 20 }}>
-      <h2 style={{ ...h, fontSize: 48 }}>Same quality of work — different commitment.</h2>
+      <h2 style={{ ...h, fontSize: 48 }}>Same quality of work, different commitment.</h2>
     </R>
     <R style={{ marginTop: 28, flex: 1 }}>
       <div style={{ display: "flex", gap: 28, height: "100%" }}>
@@ -1028,7 +1025,7 @@ const S14 = () => (
           blurb="À la carte. The rebuild as a fixed-fee project, plus the Core monthly. Month-to-month (3-month minimum)."
           rows={[
             "$8,500 rebuild · billed 50 / 40 / 10",
-            "$2,000 / month — Core SEO, Local & GEO",
+            "$2,000 / month, Core SEO, Local & GEO",
             "Add-ons at set rates: content $800 · care $400 · chatbot $300 / mo",
             "Hosting on RFC’s own Cloudflare account",
           ]}
@@ -1037,10 +1034,10 @@ const S14 = () => (
         <RouteCard
           tag="Route B"
           name="Partner"
-          blurb="Everything handled, one number. Rebuild plus Full monthly on a 12-month term — content, care, chatbot & oversight included, priority on-call. Built for the lease-up."
+          blurb="Everything handled, one number. Rebuild plus Full monthly on a 12-month term, content, care, chatbot & oversight included, priority on-call. Built for the lease-up."
           rows={[
             "$8,500 rebuild · billed 50 / 40 / 10",
-            "$3,500 / month — all-in (nothing billed as-used)",
+            "$3,500 / month, all-in (nothing billed as-used)",
             "12-month term · priority on-call",
             "Hosting on RFC’s own Cloudflare account",
           ]}
@@ -1051,7 +1048,7 @@ const S14 = () => (
     </R>
     <R style={{ marginTop: 20 }}>
       <p style={{ ...caption, fontSize: 16, color: SOFT, maxWidth: 1660, lineHeight: 1.5 }}>
-        The honest comparison: Route A looks lighter, but it’s bare-bones — add the content,
+        The honest comparison: Route A looks lighter, but it’s bare-bones, add the content,
         maintenance, chatbot upkeep and lease-up marketing a 60-unit fill actually needs and the
         à-la-carte total climbs past the Full rate. Route B bundles all of it at a better
         effective rate and puts one person accountable for the whole growth picture.
@@ -1061,7 +1058,7 @@ const S14 = () => (
 );
 
 /* ═══════════════════════════════════════════════════════════════════════════
- * 15 — WHAT'S INCLUDED & WHAT'S NOT
+ * 15, WHAT'S INCLUDED & WHAT'S NOT
  * ══════════════════════════════════════════════════════════════════════════ */
 const S15 = () => (
   <Frame>
@@ -1076,7 +1073,7 @@ const S15 = () => (
           items={[
             "Everything in the Rebuild & Growth scope for your route",
             "On-page SEO, schema, analytics & conversion tracking in the build",
-            "SEO / content tooling (Semrush, Surfer) — inside the retainer",
+            "SEO / content tooling (Semrush, Surfer), inside the retainer",
             "Monthly reporting and a live dashboard",
           ]}
           size={17}
@@ -1084,11 +1081,11 @@ const S15 = () => (
         <DetailCard
           title="Handled separately"
           items={[
-            "Media production — photo / video / 3D capture (existing assets integrated; new work quoted)",
-            "Hosting & infrastructure — RFC’s own Cloudflare account, billed direct",
-            "Paid ad spend — RFC’s own ad accounts, separate from fees",
-            "Active paid-ads management — scoped add-on, not unlimited",
-            "Third-party licenses & placements — passed through at cost, pre-approved",
+            "Media production, photo / video / 3D capture (existing assets integrated; new work quoted)",
+            "Hosting & infrastructure, RFC’s own Cloudflare account, billed direct",
+            "Paid ad spend, RFC’s own ad accounts, separate from fees",
+            "Active paid-ads management, scoped add-on, not unlimited",
+            "Third-party licenses & placements, passed through at cost, pre-approved",
           ]}
           size={17}
         />
@@ -1097,7 +1094,7 @@ const S15 = () => (
     <R>
       <p style={{ ...caption, fontSize: 16, color: SOFT, marginTop: 22 }}>
         <strong style={{ color: ACCENT }}>Net effect:</strong> tooling sits inside the retainer;
-        hosting and ad spend sit on RFC’s own accounts. No hidden pass-through costs — every
+        hosting and ad spend sit on RFC’s own accounts. No hidden pass-through costs, every
         named item is approved before it’s incurred.
       </p>
     </R>
@@ -1105,7 +1102,7 @@ const S15 = () => (
 );
 
 /* ═══════════════════════════════════════════════════════════════════════════
- * 16 — SUCCESS METRICS & KPIS
+ * 16, SUCCESS METRICS & KPIS
  * ══════════════════════════════════════════════════════════════════════════ */
 const TIERS = [
   {
@@ -1134,7 +1131,7 @@ const S16 = () => (
     <R style={{ marginTop: 14, maxWidth: 1540 }}>
       <p style={{ ...lead, fontSize: 19 }}>
         Tracking is instrumented in week one, so every number has a baseline. Signed leases are
-        reported, not owned solely by me — your leasing team closes those.
+        reported, not owned solely by me, your leasing team closes those.
       </p>
     </R>
     <R style={{ marginTop: 28, flex: 1 }}>
@@ -1181,7 +1178,7 @@ const S16 = () => (
 );
 
 /* ═══════════════════════════════════════════════════════════════════════════
- * 17 — PROJECT TIMELINE & PHASES
+ * 17, PROJECT TIMELINE & PHASES
  * ══════════════════════════════════════════════════════════════════════════ */
 const PHASES: [string, string, string][] = [
   ["P1", "Discovery & instrumentation", "Research, technical & content review, analytics + conversion tracking live → discovery summary"],
@@ -1242,12 +1239,12 @@ const S17 = () => (
 );
 
 /* ═══════════════════════════════════════════════════════════════════════════
- * 18 — NEXT STEPS
+ * 18, NEXT STEPS
  * ══════════════════════════════════════════════════════════════════════════ */
 const STEPS: [string, string][] = [
   ["Choose a route", "Route A (Build + Core) or Route B (Partner). For a lease-up, Route B is the recommendation."],
   ["Sign off + deposit", "The agreement and 50% deposit lock the build slot and the start date."],
-  ["Week one — instrument & discover", "Analytics + conversion tracking go live, the baseline is set, discovery begins on units, availability data and brand direction."],
+  ["Week one, instrument & discover", "Analytics + conversion tracking go live, the baseline is set, discovery begins on units, availability data and brand direction."],
   ["Design → build → launch → grow", "The rebuild ships in milestones; the growth engine begins at launch."],
 ];
 const S18 = () => (
@@ -1302,20 +1299,20 @@ const S18 = () => (
 );
 
 /* ═══════════════════════════════════════════════════════════════════════════
- * SUM — PRICING · SUMMARY OF FIGURES (every number in one place)
+ * SUM, PRICING · SUMMARY OF FIGURES (every number in one place)
  * ══════════════════════════════════════════════════════════════════════════ */
 const SUMROWS: [string, string, "head" | "sub" | "row" | "accent"][] = [
-  ["Rebuild — total (one-time)", "$8,500", "head"],
+  ["Rebuild, total (one-time)", "$8,500", "head"],
   ["Design (UI/UX)", "$2,500", "sub"],
-  ["Web development — base", "$2,500", "sub"],
+  ["Web development, base", "$2,500", "sub"],
   ["Tour booking integration", "$700", "sub"],
   ["Floor-plan system", "$1,400", "sub"],
   ["Online application flow", "$500", "sub"],
   ["AI leasing chatbot", "$900", "sub"],
-  ["Growth — Core (monthly)", "$2,000 / mo", "row"],
-  ["Growth — Full Partner (monthly)", "$3,500 / mo", "row"],
-  ["Route A — year one", "$8,500 + (12 × $2,000) = $32,500 + add-ons", "row"],
-  ["Route B — year one", "$8,500 + (12 × $3,500) = $50,500 all-in", "accent"],
+  ["Growth, Core (monthly)", "$2,000 / mo", "row"],
+  ["Growth, Full Partner (monthly)", "$3,500 / mo", "row"],
+  ["Route A, year one", "$8,500 + (12 × $2,000) = $32,500 + add-ons", "row"],
+  ["Route B, year one", "$8,500 + (12 × $3,500) = $50,500 all-in", "accent"],
   ["Build payment schedule", "50% begin · 40% staging · 10% launch", "row"],
   ["RFC out of pocket beyond fees", "Hosting + ad spend (own accounts)", "row"],
 ];
@@ -1380,7 +1377,7 @@ const SSUM = () => (
 );
 
 /* ═══════════════════════════════════════════════════════════════════════════
- * PAY — PAYMENT TERMS & SCHEDULE
+ * PAY, PAYMENT TERMS & SCHEDULE
  * ══════════════════════════════════════════════════════════════════════════ */
 const MILESTONES: [string, string, string][] = [
   ["50%", "To begin", "Due on signature; work commences on receipt."],
@@ -1391,7 +1388,7 @@ const SPAY = () => (
   <Frame>
     <Kicker>Payment Terms &amp; Schedule</Kicker>
     <R style={{ marginTop: 20 }}>
-      <h2 style={{ ...h, fontSize: 48 }}>Clear terms — no ambiguity on billing.</h2>
+      <h2 style={{ ...h, fontSize: 48 }}>Clear terms, no ambiguity on billing.</h2>
     </R>
     <R style={{ marginTop: 28 }}>
       <div style={{ display: "flex", gap: 24 }}>
@@ -1434,7 +1431,7 @@ const SPAY = () => (
 );
 
 /* ═══════════════════════════════════════════════════════════════════════════
- * Q1 — THE PLAN · ILLUSTRATIVE FIRST QUARTER
+ * Q1, THE PLAN · ILLUSTRATIVE FIRST QUARTER
  * ══════════════════════════════════════════════════════════════════════════ */
 const Q1: [string, string, string[]][] = [
   [
@@ -1450,7 +1447,7 @@ const Q1: [string, string, string[]][] = [
   [
     "Month 3",
     "Expand & refine",
-    ["Expand content & internal linking", "Deepen GEO / AI-answer coverage", "Refine the assistant from real renter questions", "Review the funnel — traffic → tours → applications — and adjust"],
+    ["Expand content & internal linking", "Deepen GEO / AI-answer coverage", "Refine the assistant from real renter questions", "Review the funnel, traffic → tours → applications, and adjust"],
   ],
 ];
 const SQ1 = () => (
@@ -1461,7 +1458,7 @@ const SQ1 = () => (
     </R>
     <R style={{ marginTop: 12, maxWidth: 1500 }}>
       <p style={{ ...lead, fontSize: 18 }}>
-        Lease-up marketing is front-loaded. Indicative — finalized in discovery.
+        Lease-up marketing is front-loaded. Indicative, finalized in discovery.
       </p>
     </R>
     <R style={{ marginTop: 26, flex: 1 }}>
@@ -1483,7 +1480,7 @@ const SQ1 = () => (
 );
 
 /* ═══════════════════════════════════════════════════════════════════════════
- * BLD — THE BUILDING (real photography gallery)
+ * BLD, THE BUILDING (real photography gallery)
  * ══════════════════════════════════════════════════════════════════════════ */
 const GALLERY: [string, string][] = [
   ["7022", "Chef’s kitchens · stainless + quartz"],
@@ -1526,8 +1523,8 @@ const SBLD = () => (
 );
 
 /* ═══════════════════════════════════════════════════════════════════════════
- * SOTA — A STATE-OF-THE-ART REBUILD
- * Virtual 3D walkthrough viewer — concept mockup styled after
+ * SOTA, A STATE-OF-THE-ART REBUILD
+ * Virtual 3D walkthrough viewer, concept mockup styled after
  * github.com/mindfiredigital/Virtual-Home-Tour-3D-Web (React · Three.js · WebGL)
  * ══════════════════════════════════════════════════════════════════════════ */
 type Hsp = { t: string; l: string; label: string; to?: number };
@@ -1737,25 +1734,25 @@ const SSOTA = () => (
     <Kicker>Scope · A State-of-the-Art Rebuild</Kicker>
     <R style={{ marginTop: 16 }}>
       <h2 style={{ ...h, fontSize: 46, maxWidth: 1580 }}>
-        Walk every home in 3D — an immersive tour no listing portal can match.
+        Walk every home in 3D, an immersive tour no listing portal can match.
       </h2>
     </R>
     <div style={{ display: "flex", gap: 40, marginTop: 24, flex: 1 }}>
       <R style={{ width: "34%" }}>
         <div style={{ display: "flex", flexDirection: "column", gap: 22, height: "100%", justifyContent: "center" }}>
           <p style={{ ...lead, fontSize: 19 }}>
-            Renters tour the building the way they actually decide — moving room to room, looking
+            Renters tour the building the way they actually decide, moving room to room, looking
             anywhere, on any device.{" "}
-            <span style={{ color: ACCENT }}>Try it — drag to look, click a room, press W.</span>
+            <span style={{ color: ACCENT }}>Try it, drag to look, click a room, press W.</span>
           </p>
           <Bullets
             size={18}
             gap={15}
             items={[
-              "A real 3D walkthrough — move with W A S D, drag to look around",
+              "A real 3D walkthrough, move with W A S D, drag to look around",
               "Jump between rooms; hotspots reveal finishes, specs & views",
-              "Built on WebGL / Three.js — the engine behind the best tours",
-              "Wired to live availability and the AI assistant — one source of truth",
+              "Built on WebGL / Three.js, the engine behind the best tours",
+              "Wired to live availability and the AI assistant, one source of truth",
             ]}
           />
         </div>
@@ -1768,37 +1765,37 @@ const SSOTA = () => (
 );
 
 /* ═══════════════════════════════════════════════════════════════════════════
- * EX — THE STANDARD TO HIT (benchmark references + proof of work)
+ * EX, THE STANDARD TO HIT (benchmark references + proof of work)
  * ══════════════════════════════════════════════════════════════════════════ */
 const BENCH: [string, string, string][] = [
   [
     "Interactive stacking & floor plans",
-    "Click a floor, filter homes by beds, price & availability — the explorer renters expect from a premium address.",
+    "Click a floor, filter homes by beds, price & availability, the explorer renters expect from a premium address.",
     "Benchmark: One Manhattan Square · The Spiral",
   ],
   [
     "Immersive 3D / 360° tours",
-    "Walk every layout from the phone, day or night — with view-from-floor simulation per unit.",
+    "Walk every layout from the phone, day or night, with view-from-floor simulation per unit.",
     "Benchmark: Central Park Tower · Matterport",
   ],
   [
     "Cinematic, scroll-driven design",
-    "Motion and storytelling worthy of the building — restrained, weighty, premium.",
+    "Motion and storytelling worthy of the building, restrained, weighty, premium.",
     "Benchmark: Active Theory · Resn calibre",
   ],
 ];
 const PROOF: [string, string][] = [
-  ["https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%204%20-%2016x9.png?updatedAt=1767539579710", "Binns Media — streaming platform"],
-  ["https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%204%20-%2016_9.png?updatedAt=1767539579010", "Paving Leads — SEO lead-gen"],
-  ["https://ik.imagekit.io/qcvroy8xpd/1732717492455.jpeg", "AutoMarginX — SaaS analytics"],
-  ["https://ik.imagekit.io/qcvroy8xpd/image%201%20(10).png", "Sentinel DS — design system"],
+  ["https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%204%20-%2016x9.png?updatedAt=1767539579710", "Binns Media, streaming platform"],
+  ["https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%204%20-%2016_9.png?updatedAt=1767539579010", "Paving Leads, SEO lead-gen"],
+  ["https://ik.imagekit.io/qcvroy8xpd/1732717492455.jpeg", "AutoMarginX, SaaS analytics"],
+  ["https://ik.imagekit.io/qcvroy8xpd/image%201%20(10).png", "Sentinel DS, design system"],
 ];
 const SEX = () => (
   <Frame>
     <Kicker>The Standard to Hit</Kicker>
     <R style={{ marginTop: 16 }}>
       <h2 style={{ ...h, fontSize: 48, maxWidth: 1540 }}>
-        Built to the standard of the best — and proof I deliver it.
+        Built to the standard of the best, and proof I deliver it.
       </h2>
     </R>
     <R style={{ marginTop: 24 }}>
@@ -1815,7 +1812,7 @@ const SEX = () => (
     </R>
     <R style={{ marginTop: 26 }}>
       <p style={{ ...caption, fontSize: 13, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 14 }}>
-        Proof — selected work I’ve designed &amp; built
+        Proof, selected work I’ve designed &amp; built
       </p>
       <div style={{ display: "flex", gap: 18 }}>
         {PROOF.map(([src, label]) => (
@@ -1877,7 +1874,7 @@ export default function GramercyDeck() {
 
   return (
     <div style={{ position: "fixed", inset: 0, background: PAGE, overflow: "hidden" }}>
-      {/* click-to-advance zones — disabled on interactive slides so the content gets the mouse */}
+      {/* click-to-advance zones, disabled on interactive slides so the content gets the mouse */}
       <div
         onClick={prev}
         style={{ position: "absolute", left: 0, top: 0, bottom: 0, width: "26%", zIndex: 30, cursor: i > 0 ? "w-resize" : "default", pointerEvents: interactive ? "none" : "auto" }}

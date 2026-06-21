@@ -1,9 +1,9 @@
 "use client";
 
 /* ─────────────────────────────────────────────────────────────────────────────
- * THRIVE GLOBAL — BRAND & WEBSITE PROPOSAL (presentation edition)
+ * THRIVE GLOBAL, BRAND & WEBSITE PROPOSAL (presentation edition)
  * 16:9 send-ready deck. Copy drawn from the full 14-section proposal.
- * Built in THRIVE's own creative direction — "The Approach": a deep-ink night
+ * Built in THRIVE's own creative direction, "The Approach": a deep-ink night
  * sky that resolves into a dawn horizon (violet → rose → amber) at the moment
  * you land. Fraunces (editorial serif) + Hanken Grotesk (sans) + JetBrains Mono.
  *
@@ -30,7 +30,7 @@ import {
 } from "lucide-react";
 
 /* ── Tokens ──────────────────────────────────────────────────────────────────
- * Marc Friedman portfolio design system — identical to the Gramercy deck.
+ * Marc Friedman portfolio design system, identical to the Gramercy deck.
  * Oswald display + Poppins body; neutral-dark palette; one reserved blue accent.
  * THRIVE's dawn-horizon appears only as demonstrated concept art (DAWN / DAWN_AMBER),
  * the way the Gramercy deck used real building photography as content. */
@@ -40,7 +40,7 @@ const ALT = "#1C1C21";
 const INK = "#FCFCFB";
 const SOFT = "#C9C9D0"; // readable secondary body
 const MUTED = "#9A9AA2"; // labels / captions
-const ACCENT = "#A3D1FF"; // the one reserved accent — house blue
+const ACCENT = "#A3D1FF"; // the one reserved accent, house blue
 const AMBER = ACCENT; // legacy alias: all deck chrome uses the house accent
 const ACCENT_FILL = "rgba(163,209,255,0.12)";
 const ACCENT_LINE = "rgba(163,209,255,0.45)";
@@ -212,7 +212,7 @@ const Price: React.FC<{ children: React.ReactNode; big?: boolean; accent?: boole
   </span>
 );
 
-/* Shared dawn-sky art — used on cover, the interactive, and the close. */
+/* Shared dawn-sky art, used on cover, the interactive, and the close. */
 const STARS = Array.from({ length: 78 }, (_, i) => ({
   x: (i * 96.7 + 7) % 100,
   y: ((i * 41.3 + 3) % 62),
@@ -282,7 +282,7 @@ const DawnSky: React.FC<{ intensity?: number }> = ({ intensity = 1 }) => (
 );
 
 /* ═══════════════════════════════════════════════════════════════════════════
- * 1 — COVER
+ * 1, COVER
  * ══════════════════════════════════════════════════════════════════════════ */
 const S1 = () => (
   <>
@@ -325,7 +325,7 @@ const S1 = () => (
             margin: 0,
           }}
         >
-          The Global Landing System — Land · Settle · Thrive
+          The Global Landing System, Land · Settle · Thrive
         </p>
       </R>
       <div style={{ height: 70 }} />
@@ -339,7 +339,7 @@ const S1 = () => (
 );
 
 /* ═══════════════════════════════════════════════════════════════════════════
- * 2 — EXECUTIVE SUMMARY
+ * 2, EXECUTIVE SUMMARY
  * ══════════════════════════════════════════════════════════════════════════ */
 const S2 = () => (
   <Frame>
@@ -360,7 +360,7 @@ const S2 = () => (
     <R style={{ marginTop: 28 }}>
       <div style={{ display: "flex", gap: 24 }}>
         <DetailCard
-          title="The Website — $4,000"
+          title="The Website, $4,000"
           items={[
             "Custom eight-page Next.js build",
             "The Land, Settle, Thrive narrative, carried by the home page",
@@ -371,7 +371,7 @@ const S2 = () => (
           size={17}
         />
         <DetailCard
-          title="Brand & Design System — $1,000 (optional)"
+          title="Brand & Design System, $1,000 (optional)"
           highlight
           items={[
             "“The Approach”: the dawn-horizon visual language",
@@ -386,9 +386,9 @@ const S2 = () => (
     <div style={{ flex: 1 }} />
     <R>
       <div style={{ display: "flex", gap: 20 }}>
-        <Figure value="$4,000" label="Website — core engagement" />
-        <Figure value="$1,000" label="Brand & design system — optional" />
-        <Figure value="$5,000" label="Together — brand + website" accent />
+        <Figure value="$4,000" label="Website, core engagement" />
+        <Figure value="$1,000" label="Brand & design system, optional" />
+        <Figure value="$5,000" label="Together, brand + website" accent />
         <Figure value="50 / 40 / 10" label="Billed in three milestones" />
       </div>
     </R>
@@ -396,7 +396,7 @@ const S2 = () => (
 );
 
 /* ═══════════════════════════════════════════════════════════════════════════
- * 3 — ABOUT
+ * 3, ABOUT
  * ══════════════════════════════════════════════════════════════════════════ */
 const S3 = () => (
   <Frame>
@@ -433,7 +433,7 @@ const S3 = () => (
 );
 
 /* ═══════════════════════════════════════════════════════════════════════════
- * 4 — UNDERSTANDING THRIVE
+ * 4, UNDERSTANDING THRIVE
  * ══════════════════════════════════════════════════════════════════════════ */
 const DISCOVERY: [string, string][] = [
   ["Audience: hi-tech relocators", "Premium, frictionless, design-literate. Stripe / Apple-grade polish."],
@@ -483,7 +483,7 @@ const S4 = () => (
 );
 
 /* ═══════════════════════════════════════════════════════════════════════════
- * 5 — CREATIVE CONCEPT · THE APPROACH
+ * 5, CREATIVE CONCEPT · THE APPROACH
  * ══════════════════════════════════════════════════════════════════════════ */
 const S5 = () => (
   <Frame>
@@ -529,7 +529,7 @@ const S5 = () => (
 );
 
 /* ═══════════════════════════════════════════════════════════════════════════
- * 6 — THE SIGNATURE MOMENT (interactive dawn horizon + Thrive Score)
+ * 6, THE SIGNATURE MOMENT (interactive dawn horizon + Thrive Score)
  * ══════════════════════════════════════════════════════════════════════════ */
 const CITIES: { name: string; benefit: string }[] = [
   { name: "New York", benefit: "Pre-approved leases across Manhattan & Brooklyn" },
@@ -563,7 +563,7 @@ const DawnHorizon: React.FC = () => {
     <div style={{ ...cardBase, padding: 0, overflow: "hidden", height: "100%", position: "relative" }}>
       <DawnSky intensity={descent} />
 
-      {/* score readout — quiet, top-right */}
+      {/* score readout, quiet, top-right */}
       <div style={{ position: "absolute", top: 26, right: 30, textAlign: "right", borderRight: `1px solid ${LINE}`, paddingRight: 18 }}>
         <div style={{ fontFamily: MONO, fontSize: 10.5, letterSpacing: "0.24em", color: MUTED, textTransform: "uppercase" }}>
           Thrive Score · Verified
@@ -636,7 +636,7 @@ const DawnHorizon: React.FC = () => {
             max={100}
             value={Math.round(descent * 100)}
             onChange={(e) => setDescent(Number(e.target.value) / 100)}
-            aria-label="Descent — night to dawn"
+            aria-label="Descent, night to dawn"
             style={{ flex: 1, accentColor: DAWN_AMBER, cursor: "pointer" }}
           />
         </div>
@@ -680,7 +680,7 @@ const S6 = () => (
 );
 
 /* ═══════════════════════════════════════════════════════════════════════════
- * 7 — BRAND FOUNDATION (purpose / vision / mission)
+ * 7, BRAND FOUNDATION (purpose / vision / mission)
  * ══════════════════════════════════════════════════════════════════════════ */
 const FOUNDATION: [string, string][] = [
   ["Purpose", "So that the trust you’ve earned never gets left behind at a border. No one should start from zero just because they started over."],
@@ -716,7 +716,7 @@ const S7 = () => (
 );
 
 /* ═══════════════════════════════════════════════════════════════════════════
- * 8 — CORE VALUES
+ * 8, CORE VALUES
  * ══════════════════════════════════════════════════════════════════════════ */
 const VALUES: [string, string][] = [
   ["Trust is the asset", "It is the product; we protect it like a financial instrument and never trade it away."],
@@ -727,7 +727,7 @@ const VALUES: [string, string][] = [
 ];
 const S8 = () => (
   <Frame>
-    <Kicker>05 · Brand Foundation — Core Values</Kicker>
+    <Kicker>05 · Brand Foundation, Core Values</Kicker>
     <R style={{ marginTop: 22 }}>
       <h2 style={h}>Five values the platform is built on.</h2>
     </R>
@@ -752,11 +752,11 @@ const S8 = () => (
 );
 
 /* ═══════════════════════════════════════════════════════════════════════════
- * 9 — POSITIONING · PROMISE / PERSONALITY / VOICE
+ * 9, POSITIONING · PROMISE / PERSONALITY / VOICE
  * ══════════════════════════════════════════════════════════════════════════ */
 const S9 = () => (
   <Frame>
-    <Kicker>05 · Brand Foundation — Positioning &amp; Voice</Kicker>
+    <Kicker>05 · Brand Foundation, Positioning &amp; Voice</Kicker>
     <R style={{ marginTop: 22 }}>
       <h2 style={{ ...h, fontSize: 44, maxWidth: 1620 }}>
         For hi-tech professionals who move countries for work, THRIVE is the global landing system that
@@ -775,14 +775,14 @@ const S9 = () => (
 );
 
 /* ═══════════════════════════════════════════════════════════════════════════
- * 10 — BRAND STORY
+ * 10, BRAND STORY
  * ══════════════════════════════════════════════════════════════════════════ */
 const S10 = () => (
   <>
     <DawnSky intensity={0.45} />
     <div style={{ position: "absolute", inset: 0, background: "rgba(10,10,11,0.7)" }} />
     <Frame>
-      <Kicker>05 · Brand Foundation — The Story</Kicker>
+      <Kicker>05 · Brand Foundation, The Story</Kicker>
       <div style={{ flex: 1 }} />
       <R>
         <p style={{ fontFamily: BODY, fontWeight: 400, fontSize: 36, lineHeight: 1.4, color: INK, maxWidth: 1640 }}>
@@ -805,7 +805,7 @@ const S10 = () => (
 );
 
 /* ═══════════════════════════════════════════════════════════════════════════
- * 11 — BRAND & DESIGN SYSTEM ($1,000)
+ * 11, BRAND & DESIGN SYSTEM ($1,000)
  * ══════════════════════════════════════════════════════════════════════════ */
 const SYSTEM: { icon: React.ElementType; title: string; body: string }[] = [
   { icon: Plane, title: "Logo / mark", body: "An approach path meeting a horizon: a descent that also reads as an ascent. Wordmark, app icon, partner badge." },
@@ -817,7 +817,7 @@ const SYSTEM: { icon: React.ElementType; title: string; body: string }[] = [
 ];
 const S11 = () => (
   <Frame>
-    <Kicker>06 · Brand &amp; Design System — $1,000 (optional)</Kicker>
+    <Kicker>06 · Brand &amp; Design System, $1,000 (optional)</Kicker>
     <R style={{ marginTop: 20 }}>
       <h2 style={{ ...h, fontSize: 48 }}>The brand the platform will live inside for years.</h2>
     </R>
@@ -844,7 +844,7 @@ const S11 = () => (
 );
 
 /* ═══════════════════════════════════════════════════════════════════════════
- * 12 — WEBSITE LAYOUT & DIRECTION (the cinematic narrative)
+ * 12, WEBSITE LAYOUT & DIRECTION (the cinematic narrative)
  * ══════════════════════════════════════════════════════════════════════════ */
 const NARRATIVE: [string, string, string][] = [
   ["Hero", "Night sky, dawn horizon", "The headline “Your credit history moves with you.” One CTA. The score readout counts up to a verified number."],
@@ -899,7 +899,7 @@ const S12 = () => (
 );
 
 /* ═══════════════════════════════════════════════════════════════════════════
- * 13 — WEBSITE ARCHITECTURE (8 pages)
+ * 13, WEBSITE ARCHITECTURE (8 pages)
  * ══════════════════════════════════════════════════════════════════════════ */
 const PAGES: [string, string, string][] = [
   ["1", "Home / The Approach", "The full Land–Settle–Thrive journey; the headline; the primary waitlist CTA"],
@@ -952,11 +952,11 @@ const S13 = () => (
 );
 
 /* ═══════════════════════════════════════════════════════════════════════════
- * 13b — SITEMAP (the architecture as a tree)
+ * 13b, SITEMAP (the architecture as a tree)
  * ══════════════════════════════════════════════════════════════════════════ */
 const SITEMAP: { label: string; pages: [string, string][] }[] = [
-  { label: "The story — for members", pages: [["02", "The Thrive Score"], ["03", "The Vault"], ["04", "The Ecosystem"]] },
-  { label: "The business — for partners", pages: [["05", "For Partners"], ["06", "Traction & Cities"]] },
+  { label: "The story, for members", pages: [["02", "The Thrive Score"], ["03", "The Vault"], ["04", "The Ecosystem"]] },
+  { label: "The business, for partners", pages: [["05", "For Partners"], ["06", "Traction & Cities"]] },
   { label: "Company & convert", pages: [["07", "About / Team"], ["08", "Get Started"]] },
 ];
 const NumberBadge: React.FC<{ n: string; solid?: boolean }> = ({ n, solid }) => (
@@ -999,7 +999,7 @@ const PageChip: React.FC<{ n: string; name: string; highlight?: boolean }> = ({ 
 );
 const SSitemap = () => (
   <Frame>
-    <Kicker>08 · Website Architecture — Sitemap</Kicker>
+    <Kicker>08 · Website Architecture, Sitemap</Kicker>
     <R style={{ marginTop: 18 }}>
       <h2 style={{ ...h, fontSize: 46 }}>The eight pages, as a sitemap.</h2>
     </R>
@@ -1054,7 +1054,7 @@ const SSitemap = () => (
 );
 
 /* ═══════════════════════════════════════════════════════════════════════════
- * 14 — ADVANCED FEATURES & TECHNICAL APPROACH (outcomes)
+ * 14, ADVANCED FEATURES & TECHNICAL APPROACH (outcomes)
  * ══════════════════════════════════════════════════════════════════════════ */
 const FEATURES: { icon: React.ElementType; title: string; body: string }[] = [
   { icon: Globe2, title: "Add a city without a developer", body: "A headless CMS drives cities, partners, benefits and tiers, which a rollout from three cities to eight depends on." },
@@ -1093,7 +1093,7 @@ const S14 = () => (
 );
 
 /* ═══════════════════════════════════════════════════════════════════════════
- * 14b — SEARCH, SEO & AI VISIBILITY
+ * 14b, SEARCH, SEO & AI VISIBILITY
  * ══════════════════════════════════════════════════════════════════════════ */
 const SEO_CARDS: { n: string; title: string; items: string[]; highlight?: boolean }[] = [
   {
@@ -1152,7 +1152,7 @@ const SSEO = () => (
 );
 
 /* ═══════════════════════════════════════════════════════════════════════════
- * 15 — TRACTION (partners + cities)
+ * 15, TRACTION (partners + cities)
  * ══════════════════════════════════════════════════════════════════════════ */
 const PARTNERS = ["Brookfield", "AvalonBay", "Azrieli", "JPMorgan", "John Hancock", "Vitality", "Bilt", "TransUnion"];
 const S15 = () => (
@@ -1184,7 +1184,7 @@ const S15 = () => (
 );
 
 /* ═══════════════════════════════════════════════════════════════════════════
- * 16 — PROJECT TIMELINE & PHASES
+ * 16, PROJECT TIMELINE & PHASES
  * ══════════════════════════════════════════════════════════════════════════ */
 const PHASES: [string, string, string][] = [
   ["P1", "Discovery & strategy", "Positioning, audience, competitor & reference review, content + SEO foundation. Much already complete → written discovery summary."],
@@ -1245,7 +1245,7 @@ const S16 = () => (
 );
 
 /* ═══════════════════════════════════════════════════════════════════════════
- * 17 — WAYS OF WORKING
+ * 17, WAYS OF WORKING
  * ══════════════════════════════════════════════════════════════════════════ */
 const S17 = () => (
   <Frame>
@@ -1281,7 +1281,7 @@ const S17 = () => (
 );
 
 /* ═══════════════════════════════════════════════════════════════════════════
- * 18 — INVESTMENT
+ * 18, INVESTMENT
  * ══════════════════════════════════════════════════════════════════════════ */
 const COMPONENTS: [string, string, string][] = [
   ["Website", "Custom 8-page Next.js site, the Land–Settle–Thrive experience, CMS, i18n / RTL, accessibility, analytics, performance, deployment & handoff.", "$4,000"],
@@ -1344,22 +1344,22 @@ const S18 = () => (
 );
 
 /* ═══════════════════════════════════════════════════════════════════════════
- * 19 — PRICING · SUMMARY OF FIGURES
+ * 19, PRICING · SUMMARY OF FIGURES
  * ══════════════════════════════════════════════════════════════════════════ */
 const SUMROWS: [string, string, "head" | "row" | "accent"][] = [
-  ["Website — custom 8-page Next.js build", "$4,000", "row"],
-  ["Brand & Design System — optional add-on", "$1,000", "row"],
-  ["Together — brand + website", "$5,000", "head"],
-  ["Milestone 1 — on start (50%)", "$2,000 · $2,500", "row"],
-  ["Milestone 2 — at staging (40%)", "$1,600 · $2,000", "row"],
-  ["Milestone 3 — at launch (10%)", "$400 · $500", "row"],
-  ["Hosting & maintenance — first year", "Included free", "row"],
+  ["Website, custom 8-page Next.js build", "$4,000", "row"],
+  ["Brand & Design System, optional add-on", "$1,000", "row"],
+  ["Together, brand + website", "$5,000", "head"],
+  ["Milestone 1, on start (50%)", "$2,000 · $2,500", "row"],
+  ["Milestone 2, at staging (40%)", "$1,600 · $2,000", "row"],
+  ["Milestone 3, at launch (10%)", "$400 · $500", "row"],
+  ["Hosting & maintenance, first year", "Included free", "row"],
   ["Third-party CMS & integration fees", "THRIVE’s own accounts", "row"],
-  ["Recommended", "Brand + website — “The Approach”", "accent"],
+  ["Recommended", "Brand + website, “The Approach”", "accent"],
 ];
 const S19 = () => (
   <Frame>
-    <Kicker>12 · Investment — Summary of Figures</Kicker>
+    <Kicker>12 · Investment, Summary of Figures</Kicker>
     <R style={{ marginTop: 20 }}>
       <h2 style={{ ...h, fontSize: 48 }}>Every number, in one place.</h2>
     </R>
@@ -1401,11 +1401,11 @@ const S19 = () => (
 );
 
 /* ═══════════════════════════════════════════════════════════════════════════
- * 20 — SCOPE · INCLUDED & EXCLUDED
+ * 20, SCOPE · INCLUDED & EXCLUDED
  * ══════════════════════════════════════════════════════════════════════════ */
 const S20 = () => (
   <Frame>
-    <Kicker>13 · Scope — Included &amp; Excluded</Kicker>
+    <Kicker>13 · Scope, Included &amp; Excluded</Kicker>
     <R style={{ marginTop: 22 }}>
       <h2 style={{ ...h, maxWidth: 1480 }}>Clear boundaries, no surprise costs.</h2>
     </R>
@@ -1442,7 +1442,7 @@ const S20 = () => (
 );
 
 /* ═══════════════════════════════════════════════════════════════════════════
- * 21 — ASSUMPTIONS, ROLES & NEXT STEPS (close)
+ * 21, ASSUMPTIONS, ROLES & NEXT STEPS (close)
  * ══════════════════════════════════════════════════════════════════════════ */
 const STEPS: [string, string][] = [
   ["Confirm the components", "Website only, or website plus brand. For a launch this big, the brand system is the recommendation."],
@@ -1551,7 +1551,7 @@ export default function ThriveDeck() {
 
   return (
     <div style={{ position: "fixed", inset: 0, background: PAGE, overflow: "hidden", fontFamily: SANS }}>
-      {/* click-to-advance zones — disabled on the interactive slide */}
+      {/* click-to-advance zones, disabled on the interactive slide */}
       <div
         onClick={prev}
         style={{ position: "absolute", left: 0, top: 0, bottom: 0, width: "26%", zIndex: 30, cursor: i > 0 ? "w-resize" : "default", pointerEvents: interactive ? "none" : "auto" }}

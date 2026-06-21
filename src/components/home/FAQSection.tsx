@@ -17,7 +17,7 @@ const faqItems = [
   },
   {
     q: 'Do you work internationally?',
-    a: 'Yes — I work with clients across three continents. Time zones are never an issue.',
+    a: 'Yes, I work with clients across three continents. Time zones are never an issue.',
   },
   {
     q: 'What if I already have a website?',
@@ -25,7 +25,7 @@ const faqItems = [
   },
   {
     q: 'How do I pay?',
-    a: '50% to start, 25% at design approval, 25% at launch. Payment plans available — just ask.',
+    a: '50% to start, 25% at design approval, 25% at launch. Payment plans available, just ask.',
   },
 ];
 
@@ -129,7 +129,7 @@ export default function FAQSection() {
         <ChapterMarker number="Chapter · Q&A" label="Frequently Asked" />
 
         <div className="grid md:grid-cols-[1fr_1.3fr] gap-8">
-          {/* Left — sticky header */}
+          {/* Left, sticky header */}
           <div>
             <div className="md:sticky md:top-32">
               <motion.h2
@@ -169,7 +169,7 @@ export default function FAQSection() {
             </div>
           </div>
 
-          {/* Right — editorial Q&A list */}
+          {/* Right, editorial Q&A list */}
           <div className="border-t border-white/10">
             {faqItems.map((item, i) => (
               <FAQRow

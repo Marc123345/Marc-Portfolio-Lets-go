@@ -62,7 +62,7 @@ export default function AboutSection() {
         <ChapterMarker number="Chapter · The Operator" label="About · One Person" />
 
         <div className="grid lg:grid-cols-[0.85fr_1.15fr] gap-8 items-center">
-          {/* Left — portrait */}
+          {/* Left, portrait */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -137,7 +137,7 @@ export default function AboutSection() {
             </motion.div>
           </motion.div>
 
-          {/* Right — editorial composition */}
+          {/* Right, editorial composition */}
           <div>
             {/* Headline with kinetic word */}
             <motion.h2
@@ -173,7 +173,7 @@ export default function AboutSection() {
               One person.
             </motion.h2>
 
-            {/* Role pills — subtly indicate the cycle */}
+            {/* Role pills, subtly indicate the cycle */}
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -195,7 +195,7 @@ export default function AboutSection() {
               ))}
             </motion.div>
 
-            {/* Supporting copy — two tight paragraphs */}
+            {/* Supporting copy, two tight paragraphs */}
             <motion.div
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}

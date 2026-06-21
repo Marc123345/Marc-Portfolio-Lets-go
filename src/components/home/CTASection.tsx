@@ -77,7 +77,7 @@ export default function CTASection() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-xl md:text-2xl text-white/70 leading-relaxed max-w-3xl mb-8"
         >
-          Let&apos;s fix that. Book 30 minutes — I&apos;ll audit your current site{' '}
+          Let&apos;s fix that. Book 30 minutes, I&apos;ll audit your current site{' '}
           <em className="text-white" style={{ fontFamily: SERIF }}>
             live on the call
           </em>{' '}
@@ -85,7 +85,7 @@ export default function CTASection() {
         </motion.p>
 
         <div className="grid lg:grid-cols-[1.1fr_1fr] gap-8 items-start">
-          {/* Left — form */}
+          {/* Left, form */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -106,7 +106,7 @@ export default function CTASection() {
             </p>
           </motion.div>
 
-          {/* Right — editorial sidebar */}
+          {/* Right, editorial sidebar */}
           <motion.aside
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}

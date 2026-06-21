@@ -1,7 +1,7 @@
 "use client";
 
 /* ─────────────────────────────────────────────────────────────────────────────
- * RFC GROUP — PITCH DECK
+ * RFC GROUP, PITCH DECK
  * 12 slides, 16:9. Built on the Marc Friedman design system (Oswald / Poppins,
  * accent #A3D1FF, black surfaces). Steve-Jobs cadence: one idea per slide,
  * huge type, generous negative space, calm reveals.
@@ -125,19 +125,19 @@ const card: React.CSSProperties = {
 const WORK = [
   {
     src: "https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%204%20-%2016x9.png?updatedAt=1767539579710",
-    label: "Binns Media — streaming platform",
+    label: "Binns Media, streaming platform",
   },
   {
     src: "https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%204%20-%2016_9.png?updatedAt=1767539579010",
-    label: "Paving Leads — SEO lead-gen",
+    label: "Paving Leads, SEO lead-gen",
   },
   {
     src: "https://ik.imagekit.io/qcvroy8xpd/1732717492455.jpeg",
-    label: "AutoMarginX — SaaS analytics",
+    label: "AutoMarginX, SaaS analytics",
   },
   {
     src: "https://ik.imagekit.io/qcvroy8xpd/image%201%20(10).png",
-    label: "Sentinel DS — design system",
+    label: "Sentinel DS, design system",
   },
 ];
 
@@ -202,7 +202,7 @@ const ReviewCard: React.FC<{ r: (typeof REVIEWS)[number] }> = ({ r }) => (
  * SLIDES
  * ══════════════════════════════════════════════════════════════════════════ */
 
-/* 1 — COVER */
+/* 1, COVER */
 const S1 = () => (
   <Frame center>
     <R style={{ width: 80, height: 2, background: ACCENT, marginBottom: 28 }}>
@@ -221,12 +221,12 @@ const S1 = () => (
     </R>
     <div style={{ height: 72 }} />
     <R>
-      <p style={caption}>A diagnosis and a plan — June 17, 2026</p>
+      <p style={caption}>A diagnosis and a plan, June 17, 2026</p>
     </R>
   </Frame>
 );
 
-/* 2 — WHO I AM */
+/* 2, WHO I AM */
 const Stat: React.FC<{ value: string; label: string }> = ({ value, label }) => (
   <div style={{ ...card, padding: 32, display: "flex", flexDirection: "column", justifyContent: "center" }}>
     <div
@@ -260,7 +260,7 @@ const S2 = () => (
         </R>
         <R style={{ marginTop: 22, maxWidth: 680 }}>
           <p style={{ ...body, fontSize: 21 }}>
-            React / Next.js developer and designer — and a marketer first. Every page earns
+            React / Next.js developer and designer, and a marketer first. Every page earns
             its place by moving someone closer to becoming a lead.
           </p>
         </R>
@@ -325,22 +325,22 @@ const S2 = () => (
   </Frame>
 );
 
-/* 3 — HOW I THINK · THREE PILLARS */
+/* 3, HOW I THINK · THREE PILLARS */
 const PILLARS = [
   {
     n: "01",
     title: "Get found",
-    body: "SEO + GEO so the right people find you the moment they’re searching — on Google and inside AI.",
+    body: "SEO + GEO so the right people find you the moment they’re searching, on Google and inside AI.",
   },
   {
     n: "02",
     title: "Earn trust",
-    body: "Design, speed, and proof that make a stranger believe you’re the firm to call — in seconds.",
+    body: "Design, speed, and proof that make a stranger believe you’re the firm to call, in seconds.",
   },
   {
     n: "03",
     title: "Convert",
-    body: "Funnels built to turn that attention into booked calls and closed deals. Traffic isn’t the goal — revenue is.",
+    body: "Funnels built to turn that attention into booked calls and closed deals. Traffic isn’t the goal, revenue is.",
   },
 ];
 const S3 = () => (
@@ -354,7 +354,7 @@ const S3 = () => (
     <R style={{ marginTop: 22, maxWidth: 1240 }}>
       <p style={{ ...body, fontSize: 24 }}>
         A site that looks beautiful but doesn’t generate business is a failure. Done right,
-        your website is the hardest-working salesperson you have — and the highest-leverage
+        your website is the hardest-working salesperson you have, and the highest-leverage
         investment you can make. It compounds. That conviction runs through everything on
         three pillars:
       </p>
@@ -398,7 +398,7 @@ const S3 = () => (
   </Frame>
 );
 
-/* 4 — WHAT YOU TOLD ME YOU NEED */
+/* 4, WHAT YOU TOLD ME YOU NEED */
 const Chip: React.FC<{ children: React.ReactNode }> = ({ children }) => (
   <div
     style={{
@@ -429,14 +429,14 @@ const S4 = () => (
     <div style={{ flex: 1 }} />
     <R>
       <h2 style={{ ...h2, fontSize: 64, maxWidth: 1280 }}>
-        Before we solve any of it — here’s honestly where you stand today.
+        Before we solve any of it, here’s honestly where you stand today.
       </h2>
     </R>
     <div style={{ height: 40 }} />
   </Frame>
 );
 
-/* 5 — THE DIAGNOSIS: YOU'RE INVISIBLE */
+/* 5, THE DIAGNOSIS: YOU'RE INVISIBLE */
 const Row: React.FC<{ num: string; children: React.ReactNode }> = ({ num, children }) => (
   <p style={{ ...body, display: "flex", gap: 16 }}>
     <span style={{ color: ACCENT, fontWeight: 600, minWidth: 64 }}>{num}</span>
@@ -468,16 +468,16 @@ const S5 = () => (
         <div style={{ display: "flex", flexDirection: "column", gap: 20, maxWidth: 760 }}>
           <R>
             <Row num="21">
-              keywords ranked — almost all accidental (“the rife group,” “rcf group”)
+              keywords ranked, almost all accidental (“the rife group,” “rcf group”)
             </Row>
           </R>
           <R>
             <Row num="#19–25">
-              brand term “RFC Group Los Angeles” sits on page 2–3 — for your own name
+              brand term “RFC Group Los Angeles” sits on page 2–3, for your own name
             </Row>
           </R>
           <R>
-            <Row num="~15.4M">domain rank — effectively nowhere</Row>
+            <Row num="~15.4M">domain rank, effectively nowhere</Row>
           </R>
         </div>
       </div>
@@ -485,7 +485,7 @@ const S5 = () => (
   </Frame>
 );
 
-/* 6 — THE RUGBY SLIDE */
+/* 6, THE RUGBY SLIDE */
 const S6 = () => (
   <Frame>
     <Kicker>How thin the footprint is</Kicker>
@@ -540,7 +540,7 @@ const S6 = () => (
   </Frame>
 );
 
-/* 7 — YOUR OWN SITE SAYS IT ISN'T REAL */
+/* 7, YOUR OWN SITE SAYS IT ISN'T REAL */
 const S7 = () => (
   <Frame center>
     <Kicker>From your current site</Kicker>
@@ -548,25 +548,24 @@ const S7 = () => (
       <div style={{ display: "flex", gap: 40 }}>
         <div style={{ width: 4, background: ACCENT, alignSelf: "stretch", borderRadius: 2 }} />
         <h1 style={{ ...h1, fontSize: 72, maxWidth: 1320 }}>
-          “This is a static showcase build — please reach us directly.”
+          “This is a static showcase build, please reach us directly.”
         </h1>
       </div>
     </R>
     <R style={{ marginTop: 44, paddingLeft: 44 }}>
       <p style={{ ...body, fontSize: 26, maxWidth: 1000 }}>
-        Your website tells visitors it isn’t real. The business isn’t the problem —
-        none of it shows up where people now look.
+        Your website tells visitors it isn’t real. The business isn’t the problem,        none of it shows up where people now look.
       </p>
     </R>
   </Frame>
 );
 
-/* 8 — THE GAP (climax) */
+/* 8, THE GAP (climax) */
 const TABLE: { firm: string; kw: string; vis: string; note: string; rfc?: boolean; bien?: boolean }[] = [
   { firm: "The RFC Group", kw: "21", vis: "0", note: "Where you are now", rfc: true },
   { firm: "The Bienstock Group", kw: "1,835", vis: "~2,874", note: "Same neighborhoods, same community", bien: true },
   { firm: "Carolwood Estates", kw: "3,943", vis: "~11,818", note: "Boutique Beverly Hills" },
-  { firm: "The Agency", kw: "29,670", vis: "~42,544", note: "The ceiling — what scale looks like" },
+  { firm: "The Agency", kw: "29,670", vis: "~42,544", note: "The ceiling, what scale looks like" },
 ];
 const S8 = () => {
   const cols = "1.4fr 0.8fr 1.1fr 1.6fr";
@@ -647,7 +646,7 @@ const S8 = () => {
   );
 };
 
-/* 9 — THE ZILLOW REFRAME */
+/* 9, THE ZILLOW REFRAME */
 const S9 = () => (
   <Frame center>
     <Kicker>The Zillow question</Kicker>
@@ -669,7 +668,7 @@ const S9 = () => (
     <R style={{ marginTop: 20 }}>
       <p style={{ ...body, maxWidth: 1180 }}>
         Zillow retired its public API in 2021. It’s gone. Anyone selling “Zillow
-        integration” today is scraping it (breaks constantly, violates their terms) — or
+        integration” today is scraping it (breaks constantly, violates their terms), or
         selling something that doesn’t exist.
       </p>
     </R>
@@ -680,14 +679,14 @@ const S9 = () => (
     </R>
     <R style={{ marginTop: 28 }}>
       <p style={{ ...body, maxWidth: 1180 }}>
-        That’s where Zillow gets its data anyway. You’re DRE-licensed — you already have
+        That’s where Zillow gets its data anyway. You’re DRE-licensed, you already have
         the access. Real listings, auto-updating, no Zillow dependency.
       </p>
     </R>
   </Frame>
 );
 
-/* 10 — THE SOLUTION */
+/* 10, THE SOLUTION */
 const PANELS = [
   {
     n: "01",
@@ -746,7 +745,7 @@ const S10 = () => (
             <span style={{ ...caption, color: "rgba(154,154,148,0.6)", fontSize: 18 }}>{p.n}</span>
             <div style={{ flex: 1 }} />
             <p style={{ fontFamily: DISPLAY, fontWeight: 600, fontSize: 34, color: INK, margin: 0 }}>
-              {p.title} — <span style={{ color: ACCENT }}>{p.word}</span>
+              {p.title}, <span style={{ color: ACCENT }}>{p.word}</span>
             </p>
             <p style={{ ...body, fontSize: 20, marginTop: 14 }}>
               {p.body}
@@ -761,7 +760,7 @@ const S10 = () => (
   </Frame>
 );
 
-/* 11 — THE GEO ANGLE */
+/* 11, THE GEO ANGLE */
 const S11 = () => (
   <Frame center>
     <Kicker>Why this matters now</Kicker>
@@ -805,14 +804,14 @@ const S11 = () => (
     </R>
     <R style={{ marginTop: 28 }}>
       <p style={{ ...body, fontSize: 26, maxWidth: 1200 }}>
-        But only if it can read your site. Right now it can’t see you at all — your biggest
+        But only if it can read your site. Right now it can’t see you at all, your biggest
         differentiator, <span style={{ color: INK, fontWeight: 600 }}>completely wasted.</span>
       </p>
     </R>
   </Frame>
 );
 
-/* 12 — NEXT STEP */
+/* 12, NEXT STEP */
 const STEPS = [
   ["01", "Rebuild + MLS integration"],
   ["02", "SEO + GEO neighborhood pages"],
@@ -876,7 +875,7 @@ const S12 = () => (
 const SLIDES = [S1, S2, S3, S4, S5, S6, S7, S8, S9, S10, S11, S12];
 
 /* ═══════════════════════════════════════════════════════════════════════════
- * DECK SHELL — scaled stage + navigation
+ * DECK SHELL, scaled stage + navigation
  * ══════════════════════════════════════════════════════════════════════════ */
 export default function RfcDeck() {
   const [i, setI] = useState(0);

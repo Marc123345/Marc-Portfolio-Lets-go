@@ -41,7 +41,7 @@ const posts: Post[] = [
     id: 'best-nextjs-developers-b2b-service-businesses-2026',
     title: 'Best Next.js Developers for B2B & Service Businesses (2026)',
     excerpt:
-      'An honest, criteria-based guide to the best Next.js developers and agencies for B2B and service businesses — who each one is best for, their stack, and how to choose.',
+      'An honest, criteria-based guide to the best Next.js developers and agencies for B2B and service businesses, who each one is best for, their stack, and how to choose.',
     date: 'June 16, 2026',
     readTime: '8 min read',
     image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=2000&q=80',
@@ -79,7 +79,7 @@ const posts: Post[] = [
   },
   {
     id: 'conversational-ui-chat-interfaces',
-    title: 'Conversational UI: When Chat Interfaces Help — and When They Hurt — Your UX',
+    title: 'Conversational UI: When Chat Interfaces Help, and When They Hurt, Your UX',
     excerpt:
       'A deep dive into conversational UI design: how chat-style interfaces and AI assistants work, when they genuinely improve user experience, and the critical patterns that make them fail.',
     date: 'April 13, 2026',
@@ -204,7 +204,7 @@ const posts: Post[] = [
     id: 'ai-personalization-ecommerce',
     title: 'The Rise of AI-Driven Personalization in Ecommerce',
     excerpt:
-      'Practical strategies for implementing AI personalization in ecommerce — with real case studies and privacy considerations.',
+      'Practical strategies for implementing AI personalization in ecommerce, with real case studies and privacy considerations.',
     date: 'November 5, 2025',
     readTime: '16 min read',
     image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=2000&q=80',
@@ -222,7 +222,7 @@ const posts: Post[] = [
   },
   {
     id: 'ecommerce-ux-flaws-killing-conversions',
-    title: '3 UX Flaws That Kill eCommerce Conversions — Backed by Data',
+    title: '3 UX Flaws That Kill eCommerce Conversions, Backed by Data',
     excerpt:
       'Three critical UX mistakes costing eCommerce businesses millions. Data-backed solutions to boost conversions by up to 400%.',
     date: 'October 6, 2025',
@@ -274,7 +274,7 @@ const posts: Post[] = [
     id: 'paving-contractor-website-design-guide',
     title: 'Website Design Guide for Paving Contractors',
     excerpt:
-      'Essential website design strategies for paving contractors — showcase work, build trust, convert visitors.',
+      'Essential website design strategies for paving contractors, showcase work, build trust, convert visitors.',
     date: 'April 15, 2025',
     readTime: '12 min read',
     image: 'https://images.unsplash.com/photo-1615811361523-6bd03d7748e7?auto=format&fit=crop&w=2000&q=80',
@@ -294,7 +294,7 @@ const posts: Post[] = [
     id: 'local-seo-for-paving-contractors',
     title: 'Local SEO for Paving Contractors: Dominate Your Market in 2025',
     excerpt:
-      'Master local SEO strategies specifically for paving contractors — rank higher in Google Maps and attract more local customers.',
+      'Master local SEO strategies specifically for paving contractors, rank higher in Google Maps and attract more local customers.',
     date: 'March 28, 2025',
     readTime: '15 min read',
     image: 'https://images.unsplash.com/photo-1562577309-4932fdd64cd1?auto=format&fit=crop&w=2000&q=80',
@@ -304,7 +304,7 @@ const posts: Post[] = [
     id: 'designing-platforms-for-automotive-dealers',
     title: 'From Concept to Profit: Designing Platforms That Empower Automotive Dealers',
     excerpt:
-      'The automotive industry is no stranger to disruption — a look at how dealers operate and compete as the market shifts.',
+      'The automotive industry is no stranger to disruption, a look at how dealers operate and compete as the market shifts.',
     date: 'March 30, 2025',
     readTime: '8 min read',
     image: 'https://images.unsplash.com/photo-1560179707-f14e90ef3623?auto=format&fit=crop&w=2000&q=80',
@@ -314,7 +314,7 @@ const posts: Post[] = [
     id: 'digital-marketing-asphalt-contractors',
     title: 'Digital Marketing Strategy for Asphalt Contractors',
     excerpt:
-      'Proven digital marketing strategies for paving and asphalt contractors — attract customers, grow revenue.',
+      'Proven digital marketing strategies for paving and asphalt contractors, attract customers, grow revenue.',
     date: 'February 20, 2025',
     readTime: '14 min read',
     image: 'https://images.unsplash.com/photo-1533750349088-cd871a92f312?auto=format&fit=crop&w=2000&q=80',
@@ -422,7 +422,7 @@ export default function BlogPage() {
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center gap-2 overflow-x-auto whitespace-nowrap scrollbar-hide">
             <span className="text-[10px] font-mono uppercase tracking-[0.3em] text-white/40 mr-2 shrink-0">
-              — Filter
+, Filter
             </span>
             {allCategories.map((cat) => {
               const isActive = cat === filter;
@@ -480,7 +480,7 @@ export default function BlogPage() {
                     {/* Content */}
                     <div>
                       <p className="text-[10px] font-mono uppercase tracking-[0.35em] text-[#A3D1FF] mb-4">
-                        {hero.date} — {hero.readTime}
+                        {hero.date}, {hero.readTime}
                       </p>
                       <h2
                         className="text-white leading-[1.0] tracking-[-0.02em] mb-6 group-hover:text-[#A3D1FF] transition-colors duration-500"
@@ -635,7 +635,7 @@ export default function BlogPage() {
       <ServiceColophon
         headline="Want these in"
         italicHeadline="your inbox?"
-        lead="Occasional essays on what I'm building and what I'm learning. No newsletter spam — just the actual notes. Drop a line and I'll keep you in the loop."
+        lead="Occasional essays on what I'm building and what I'm learning. No newsletter spam, just the actual notes. Drop a line and I'll keep you in the loop."
       />
     </>
   );

@@ -10,7 +10,7 @@ const config: CaseStudyConfig = {
   tagline: (
     <>
       A hyper-local lead generation engine for an emergency locksmith. Emergency
-      searches turned into immediate phone calls — top 3 in local maps within the
+      searches turned into immediate phone calls, top 3 in local maps within the
       first month.
     </>
   ),
@@ -38,7 +38,7 @@ const config: CaseStudyConfig = {
       <>
         <p>
           Local businesses like locksmiths die on page 2 of Google. A Secure
-          Annapolis needed immediate trust and zero friction — because an
+          Annapolis needed immediate trust and zero friction, because an
           emergency customer clicks once and decides in seconds.
         </p>
       </>
@@ -55,7 +55,7 @@ const config: CaseStudyConfig = {
     narrative: (
       <>
         <p>
-          I deployed the Niche Closer Package — a premium site structure designed
+          I deployed the Niche Closer Package, a premium site structure designed
           specifically to rank high in local maps and convert
           &ldquo;emergency&rdquo; traffic into revenue. Every second of load time
           shaved, every trust badge moved above the fold, every phone number one
@@ -82,7 +82,7 @@ const config: CaseStudyConfig = {
       {
         title: 'Zero-friction mobile',
         description:
-          'Mobile-first design. The desktop site is the afterthought — because 90% of emergency searches happen on mobile.',
+          'Mobile-first design. The desktop site is the afterthought, because 90% of emergency searches happen on mobile.',
       },
     ],
     tech: ['React', 'Node.js', 'Tailwind', 'Schema.org'],
@@ -107,7 +107,7 @@ const config: CaseStudyConfig = {
     {
       image:
         'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%204%20-%2016x9(2).png?updatedAt=1767539579038',
-      caption: 'Homepage — trust-first',
+      caption: 'Homepage, trust-first',
       wide: true,
     },
     {

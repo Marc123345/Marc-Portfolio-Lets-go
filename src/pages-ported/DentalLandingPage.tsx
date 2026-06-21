@@ -75,7 +75,7 @@ export default function DentalLandingPage() {
       document.head.appendChild(link);
     }
 
-    // 3. Inject Calendly widget.js — auto-detects .calendly-inline-widget
+    // 3. Inject Calendly widget.js, auto-detects .calendly-inline-widget
     if (!document.getElementById('calendly-widget-js')) {
       const script = document.createElement('script');
       script.id = 'calendly-widget-js';
@@ -85,7 +85,7 @@ export default function DentalLandingPage() {
     }
   }, []);
 
-  // Conversion tracking removed — this audit page is superseded by the new
+  // Conversion tracking removed, this audit page is superseded by the new
   // standalone site (Dental repo). The new conversion fires on its /thank-you
   // page after the Jotform submit redirect.
 
@@ -94,7 +94,7 @@ export default function DentalLandingPage() {
       {/* Note: floating Calendly badge intentionally NOT mounted on this page
           to preserve a 1:1 attention ratio with the hero CTA. */}
 
-      {/* ═══════════════ HERO — 2-column on desktop: copy + inline Calendly ═══════════════ */}
+      {/* ═══════════════ HERO, 2-column on desktop: copy + inline Calendly ═══════════════ */}
       <section
         id="book"
         className="relative px-6 lg:px-12 pt-24 pb-24 md:pt-32 md:pb-32 overflow-hidden border-b border-white/10 scroll-mt-6"
@@ -104,10 +104,10 @@ export default function DentalLandingPage() {
         <div aria-hidden className="absolute inset-0 opacity-[0.05] mix-blend-overlay pointer-events-none" style={GRAIN_BG} />
 
         <div className="max-w-[1280px] mx-auto relative grid lg:grid-cols-[1fr_1.1fr] gap-12 lg:gap-16 items-center">
-          {/* LEFT — copy + CTA */}
+          {/* LEFT, copy + CTA */}
           <div className="text-center lg:text-left">
             <p className="text-white/60 text-xs md:text-sm font-mono tracking-[0.32em] uppercase mb-8">
-              Free 30-Minute Site Audit — For US Dental Practices
+              Free 30-Minute Site Audit, For US Dental Practices
             </p>
 
             <h1
@@ -120,14 +120,14 @@ export default function DentalLandingPage() {
             >
               I&apos;ll show you exactly why your dental website{' '}
               <em className="italic text-[#A3D1FF]">isn&apos;t booking patients</em>{' '}
-              — in 30 minutes, live, free.
+, in 30 minutes, live, free.
             </h1>
 
             <p className="text-base md:text-lg text-white/70 leading-relaxed mb-8 max-w-[520px] mx-auto lg:mx-0">
               A 30-minute working session with the designer and developer who&apos;d actually rebuild your site. You leave with a written fix list.
             </p>
 
-            {/* Curly arrow with loop — points right on desktop, down on mobile */}
+            {/* Curly arrow with loop, points right on desktop, down on mobile */}
             <div className="flex justify-center lg:justify-end lg:pr-4">
               <svg
                 viewBox="0 0 220 130"
@@ -145,7 +145,7 @@ export default function DentalLandingPage() {
             </div>
           </div>
 
-          {/* RIGHT — inline Calendly widget */}
+          {/* RIGHT, inline Calendly widget */}
           <div>
             <div
               id="dental-calendly-inline"
@@ -157,7 +157,7 @@ export default function DentalLandingPage() {
         </div>
       </section>
 
-      {/* ═══════════════ SECTION 02 — COST OF INACTION (now with image) ═══════════════ */}
+      {/* ═══════════════ SECTION 02, COST OF INACTION (now with image) ═══════════════ */}
       <section className="relative px-6 lg:px-12 py-24 md:py-36 border-b border-white/10 overflow-hidden">
         <div aria-hidden className="absolute top-0 left-0 w-[500px] h-[500px] bg-[#A3D1FF]/5 rounded-full blur-[140px] pointer-events-none" />
         <div className="max-w-7xl mx-auto relative">
@@ -173,7 +173,7 @@ export default function DentalLandingPage() {
           </h2>
 
           <div className="grid lg:grid-cols-[1fr_1.1fr] gap-12 lg:gap-16 items-center mb-16">
-            {/* Image — anchored bottom, no card chrome */}
+            {/* Image, anchored bottom, no card chrome */}
             <div className="relative aspect-[4/5] lg:aspect-auto lg:h-[560px] overflow-hidden">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
@@ -188,7 +188,7 @@ export default function DentalLandingPage() {
             {/* Math copy */}
             <div className="space-y-5">
               <p className="text-base md:text-lg text-white/70 leading-relaxed">
-                Math: the average dental practice gets 1,200 monthly visits to its site. Industry conversion rate for booking forms is 3.2%.<sup className="text-[#A3D1FF]/70">¹</sup> Most practice sites I audit convert at 0.8% — a 2.4% gap.
+                Math: the average dental practice gets 1,200 monthly visits to its site. Industry conversion rate for booking forms is 3.2%.<sup className="text-[#A3D1FF]/70">¹</sup> Most practice sites I audit convert at 0.8%, a 2.4% gap.
               </p>
               <p className="text-base md:text-lg text-white/70 leading-relaxed">
                 On a $400 average patient value, that&apos;s 28 lost patients per month.{' '}
@@ -227,7 +227,7 @@ export default function DentalLandingPage() {
         </div>
       </section>
 
-      {/* ═══════════════ SECTION 03 — DELIVERABLE ═══════════════ */}
+      {/* ═══════════════ SECTION 03, DELIVERABLE ═══════════════ */}
       <section className="relative px-6 lg:px-12 py-24 md:py-36 border-b border-white/10 overflow-hidden bg-black">
         <div className="max-w-7xl mx-auto relative">
           <div className="grid lg:grid-cols-[1fr_1.2fr] gap-12 items-start mb-14">
@@ -255,7 +255,7 @@ export default function DentalLandingPage() {
               { num: '01', title: 'PageSpeed Audit', body: 'Your current Lighthouse score (mobile + desktop), the 3 biggest bottlenecks, and which to fix first.' },
               { num: '02', title: 'Mobile Booking Path', body: "I screen-record myself trying to book an appointment from your homepage. You see exactly where you'd lose a real patient." },
               { num: '03', title: 'Local SEO Position', body: 'Where you rank for "[your city] dentist" today, who\'s beating you, and the 2 changes that move the needle.' },
-              { num: '04', title: 'Conversion Path Map', body: 'The 7 steps from "googled you" to "booked appointment" — and where patients drop off.' },
+              { num: '04', title: 'Conversion Path Map', body: 'The 7 steps from "googled you" to "booked appointment", and where patients drop off.' },
               { num: '05', title: 'Competitive Audit', body: 'I pull up 2 nearby practices and show you a side-by-side. Brutal but useful.' },
             ].map((row) => (
               <li
@@ -285,10 +285,10 @@ export default function DentalLandingPage() {
         </div>
       </section>
 
-      {/* ═══════════════ SECTION 04 — CREDIBILITY ═══════════════ */}
+      {/* ═══════════════ SECTION 04, CREDIBILITY ═══════════════ */}
       <section className="relative px-6 lg:px-12 py-20 md:py-28 border-b border-white/10 overflow-hidden">
         <div className="max-w-7xl mx-auto relative">
-          {/* Client names — single inline list with dot separators */}
+          {/* Client names, single inline list with dot separators */}
           <p className="text-center text-white/45 text-xs md:text-sm font-mono tracking-[0.25em] uppercase mb-16 leading-relaxed">
             {['Binns Media', 'AutoMarginX', 'Untapped Africa', 'iLight Care', 'Chad Le Clos'].map((name, i, arr) => (
               <span key={name}>
@@ -298,7 +298,7 @@ export default function DentalLandingPage() {
             ))}
           </p>
 
-          {/* Quote — single weight, no mid-sentence emphasis */}
+          {/* Quote, single weight, no mid-sentence emphasis */}
           <blockquote
             className="text-white leading-[1.15] tracking-[-0.02em] mb-6 max-w-4xl mx-auto text-center"
             style={{ fontFamily: SERIF, fontSize: 'clamp(1.5rem, 2.8vw, 2.25rem)', fontWeight: 400 }}
@@ -306,7 +306,7 @@ export default function DentalLandingPage() {
             &ldquo;Marc is that rare creative that excels at design AND wordsmithing. He&apos;s the real deal, a true professional.&rdquo;
           </blockquote>
           <p className="text-center text-sm text-white/60 mb-12">
-            — Bradley Thompson, Marketing Director
+, Bradley Thompson, Marketing Director
           </p>
 
           {/* Proof strip */}
@@ -322,7 +322,7 @@ export default function DentalLandingPage() {
         </div>
       </section>
 
-      {/* ═══════════════ SECTION 05 — OBJECTIONS ═══════════════ */}
+      {/* ═══════════════ SECTION 05, OBJECTIONS ═══════════════ */}
       <section className="relative px-6 lg:px-12 py-24 md:py-36 border-b border-white/10 overflow-hidden bg-black">
         <div className="max-w-5xl mx-auto relative">
           <h2

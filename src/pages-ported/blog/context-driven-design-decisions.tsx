@@ -94,7 +94,7 @@ export default function ContextDrivenDesignDecisionsPage() {
                 The Core Problem
               </h3>
               <p className="text-gray-300 text-lg mb-0">
-                Junior designers often ask: "Should I use a modal or a sidebar? Should this be a card or a list? Should I design mobile-first?" The real answer? It depends on the context. And that's not a cop-out—it's the truth.
+                Junior designers often ask: "Should I use a modal or a sidebar? Should this be a card or a list? Should I design mobile-first?" The real answer? It depends on the context. And that's not a cop-out, it's the truth.
               </p>
             </div>
 
@@ -249,7 +249,7 @@ export default function ContextDrivenDesignDecisionsPage() {
             </div>
 
             <p className="text-gray-300 leading-relaxed">
-              See how the same problem has different solutions based on context? Neither is "better"—each is better for specific situations.
+              See how the same problem has different solutions based on context? Neither is "better," each is better for specific situations.
             </p>
 
             <h2 className="text-3xl font-bold text-white mt-16 mb-6">Common Mistakes Junior Designers Make</h2>
@@ -279,7 +279,7 @@ export default function ContextDrivenDesignDecisionsPage() {
                       "I would never use this, so it's a bad design."
                     </p>
                     <p className="text-white text-sm">
-                      <strong className="text-white">Reality:</strong> You're not the user. A 22-year-old designer in Tel Aviv isn't the same as a 55-year-old accountant in Nebraska. Your preferences don't matter—the user's do.
+                      <strong className="text-white">Reality:</strong> You're not the user. A 22-year-old designer in Tel Aviv isn't the same as a 55-year-old accountant in Nebraska. Your preferences don't matter, the user's do.
                     </p>
                   </div>
                 </div>
@@ -583,7 +583,7 @@ export default function ContextDrivenDesignDecisionsPage() {
                 <div>
                   <h4 className="text-lg font-bold text-white mb-2">Validate & Iterate (20% of your time)</h4>
                   <p className="text-gray-300 text-sm">
-                    Test with real users. Get feedback. Refine based on what you learn. Context might change—that's okay.
+                    Test with real users. Get feedback. Refine based on what you learn. Context might change, that's okay.
                   </p>
                 </div>
               </div>
@@ -648,7 +648,7 @@ export default function ContextDrivenDesignDecisionsPage() {
             </div>
 
             <p className="text-gray-300 leading-relaxed">
-              There are no "correct" answers—only well-reasoned solutions based on the context provided. The designer who asks more questions about context will make better decisions than the one who jumps straight to designing.
+              There are no "correct" answers, only well-reasoned solutions based on the context provided. The designer who asks more questions about context will make better decisions than the one who jumps straight to designing.
             </p>
 
             <h2 className="text-3xl font-bold text-white mt-16 mb-6">Key Takeaways</h2>
@@ -717,7 +717,7 @@ export default function ContextDrivenDesignDecisionsPage() {
               </p>
 
               <p className="text-gray-300 leading-relaxed">
-                Every senior designer I know—the ones leading teams at FAANG companies, running successful agencies, or building unicorn startups—they all have this in common: they're obsessed with context. They ask a million questions. They want to understand the full picture before they make a single design decision.
+                Every senior designer I know, the ones leading teams at FAANG companies, running successful agencies, or building unicorn startups, they all have this in common: they're obsessed with context. They ask a million questions. They want to understand the full picture before they make a single design decision.
               </p>
 
               <p className="text-gray-300 leading-relaxed">

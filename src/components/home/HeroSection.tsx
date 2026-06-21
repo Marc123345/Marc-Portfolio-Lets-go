@@ -27,7 +27,7 @@ const CLIENT_AVATARS = [
 const EASE = [0.22, 1, 0.36, 1] as const;
 const HEADLINE = ['Custom', 'Web', 'Design', 'for', 'B2B', '&', 'Service', 'Businesses'];
 
-/* Deterministic particle field — trimmed to 16 for perf */
+/* Deterministic particle field, trimmed to 16 for perf */
 const PARTICLES = Array.from({ length: 16 }, (_, i) => ({
   left: `${(i * 61 + 7) % 100}%`,
   top: `${(i * 43 + 13) % 100}%`,
@@ -105,7 +105,7 @@ function Sparkle({
   );
 }
 
-/* ── Morphing aurora blob — fewer + lighter blur for perf ──────────── */
+/* ── Morphing aurora blob, fewer + lighter blur for perf ──────────── */
 function Aurora({
   className,
   color,
@@ -231,7 +231,7 @@ export default function HeroSection() {
   const reduce = useReducedMotion();
   const sectionRef = useRef<HTMLElement>(null);
 
-  // Mouse-parallax — pointer drives layered depth (motion values, no re-render)
+  // Mouse-parallax, pointer drives layered depth (motion values, no re-render)
   const mx = useMotionValue(0);
   const my = useMotionValue(0);
   const sx = useSpring(mx, { stiffness: 55, damping: 18, mass: 0.6 });
@@ -304,7 +304,7 @@ export default function HeroSection() {
 
       <div className="container mx-auto max-w-[1320px] px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
-          {/* ── Left — pitch stack ──────────────────────────────────── */}
+          {/* ── Left, pitch stack ──────────────────────────────────── */}
           <div className="lg:col-span-7 text-center lg:text-left">
             {/* Eyebrow */}
             <motion.div
@@ -323,11 +323,11 @@ export default function HeroSection() {
                 className="font-heading uppercase text-white/70"
                 style={{ fontSize: 13, letterSpacing: '0.22em', fontWeight: 500 }}
               >
-                Marc Friedman — Web Design &amp; Development
+                Marc Friedman, Web Design &amp; Development
               </span>
             </motion.div>
 
-            {/* Headline — word-by-word reveal with gradient sheen */}
+            {/* Headline, word-by-word reveal with gradient sheen */}
             <h1
               className="font-heading uppercase leading-[0.95] m-0"
               style={{
@@ -386,7 +386,7 @@ export default function HeroSection() {
               transition={{ duration: 0.6, delay: 0.85, ease: EASE }}
             >
               I build custom React &amp; Next.js sites that load in under 2
-              seconds and turn visitors into customers — 50+ projects shipped
+              seconds and turn visitors into customers, 50+ projects shipped
               across 3 continents.
             </motion.p>
 
@@ -450,7 +450,7 @@ export default function HeroSection() {
             </motion.div>
           </div>
 
-          {/* ── Right — Marc bursting out of a laptop (parallax) ─────── */}
+          {/* ── Right, Marc bursting out of a laptop (parallax) ─────── */}
           <motion.div
             className="lg:col-span-5 flex justify-center"
             style={{ x: fgX, y: fgY, willChange: 'transform' }}
@@ -531,7 +531,7 @@ export default function HeroSection() {
                   />
                 ))}
 
-              {/* MARC — shoots up out of the screen with a 3D tilt */}
+              {/* MARC, shoots up out of the screen with a 3D tilt */}
               <motion.div
                 className="absolute"
                 style={{ left: '50%', bottom: '30%', width: '58%', x: '-50%', zIndex: 10, transformOrigin: 'bottom center', transformStyle: 'preserve-3d', willChange: 'transform' }}
@@ -546,7 +546,7 @@ export default function HeroSection() {
                 >
                   <Image
                     src={MARC_PORTRAIT}
-                    alt="Marc Friedman — Custom Web Design for B2B & Service Businesses"
+                    alt="Marc Friedman, Custom Web Design for B2B & Service Businesses"
                     width={440}
                     height={550}
                     priority
@@ -560,7 +560,7 @@ export default function HeroSection() {
                 </motion.div>
               </motion.div>
 
-              {/* Laptop base / keyboard (in front — Marc tucks behind it) */}
+              {/* Laptop base / keyboard (in front, Marc tucks behind it) */}
               <motion.div
                 className="absolute"
                 style={{ left: 0, right: 0, bottom: 0, zIndex: 20 }}

@@ -20,7 +20,7 @@ export default function Slide01Title() {
             className="text-[11px] tracking-[0.35em] uppercase text-[#A3D1FF]"
             style={{ fontFamily: "var(--font-body)" }}
           >
-            Prepared for Uri — EID Ltd.
+            Prepared for Uri, EID Ltd.
           </span>
           <span className="block w-12 h-px bg-white/30" />
           <span

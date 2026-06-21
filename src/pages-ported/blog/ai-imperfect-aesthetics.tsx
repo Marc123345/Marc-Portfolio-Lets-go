@@ -81,7 +81,7 @@ export default function AIImperfectAestheticsPage() {
             <h2>The Perfection Problem</h2>
             <p>We're living in the age of AI-generated everything. From product photos to marketing copy, from interface designs to social media graphics, artificial intelligence can now produce technically flawless content in seconds. But there's a problem: it's all starting to look the same.</p>
 
-            <p>AI-generated visuals tend toward a specific kind of perfection—smooth gradients, idealized proportions, perfect lighting, and a glossy, corporate sheen that feels increasingly generic and soulless. The more we see AI outputs, the more we recognize their hallmarks: that certain smoothness, those particular color choices, that uncanny valley quality that whispers "not quite human."</p>
+            <p>AI-generated visuals tend toward a specific kind of perfection, smooth gradients, idealized proportions, perfect lighting, and a glossy, corporate sheen that feels increasingly generic and soulless. The more we see AI outputs, the more we recognize their hallmarks: that certain smoothness, those particular color choices, that uncanny valley quality that whispers "not quite human."</p>
 
             <p>In response, a counter-movement is emerging. Designers, artists, and creative professionals are deliberately layering imperfection, messiness, and tactile human elements onto AI-generated content. They're taking the technical efficiency of AI and injecting it with personality, emotion, and authenticity through intentional imperfection.</p>
 
@@ -195,7 +195,7 @@ export default function AIImperfectAestheticsPage() {
             <ul>
               <li><strong>Pattern Interruption:</strong> Unusual visuals break through content overload and capture attention</li>
               <li><strong>Memorable Distinction:</strong> Strange imagery is more likely to be remembered than conventional graphics</li>
-              <li><strong>Emotional Impact:</strong> Surreal elements evoke curiosity, unease, or delight—all stronger than indifference</li>
+              <li><strong>Emotional Impact:</strong> Surreal elements evoke curiosity, unease, or delight, all stronger than indifference</li>
               <li><strong>Creative Credibility:</strong> Willingness to embrace weirdness signals creative confidence</li>
             </ul>
 
@@ -403,9 +403,9 @@ export default function AIImperfectAestheticsPage() {
 
             <p>AI offers remarkable efficiency and technical capability, but it lacks the qualities that make design feel human, personal, and emotionally resonant. By deliberately introducing imperfection, messiness, tactile elements, and playful absurdity, designers make work that draws on AI's strengths while keeping human authenticity.</p>
 
-            <p>This isn't about rejecting AI or pretending it doesn't exist. It's about finding a synthesis where AI handles what it does best—technical execution, rapid iteration, baseline content—while humans add what only we can provide: taste, judgment, emotional intelligence, cultural awareness, and the beautiful imperfections that make work feel alive.</p>
+            <p>This isn't about rejecting AI or pretending it doesn't exist. It's about finding a synthesis where AI handles what it does best, technical execution, rapid iteration, baseline content, while humans add what only we can provide: taste, judgment, emotional intelligence, cultural awareness, and the beautiful imperfections that make work feel alive.</p>
 
-            <p>The future of design isn't AI versus humans. It's AI and humans, each contributing what they do best, creating work that would be impossible without both. And increasingly, the human contribution manifests as intentional imperfection—the rough edges, the hand-drawn lines, the surreal distortions, the playful absurdities that transform technically perfect but emotionally flat AI outputs into distinctive, memorable, emotionally resonant experiences.</p>
+            <p>The future of design isn't AI versus humans. It's AI and humans, each contributing what they do best, creating work that would be impossible without both. And increasingly, the human contribution manifests as intentional imperfection, the rough edges, the hand-drawn lines, the surreal distortions, the playful absurdities that transform technically perfect but emotionally flat AI outputs into distinctive, memorable, emotionally resonant experiences.</p>
 
             <p>As AI continues to improve and proliferate, the value of human imperfection will only increase. In a world where anyone can generate perfect content with a prompt, the ability to imperfect that content with taste, intention, and personality becomes the designer's essential value proposition.</p>
           </div>

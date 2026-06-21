@@ -84,7 +84,7 @@ export default function ProgressiveWebAppsPage() {
             <p className="lead">Stop wasting time and money on developing and maintaining separate mobile apps for iOS and Android. Start providing your users with an app-like experience right from their web browsers with Progressive Web Apps (PWAs).</p>
             
             <h2>1. No App Store Barriers</h2>
-            <p>Traditional mobile apps require users to download them from the app store. This means users must take additional steps to get started, and businesses must manage separate app updates and versions. PWAs eliminate this barrier — users simply access them via a URL. This means businesses can reach users instantly without the friction of an app download.</p>
+            <p>Traditional mobile apps require users to download them from the app store. This means users must take additional steps to get started, and businesses must manage separate app updates and versions. PWAs eliminate this barrier, users simply access them via a URL. This means businesses can reach users instantly without the friction of an app download.</p>
             
             <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
               <h4 className="text-white font-semibold mb-2 flex items-center">

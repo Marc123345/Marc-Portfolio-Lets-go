@@ -9,7 +9,7 @@ import ContactTestimonials from '@/components/ContactTestimonials';
 const contactSchema = {
   '@context': 'https://schema.org',
   '@type': 'ContactPage',
-  name: 'Contact Marc Friedman — Full Stack Designer & Developer',
+  name: 'Contact Marc Friedman, Full Stack Designer & Developer',
   description:
     'Get in touch for a free strategy call or quote on a high-performance custom website.',
   url: 'https://www.marcfriedmanportfolio.com/contact',

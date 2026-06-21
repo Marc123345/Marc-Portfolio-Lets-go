@@ -79,7 +79,7 @@ export default function ContactTestimonials() {
       <div className="flex items-center justify-between mb-6">
         <div>
           <p className="text-[10px] font-mono uppercase tracking-[0.3em] text-white/40 mb-2">
-            — In their words
+, In their words
           </p>
           <h2
             className="text-white leading-[1.05] tracking-[-0.02em]"

@@ -85,7 +85,7 @@ export default function CssEatingJavascriptLunchPage() {
       <section className="py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <div className="prose prose-lg prose-invert max-w-none">
-            <p>For the last decade, JavaScript has been the answer to everything. Want an animation? JavaScript. Want to detect when an element enters the viewport? JavaScript. Want to style a parent element based on what&apos;s inside it? Sorry, can&apos;t do that — write some JavaScript.</p>
+            <p>For the last decade, JavaScript has been the answer to everything. Want an animation? JavaScript. Want to detect when an element enters the viewport? JavaScript. Want to style a parent element based on what&apos;s inside it? Sorry, can&apos;t do that, write some JavaScript.</p>
 
             <p>That era is ending.</p>
 
@@ -114,7 +114,7 @@ export default function CssEatingJavascriptLunchPage() {
 
             <p><code>animation-timeline: scroll()</code> ties an animation to the page scroll position. <code>animation-timeline: view()</code> ties it to when an element enters the viewport. <code>animation-range</code> lets you control exactly which part of the scroll triggers which part of the animation.</p>
 
-            <p>You can build the entire &quot;elements fade in as you scroll&quot; pattern that&apos;s on literally every marketing site — the one people install Framer Motion for — in pure CSS.</p>
+            <p>You can build the entire &quot;elements fade in as you scroll&quot; pattern that&apos;s on literally every marketing site, the one people install Framer Motion for, in pure CSS.</p>
 
             <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
               <h4 className="text-white font-semibold mb-2 flex items-center">
@@ -128,7 +128,7 @@ export default function CssEatingJavascriptLunchPage() {
 
             <p>This one is small but it&apos;s been a long time coming.</p>
 
-            <p>Animating elements in has always been awkward. You can animate something from one state to another once it&apos;s in the DOM. But the moment it&apos;s added — that first render frame — the browser doesn&apos;t know what to transition from. So nothing animates. Developers have hacked around this forever: add the element, then add a class on the next frame, then animate. It&apos;s a mess.</p>
+            <p>Animating elements in has always been awkward. You can animate something from one state to another once it&apos;s in the DOM. But the moment it&apos;s added, that first render frame, the browser doesn&apos;t know what to transition from. So nothing animates. Developers have hacked around this forever: add the element, then add a class on the next frame, then animate. It&apos;s a mess.</p>
 
             <p><code>@starting-style</code> fixes it.</p>
 
@@ -147,7 +147,7 @@ export default function CssEatingJavascriptLunchPage() {
 
             <p>Now when the <code>&lt;dialog&gt;</code> enters the DOM, the browser knows where to start the transition. It fades and scales in automatically. No JavaScript, no <code>setTimeout</code> hack, no <code>requestAnimationFrame</code> gymnastics.</p>
 
-            <p>Combine this with <code>display: none</code> transitions (also newly possible) and you can build fully animated show/hide interactions — modals, drawers, tooltips — without touching JS at all.</p>
+            <p>Combine this with <code>display: none</code> transitions (also newly possible) and you can build fully animated show/hide interactions, modals, drawers, tooltips, without touching JS at all.</p>
 
             <h2>:has()</h2>
 
@@ -171,7 +171,7 @@ export default function CssEatingJavascriptLunchPage() {
   display: none;
 }`}</code></pre>
 
-            <p>Think about how much conditional styling logic you&apos;ve written in JavaScript just because CSS couldn&apos;t select upward through the DOM. State management for UI patterns — checked, focused, filled, empty — most of that can now live in CSS where it belongs.</p>
+            <p>Think about how much conditional styling logic you&apos;ve written in JavaScript just because CSS couldn&apos;t select upward through the DOM. State management for UI patterns, checked, focused, filled, empty, most of that can now live in CSS where it belongs.</p>
 
             <p><code>:has()</code> also works as a general conditional. You can write things like &quot;if any input in this form is invalid, style the submit button differently.&quot; That&apos;s not a hack. That&apos;s just how it works now.</p>
 
@@ -187,9 +187,9 @@ export default function CssEatingJavascriptLunchPage() {
 
             <p>Here&apos;s the honest take: a lot of the JavaScript you&apos;re writing for UI interactions is technical debt you&apos;re accumulating for no reason.</p>
 
-            <p>Not all of it. JavaScript still owns real interactivity — data fetching, state, user input handling, anything that requires logic. That&apos;s not going anywhere.</p>
+            <p>Not all of it. JavaScript still owns real interactivity, data fetching, state, user input handling, anything that requires logic. That&apos;s not going anywhere.</p>
 
-            <p>But the layer between &quot;the design&quot; and &quot;the behavior&quot; — the stuff that makes things move, appear, respond, and feel alive — CSS is claiming that territory back. The browser vendors have clearly decided that the answer to &quot;I can&apos;t do this in CSS&quot; should eventually become &quot;yes you can.&quot;</p>
+            <p>But the layer between &quot;the design&quot; and &quot;the behavior&quot;, the stuff that makes things move, appear, respond, and feel alive, CSS is claiming that territory back. The browser vendors have clearly decided that the answer to &quot;I can&apos;t do this in CSS&quot; should eventually become &quot;yes you can.&quot;</p>
 
             <p>The developers winning right now are the ones who know both sides deeply. They&apos;re not picking a side, they&apos;re just using the right tool. And increasingly, the right tool for animation, transitions, and responsive state is CSS.</p>
 
@@ -301,7 +301,7 @@ export default function CssEatingJavascriptLunchPage() {
             <Sparkles className="w-8 h-8 text-[#A3D1FF]" />
           </h2>
           <p className="text-xl text-white mb-8 max-w-2xl mx-auto">
-            I build modern web apps that lean on the platform first — fast, accessible, and easy to maintain. Let&apos;s talk.
+            I build modern web apps that lean on the platform first, fast, accessible, and easy to maintain. Let&apos;s talk.
           </p>
           <MagneticButton>
             <button

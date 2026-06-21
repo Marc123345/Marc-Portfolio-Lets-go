@@ -80,7 +80,7 @@ export default function AIAsCoDesigner() {
             </div>
 
             <p className="text-gray-300 leading-relaxed mb-6">
-              For decades, designers have used tools: Photoshop, Figma, Sketch, and countless others. They're powerful, but passive — they wait for commands, execute instructions, and leave every decision to the designer. AI is different. It can initiate, suggest, iterate, and respond, which makes it closer to a creative partner than a tool.
+              For decades, designers have used tools: Photoshop, Figma, Sketch, and countless others. They're powerful, but passive, they wait for commands, execute instructions, and leave every decision to the designer. AI is different. It can initiate, suggest, iterate, and respond, which makes it closer to a creative partner than a tool.
             </p>
 
             <h2 className="text-3xl font-bold text-white mt-12 mb-6 flex items-center gap-3">
@@ -335,7 +335,7 @@ export default function AIAsCoDesigner() {
                   </p>
                 </div>
                 <p className="text-gray-300 text-sm">
-                  This provides context about users, goals, brand, and requirements—giving the AI enough information to generate relevant solutions.
+                  This provides context about users, goals, brand, and requirements, giving the AI enough information to generate relevant solutions.
                 </p>
               </div>
 
@@ -371,7 +371,7 @@ export default function AIAsCoDesigner() {
                 </div>
                 <div className="bg-gray-900/50 p-4">
                   <p className="text-purple-400 font-semibold mb-1">Refinement 2:</p>
-                  <p className="text-gray-300 text-sm">"Good, but emphasize the middle tier—that's our target. Also add social proof near the CTAs."</p>
+                  <p className="text-gray-300 text-sm">"Good, but emphasize the middle tier, that's our target. Also add social proof near the CTAs."</p>
                 </div>
                 <div className="bg-gray-900/50 p-4">
                   <p className="text-purple-400 font-semibold mb-1">Refinement 3:</p>
@@ -522,7 +522,7 @@ export default function AIAsCoDesigner() {
                   Add Human Touches
                 </h4>
                 <p className="text-gray-300">
-                  The final polish always comes from you. Small details, intentional imperfections, and personality elements that make designs feel human—these are your domain.
+                  The final polish always comes from you. Small details, intentional imperfections, and personality elements that make designs feel human, these are your domain.
                 </p>
               </div>
 
@@ -540,7 +540,7 @@ export default function AIAsCoDesigner() {
             <h2 className="text-3xl font-bold text-white mt-12 mb-6">Conclusion: Partnership, Not Replacement</h2>
 
             <p className="text-gray-300 leading-relaxed mb-6">
-              The shift from AI-as-tool to AI-as-co-designer represents one of the most exciting developments in creative work. But it's not about AI replacing designers—it's about creating a partnership where each brings complementary strengths.
+              The shift from AI-as-tool to AI-as-co-designer represents one of the most exciting developments in creative work. But it's not about AI replacing designers, it's about creating a partnership where each brings complementary strengths.
             </p>
 
             <p className="text-gray-300 leading-relaxed mb-6">
@@ -548,7 +548,7 @@ export default function AIAsCoDesigner() {
             </p>
 
             <p className="text-gray-300 leading-relaxed mb-6">
-              The designers who will thrive in this new era aren't those who resist AI, nor those who blindly defer to it. They're the ones who learn to collaborate—who understand how to guide, refine, and enhance AI's contributions with their own expertise and creativity.
+              The designers who will thrive in this new era aren't those who resist AI, nor those who blindly defer to it. They're the ones who learn to collaborate, who understand how to guide, refine, and enhance AI's contributions with their own expertise and creativity.
             </p>
 
             <p className="text-gray-300 leading-relaxed mb-6">

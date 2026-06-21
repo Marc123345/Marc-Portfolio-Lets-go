@@ -104,7 +104,7 @@ export default function GlobeSection() {
 
           </div>
 
-          {/* Globe — desktop only (skipped on mobile for perf) */}
+          {/* Globe, desktop only (skipped on mobile for perf) */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -114,7 +114,7 @@ export default function GlobeSection() {
           >
             <Globe size={600} />
             <p className="text-center mt-8 text-[10px] font-mono uppercase tracking-[0.3em] text-white/40">
-              — Spins on its own · drag to explore
+, Spins on its own · drag to explore
             </p>
           </motion.div>
         </div>

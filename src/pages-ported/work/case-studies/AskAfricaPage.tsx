@@ -11,7 +11,7 @@ const config: CaseStudyConfig = {
     <>
       A commanding digital presence for one of Africa&apos;s leading research and
       consultancy firms. Built to reflect decades of expertise and continental reach
-      — without sacrificing accessibility.
+, without sacrificing accessibility.
     </>
   ),
   heroImage: 'https://ik.imagekit.io/qcvroy8xpd/image%202%20(1).png',
@@ -70,7 +70,7 @@ const config: CaseStudyConfig = {
       {
         title: 'Content architecture',
         description:
-          'Structured information hierarchy that makes decades of research expertise easy to explore — by industry, by country, by methodology.',
+          'Structured information hierarchy that makes decades of research expertise easy to explore, by industry, by country, by methodology.',
       },
       {
         title: 'Continental focus',
@@ -85,7 +85,7 @@ const config: CaseStudyConfig = {
       {
         title: 'Performance-first',
         description:
-          'Optimised for all devices and connection speeds — especially important for the markets Ask Africa actually serves.',
+          'Optimised for all devices and connection speeds, especially important for the markets Ask Africa actually serves.',
       },
     ],
     tech: ['React', 'Tailwind CSS', 'Framer Motion', 'Vite'],

@@ -197,11 +197,11 @@ export default function UIPolishVisualRealismPage() {
               <li><strong>Paper and Layering:</strong> Clear elevation and stacking that mimics physical document organization</li>
             </ul>
             
-            <p>The key is to extract the essential visual and tactile qualities of materials—their weight, texture, response to light—and translate these into digital equivalents that enhance usability rather than just decoration.</p>
+            <p>The key is to extract the essential visual and tactile qualities of materials, their weight, texture, response to light, and translate these into digital equivalents that enhance usability rather than just decoration.</p>
             
             <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
               <h4 className="text-white font-semibold mb-2">Case Study: AutoMarginX Dashboard</h4>
-              <p className="text-gray-300">In designing the AutoMarginX platform, we used glass-inspired transparency effects for data overlays, allowing users to see contextual information without losing sight of the underlying data. The result felt like looking through a high-quality lens rather than navigating through digital menus—creating an interface that felt both sophisticated and intuitive.</p>
+              <p className="text-gray-300">In designing the AutoMarginX platform, we used glass-inspired transparency effects for data overlays, allowing users to see contextual information without losing sight of the underlying data. The result felt like looking through a high-quality lens rather than navigating through digital menus, creating an interface that felt both sophisticated and intuitive.</p>
             </div>
 
             <h3>Depth and Dimensionality</h3>
@@ -232,7 +232,7 @@ export default function UIPolishVisualRealismPage() {
             
             <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
               <h4 className="text-white font-semibold mb-2">Design Principle: Invisible Polish</h4>
-              <p className="text-gray-300">The best UI polish is invisible—users feel the quality without being distracted by the techniques used to create it. When someone says an interface "just feels right," that's often the result of careful attention to visual realism and material authenticity.</p>
+              <p className="text-gray-300">The best UI polish is invisible, users feel the quality without being distracted by the techniques used to create it. When someone says an interface "just feels right," that's often the result of careful attention to visual realism and material authenticity.</p>
             </div>
 
             <h3>Modern Material Interpretation</h3>
@@ -245,7 +245,7 @@ export default function UIPolishVisualRealismPage() {
               <li><strong>Intelligent Depth:</strong> Layering that serves information architecture rather than just visual appeal</li>
             </ul>
             
-            <p>This approach creates interfaces that feel both familiar and futuristic—grounded in physical understanding but enhanced with digital capabilities that would be impossible in the real world.</p>
+            <p>This approach creates interfaces that feel both familiar and futuristic, grounded in physical understanding but enhanced with digital capabilities that would be impossible in the real world.</p>
 
             <h2>Practical Techniques for Achieving Visual Realism</h2>
             
@@ -471,7 +471,7 @@ export default function UIPolishVisualRealismPage() {
             </ul>
 
             <h2>Conclusion: The Craft of Digital Polish</h2>
-            <p>UI polish is ultimately about craftsmanship—the careful attention to detail that transforms functional interfaces into delightful experiences. By understanding the principles of visual realism, lighting metaphors, and material authenticity, designers can create interfaces that feel both sophisticated and intuitive.</p>
+            <p>UI polish is ultimately about craftsmanship, the careful attention to detail that transforms functional interfaces into delightful experiences. By understanding the principles of visual realism, lighting metaphors, and material authenticity, designers can create interfaces that feel both sophisticated and intuitive.</p>
             
             <p>The best polished interfaces don't announce their sophistication through flashy effects or ornamental details. Instead, they create a sense of quality and attention to detail that users feel in every interaction. This subtle approach to visual realism makes interfaces more trustworthy, more enjoyable to use, and more effective at achieving their intended goals.</p>
             

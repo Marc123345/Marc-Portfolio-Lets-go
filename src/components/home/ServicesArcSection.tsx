@@ -40,7 +40,7 @@ const services: ArcCard[] = [
     title: 'Startup MVP',
     category: 'Launch',
     blurb:
-      'Ship the product that proves your thesis — fast. Built to raise, win first users, or kill an idea.',
+      'Ship the product that proves your thesis, fast. Built to raise, win first users, or kill an idea.',
     href: '/services/startup-mvp/',
     bullets: ['30-day launches', 'Investor-ready', 'Founder-built'],
   },
@@ -49,7 +49,7 @@ const services: ArcCard[] = [
     title: 'AI Integration',
     category: 'AI',
     blurb:
-      'Real AI in real products — not demos. Measurable outcomes, production-ready architecture.',
+      'Real AI in real products, not demos. Measurable outcomes, production-ready architecture.',
     href: '/services/ai-integration/',
     bullets: ['LLM + RAG + agents', 'Evals + guardrails', 'Anthropic / OpenAI'],
   },
@@ -58,7 +58,7 @@ const services: ArcCard[] = [
     title: 'Cybersecurity UX',
     category: 'Security',
     blurb:
-      'Security baked into the product — not bolted on after a breach. SOC dashboards, auth, access control.',
+      'Security baked into the product, not bolted on after a breach. SOC dashboards, auth, access control.',
     href: '/services/cybersecurity/',
     bullets: ['OWASP-aware', 'SOC-grade UX', 'Pen-test friendly'],
   },
@@ -67,7 +67,7 @@ const services: ArcCard[] = [
     title: 'SEO Content & Layout',
     category: 'SEO',
     blurb:
-      "Pages structured for search engines AND humans — content that ranks because it answers, layouts that convert.",
+      "Pages structured for search engines AND humans, content that ranks because it answers, layouts that convert.",
     href: '/services/seo-content-layout/',
     bullets: ['On-page SEO', 'Conversion layouts', 'Schema.org'],
   },
@@ -103,7 +103,7 @@ const services: ArcCard[] = [
     title: 'Maintenance & Hosting',
     category: 'Care',
     blurb:
-      'Your site kept fast, secure, and online — by the same person who built it. Cloudflare-grade hosting handled.',
+      'Your site kept fast, secure, and online, by the same person who built it. Cloudflare-grade hosting handled.',
     href: '/services/maintenance-hosting/',
     bullets: ['Same-day fixes', 'Cloudflare hosting', 'Monthly perf report'],
   },
@@ -153,7 +153,7 @@ export default function ServicesArcSection() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-white/60 text-lg leading-relaxed"
           >
-            Click any service or use the arrows to explore — each opens the
+            Click any service or use the arrows to explore, each opens the
             full page. Prefer to spin it? Drag the arc.
           </motion.p>
         </div>
@@ -162,7 +162,7 @@ export default function ServicesArcSection() {
 
         <div className="mt-8 flex items-center justify-between border-t border-white/10 pt-8">
           <span className="text-[10px] font-mono uppercase tracking-[0.3em] text-white/40">
-            — End of arc
+, End of arc
           </span>
           <Link
             href="/services"

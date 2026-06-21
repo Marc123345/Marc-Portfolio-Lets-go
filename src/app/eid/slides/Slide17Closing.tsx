@@ -36,8 +36,7 @@ export default function Slide17Closing() {
           textWrap: "balance",
         }}
       >
-Stay a brochure —
-        <br />
+Stay a brochure,        <br />
         <span className="text-[#A3D1FF]">or build a site that wins business.</span>
       </motion.h2>
 

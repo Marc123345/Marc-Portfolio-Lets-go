@@ -7,7 +7,7 @@ export default function SmoothScrollProvider() {
   useEffect(() => {
     if (typeof window === 'undefined') return;
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    /* Skip Lenis on mobile — native touch scroll is already smooth
+    /* Skip Lenis on mobile, native touch scroll is already smooth
        and the RAF loop drains battery + clashes with browser
        overscroll behavior on iOS. */
     if (window.matchMedia('(max-width: 768px)').matches) return;

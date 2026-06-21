@@ -78,7 +78,7 @@ export default function CybersecurityPage() {
         label="What you get"
         title="Security, made"
         italicTitle="usable."
-        lead="Cybersecurity assessments aren't a checkbox here — they're how every engagement starts. IT security assessment, cyber security audit and compliance, and remediation rolled into a single SOW."
+        lead="Cybersecurity assessments aren't a checkbox here, they're how every engagement starts. IT security assessment, cyber security audit and compliance, and remediation rolled into a single SOW."
         bg="bg-[#0a0a0a]"
       >
         <div className="border-t border-white/10">
@@ -90,7 +90,7 @@ export default function CybersecurityPage() {
           <DeliverableRow
             number="02"
             title="Auth + Access Control"
-            description="Secure login flows, MFA, session handling, and role-based access — built so they don't feel like obstacles to legitimate users."
+            description="Secure login flows, MFA, session handling, and role-based access, built so they don't feel like obstacles to legitimate users."
           />
           <DeliverableRow
             number="03"
@@ -100,7 +100,7 @@ export default function CybersecurityPage() {
           <DeliverableRow
             number="04"
             title="Sentinel DS"
-            description="An enterprise cybersecurity design system — tokens, components, and documentation purpose-built for security interfaces. Published as open source."
+            description="An enterprise cybersecurity design system, tokens, components, and documentation purpose-built for security interfaces. Published as open source."
           />
         </div>
       </EditorialSection>
@@ -126,7 +126,7 @@ export default function CybersecurityPage() {
           <ProcessChapter
             numeral="II."
             title="Design"
-            description="Security features designed alongside the product — not after. Friction where it matters, frictionless everywhere else."
+            description="Security features designed alongside the product, not after. Friction where it matters, frictionless everywhere else."
             items={[
               'Auth + session design',
               'Role-based UI states',
@@ -138,7 +138,7 @@ export default function CybersecurityPage() {
           <ProcessChapter
             numeral="III."
             title="Build"
-            description="Production-grade implementation — secure by default, with observability baked in."
+            description="Production-grade implementation, secure by default, with observability baked in."
             items={[
               'OWASP-aware frontend',
               'Hardened backend',
@@ -182,7 +182,7 @@ export default function CybersecurityPage() {
               href: '/services/design-systems/',
               title: 'Sentinel DS',
               blurb:
-                'Open-source cybersecurity design system — tokens, components, SOC-ready patterns.',
+                'Open-source cybersecurity design system, tokens, components, SOC-ready patterns.',
               image:
                 'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%204%20-%2016_9.png?updatedAt=1767539579010',
               tags: ['DS', 'Security'],
@@ -200,13 +200,13 @@ export default function CybersecurityPage() {
         />
       </EditorialSection>
 
-      {/* Chapter 05 — Specialties (long-tail security keyword anchors) */}
+      {/* Chapter 05, Specialties (long-tail security keyword anchors) */}
       <EditorialSection
         chapter="05"
         label="Specialties"
         title="Cyber security assessment"
         italicTitle="and management, end-to-end."
-        lead="A cybersecurity assessment without a remediation plan is just an expensive scare. Every engagement here pairs the audit with the build — cyber security assessment and management together, not separately invoiced."
+        lead="A cybersecurity assessment without a remediation plan is just an expensive scare. Every engagement here pairs the audit with the build, cyber security assessment and management together, not separately invoiced."
       >
         <div className="grid md:grid-cols-2 gap-px bg-white/10 border border-white/10">
           <div className="bg-black p-8">
@@ -217,7 +217,7 @@ export default function CybersecurityPage() {
               Cybersecurity assessment services
             </h3>
             <p className="text-white/70 leading-relaxed">
-              Full cybersecurity assessment services — OWASP Top 10 review,
+              Full cybersecurity assessment services, OWASP Top 10 review,
               architecture audit, secret scanning, dependency CVE check, and a
               remediation roadmap ranked by exploit likelihood × business impact.
             </p>
@@ -233,7 +233,7 @@ export default function CybersecurityPage() {
               Manual + automated cyber security penetration testing services, plus
               website penetration testing service work and web security services for
               SaaS apps and customer portals. Includes hands-on website security
-              services — findings ranked, scoped to fix, and re-tested after
+              services, findings ranked, scoped to fix, and re-tested after
               remediation.
             </p>
           </div>
@@ -247,7 +247,7 @@ export default function CybersecurityPage() {
             <p className="text-white/70 leading-relaxed">
               Cyber security audit and compliance work for teams chasing SOC 2,
               ISO 27001, GDPR, or HIPAA. Cyber security auditing focused on the
-              gaps that actually block your auditor — not theatre for the board deck.
+              gaps that actually block your auditor, not theatre for the board deck.
             </p>
           </div>
           <div className="bg-black p-8">
@@ -259,7 +259,7 @@ export default function CybersecurityPage() {
             </h3>
             <p className="text-white/70 leading-relaxed">
               Full IT security assessments covering infrastructure, identity, and
-              data — not just app code. Then the same hands that ran the IT security
+              data, not just app code. Then the same hands that ran the IT security
               assessment ship the fixes, so nothing gets lost between audit and build.
             </p>
           </div>
@@ -270,7 +270,7 @@ export default function CybersecurityPage() {
       <ServiceColophon
         headline="Security that"
         italicHeadline="doesn&apos;t get in the way."
-        lead="Book a call and I'll walk through what a real cybersecurity assessment looks like for your specific product — and where yours is likely leaking."
+        lead="Book a call and I'll walk through what a real cybersecurity assessment looks like for your specific product, and where yours is likely leaking."
       />
     </>
   );

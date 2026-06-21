@@ -76,7 +76,7 @@ export default function FreeGeoAuditPage() {
               New · 2026
             </span>
             <span className="text-xs font-mono uppercase tracking-[0.35em] text-[#A3D1FF]">
-              — AI Visibility Audit
+, AI Visibility Audit
             </span>
           </motion.div>
 
@@ -101,7 +101,7 @@ export default function FreeGeoAuditPage() {
             className="text-lg md:text-xl text-white/70 max-w-2xl mx-auto leading-snug text-center mb-3"
           >
             Find out if AI engines like ChatGPT, Perplexity, and Google AI Overviews are quoting
-            your site — or your competitors.
+            your site, or your competitors.
           </motion.p>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -134,7 +134,7 @@ export default function FreeGeoAuditPage() {
 
           <div className="mt-14">
             <p className="text-[10px] font-mono uppercase tracking-[0.3em] text-white/35 text-center mb-4">
-              — Engines we audit against
+, Engines we audit against
             </p>
             <div className="flex flex-wrap items-center justify-center gap-2">
               {enginesCovered.map((e) => (
@@ -168,7 +168,7 @@ export default function FreeGeoAuditPage() {
           </motion.h2>
           <p className="text-white/60 max-w-2xl mb-12">
             SEO is no longer enough. Six diagnostics designed to reveal whether AI answer engines
-            can — and will — cite your site.
+            can, and will, cite your site.
           </p>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -209,7 +209,7 @@ export default function FreeGeoAuditPage() {
             Why <em className="italic text-[#A3D1FF]">GEO</em> matters now.
           </motion.h2>
           <p className="text-white/60 text-center max-w-2xl mx-auto mb-12">
-            Search is splitting in two. Half your future traffic comes from AI answers — not the
+            Search is splitting in two. Half your future traffic comes from AI answers, not the
             blue links.
           </p>
 
@@ -248,7 +248,7 @@ export default function FreeGeoAuditPage() {
       {/* ── Audit request form ── */}
       <section id="audit-form" className="relative bg-[#0a0a0a] border-t border-white/10 py-24 px-6 lg:px-12">
         <div className="max-w-2xl mx-auto">
-          <p className="text-xs font-mono uppercase tracking-[0.35em] text-[#A3D1FF] mb-4 text-center">— Free · No signup</p>
+          <p className="text-xs font-mono uppercase tracking-[0.35em] text-[#A3D1FF] mb-4 text-center">Free · No signup</p>
           <h2 className="text-center text-white mb-10" style={{ fontFamily: SERIF, fontSize: 'clamp(1.8rem, 3.5vw, 3rem)', fontWeight: 400 }}>
             Request your free GEO audit
           </h2>

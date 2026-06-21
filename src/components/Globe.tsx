@@ -7,7 +7,7 @@ interface GlobeProps {
   className?: string;
 }
 
-// Marc's client cities — drives arcs + points.
+// Marc's client cities, drives arcs + points.
 const CITIES = [
   { lat: 40.7128, lng: -74.006, name: 'New York', pop: 1 },
   { lat: 38.9072, lng: -77.0369, name: 'Washington D.C.', pop: 0.9 },
@@ -20,7 +20,7 @@ const CITIES = [
   { lat: -1.2921, lng: 36.8219, name: 'Nairobi', pop: 0.75 },
 ];
 
-// Connecting arcs — routes between Marc's clients.
+// Connecting arcs, routes between Marc's clients.
 const ARC_COLORS: [string, string][] = [
   ['rgba(163,209,255,0.95)', 'rgba(99,168,244,0.5)'],
   ['rgba(192,221,255,0.75)', 'rgba(99,168,244,0.35)'],
@@ -28,17 +28,17 @@ const ARC_COLORS: [string, string][] = [
 ];
 
 const ROUTES = [
-  // Primary — tier A
+  // Primary, tier A
   [0, 4, 0],
   [0, 5, 0],
   [4, 7, 0],
   [5, 6, 0],
-  // Secondary — tier B
+  // Secondary, tier B
   [0, 2, 1],
   [2, 3, 1],
   [3, 4, 1],
   [7, 8, 1],
-  // Whisper — tier C
+  // Whisper, tier C
   [1, 0, 2],
   [4, 8, 2],
   [5, 7, 2],
@@ -103,7 +103,7 @@ export default function Globe({ size = 600, className = '' }: GlobeProps) {
   const destroyedRef = useRef(false);
   /* Don't load Three.js or render the WebGL globe on mobile.
      Three.js + globe.gl is ~600KB gz, plus a continuously
-     animating canvas — the single heaviest thing on the home
+     animating canvas, the single heaviest thing on the home
      page for low-end devices. */
   const [skip, setSkip] = useState(false);
   useEffect(() => {

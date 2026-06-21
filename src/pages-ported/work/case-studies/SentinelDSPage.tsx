@@ -43,7 +43,7 @@ const config: CaseStudyConfig = {
         </p>
         <p>
           Analysts are working at 3am with stakes attached to every click. They
-          deserve interfaces designed for that reality — not generic Material
+          deserve interfaces designed for that reality, not generic Material
           clones.
         </p>
       </>
@@ -65,7 +65,7 @@ const config: CaseStudyConfig = {
           vocabulary on day one.
         </p>
         <p>
-          Built from the analyst&apos;s perspective — every token, every
+          Built from the analyst&apos;s perspective, every token, every
           interaction, every component decision answers the question:{' '}
           <em className="text-white">does this help me triage faster?</em>
         </p>
@@ -75,12 +75,12 @@ const config: CaseStudyConfig = {
       {
         title: '5-Level Severity Scale',
         description:
-          'Critical / High / Medium / Low / Info — color, weight, and motion all carry meaning. Tested for color-blindness as part of the AA pass.',
+          'Critical / High / Medium / Low / Info, color, weight, and motion all carry meaning. Tested for color-blindness as part of the AA pass.',
       },
       {
         title: 'Dual Themes',
         description:
-          'Dark by default (SOC reality). Light variant for client-facing reports. Both share the same token system — no parallel design files.',
+          'Dark by default (SOC reality). Light variant for client-facing reports. Both share the same token system, no parallel design files.',
       },
       {
         title: '15+ Components',
@@ -105,7 +105,7 @@ const config: CaseStudyConfig = {
     ],
     testimonial: {
       quote:
-        'Most design systems try to be everything to everyone. Sentinel picks one job — security UI — and does it ruthlessly well.',
+        'Most design systems try to be everything to everyone. Sentinel picks one job, security UI, and does it ruthlessly well.',
       author: 'Marc Friedman',
       role: 'Author',
     },
@@ -114,7 +114,7 @@ const config: CaseStudyConfig = {
   gallery: [
     {
       image: 'https://ik.imagekit.io/qcvroy8xpd/image%201%20(10).png',
-      caption: 'Sentinel DS — severity scale & SOC alert pattern',
+      caption: 'Sentinel DS, severity scale & SOC alert pattern',
       wide: true,
     },
   ],

@@ -10,7 +10,7 @@ const config: CaseStudyConfig = {
   tagline: (
     <>
       Video metadata management system for media and manufacturing. AI-powered
-      insights and workflow automation — faster metadata processing, significant
+      insights and workflow automation, faster metadata processing, significant
       time saved in analysis.
     </>
   ),
@@ -37,7 +37,7 @@ const config: CaseStudyConfig = {
         <p>
           Media teams were spending hours tagging, categorising, and searching
           through video libraries. The metadata problem was killing their throughput
-          — more content meant less findable content.
+, more content meant less findable content.
         </p>
       </>
     ),
@@ -54,7 +54,7 @@ const config: CaseStudyConfig = {
       <>
         <p>
           A comprehensive video metadata management system built on data-driven
-          design principles — empowering media and manufacturing sectors with
+          design principles, empowering media and manufacturing sectors with
           AI-powered insights and automated ingestion.
         </p>
       </>

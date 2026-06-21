@@ -10,8 +10,8 @@ const config: CaseStudyConfig = {
   tagline: (
     <>
       Human + AI-powered mental health and resilience. I took a founder&apos;s
-      vision and built the entire digital ecosystem — brand, website, MVP platform,
-      and pitch deck — in under 6 weeks.
+      vision and built the entire digital ecosystem, brand, website, MVP platform,
+      and pitch deck, in under 6 weeks.
     </>
   ),
   heroImage:
@@ -38,7 +38,7 @@ const config: CaseStudyConfig = {
       <>
         <p>
           A founder with a clear vision for AI-assisted mental health but nothing
-          visible — no brand, no site, no product, no pitch. The window to raise
+          visible, no brand, no site, no product, no pitch. The window to raise
           was closing and every week without an MVP was a week without signal.
         </p>
       </>
@@ -57,7 +57,7 @@ const config: CaseStudyConfig = {
         <p>
           I acted as the interim CTO and product team. I took the project from
           messy notes to a fully clickable product and investor-ready presentation
-          in under six weeks — brand, marketing site, SaaS MVP, and deck all
+          in under six weeks, brand, marketing site, SaaS MVP, and deck all
           shipped together.
         </p>
       </>
@@ -66,7 +66,7 @@ const config: CaseStudyConfig = {
       {
         title: 'Brand system',
         description:
-          'Logo, typography, colour system, and voice — designed around trust, calm, and clinical credibility. Applied everywhere from pitch deck to product UI.',
+          'Logo, typography, colour system, and voice, designed around trust, calm, and clinical credibility. Applied everywhere from pitch deck to product UI.',
       },
       {
         title: 'Marketing website',
@@ -76,7 +76,7 @@ const config: CaseStudyConfig = {
       {
         title: 'SaaS MVP platform',
         description:
-          'React dashboard with secure auth, core AI flows, and clinician safety checks. Built to actually be used — not just demoed.',
+          'React dashboard with secure auth, core AI flows, and clinician safety checks. Built to actually be used, not just demoed.',
       },
       {
         title: 'Pitch deck',

@@ -36,8 +36,7 @@ const config: CaseStudyConfig = {
       <>
         <p>
           H2H Social Marketing is a forward-thinking agency that believes in
-          human-to-human connection. Their old site didn&apos;t convey the story —
-          it read generic, indistinguishable from a hundred other marketing shops.
+          human-to-human connection. Their old site didn&apos;t convey the story,          it read generic, indistinguishable from a hundred other marketing shops.
         </p>
         <p>
           They needed a site that practiced what they preach: professional yet

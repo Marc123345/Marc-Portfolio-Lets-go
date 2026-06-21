@@ -26,7 +26,7 @@ export default function AuditModal({ open, onClose, url, toolLabel, variant }: A
 
   const iframeSrc = useMemo(() => {
     const params = new URLSearchParams({
-      q5_q5_textbox3: `${toolLabel} — ${normalized}`,
+      q5_q5_textbox3: `${toolLabel}, ${normalized}`,
       q9_linkedinUrl: normalized,
     });
     return `https://form.jotform.com/${JOTFORM_ID}?${params.toString()}`;
@@ -91,7 +91,7 @@ export default function AuditModal({ open, onClose, url, toolLabel, variant }: A
             <div className="p-6 sm:p-8">
               <div className="flex items-center gap-2 text-[10px] font-mono uppercase tracking-[0.3em] text-white/50 mb-4">
                 <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
-                Step 2 of 2 — Enter your details
+                Step 2 of 2, Enter your details
               </div>
 
               <h2
@@ -115,14 +115,14 @@ export default function AuditModal({ open, onClose, url, toolLabel, variant }: A
                     Auditing
                   </p>
                   <p className="text-white text-sm font-medium truncate" title={normalized}>
-                    {normalized || '—'}
+                    {normalized || '–'}
                   </p>
                 </div>
               </div>
 
               <iframe
                 key={iframeSrc}
-                title={`${toolLabel} — request form`}
+                title={`${toolLabel}, request form`}
                 src={iframeSrc}
                 allow="geolocation; microphone; camera; fullscreen; payment"
                 loading="lazy"

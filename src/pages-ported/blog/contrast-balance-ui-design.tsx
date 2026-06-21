@@ -82,7 +82,7 @@ export default function ContrastBalanceUIDesignPage() {
         <div className="max-w-4xl mx-auto">
           <div className="prose prose-lg prose-invert max-w-none">
             <h2>The Critical Role of Contrast in Modern UI Design</h2>
-            <p>Contrast and balance form the invisible foundation of every successful interface. While users may not consciously notice good contrast, they immediately feel its absence—struggling to read text, missing important buttons, or feeling visually fatigued after extended use. In an era where digital accessibility is both a legal requirement and a moral imperative, mastering contrast is really about building inclusive experiences that work for everyone, not just attractive ones.</p>
+            <p>Contrast and balance form the invisible foundation of every successful interface. While users may not consciously notice good contrast, they immediately feel its absence, struggling to read text, missing important buttons, or feeling visually fatigued after extended use. In an era where digital accessibility is both a legal requirement and a moral imperative, mastering contrast is really about building inclusive experiences that work for everyone, not just attractive ones.</p>
             
             <p>Effective contrast serves multiple purposes: it ensures readability for users with visual impairments, creates clear visual hierarchy that guides user attention, and establishes the overall tone and personality of your interface. When done well, contrast becomes an invisible force that makes interfaces feel effortless to use.</p>
             
@@ -108,7 +108,7 @@ export default function ContrastBalanceUIDesignPage() {
                 <Eye className="w-5 h-5 text-[#A3D1FF] mr-2" />
                 Practical Contrast Testing
               </h4>
-              <p className="text-gray-300 mb-4">Use tools like WebAIM's Contrast Checker or Stark (Figma plugin) to verify your contrast ratios. But don't stop at automated testing—view your interface in different lighting conditions and on various devices to ensure real-world usability.</p>
+              <p className="text-gray-300 mb-4">Use tools like WebAIM's Contrast Checker or Stark (Figma plugin) to verify your contrast ratios. But don't stop at automated testing, view your interface in different lighting conditions and on various devices to ensure real-world usability.</p>
               <pre className="text-xs text-gray-300 overflow-x-auto">
 {`/* Example: Ensuring sufficient contrast */
 .primary-text {

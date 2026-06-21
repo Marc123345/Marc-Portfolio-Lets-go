@@ -9,7 +9,7 @@ const config: CaseStudyConfig = {
   italicWord: 'Redesign.',
   tagline: (
     <>
-      AI-powered video editing platform — redesigned onboarding, editor, and
+      AI-powered video editing platform, redesigned onboarding, editor, and
       template marketplace flows. Community-driven app for creating, sharing, and
       consuming video content.
     </>

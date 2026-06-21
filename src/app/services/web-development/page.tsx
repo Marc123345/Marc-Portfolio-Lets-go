@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 const schema = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
-  name: 'Marc Friedman — Custom Website Development',
+  name: 'Marc Friedman, Custom Website Development',
   url: 'https://www.marcfriedmanportfolio.com/services/web-development/',
   areaServed: 'Worldwide',
   knowsAbout: [
@@ -65,7 +65,7 @@ const schema = {
       reviewRating: { '@type': 'Rating', ratingValue: '5' },
       author: { '@type': 'Person', name: 'Bradley Thompson' },
       reviewBody:
-        'Marc is an incredible ally — highly responsive with quick solutions as he built our landing page. The real deal, a true professional.',
+        'Marc is an incredible ally, highly responsive with quick solutions as he built our landing page. The real deal, a true professional.',
     },
     {
       '@type': 'Review',

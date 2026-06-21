@@ -20,7 +20,7 @@ function AuditForm() {
   }, []);
 
   return (
-    /* Mobile-first iframe sizing — see ContactForm for rationale. */
+    /* Mobile-first iframe sizing, see ContactForm for rationale. */
     <div className="relative min-h-[820px] md:min-h-[480px]">
       {!loaded && (
         <div className="absolute inset-0 flex flex-col items-center justify-center gap-4"
@@ -110,7 +110,7 @@ export default function FreeWebsiteAnalyzerPage() {
             className="text-xs font-mono uppercase tracking-[0.35em] mb-6"
             style={{ color: ACCENT }}
           >
-            — Free tool · No signup · 48-hour turnaround
+, Free tool · No signup · 48-hour turnaround
           </motion.p>
 
           <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-14 xl:gap-20 items-start">
@@ -163,7 +163,7 @@ export default function FreeWebsiteAnalyzerPage() {
               </motion.p>
             </div>
 
-            {/* Right — form */}
+            {/* Right, form */}
             <motion.div
               initial={{ opacity: 0, x: 28 }}
               animate={{ opacity: 1, x: 0 }}

@@ -40,7 +40,7 @@ const config: CaseStudyConfig = {
           spreadsheets, zero single source of truth.
         </p>
         <p>
-          They needed a dashboard that surfaced the right data in real time — and
+          They needed a dashboard that surfaced the right data in real time, and
           didn&apos;t require a BI analyst to read.
         </p>
       </>
@@ -59,7 +59,7 @@ const config: CaseStudyConfig = {
         <p>
           I built a real-time data platform with intuitive visualisations and
           AI-powered pricing recommendations. One screen, one number, one clear
-          next action — for every role in the dealership.
+          next action, for every role in the dealership.
         </p>
       </>
     ),
@@ -72,7 +72,7 @@ const config: CaseStudyConfig = {
       {
         title: 'Role-based views',
         description:
-          'Sales, ops, finance, and leadership each see the slice of the data relevant to them — with proper RBAC enforced at the API.',
+          'Sales, ops, finance, and leadership each see the slice of the data relevant to them, with proper RBAC enforced at the API.',
       },
       {
         title: 'AI-powered recommendations',

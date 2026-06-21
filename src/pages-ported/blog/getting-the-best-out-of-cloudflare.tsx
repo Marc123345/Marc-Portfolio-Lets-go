@@ -82,7 +82,7 @@ export default function GettingTheBestOutOfCloudflarePage() {
         <div className="max-w-4xl mx-auto">
           <div className="prose prose-lg prose-invert max-w-none">
             <h2>Why Cloudflare is Essential for Modern Websites</h2>
-            <p>Cloudflare has evolved from a simple CDN provider into a comprehensive web performance and security platform. With over 330 data centers worldwide and a suite of optimization tools, Cloudflare can dramatically improve your website's speed, security, and reliability—often with just a few configuration changes.</p>
+            <p>Cloudflare has evolved from a simple CDN provider into a comprehensive web performance and security platform. With over 330 data centers worldwide and a suite of optimization tools, Cloudflare can dramatically improve your website's speed, security, and reliability, often with just a few configuration changes.</p>
             
             <p>In this comprehensive guide, we'll explore how to maximize Cloudflare's potential for your website, covering everything from basic setup to advanced optimization techniques that can reduce load times by up to 70% and protect against sophisticated cyber threats.</p>
             
@@ -467,7 +467,7 @@ example.com/account*
             <h2>Conclusion: Maximizing Your Cloudflare Investment</h2>
             <p>Cloudflare offers an impressive array of features that can transform your website's performance and security. The key to success lies in understanding your specific needs and implementing the right combination of features for your use case.</p>
             
-            <p>Start with the basics—SSL configuration, caching, and basic security features—then gradually implement more advanced optimizations as you become comfortable with the platform. Remember that optimization is an ongoing process, and regular monitoring and adjustment will help you maintain peak performance.</p>
+            <p>Start with the basics, SSL configuration, caching, and basic security features, then gradually implement more advanced optimizations as you become comfortable with the platform. Remember that optimization is an ongoing process, and regular monitoring and adjustment will help you maintain peak performance.</p>
             
             <p>By following the strategies in this guide, you can use Cloudflare's full potential to create faster, more secure, more reliable web experiences that keep users happy and drive business results.</p>
             

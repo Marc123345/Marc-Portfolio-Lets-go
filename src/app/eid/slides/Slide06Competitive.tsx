@@ -84,13 +84,13 @@ Own brand · 90%
             <li className="flex items-start gap-3">
               <span className="mt-2 block w-3 h-px bg-white/30 shrink-0" />
               <span className="text-white/70 text-sm" style={{ fontFamily: "var(--font-body)", lineHeight: 1.6 }}>
-                Take out people Googling their name — Strauss ranks for almost nothing useful.
+                Take out people Googling their name, Strauss ranks for almost nothing useful.
               </span>
             </li>
             <li className="flex items-start gap-3">
               <span className="mt-2 block w-3 h-px bg-white/30 shrink-0" />
               <span className="text-white/70 text-sm" style={{ fontFamily: "var(--font-body)", lineHeight: 1.6 }}>
-                30+ dental pages — zero ranking in the top 10.
+                30+ dental pages, zero ranking in the top 10.
               </span>
             </li>
           </ul>
@@ -161,13 +161,13 @@ Real buyer terms · 85%
             <li className="flex items-start gap-3">
               <span className="mt-2 block w-3 h-px bg-[#A3D1FF] shrink-0" />
               <span className="text-white text-sm" style={{ fontFamily: "var(--font-body)", lineHeight: 1.6 }}>
-                Ranking on real buyer searches — not just people Googling the brand.
+                Ranking on real buyer searches, not just people Googling the brand.
               </span>
             </li>
             <li className="flex items-start gap-3">
               <span className="mt-2 block w-3 h-px bg-[#A3D1FF] shrink-0" />
               <span className="text-white text-sm" style={{ fontFamily: "var(--font-body)", lineHeight: 1.6 }}>
-                Few pages, narrow content — but Google already trusts the domain.
+                Few pages, narrow content, but Google already trusts the domain.
               </span>
             </li>
           </ul>

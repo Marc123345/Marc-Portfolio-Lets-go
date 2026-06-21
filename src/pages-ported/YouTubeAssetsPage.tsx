@@ -37,7 +37,7 @@ export default function YouTubeAssetsPage() {
           className="text-3xl mb-2"
           style={{ fontFamily: SERIF, fontWeight: 500, letterSpacing: '-0.02em' }}
         >
-          YouTube Assets <span className="italic text-[#A3D1FF]">— internal</span>
+          YouTube Assets <span className="italic text-[#A3D1FF]">internal</span>
         </h1>
         <p className="text-sm text-white/50 font-mono tracking-[0.15em] uppercase mb-12">
           Right-click any composition → Inspect → Capture node screenshot · pixel-perfect PNG export
@@ -133,7 +133,7 @@ function BannerComposition() {
         }}
       />
 
-      {/* YouTube safe zone overlay (visual reference only — hidden when exporting) */}
+      {/* YouTube safe zone overlay (visual reference only, hidden when exporting) */}
       {/* SAFE ZONE: 1546 × 423 centered */}
 
       {/* Top-left sigil */}

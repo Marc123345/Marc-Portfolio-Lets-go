@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Thanks — message received',
+  title: 'Thanks, message received',
   description: 'Confirmation that your message reached Marc Friedman.',
   robots: { index: false, follow: false },
 };

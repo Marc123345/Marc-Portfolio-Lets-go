@@ -33,7 +33,7 @@ export function AppProviders({ children }: Props) {
          'always' on mobile, which killed every transitional
          animation (menu open/close, section fade-ins, button
          feedback) and made interactions feel dead. The heavy perf
-         offenders are off via other mechanisms — Lenis disabled
+         offenders are off via other mechanisms, Lenis disabled
          on touch, CSS marquees stopped via globals.css media
          query, Globe + blur orbs not rendered on mobile. */}
       <MotionConfig reducedMotion="user">

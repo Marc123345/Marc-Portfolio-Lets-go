@@ -10,7 +10,7 @@ import {
 } from "./_primitives";
 
 /* ──────────────────────────────────────────────────────────────────
- * Authority Score gauge — 9 / 100, arc fills from 0 → 9%.
+ * Authority Score gauge, 9 / 100, arc fills from 0 → 9%.
  * ────────────────────────────────────────────────────────────────── */
 function AuthorityGauge() {
   const size = 220;
@@ -71,7 +71,7 @@ function AuthorityGauge() {
 }
 
 /* ──────────────────────────────────────────────────────────────────
- * Today vs target — bars with absolute values + ratio.
+ * Today vs target, bars with absolute values + ratio.
  * ────────────────────────────────────────────────────────────────── */
 function VisitsChart() {
   return (
@@ -157,7 +157,7 @@ function VisitsChart() {
 }
 
 /* ──────────────────────────────────────────────────────────────────
- * Keyword footprint — 14 ranking keywords visualized as filled grid cells.
+ * Keyword footprint, 14 ranking keywords visualized as filled grid cells.
  * ────────────────────────────────────────────────────────────────── */
 function KeywordGrid() {
   const total = 100;
@@ -223,7 +223,7 @@ function KeywordGrid() {
 }
 
 /* ──────────────────────────────────────────────────────────────────
- * Site-staleness timeline — last meaningful signal 2020.
+ * Site-staleness timeline, last meaningful signal 2020.
  * ────────────────────────────────────────────────────────────────── */
 function StalenessTimeline() {
   const years = [2020, 2021, 2022, 2023, 2024, 2025, 2026];
@@ -334,29 +334,29 @@ export default function Slide03Reality() {
 
       <Eyebrow number="ACT I · 03">Where you are today</Eyebrow>
       <SlideTitle>
-        Strong product — <span className="text-[#A3D1FF]">invisible online.</span>
+        Strong product, <span className="text-[#A3D1FF]">invisible online.</span>
       </SlideTitle>
 
       <motion.div
         variants={FADE_UP}
         className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-px bg-white/10 border border-white/10 max-w-6xl"
       >
-        {/* Quadrant 1 — Authority Score */}
+        {/* Quadrant 1, Authority Score */}
         <div className="bg-[#0a0a0a] p-8 flex items-center justify-center min-h-[280px]">
           <AuthorityGauge />
         </div>
 
-        {/* Quadrant 2 — Visits comparison */}
+        {/* Quadrant 2, Visits comparison */}
         <div className="bg-[#0a0a0a] p-8 min-h-[280px]">
           <VisitsChart />
         </div>
 
-        {/* Quadrant 3 — Keyword footprint */}
+        {/* Quadrant 3, Keyword footprint */}
         <div className="bg-[#0a0a0a] p-8 min-h-[280px]">
           <KeywordGrid />
         </div>
 
-        {/* Quadrant 4 — Staleness timeline */}
+        {/* Quadrant 4, Staleness timeline */}
         <div className="bg-[#0a0a0a] p-8 min-h-[280px]">
           <StalenessTimeline />
         </div>

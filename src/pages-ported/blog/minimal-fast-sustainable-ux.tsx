@@ -79,9 +79,9 @@ export default function MinimalFastSustainableUXPage() {
         <div className="max-w-4xl mx-auto">
           <div className="prose prose-lg prose-invert max-w-none">
 
-            <p className="text-xl text-gray-300 leading-relaxed">The web has a weight problem. The average page now tops 2.5 MB, loads over 70 requests, and runs enough JavaScript to rival a desktop application. Meanwhile, users are burned out: notification fatigue, visual clutter, and competing calls-to-action everywhere. A counter-movement is underway -- one that treats performance itself as a design decision, strips interfaces back to their essentials, and asks a question most design teams never considered a decade ago: <strong className="text-white">what is the environmental cost of this layout?</strong></p>
+            <p className="text-xl text-gray-300 leading-relaxed">The web has a weight problem. The average page now tops 2.5 MB, loads over 70 requests, and runs enough JavaScript to rival a desktop application. Meanwhile, users are burned out: notification fatigue, visual clutter, and competing calls-to-action everywhere. A counter-movement is underway, one that treats performance itself as a design decision, strips interfaces back to their essentials, and asks a question most design teams never considered a decade ago: <strong className="text-white">what is the environmental cost of this layout?</strong></p>
 
-            <p>This is not nostalgia for the plain-text web. Minimal, fast, and sustainable UX is a forward-looking philosophy that recognizes speed, clarity, and ecological responsibility as inseparable pillars of good design. When you ship a leaner page, you reduce carbon emissions, lower bounce rates, improve accessibility on constrained devices, and -- paradoxically -- create an experience that feels more premium, not less.</p>
+            <p>This is not nostalgia for the plain-text web. Minimal, fast, and sustainable UX is a forward-looking philosophy that recognizes speed, clarity, and ecological responsibility as inseparable pillars of good design. When you ship a leaner page, you reduce carbon emissions, lower bounce rates, improve accessibility on constrained devices, and, paradoxically, create an experience that feels more premium, not less.</p>
 
             <h2>Performance as a First-Class Design Trend</h2>
 
@@ -91,7 +91,7 @@ export default function MinimalFastSustainableUXPage() {
 
             <p>Google has been explicit: Core Web Vitals are a ranking factor. But the business case extends far beyond SEO. Research from Deloitte found that a 0.1-second improvement in mobile site speed increased conversion rates by 8.4% for retail and 10.1% for travel sites. Amazon famously calculated that every 100ms of latency cost them 1% of sales.</p>
 
-            <p>The reason is neurological. Perceived performance shapes trust. When a page loads instantly, users subconsciously attribute that quality to the brand behind it. When it lags, they assume incompetence -- even if the content is superior.</p>
+            <p>The reason is neurological. Perceived performance shapes trust. When a page loads instantly, users subconsciously attribute that quality to the brand behind it. When it lags, they assume incompetence, even if the content is superior.</p>
 
             <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
               <h4 className="text-white font-semibold mb-3 flex items-center">
@@ -125,12 +125,12 @@ export default function MinimalFastSustainableUXPage() {
 
             <h3>Fewer Heavy Scripts</h3>
 
-            <p>JavaScript is the single most expensive asset on the modern web. Every byte must be downloaded, parsed, compiled, and executed. Unlike images -- which can be decoded progressively and displayed before fully loaded -- JavaScript blocks the main thread during execution, directly impacting interactivity.</p>
+            <p>JavaScript is the single most expensive asset on the modern web. Every byte must be downloaded, parsed, compiled, and executed. Unlike images, which can be decoded progressively and displayed before fully loaded, JavaScript blocks the main thread during execution, directly impacting interactivity.</p>
 
             <p>The audit process is straightforward but requires discipline:</p>
 
             <ol>
-              <li><strong>Inventory every third-party script.</strong> Analytics, tag managers, chat widgets, A/B testing tools, social media embeds, heatmap trackers -- each adds weight and execution time. For every script, ask: does this directly contribute to a business outcome that justifies the performance cost?</li>
+              <li><strong>Inventory every third-party script.</strong> Analytics, tag managers, chat widgets, A/B testing tools, social media embeds, heatmap trackers, each adds weight and execution time. For every script, ask: does this directly contribute to a business outcome that justifies the performance cost?</li>
               <li><strong>Consolidate where possible.</strong> Many sites load both Google Analytics 4 and a separate tag manager that also loads GA4, creating duplicate tracking. Others load jQuery alongside a modern framework that already includes equivalent functionality.</li>
               <li><strong>Lazy-load aggressively.</strong> Chat widgets do not need to initialize on page load. Load them when the user scrolls past the fold or interacts with a trigger element. Social share buttons can use native share APIs or simple link-based sharing instead of heavyweight embeds.</li>
               <li><strong>Use web platform features.</strong> The Intersection Observer API replaces scroll-based animation libraries. CSS transitions and animations replace most GSAP use cases. The native <code>&lt;dialog&gt;</code> element replaces modal libraries.</li>
@@ -184,7 +184,7 @@ export default function MinimalFastSustainableUXPage() {
 
             <h2>Green UX: The Environmental Case for Lighter Design</h2>
 
-            <p>The internet produces approximately 3.7% of global carbon emissions -- roughly equivalent to the airline industry. Every page load triggers a chain of energy consumption: data center servers process the request, network infrastructure transmits the data, and the user's device renders the result. Heavier pages consume more energy at every step.</p>
+            <p>The internet produces approximately 3.7% of global carbon emissions, roughly equivalent to the airline industry. Every page load triggers a chain of energy consumption: data center servers process the request, network infrastructure transmits the data, and the user's device renders the result. Heavier pages consume more energy at every step.</p>
 
             <p>Green UX is not a marketing gimmick. It is a recognition that design decisions have physical consequences. When you reduce a page from 3 MB to 500 KB, you improve load times and cut the energy needed to serve and render that page by roughly 80%.</p>
 
@@ -198,7 +198,7 @@ export default function MinimalFastSustainableUXPage() {
               <li><strong>Ecograder</strong> evaluates pages across performance, findability, design, and green hosting criteria.</li>
             </ul>
 
-            <p>A well-optimized page typically produces under 0.2g of CO2 per view. A bloated page can produce over 1.5g. At scale -- millions of page views per month -- that difference translates to tons of carbon annually.</p>
+            <p>A well-optimized page typically produces under 0.2g of CO2 per view. A bloated page can produce over 1.5g. At scale, millions of page views per month, that difference translates to tons of carbon annually.</p>
 
             <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
               <h4 className="text-white font-semibold mb-3 flex items-center">
@@ -252,7 +252,7 @@ export default function MinimalFastSustainableUXPage() {
 
             <h2>Calm UX: Softer Visual Systems for an Overstimulated World</h2>
 
-            <p>There is a parallel movement happening alongside the performance shift: a move toward calmer, quieter interfaces. After a decade of attention-grabbing design -- bold gradients, aggressive CTAs, notification badges, countdown timers, and autoplay everything -- users are exhausted. The most forward-thinking brands are responding with restraint.</p>
+            <p>There is a parallel movement happening alongside the performance shift: a move toward calmer, quieter interfaces. After a decade of attention-grabbing design, bold gradients, aggressive CTAs, notification badges, countdown timers, and autoplay everything, users are exhausted. The most forward-thinking brands are responding with restraint.</p>
 
             <h3>The Case Against Visual Noise</h3>
 
@@ -265,10 +265,10 @@ export default function MinimalFastSustainableUXPage() {
                 <Feather className="w-5 h-5 text-[#A3D1FF] mr-2" />
                 Principles of Calm Design
               </h4>
-              <p className="text-gray-300 mb-3">Mark Weiser's concept of "calm technology" -- originally applied to ubiquitous computing -- maps directly to modern interface design:</p>
+              <p className="text-gray-300 mb-3">Mark Weiser's concept of "calm technology", originally applied to ubiquitous computing, maps directly to modern interface design:</p>
               <ol className="text-gray-300 space-y-2">
                 <li><strong className="text-white">1. Information should live at the periphery until needed.</strong> Push notifications, badge counts, and alerts should only demand attention when truly urgent.</li>
-                <li><strong className="text-white">2. The interface should communicate without overwhelming.</strong> Status can be conveyed through subtle cues -- a gentle color change, a quiet icon update -- rather than modal dialogs and toast notifications.</li>
+                <li><strong className="text-white">2. The interface should communicate without overwhelming.</strong> Status can be conveyed through subtle cues, a gentle color change, a quiet icon update, rather than modal dialogs and toast notifications.</li>
                 <li><strong className="text-white">3. Transitions should feel natural, not performative.</strong> Animation should guide the eye and provide spatial context, not demonstrate the designer's After Effects skills.</li>
               </ol>
             </div>
@@ -278,15 +278,15 @@ export default function MinimalFastSustainableUXPage() {
             <p>The visual language of calm design favors organic geometry over sharp precision:</p>
 
             <ul>
-              <li><strong>Generous border radii.</strong> Rounded corners -- in the range of 12-24px for cards and containers -- feel approachable and reduce the "boxy" feeling of grid layouts. Apple's design language has pushed this convention across the industry.</li>
+              <li><strong>Generous border radii.</strong> Rounded corners, in the range of 12-24px for cards and containers, feel approachable and reduce the "boxy" feeling of grid layouts. Apple's design language has pushed this convention across the industry.</li>
               <li><strong>Soft shadows over hard borders.</strong> A large, diffused shadow (something like <code>0 8px 32px rgba(0,0,0,0.08)</code>) creates depth without the visual weight of a solid border.</li>
               <li><strong>Muted, desaturated color palettes.</strong> Instead of pure #FF0000 red, calm interfaces use softer variants. Instead of high-saturation blues, they use tinted grays. The overall effect is a palette that feels considered and restful.</li>
-              <li><strong>Generous whitespace.</strong> The most effective calm interfaces are often 60-70% whitespace. This is not wasted space -- it is active design that gives content room to breathe and the eye clear paths to follow.</li>
+              <li><strong>Generous whitespace.</strong> The most effective calm interfaces are often 60-70% whitespace. This is not wasted space, it is active design that gives content room to breathe and the eye clear paths to follow.</li>
             </ul>
 
             <h3>Focused Hierarchy to Reduce Cognitive Load</h3>
 
-            <p>Calm design comes down to hierarchy -- making it immediately obvious what matters most on any given screen.</p>
+            <p>Calm design comes down to hierarchy, making it immediately obvious what matters most on any given screen.</p>
 
             <p>The best calm interfaces follow a strict visual hierarchy:</p>
 
@@ -405,7 +405,7 @@ Font weights:
               <li><strong>SEO impact.</strong> Google's Core Web Vitals directly reward faster, lighter pages. Sites in the top 10% of performance metrics consistently outrank heavier competitors.</li>
               <li><strong>Accessibility gains.</strong> Lighter pages load faster on low-bandwidth connections and older devices, expanding your audience to users in emerging markets and rural areas.</li>
               <li><strong>Reduced infrastructure costs.</strong> Lighter pages mean lower bandwidth bills, less CDN usage, and reduced server load. At scale, these savings are significant.</li>
-              <li><strong>Brand differentiation.</strong> As awareness of digital sustainability grows, organizations with demonstrably green digital practices gain a competitive edge -- particularly with environmentally conscious consumers and B Corp-certified companies.</li>
+              <li><strong>Brand differentiation.</strong> As awareness of digital sustainability grows, organizations with demonstrably green digital practices gain a competitive edge, particularly with environmentally conscious consumers and B Corp-certified companies.</li>
               <li><strong>Developer experience.</strong> Leaner codebases are easier to maintain, debug, and iterate on. Fewer dependencies mean fewer security vulnerabilities and faster build times.</li>
             </ul>
 
@@ -504,7 +504,7 @@ Font weights:
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Ready to Build a Faster, Calmer Experience?</h2>
           <p className="text-xl text-white mb-8 max-w-2xl mx-auto">
-            Let's design a digital experience that's lean, beautiful, and built to perform -- for your users and for the planet.
+            Let's design a digital experience that's lean, beautiful, and built to perform, for your users and for the planet.
           </p>
           <MagneticButton>
             <button

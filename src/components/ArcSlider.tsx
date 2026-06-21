@@ -35,7 +35,7 @@ export default function ArcSlider({ cards, initialIndex = 0 }: ArcSliderProps) {
   const dragRef = useRef({ startX: 0, hasMoved: false, isDragging: false });
 
   // Pointer-driven tilt for the active card (subtle 3D parallax).
-  // Single shared MotionValue pair — reset on activeIndex change so the
+  // Single shared MotionValue pair, reset on activeIndex change so the
   // new active card doesn't inherit the previous card's tilt.
   const tiltX = useMotionValue(0);
   const tiltY = useMotionValue(0);
@@ -148,7 +148,7 @@ export default function ArcSlider({ cards, initialIndex = 0 }: ArcSliderProps) {
     return () => window.removeEventListener('keydown', onKey);
   }, [activeIndex, navigateTo]);
 
-  // Pointer drag + tilt — rAF-throttled, with cached rects
+  // Pointer drag + tilt, rAF-throttled, with cached rects
   const onPointerDown = (e: React.PointerEvent) => {
     dragRef.current = { startX: e.clientX, hasMoved: false, isDragging: true };
   };
@@ -156,19 +156,19 @@ export default function ArcSlider({ cards, initialIndex = 0 }: ArcSliderProps) {
     const clientX = e.clientX;
     const clientY = e.clientY;
 
-    // Drag tracking is cheap — run synchronously
+    // Drag tracking is cheap, run synchronously
     if (dragRef.current.isDragging) {
       const dx = clientX - dragRef.current.startX;
       if (Math.abs(dx) > 30) dragRef.current.hasMoved = true;
     }
 
-    // Tilt updates are visual-only — coalesce to the next animation frame
+    // Tilt updates are visual-only, coalesce to the next animation frame
     if (rafRef.current) return;
     rafRef.current = requestAnimationFrame(() => {
       rafRef.current = 0;
       const card = activeCardRef.current;
       if (!card) return;
-      // Cache rect — recompute only when invalidated (resize/scroll/index change)
+      // Cache rect, recompute only when invalidated (resize/scroll/index change)
       if (!activeRectRef.current) {
         activeRectRef.current = card.getBoundingClientRect();
       }
@@ -344,7 +344,7 @@ export default function ArcSlider({ cards, initialIndex = 0 }: ArcSliderProps) {
 
                   {c.bullets && (
                     /* Bullets are a different content LAYER from the blurb:
-                       smaller, mono, uppercase, tracked — feels like spec
+                       smaller, mono, uppercase, tracked, feels like spec
                        under prose. 4px gap within the list (within-group). */
                     <ul className="space-y-1 mb-8">
                       {c.bullets.slice(0, 3).map((b) => (
@@ -352,7 +352,7 @@ export default function ArcSlider({ cards, initialIndex = 0 }: ArcSliderProps) {
                           key={b}
                           className="text-[10px] font-mono uppercase tracking-[0.18em] text-white/50 flex gap-3 items-start"
                         >
-                          <span style={{ color: ACCENT }}>—</span>
+                          <span style={{ color: ACCENT }}>–</span>
                           <span>{b}</span>
                         </li>
                       ))}
@@ -407,7 +407,7 @@ export default function ArcSlider({ cards, initialIndex = 0 }: ArcSliderProps) {
       <div className="mt-10 flex flex-col items-center gap-5">
         <div className="text-center">
           <p className="text-[10px] font-mono uppercase tracking-[0.3em] text-white/40 mb-2">
-            — {String(activeIndex + 1).padStart(2, '0')} / {String(cards.length).padStart(2, '0')}
+, {String(activeIndex + 1).padStart(2, '0')} / {String(cards.length).padStart(2, '0')}
           </p>
           <p
             className="text-white/80 italic text-lg"

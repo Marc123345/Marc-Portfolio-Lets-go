@@ -103,7 +103,7 @@ function SentinelSystemCard() {
         {/* Severity scale */}
         <div>
           <p className="text-[10px] font-mono uppercase tracking-widest text-white/40 mb-3">
-            Severity Scale — 5 Levels
+            Severity Scale, 5 Levels
           </p>
           <div className="space-y-2">
             {[
@@ -359,7 +359,7 @@ function FleetSystemCard() {
               <div>
                 <div className="text-white text-sm font-semibold">FL-117</div>
                 <div className="text-[10px] text-white/50 font-mono">
-                  Idle — Depot 3
+                  Idle, Depot 3
                 </div>
               </div>
             </div>
@@ -391,7 +391,7 @@ function FleetSystemCard() {
               </div>
             </div>
             <div className="text-right">
-              <div className="text-white text-sm font-mono">—</div>
+              <div className="text-white text-sm font-mono">–</div>
               <div
                 className="text-[10px] font-mono"
                 style={{ color: FLEET.primary }}
@@ -467,7 +467,7 @@ export default function DesignSystemsPage() {
                 01
               </div>
               <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6 leading-tight tracking-tight">
-                Sentinel DS — Built for Security Operations Centers
+                Sentinel DS, Built for Security Operations Centers
               </h2>
               <p className="text-lg text-white/80 mb-6 leading-relaxed">
                 An enterprise-grade design system for threat detection and incident
@@ -481,7 +481,7 @@ export default function DesignSystemsPage() {
                   'Dual themes + 4px spacing grid + motion system',
                   '15+ components (alerts, tables, KPI cards, modals, sidebars)',
                   'Self-contained React drop-in (~1,000 LOC)',
-                  'ARIA roles, keyboard nav, focus indicators — AA out of the box',
+                  'ARIA roles, keyboard nav, focus indicators, AA out of the box',
                 ].map((point) => (
                   <li key={point} className="flex items-start gap-3 text-white/80">
                     <CheckCircle2 className="w-5 h-5 text-[#3DD68C] mt-0.5 shrink-0" />
@@ -525,7 +525,7 @@ export default function DesignSystemsPage() {
                 02
               </div>
               <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6 leading-tight tracking-tight">
-                Fleet Ops DS — Real-time Logistics at Scale
+                Fleet Ops DS, Real-time Logistics at Scale
               </h2>
               <p className="text-lg text-white/80 mb-6 leading-relaxed">
                 A design system for a fleet management platform tracking hundreds of
@@ -581,7 +581,7 @@ export default function DesignSystemsPage() {
               From chaos to consistency in 6 weeks.
             </h2>
             <p className="text-lg text-white/70">
-              Every design system I build follows the same pragmatic path — audit the
+              Every design system I build follows the same pragmatic path, audit the
               mess, define the rules, ship the components, document the decisions.
             </p>
           </div>
@@ -604,7 +604,7 @@ export default function DesignSystemsPage() {
             <ProcessStep
               number="04"
               title="Documentation"
-              description="Usage, do's and don'ts, code snippets. Good systems fail without good docs — I write them as I build."
+              description="Usage, do's and don'ts, code snippets. Good systems fail without good docs, I write them as I build."
             />
           </div>
         </div>
@@ -620,7 +620,7 @@ export default function DesignSystemsPage() {
             <FeatureCard
               icon={Layers}
               title="Component Libraries"
-              description="Reusable React components with every state, variant, and a11y requirement solved once — then never again."
+              description="Reusable React components with every state, variant, and a11y requirement solved once, then never again."
             />
             <FeatureCard
               icon={Code}
@@ -630,7 +630,7 @@ export default function DesignSystemsPage() {
             <FeatureCard
               icon={Palette}
               title="Visual Language"
-              description="The opinions that make a product feel like itself — documented so new hires don't reinvent them."
+              description="The opinions that make a product feel like itself, documented so new hires don't reinvent them."
             />
             <FeatureCard
               icon={Zap}
@@ -645,7 +645,7 @@ export default function DesignSystemsPage() {
             <FeatureCard
               icon={CheckCircle2}
               title="Quality by Default"
-              description="Accessibility, performance, and consistency become properties of the system — not heroics from each team."
+              description="Accessibility, performance, and consistency become properties of the system, not heroics from each team."
             />
           </div>
         </div>

@@ -45,7 +45,7 @@ export default function LabPage() {
           <ChapterMarker number="Lab · No. 01" label="Experimental · 2026" />
 
           <div className="grid lg:grid-cols-[1fr_1fr] gap-12 items-center flex-1">
-            {/* Left — title */}
+            {/* Left, title */}
             <div>
               <motion.h1
                 initial={{ opacity: 0, y: 30 }}
@@ -81,7 +81,7 @@ export default function LabPage() {
               </motion.p>
             </div>
 
-            {/* Right — the matrix */}
+            {/* Right, the matrix */}
             <motion.div
               initial={{ opacity: 0, scale: 0.85 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -99,7 +99,7 @@ export default function LabPage() {
             transition={{ delay: 1.0, duration: 0.6 }}
             className="flex flex-wrap items-center gap-x-8 gap-y-3 pt-6 border-t border-white/10 text-[10px] md:text-xs font-mono uppercase tracking-[0.25em] text-white/60"
           >
-            <span>Move cursor — tilt the matrix</span>
+            <span>Move cursor, tilt the matrix</span>
             <span>Auto-rotates when idle</span>
             <span>CSS · transform3d · preserve-3d</span>
             <Link
@@ -113,7 +113,7 @@ export default function LabPage() {
         </div>
       </section>
 
-{/* ===================== CHAPTER 01 — WHY ===================== */}
+{/* ===================== CHAPTER 01, WHY ===================== */}
       <EditorialSection
         chapter="01"
         label="The Why"
@@ -159,7 +159,7 @@ export default function LabPage() {
         </div>
       </EditorialSection>
 
-      {/* ===================== CHAPTER 02 — THE ENGINE ===================== */}
+      {/* ===================== CHAPTER 02, THE ENGINE ===================== */}
       <EditorialSection
         chapter="02"
         label="The Engine"
@@ -172,7 +172,7 @@ export default function LabPage() {
             {
               n: '01',
               t: 'Preserve-3d scene',
-              d: 'A perspective container holds a root stage with transform-style: preserve-3d. Every child lives in the same 3D space — cubes can overlap, orbit, and obscure each other naturally.',
+              d: 'A perspective container holds a root stage with transform-style: preserve-3d. Every child lives in the same 3D space, cubes can overlap, orbit, and obscure each other naturally.',
             },
             {
               n: '02',
@@ -182,12 +182,12 @@ export default function LabPage() {
             {
               n: '03',
               t: 'Pointer-driven parallax',
-              d: 'Pointer coordinates map to an X/Y rotation target. A RAF loop lerps toward that target at 8% per frame — smooth, never snappy. When the cursor leaves, the matrix resumes autorotation.',
+              d: 'Pointer coordinates map to an X/Y rotation target. A RAF loop lerps toward that target at 8% per frame, smooth, never snappy. When the cursor leaves, the matrix resumes autorotation.',
             },
             {
               n: '04',
               t: 'Outward light wave',
-              d: 'A sin(time × 1.8 − distance × 4) wave sweeps from the center outward. Cubes on its crest get a brighter border and inner glow. Cheap trick — but it gives the grid a pulse.',
+              d: 'A sin(time × 1.8 − distance × 4) wave sweeps from the center outward. Cubes on its crest get a brighter border and inner glow. Cheap trick, but it gives the grid a pulse.',
             },
           ].map((row) => (
             <motion.div
@@ -222,7 +222,7 @@ export default function LabPage() {
         </div>
       </EditorialSection>
 
-      {/* ===================== CHAPTER 03 — LARGE SHOWCASE ===================== */}
+      {/* ===================== CHAPTER 03, LARGE SHOWCASE ===================== */}
       <section className="relative bg-black py-24 md:py-32 px-6 lg:px-12 border-t border-white/10 overflow-hidden">
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[900px] h-[600px] bg-[#A3D1FF]/6 rounded-full blur-[140px] pointer-events-none" />
 
@@ -255,7 +255,7 @@ export default function LabPage() {
           </motion.div>
 
           <p className="mt-8 text-center text-[10px] font-mono uppercase tracking-[0.3em] text-white/40">
-            — Move the cursor slowly for the best effect
+, Move the cursor slowly for the best effect
           </p>
         </div>
       </section>
@@ -263,7 +263,7 @@ export default function LabPage() {
       <ServiceColophon
         headline="Want something like this"
         italicHeadline="but for your product?"
-        lead="I build interactive pieces like this into landing pages, hero sections, and case studies. Book a call — we'll scope one."
+        lead="I build interactive pieces like this into landing pages, hero sections, and case studies. Book a call, we'll scope one."
       />
     </>
   );

@@ -13,7 +13,7 @@ export default function EcommerceUXFlawsKillingConversionsPage() {
   const blogPostSchema = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "headline": "3 UX Flaws That Kill eCommerce Conversions — Backed by Data",
+    "headline": "3 UX Flaws That Kill eCommerce Conversions, Backed by Data",
     "description": "Discover the three critical UX mistakes that are costing eCommerce businesses millions in lost revenue. Learn data-backed solutions to fix them and boost your conversion rates by up to 400%.",
     "image": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=2000&q=80",
     "datePublished": "2025-10-06T08:00:00+00:00",
@@ -39,7 +39,7 @@ export default function EcommerceUXFlawsKillingConversionsPage() {
 
   const handleShare = (platform: string) => {
     const url = encodeURIComponent(window.location.href);
-    const title = encodeURIComponent('3 UX Flaws That Kill eCommerce Conversions — Backed by Data');
+    const title = encodeURIComponent('3 UX Flaws That Kill eCommerce Conversions, Backed by Data');
 
     const shareUrls = {
       twitter: `https://twitter.com/intent/tweet?url=${url}&text=${title}`,
@@ -81,7 +81,7 @@ export default function EcommerceUXFlawsKillingConversionsPage() {
           </div>
 
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">
-            3 UX Flaws That Kill eCommerce Conversions — Backed by Data
+            3 UX Flaws That Kill eCommerce Conversions, Backed by Data
           </h1>
 
           <div className="flex flex-wrap items-center gap-4 mb-8">
@@ -261,7 +261,7 @@ export default function EcommerceUXFlawsKillingConversionsPage() {
             <h3 className="text-[#A3D1FF]">The Problem: Mobile Users Are Abandoning at Checkout</h3>
 
             <p>
-              Here's a shocking statistic: <strong className="text-white">Mobile commerce accounts for 73% of all eCommerce sales</strong> (Statista, 2024), yet mobile checkout abandonment rates are <strong className="text-white">85.65% — nearly 16 percentage points higher than desktop</strong> (Baymard Institute, 2024).
+              Here's a shocking statistic: <strong className="text-white">Mobile commerce accounts for 73% of all eCommerce sales</strong> (Statista, 2024), yet mobile checkout abandonment rates are <strong className="text-white">85.65%, nearly 16 percentage points higher than desktop</strong> (Baymard Institute, 2024).
             </p>
 
             <p>
@@ -348,7 +348,7 @@ export default function EcommerceUXFlawsKillingConversionsPage() {
                 </div>
               </div>
               <p className="text-gray-300 mt-4 mb-0 text-sm">
-                Within 6 weeks of implementing these changes, mobile conversion rate increased from 0.82% to 2.61% — a 218% improvement that translated to an additional $940K in quarterly revenue.
+                Within 6 weeks of implementing these changes, mobile conversion rate increased from 0.82% to 2.61%, a 218% improvement that translated to an additional $940K in quarterly revenue.
               </p>
             </div>
 
@@ -380,7 +380,7 @@ export default function EcommerceUXFlawsKillingConversionsPage() {
             <h3 className="text-[#A3D1FF]">The Problem: Customers Don't Have Enough Information to Buy Confidently</h3>
 
             <p>
-              When shopping online, customers can't touch, feel, or try products. Your product pages must compensate for this by providing comprehensive information that builds confidence. Yet <strong className="text-white">78% of product returns are due to "not as described"</strong> issues — a clear indicator that product pages aren't setting accurate expectations.
+              When shopping online, customers can't touch, feel, or try products. Your product pages must compensate for this by providing comprehensive information that builds confidence. Yet <strong className="text-white">78% of product returns are due to "not as described"</strong> issues, a clear indicator that product pages aren't setting accurate expectations.
             </p>
 
             <p>
@@ -424,7 +424,7 @@ export default function EcommerceUXFlawsKillingConversionsPage() {
               </h4>
               <ul className="space-y-4 mb-0">
                 <li className="text-gray-300">
-                  <strong className="text-white">Multi-angle imagery:</strong> Minimum 8 high-resolution images per product from different angles, with zoom capability — increased time on page by 94%
+                  <strong className="text-white">Multi-angle imagery:</strong> Minimum 8 high-resolution images per product from different angles, with zoom capability, increased time on page by 94%
                 </li>
                 <li className="text-gray-300">
                   <strong className="text-white">Contextual lifestyle images:</strong> Products shown in real room settings with dimensions overlaid, reducing "will this fit?" returns by 56%
@@ -433,7 +433,7 @@ export default function EcommerceUXFlawsKillingConversionsPage() {
                   <strong className="text-white">360° product views:</strong> Interactive spins for complex products, with adoption correlating to 87% increase in purchase confidence
                 </li>
                 <li className="text-gray-300">
-                  <strong className="text-white">Detailed specifications table:</strong> Comprehensive dimensions, materials, weight, and care instructions — reduced support inquiries by 41%
+                  <strong className="text-white">Detailed specifications table:</strong> Comprehensive dimensions, materials, weight, and care instructions, reduced support inquiries by 41%
                 </li>
                 <li className="text-gray-300">
                   <strong className="text-white">Size comparison tool:</strong> Interactive sizing guide with common reference objects, cutting sizing-related returns by 73%

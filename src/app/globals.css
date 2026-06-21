@@ -4,18 +4,18 @@
  * Single source of truth for design tokens. All values flow from @theme below.
  *
  * Categories:
- *   COLOR     — semantic surfaces + accent + legacy primitives
- *   TYPOGRAPHY — font families, fluid sizes, line-heights, tracking
- *   SPACING   — 4/12/32 rhythm tokens (within-label / within-group / between-groups)
- *   RADIUS    — border-radius scale
- *   SHADOW    — content shadows + accent glows
- *   ANIMATION — named keyframes + breakpoints
+ *   COLOR, semantic surfaces + accent + legacy primitives
+ *   TYPOGRAPHY, font families, fluid sizes, line-heights, tracking
+ *   SPACING, 4/12/32 rhythm tokens (within-label / within-group / between-groups)
+ *   RADIUS, border-radius scale
+ *   SHADOW, content shadows + accent glows
+ *   ANIMATION, named keyframes + breakpoints
  *
  * Usage:
  *   Tailwind utility ........ <div class="bg-surface text-ink">
  *   Raw CSS ................. background: var(--color-surface);
  *
- * Add new values to @theme — never inline hex codes in components.
+ * Add new values to @theme, never inline hex codes in components.
  * ─────────────────────────────────────────────────────────────────────────────
  */
 
@@ -54,17 +54,17 @@
   --font-body: var(--font-poppins), 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   --font-mono: ui-monospace, 'SF Mono', Menlo, Monaco, Consolas, monospace;
 
-  /* Legacy aliases (Inter / Impact / etc. — same values, kept for back-compat) */
+  /* Legacy aliases (Inter / Impact / etc., same values, kept for back-compat) */
   --font-inter: var(--font-body);
   --font-impact: var(--font-heading);
 
   /* ── SPACING · 4 / 12 / 32 RHYTHM TOKENS ─────────────────────────── */
   /* These mirror the rule: between-groups > within-groups > within-label.
      Use them in CSS (var(--space-loose)) or via Tailwind utilities
-     (mb-1, mb-3, mb-8 — same numeric values). */
-  --space-tight: 0.25rem;   /* 4px  — within-label (name → role, list ticks) */
-  --space-snug: 0.75rem;    /* 12px — within-group (title → blurb, inline pairs) */
-  --space-loose: 2rem;      /* 32px — between-groups (section → footer, card padding) */
+     (mb-1, mb-3, mb-8, same numeric values). */
+  --space-tight: 0.25rem;   /* 4px, within-label (name → role, list ticks) */
+  --space-snug: 0.75rem;    /* 12px, within-group (title → blurb, inline pairs) */
+  --space-loose: 2rem;      /* 32px, between-groups (section → footer, card padding) */
 
   /* ── RADIUS ──────────────────────────────────────────────────────── */
   --radius-none: 0;
@@ -93,10 +93,10 @@
     /* Mirrors of @theme tokens for use in raw <style> tags and inline JS.
        (Tailwind v4 already exposes the @theme values as CSS vars, so most
        usage goes through there; the few values below are extras Tailwind
-       doesn't need its own utility for — fluid-typography clamps, line-
+       doesn't need its own utility for, fluid-typography clamps, line-
        height + letter-spacing presets, legacy color names.) */
 
-    /* Font family aliases — internal naming used across the codebase. */
+    /* Font family aliases, internal naming used across the codebase. */
     --font-primary: var(--font-body);
     --font-display: var(--font-heading);
 
@@ -147,7 +147,7 @@
   }
 
   html {
-    /* scroll-behavior must be auto — Lenis handles all smoothing.
+    /* scroll-behavior must be auto, Lenis handles all smoothing.
        Setting smooth here causes double-easing and stutter. */
     scroll-behavior: auto;
     -webkit-tap-highlight-color: transparent;
@@ -274,7 +274,7 @@
 
   /* Design System Typography Classes
      Display-size Oswald reads best with slight negative tracking,
-     even when uppercase — keeps the condensed feel punchy. */
+     even when uppercase, keeps the condensed feel punchy. */
   .text-display-large {
     font-family: var(--font-display);
     font-size: var(--text-size-700);
@@ -599,7 +599,7 @@
     animation: text-reveal-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
   }
 
-  /* Editorial button system — sharp corners, mono uppercase label.
+  /* Editorial button system, sharp corners, mono uppercase label.
      Wide tracking (0.15em) is right for small uppercase; kern feature
      keeps optical pairs (AV, To, Ye…) from drifting apart. */
   .mr_btn {
@@ -1181,14 +1181,14 @@
 }
 
 /* Kill heavy CSS animations on mobile.
-   Native mobile rendering is constrained — continuous keyframe
+   Native mobile rendering is constrained, continuous keyframe
    loops (marquees, orb pulses, glows, glitches) waste battery,
    trigger layout work, and rarely add value on a small screen.
    This block fires for every viewport <=768px, regardless of
    prefers-reduced-motion. */
 @media (max-width: 768px) {
   /* Kill heavy continuous keyframe animations on mobile (marquees,
-     orb pulses, ambient floats) — but DO NOT touch transitions.
+     orb pulses, ambient floats), but DO NOT touch transitions.
      Transitions provide interaction feedback (button taps, color
      changes, drawer slides) and removing them makes the UI feel
      dead. */

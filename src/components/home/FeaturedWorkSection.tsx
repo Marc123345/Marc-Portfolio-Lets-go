@@ -24,7 +24,7 @@ const featured: Project[] = [
     title: 'Binns Media Group',
     category: 'Media Platform',
     blurb:
-      'Streaming-grade platform for authentic voices — Netflix-style UX on a lean production tech stack.',
+      'Streaming-grade platform for authentic voices, Netflix-style UX on a lean production tech stack.',
     image:
       'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%204%20-%2016x9.png?updatedAt=1767539579710',
     liveUrl: 'https://www.binnsmediagroup.com',
@@ -223,7 +223,7 @@ const featured: Project[] = [
     title: 'Videoleap',
     category: 'Mobile · AI',
     blurb:
-      'AI-powered video editing platform — redesigned onboarding, editor, and template flows.',
+      'AI-powered video editing platform, redesigned onboarding, editor, and template flows.',
     image: '/images/clients/SubVB9A.jpeg',
     caseStudyUrl: '/work/case-studies/videoleap/',
     stats: [
@@ -237,7 +237,7 @@ const featured: Project[] = [
     title: 'Sentinel DS',
     category: 'OSS · Design System',
     blurb:
-      'Cybersecurity design system. Severity scale, dual themes, 15+ AA components — drop-in React, ~1,000 LOC.',
+      'Cybersecurity design system. Severity scale, dual themes, 15+ AA components, drop-in React, ~1,000 LOC.',
     image: 'https://ik.imagekit.io/qcvroy8xpd/image%201%20(10).png',
     liveUrl: 'https://github.com/Marc123345/Cyber-Security-Design-System',
     caseStudyUrl: '/work/case-studies/sentinel-ds/',
@@ -327,7 +327,7 @@ export default function FeaturedWorkSection() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-white/60 text-lg leading-relaxed"
           >
-            All {featured.length} case files — click any project or page through with the arrows. Drag the cube to spin it.
+            All {featured.length} case files, click any project or page through with the arrows. Drag the cube to spin it.
           </motion.p>
         </div>
 
@@ -336,7 +336,7 @@ export default function FeaturedWorkSection() {
           <div className="lg:col-span-3 order-2 lg:order-1">
             <div className="flex items-center justify-between mb-3">
               <p className="text-[10px] font-mono uppercase tracking-[0.3em] text-white/40">
-                — Case files
+, Case files
               </p>
               <div className="flex items-center gap-1">
                 <button
@@ -505,7 +505,7 @@ export default function FeaturedWorkSection() {
 
         <div className="mt-8 flex items-center justify-between border-t border-white/10 pt-8">
           <span className="text-[10px] font-mono uppercase tracking-[0.3em] text-white/40">
-            — End of spread
+, End of spread
           </span>
           <Link
             href="/work/"

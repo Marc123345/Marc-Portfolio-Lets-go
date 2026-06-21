@@ -117,7 +117,7 @@ export default function BuildingDataDrivenDesignSystemsPage() {
             
             <p>Automated testing creates a safety net that allows teams to evolve the design system confidently. When you know that changes won't break existing implementations or introduce accessibility issues, you can iterate more quickly and respond to changing needs without fear.</p>
             
-            <p>The most effective testing strategies combine automated checks with human review. While automation can catch many issues, some aspects of design quality—like the appropriateness of a visual change for the brand—still require human judgment.</p>
+            <p>The most effective testing strategies combine automated checks with human review. While automation can catch many issues, some aspects of design quality, like the appropriateness of a visual change for the brand, still require human judgment.</p>
 
             <h2>Case Study: MarginX Design System</h2>
             <p>When building the MarginX platform, we implemented a data-driven approach to our design system:</p>
@@ -172,7 +172,7 @@ export default function BuildingDataDrivenDesignSystemsPage() {
               <li><strong>Cross-platform compatibility</strong> that extends beyond web to mobile, desktop, and emerging platforms while maintaining consistency</li>
             </ul>
             
-            <p>The future of design systems lies in intelligent automation that reduces manual effort while improving outcomes. By leveraging data and machine learning, design systems can become more proactive—suggesting improvements, identifying potential issues before they affect users, and even generating new component variations based on established patterns.</p>
+            <p>The future of design systems lies in intelligent automation that reduces manual effort while improving outcomes. By leveraging data and machine learning, design systems can become more proactive, suggesting improvements, identifying potential issues before they affect users, and even generating new component variations based on established patterns.</p>
             
             <p>However, this automation should augment rather than replace human creativity and judgment. The most effective design systems will combine data-driven insights with human expertise, using technology to handle routine tasks while allowing designers and developers to focus on innovation and problem-solving.</p>
 
@@ -181,7 +181,7 @@ export default function BuildingDataDrivenDesignSystemsPage() {
             
             <p>The key is to view your design system not as a static library but as a living product that requires continuous investment and improvement. With the right data, tools, and processes, your design system can become a strategic asset that accelerates development, improves user experience, and adapts to changing needs.</p>
             
-            <p>As your organization and products grow, a data-driven design system grows with them—evolving based on real usage patterns rather than assumptions, and delivering increasing value over time.</p>
+            <p>As your organization and products grow, a data-driven design system grows with them, evolving based on real usage patterns rather than assumptions, and delivering increasing value over time.</p>
           </div>
           
           {/* Author Section */}

@@ -79,7 +79,7 @@ const navLinks: NavLink[] = [
 ];
 
 const tickerItems = [
-  'Available for select projects — Now',
+  'Available for select projects, Now',
   'Awwwards recognised',
   'Design · Development · Systems',
   'marcf@marcfriedmanwebdesign.com',
@@ -96,7 +96,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
 
   useEffect(() => {
-    /* Skip hide-on-scroll-down behavior on mobile — with reduced
+    /* Skip hide-on-scroll-down behavior on mobile, with reduced
        motion forced on, the framer 'y: -100' animation would
        snap, making the header appear/disappear abruptly. Always
        keep the header pinned on mobile. */
@@ -153,7 +153,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   const previewIndex = hoveredIndex ?? 0;
 
   // Pure-landing routes opt out of the global nav/footer AND the floating
-  // Calendly badge (1:1 attention ratio — the page's own CTA is the single
+  // Calendly badge (1:1 attention ratio, the page's own CTA is the single
   // conversion goal).
   const isBareLanding =
     pathname === '/dental-audit' ||
@@ -207,7 +207,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               />
             </button>
 
-            {/* Desktop primary navigation (NN/g #1 — visible on larger screens).
+            {/* Desktop primary navigation (NN/g #1, visible on larger screens).
                 Active state per NN/g #5 (current-location indicator). */}
             <nav
               className={`hidden lg:flex items-center gap-10 z-[70] relative transition-opacity ${
@@ -281,7 +281,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 Book a Call
               </Link>
 
-              {/* Hamburger only on mobile (NN/g #1 — desktop has inline nav) */}
+              {/* Hamburger only on mobile (NN/g #1, desktop has inline nav) */}
               <button
                 onClick={() => setMenuOpen(!isMenuOpen)}
                 className="lg:hidden group relative flex items-center gap-3 px-4 py-2.5 border border-white/15 hover:border-white/40 transition-colors"
@@ -372,7 +372,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 className="text-white/60 text-base leading-relaxed max-w-xs mb-8"
                 style={{ fontFamily: "var(--font-heading)" }}
               >
-                Full-stack design &amp; development — vision to launch, no handoffs.
+                Full-stack design &amp; development, vision to launch, no handoffs.
               </p>
 
               <div className="flex items-center gap-3 text-[10px] font-mono uppercase tracking-[0.25em] text-white mb-8">
@@ -380,14 +380,14 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                   <span className="absolute inset-0 rounded-full bg-green-400 animate-ping opacity-60" />
                   <span className="relative w-2 h-2 rounded-full bg-green-400" />
                 </span>
-                Available — Now
+                Available, Now
               </div>
 
               <div className="flex flex-wrap gap-3">
                 <a href="https://www.linkedin.com/in/portfolio2/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 flex items-center justify-center border border-white/20 text-white hover:bg-white hover:text-black transition-colors" aria-label="LinkedIn">
                   <Linkedin className="w-4 h-4" />
                 </a>
-                <a href="https://www.linkedin.com/company/105745552/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 flex items-center justify-center border border-white/20 text-white hover:bg-white hover:text-black transition-colors" aria-label="LinkedIn — Company page">
+                <a href="https://www.linkedin.com/company/105745552/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 flex items-center justify-center border border-white/20 text-white hover:bg-white hover:text-black transition-colors" aria-label="LinkedIn, Company page">
                   <Building2 className="w-4 h-4" />
                 </a>
                 <a href="https://www.behance.net/marcfriedmanweb" target="_blank" rel="noopener noreferrer" className="w-10 h-10 flex items-center justify-center border border-white/20 text-white hover:bg-white hover:text-black transition-colors" aria-label="Behance">
@@ -408,7 +408,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             {/* Services column */}
             <div>
               <p className="text-[10px] font-mono uppercase tracking-[0.3em] text-[#A3D1FF] mb-3">
-                — Services
+, Services
               </p>
               <ul className="space-y-3">
                 <li><Link href="/services/web-development" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Web Development</Link></li>
@@ -424,7 +424,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 <li><Link href="/services/maintenance-hosting" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Maintenance &amp; Hosting</Link></li>
               </ul>
               <p className="text-[10px] font-mono uppercase tracking-[0.3em] text-[#A3D1FF] mt-8 mb-3">
-                — Industry Pages
+, Industry Pages
               </p>
               <ul className="space-y-3">
                 <li><Link href="/longevity-clinics" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Longevity Clinics</Link></li>
@@ -436,7 +436,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <div className="space-y-8">
               <div>
                 <p className="text-[10px] font-mono uppercase tracking-[0.3em] text-[#A3D1FF] mb-3">
-                  — Work
+, Work
                 </p>
                 <ul className="space-y-3">
                   <li><Link href="/work/" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">All Projects</Link></li>
@@ -447,7 +447,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               </div>
               <div>
                 <p className="text-[10px] font-mono uppercase tracking-[0.3em] text-[#A3D1FF] mb-3">
-                  — Resources
+, Resources
                 </p>
                 <ul className="space-y-3">
                   <li><Link href="/resources" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Free Landing Page Guide</Link></li>
@@ -462,7 +462,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               </div>
               <div>
                 <p className="text-[10px] font-mono uppercase tracking-[0.3em] text-[#A3D1FF] mb-3">
-                  — Tools
+, Tools
                 </p>
                 <ul className="space-y-3">
                   <li><Link href="/tools/website-analyzer" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Website Analyzer</Link></li>
@@ -476,7 +476,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             {/* Company column */}
             <div>
               <p className="text-[10px] font-mono uppercase tracking-[0.3em] text-[#A3D1FF] mb-3">
-                — Company
+, Company
               </p>
               <ul className="space-y-3">
                 <li><Link href="/about" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">About</Link></li>

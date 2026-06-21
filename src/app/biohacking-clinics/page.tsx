@@ -18,7 +18,7 @@ export const metadata: Metadata = {
         url: '/images/longevity/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Web Design for Biohacking Studios & Performance Clinics — Marc Friedman',
+        alt: 'Web Design for Biohacking Studios & Performance Clinics, Marc Friedman',
       },
     ],
     type: 'website',

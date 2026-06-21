@@ -18,12 +18,12 @@ const BUILD = [
   {
     n: "02",
     title: "Trust at the top",
-    text: "50 years, ISO 9001, product range, factories — visible first.",
+    text: "50 years, ISO 9001, product range, factories, visible first.",
   },
   {
     n: "03",
     title: "Rebuilt product pages",
-    text: "Spec tables, use-cases, FAQs, datasheets — everything they need to decide.",
+    text: "Spec tables, use-cases, FAQs, datasheets, everything they need to decide.",
   },
   {
     n: "04",

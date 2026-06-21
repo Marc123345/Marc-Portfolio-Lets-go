@@ -78,7 +78,7 @@ export default function Slide05Search() {
           >
             Google already trusts EID on technical searches. Where a real page
             exists, it ranks <span className="text-white">#2 or #3</span>. The
-            problem isn’t trust — there just aren’t enough pages.
+            problem isn’t trust, there just aren’t enough pages.
           </p>
 
           <div className="mt-10 flex flex-col gap-3">
@@ -88,7 +88,7 @@ export default function Slide05Search() {
                 className="text-[11px] tracking-[0.2em] uppercase text-white/60"
                 style={{ fontFamily: "var(--font-body)" }}
               >
-                Top 10 — already ranking
+                Top 10, already ranking
               </span>
             </div>
             <div className="flex items-center gap-3">
@@ -97,7 +97,7 @@ export default function Slide05Search() {
                 className="text-[11px] tracking-[0.2em] uppercase text-white/60"
                 style={{ fontFamily: "var(--font-body)" }}
               >
-                Close — could rank with work
+                Close, could rank with work
               </span>
             </div>
           </div>

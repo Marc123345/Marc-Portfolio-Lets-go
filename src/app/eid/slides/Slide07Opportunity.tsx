@@ -32,13 +32,13 @@ export default function Slide07Opportunity() {
               },
               {
                 num: "02",
-                t: "Google trusts you — there just aren’t enough pages",
+                t: "Google trusts you, there just aren’t enough pages",
                 d: "More pages can grow the opportunity 10–20×.",
               },
               {
                 num: "03",
                 t: "The market already knows you",
-                d: "Buyer searches find EID today — by accident.",
+                d: "Buyer searches find EID today, by accident.",
               },
             ].map((p, i) => (
               <motion.li

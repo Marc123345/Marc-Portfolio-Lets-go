@@ -61,7 +61,7 @@ export default function ContactForm() {
   };
 
   return (
-    // Height is driven by the iframe itself — Jotform's embed handler resizes
+    // Height is driven by the iframe itself, Jotform's embed handler resizes
     // the iframe to match its content, so the wrapper must NOT pin a fixed
     // height (that clipped the form and bled it into the footer). The skeleton
     // sits behind the iframe and is covered by Jotform's white background once

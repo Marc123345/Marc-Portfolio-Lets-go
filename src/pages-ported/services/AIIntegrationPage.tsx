@@ -23,7 +23,7 @@ export default function AIIntegrationPage() {
         volumeNumber="04"
         tagline={
           <>
-            AI integration services for real products — not demos. OpenAI integration,
+            AI integration services for real products, not demos. OpenAI integration,
             AI chatbot integration, and custom LLM pipelines with measurable outcomes,
             production-ready architecture, zero hype.
           </>
@@ -83,7 +83,7 @@ export default function AIIntegrationPage() {
           <DeliverableRow
             number="01"
             title="OpenAI Integration + RAG"
-            description="OpenAI integration for chat interfaces, document Q&A, and intelligent search — grounded in your data, with citations, guardrails, and evaluation pipelines. Same pattern with Anthropic, Google, or local models."
+            description="OpenAI integration for chat interfaces, document Q&A, and intelligent search, grounded in your data, with citations, guardrails, and evaluation pipelines. Same pattern with Anthropic, Google, or local models."
           />
           <DeliverableRow
             number="02"
@@ -93,7 +93,7 @@ export default function AIIntegrationPage() {
           <DeliverableRow
             number="03"
             title="AI Chatbot Integration + Agents"
-            description="AI chatbot integration done right — purpose-built chatbots and agents that take action, not just generate text. With proper scoping, logging, and human-in-the-loop checkpoints."
+            description="AI chatbot integration done right, purpose-built chatbots and agents that take action, not just generate text. With proper scoping, logging, and human-in-the-loop checkpoints."
           />
           <DeliverableRow
             number="04"
@@ -124,7 +124,7 @@ export default function AIIntegrationPage() {
           <ProcessChapter
             numeral="II."
             title="Prototype"
-            description="A thin vertical slice that proves or disproves the hypothesis. No UI polish — just: does this work?"
+            description="A thin vertical slice that proves or disproves the hypothesis. No UI polish, just: does this work?"
             items={[
               'Initial prompt engineering',
               'Grounding strategy (RAG, fine-tune, etc.)',
@@ -199,7 +199,7 @@ export default function AIIntegrationPage() {
       <ServiceColophon
         headline="Ship AI your"
         italicHeadline="users actually use."
-        lead="Book a call and we'll scope your AI integration services properly — OpenAI integration, AI chatbot integration, or custom pipelines — with a plan to ship it, not a slide to admire it."
+        lead="Book a call and we'll scope your AI integration services properly, OpenAI integration, AI chatbot integration, or custom pipelines, with a plan to ship it, not a slide to admire it."
       />
     </>
   );

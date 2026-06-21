@@ -2,12 +2,12 @@ import type { Metadata } from 'next';
 import LeadMagnetFormEmbed from '@/components/LeadMagnetFormEmbed';
 
 export const metadata: Metadata = {
-  title: { absolute: 'Free Resources — The Landing Page Lead Magnet | Marc Friedman' },
+  title: { absolute: 'Free Resources, The Landing Page Lead Magnet | Marc Friedman' },
   description:
     'Download a free guide to building high-converting landing pages. Enter your email and get the PDF delivered instantly.',
   alternates: { canonical: 'https://www.marcfriedmanportfolio.com/resources/' },
   openGraph: {
-    title: 'Free Resources — The Landing Page Lead Magnet | Marc Friedman',
+    title: 'Free Resources, The Landing Page Lead Magnet | Marc Friedman',
     description:
       'Download a free guide to building high-converting landing pages. Enter your email and get the PDF delivered instantly.',
     url: 'https://www.marcfriedmanportfolio.com/resources/',
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Free Resources — The Landing Page Lead Magnet | Marc Friedman',
+    title: 'Free Resources, The Landing Page Lead Magnet | Marc Friedman',
     description:
       'Download a free guide to building high-converting landing pages. Enter your email and get the PDF delivered instantly.',
   },
@@ -37,7 +37,7 @@ export default function ResourcesPage() {
         </p>
 
         <div className="grid gap-12 lg:grid-cols-[1.05fr_1fr] lg:gap-16 lg:items-start">
-          {/* LEFT — pitch */}
+          {/* LEFT, pitch */}
           <div>
             <h1 className="text-4xl font-semibold leading-[1.05] tracking-tight md:text-5xl">
               The Landing Page{' '}
@@ -47,7 +47,7 @@ export default function ResourcesPage() {
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-white/70">
               A free, no-fluff guide to building landing pages that actually turn
               visitors into leads. Drop your email and I&apos;ll send the PDF straight
-              to your inbox — you can also download it the moment you sign up.
+              to your inbox, you can also download it the moment you sign up.
             </p>
 
             <ul className="mt-10 space-y-4">
@@ -75,7 +75,7 @@ export default function ResourcesPage() {
             </p>
           </div>
 
-          {/* RIGHT — opt-in form */}
+          {/* RIGHT, opt-in form */}
           <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-6 md:p-8">
             <h2 className="mb-2 text-xl font-semibold">Get the free guide</h2>
             <p className="mb-6 text-sm text-white/60">

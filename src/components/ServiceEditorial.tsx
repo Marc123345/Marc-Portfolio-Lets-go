@@ -130,7 +130,7 @@ export function ServiceMasthead({
       </div>
 
       <div className="container-custom relative z-20 flex flex-col justify-between gap-y-10 md:gap-y-0 md:min-h-[100svh] pt-28 md:pt-32 pb-10">
-        {/* Top ribbon — no SSR-hidden initial state; visible by default,
+        {/* Top ribbon, no SSR-hidden initial state; visible by default,
            framer is decorative only. */}
         <div className="flex justify-between items-start text-[10px] md:text-xs font-mono uppercase tracking-[0.3em] text-white/60">
           <div className="flex items-center gap-3">
@@ -146,7 +146,7 @@ export function ServiceMasthead({
 
         {/* Title block */}
         <div className="max-w-5xl">
-          {/* Eyebrow — the plain-language service label (was passed but never shown) */}
+          {/* Eyebrow, the plain-language service label (was passed but never shown) */}
           <div className="flex items-center gap-3 mb-6 text-[10px] md:text-xs font-mono uppercase tracking-[0.3em] text-[#A3D1FF]">
             <span className="w-7 h-[1px] bg-[#A3D1FF]/50" />
             <span>{kicker}</span>
@@ -173,7 +173,7 @@ export function ServiceMasthead({
             {tagline}
           </p>
 
-          {/* Primary CTA — unmissable, replaces the buried meta-bar text link */}
+          {/* Primary CTA, unmissable, replaces the buried meta-bar text link */}
           <div className="mt-9 flex flex-wrap items-center gap-x-6 gap-y-3">
             <Link
               href="#start"
@@ -200,7 +200,7 @@ export function ServiceMasthead({
               <span className="absolute inset-0 rounded-full bg-green-400 animate-ping opacity-60" />
               <span className="relative w-2 h-2 rounded-full bg-green-400" />
             </span>
-            Taking bookings — Now
+            Taking bookings, Now
           </span>
           {meta.map((m) => (
             <span key={m}>{m}</span>
@@ -438,7 +438,7 @@ export function ProcessChapter({
               key={index}
               className="text-white/70 text-sm flex gap-3 items-start"
             >
-              <span className="text-[#A3D1FF] font-mono mt-1">—</span>
+              <span className="text-[#A3D1FF] font-mono mt-1">–</span>
               <span>{item}</span>
             </li>
           ))}
@@ -605,11 +605,11 @@ export function ServiceNavigator({ currentSlug }: { currentSlug: string }) {
           </Link>
         </div>
 
-        {/* All-services dock — every service in one strip, current highlighted */}
+        {/* All-services dock, every service in one strip, current highlighted */}
         <div className="border border-white/10">
           <div className="px-5 py-3 border-b border-white/10 flex items-center justify-between">
             <span className="text-[10px] font-mono uppercase tracking-[0.3em] text-white/50">
-              — All services
+, All services
             </span>
             <Link
               href="/services"

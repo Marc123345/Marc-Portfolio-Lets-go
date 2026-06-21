@@ -69,7 +69,7 @@ export default function LocalSeoPage() {
           <DeliverableRow
             number="02"
             title="Local 3-Pack ranking strategy"
-            description="The map ranking algorithm rewards proximity, prominence, and relevance. We build all three — across your real service area."
+            description="The map ranking algorithm rewards proximity, prominence, and relevance. We build all three, across your real service area."
           />
           <DeliverableRow
             number="03"
@@ -84,7 +84,7 @@ export default function LocalSeoPage() {
           <DeliverableRow
             number="05"
             title="Service-area pages built right"
-            description="Real, useful, location-specific pages — not auto-spun keyword soup. Schema markup, internal linking, conversion-focused content."
+            description="Real, useful, location-specific pages, not auto-spun keyword soup. Schema markup, internal linking, conversion-focused content."
           />
         </div>
       </EditorialSection>
@@ -145,14 +145,14 @@ export default function LocalSeoPage() {
             {
               href: '/work/case-studies/secure-annapolis/',
               title: 'A Secure Annapolis',
-              blurb: 'Locksmith — top 3 in local maps within a month, leads up 150%.',
+              blurb: 'Locksmith, top 3 in local maps within a month, leads up 150%.',
               image: 'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%201%20-%201x1(2).png?updatedAt=1767539579194',
               tags: ['Local SEO', 'GBP'],
             },
             {
               href: '/work/case-studies/paving-leads/',
               title: 'Paving Leads',
-              blurb: 'Specialty contractor — #1 on Google for high-intent local queries.',
+              blurb: 'Specialty contractor, #1 on Google for high-intent local queries.',
               image: 'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%204%20-%2016_9.png?updatedAt=1767539579010',
               tags: ['Local SEO', 'Lead Gen'],
             },
@@ -164,7 +164,7 @@ export default function LocalSeoPage() {
       <ServiceColophon
         headline="Own your"
         italicHeadline="local pack."
-        lead="Book a call — I'll audit your Google Business Profile and 3-Pack rankings live and show you the gaps."
+        lead="Book a call, I'll audit your Google Business Profile and 3-Pack rankings live and show you the gaps."
       />
     </>
   );

@@ -25,7 +25,7 @@ export default function Slide09DentalSearch() {
     <SlideShell>
       <Glow className="top-[10%] right-[5%] w-[600px] h-[600px]" color="rgba(163,209,255,0.15)" />
 
-      <Eyebrow number="ACT II · 09">Dental — wide open</Eyebrow>
+      <Eyebrow number="ACT II · 09">Dental, wide open</Eyebrow>
       <SlideTitle>
         No supplier owns this space.{" "}
         <span className="text-[#A3D1FF]">EID could.</span>
@@ -68,7 +68,7 @@ Dental searches no one wins
               lineHeight: 1.55,
             }}
           >
-            EID makes the raw material that goes into these products — but
+            EID makes the raw material that goes into these products, but
             doesn’t show up when buyers search for them.
           </p>
         </motion.div>
@@ -90,7 +90,7 @@ Dental searches no one wins
                 letterSpacing: "-0.01em",
               }}
             >
-              Ranks poorly. 30+ pages — none in top 10.
+              Ranks poorly. 30+ pages, none in top 10.
             </div>
           </div>
 

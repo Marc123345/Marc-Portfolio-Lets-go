@@ -46,7 +46,7 @@ const STEPS = [
     op: "×",
     metric: "Average customer value",
     value: "$10,000",
-    basis: "Conservative — industrial",
+    basis: "Conservative, industrial",
   },
 ];
 
@@ -93,7 +93,7 @@ export default function Slide16Roi() {
                 }`}
                 style={{ fontFamily: "var(--font-mono)" }}
               >
-                {s.op || "—"}
+                {s.op || "–"}
               </span>
               <span
                 className="col-span-6 text-white/85"

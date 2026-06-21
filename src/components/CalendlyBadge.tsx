@@ -15,7 +15,7 @@ export function openCalendlyPopup(e?: React.MouseEvent) {
     Calendly.initPopupWidget({ url: CALENDLY_LINK });
     return;
   }
-  // Calendly widget hasn't loaded — let the anchor's href take over (opens in new tab).
+  // Calendly widget hasn't loaded, let the anchor's href take over (opens in new tab).
 }
 
 export default function CalendlyBadge() {

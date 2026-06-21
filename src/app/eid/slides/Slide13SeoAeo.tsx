@@ -39,8 +39,7 @@ export default function Slide13SeoAeo() {
 
       <Eyebrow number="ACT III · 13">Search system</Eyebrow>
       <SlideTitle>
-        Growth comes from <span className="text-[#A3D1FF]">the right pages</span> —
-        not just blogging.
+        Growth comes from <span className="text-[#A3D1FF]">the right pages</span>,        not just blogging.
       </SlideTitle>
 
       <div className="mt-12 grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
@@ -129,7 +128,7 @@ Win ChatGPT and Google AI.
               lineHeight: 1.6,
             }}
           >
-FAQ pages · Q&A content · Named expert authors — so EID
+FAQ pages · Q&A content · Named expert authors, so EID
             shows up inside ChatGPT and Google AI answers.
           </p>
 

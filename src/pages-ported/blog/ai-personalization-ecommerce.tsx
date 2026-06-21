@@ -78,9 +78,9 @@ export default function AIPersonalizationEcommercePage() {
         <div className="max-w-4xl mx-auto">
           <div className="prose prose-lg prose-invert max-w-none">
             <h2>The Personalization Imperative: Why Generic Experiences No Longer Work</h2>
-            <p>Walk into your favorite coffee shop, and the barista remembers your order. Browse Netflix, and it suggests shows you'll actually want to watch. Check your email, and you see product recommendations that feel eerily relevant. This is the world consumers now expect—and ecommerce must deliver.</p>
+            <p>Walk into your favorite coffee shop, and the barista remembers your order. Browse Netflix, and it suggests shows you'll actually want to watch. Check your email, and you see product recommendations that feel eerily relevant. This is the world consumers now expect, and ecommerce must deliver.</p>
 
-            <p>AI-driven personalization has evolved from a competitive advantage to a baseline expectation. In 2025, showing every visitor the same homepage, the same product recommendations, and the same shopping journey is like having a salesperson greet every customer with the exact same scripted pitch—regardless of who they are or what they need.</p>
+            <p>AI-driven personalization has evolved from a competitive advantage to a baseline expectation. In 2025, showing every visitor the same homepage, the same product recommendations, and the same shopping journey is like having a salesperson greet every customer with the exact same scripted pitch, regardless of who they are or what they need.</p>
 
             <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
               <h4 className="text-white font-semibold mb-2 flex items-center">
@@ -160,11 +160,11 @@ export default function AIPersonalizationEcommercePage() {
               <ul className="text-gray-300 space-y-2">
                 <li className="flex items-start">
                   <CheckCircle className="w-4 h-4 text-[#A3D1FF] mr-2 mt-1 flex-shrink-0" />
-                  <span><strong className="text-white">Customer Data Platform (CDP):</strong> Unify data from all touchpoints—website, mobile app, email, social, in-store if applicable</span>
+                  <span><strong className="text-white">Customer Data Platform (CDP):</strong> Unify data from all touchpoints, website, mobile app, email, social, in-store if applicable</span>
                 </li>
                 <li className="flex items-start">
                   <CheckCircle className="w-4 h-4 text-[#A3D1FF] mr-2 mt-1 flex-shrink-0" />
-                  <span><strong className="text-white">Event Tracking:</strong> Track meaningful interactions—product views, add-to-cart, searches, time on page, scroll depth</span>
+                  <span><strong className="text-white">Event Tracking:</strong> Track meaningful interactions, product views, add-to-cart, searches, time on page, scroll depth</span>
                 </li>
                 <li className="flex items-start">
                   <CheckCircle className="w-4 h-4 text-[#A3D1FF] mr-2 mt-1 flex-shrink-0" />
@@ -182,7 +182,7 @@ export default function AIPersonalizationEcommercePage() {
             <p>Start with high-impact, low-complexity personalization:</p>
 
             <ul>
-              <li><strong>Recently Viewed Products:</strong> Show users their browsing history—simple but effective</li>
+              <li><strong>Recently Viewed Products:</strong> Show users their browsing history, simple but effective</li>
               <li><strong>Category-Based Recommendations:</strong> If someone views running shoes, show related running gear</li>
               <li><strong>Geographic Personalization:</strong> Adjust inventory, shipping info, and promotions by location</li>
               <li><strong>Returning Customer Recognition:</strong> Welcome back messages, easy reordering of past purchases</li>
@@ -629,13 +629,13 @@ export default function AIPersonalizationEcommercePage() {
 
             <h3>A/B Testing Personalization</h3>
 
-            <p>Never assume personalization works—always test:</p>
+            <p>Never assume personalization works, always test:</p>
 
             <ul>
               <li><strong>Control Group:</strong> Always maintain a non-personalized control group (10-20% of traffic)</li>
               <li><strong>Statistical Significance:</strong> Wait for enough data before declaring winners</li>
               <li><strong>Segment Testing:</strong> Personalization might work differently for different customer segments</li>
-              <li><strong>Long-term Impact:</strong> Track metrics beyond immediate conversion—lifetime value matters</li>
+              <li><strong>Long-term Impact:</strong> Track metrics beyond immediate conversion, lifetime value matters</li>
             </ul>
 
             <h2>The Future of AI Personalization</h2>
@@ -643,7 +643,7 @@ export default function AIPersonalizationEcommercePage() {
             <h3>Emerging Trends for 2025 and Beyond</h3>
 
             <h4>1. Generative AI for Content Personalization</h4>
-            <p>AI doesn't just recommend existing content—it creates personalized content on-the-fly:</p>
+            <p>AI doesn't just recommend existing content, it creates personalized content on-the-fly:</p>
             <ul>
               <li>Product descriptions written for individual customer's interests</li>
               <li>Personalized video content showing products in customer's preferred context</li>
@@ -718,7 +718,7 @@ export default function AIPersonalizationEcommercePage() {
 
             <p>AI-driven personalization has evolved from a luxury to a baseline expectation. Brands that deliver relevant, personalized experiences win customer loyalty and drive revenue growth. Those that don't risk becoming irrelevant as competition intensifies.</p>
 
-            <p>The good news: personalization technology is more accessible than ever. You don't need Amazon's resources to deliver Amazon-level personalization. Start with the fundamentals—clean data, clear goals, and customer-centric thinking—then layer in AI capabilities as you grow.</p>
+            <p>The good news: personalization technology is more accessible than ever. You don't need Amazon's resources to deliver Amazon-level personalization. Start with the fundamentals, clean data, clear goals, and customer-centric thinking, then layer in AI capabilities as you grow.</p>
 
             <p>Remember these key principles:</p>
 
@@ -730,9 +730,9 @@ export default function AIPersonalizationEcommercePage() {
               <li><strong>Focus on Value:</strong> Personalization should help customers, not just boost metrics</li>
             </ul>
 
-            <p>The brands winning in 2025 are those that use AI not to manipulate customers, but to genuinely serve them better—understanding their needs, respecting their preferences, and making shopping easier, faster, and more enjoyable.</p>
+            <p>The brands winning in 2025 are those that use AI not to manipulate customers, but to genuinely serve them better, understanding their needs, respecting their preferences, and making shopping easier, faster, and more enjoyable.</p>
 
-            <p>Implementing AI personalization isn't really the question anymore — how quickly you can do it well is. Customers expect it, competitors already offer it, and the technology is ready.</p>
+            <p>Implementing AI personalization isn't really the question anymore, how quickly you can do it well is. Customers expect it, competitors already offer it, and the technology is ready.</p>
           </div>
 
           <div className="mt-12 pt-8 border-t border-white/10">

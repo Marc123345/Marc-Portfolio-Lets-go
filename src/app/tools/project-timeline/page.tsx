@@ -3,7 +3,7 @@ import ProjectTimelinePage from '@/pages-ported/tools/ProjectTimelinePage';
 
 const url = 'https://www.marcfriedmanportfolio.com/tools/project-timeline/';
 const description =
-  'Free website project timeline estimator. Map your build phase by phase — discovery, design, development, and launch — with realistic milestones and dates for your scope.';
+  'Free website project timeline estimator. Map your build phase by phase, discovery, design, development, and launch, with realistic milestones and dates for your scope.';
 
 export const metadata: Metadata = {
   title: { absolute: 'Website Project Timeline Estimator | Plan Your Build | Marc Friedman' },

@@ -10,7 +10,7 @@ const config: CaseStudyConfig = {
   tagline: (
     <>
       A high-velocity SEO engine for paving contractors. From failing Core Web
-      Vitals to #1 on Google — organic leads doubled in the first month after
+      Vitals to #1 on Google, organic leads doubled in the first month after
       launch.
     </>
   ),
@@ -49,7 +49,7 @@ const config: CaseStudyConfig = {
     ),
     bullets: [
       'Failing Core Web Vitals across the board',
-      'Weak SEO architecture — no keyword depth',
+      'Weak SEO architecture, no keyword depth',
       'Lead forms buried behind modal menus',
       'Content didn&apos;t match search intent',
     ],
@@ -59,7 +59,7 @@ const config: CaseStudyConfig = {
     narrative: (
       <>
         <p>
-          I deployed the Niche Closer Package. This isn&apos;t a brochure — it&apos;s
+          I deployed the Niche Closer Package. This isn&apos;t a brochure, it&apos;s
           a funnel. I focused purely on speed, SEO hierarchy, and aggressive
           call-to-actions to dominate the paving niche.
         </p>
@@ -79,7 +79,7 @@ const config: CaseStudyConfig = {
       {
         title: 'Performance as a ranking signal',
         description:
-          'Next.js + edge caching + aggressive image optimization. Perfect Core Web Vitals scores — Google rewards that directly.',
+          'Next.js + edge caching + aggressive image optimization. Perfect Core Web Vitals scores, Google rewards that directly.',
       },
       {
         title: 'Local dominance',
@@ -99,7 +99,7 @@ const config: CaseStudyConfig = {
     ],
     testimonial: {
       quote:
-        'Fantastic work Marc — thank you for building my dream website!!',
+        'Fantastic work Marc, thank you for building my dream website!!',
       author: 'Ezra Rubinson',
       role: 'Digital Marketing Agency Owner, Boston',
     },

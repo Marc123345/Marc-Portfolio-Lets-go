@@ -41,7 +41,7 @@ function applyPreferences(prefs: ConsentPreferences) {
     optOutPlausible();
   }
 
-  // Meta (Facebook) Pixel removed — no FB/IG ad tracking. The `marketing`
+  // Meta (Facebook) Pixel removed, no FB/IG ad tracking. The `marketing`
   // preference is retained in the model but currently controls no tags.
 }
 

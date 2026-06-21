@@ -18,7 +18,7 @@ const ISSUES = [
   {
     tag: "Trust",
     title: "Heritage buried on page 2",
-    detail: "50+ years, ISO 9001 — not shown where buyers look first.",
+    detail: "50+ years, ISO 9001, not shown where buyers look first.",
   },
   {
     tag: "Audience",
@@ -28,7 +28,7 @@ const ISSUES = [
   {
     tag: "Story",
     title: "Spec lists without a story",
-    detail: "Specs only — no uses, no comparisons, no help deciding.",
+    detail: "Specs only, no uses, no comparisons, no help deciding.",
   },
   {
     tag: "Signals",

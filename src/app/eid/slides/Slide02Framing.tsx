@@ -72,8 +72,7 @@ export default function Slide02Framing() {
 
       <div className="mt-10">
         <SlideLede>
-          Not a design critique. A business plan —
-          problem, opportunity, solution, investment, and return — built around
+          Not a design critique. A business plan,          problem, opportunity, solution, investment, and return, built around
           what your website already proves the market wants.
         </SlideLede>
       </div>

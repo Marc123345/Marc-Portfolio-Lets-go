@@ -171,7 +171,7 @@ export default function InteractiveCube({
   ];
 
   const labels = faces
-    .map((f) => [f.category, f.title].filter(Boolean).join(' — '))
+    .map((f) => [f.category, f.title].filter(Boolean).join(', '))
     .filter(Boolean)
     .join('; ');
 

@@ -42,7 +42,7 @@ const config: CaseStudyConfig = {
         </p>
         <p>
           They needed a live dashboard that surfaced anomalies before they became
-          incidents — without drowning dispatchers in 500 concurrent alerts.
+          incidents, without drowning dispatchers in 500 concurrent alerts.
         </p>
       </>
     ),
@@ -59,7 +59,7 @@ const config: CaseStudyConfig = {
       <>
         <p>
           A comprehensive platform that delivers actionable insights in real time.
-          Tuned for dispatchers watching 20 feeds at once — clear signal, minimal
+          Tuned for dispatchers watching 20 feeds at once, clear signal, minimal
           noise, and a design system that makes anomalies impossible to miss.
         </p>
       </>
@@ -68,7 +68,7 @@ const config: CaseStudyConfig = {
       {
         title: 'Real-time tracking',
         description:
-          'Live telemetry for every vehicle — GPS, fuel, speed, DTCs — surfaced in a glanceable dashboard that updates without refresh.',
+          'Live telemetry for every vehicle, GPS, fuel, speed, DTCs, surfaced in a glanceable dashboard that updates without refresh.',
       },
       {
         title: 'Predictive maintenance',

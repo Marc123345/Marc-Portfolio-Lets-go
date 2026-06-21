@@ -354,7 +354,7 @@ function HeroSection() {
 
         </div>{/* end left col */}
 
-        {/* Right col — Jotform */}
+        {/* Right col, Jotform */}
         <JotformEmbedCard />
 
         </div>{/* end grid */}
@@ -424,7 +424,7 @@ function GapSection() {
 
         <Reveal>
           <div className="grid md:grid-cols-2 mb-16">
-            {/* Left — inside */}
+            {/* Left, inside */}
             <div className="border border-white/10 p-10 md:p-14">
               <div className="space-y-4">
                 {inside.map((item) => (
@@ -432,7 +432,7 @@ function GapSection() {
                     key={item}
                     className="flex items-baseline gap-5 border-b border-white/6 pb-4 last:border-0"
                   >
-                    <span className="text-white/20 font-mono text-xs shrink-0">—</span>
+                    <span className="text-white/20 font-mono text-xs shrink-0">–</span>
                     <span
                       className="text-white/90 leading-tight"
                       style={{
@@ -447,10 +447,10 @@ function GapSection() {
               </div>
             </div>
 
-            {/* Right — current site */}
+            {/* Right, current site */}
             <div className="border border-white/10 border-l-0 md:border-l-0 p-10 md:p-14 bg-[#0a0a0a]">
               <p className="text-[10px] font-mono uppercase tracking-[0.35em] text-white/35 mb-10">
-                — Your current website
+, Your current website
               </p>
               <div className="space-y-4">
                 {outside.map((item) => (
@@ -458,7 +458,7 @@ function GapSection() {
                     key={item}
                     className="flex items-baseline gap-5 border-b border-white/6 pb-4 last:border-0"
                   >
-                    <span className="text-white/20 font-mono text-xs shrink-0">—</span>
+                    <span className="text-white/20 font-mono text-xs shrink-0">–</span>
                     <span
                       className="text-white/45 leading-tight line-through decoration-white/20"
                       style={{ fontSize: 'clamp(1.1rem, 1.8vw, 1.4rem)' }}
@@ -670,7 +670,7 @@ const DELIVERABLES = [
   },
   {
     n: '03',
-    title: '3 Months of Local SEO — Free',
+    title: '3 Months of Local SEO, Free',
     body: 'On-page SEO, schema markup, NAP citations, monthly performance report. Normally $1,500/mo. Included.',
   },
 ];
@@ -785,7 +785,7 @@ function ProcessSection() {
               fontWeight: 400,
             }}
           >
-            How it works — in 14 days.
+            How it works, in 14 days.
           </h2>
         </Reveal>
 
@@ -881,7 +881,7 @@ function OperatorSection() {
             <div className="relative aspect-[4/5] overflow-hidden">
               <motion.img
                 src={PORTRAIT}
-                alt="Marc Friedman — designer, developer, and operator"
+                alt="Marc Friedman, designer, developer, and operator"
                 className="absolute inset-0 w-full h-full object-cover object-top grayscale contrast-125"
                 style={{ y: portraitY, scale: portraitScale }}
                 loading="lazy"
@@ -950,7 +950,7 @@ function OperatorSection() {
               className="flex items-center gap-3 mb-8 text-[10px] font-mono uppercase tracking-[0.35em]"
               style={{ color: ACCENT }}
             >
-              <span>— In one sentence</span>
+              <span>In one sentence</span>
               <span className="h-[1px] w-8" style={{ backgroundColor: `${ACCENT}80` }} />
             </motion.div>
 
@@ -1067,7 +1067,7 @@ function OperatorSection() {
 const FAQS = [
   {
     q: 'How is this different from a generic template?',
-    a: "Generic templates are built for everyone, which means they're optimal for no one. I hand-code every site in React — sub-2-second load times, pixel-level design control, a site that actually reflects your studio's premium positioning. A template signals you didn't think too hard about this. A custom site signals you are serious.",
+    a: "Generic templates are built for everyone, which means they're optimal for no one. I hand-code every site in React, sub-2-second load times, pixel-level design control, a site that actually reflects your studio's premium positioning. A template signals you didn't think too hard about this. A custom site signals you are serious.",
   },
   {
     q: 'What if I already have a website?',
@@ -1075,15 +1075,15 @@ const FAQS = [
   },
   {
     q: 'Do you understand biohacking and the tech involved?',
-    a: "Yes. I've spent significant time studying the design systems and marketing of leading studios — Upgrade Labs, Next Health, 40 Years of Zen, and others. I understand how to position red light, cold plunge, neurofeedback, and peptide protocols to high-performance clientele. You won't need to explain the tech.",
+    a: "Yes. I've spent significant time studying the design systems and marketing of leading studios, Upgrade Labs, Next Health, 40 Years of Zen, and others. I understand how to position red light, cold plunge, neurofeedback, and peptide protocols to high-performance clientele. You won't need to explain the tech.",
   },
   {
     q: 'What does it cost after the free 3 months of SEO?',
-    a: 'After the first 90 days, ongoing local SEO is available at my standard rate — which we agree on upfront so there are no surprises. Most studio owners find the ROI on continued SEO is obvious by month two.',
+    a: 'After the first 90 days, ongoing local SEO is available at my standard rate, which we agree on upfront so there are no surprises. Most studio owners find the ROI on continued SEO is obvious by month two.',
   },
   {
     q: 'Why only 14 days? Is the work rushed?',
-    a: "The 14-day timeline is possible because I do everything myself. No handoff lag between design and development, no PM playing telephone, no waiting on a freelancer. I move fast because there's no one else in the way. The work isn't rushed — the process is just clean.",
+    a: "The 14-day timeline is possible because I do everything myself. No handoff lag between design and development, no PM playing telephone, no waiting on a freelancer. I move fast because there's no one else in the way. The work isn't rushed, the process is just clean.",
   },
 ];
 

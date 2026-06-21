@@ -154,7 +154,7 @@ The biggest gap in the business online
                 lineHeight: 1.55,
               }}
             >
-Half the market — invisible online.
+Half the market, invisible online.
             </p>
           </motion.div>
         </motion.div>

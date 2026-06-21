@@ -30,7 +30,7 @@ export default function ResourcePopup() {
       const raw = window.localStorage.getItem(STORAGE_KEY);
       if (raw) recentlyDismissed = Date.now() - Number(raw) < COOLDOWN_MS;
     } catch {
-      /* localStorage unavailable (private mode) — just show it */
+      /* localStorage unavailable (private mode), just show it */
     }
     if (recentlyDismissed) return;
 

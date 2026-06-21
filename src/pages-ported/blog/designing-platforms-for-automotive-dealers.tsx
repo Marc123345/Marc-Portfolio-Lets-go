@@ -84,7 +84,7 @@ export default function DesigningPlatformsForAutomotiveDealersPage() {
             <h2>How Automotive Dealerships Are Changing</h2>
             <p>Modern automotive dealers face challenges that demand innovative solutions. Rising customer expectations, fluctuating market dynamics, and the increasing complexity of inventory management require dealerships to rethink their operational strategies. Platforms like Tesla Finder and Automargin are stepping up to meet these needs, providing dealers with tools to navigate the market with precision and confidence.</p>
             
-            <p>The traditional dealership model—relying on intuition, experience, and weekly market reports—is rapidly becoming obsolete. Today's successful dealerships use real-time data and analytics to make informed decisions about pricing, inventory, and customer engagement. That shift is more than a technology upgrade; it changes how dealerships operate and compete.</p>
+            <p>The traditional dealership model, relying on intuition, experience, and weekly market reports, is rapidly becoming obsolete. Today's successful dealerships use real-time data and analytics to make informed decisions about pricing, inventory, and customer engagement. That shift is more than a technology upgrade; it changes how dealerships operate and compete.</p>
             
             <p>The stakes are high: dealerships that embrace digital transformation can gain significant competitive advantages, while those that cling to outdated methods risk falling behind. The difference often comes down to having the right tools and platforms to turn data into actionable insights.</p>
 

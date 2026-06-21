@@ -24,7 +24,7 @@ const PERSONAS = [
     name: "Procurement Manager",
     role: "Procurement buyer",
     detail:
-      "Shortlists 2–3 suppliers. Checks ISO 9001, lead times, reliability. Wants fast reasons to trust — or move on.",
+      "Shortlists 2–3 suppliers. Checks ISO 9001, lead times, reliability. Wants fast reasons to trust, or move on.",
     state: "Partly served",
   },
   {

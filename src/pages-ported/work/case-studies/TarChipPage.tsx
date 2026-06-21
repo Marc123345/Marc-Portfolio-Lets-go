@@ -10,7 +10,7 @@ const config: CaseStudyConfig = {
   tagline: (
     <>
       A specialised showcase for premium surface solutions. Professional digital
-      presence that highlights expertise in tar and chip paving applications — and
+      presence that highlights expertise in tar and chip paving applications, and
       turns showcase traffic into quotes.
     </>
   ),
@@ -38,7 +38,7 @@ const config: CaseStudyConfig = {
       <>
         <p>
           The client needed a professional web presence to showcase their expertise
-          in tar and chip paving — a specialised application in the asphalt
+          in tar and chip paving, a specialised application in the asphalt
           industry. Their existing presence looked no different from a generic
           paving site, burying their niche expertise.
         </p>
@@ -76,7 +76,7 @@ const config: CaseStudyConfig = {
       {
         title: 'Authentic industry aesthetic',
         description:
-          "Design that respects the trade — rugged, professional, not softened by generic SaaS gloss.",
+          "Design that respects the trade, rugged, professional, not softened by generic SaaS gloss.",
       },
       {
         title: 'Mobile-first',

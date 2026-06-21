@@ -36,14 +36,14 @@ const config: CaseStudyConfig = {
     narrative: (
       <>
         <p>
-          Binns Media Group (BMG) develops culture-shaping content — podcasts, audio
+          Binns Media Group (BMG) develops culture-shaping content, podcasts, audio
           albums, comedy, serialised storytelling. Their old presence read like a
           single-production site. It couldn&apos;t contain the ecosystem they were
           building.
         </p>
         <p>
           They needed a platform that handled video, audio, editorial, and subscriber
-          experiences — and still loaded fast under heavy media.
+          experiences, and still loaded fast under heavy media.
         </p>
       </>
     ),
@@ -74,7 +74,7 @@ const config: CaseStudyConfig = {
       {
         title: 'Editorial + audio + video',
         description:
-          'One CMS powering three content surfaces — articles, podcasts, and shows — without forcing them into the same template.',
+          'One CMS powering three content surfaces, articles, podcasts, and shows, without forcing them into the same template.',
       },
       {
         title: 'Subscriber system',

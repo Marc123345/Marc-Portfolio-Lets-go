@@ -45,7 +45,7 @@ export default function WhatIsAEOPage() {
         "name": "What is AEO?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "AEO (Answer Engine Optimization) is the practice of optimizing your content so that AI-powered answer engines — such as ChatGPT, Perplexity, Google AI Overviews, and Copilot — can find, understand, and cite your content when users ask questions."
+          "text": "AEO (Answer Engine Optimization) is the practice of optimizing your content so that AI-powered answer engines, such as ChatGPT, Perplexity, Google AI Overviews, and Copilot, can find, understand, and cite your content when users ask questions."
         }
       },
       {
@@ -69,7 +69,7 @@ export default function WhatIsAEOPage() {
         "name": "Which answer engines should I optimize for?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "The primary answer engines to consider are Google AI Overviews, ChatGPT (with browsing), Perplexity AI, Microsoft Copilot, and Claude. Each pulls from web content differently, but the core optimization principles — structured content, clear answers, authoritative sourcing — apply across all of them."
+          "text": "The primary answer engines to consider are Google AI Overviews, ChatGPT (with browsing), Perplexity AI, Microsoft Copilot, and Claude. Each pulls from web content differently, but the core optimization principles, structured content, clear answers, authoritative sourcing, apply across all of them."
         }
       }
     ]
@@ -118,7 +118,7 @@ export default function WhatIsAEOPage() {
         <div className="max-w-4xl mx-auto">
           <div className="prose prose-lg prose-invert max-w-none">
 
-            <p className="text-xl text-gray-300 leading-relaxed">For two decades, digital visibility meant one thing: ranking on Google. You researched keywords, optimized title tags, built backlinks, and hoped to land on page one. That model still matters -- but it is no longer the whole picture. A new class of discovery platform has emerged, and it is changing how people find information online. <strong className="text-white">Welcome to the era of Answer Engine Optimization.</strong></p>
+            <p className="text-xl text-gray-300 leading-relaxed">For two decades, digital visibility meant one thing: ranking on Google. You researched keywords, optimized title tags, built backlinks, and hoped to land on page one. That model still matters, but it is no longer the whole picture. A new class of discovery platform has emerged, and it is changing how people find information online. <strong className="text-white">Welcome to the era of Answer Engine Optimization.</strong></p>
 
             <h2>Defining AEO: What It Actually Means</h2>
 
@@ -127,14 +127,14 @@ export default function WhatIsAEOPage() {
             <p>These answer engines include:</p>
 
             <ul>
-              <li><strong>Google AI Overviews</strong> (formerly Search Generative Experience) -- the AI-generated summaries that now appear at the top of many Google search results</li>
-              <li><strong>ChatGPT with browsing</strong> -- OpenAI's conversational AI that searches the web in real time to answer questions</li>
-              <li><strong>Perplexity AI</strong> -- a dedicated answer engine that synthesizes information from multiple sources and provides citations</li>
-              <li><strong>Microsoft Copilot</strong> -- integrated across Bing, Edge, and Windows, pulling from web sources to generate answers</li>
+              <li><strong>Google AI Overviews</strong> (formerly Search Generative Experience), the AI-generated summaries that now appear at the top of many Google search results</li>
+              <li><strong>ChatGPT with browsing</strong>, OpenAI's conversational AI that searches the web in real time to answer questions</li>
+              <li><strong>Perplexity AI</strong>, a dedicated answer engine that synthesizes information from multiple sources and provides citations</li>
+              <li><strong>Microsoft Copilot</strong>, integrated across Bing, Edge, and Windows, pulling from web sources to generate answers</li>
               <li><strong>Claude</strong> (Anthropic), <strong>Gemini</strong> (Google), and other large language models with web access</li>
             </ul>
 
-            <p>The common thread: none of these platforms work like traditional search. Users do not type keywords and scan a list of blue links. They ask questions in natural language and receive synthesized answers -- sometimes with source citations, sometimes without.</p>
+            <p>The common thread: none of these platforms work like traditional search. Users do not type keywords and scan a list of blue links. They ask questions in natural language and receive synthesized answers, sometimes with source citations, sometimes without.</p>
 
             <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
               <h4 className="text-white font-semibold mb-3 flex items-center">
@@ -153,31 +153,31 @@ export default function WhatIsAEOPage() {
                   <p className="text-emerald-400 font-semibold text-sm mb-2">Answer Engine</p>
                   <p className="text-white text-sm">User asks: "What CRM should a 10-person marketing agency use if we need pipeline tracking and email integration?"</p>
                   <p className="text-white text-sm mt-1">Gets: A synthesized recommendation with reasoning, pricing context, and source links</p>
-                  <p className="text-white text-sm mt-1">Action: May click one source -- or none</p>
+                  <p className="text-white text-sm mt-1">Action: May click one source, or none</p>
                 </div>
               </div>
             </div>
 
             <h2>AEO vs. SEO: Understanding the Difference</h2>
 
-            <p>AEO is not a replacement for SEO. It is an extension of it -- a new layer of optimization built on top of traditional search fundamentals. But the mechanics differ in important ways:</p>
+            <p>AEO is not a replacement for SEO. It is an extension of it, a new layer of optimization built on top of traditional search fundamentals. But the mechanics differ in important ways:</p>
 
             <h3>What SEO Optimizes For</h3>
             <ul>
-              <li><strong>Keywords and search intent</strong> -- matching user queries to content</li>
-              <li><strong>Click-through rates</strong> -- compelling title tags and meta descriptions</li>
-              <li><strong>Backlink authority</strong> -- earning links from reputable sites</li>
-              <li><strong>Technical health</strong> -- crawlability, page speed, mobile-friendliness</li>
-              <li><strong>On-page signals</strong> -- heading structure, internal linking, content depth</li>
+              <li><strong>Keywords and search intent</strong>, matching user queries to content</li>
+              <li><strong>Click-through rates</strong>, compelling title tags and meta descriptions</li>
+              <li><strong>Backlink authority</strong>, earning links from reputable sites</li>
+              <li><strong>Technical health</strong>, crawlability, page speed, mobile-friendliness</li>
+              <li><strong>On-page signals</strong>, heading structure, internal linking, content depth</li>
             </ul>
 
             <h3>What AEO Optimizes For</h3>
             <ul>
-              <li><strong>Direct answers to specific questions</strong> -- content that clearly and concisely answers the question a user is asking</li>
-              <li><strong>Structured, parseable content</strong> -- information organized so AI models can extract and synthesize it</li>
-              <li><strong>Entity clarity</strong> -- making it unambiguous who you are, what you do, and why you are authoritative on a topic</li>
-              <li><strong>Citation-worthiness</strong> -- content that an AI would want to reference because it provides unique data, analysis, or expert perspective</li>
-              <li><strong>Semantic richness</strong> -- content that covers topics comprehensively with clear relationships between concepts</li>
+              <li><strong>Direct answers to specific questions</strong>, content that clearly and concisely answers the question a user is asking</li>
+              <li><strong>Structured, parseable content</strong>, information organized so AI models can extract and synthesize it</li>
+              <li><strong>Entity clarity</strong>, making it unambiguous who you are, what you do, and why you are authoritative on a topic</li>
+              <li><strong>Citation-worthiness</strong>, content that an AI would want to reference because it provides unique data, analysis, or expert perspective</li>
+              <li><strong>Semantic richness</strong>, content that covers topics comprehensively with clear relationships between concepts</li>
             </ul>
 
             <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
@@ -203,13 +203,13 @@ export default function WhatIsAEOPage() {
               <li>Gartner predicts that by 2028, organic search traffic to websites will decline by 50% as AI answer engines capture a larger share of information queries.</li>
             </ul>
 
-            <p>This does not mean websites are becoming irrelevant. It means the pathway to your website is changing. Instead of ten blue links, users increasingly arrive through AI-mediated discovery -- and your content needs to be optimized for that pathway.</p>
+            <p>This does not mean websites are becoming irrelevant. It means the pathway to your website is changing. Instead of ten blue links, users increasingly arrive through AI-mediated discovery, and your content needs to be optimized for that pathway.</p>
 
             <h3>Zero-Click Is Accelerating</h3>
 
-            <p>The "zero-click search" phenomenon -- where users get their answer without clicking through to any website -- predates AI answer engines. Featured snippets, knowledge panels, and People Also Ask boxes have been extracting answers from websites for years. AI Overviews dramatically accelerate this trend.</p>
+            <p>The "zero-click search" phenomenon, where users get their answer without clicking through to any website, predates AI answer engines. Featured snippets, knowledge panels, and People Also Ask boxes have been extracting answers from websites for years. AI Overviews dramatically accelerate this trend.</p>
 
-            <p>For informational queries, the AI Overview often provides a complete answer synthesized from multiple sources. The user's question is answered. They do not need to click. This is not inherently bad for content creators -- but it changes what "winning" looks like. Instead of optimizing purely for clicks, you are now also optimizing for brand visibility, authority positioning, and citation within the answer itself.</p>
+            <p>For informational queries, the AI Overview often provides a complete answer synthesized from multiple sources. The user's question is answered. They do not need to click. This is not inherently bad for content creators, but it changes what "winning" looks like. Instead of optimizing purely for clicks, you are now also optimizing for brand visibility, authority positioning, and citation within the answer itself.</p>
 
             <h2>How Answer Engines Select Sources</h2>
 
@@ -220,10 +220,10 @@ export default function WhatIsAEOPage() {
             <p>Answer engines favor content that demonstrates genuine expertise. Surface-level content that restates what is already widely known is less likely to be cited than content that provides:</p>
 
             <ul>
-              <li><strong>Original data or research</strong> -- surveys, case studies, experiments, proprietary analysis</li>
-              <li><strong>Expert perspective</strong> -- nuanced opinions grounded in demonstrated experience</li>
-              <li><strong>Comprehensive coverage</strong> -- thorough treatment of a topic including edge cases and counterarguments</li>
-              <li><strong>Practical specificity</strong> -- concrete steps, real numbers, actionable frameworks rather than generic advice</li>
+              <li><strong>Original data or research</strong>, surveys, case studies, experiments, proprietary analysis</li>
+              <li><strong>Expert perspective</strong>, nuanced opinions grounded in demonstrated experience</li>
+              <li><strong>Comprehensive coverage</strong>, thorough treatment of a topic including edge cases and counterarguments</li>
+              <li><strong>Practical specificity</strong>, concrete steps, real numbers, actionable frameworks rather than generic advice</li>
             </ul>
 
             <h3>2. Structural Clarity</h3>
@@ -318,10 +318,10 @@ export default function WhatIsAEOPage() {
             <p>Schema markup is more important for AEO than it ever was for traditional SEO. Structured data provides machine-readable context that helps AI models understand:</p>
 
             <ul>
-              <li><strong>What the content is about</strong> -- Article, FAQ, HowTo, Product schemas</li>
-              <li><strong>Who created it</strong> -- Person and Organization schemas with credentials</li>
-              <li><strong>How it relates to other entities</strong> -- SameAs links, mentions, about properties</li>
-              <li><strong>What questions it answers</strong> -- FAQPage schema with explicit question-answer pairs</li>
+              <li><strong>What the content is about</strong>, Article, FAQ, HowTo, Product schemas</li>
+              <li><strong>Who created it</strong>, Person and Organization schemas with credentials</li>
+              <li><strong>How it relates to other entities</strong>, SameAs links, mentions, about properties</li>
+              <li><strong>What questions it answers</strong>, FAQPage schema with explicit question-answer pairs</li>
             </ul>
 
             <p>Priority schemas for AEO:</p>
@@ -331,7 +331,7 @@ export default function WhatIsAEOPage() {
               <li><strong>HowTo:</strong> Structures step-by-step instructions in a machine-readable format.</li>
               <li><strong>Article / BlogPosting:</strong> Identifies the content type, author, publication date, and topic.</li>
               <li><strong>Organization / Person:</strong> Establishes entity identity and authority signals.</li>
-              <li><strong>Speakable:</strong> Identifies content sections best suited for text-to-speech and voice assistants -- increasingly relevant as answer engines power voice interfaces.</li>
+              <li><strong>Speakable:</strong> Identifies content sections best suited for text-to-speech and voice assistants, increasingly relevant as answer engines power voice interfaces.</li>
             </ul>
 
             <h3>4. Build Topical Authority</h3>
@@ -341,10 +341,10 @@ export default function WhatIsAEOPage() {
             <p>Building topical authority for AEO means:</p>
 
             <ul>
-              <li><strong>Creating content clusters</strong> -- a comprehensive hub page supported by detailed sub-topic pages, all interlinked</li>
-              <li><strong>Covering a topic from multiple angles</strong> -- definitions, how-to guides, comparisons, case studies, opinion pieces, data analysis</li>
-              <li><strong>Maintaining consistency</strong> -- regularly publishing and updating content within your areas of expertise</li>
-              <li><strong>Demonstrating real-world experience</strong> -- case studies, original research, and practitioner perspectives that generic content farms cannot replicate</li>
+              <li><strong>Creating content clusters</strong>, a comprehensive hub page supported by detailed sub-topic pages, all interlinked</li>
+              <li><strong>Covering a topic from multiple angles</strong>, definitions, how-to guides, comparisons, case studies, opinion pieces, data analysis</li>
+              <li><strong>Maintaining consistency</strong>, regularly publishing and updating content within your areas of expertise</li>
+              <li><strong>Demonstrating real-world experience</strong>, case studies, original research, and practitioner perspectives that generic content farms cannot replicate</li>
             </ul>
 
             <h3>5. Optimize for Conversational Queries</h3>
@@ -414,7 +414,7 @@ export default function WhatIsAEOPage() {
               <li><strong>Writing for AI instead of humans.</strong> AI models are trained to identify and prefer content that genuinely serves human readers. Keyword-stuffed, artificially structured content optimized purely for extraction will be outperformed by genuinely helpful content.</li>
               <li><strong>Ignoring traditional SEO.</strong> AEO builds on SEO foundations. A site with poor technical health, no authority, and thin content will not perform well in answer engines regardless of structural optimization.</li>
               <li><strong>Blocking AI crawlers.</strong> Some publishers block AI crawlers out of concern about content scraping. This is a legitimate consideration, but it also means your content will not be cited in AI-generated answers. The trade-off needs to be evaluated strategically.</li>
-              <li><strong>Overlooking entity establishment.</strong> If AI models do not understand who you are and why you are authoritative, your content is less likely to be selected as a source -- even if the content itself is excellent.</li>
+              <li><strong>Overlooking entity establishment.</strong> If AI models do not understand who you are and why you are authoritative, your content is less likely to be selected as a source, even if the content itself is excellent.</li>
               <li><strong>Treating AEO as a one-time project.</strong> Like SEO, AEO requires ongoing effort: content updates, new question coverage, competitor monitoring, and adaptation to evolving AI model behaviors.</li>
             </ul>
 
@@ -479,7 +479,7 @@ export default function WhatIsAEOPage() {
 
             <h2>Conclusion</h2>
 
-            <p>AEO is not a fad, a buzzword, or a replacement for SEO. It is the natural evolution of digital visibility in a world where AI mediates an increasing share of information discovery. The organizations that invest in AEO now -- building citation-worthy content, implementing solid structured data, establishing clear entity authority, and monitoring their presence across AI platforms -- will have a significant advantage as this shift accelerates.</p>
+            <p>AEO is not a fad, a buzzword, or a replacement for SEO. It is the natural evolution of digital visibility in a world where AI mediates an increasing share of information discovery. The organizations that invest in AEO now, building citation-worthy content, implementing solid structured data, establishing clear entity authority, and monitoring their presence across AI platforms, will have a significant advantage as this shift accelerates.</p>
 
             <p>The fundamental principle remains unchanged: create genuinely valuable content that serves your audience better than anyone else. What has changed is how that content needs to be structured, signaled, and positioned so that both humans and AI systems can find, understand, and trust it.</p>
 
@@ -572,7 +572,7 @@ export default function WhatIsAEOPage() {
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Ready to Be the Answer?</h2>
           <p className="text-xl text-white mb-8 max-w-2xl mx-auto">
-            Let's optimize your digital presence for AI-powered search -- so when your audience asks, you're the source that gets cited.
+            Let's optimize your digital presence for AI-powered search, so when your audience asks, you're the source that gets cited.
           </p>
           <MagneticButton>
             <button

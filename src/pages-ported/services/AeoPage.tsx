@@ -37,7 +37,7 @@ export default function AeoPage() {
         label="Who it's for"
         title="If AI engines"
         italicTitle="ignore you."
-        lead="Search isn&apos;t just Google anymore. ChatGPT, Perplexity, and AI Overviews are answering queries directly — and either citing you, or not."
+        lead="Search isn&apos;t just Google anymore. ChatGPT, Perplexity, and AI Overviews are answering queries directly, and either citing you, or not."
       >
         <div className="space-y-16">
           {[
@@ -64,7 +64,7 @@ export default function AeoPage() {
           <DeliverableRow
             number="01"
             title="Question-driven content audit"
-            description="Find the questions your audience asks AI engines. Map each to the page that should answer it — or build the page that doesn&apos;t exist yet."
+            description="Find the questions your audience asks AI engines. Map each to the page that should answer it, or build the page that doesn&apos;t exist yet."
           />
           <DeliverableRow
             number="02"
@@ -140,7 +140,7 @@ export default function AeoPage() {
       {/* ── Free AEO audit form ── */}
       <section className="relative bg-[#0a0a0a] border-t border-white/10 py-24 px-6 lg:px-12">
         <div className="max-w-2xl mx-auto">
-          <p className="text-xs font-mono uppercase tracking-[0.35em] text-[#A3D1FF] mb-4 text-center">— Free · No signup</p>
+          <p className="text-xs font-mono uppercase tracking-[0.35em] text-[#A3D1FF] mb-4 text-center">Free · No signup</p>
           <h2 className="text-center text-white mb-10" style={{ fontFamily: "var(--font-heading)", fontSize: 'clamp(1.8rem, 3.5vw, 3rem)', fontWeight: 400 }}>
             Request your free AEO audit
           </h2>
@@ -152,7 +152,7 @@ export default function AeoPage() {
       <ServiceColophon
         headline="Get quoted"
         italicHeadline="by the machines."
-        lead="Book a call — I'll show you exactly what AI engines say about your competitors and where your brand is missing."
+        lead="Book a call, I'll show you exactly what AI engines say about your competitors and where your brand is missing."
       />
     </>
   );

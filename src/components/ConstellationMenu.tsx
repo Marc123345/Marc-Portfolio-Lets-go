@@ -72,7 +72,7 @@ export default function ConstellationMenu({
           aria-modal="true"
           aria-label="Navigation menu"
         >
-          {/* Top bar — close button only */}
+          {/* Top bar, close button only */}
           <div className="flex items-center justify-end px-6 pt-6">
             <button
               onClick={onClose}
@@ -83,7 +83,7 @@ export default function ConstellationMenu({
             </button>
           </div>
 
-          {/* Primary nav — full-width rows, big tap targets */}
+          {/* Primary nav, full-width rows, big tap targets */}
           <nav
             className="flex-1 overflow-y-auto px-6 pt-8 pb-6"
             aria-label="Mobile primary"
@@ -124,7 +124,7 @@ export default function ConstellationMenu({
               })}
             </ul>
 
-            {/* Secondary — Free Tools */}
+            {/* Secondary, Free Tools */}
             <p className="text-[10px] font-mono uppercase tracking-[0.3em] text-white/40 mt-10 mb-3">
               Free Tools
             </p>
@@ -160,7 +160,7 @@ export default function ConstellationMenu({
             </ul>
           </nav>
 
-          {/* Footer — CTA + availability + socials */}
+          {/* Footer, CTA + availability + socials */}
           <div className="border-t border-white/10 px-6 py-5">
             <Link
               href="/contact/"
@@ -177,7 +177,7 @@ export default function ConstellationMenu({
                   <span className="absolute inset-0 rounded-full bg-green-400 animate-ping opacity-60" />
                   <span className="relative w-2 h-2 rounded-full bg-green-400" />
                 </span>
-                Available — Now
+                Available, Now
               </div>
               <div className="flex gap-2">
                 <a
@@ -194,7 +194,7 @@ export default function ConstellationMenu({
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-9 h-9 flex items-center justify-center border border-white/20 text-white hover:bg-[#A3D1FF] hover:text-black hover:border-[#A3D1FF] transition-colors"
-                  aria-label="LinkedIn — Company page"
+                  aria-label="LinkedIn, Company page"
                 >
                   <Building2 className="w-3.5 h-3.5" />
                 </a>

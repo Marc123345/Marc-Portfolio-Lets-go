@@ -93,14 +93,14 @@ export default function BrutalismAntiDesignPage() {
             <p>The philosophy centers on several core principles:</p>
 
             <ul>
-              <li><strong>Honesty of Materials:</strong> Show the web for what it truly is—HTML, CSS, and basic functionality without unnecessary embellishment</li>
+              <li><strong>Honesty of Materials:</strong> Show the web for what it truly is, HTML, CSS, and basic functionality without unnecessary embellishment</li>
               <li><strong>Function Over Form:</strong> Prioritize usability and directness over aesthetic refinement</li>
               <li><strong>Structural Clarity:</strong> Make the underlying grid, hierarchy, and organization visible rather than hidden</li>
               <li><strong>Rejection of Convention:</strong> Challenge accepted design patterns and user expectations</li>
               <li><strong>Raw Authenticity:</strong> Embrace imperfection and human touch over algorithmic precision</li>
             </ul>
 
-            <p>This approach creates websites that feel raw, immediate, and unfiltered—like looking directly at the bones of the internet rather than through a carefully polished lens.</p>
+            <p>This approach creates websites that feel raw, immediate, and unfiltered, like looking directly at the bones of the internet rather than through a carefully polished lens.</p>
 
             <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
               <h4 className="text-white font-semibold mb-2 flex items-center">
@@ -122,7 +122,7 @@ export default function BrutalismAntiDesignPage() {
             <h2>The Rise of Anti-Design Movement</h2>
 
             <h3>What is Anti-Design?</h3>
-            <p>While closely related to brutalism, anti-design takes the concept even further. It actively rejects established design principles—not out of ignorance, but as a deliberate creative choice. Anti-design challenges the notion that good design must be invisible, arguing instead that design can be confrontational, provocative, and memorable precisely because it breaks expectations.</p>
+            <p>While closely related to brutalism, anti-design takes the concept even further. It actively rejects established design principles, not out of ignorance, but as a deliberate creative choice. Anti-design challenges the notion that good design must be invisible, arguing instead that design can be confrontational, provocative, and memorable precisely because it breaks expectations.</p>
 
             <p>Anti-design isn't about making things ugly or unusable. Rather, it's about questioning why we've collectively agreed that certain aesthetic choices represent "good design" while others don't. It asks: What if the glossy, smooth interfaces we've normalized actually create distance between users and content? What if imperfection creates more authentic connections?</p>
 
@@ -140,7 +140,7 @@ export default function BrutalismAntiDesignPage() {
             <h2>Raw Grids: Exposing Structure as Design</h2>
 
             <h3>The Power of Visible Structure</h3>
-            <p>Traditional web design hides the grid system that organizes content—it's a tool designers use but users never see. Brutalist design inverts this relationship, making the grid a prominent visual element that communicates organization and hierarchy directly.</p>
+            <p>Traditional web design hides the grid system that organizes content, it's a tool designers use but users never see. Brutalist design inverts this relationship, making the grid a prominent visual element that communicates organization and hierarchy directly.</p>
 
             <p>Visible grids create several advantages:</p>
 
@@ -206,7 +206,7 @@ export default function BrutalismAntiDesignPage() {
             <h3>Breaking the Grid Intentionally</h3>
             <p>The most effective brutalist designs deliberately break the grid in strategic ways rather than simply showing it. Content might overflow grid boundaries, overlap cells, or ignore alignment altogether. These "violations" create visual tension and draw attention to important elements.</p>
 
-            <p>The key is that these breaks must be intentional and purposeful. Random chaos isn't brutalism—it's just poor design. Effective anti-design uses rule-breaking as a communication tool, not an excuse for laziness.</p>
+            <p>The key is that these breaks must be intentional and purposeful. Random chaos isn't brutalism, it's just poor design. Effective anti-design uses rule-breaking as a communication tool, not an excuse for laziness.</p>
 
             <h2>Minimal Imagery: Content First</h2>
 
@@ -236,13 +236,13 @@ export default function BrutalismAntiDesignPage() {
 
             <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
               <h4 className="text-white font-semibold mb-2">Case Study: Text-Based Navigation</h4>
-              <p className="text-gray-300">Rather than icon-heavy navigation, brutalist sites often use large, bold text links organized in unconventional layouts. This approach is faster to load, easier to scan, and more direct in communication. Users don't need to decode icon meanings—the text says exactly what it is.</p>
+              <p className="text-gray-300">Rather than icon-heavy navigation, brutalist sites often use large, bold text links organized in unconventional layouts. This approach is faster to load, easier to scan, and more direct in communication. Users don't need to decode icon meanings, the text says exactly what it is.</p>
             </div>
 
             <h2>Monochrome and High-Contrast Palettes</h2>
 
             <h3>The Power of Limitation</h3>
-            <p>Brutalist design often employs severely restricted color palettes—frequently just black and white, or a single accent color. This limitation isn't a constraint but a feature that creates several advantages:</p>
+            <p>Brutalist design often employs severely restricted color palettes, frequently just black and white, or a single accent color. This limitation isn't a constraint but a feature that creates several advantages:</p>
 
             <ul>
               <li><strong>Maximum Contrast:</strong> Black on white provides the highest possible readability</li>
@@ -343,7 +343,7 @@ export default function BrutalismAntiDesignPage() {
             <p>Typography is often the hero of brutalist layouts, with text doing the heavy lifting that images and decoration handle in traditional design:</p>
 
             <ul>
-              <li><strong>System Fonts:</strong> Arial, Times New Roman, or Georgia—ubiquitous fonts that feel honest and direct</li>
+              <li><strong>System Fonts:</strong> Arial, Times New Roman, or Georgia, ubiquitous fonts that feel honest and direct</li>
               <li><strong>Extreme Scale:</strong> Massive headlines that dominate the layout</li>
               <li><strong>Monospace Options:</strong> Terminal-style fonts that emphasize the digital nature of the medium</li>
               <li><strong>Mixed Styles:</strong> Deliberately combining serif, sans-serif, and monospace in unexpected ways</li>
@@ -496,7 +496,7 @@ export default function BrutalismAntiDesignPage() {
             <p>The biggest criticism of brutalist design is that it can sacrifice usability for aesthetic impact. This is a valid concern, but not an inevitable outcome. The best brutalist designs maintain excellent usability while embracing raw aesthetics:</p>
 
             <ul>
-              <li><strong>Clear Navigation:</strong> Unconventional doesn't mean confusing—navigation should still be intuitive</li>
+              <li><strong>Clear Navigation:</strong> Unconventional doesn't mean confusing, navigation should still be intuitive</li>
               <li><strong>Readable Typography:</strong> High contrast and system fonts actually improve readability</li>
               <li><strong>Fast Performance:</strong> Minimal imagery and effects often result in faster load times</li>
               <li><strong>Keyboard Accessibility:</strong> Text-heavy designs tend to be more keyboard-friendly</li>
@@ -540,7 +540,7 @@ export default function BrutalismAntiDesignPage() {
             </ul>
 
             <h2>Conclusion: The Power of Unpolished Honesty</h2>
-            <p>Brutalism and anti-design represent more than aesthetic choices—they're philosophical stances about what the web should be. In an era of algorithmic feeds, AI-generated content, and increasingly homogenized digital experiences, raw and unpolished design offers something genuinely different: authenticity.</p>
+            <p>Brutalism and anti-design represent more than aesthetic choices, they're philosophical stances about what the web should be. In an era of algorithmic feeds, AI-generated content, and increasingly homogenized digital experiences, raw and unpolished design offers something genuinely different: authenticity.</p>
 
             <p>The movement reminds us that good design doesn't have to mean invisible design. Sometimes the most effective interfaces are the ones that acknowledge their own constructedness, that wear their structure on their sleeve, that prioritize directness over decoration.</p>
 
@@ -548,7 +548,7 @@ export default function BrutalismAntiDesignPage() {
 
             <p>As we move forward, the challenge will be maintaining the authentic spirit of brutalism and anti-design as they become more mainstream. The goal isn't to create a new set of conventions to replace the old ones, but to keep questioning, experimenting, and finding new ways to make the web feel more direct, more honest, and more human.</p>
 
-            <p>Whether you fully embrace brutalist principles or simply incorporate elements of raw design into more traditional frameworks, the movement offers valuable lessons: question conventions, prioritize authenticity, embrace imperfection, and never forget that the web is made of text, links, and human ideas—everything else is optional.</p>
+            <p>Whether you fully embrace brutalist principles or simply incorporate elements of raw design into more traditional frameworks, the movement offers valuable lessons: question conventions, prioritize authenticity, embrace imperfection, and never forget that the web is made of text, links, and human ideas, everything else is optional.</p>
           </div>
 
           <div className="mt-12 pt-8 border-t border-white/10">

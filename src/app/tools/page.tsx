@@ -21,14 +21,14 @@ const TOOLS = [
     href: '/tools/website-analyzer',
     icon: Gauge,
     title: 'Website Analyzer',
-    desc: 'Instant Lighthouse audit of any URL — performance, accessibility, SEO, and Core Web Vitals. Powered by Google PageSpeed Insights.',
+    desc: 'Instant Lighthouse audit of any URL, performance, accessibility, SEO, and Core Web Vitals. Powered by Google PageSpeed Insights.',
     tag: 'Live audit',
   },
   {
     href: '/tools/roi-calculator',
     icon: Calculator,
     title: 'Website ROI Calculator',
-    desc: 'Model the return on a redesign — see how traffic, conversion rate, and order value translate into real revenue.',
+    desc: 'Model the return on a redesign, see how traffic, conversion rate, and order value translate into real revenue.',
     tag: 'Calculator',
   },
   {
@@ -65,7 +65,7 @@ export default function ToolsHubPage() {
           Tools to plan, measure, and <span className="text-[#A3D1FF]">improve</span> your website.
         </h1>
         <p className="mt-6 max-w-xl text-lg leading-relaxed text-white/70">
-          A small suite of free tools I built. No sign-up required — use them as much as you like.
+          A small suite of free tools I built. No sign-up required, use them as much as you like.
         </p>
 
         <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">

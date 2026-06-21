@@ -8,12 +8,12 @@ export default function WebsiteAnalyzerPage() {
   const toolSchema = {
     '@context': 'https://schema.org',
     '@type': 'SoftwareApplication',
-    name: 'Website Analyzer — Free Instant Speed & SEO Audit',
+    name: 'Website Analyzer, Free Instant Speed & SEO Audit',
     applicationCategory: 'WebApplication',
     operatingSystem: 'All',
     offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
     description:
-      'Run a free, instant Lighthouse audit of any website — performance, accessibility, best practices, SEO, and Core Web Vitals.',
+      'Run a free, instant Lighthouse audit of any website, performance, accessibility, best practices, SEO, and Core Web Vitals.',
     creator: { '@type': 'Person', name: 'Marc Friedman' },
   };
 
@@ -33,7 +33,7 @@ export default function WebsiteAnalyzerPage() {
           Website <span className="text-[#A3D1FF]">Analyzer</span>
         </h1>
         <p className="mt-6 max-w-xl text-lg leading-relaxed text-white/70">
-          Paste any URL and get an instant, real Lighthouse audit — performance,
+          Paste any URL and get an instant, real Lighthouse audit, performance,
           accessibility, best practices, SEO, and Core Web Vitals. Powered by Google
           PageSpeed Insights. No sign-up.
         </p>

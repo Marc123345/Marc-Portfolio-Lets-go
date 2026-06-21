@@ -82,7 +82,7 @@ export default function ConversionRateOptimizationTechniquesPage() {
         <div className="max-w-4xl mx-auto">
           <div className="prose prose-lg prose-invert max-w-none">
             <h2>Why Conversion Rate Optimization Matters More Than Ever</h2>
-            <p>Driving traffic to your website is only half the battle. The harder part — and the bigger opportunity — is converting that traffic into meaningful actions: a purchase, a newsletter signup, a consultation request.</p>
+            <p>Driving traffic to your website is only half the battle. The harder part, and the bigger opportunity, is converting that traffic into meaningful actions: a purchase, a newsletter signup, a consultation request.</p>
             
             <p>Conversion Rate Optimization (CRO) is the systematic process of increasing the percentage of website visitors who take desired actions. With rising customer acquisition costs and increasing competition for attention, optimizing your conversion rate has never been more critical for business growth and ROI.</p>
             
@@ -99,7 +99,7 @@ export default function ConversionRateOptimizationTechniquesPage() {
             
             <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
               <h4 className="text-white font-semibold mb-2">Case Study: Binns Media Group</h4>
-              <p className="text-gray-300">By implementing a systematic A/B testing program for their subscription page, Binns Media Group identified that combining social proof elements with a simplified form increased conversions. The key insight wasn't just what worked, but why it worked—users reported feeling both more confident in their decision and less overwhelmed by the signup process.</p>
+              <p className="text-gray-300">By implementing a systematic A/B testing program for their subscription page, Binns Media Group identified that combining social proof elements with a simplified form increased conversions. The key insight wasn't just what worked, but why it worked, users reported feeling both more confident in their decision and less overwhelmed by the signup process.</p>
             </div>
             
             <p>The best A/B testing programs go past telling you what works. They explain why it works, and that reasoning carries across the rest of your digital presence.</p>
@@ -114,7 +114,7 @@ export default function ConversionRateOptimizationTechniquesPage() {
               <li><strong>Conditional Logic:</strong> Only show fields that are relevant based on previous answers.</li>
             </ul>
             
-            <p>The goal is to make form completion feel effortless while still collecting the information you need. Every field should earn its place on your form—if you can't justify why you need a piece of information, consider removing it.</p>
+            <p>The goal is to make form completion feel effortless while still collecting the information you need. Every field should earn its place on your form, if you can't justify why you need a piece of information, consider removing it.</p>
             
             <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
               <h4 className="text-white font-semibold mb-2">Implementation Tip</h4>
@@ -160,7 +160,7 @@ export default function ConversionRateOptimizationTechniquesPage() {
               <li><strong>Mobile Payment Streamlining:</strong> Implement mobile wallets and simplified checkout processes for mobile users.</li>
             </ul>
             
-            <p>The most successful mobile experiences recognize that mobile users have different needs, behaviors, and constraints compared to desktop users. By designing specifically for these differences, you can create mobile experiences that convert as well as—or better than—desktop.</p>
+            <p>The most successful mobile experiences recognize that mobile users have different needs, behaviors, and constraints compared to desktop users. By designing specifically for these differences, you can create mobile experiences that convert as well as, or better than, desktop.</p>
             
             <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
               <h4 className="text-white font-semibold mb-2">Implementation Tip</h4>

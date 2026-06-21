@@ -31,7 +31,7 @@ const PROOF_TESTIMONIALS = [
     role: 'Marketing Director',
     linkedin: 'https://www.linkedin.com/in/bradleethompson/',
     content:
-      'Marc is an incredible ally — highly responsive with quick solutions as he built our landing page. This was a high-stakes project that did not lend itself to a template. Marc is that rare creative who excels at design AND wordsmithing. The real deal.',
+      'Marc is an incredible ally, highly responsive with quick solutions as he built our landing page. This was a high-stakes project that did not lend itself to a template. Marc is that rare creative who excels at design AND wordsmithing. The real deal.',
   },
   {
     name: 'Darren Youngleson',
@@ -42,7 +42,7 @@ const PROOF_TESTIMONIALS = [
   },
 ];
 
-// Third-party validation — real profiles linked from the site footer.
+// Third-party validation, real profiles linked from the site footer.
 const AWARDS = [
   { label: 'Clutch', href: 'https://clutch.co/profile/marc-friedman-design-agency' },
   { label: 'Awwwards', href: 'https://www.awwwards.com/marc-friedman/' },
@@ -66,7 +66,7 @@ export default function WebDevelopmentPage() {
         volumeNumber="01"
         tagline={
           <>
-            Built on React and Next.js — SEO-friendly websites that load in under
+            Built on React and Next.js, SEO-friendly websites that load in under
             2 seconds, rank on Google, and turn strangers into customers. 50+
             shipped.
           </>
@@ -75,7 +75,7 @@ export default function WebDevelopmentPage() {
         imageSrc="https://ik.imagekit.io/qcvroy8xpd/uoq5Ztg.jpeg"
       />
 
-{/* Chapter 01 — Who it's for */}
+{/* Chapter 01, Who it's for */}
       <EditorialSection
         chapter="01"
         label="Who it's for"
@@ -120,7 +120,7 @@ export default function WebDevelopmentPage() {
         </div>
       </EditorialSection>
 
-      {/* Chapter 02 — What you get */}
+      {/* Chapter 02, What you get */}
       <EditorialSection
         chapter="02"
         label="What you get"
@@ -133,7 +133,7 @@ export default function WebDevelopmentPage() {
           <DeliverableRow
             number="Package 01"
             title="Landing Page"
-            description="Perfect for testing a new offer, launching a campaign, or replacing a page that isn't converting. A single, focused page designed to do ONE thing — get the visitor to take action. SEO-optimized, fast as hell, delivered in 2 weeks."
+            description="Perfect for testing a new offer, launching a campaign, or replacing a page that isn't converting. A single, focused page designed to do ONE thing, get the visitor to take action. SEO-optimized, fast as hell, delivered in 2 weeks."
           />
           <DeliverableRow
             number="Package 02"
@@ -148,7 +148,7 @@ export default function WebDevelopmentPage() {
         </div>
       </EditorialSection>
 
-      {/* Chapter 03 — The process */}
+      {/* Chapter 03, The process */}
       <EditorialSection
         chapter="03"
         label="The Process"
@@ -182,7 +182,7 @@ export default function WebDevelopmentPage() {
           <ProcessChapter
             numeral="III."
             title="Build"
-            description="Clean, hand-written React — fast load times and search-ready, server-rendered HTML from the first commit. Weekly demo links so you're never in the dark."
+            description="Clean, hand-written React, fast load times and search-ready, server-rendered HTML from the first commit. Weekly demo links so you're never in the dark."
             items={[
               'Hand-coded components',
               'Core Web Vitals in the 90s',
@@ -205,7 +205,7 @@ export default function WebDevelopmentPage() {
         </div>
       </EditorialSection>
 
-      {/* Chapter 04 — Proof */}
+      {/* Chapter 04, Proof */}
       <EditorialSection
         chapter="04"
         label="Proof"
@@ -213,11 +213,11 @@ export default function WebDevelopmentPage() {
         italicTitle="not the promises."
         bg="bg-[#0a0a0a]"
       >
-        {/* Practitioner block — the person behind the work (Experience signal) */}
+        {/* Practitioner block, the person behind the work (Experience signal) */}
         <div className="mb-14 flex flex-col sm:flex-row sm:items-center gap-5 border border-white/10 bg-[#111418] p-6 md:p-8">
           <img
             src={MARC_PORTRAIT}
-            alt="Marc Friedman — full-stack designer and developer"
+            alt="Marc Friedman, full-stack designer and developer"
             className="w-20 h-20 rounded-full object-cover object-top ring-1 ring-white/15 flex-shrink-0"
             loading="lazy"
             width={80}
@@ -231,7 +231,7 @@ export default function WebDevelopmentPage() {
               Built by Marc Friedman
             </p>
             <p className="text-white/65 text-sm md:text-base leading-relaxed max-w-2xl">
-              Senior full-stack designer &amp; developer based in Tel Aviv — six
+              Senior full-stack designer &amp; developer based in Tel Aviv, six
               years shipping React &amp; Next.js. Every project runs from discovery
               to launch under one set of hands: no agency handoff, no offshore team.
             </p>
@@ -322,13 +322,13 @@ export default function WebDevelopmentPage() {
         </div>
       </EditorialSection>
 
-      {/* Chapter 05 — Specialties */}
+      {/* Chapter 05, Specialties */}
       <EditorialSection
         chapter="05"
         label="Specialties"
         title="Engineering and SEO,"
         italicTitle="built as one discipline."
-        lead="Most teams treat SEO and engineering as separate phases. I build them together — search-readiness is part of the architecture, not a checklist bolted on after the site is done."
+        lead="Most teams treat SEO and engineering as separate phases. I build them together, search-readiness is part of the architecture, not a checklist bolted on after the site is done."
       >
         <div className="grid md:grid-cols-3 gap-px bg-white/10 border border-white/10">
           <div className="bg-black p-8">
@@ -340,7 +340,7 @@ export default function WebDevelopmentPage() {
             </h3>
             <p className="text-white/70 leading-relaxed">
               Server-rendered HTML, semantic markup, structured data, canonicals and
-              sitemaps — shipped from the first commit, not bolted on after launch.
+              sitemaps, shipped from the first commit, not bolted on after launch.
             </p>
           </div>
           <div className="bg-black p-8">
@@ -352,7 +352,7 @@ export default function WebDevelopmentPage() {
             </h3>
             <p className="text-white/70 leading-relaxed">
               Static export where it fits, SSR where it counts. Core Web Vitals in the
-              green before a site goes live — not after a client complains it feels slow.
+              green before a site goes live, not after a client complains it feels slow.
             </p>
           </div>
           <div className="bg-black p-8">
@@ -364,7 +364,7 @@ export default function WebDevelopmentPage() {
             </h3>
             <p className="text-white/70 leading-relaxed">
               React 18, Next.js 15 App Router, TypeScript, Tailwind. Every component is
-              built for your business — never lifted from a page-builder template your
+              built for your business, never lifted from a page-builder template your
               competitors also use.
             </p>
           </div>
@@ -375,7 +375,7 @@ export default function WebDevelopmentPage() {
       <ServiceColophon
         headline="Let's ship something"
         italicHeadline="your competitors will resent."
-        lead="Book 30 minutes — I'll audit your current site live on the call and show you exactly what's costing you customers."
+        lead="Book 30 minutes, I'll audit your current site live on the call and show you exactly what's costing you customers."
       />
     </>
   );

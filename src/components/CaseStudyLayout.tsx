@@ -264,7 +264,7 @@ export default function CaseStudyLayout({ config }: { config: CaseStudyConfig })
         liveUrl={liveUrl}
       />
 
-{/* ============== CHAPTER 01 — THE CHALLENGE ============== */}
+{/* ============== CHAPTER 01, THE CHALLENGE ============== */}
       <section className="relative py-24 md:py-32 px-6 lg:px-12 bg-black border-t border-white/10">
         <div className="max-w-7xl mx-auto">
           <ChapterMarker number="01" label="The Challenge" />
@@ -297,7 +297,7 @@ export default function CaseStudyLayout({ config }: { config: CaseStudyConfig })
                 <ul className="mt-8 space-y-2 border-t border-white/10 pt-6">
                   {challenge.bullets.map((b) => (
                     <li key={b} className="text-white/70 flex gap-3">
-                      <span className="text-[#A3D1FF] font-mono mt-1.5 shrink-0">—</span>
+                      <span className="text-[#A3D1FF] font-mono mt-1.5 shrink-0">–</span>
                       <span>{b}</span>
                     </li>
                   ))}
@@ -308,7 +308,7 @@ export default function CaseStudyLayout({ config }: { config: CaseStudyConfig })
         </div>
       </section>
 
-      {/* ============== CHAPTER 02 — THE SOLUTION ============== */}
+      {/* ============== CHAPTER 02, THE SOLUTION ============== */}
       <section className="relative py-24 md:py-32 px-6 lg:px-12 bg-[#0a0a0a] border-t border-white/10">
         <div className="max-w-7xl mx-auto">
           <ChapterMarker number="02" label="The Solution" />
@@ -371,7 +371,7 @@ export default function CaseStudyLayout({ config }: { config: CaseStudyConfig })
 
           <div className="flex flex-wrap gap-2 border-t border-white/10 pt-8">
             <span className="text-[10px] font-mono uppercase tracking-[0.3em] text-white/40 mr-2">
-              — Stack
+, Stack
             </span>
             {solution.tech.map((t) => (
               <span
@@ -409,7 +409,7 @@ export default function CaseStudyLayout({ config }: { config: CaseStudyConfig })
         </section>
       )}
 
-      {/* ============== CHAPTER 04 — THE RESULTS ============== */}
+      {/* ============== CHAPTER 04, THE RESULTS ============== */}
       <section className="relative py-24 md:py-32 px-6 lg:px-12 bg-[#0a0a0a] border-t border-white/10">
         <div className="max-w-7xl mx-auto">
           <ChapterMarker number="04" label="The Results" />
@@ -447,7 +447,7 @@ export default function CaseStudyLayout({ config }: { config: CaseStudyConfig })
                 &ldquo;{results.testimonial.quote}&rdquo;
               </p>
               <footer className="mt-6 text-[10px] font-mono uppercase tracking-[0.3em] text-[#A3D1FF]">
-                — {results.testimonial.author} · {results.testimonial.role}
+, {results.testimonial.author} · {results.testimonial.role}
               </footer>
             </motion.blockquote>
           )}

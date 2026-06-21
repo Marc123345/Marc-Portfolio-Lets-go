@@ -147,7 +147,7 @@ function ProcessChapter({
         <ul className="space-y-2 mb-10 max-w-2xl">
           {items.map((item, index) => (
             <li key={index} className="text-white/70 text-sm flex gap-3 items-start">
-              <span className="text-[#A3D1FF] font-mono mt-1">—</span>
+              <span className="text-[#A3D1FF] font-mono mt-1">–</span>
               <span>{item}</span>
             </li>
           ))}
@@ -160,7 +160,7 @@ function ProcessChapter({
             &ldquo;{quote}&rdquo;
           </p>
           <p className="text-xs text-[#A3D1FF] font-mono tracking-[0.2em] uppercase">
-            — {attribution}
+, {attribution}
           </p>
         </div>
       </div>
@@ -259,8 +259,7 @@ export default function AboutPage() {
             transition={{ duration: 0.7, delay: 0.3 }}
             className="text-xl md:text-2xl text-white/70 max-w-2xl leading-snug"
           >
-            Freelance full stack developer and designer based in Tel Aviv, Israel —
-            building websites that bring in customers, not just compliments.
+            Freelance full stack developer and designer based in Tel Aviv, Israel,            building websites that bring in customers, not just compliments.
           </motion.p>
 
           <motion.p
@@ -274,7 +273,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ===================== CHAPTER 01 — THE STORY ===================== */}
+      {/* ===================== CHAPTER 01, THE STORY ===================== */}
       <section id="story" className="relative bg-black py-24 md:py-32 px-6 lg:px-12 border-t border-white/10">
         <div className="max-w-7xl mx-auto">
           <ChapterMarker number="01" label="The Story" />
@@ -312,7 +311,7 @@ export default function AboutPage() {
                   >
                     I
                   </span>
-                  &apos;m Marc — a senior web developer and freelance full stack
+                  &apos;m Marc, a senior web developer and freelance full stack
                   developer based in Tel Aviv, Israel. I design and build websites
                   that bring in customers, not just compliments. Over the past 6
                   years, as a full stack web developer working hands-on with React,
@@ -325,8 +324,7 @@ export default function AboutPage() {
                   personally. As a fullstack developer covering design, frontend,
                   backend, and DevOps in one set of hands, I&apos;m the rare fullstack
                   web developer who actually ships the brand identity too. No
-                  handoffs. No junior devs. No project managers playing telephone —
-                  just one web developer in Israel, focused on your build.
+                  handoffs. No junior devs. No project managers playing telephone,                  just one web developer in Israel, focused on your build.
                 </p>
               </motion.div>
             </div>
@@ -377,7 +375,7 @@ export default function AboutPage() {
           <ChapterMarker number="Interlude" label="Clients · Three Continents" />
 
           <div className="grid lg:grid-cols-[1fr_1fr] gap-12 lg:gap-20 items-center">
-            {/* Left — editorial text */}
+            {/* Left, editorial text */}
             <div>
               <motion.h2
                 initial={{ opacity: 0, y: 30 }}
@@ -400,7 +398,7 @@ export default function AboutPage() {
                 transition={{ duration: 0.8, delay: 0.15 }}
                 className="text-lg md:text-xl text-white/70 leading-relaxed mb-10 max-w-xl"
               >
-                Shipped from — and to —{' '}
+                Shipped from, and to,{' '}
                 <strong className="text-white">US, Europe, and Africa</strong>. Time
                 zones sort themselves out. Good work travels.
               </motion.p>
@@ -436,7 +434,7 @@ export default function AboutPage() {
               </motion.ul>
             </div>
 
-            {/* Right — dot globe */}
+            {/* Right, dot globe */}
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
@@ -446,14 +444,14 @@ export default function AboutPage() {
             >
               <Globe size={560} />
               <p className="text-center mt-6 text-[10px] font-mono uppercase tracking-[0.3em] text-white/40">
-                — Drag to spin
+, Drag to spin
               </p>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* ===================== CHAPTER 02 — PROBLEMS ===================== */}
+      {/* ===================== CHAPTER 02, PROBLEMS ===================== */}
       <section className="relative bg-[#0a0a0a] py-28 md:py-36 px-6 lg:px-12 border-t border-white/10 overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <ChapterMarker number="02" label="In Their Words" />
@@ -494,14 +492,14 @@ export default function AboutPage() {
             transition={{ duration: 0.7 }}
             className="mt-24 pt-8 border-t border-white/10 text-center text-white/70 text-xl leading-relaxed max-w-3xl mx-auto"
           >
-            If any of those sound familiar — that&apos;s where I come in. I don&apos;t
+            If any of those sound familiar, that&apos;s where I come in. I don&apos;t
             just build websites, I fix the problems that are quietly costing you
             customers.
           </motion.p>
         </div>
       </section>
 
-      {/* ===================== CHAPTER 03 — PROOF ===================== */}
+      {/* ===================== CHAPTER 03, PROOF ===================== */}
       <section className="relative bg-black py-24 md:py-32 px-6 lg:px-12 border-t border-white/10">
         <div className="max-w-7xl mx-auto">
           <ChapterMarker number="03" label="Proof, Not Percentages" />
@@ -588,7 +586,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ===================== CHAPTER 04 — THE PROCESS ===================== */}
+      {/* ===================== CHAPTER 04, THE PROCESS ===================== */}
       <section className="relative bg-[#0a0a0a] py-24 md:py-32 px-6 lg:px-12 border-t border-white/10">
         <div className="max-w-7xl mx-auto">
           <ChapterMarker number="04" label="The Process" />
@@ -668,15 +666,15 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ===================== CHAPTER 05 — BEYOND THE WORK ===================== */}
+      {/* ===================== CHAPTER 05, BEYOND THE WORK ===================== */}
       <section className="relative bg-black py-24 md:py-32 px-6 lg:px-12 border-t border-white/10">
         <div className="max-w-7xl mx-auto">
           <ChapterMarker number="05" label="Off the Clock" />
 
           <div className="grid md:grid-cols-[1fr_1fr] gap-8 md:gap-12 items-center">
-            {/* Left — heading + copy + structured 'where you'll find me' list.
+            {/* Left, heading + copy + structured 'where you'll find me' list.
                The list adds vertical weight so the text column rises to meet
-               the portrait's height — both end at roughly the same baseline. */}
+               the portrait's height, both end at roughly the same baseline. */}
             <div>
               <motion.h2
                 initial={{ opacity: 0, y: 30 }}
@@ -699,7 +697,7 @@ export default function AboutPage() {
                   <em className="text-[#A3D1FF]" style={{ fontFamily: SERIF }}>
                     Galilee
                   </em>
-                  , hunting for the best coffee in Tel Aviv, or helping junior
+, hunting for the best coffee in Tel Aviv, or helping junior
                   designers build their first portfolios.
                 </p>
                 <p>
@@ -709,7 +707,7 @@ export default function AboutPage() {
                 </p>
               </div>
 
-              {/* Anchor list — fills the text column so it matches the
+              {/* Anchor list, fills the text column so it matches the
                   portrait's height. Mono-uppercase reads as 'spec' under
                   prose, doesn't compete with the headline. */}
               <ul className="border-t border-white/10 divide-y divide-white/10">
@@ -746,7 +744,7 @@ export default function AboutPage() {
                 />
               </div>
               {/* Caption gives the photo column a finished, editorial bottom
-                  edge — mirrors the spec rows in the text column. */}
+                  edge, mirrors the spec rows in the text column. */}
               <div className="flex items-baseline justify-between mt-3 text-[10px] font-mono uppercase tracking-[0.25em] text-white/40">
                 <span>Off the clock · 2026</span>
                 <span>Tel Aviv</span>

@@ -26,13 +26,13 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.marcfriedmanportfolio.com"),
   title: {
-    default: "Marc Friedman — Custom Web Design for B2B & Service Businesses",
+    default: "Marc Friedman, Custom Web Design for B2B & Service Businesses",
     template: "%s | Marc Friedman",
   },
   description:
     "Custom React & Next.js websites for B2B and service businesses. 98/100 PageSpeed, sub-2-second loads, 50+ projects shipped. Book a free strategy call.",
   openGraph: {
-    title: "Marc Friedman — Custom Web Design for B2B & Service Businesses",
+    title: "Marc Friedman, Custom Web Design for B2B & Service Businesses",
     description:
       "Custom React & Next.js websites for B2B and service businesses. 98/100 PageSpeed, sub-2-second loads, 50+ projects shipped. Book a free strategy call.",
     url: "https://www.marcfriedmanportfolio.com",
@@ -42,14 +42,14 @@ export const metadata: Metadata = {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Marc Friedman — Custom Web Design for B2B & Service Businesses",
+        alt: "Marc Friedman, Custom Web Design for B2B & Service Businesses",
       },
     ],
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Marc Friedman — Custom Web Design for B2B & Service Businesses",
+    title: "Marc Friedman, Custom Web Design for B2B & Service Businesses",
     description:
       "Custom React & Next.js websites for B2B and service businesses. 98/100 PageSpeed, sub-2-second loads, 50+ projects shipped. Book a free strategy call.",
     images: ["/og-image.jpg"],

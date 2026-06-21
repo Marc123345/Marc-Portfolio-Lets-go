@@ -16,7 +16,7 @@ import {
 const workSchema = {
   '@context': 'https://schema.org',
   '@type': 'CollectionPage',
-  name: 'Portfolio — Marc Friedman',
+  name: 'Portfolio, Marc Friedman',
   description:
     'Real projects. Real results. No templates, no WordPress, no shortcuts.',
   url: 'https://www.marcfriedmanportfolio.com/work',
@@ -38,7 +38,7 @@ const projects: Project[] = [
     title: 'Binns Media Group',
     category: 'Media Platform',
     blurb:
-      'Streaming-grade platform for authentic voices — Netflix-style UX on a lean production tech stack.',
+      'Streaming-grade platform for authentic voices, Netflix-style UX on a lean production tech stack.',
     image:
       'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%204%20-%2016x9.png?updatedAt=1767539579710',
     liveUrl: 'https://www.binnsmediagroup.com',
@@ -237,7 +237,7 @@ const projects: Project[] = [
     title: 'Videoleap',
     category: 'Mobile · AI',
     blurb:
-      'AI-powered video editing platform — redesigned onboarding, editor, and template marketplace flows.',
+      'AI-powered video editing platform, redesigned onboarding, editor, and template marketplace flows.',
     image: '/images/clients/SubVB9A.jpeg',
     caseStudyUrl: '/work/case-studies/videoleap/',
     stats: [
@@ -251,7 +251,7 @@ const projects: Project[] = [
     title: 'Sentinel DS',
     category: 'Open Source · Design System',
     blurb:
-      'Cybersecurity design system for SOC analysts. Severity scale, dual themes, 15+ components — drop-in React, ~1,000 LOC.',
+      'Cybersecurity design system for SOC analysts. Severity scale, dual themes, 15+ components, drop-in React, ~1,000 LOC.',
     image: 'https://ik.imagekit.io/qcvroy8xpd/image%201%20(10).png',
     liveUrl: 'https://github.com/Marc123345/Cyber-Security-Design-System',
     caseStudyUrl: '/work/case-studies/sentinel-ds/',
@@ -337,7 +337,7 @@ export default function WorkPage() {
             transition={{ duration: 0.7, delay: 0.3 }}
             className="text-xl md:text-2xl text-white/70 max-w-2xl leading-snug"
           >
-            No templates. No WordPress. No shortcuts. Every case file below — click a
+            No templates. No WordPress. No shortcuts. Every case file below, click a
             face, read the file, drag the cube.
           </motion.p>
         </div>
@@ -354,11 +354,11 @@ export default function WorkPage() {
           />
 
           <div className="grid lg:grid-cols-12 gap-8 lg:gap-10 items-center">
-            {/* Left — project list for current page */}
+            {/* Left, project list for current page */}
             <div className="lg:col-span-3 order-2 lg:order-1">
               <div className="flex items-center justify-between mb-5">
                 <p className="text-[10px] font-mono uppercase tracking-[0.3em] text-white/40">
-                  — Case files
+, Case files
                 </p>
                 <div className="flex items-center gap-1">
                   <button
@@ -440,17 +440,17 @@ export default function WorkPage() {
               </div>
             </div>
 
-            {/* Center — cube */}
+            {/* Center, cube */}
             <div className="lg:col-span-5 order-1 lg:order-2">
               <div className="relative flex items-center justify-center min-h-[380px] lg:min-h-[500px]">
                 <InteractiveCube faces={cubeFaces} activeIndex={faceIndex} />
               </div>
               <p className="text-center text-[10px] font-mono uppercase tracking-[0.3em] text-white/40 mt-6">
-                — Drag to rotate · Click a case file
+, Drag to rotate · Click a case file
               </p>
             </div>
 
-            {/* Right — active project detail */}
+            {/* Right, active project detail */}
             <div className="lg:col-span-4 order-3">
               <AnimatePresence mode="wait">
                 <motion.div
@@ -461,7 +461,7 @@ export default function WorkPage() {
                   transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
                 >
                   <p className="text-[10px] font-mono uppercase tracking-[0.3em] text-[#A3D1FF] mb-4">
-                    — {active.category}
+, {active.category}
                   </p>
                   <h3
                     className="text-white mb-4 leading-[1.0] tracking-tight"
@@ -598,7 +598,7 @@ export default function WorkPage() {
       <ServiceColophon
         headline="Want to be the"
         italicHeadline="next case file?"
-        lead="Book a 30-minute call — I'll audit your current site live and show you exactly what we could ship together."
+        lead="Book a 30-minute call, I'll audit your current site live and show you exactly what we could ship together."
       />
     </>
   );

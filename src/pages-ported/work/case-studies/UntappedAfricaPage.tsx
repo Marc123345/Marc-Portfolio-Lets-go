@@ -10,7 +10,7 @@ const config: CaseStudyConfig = {
   tagline: (
     <>
       A mission-first platform that helps bring clean water to 500,000+ people across
-      8 African countries. Stories that move hearts — infrastructure that tracks
+      8 African countries. Stories that move hearts, infrastructure that tracks
       where every dollar goes.
     </>
   ),
@@ -40,7 +40,7 @@ const config: CaseStudyConfig = {
         <p>
           Untapped Africa had a world-changing mission but a digital presence that
           wasn&apos;t doing it justice. Donors couldn&apos;t feel the scope. Partners
-          couldn&apos;t see the data. The site was costing them credibility — and
+          couldn&apos;t see the data. The site was costing them credibility, and
           donations.
         </p>
         <p>
@@ -61,7 +61,7 @@ const config: CaseStudyConfig = {
     narrative: (
       <>
         <p>
-          I deployed the Impact Story framework — a mission-first storytelling engine
+          I deployed the Impact Story framework, a mission-first storytelling engine
           designed to build trust, inspire belief, and drive donation action. Then I
           wired it into live infrastructure data via Mapbox GL so the scope of the
           work could literally be zoomed into.
@@ -77,7 +77,7 @@ const config: CaseStudyConfig = {
       {
         title: 'Donation-first conversion',
         description:
-          'Every page ends in an action — donate, sponsor, partner, volunteer. Conversion flow designed around emotional arc, not just form fields.',
+          'Every page ends in an action, donate, sponsor, partner, volunteer. Conversion flow designed around emotional arc, not just form fields.',
       },
       {
         title: 'Partner self-service',

@@ -23,7 +23,7 @@ export default function MaintenanceHostingPage() {
         volumeNumber="08"
         tagline={
           <>
-            Your website kept fast, secure, and online — by the same person who built it.
+            Your website kept fast, secure, and online, by the same person who built it.
             Monthly performance care, priority fixes, and Cloudflare-grade hosting
             handled for you.
           </>
@@ -37,7 +37,7 @@ export default function MaintenanceHostingPage() {
         label="Who it's for"
         title="When your site"
         italicTitle="needs a caretaker."
-        lead="For teams who shipped a great site but now need someone to keep it great — without onboarding a new dev every quarter."
+        lead="For teams who shipped a great site but now need someone to keep it great, without onboarding a new dev every quarter."
       >
         <div className="space-y-16">
           {[
@@ -93,12 +93,12 @@ export default function MaintenanceHostingPage() {
           <DeliverableRow
             number="03"
             title="Priority fixes"
-            description="Bugs, broken integrations, CMS issues — flagged by you in Slack, fixed within the day. No tickets, no queues."
+            description="Bugs, broken integrations, CMS issues, flagged by you in Slack, fixed within the day. No tickets, no queues."
           />
           <DeliverableRow
             number="04"
             title="Content + CMS support"
-            description="New pages, blog posts, campaign pages — designed, built, and deployed. You focus on the business, I handle the web."
+            description="New pages, blog posts, campaign pages, designed, built, and deployed. You focus on the business, I handle the web."
           />
         </div>
       </EditorialSection>
@@ -124,7 +124,7 @@ export default function MaintenanceHostingPage() {
           <ProcessChapter
             numeral="II."
             title="Weekly cadence"
-            description="A weekly check-in, a weekly ship. Whatever's in the backlog — new pages, fixes, experiments — gets worked through, week by week."
+            description="A weekly check-in, a weekly ship. Whatever's in the backlog, new pages, fixes, experiments, gets worked through, week by week."
             items={[
               '30-min weekly call',
               'Weekly ship',
@@ -187,7 +187,7 @@ export default function MaintenanceHostingPage() {
             {
               href: '/work/case-studies/binns-media/',
               title: 'Binns Media Group',
-              blurb: 'Flagship platform on monthly care — features shipped continuously.',
+              blurb: 'Flagship platform on monthly care, features shipped continuously.',
               image:
                 'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%204%20-%2016x9.png?updatedAt=1767539579710',
               tags: ['Retainer', 'Flagship'],

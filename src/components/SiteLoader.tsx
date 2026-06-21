@@ -17,7 +17,7 @@ export default function SiteLoader() {
         return;
       }
     } catch {
-      // sessionStorage unavailable — still show loader once
+      // sessionStorage unavailable, still show loader once
     }
 
     setVisible(true);

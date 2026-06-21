@@ -13,7 +13,7 @@ export default function DesignRushReviews() {
     >
       <div className="max-w-5xl mx-auto">
         <p className="text-[10px] font-mono uppercase tracking-[0.3em] text-[#A3D1FF] mb-8 text-center">
-          — Verified Reviews
+, Verified Reviews
         </p>
         <div
           data-designrush-widget=""

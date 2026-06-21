@@ -24,7 +24,7 @@ export default function SeoContentLayoutPage() {
         tagline={
           <>
             Pages structured for search engines AND humans. Content that ranks
-            because it actually answers the query — layouts that convert because
+            because it actually answers the query, layouts that convert because
             they don&apos;t make visitors think.
           </>
         }
@@ -81,7 +81,7 @@ export default function SeoContentLayoutPage() {
           <DeliverableRow
             number="02"
             title="Conversion-first layout"
-            description="Page structure designed around the action you want — not the template you started with. Hero, proof, objection-handling, CTA in the right order for the intent."
+            description="Page structure designed around the action you want, not the template you started with. Hero, proof, objection-handling, CTA in the right order for the intent."
           />
           <DeliverableRow
             number="03"
@@ -91,7 +91,7 @@ export default function SeoContentLayoutPage() {
           <DeliverableRow
             number="04"
             title="Performance as a ranking signal"
-            description="Sub-2-second load times, perfect Core Web Vitals. Google rewards speed directly — and visitors stop bouncing."
+            description="Sub-2-second load times, perfect Core Web Vitals. Google rewards speed directly, and visitors stop bouncing."
           />
         </div>
       </EditorialSection>
@@ -171,7 +171,7 @@ export default function SeoContentLayoutPage() {
       <ServiceColophon
         headline="Stop writing"
         italicHeadline="for nobody."
-        lead="Book a call — I'll audit one of your pages live and show you what's ranking, what's converting, and what's wasting effort."
+        lead="Book a call, I'll audit one of your pages live and show you what's ranking, what's converting, and what's wasting effort."
       />
     </>
   );

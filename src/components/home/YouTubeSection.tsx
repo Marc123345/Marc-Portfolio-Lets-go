@@ -61,7 +61,7 @@ export default function YouTubeSection() {
         <ChapterMarker number="Chapter · Broadcast" label="YouTube · @MarcFriedmanWebDesign" />
 
         <div className="grid lg:grid-cols-[1fr_1.4fr] gap-12 lg:gap-16 items-start">
-          {/* LEFT — copy */}
+          {/* LEFT, copy */}
           <motion.div style={{ y: typeY }} className="lg:sticky lg:top-32">
             <h2
               className="text-white leading-[0.92] tracking-[-0.035em] mb-6"
@@ -98,14 +98,14 @@ export default function YouTubeSection() {
               {/* Secondary socials row */}
               <div className="pt-2">
                 <p className="text-[10px] font-mono uppercase tracking-[0.3em] text-white/40 mb-3">
-                  — Also find me on
+, Also find me on
                 </p>
                 <div className="flex flex-wrap gap-2">
                   <a
                     href={LINKEDIN_PERSONAL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label="LinkedIn — Marc Friedman"
+                    aria-label="LinkedIn, Marc Friedman"
                     className="inline-flex items-center gap-2 text-sm text-white/80 font-medium border border-white/20 px-4 py-2 hover:border-[#A3D1FF] hover:text-[#A3D1FF] transition-colors group"
                   >
                     <Linkedin className="w-3.5 h-3.5" />
@@ -116,7 +116,7 @@ export default function YouTubeSection() {
                     href={LINKEDIN_COMPANY}
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label="LinkedIn — Marc Friedman Web Design company page"
+                    aria-label="LinkedIn, Marc Friedman Web Design company page"
                     className="inline-flex items-center gap-2 text-sm text-white/80 font-medium border border-white/20 px-4 py-2 hover:border-[#A3D1FF] hover:text-[#A3D1FF] transition-colors group"
                   >
                     <Building2 className="w-3.5 h-3.5" />
@@ -139,7 +139,7 @@ export default function YouTubeSection() {
             </div>
           </motion.div>
 
-          {/* RIGHT — video embed */}
+          {/* RIGHT, video embed */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -151,7 +151,7 @@ export default function YouTubeSection() {
               <div className="relative w-full" style={{ aspectRatio: '16 / 9' }}>
                 <iframe
                   src={FEATURED_EMBED}
-                  title="Marc Friedman Web Design — featured video"
+                  title="Marc Friedman Web Design, featured video"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   referrerPolicy="strict-origin-when-cross-origin"
                   allowFullScreen
