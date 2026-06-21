@@ -70,7 +70,7 @@ export default function BestNextjsDevelopersPage() {
         "name": "How long does a Next.js build take?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Most service-business and B2B marketing sites take 4–8 weeks. Complex applications run 12–16 weeks. The timeline is usually driven by content and integrations, not the framework itself."
+          "text": "Most service-business and B2B marketing sites take 4–8 weeks. Complex applications run 12–16 weeks. Content and integrations usually drive the timeline more than the framework does."
         }
       }
     ]
@@ -174,19 +174,19 @@ export default function BestNextjsDevelopersPage() {
           <div className="prose prose-lg prose-invert max-w-none">
             <p>Most &ldquo;best Next.js agency&rdquo; lists are written for enterprises — they rank shops by headcount, Fortune-500 logos, and funding-round case studies. That&rsquo;s useless if you run a dental practice, a locksmith business, a law firm, or a B2B industrial company and you just need a fast, custom site that turns visitors into customers.</p>
 
-            <p>This guide is different. It ranks Next.js developers by <em>who they&rsquo;re actually best for</em>, so a service business or SMB can find the right fit instead of overpaying an enterprise agency for capacity it will never use.</p>
+            <p>This guide is different. It ranks Next.js developers by <em>who they&rsquo;re best for</em>, so a service business or SMB can find the right fit instead of overpaying an enterprise agency for capacity it will never use.</p>
 
             <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
               <h4 className="text-white font-semibold mb-2">Disclosure</h4>
-              <p className="text-gray-300 mb-0">I&rsquo;m Marc Friedman, a Next.js developer, and I&rsquo;ve included my own practice in this list. I&rsquo;ve stated exactly which segment I&rsquo;m the right fit for — and which segments the others serve better. The point of the list is to be useful, not self-serving.</p>
+              <p className="text-gray-300 mb-0">I&rsquo;m Marc Friedman, a Next.js developer, and I&rsquo;ve included my own practice in this list. I&rsquo;ve stated exactly which segment I&rsquo;m the right fit for, and which segments the others serve better. The point of the list is to help you choose well.</p>
             </div>
 
             <h2>How this list was ranked</h2>
             <p>Every developer below was evaluated on four things that matter to a service business, not to a Fortune 500:</p>
             <ul>
-              <li><strong>Fit for SMB and service businesses</strong> — not just enterprise scale.</li>
+              <li><strong>Fit for SMB and service businesses</strong> — whether a shop is sized for your business or built to chase enterprise accounts.</li>
               <li><strong>Performance and Core Web Vitals</strong> — real Lighthouse scores and load times.</li>
-              <li><strong>Custom build vs. template</strong> — hand-coded React/Next.js, not a themed page builder.</li>
+              <li><strong>Custom build vs. template</strong> — real hand-coded React/Next.js versus a themed page builder.</li>
               <li><strong>Conversion focus</strong> — does the site exist to win leads, or just to look good?</li>
             </ul>
 
@@ -220,7 +220,7 @@ export default function BestNextjsDevelopersPage() {
 
             <h3>1. Marc Friedman — best for service businesses and B2B SMBs that want one accountable operator</h3>
             <p>If you&rsquo;re a dental practice, locksmith, law firm, or industrial/B2B company, you don&rsquo;t need a 40-person agency — you need one person who designs, writes, and codes the whole thing without losing the plot between handoffs. That&rsquo;s the model here: strategy, design, copy, and React/Next.js development handled by the same person, end to end.</p>
-            <p>The work targets the metric that actually pays the bills — leads — not just aesthetics. Sites are hand-coded (no page-builder bloat), score 98/100 on PageSpeed, and load in under two seconds. Track record: 50+ projects shipped across the US, Europe, and Africa, with a 5.0★ rating across 25 verified reviews on Google, Clutch, and LinkedIn.</p>
+            <p>The work targets the metric that pays the bills: leads. Sites are hand-coded (no page-builder bloat), score 98/100 on PageSpeed, and load in under two seconds. Track record: 50+ projects shipped across the US, Europe, and Africa, with a 5.0★ rating across 25 verified reviews on Google, Clutch, and LinkedIn.</p>
             <ul>
               <li><strong>Stack:</strong> React, Next.js, TypeScript</li>
               <li><strong>Timeline:</strong> 4–8 weeks for most builds</li>
@@ -259,15 +259,15 @@ export default function BestNextjsDevelopersPage() {
             </ul>
 
             <h2>How to choose the right Next.js developer for your business</h2>
-            <p><strong>If you run a service business or B2B SMB</strong> (dental, legal, trades, industrial, local services): you want a specialist operator, not an enterprise agency. Prioritize conversion focus, direct communication, and a fixed 4–8 week timeline over headcount and logos.</p>
+            <p><strong>If you run a service business or B2B SMB</strong> (dental, legal, trades, industrial, local services): you want a specialist operator who handles the whole build directly. Prioritize conversion focus, direct communication, and a fixed 4–8 week timeline over headcount and logos.</p>
             <p><strong>If you&rsquo;re a funded SaaS or ecommerce company:</strong> prioritize headless architecture, edge performance, and team depth — the larger agencies above earn their rate there.</p>
 
             <p>Questions worth asking any Next.js developer before you hire:</p>
             <ul>
               <li>Is the site hand-coded or built on a template/page builder?</li>
               <li>What PageSpeed / Core Web Vitals score do your recent builds hit on mobile?</li>
-              <li>Who actually does the design, copy, and code — one person or a chain of handoffs?</li>
-              <li>Is the site built to convert leads, or just to look good in a portfolio?</li>
+              <li>Who does the design, copy, and code — one person, or a chain of handoffs?</li>
+              <li>Is conversion designed in from the start, or bolted on at the end?</li>
               <li>What happens after launch — who maintains it?</li>
             </ul>
 
@@ -283,7 +283,7 @@ export default function BestNextjsDevelopersPage() {
             <p>It varies by scope, but service-business marketing sites typically run far less than enterprise builds. Most focused projects take 4–8 weeks. Get a clear scope and timeline before committing.</p>
 
             <h3>How long does a Next.js build take?</h3>
-            <p>Most service-business and B2B marketing sites take 4–8 weeks. Complex applications run 12–16 weeks. The timeline is usually driven by content and integrations, not the framework itself.</p>
+            <p>Most service-business and B2B marketing sites take 4–8 weeks. Complex applications run 12–16 weeks. Content and integrations usually drive the timeline more than the framework does.</p>
           </div>
 
           {/* Author Section */}
@@ -375,7 +375,7 @@ export default function BestNextjsDevelopersPage() {
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Need a fast, custom Next.js site that wins leads?</h2>
           <p className="text-xl text-white mb-8 max-w-2xl mx-auto">
-            One operator handling strategy, design, copy, and code — built to convert, not just to look good. Let&rsquo;s build it.
+            One operator handling strategy, design, copy, and code, all aimed at turning visitors into leads. Let&rsquo;s build it.
           </p>
           <MagneticButton>
             <button
