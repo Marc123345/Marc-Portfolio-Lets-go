@@ -366,6 +366,7 @@ const S2 = () => (
             "The Land, Settle, Thrive narrative, carried by the home page",
             "Headless CMS, i18n / RTL, analytics and schema, built to scale from three cities to eight",
             "Accessible, fast (~1.2s), ready the day it ships",
+            "Hosting and maintenance included free for the first year",
           ]}
           size={17}
         />
@@ -1330,6 +1331,15 @@ const S18 = () => (
         ))}
       </div>
     </R>
+    <R style={{ marginTop: 18 }}>
+      <div style={{ ...cardBase, background: ACCENT_FILL, borderColor: ACCENT_LINE, padding: "16px 26px" }}>
+        <p style={{ ...caption, fontSize: 16, color: SOFT }}>
+          <strong style={{ color: AMBER }}>Hosting &amp; maintenance: included free for the first year</strong>{" "}
+          (uptime, security, backups and minor edits). After year one it continues on an optional retainer,
+          or moves to THRIVE&rsquo;s own accounts.
+        </p>
+      </div>
+    </R>
   </Frame>
 );
 
@@ -1343,7 +1353,8 @@ const SUMROWS: [string, string, "head" | "row" | "accent"][] = [
   ["Milestone 1 — on start (50%)", "$2,000 · $2,500", "row"],
   ["Milestone 2 — at staging (40%)", "$1,600 · $2,000", "row"],
   ["Milestone 3 — at launch (10%)", "$400 · $500", "row"],
-  ["Third-party fees (hosting, CMS, integrations)", "THRIVE’s own accounts", "row"],
+  ["Hosting & maintenance — first year", "Included free", "row"],
+  ["Third-party CMS & integration fees", "THRIVE’s own accounts", "row"],
   ["Recommended", "Brand + website — “The Approach”", "accent"],
 ];
 const S19 = () => (
@@ -1407,6 +1418,7 @@ const S20 = () => (
             "Headless CMS setup for cities, partners, benefits and tiers",
             "Internationalisation / RTL readiness; accessibility to WCAG AA",
             "Analytics, conversion tracking, SEO / AEO foundation, deployment",
+            "Hosting & maintenance free for the first year (uptime, security, backups, minor edits)",
             "Defined revision rounds per phase; launch support and handoff",
           ]}
           size={17}
@@ -1415,9 +1427,10 @@ const S20 = () => (
           title="Excluded (available separately)"
           items={[
             "Ongoing content, iteration or growth after launch, recommended as a monthly retainer since the platform compounds",
+            "Hosting & maintenance after the first year, on a retainer or THRIVE’s own accounts",
             "Photography, video production and licensed media",
             "Copywriting beyond core site copy; legal, privacy & compliance text",
-            "Third-party platform fees (hosting, CMS, integrations), on THRIVE’s own accounts",
+            "Third-party CMS & integration fees, on THRIVE’s own accounts",
           ]}
           size={17}
           highlight

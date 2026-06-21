@@ -165,7 +165,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     pathname === '/gramercy' ||
     pathname === '/gramercy/' ||
     pathname === '/thrive' ||
-    pathname === '/thrive/';
+    pathname === '/thrive/' ||
+    // The THRIVE deck is served at the root of the thrive.* subdomain via a
+    // Cloudflare Worker rewrite, so the client-side path reads as "/" even
+    // though the deck HTML is served. Hide all chrome on that host.
+    (typeof window !== 'undefined' && window.location.hostname.startsWith('thrive.'));
   if (isBareLanding) {
     return <>{children}</>;
   }
