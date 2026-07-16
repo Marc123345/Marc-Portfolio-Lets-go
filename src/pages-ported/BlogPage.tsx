@@ -38,6 +38,16 @@ type Post = {
 
 const posts: Post[] = [
   {
+    id: 'react-user-interface-builder',
+    title: 'React: A User Interface Builder for the Modern Web',
+    excerpt:
+      'A grounded 2026 guide to React: components, JSX, the virtual DOM, state, props and hooks, unidirectional data flow, React Native, server rendering, and how to learn it.',
+    date: 'July 16, 2026',
+    readTime: '12 min read',
+    image: 'https://images.unsplash.com/photo-1633356122544-f134324a6cee?auto=format&fit=crop&w=2000&q=80',
+    categories: ['React', 'Development', 'JavaScript'],
+  },
+  {
     id: 'seo-for-construction-companies',
     title: 'SEO for Construction Companies: Win More Projects from Google in 2026',
     excerpt:
