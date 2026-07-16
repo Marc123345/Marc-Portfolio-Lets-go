@@ -88,6 +88,8 @@ const entries: Entry[] = [
   { path: 'blog/minimal-fast-sustainable-ux', priority: 0.8 },
   { path: 'blog/google-search-console-ai-reports', priority: 0.8 },
   { path: 'blog/conversational-ui-chat-interfaces', priority: 0.8 },
+  { path: 'blog/electronic-accessibility', priority: 0.8 },
+  { path: 'blog/website-not-ada-compliant', priority: 0.8 },
 
   // Legal
   { path: 'privacy-policy', priority: 0.5 },
