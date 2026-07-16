@@ -38,6 +38,16 @@ type Post = {
 
 const posts: Post[] = [
   {
+    id: 'electronic-accessibility',
+    title: 'Electronic Accessibility: Making Digital Content Work for Everyone',
+    excerpt:
+      'What electronic accessibility is, why it matters legally and commercially, the POUR and WCAG standards, and how to remove barriers across websites, documents, video, email, and social media.',
+    date: 'July 16, 2026',
+    readTime: '11 min read',
+    image: 'https://images.surferseo.art/cb035972-4d77-4a5c-aa7d-abe70c2165fd.png',
+    categories: ['Accessibility', 'WCAG', 'UX'],
+  },
+  {
     id: 'best-nextjs-developers-b2b-service-businesses-2026',
     title: 'Best Next.js Developers for B2B & Service Businesses (2026)',
     excerpt:
