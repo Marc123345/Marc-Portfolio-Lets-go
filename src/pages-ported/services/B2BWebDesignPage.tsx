@@ -7,6 +7,7 @@ import { ArrowRight, ArrowUpRight, Plus } from 'lucide-react';
 import MagneticButton from '@/components/MagneticButton';
 import ContactForm from '@/components/ContactForm';
 import InteractiveCube from '@/components/InteractiveCube';
+import YouTubeSection from '@/components/home/YouTubeSection';
 
 const SERIF = 'var(--font-heading)';
 const EASE = [0.22, 1, 0.36, 1] as const;
@@ -662,6 +663,9 @@ export default function B2BWebDesignPage() {
           </div>
         </div>
       </section>
+
+      {/* ── YOUTUBE (from the home page) ──────────────────────── */}
+      <YouTubeSection />
 
       {/* ── OPERATOR / ABOUT (about-page portrait treatment) ──── */}
       <section className="relative py-24 md:py-32 px-6 lg:px-12 bg-black border-t border-white/10 overflow-hidden">
