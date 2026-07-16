@@ -9,6 +9,15 @@ const SERIF = "var(--font-heading)";
 
 const services: ArcCard[] = [
   {
+    id: 'b2b-web-design',
+    title: 'B2B Web Design',
+    category: 'B2B',
+    blurb:
+      'A B2B web design agency building React & Next.js sites that generate qualified leads and drive pipeline.',
+    href: '/services/b2b-web-design/',
+    bullets: ['Lead-gen focused', 'Custom React + Next.js', '50+ across 3 continents'],
+  },
+  {
     id: 'web-development',
     title: 'Web Development',
     category: 'Build',
