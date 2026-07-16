@@ -5,6 +5,7 @@ import { useRef, useState } from 'react';
 import Link from 'next/link';
 import { ArrowRight, ArrowUpRight, Plus } from 'lucide-react';
 import MagneticButton from '@/components/MagneticButton';
+import ContactForm from '@/components/ContactForm';
 
 const SERIF = 'var(--font-heading)';
 const EASE = [0.22, 1, 0.36, 1] as const;
@@ -883,29 +884,33 @@ export default function B2BWebDesignPage() {
       </section>
 
       {/* ── CTA ──────────────────────────────────────────────── */}
-      <section className="relative overflow-hidden border-t border-white/10 px-6 py-28 lg:px-12 bg-black">
-        <div className="pointer-events-none absolute -bottom-40 left-1/2 h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-[#A3D1FF]/12 blur-[140px]" />
-        <div className="relative mx-auto max-w-3xl text-center">
-          <motion.h2 {...reveal} style={{ fontFamily: SERIF, fontSize: 'clamp(2rem,4vw,3.25rem)', fontWeight: 500 }}>
-            Turn your B2B website into your best salesperson
-          </motion.h2>
-          <motion.p {...reveal} className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-white/70">
-            Your website should be your number one sales tool. If it isn’t generating leads, the
-            problem usually isn’t your market, it’s your website. As your design partner and web
-            development partner, we deliver custom B2B web design that boosts credibility,
-            establishes your brand authority, and clarifies your value proposition. Book a call and
-            we’ll audit your current site, no strings, no upselling.
-          </motion.p>
-          <motion.div {...reveal} className="mt-10 flex flex-wrap justify-center gap-4">
-            <MagneticButton strength={20}>
-              <Link href="/contact/" className="inline-flex items-center gap-3 bg-white text-black font-medium px-7 py-3.5 hover:bg-[#A3D1FF] transition-colors group">
-                <span>Book your free audit</span>
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+      <section className="relative overflow-hidden border-t border-white/10 px-6 py-24 md:py-28 lg:px-12 bg-black">
+        <div className="pointer-events-none absolute -bottom-40 left-1/2 h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-[#A3D1FF]/8 blur-[140px]" />
+        <div className="relative mx-auto max-w-7xl grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          {/* Left, pitch */}
+          <div>
+            <ChapterMarker number="Chapter · Start" label="Book your audit" />
+            <motion.h2 {...reveal} style={{ fontFamily: SERIF, fontSize: 'clamp(2rem,4vw,3.5rem)', fontWeight: 500, lineHeight: 1.02, letterSpacing: '-0.02em' }}>
+              Turn your B2B website into your best salesperson
+            </motion.h2>
+            <motion.p {...reveal} className="mt-6 max-w-xl text-lg leading-relaxed text-white/70">
+              Your website should be your number one sales tool. If it isn’t generating leads, the
+              problem usually isn’t your market, it’s your website. As your design partner and web
+              development partner, we deliver custom B2B web design that boosts credibility,
+              establishes your brand authority, and clarifies your value proposition. Book a call
+              and we’ll audit your current site, no strings, no upselling.
+            </motion.p>
+            <motion.div {...reveal} className="mt-8">
+              <Link href="/work/case-studies/" className="inline-flex items-center gap-2 text-sm font-medium text-white/70 border-b border-white/20 pb-0.5 hover:text-[#A3D1FF] hover:border-[#A3D1FF] transition-colors group">
+                <span>Read the case studies</span>
+                <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
               </Link>
-            </MagneticButton>
-            <Link href="/work/case-studies/" className="inline-flex items-center gap-2 border border-white/20 px-6 py-3.5 text-sm font-medium text-white transition-colors hover:border-[#A3D1FF] hover:text-[#A3D1FF]">
-              Read the case studies
-            </Link>
+            </motion.div>
+          </div>
+
+          {/* Right, contact form */}
+          <motion.div {...reveal} className="border border-white/10 bg-[#0a0a0a] p-5 md:p-6">
+            <ContactForm />
           </motion.div>
         </div>
       </section>
