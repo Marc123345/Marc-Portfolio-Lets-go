@@ -1,492 +1,494 @@
-"use client";
+import Link from 'next/link';
 
-import {
-  ServiceMasthead,
-  ServiceMarquee,
-  EditorialSection,
-  ProblemQuote,
-  DeliverableRow,
-  ProcessChapter,
-  StatsBar,
-  WorkRow,
-  ServiceColophon,
-  ServiceNavigator,
-} from '@/components/ServiceEditorial';
+const HEADING = { fontFamily: 'var(--font-heading)' } as const;
 
-const MARC_PORTRAIT =
-  'https://ik.imagekit.io/qcvroy8xpd/PW8VUKH.png?updatedAt=1759693058055&tr=f-webp';
-
-const PROOF_TESTIMONIALS = [
+const RESULTS = [
   {
-    name: 'Omar Turner',
-    role: 'CEO, Binns Media Group · New York',
-    linkedin: 'https://www.linkedin.com/in/omar-turner-92b188130',
-    content:
-      "Marc was able to execute the vision perfectly. He's big on communication and dedicates his time to the client, ensuring you're completely satisfied at each step. I highly recommend Marc to anyone who needs a web developer who can execute on a vision and deliver a professional finished product.",
+    n: '01',
+    title: 'Custom B2B design, built to convert',
+    body:
+      'Every decision is grounded in data. 75% of users judge a company’s credibility by its website, and 42% leave sites with poor functionality. Our design and development handles both, building user-friendly sites that convert enterprise buyers, not just impress the boardroom.',
   },
   {
-    name: 'Bradley Thompson',
-    role: 'Marketing Director',
-    linkedin: 'https://www.linkedin.com/in/bradleethompson/',
-    content:
-      'Marc is an incredible ally, highly responsive with quick solutions as he built our landing page. This was a high-stakes project that did not lend itself to a template. Marc is that rare creative who excels at design AND wordsmithing. The real deal.',
+    n: '02',
+    title: 'B2B website redesign that fixes underperformers',
+    body:
+      'A redesign isn’t a new coat of paint. We audit your conversion bottlenecks, restructure the information architecture, and rebuild with conversion-rate optimization, wired into the business systems your data already lives in. A well-designed site can raise lead quantity by up to 400%.',
   },
   {
-    name: 'Darren Youngleson',
-    role: 'Serial Entrepreneur',
-    linkedin: 'https://www.linkedin.com/in/darren-youngleson-27a17310/',
-    content:
-      'Marc is an absolute winner. No limits to his depth of expertise, unwavering customer service, and the quality and creativity of his product. Highly recommend working with Marc.',
+    n: '03',
+    title: 'B2B development in React and Next.js',
+    body:
+      'We use modern frameworks that deliver superior Core Web Vitals, faster loads, and a stronger SEO foundation. A one-second speed improvement lifts conversions around 7%, the difference between winning and losing the click.',
+  },
+  {
+    n: '04',
+    title: 'UX that guides the whole buying committee',
+    body:
+      'B2B purchases involve multiple stakeholders. Our UX structures every page around the buyer’s journey, simplifying complex information so different roles can navigate it. 68% of B2B leads come through high-converting landing pages; we apply that rigor to every page.',
+  },
+  {
+    n: '05',
+    title: 'Brand identity that earns trust',
+    body:
+      'Credibility isn’t optional in B2B. A professional site builds authority and states your value proposition clearly. We build your brand into every interaction so buyers feel confident before they ever pick up the phone.',
   },
 ];
 
-const AWARDS = [
-  { label: 'Clutch', href: 'https://clutch.co/profile/marc-friedman-design-agency' },
-  { label: 'Awwwards', href: 'https://www.awwwards.com/marc-friedman/' },
+const PROCESS = [
   {
-    label: 'CSS Design Awards',
-    href: 'https://www.cssdesignawards.com/sites/marc-friedman-web-design-agency/49357/',
+    step: 'Step 1',
+    title: 'Discovery & Strategy',
+    body:
+      'Every project starts with a deep dive into your goals, audience, and competitors. We review your current site to find exactly where prospects drop off, define what a qualified lead means for your business, map the buyer journey, and set real targets for traffic, leads, and conversion, before design begins. Agencies that skip this ship sites that look great and just sit there. We do the work.',
   },
   {
-    label: 'DesignRush',
-    href: 'https://www.designrush.com/agency/profile/marc-friedman-design-agency',
+    step: 'Step 2',
+    title: 'Design & User Experience',
+    body:
+      'Once strategy is set, we craft conversion-driven designs that speak to your B2B audience. We build wireframes and prototypes that streamline the flow, prioritize your content, and make navigation obvious. 80% of B2B buyers use mobile for work, so responsive design isn’t up for debate. Trust signals like testimonials and case studies go where they move the needle.',
   },
+  {
+    step: 'Step 3',
+    title: 'Build & Launch',
+    body:
+      'We build from the ground up in React and Next.js, no templates, no unnecessary plugins, for a site that flies. Launch includes thorough cross-device testing, security verification, page-speed work, and every SEO foundation: schema markup, metadata, URL architecture, and sitemap generation.',
+  },
+  {
+    step: 'Step 4',
+    title: 'Optimize & Scale',
+    body:
+      'Launch doesn’t mean done. We watch traffic, bounce rate, session duration, and conversion rate, then keep tuning with analytics and user-behavior data. Post-launch measurement, testing, and content adjustments make sure your lead generation keeps growing alongside the business.',
+  },
+];
+
+const APART = [
+  {
+    title: 'No templates, no WordPress themes',
+    body:
+      'We build every B2B site from scratch, around each client’s exact sales process. Off-the-shelf themes are technical debt that slows you down and forces your conversion paths into a generic mold. Custom builds give you full control over how users interact, what you say, and how fast it loads.',
+  },
+  {
+    title: 'Tel Aviv-based, global reach',
+    body:
+      'We serve US and European B2B companies from our studio in Tel Aviv. 50+ projects across three continents means we know how to communicate complex services across markets, time zones, and industries, including for firms in places like San Francisco where agency costs run far higher.',
+  },
+  {
+    title: 'Proven results, not vague promises',
+    body:
+      'Our clients have earned #1 Google rankings, 300% traffic increases, and 250% engagement lifts. These aren’t hypotheticals, they’re measured outcomes from real projects, tracked and verified.',
+  },
+  {
+    title: 'Strategy over decoration',
+    body:
+      'We don’t start with fonts and colors. We start with your sales process, your competitive positioning, and your revenue targets. Design follows strategy, not the other way around, and that drives business growth, not just visual polish.',
+  },
+];
+
+const RESULT_TILES = [
+  { value: '#1', label: 'Google rankings for competitive, revenue-driving keywords' },
+  { value: '300%', label: 'Organic traffic growth through technical SEO and content' },
+  { value: '250%', label: 'Engagement lift, longer sessions and lower bounce rates' },
+  { value: '50+', label: 'Projects delivered across three continents' },
 ];
 
 const INDUSTRIES = [
   {
-    n: '01',
     title: 'Dental practices & DSOs',
     body:
-      'Complex services, multiple locations, and patients who research for weeks before booking. We build sites that drive appointment volume and support lead nurturing through the whole patient decision.',
+      'Complex services, multiple locations, and patients who research for weeks before booking an appointment. We build sites that drive appointment volume and support lead nurturing through the whole patient decision.',
   },
   {
-    n: '02',
     title: 'Industrial & manufacturing',
     body:
-      'Technical products, long sales cycles, and buyers who want spec sheets, case studies, and proof before they talk to sales. We make that complexity easy to navigate instead of a wall.',
+      'Technical products, long sales cycles, and buyers who want spec sheets, case studies, and proof of concept before they contact sales. We make that complexity work for you instead of against you.',
   },
   {
-    n: '03',
     title: 'Roofing & commercial services',
     body:
-      'High-value work where local visibility and credibility decide who gets the call. We get these businesses ranking and converting in the markets they actually serve.',
+      'High-value work where local visibility and credibility decide who gets the call. Our approach is simple: get these businesses dominating their markets online.',
   },
   {
-    n: '04',
     title: 'Media & publishing',
     body:
-      'Content-heavy environments that demand performance at scale. A Next.js architecture handles high-volume pages without giving up speed or engagement.',
+      'Content-heavy environments that demand performance at scale. Our Next.js architecture handles high-volume pages without giving up speed or engagement.',
   },
   {
-    n: '05',
     title: 'Home & property services',
     body:
-      'Competitive local markets where the site is the difference between 50 leads a month and struggling to get 5. We build for the search terms and trust signals that convert.',
+      'Competitive local markets where a well-designed site is the difference between 50 leads a month and struggling to get 5.',
   },
 ];
 
-const NEXTJS_EDGE = [
+const NEXTJS = [
   {
-    n: '01',
-    title: 'Page speed & Core Web Vitals',
-    body:
-      '2026 benchmarks put Next.js around 0.9s LCP versus roughly 2.8s on WordPress, ~120ms INP versus ~320ms, and ~0.02 CLS versus ~0.12. Those gaps feed straight into how Google ranks you.',
-  },
-  {
-    n: '02',
     title: 'Custom conversion paths',
     body:
-      'Templates force your buyer journey into a pre-built layout. Custom development builds the path around your actual B2B sales process, from first visit through to the contact form.',
+      'Templates force your buyer journey into a pre-built layout. Custom development builds the path around your specific B2B sales process, from first visit through to the contact form, with navigation different user types can actually follow.',
   },
   {
-    n: '03',
     title: 'Advanced SEO & AI search',
     body:
-      'Server-side rendering, static generation, automatic sitemaps, and granular metadata are built in. Clean, semantically structured content is also what wins in AEO and GEO, the AI answer engines.',
+      'Next.js has built-in server-side rendering, static generation, automatic sitemaps, and granular metadata control. That clean, semantic structure is also what wins in answer engine optimization and generative engine optimization, the AI-powered search paradigms.',
   },
   {
-    n: '04',
     title: 'Scalable architecture',
     body:
-      'More pages, more traffic, more languages: modular components and serverless functions scale without piling up the technical debt that template sites accumulate.',
+      'As you grow, more pages, more traffic, more languages, template sites pile up technical debt. Next.js with modular components and serverless functions scales without getting worse.',
   },
   {
-    n: '05',
-    title: 'Fewer security holes',
+    title: 'Enhanced security',
     body:
-      'No plugin ecosystem means a far smaller attack surface than WordPress, where plugin vulnerabilities are the usual way in. Security verification is simpler and the result is more reliable.',
+      'Security verification and bot protection are far simpler on a custom Next.js architecture than on WordPress, where plugin vulnerabilities create an ever-expanding attack surface. The result is verified and enterprise-level reliable.',
   },
 ];
 
 const FAQS = [
   {
     q: 'What does a B2B web design project cost?',
-    a: 'Engagements typically run $3k to $6k per month depending on scope, complexity, and ongoing optimization. We scope every project around your revenue targets rather than billing hours. Weigh that against the returns: a one-second speed improvement can lift conversions ~7%, and a well-structured site can raise lead volume substantially.',
+    a: 'B2B web design typically runs $3k to $6k per month depending on scope, complexity, and ongoing optimization, whether you’re hiring a web design agency or a web development company. We scope every engagement around your revenue targets rather than billing hours. The right agency delivers ROI, not hours: a one-second speed improvement can lift conversions ~7%, and a well-structured site can raise lead quantity by up to 400%. Weighed against those returns, a properly designed B2B site justifies the investment.',
   },
   {
     q: 'How long does a B2B website redesign take?',
-    a: 'Most projects run six to 12 weeks from discovery to launch. Smaller, clearly scoped sites go faster; larger builds with custom functionality or multiple languages take longer. We set realistic timelines during discovery and keep you updated at every step.',
+    a: 'Most projects run six to 12 weeks from discovery to launch, though it varies with site complexity, how much content needs migrating, and any new integrations. Smaller, clearly scoped sites go faster; larger builds with custom functionality or multiple languages take longer. We set realistic expectations during discovery and keep you in the loop at every step.',
   },
   {
     q: 'What happens after our B2B website goes live?',
-    a: 'Launch is the start, not the finish. We monitor performance, run tests, and keep tuning for conversions using analytics and user-behavior data, so your team can focus on the business while the site keeps improving.',
+    a: 'Launch is the start, not the finish. We keep optimizing performance, monitoring results, and squeezing out more conversions using detailed analytics and user-behavior data. You handle the core business while we handle the iterative improvements that drive better results.',
   },
   {
     q: 'Do you only work with large B2B companies?',
-    a: 'No. We work with everyone from growing service businesses to established manufacturers. What our best clients share is treating the website as a lead-generation tool rather than a brochure. When choosing an agency, look at industry specialisms, real client testimonials, and how clearly the team communicates.',
+    a: 'No. We work with everyone from growing service businesses to established manufacturers. What our best clients share is treating the website as a lead-generation tool, not a brochure. When choosing an agency, look past size and years, at industry specialisms, real client testimonials, and whether the team communicates clearly enough for smooth collaboration.',
   },
 ];
 
 export default function B2BWebDesignPage() {
   return (
-    <>
-      <ServiceMasthead
-        kicker="Service · B2B Web Design Agency"
-        title="B2B Web Design"
-        italicWord="Agency."
-        volumeNumber="12"
-        tagline={
-          <>
-            A B2B web design agency for US and European companies that need more than a
-            good-looking site, they need one that generates qualified leads and drives
-            pipeline. Custom React and Next.js, 50+ projects across three continents.
-          </>
-        }
-        meta={['6–12 week builds', '50+ shipped · 3 continents', 'React · Next.js']}
-        imageSrc="https://ik.imagekit.io/qcvroy8xpd/uoq5Ztg.jpeg"
-      />
-
-      <ServiceMarquee
-        phrases={[
-          'Custom B2B Web Design',
-          'Website Redesign',
-          'React & Next.js',
-          'Conversion Optimization',
-          'Lead Generation',
-        ]}
-      />
-
-      {/* Chapter 01 — Who it's for */}
-      <EditorialSection
-        chapter="01"
-        label="Who it's for"
-        title="Board-approved,"
-        italicTitle="but nobody's converting."
-        lead="The average B2B site converts 2.4–3.5% of visitors into leads, and most do worse. If any of these sound familiar, we should talk."
-      >
-        <div className="space-y-16">
-          {[
-            {
-              text: "We're getting traffic, but nobody's filling out the contact form.",
-              align: 'left' as const,
-              size: 'lg' as const,
-            },
-            {
-              text: 'The site won internal approval, but it isn\'t bringing in real clients.',
-              align: 'right' as const,
-              size: 'md' as const,
-            },
-            {
-              text: 'Our site is slow, and we lose buyers before they see what we do.',
-              align: 'left' as const,
-              size: 'md' as const,
-            },
-            {
-              text: 'I want a site that matches the quality of the work we actually do.',
-              align: 'right' as const,
-              size: 'lg' as const,
-            },
-          ].map((p, i) => (
-            <div
-              key={i}
-              className={`flex ${p.align === 'right' ? 'justify-end' : 'justify-start'}`}
+    <main className="bg-black text-white">
+      {/* ── Hero ─────────────────────────────────────────────── */}
+      <section className="relative overflow-hidden border-b border-white/10 px-6 pt-32 pb-20 lg:px-12 lg:pt-40 lg:pb-28">
+        <div
+          className="pointer-events-none absolute -top-40 right-0 h-[520px] w-[520px] rounded-full opacity-25 blur-[120px]"
+          style={{ background: 'radial-gradient(circle, #A3D1FF 0%, transparent 70%)' }}
+        />
+        <div className="relative mx-auto max-w-5xl">
+          <p className="mb-6 font-mono text-[11px] uppercase tracking-[0.35em] text-[#A3D1FF]">
+            B2B Web Design Agency
+          </p>
+          <h1
+            className="max-w-4xl text-4xl font-semibold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl"
+            style={HEADING}
+          >
+            A B2B web design agency that actually{' '}
+            <span className="text-[#A3D1FF]">drives pipeline.</span>
+          </h1>
+          <p className="mt-8 max-w-2xl text-lg leading-relaxed text-white/70">
+            A good-looking site with a slideshow of gleaming equipment is worthless if it
+            generates no leads. We build custom React and Next.js sites for B2B companies in
+            the US and Europe that turn traffic into qualified pipeline, not just kind comments
+            from the boardroom.
+          </p>
+          <div className="mt-10 flex flex-wrap gap-4">
+            <Link
+              href="/contact/"
+              className="mr_btn mr_btn_primary inline-flex items-center gap-2"
             >
-              <ProblemQuote text={p.text} align={p.align} size={p.size} />
-            </div>
-          ))}
-        </div>
-      </EditorialSection>
+              Book a free strategy call
+            </Link>
+            <Link
+              href="/work/"
+              className="inline-flex items-center gap-2 border border-white/20 px-6 py-3 text-sm font-medium text-white transition-colors hover:border-[#A3D1FF] hover:text-[#A3D1FF]"
+            >
+              See the work
+            </Link>
+          </div>
 
-      {/* Chapter 02 — What you get */}
-      <EditorialSection
-        chapter="02"
-        label="What you get"
-        title="Design that sells,"
-        italicTitle="not just decorates."
-        lead="Most agencies sell aesthetics. Our B2B web design services are built around outcomes. Here is what that looks like in practice."
-        bg="bg-[#0a0a0a]"
-      >
-        <div className="border-t border-white/10">
-          <DeliverableRow
-            number="01"
-            title="Custom B2B design, built to convert"
-            description="Every decision is grounded in data. 75% of users judge a company's credibility by its website, and 42% leave sites with poor functionality. We design for the enterprise buyer, not the boardroom applause."
-          />
-          <DeliverableRow
-            number="02"
-            title="Website redesign that fixes the leaks"
-            description="We audit your conversion bottlenecks, restructure the information architecture, and rebuild with conversion-rate optimization, wired into the business systems your data already lives in. A well-designed site can raise lead volume dramatically."
-          />
-          <DeliverableRow
-            number="03"
-            title="React & Next.js development"
-            description="Modern frameworks that deliver strong Core Web Vitals, fast loads, and a solid SEO foundation. A one-second speed improvement lifts conversions around 7%, the difference between winning and losing the click."
-          />
-          <DeliverableRow
-            number="04"
-            title="UX that guides the whole buying committee"
-            description="B2B purchases involve multiple stakeholders. We structure every page around the buyer's journey, simplifying complex information so different roles can navigate it. 68% of B2B leads come through high-converting landing pages; we apply that rigor site-wide."
-          />
-          <DeliverableRow
-            number="05"
-            title="Brand identity that earns trust"
-            description="Credibility isn't optional in B2B. We build your brand into every interaction and state your value proposition clearly, so buyers feel confident before they ever reach out."
-          />
+          <dl className="mt-16 grid grid-cols-2 gap-px overflow-hidden rounded-sm border border-white/10 bg-white/10 sm:grid-cols-4">
+            {[
+              { v: '2.4–3.5%', l: 'Avg B2B site conversion. Most do worse.' },
+              { v: '50+', l: 'Projects across 3 continents' },
+              { v: '#1', l: 'Google rankings delivered' },
+              { v: '<2s', l: 'Load times, built in' },
+            ].map((s) => (
+              <div key={s.l} className="bg-black p-5">
+                <dt className="text-2xl font-semibold text-white sm:text-3xl" style={HEADING}>
+                  {s.v}
+                </dt>
+                <dd className="mt-1 text-[13px] leading-snug text-white/55">{s.l}</dd>
+              </div>
+            ))}
+          </dl>
         </div>
-      </EditorialSection>
+      </section>
 
-      {/* Chapter 03 — Process */}
-      <EditorialSection
-        chapter="03"
-        label="The Process"
-        title="Four steps,"
-        italicTitle="discovery to measurable impact."
-      >
-        <div>
-          <ProcessChapter
-            numeral="I."
-            title="Discovery & Strategy"
-            description="We start with your goals, audience, and competitors, then review your current site to find exactly where prospects drop off. We define what a qualified lead means for you and map the buyer journey before any design begins. Agencies that skip this ship sites that look good and just sit there."
-            items={[
-              'Business & competitor audit',
-              'Conversion bottleneck review',
-              'Buyer-journey map',
-              'Lead & traffic targets',
-            ]}
-          />
-          <ProcessChapter
-            numeral="II."
-            title="Design & User Experience"
-            description="Wireframes and prototypes that streamline the flow, prioritize your content, and make navigation obvious. 80% of B2B buyers use mobile for work, so responsive design isn't up for debate. Trust signals like testimonials and case studies go where they move the needle."
-            items={[
-              'Conversion-driven wireframes',
-              'Interactive prototype',
-              'Mobile-first responsive',
-              'Trust signals placed to convert',
-            ]}
-            reverse
-          />
-          <ProcessChapter
-            numeral="III."
-            title="Build & Launch"
-            description="Hand-written React and Next.js, no templates or plugin bloat, for a site that flies. Launch includes cross-device testing, security verification, page-speed work, and every SEO foundation: schema, metadata, URL architecture, and sitemaps."
-            items={[
-              'Hand-coded components',
-              'Cross-device QA',
-              'Security verification',
-              'Schema, metadata & sitemaps',
-            ]}
-          />
-          <ProcessChapter
-            numeral="IV."
-            title="Optimize & Scale"
-            description="Launch doesn't mean done. We watch traffic, bounce rate, session duration, and conversion rate, then keep refining with analytics and user-behavior data so lead generation grows alongside your business."
-            items={[
-              'Ongoing performance monitoring',
-              'A/B testing',
-              'Content strategy adjustments',
-              'Continuous CRO',
-            ]}
-            reverse
-          />
-        </div>
-      </EditorialSection>
-
-      {/* Chapter 04 — Proof */}
-      <EditorialSection
-        chapter="04"
-        label="Proof"
-        title="The receipts,"
-        italicTitle="not the promises."
-        bg="bg-[#0a0a0a]"
-      >
-        <div className="mb-14 flex flex-col sm:flex-row sm:items-center gap-5 border border-white/10 bg-[#111418] p-6 md:p-8">
-          <img
-            src={MARC_PORTRAIT}
-            alt="Marc Friedman, full-stack designer and developer"
-            className="w-20 h-20 rounded-full object-cover object-top ring-1 ring-white/15 flex-shrink-0"
-            loading="lazy"
-            width={80}
-            height={80}
-          />
-          <div>
-            <p className="text-white text-xl mb-1" style={{ fontFamily: 'var(--font-heading)' }}>
-              Built by Marc Friedman
+      {/* ── Positioning ──────────────────────────────────────── */}
+      <section className="px-6 py-20 lg:px-12">
+        <div className="mx-auto grid max-w-5xl gap-10 md:grid-cols-[1fr_1.4fr]">
+          <h2 className="text-2xl font-semibold leading-snug sm:text-3xl" style={HEADING}>
+            Results, not just aesthetics.
+          </h2>
+          <div className="space-y-5 text-white/70 leading-relaxed">
+            <p>
+              Too many B2B companies have a website that wins internal approval but fails to
+              attract real clients or move buyers through the sales process. When no one
+              converts, the lost revenue adds up at every stage of the funnel.
             </p>
-            <p className="text-white/65 text-sm md:text-base leading-relaxed max-w-2xl">
-              Senior full-stack designer &amp; developer based in Tel Aviv, working with B2B
-              companies across the US and Europe. Every project runs from discovery to launch
-              under one set of hands: no agency handoff, no offshore team.
+            <p>
+              Based in Tel Aviv and working across three continents, we combine strategic
+              design, UX for complex B2B buying journeys, brand integration, and technical
+              depth to build sites that turn traffic into pipeline.
             </p>
-            <div className="flex gap-5 mt-3 text-[11px] font-mono uppercase tracking-[0.2em]">
-              <a href="/about/" className="text-[#A3D1FF] hover:underline">
-                About
-              </a>
-              <a
-                href="https://www.linkedin.com/in/portfolio2/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[#A3D1FF] hover:underline"
-              >
-                LinkedIn
-              </a>
-            </div>
+            <p className="text-white">
+              No templates, no WordPress themes, no page builders. Every site is a custom build
+              in React and Next.js, designed around your conversion goals and your buyers, so
+              your team can focus on the day job while we handle design and development.
+            </p>
           </div>
         </div>
+      </section>
 
-        <StatsBar
-          stats={[
-            { value: '#1', label: 'Google Rankings' },
-            { value: '300%', label: 'Traffic Growth' },
-            { value: '250%', label: 'Engagement Lift' },
-            { value: '50+', label: 'Projects · 3 Continents' },
-          ]}
-        />
-        <WorkRow
-          items={[
-            {
-              href: '/work/case-studies/binns-media/',
-              title: 'Binns Media Group',
-              blurb: 'Production house → streaming platform. React + TypeScript + Postgres.',
-              image:
-                'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%204%20-%2016x9.png?updatedAt=1767539579710',
-              tags: ['React 18', 'TypeScript', 'Postgres'],
-            },
-            {
-              href: '/work/case-studies/paving-leads/',
-              title: 'Paving Leads',
-              blurb: 'Failing Core Web Vitals → 98 Lighthouse. Leads doubled month one.',
-              image:
-                'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%204%20-%2016_9.png?updatedAt=1767539579010',
-              tags: ['Next.js', 'SEO', 'Lead Gen'],
-            },
-          ]}
-        />
-
-        <div className="mt-16 grid md:grid-cols-3 gap-px bg-white/10 border border-white/10">
-          {PROOF_TESTIMONIALS.map((t) => (
-            <figure key={t.name} className="bg-black p-8 flex flex-col">
-              <div className="flex items-center gap-1 mb-4 text-[#FFD700]">{'★★★★★'}</div>
-              <blockquote className="text-white/80 text-sm leading-relaxed flex-1">
-                “{t.content}”
-              </blockquote>
-              <figcaption className="mt-5 pt-5 border-t border-white/10">
-                <a
-                  href={t.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-white text-sm font-semibold hover:text-[#A3D1FF] transition-colors"
-                >
-                  {t.name}
-                </a>
-                <div className="text-[#A3D1FF]/80 text-[11px] mt-0.5">{t.role}</div>
-              </figcaption>
-            </figure>
-          ))}
+      {/* ── Why our services get results ─────────────────────── */}
+      <section className="border-t border-white/10 bg-[#0a0a0a] px-6 py-20 lg:px-12">
+        <div className="mx-auto max-w-5xl">
+          <p className="mb-3 font-mono text-[11px] uppercase tracking-[0.3em] text-white/40">
+            Why it works
+          </p>
+          <h2 className="mb-12 max-w-2xl text-3xl font-semibold leading-tight sm:text-4xl" style={HEADING}>
+            What sets our B2B web design services apart
+          </h2>
+          <div className="grid gap-px overflow-hidden border border-white/10 bg-white/10 sm:grid-cols-2">
+            {RESULTS.map((r) => (
+              <div key={r.n} className="flex flex-col bg-black p-8">
+                <span className="mb-4 font-mono text-sm text-[#A3D1FF]">{r.n}</span>
+                <h3 className="mb-3 text-xl text-white" style={HEADING}>
+                  {r.title}
+                </h3>
+                <p className="text-white/65 leading-relaxed">{r.body}</p>
+              </div>
+            ))}
+          </div>
         </div>
+      </section>
 
-        <div className="mt-10 flex flex-wrap items-center gap-x-3 gap-y-3 text-[11px] font-mono uppercase tracking-[0.2em]">
-          <span className="text-white/40">Reviewed &amp; awarded on</span>
-          {AWARDS.map((a) => (
-            <a
-              key={a.label}
-              href={a.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="border border-white/15 px-3 py-1.5 text-white/70 hover:border-[#A3D1FF]/60 hover:text-white transition-colors"
+      {/* ── Process ──────────────────────────────────────────── */}
+      <section className="px-6 py-20 lg:px-12">
+        <div className="mx-auto max-w-5xl">
+          <p className="mb-3 font-mono text-[11px] uppercase tracking-[0.3em] text-white/40">
+            The process
+          </p>
+          <h2 className="mb-12 text-3xl font-semibold sm:text-4xl" style={HEADING}>
+            How our B2B web design process works
+          </h2>
+          <ol className="relative space-y-10 border-l border-white/15 pl-8">
+            {PROCESS.map((p) => (
+              <li key={p.step} className="relative">
+                <span className="absolute -left-[41px] flex h-5 w-5 items-center justify-center rounded-full border border-[#A3D1FF] bg-black">
+                  <span className="h-2 w-2 rounded-full bg-[#A3D1FF]" />
+                </span>
+                <p className="font-mono text-[11px] uppercase tracking-[0.3em] text-[#A3D1FF]">
+                  {p.step}
+                </p>
+                <h3 className="mt-1 mb-2 text-xl text-white" style={HEADING}>
+                  {p.title}
+                </h3>
+                <p className="max-w-3xl text-white/65 leading-relaxed">{p.body}</p>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
+      {/* ── What sets us apart ───────────────────────────────── */}
+      <section className="border-t border-white/10 bg-[#0a0a0a] px-6 py-20 lg:px-12">
+        <div className="mx-auto max-w-5xl">
+          <h2 className="mb-4 text-3xl font-semibold sm:text-4xl" style={HEADING}>
+            What sets our B2B web design agency apart
+          </h2>
+          <p className="mb-12 max-w-2xl text-white/60">
+            Most agencies focus on making things look good. We focus on making the phone ring.
+            If others sell complexity, we sell clarity and an outcome-focused B2B approach.
+          </p>
+          <div className="grid gap-8 sm:grid-cols-2">
+            {APART.map((a) => (
+              <div key={a.title} className="border-l-2 border-[#A3D1FF]/40 pl-6">
+                <h3 className="mb-3 text-xl text-white" style={HEADING}>
+                  {a.title}
+                </h3>
+                <p className="text-white/65 leading-relaxed">{a.body}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Proven results ───────────────────────────────────── */}
+      <section className="px-6 py-20 lg:px-12">
+        <div className="mx-auto max-w-5xl">
+          <h2 className="mb-3 text-3xl font-semibold sm:text-4xl" style={HEADING}>
+            Proven results that say it all
+          </h2>
+          <p className="mb-12 max-w-2xl text-white/60">
+            Results speak louder than promises. Here is what our B2B web design services have
+            delivered.
+          </p>
+          <div className="grid grid-cols-2 gap-px overflow-hidden border border-white/10 bg-white/10 lg:grid-cols-4">
+            {RESULT_TILES.map((t) => (
+              <div key={t.value} className="bg-black p-8">
+                <div className="text-4xl font-semibold text-[#A3D1FF]" style={HEADING}>
+                  {t.value}
+                </div>
+                <p className="mt-3 text-sm leading-snug text-white/60">{t.label}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-8 border border-[#A3D1FF]/20 bg-[#0d1218] p-8">
+            <p className="text-white/75 leading-relaxed">
+              Industry benchmarks tell the same story as our own client data. B2B manufacturers
+              that invest in a proper redesign see dramatic gains: one company saw a{' '}
+              <strong className="text-white">1,400% jump in web traffic and 120+ leads in 90 days</strong>{' '}
+              where it previously earned about one lead a month; another saw a{' '}
+              <strong className="text-white">105% increase in organic traffic and a 47% drop in bounce rate</strong>{' '}
+              within 90 days of relaunch. A well-made website moves the engagement number, and
+              when engagement goes up, so does the pipeline.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Industries ───────────────────────────────────────── */}
+      <section className="border-t border-white/10 bg-[#0a0a0a] px-6 py-20 lg:px-12">
+        <div className="mx-auto max-w-5xl">
+          <h2 className="mb-4 text-3xl font-semibold sm:text-4xl" style={HEADING}>
+            B2B industries we serve
+          </h2>
+          <p className="mb-12 max-w-2xl text-white/60">
+            A specialized B2B web design agency drives higher-quality leads because it
+            understands the purchasing dynamics, terminology, and trust signals of each
+            vertical.
+          </p>
+          <div className="grid gap-px overflow-hidden border border-white/10 bg-white/10 sm:grid-cols-2 lg:grid-cols-3">
+            {INDUSTRIES.map((it) => (
+              <div key={it.title} className="bg-black p-8">
+                <h3 className="mb-3 text-lg text-white" style={HEADING}>
+                  {it.title}
+                </h3>
+                <p className="text-sm leading-relaxed text-white/60">{it.body}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Why custom Next.js ───────────────────────────────── */}
+      <section className="px-6 py-20 lg:px-12">
+        <div className="mx-auto max-w-5xl">
+          <h2 className="mb-4 text-3xl font-semibold sm:text-4xl" style={HEADING}>
+            Why custom Next.js beats templates for B2B lead generation
+          </h2>
+          <p className="mb-10 max-w-2xl text-white/60">
+            Template sites can’t compete with custom development for B2B conversion. Here is why
+            React and Next.js is the foundation, and why it matters to your bottom line.
+          </p>
+
+          {/* Core Web Vitals comparison */}
+          <div className="mb-12 overflow-x-auto">
+            <table className="w-full min-w-[480px] border-collapse text-left text-sm">
+              <caption className="mb-3 text-left text-white/50">
+                2026 performance benchmarks, Core Web Vitals
+              </caption>
+              <thead>
+                <tr className="border-b border-white/15 text-white/50">
+                  <th className="py-3 pr-4 font-medium">Metric</th>
+                  <th className="py-3 pr-4 font-medium text-[#A3D1FF]">Next.js</th>
+                  <th className="py-3 font-medium">WordPress</th>
+                </tr>
+              </thead>
+              <tbody className="text-white/80">
+                {[
+                  ['Largest Contentful Paint (LCP)', '~0.9s', '~2.8s'],
+                  ['Interaction to Next Paint (INP)', '~120ms', '~320ms'],
+                  ['Cumulative Layout Shift (CLS)', '~0.02', '~0.12'],
+                ].map((row) => (
+                  <tr key={row[0]} className="border-b border-white/10">
+                    <td className="py-3 pr-4">{row[0]}</td>
+                    <td className="py-3 pr-4 font-semibold text-[#A3D1FF]">{row[1]}</td>
+                    <td className="py-3 text-white/55">{row[2]}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+            <p className="mt-3 text-sm text-white/50">
+              Those aren’t marginal differences. They feed directly into how Google evaluates
+              and ranks your site, and our Next.js architecture delivers secure, scalable, fast,
+              and mobile-friendly without the plugin bloat.
+            </p>
+          </div>
+
+          <div className="grid gap-8 sm:grid-cols-2">
+            {NEXTJS.map((n) => (
+              <div key={n.title}>
+                <h3 className="mb-2 text-lg text-white" style={HEADING}>
+                  {n.title}
+                </h3>
+                <p className="text-white/60 leading-relaxed">{n.body}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── FAQ ──────────────────────────────────────────────── */}
+      <section className="border-t border-white/10 bg-[#0a0a0a] px-6 py-20 lg:px-12">
+        <div className="mx-auto max-w-3xl">
+          <h2 className="mb-10 text-3xl font-semibold sm:text-4xl" style={HEADING}>
+            Frequently asked questions
+          </h2>
+          <div className="divide-y divide-white/10 border-y border-white/10">
+            {FAQS.map((f) => (
+              <details key={f.q} className="group py-5">
+                <summary className="flex cursor-pointer items-center justify-between gap-4 text-lg text-white marker:content-none [&::-webkit-details-marker]:hidden">
+                  <span style={HEADING}>{f.q}</span>
+                  <span className="text-[#A3D1FF] transition-transform group-open:rotate-45">
+                    +
+                  </span>
+                </summary>
+                <p className="mt-3 text-white/65 leading-relaxed">{f.a}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Closing CTA ──────────────────────────────────────── */}
+      <section className="relative overflow-hidden border-t border-white/10 px-6 py-24 lg:px-12">
+        <div
+          className="pointer-events-none absolute -bottom-40 left-1/2 h-[500px] w-[500px] -translate-x-1/2 rounded-full opacity-20 blur-[120px]"
+          style={{ background: 'radial-gradient(circle, #A3D1FF 0%, transparent 70%)' }}
+        />
+        <div className="relative mx-auto max-w-3xl text-center">
+          <h2 className="text-3xl font-semibold sm:text-4xl" style={HEADING}>
+            Turn your B2B website into your best salesperson
+          </h2>
+          <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-white/70">
+            Your website should be your number one sales tool. If it isn’t generating leads, the
+            problem usually isn’t your market, it’s your website. Book a call and we’ll audit your
+            current site, find the biggest opportunities to lift conversions, and give you a
+            clear plan, no strings, no upselling.
+          </p>
+          <div className="mt-10 flex flex-wrap justify-center gap-4">
+            <Link href="/contact/" className="mr_btn mr_btn_primary inline-flex items-center gap-2">
+              Book your free audit
+            </Link>
+            <Link
+              href="/work/case-studies/"
+              className="inline-flex items-center gap-2 border border-white/20 px-6 py-3 text-sm font-medium text-white transition-colors hover:border-[#A3D1FF] hover:text-[#A3D1FF]"
             >
-              {a.label}
-            </a>
-          ))}
+              Read the case studies
+            </Link>
+          </div>
         </div>
-      </EditorialSection>
-
-      {/* Chapter 05 — Industries */}
-      <EditorialSection
-        chapter="05"
-        label="Industries"
-        title="B2B verticals"
-        italicTitle="we know cold."
-        lead="A specialized B2B web design agency drives better leads because it understands the purchasing dynamics, terminology, and trust signals of each vertical."
-      >
-        <div className="grid md:grid-cols-3 gap-px bg-white/10 border border-white/10">
-          {INDUSTRIES.map((it) => (
-            <div key={it.n} className="bg-black p-8">
-              <div className="text-[10px] font-mono uppercase tracking-[0.3em] text-white/40 mb-3">
-                {it.n}
-              </div>
-              <h3 className="text-white text-xl mb-3" style={{ fontFamily: 'var(--font-heading)' }}>
-                {it.title}
-              </h3>
-              <p className="text-white/70 leading-relaxed">{it.body}</p>
-            </div>
-          ))}
-        </div>
-      </EditorialSection>
-
-      {/* Chapter 06 — Why Next.js */}
-      <EditorialSection
-        chapter="06"
-        label="Why custom Next.js"
-        title="Custom code beats"
-        italicTitle="a template every time."
-        lead="Templates can't compete with custom development for B2B conversion. Here is why React and Next.js is the foundation, and why it matters to your pipeline."
-        bg="bg-[#0a0a0a]"
-      >
-        <div className="grid md:grid-cols-3 gap-px bg-white/10 border border-white/10">
-          {NEXTJS_EDGE.map((it) => (
-            <div key={it.n} className="bg-black p-8">
-              <div className="text-[10px] font-mono uppercase tracking-[0.3em] text-white/40 mb-3">
-                {it.n}
-              </div>
-              <h3 className="text-white text-xl mb-3" style={{ fontFamily: 'var(--font-heading)' }}>
-                {it.title}
-              </h3>
-              <p className="text-white/70 leading-relaxed">{it.body}</p>
-            </div>
-          ))}
-        </div>
-      </EditorialSection>
-
-      {/* Chapter 07 — FAQ */}
-      <EditorialSection
-        chapter="07"
-        label="FAQ"
-        title="Questions,"
-        italicTitle="answered straight."
-      >
-        <div className="border-t border-white/10">
-          {FAQS.map((f) => (
-            <div key={f.q} className="border-b border-white/10 py-8">
-              <h3
-                className="text-white text-lg md:text-xl mb-3"
-                style={{ fontFamily: 'var(--font-heading)' }}
-              >
-                {f.q}
-              </h3>
-              <p className="text-white/70 leading-relaxed max-w-3xl">{f.a}</p>
-            </div>
-          ))}
-        </div>
-      </EditorialSection>
-
-      <ServiceNavigator currentSlug="b2b-web-design" />
-      <ServiceColophon
-        headline="Your website should be"
-        italicHeadline="your best salesperson."
-        lead="Book 30 minutes. I'll audit your current B2B site live on the call and show you exactly where you're losing leads, no upsell, just a straight read on what it should be doing for you."
-      />
-    </>
+      </section>
+    </main>
   );
 }
