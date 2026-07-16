@@ -12,6 +12,10 @@ import Link from 'next/link';
  */
 
 const PSI_ENDPOINT = 'https://www.googleapis.com/pagespeedonline/v5/runPagespeed';
+// PageSpeed Insights requires an API key for a usable quota. Without one the
+// shared anonymous quota is permanently exhausted (429). Set a domain-restricted
+// key in Vercel as NEXT_PUBLIC_PAGESPEED_API_KEY; it is safe to expose client-side.
+const PSI_API_KEY = process.env.NEXT_PUBLIC_PAGESPEED_API_KEY;
 const ACCENT = '#A3D1FF';
 
 type CategoryKey = 'performance' | 'accessibility' | 'best-practices' | 'seo';
@@ -102,12 +106,17 @@ export default function WebsiteAnalyzer() {
       ['performance', 'accessibility', 'best-practices', 'seo'].forEach((c) =>
         params.append('category', c),
       );
+      if (PSI_API_KEY) params.append('key', PSI_API_KEY);
       const res = await fetch(`${PSI_ENDPOINT}?${params.toString()}`);
       if (!res.ok) {
         throw new Error(
           res.status === 429
-            ? 'Google rate-limited this analyzer for a moment. Please try again shortly.'
-            : `Could not analyze that URL (error ${res.status}). Make sure it’s a public, live page.`,
+            ? PSI_API_KEY
+              ? 'This analyzer is over its quota for now, please try again in a minute.'
+              : 'The analyzer is temporarily unavailable. Please try again shortly.'
+            : res.status === 400
+              ? 'That doesn’t look like a reachable public URL. Check the address and try again.'
+              : `Could not analyze that URL (error ${res.status}). Make sure it’s a public, live page.`,
         );
       }
       const data = await res.json();
