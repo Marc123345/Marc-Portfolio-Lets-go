@@ -392,6 +392,11 @@ export default function B2BWebDesignPage() {
                             WebkitBackgroundClip: 'text',
                             backgroundClip: 'text',
                             color: 'transparent',
+                            // Extend the clipped-text background box so the "p"
+                            // descender isn't cut off by the tight line-height.
+                            lineHeight: 1.15,
+                            paddingBottom: '0.14em',
+                            marginBottom: '-0.14em',
                           }}
                           animate={reduce ? {} : { backgroundPosition: ['0% 0%', '220% 0%'] }}
                           transition={{ duration: 4.5, repeat: Infinity, ease: 'linear' }}
