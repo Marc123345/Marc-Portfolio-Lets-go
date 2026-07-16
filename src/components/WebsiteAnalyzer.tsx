@@ -13,9 +13,11 @@ import Link from 'next/link';
 
 const PSI_ENDPOINT = 'https://www.googleapis.com/pagespeedonline/v5/runPagespeed';
 // PageSpeed Insights requires an API key for a usable quota. Without one the
-// shared anonymous quota is permanently exhausted (429). Set a domain-restricted
-// key in Vercel as NEXT_PUBLIC_PAGESPEED_API_KEY; it is safe to expose client-side.
-const PSI_API_KEY = process.env.NEXT_PUBLIC_PAGESPEED_API_KEY;
+// shared anonymous quota is permanently exhausted (429). This key is restricted
+// to the PageSpeed Insights API; add a Websites (HTTP referrer) restriction to
+// lock it to this domain. Overridable via NEXT_PUBLIC_PAGESPEED_API_KEY.
+const PSI_API_KEY =
+  process.env.NEXT_PUBLIC_PAGESPEED_API_KEY || 'AIzaSyBdYw1M3qVs4Zk5LIZvo-UaZUP4-thzX8c';
 const ACCENT = '#A3D1FF';
 
 type CategoryKey = 'performance' | 'accessibility' | 'best-practices' | 'seo';
