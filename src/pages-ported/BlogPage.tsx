@@ -38,6 +38,16 @@ type Post = {
 
 const posts: Post[] = [
   {
+    id: 'seo-for-construction-companies',
+    title: 'SEO for Construction Companies: Win More Projects from Google in 2026',
+    excerpt:
+      'Turn a construction website into a steady source of project leads: local SEO, keyword research, on-page and technical SEO, content, link building, AI answer engines, and how to track results.',
+    date: 'July 16, 2026',
+    readTime: '16 min read',
+    image: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=2000&q=80',
+    categories: ['SEO', 'Local SEO', 'Construction'],
+  },
+  {
     id: 'website-not-ada-compliant',
     title: 'Website Not ADA Compliant: Risks, Requirements, and How to Fix It',
     excerpt:
