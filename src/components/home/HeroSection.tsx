@@ -14,6 +14,7 @@ import {
 } from 'framer-motion';
 
 import MagneticButton from '@/components/MagneticButton';
+import InteractiveCube from '@/components/InteractiveCube';
 
 const MARC_PORTRAIT =
   'https://ik.imagekit.io/qcvroy8xpd/PW8VUKH.png?updatedAt=1759693058055&tr=f-webp';
@@ -22,6 +23,15 @@ const CLIENT_AVATARS = [
   'https://ik.imagekit.io/qcvroy8xpd/1682479506906.jpeg?updatedAt=1754019693073',
   'https://ik.imagekit.io/qcvroy8xpd/4c91361b-27ee-453b-88e0-af3026cac747_1_ro3hez_e_background_removal_f_png_vkfbub.png?updatedAt=1754023286922',
   'https://ik.imagekit.io/qcvroy8xpd/1732338426448%20(1).jpeg?updatedAt=1749337717019',
+];
+
+const CUBE_FACES = [
+  { image: 'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%204%20-%2016_9.png?updatedAt=1767539579010', category: 'SEO · Lead Gen', title: 'Paving Leads' },
+  { image: 'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%204%20-%2016x9.png?updatedAt=1767539579710', category: 'Media Platform', title: 'Binns Media Group' },
+  { image: 'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%201%20-%201x1(1).png?updatedAt=1767539579782', category: 'Impact', title: 'Untapped Africa' },
+  { image: 'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%201%20-%201x1(5).png?updatedAt=1767539579818', category: 'AI · Healthcare', title: 'iLight Care' },
+  { image: 'https://ik.imagekit.io/qcvroy8xpd/image%201%20(5).png', category: 'Agency Brand', title: 'H2H Marketing' },
+  { image: 'https://ik.imagekit.io/qcvroy8xpd/1732717492455.jpeg', category: 'SaaS · Analytics', title: 'AutoMarginX' },
 ];
 
 const EASE = [0.22, 1, 0.36, 1] as const;
@@ -450,7 +460,7 @@ export default function HeroSection() {
             </motion.div>
           </div>
 
-          {/* ── Right, Marc bursting out of a laptop (parallax) ─────── */}
+          {/* ── Right, interactive cube of website work ─────── */}
           <motion.div
             className="lg:col-span-5 flex justify-center"
             style={{ x: fgX, y: fgY, willChange: 'transform' }}
@@ -458,196 +468,7 @@ export default function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.25, ease: EASE }}
           >
-            <div className="relative" style={{ width: 'min(440px, 86vw)', aspectRatio: '5 / 6', perspective: 1100 }}>
-              {/* Conic light-beam erupting from the screen */}
-              <motion.div
-                aria-hidden
-                className="absolute left-1/2 rounded-full pointer-events-none"
-                style={{
-                  width: '120%',
-                  height: '120%',
-                  bottom: '8%',
-                  x: '-50%',
-                  willChange: 'transform',
-                  background:
-                    'conic-gradient(from 0deg, rgba(163,209,255,0) 0deg, rgba(163,209,255,0.4) 55deg, rgba(163,209,255,0) 130deg, rgba(163,209,255,0) 360deg)',
-                  filter: 'blur(34px)',
-                  opacity: 0.5,
-                }}
-                animate={reduce ? {} : { rotate: 360 }}
-                transition={{ duration: 14, repeat: Infinity, ease: 'linear' }}
-              />
-
-              {/* Orbiting dashed rings around the rig */}
-              <motion.div
-                aria-hidden
-                className="absolute left-1/2 rounded-full border border-dashed border-[#A3D1FF]/25 pointer-events-none"
-                style={{ width: '108%', height: '74%', bottom: '12%', x: '-50%', willChange: 'transform' }}
-                animate={reduce ? {} : { rotate: 360 }}
-                transition={{ duration: 34, repeat: Infinity, ease: 'linear' }}
-              />
-              <motion.div
-                aria-hidden
-                className="absolute left-1/2 rounded-full border border-dashed border-white/10 pointer-events-none"
-                style={{ width: '92%', height: '60%', bottom: '18%', x: '-50%', willChange: 'transform' }}
-                animate={reduce ? {} : { rotate: -360 }}
-                transition={{ duration: 26, repeat: Infinity, ease: 'linear' }}
-              />
-
-              {/* Laptop screen (behind Marc) */}
-              <motion.div
-                className="absolute"
-                style={{ left: '7%', right: '7%', bottom: '12%', zIndex: 5 }}
-                initial={{ opacity: 0, y: 24, scaleY: 0.6 }}
-                animate={{ opacity: 1, y: 0, scaleY: 1 }}
-                transition={{ duration: 0.6, delay: 0.35, ease: EASE }}
-              >
-                <LaptopScreen />
-              </motion.div>
-
-              {/* Shockwave ring fired when Marc launches */}
-              {!reduce && (
-                <motion.div
-                  aria-hidden
-                  className="absolute left-1/2 rounded-full border-2 border-[#A3D1FF]/60 pointer-events-none"
-                  style={{ width: '40%', height: '20%', bottom: '40%', x: '-50%', zIndex: 8 }}
-                  initial={{ scale: 0.2, opacity: 0 }}
-                  animate={{ scale: [0.2, 2.4], opacity: [0.8, 0] }}
-                  transition={{ duration: 1, delay: 0.95, ease: 'easeOut' }}
-                />
-              )}
-
-              {/* Speed lines */}
-              {!reduce &&
-                [-44, -22, 0, 22, 44].map((dx, i) => (
-                  <motion.div
-                    key={dx}
-                    aria-hidden
-                    className="absolute bg-gradient-to-t from-transparent to-[#A3D1FF]/70 pointer-events-none"
-                    style={{ width: 2, height: 46, left: `calc(50% + ${dx}px)`, bottom: '38%', zIndex: 8 }}
-                    initial={{ opacity: 0, scaleY: 0.2, y: 30 }}
-                    animate={{ opacity: [0, 0.9, 0], scaleY: [0.2, 1, 0.2], y: [30, -40] }}
-                    transition={{ duration: 0.7, delay: 0.85 + i * 0.04, ease: 'easeOut' }}
-                  />
-                ))}
-
-              {/* MARC, shoots up out of the screen with a 3D tilt */}
-              <motion.div
-                className="absolute"
-                style={{ left: '50%', bottom: '30%', width: '58%', x: '-50%', zIndex: 10, transformOrigin: 'bottom center', transformStyle: 'preserve-3d', willChange: 'transform' }}
-                initial={{ y: 90, scale: 0.45, opacity: 0, rotateX: 38 }}
-                animate={{ y: 0, scale: 1, opacity: 1, rotateX: 0 }}
-                transition={{ type: 'spring', stiffness: 120, damping: 11, delay: 0.7 }}
-                whileHover={reduce ? undefined : { scale: 1.04, y: -8 }}
-              >
-                <motion.div
-                  animate={reduce ? {} : { y: [0, -12, 0], rotate: [0, 1.2, 0] }}
-                  transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut', delay: 1.6 }}
-                >
-                  <Image
-                    src={MARC_PORTRAIT}
-                    alt="Marc Friedman, Custom Web Design for B2B & Service Businesses"
-                    width={440}
-                    height={550}
-                    priority
-                    className="block w-full h-auto"
-                    style={{
-                      borderRadius: 18,
-                      border: '3px solid rgba(255,255,255,0.14)',
-                      boxShadow: '0 40px 90px -20px rgba(0,0,0,0.7), 0 0 60px -10px rgba(163,209,255,0.35)',
-                    }}
-                  />
-                </motion.div>
-              </motion.div>
-
-              {/* Laptop base / keyboard (in front, Marc tucks behind it) */}
-              <motion.div
-                className="absolute"
-                style={{ left: 0, right: 0, bottom: 0, zIndex: 20 }}
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.25, ease: EASE }}
-              >
-                <LaptopBase />
-              </motion.div>
-
-              {/* Floating tech-stack chips */}
-              {STACK.map((chip, i) => (
-                <motion.div
-                  key={chip.key}
-                  aria-hidden
-                  className="absolute z-30 flex items-center justify-center rounded-2xl border border-white/10 bg-white/[0.06] text-white backdrop-blur-md shadow-[0_8px_30px_-8px_rgba(0,0,0,0.6)]"
-                  style={{ width: 52, height: 52, willChange: 'transform', ...chip.pos }}
-                  initial={{ opacity: 0, scale: 0 }}
-                  animate={
-                    reduce
-                      ? { opacity: 1, scale: 1 }
-                      : { opacity: 1, scale: 1, y: [0, i % 2 === 0 ? -12 : 12, 0] }
-                  }
-                  transition={
-                    reduce
-                      ? { duration: 0.4, delay: 1.1 + i * 0.1 }
-                      : {
-                          opacity: { duration: 0.5, delay: 1.2 + i * 0.12, ease: EASE },
-                          scale: { duration: 0.5, delay: 1.2 + i * 0.12, ease: EASE },
-                          y: { duration: 3 + i * 0.4, repeat: Infinity, ease: 'easeInOut', delay: i * 0.3 },
-                        }
-                  }
-                >
-                  {chip.node}
-                </motion.div>
-              ))}
-
-              {/* Floating glass stat cards */}
-              <motion.div
-                aria-hidden
-                className="absolute z-30 rounded-xl border border-white/10 bg-black/40 px-3.5 py-2 backdrop-blur-md shadow-[0_10px_30px_-10px_rgba(0,0,0,0.7)]"
-                style={{ top: '16%', right: '-12%', willChange: 'transform' }}
-                initial={{ opacity: 0, x: 20 }}
-                animate={reduce ? { opacity: 1, x: 0 } : { opacity: 1, x: 0, y: [0, -14, 0] }}
-                transition={
-                  reduce
-                    ? { duration: 0.5, delay: 1.4 }
-                    : {
-                        opacity: { duration: 0.6, delay: 1.4, ease: EASE },
-                        x: { duration: 0.6, delay: 1.4, ease: EASE },
-                        y: { duration: 4.2, repeat: Infinity, ease: 'easeInOut' },
-                      }
-                }
-              >
-                <div className="text-[#A3D1FF] font-heading text-xl font-bold leading-none">98<span className="text-white/40 text-sm">/100</span></div>
-                <div className="text-white/60 text-[11px] uppercase tracking-wider mt-0.5">PageSpeed</div>
-              </motion.div>
-
-              <motion.div
-                aria-hidden
-                className="absolute z-30 flex items-center gap-2 rounded-xl border border-white/10 bg-black/40 px-3.5 py-2 backdrop-blur-md shadow-[0_10px_30px_-10px_rgba(0,0,0,0.7)]"
-                style={{ bottom: '30%', left: '-13%', willChange: 'transform' }}
-                initial={{ opacity: 0, x: -20 }}
-                animate={reduce ? { opacity: 1, x: 0 } : { opacity: 1, x: 0, y: [0, 14, 0] }}
-                transition={
-                  reduce
-                    ? { duration: 0.5, delay: 1.55 }
-                    : {
-                        opacity: { duration: 0.6, delay: 1.55, ease: EASE },
-                        x: { duration: 0.6, delay: 1.55, ease: EASE },
-                        y: { duration: 3.6, repeat: Infinity, ease: 'easeInOut' },
-                      }
-                }
-              >
-                <span className="text-[#A3D1FF] text-lg" aria-hidden>⚡</span>
-                <div>
-                  <div className="text-white font-heading text-base font-bold leading-none">&lt; 2s</div>
-                  <div className="text-white/60 text-[11px] uppercase tracking-wider mt-0.5">Load time</div>
-                </div>
-              </motion.div>
-
-              {/* Twinkling sparkles */}
-              <Sparkle style={{ top: '0%', left: '42%' }} size={20} delay={0} reduce={reduce} />
-              <Sparkle style={{ top: '26%', right: '4%' }} size={14} delay={0.9} reduce={reduce} />
-              <Sparkle style={{ top: '44%', left: '0%' }} size={16} delay={1.6} reduce={reduce} />
-              <Sparkle style={{ top: '12%', left: '8%' }} size={11} delay={2.3} reduce={reduce} />
-            </div>
+            <InteractiveCube faces={CUBE_FACES} autoRotate />
           </motion.div>
         </div>
       </div>

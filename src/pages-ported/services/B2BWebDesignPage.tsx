@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { ArrowRight, ArrowUpRight, Plus } from 'lucide-react';
 import MagneticButton from '@/components/MagneticButton';
 import ContactForm from '@/components/ContactForm';
+import InteractiveCube from '@/components/InteractiveCube';
 
 const SERIF = 'var(--font-heading)';
 const EASE = [0.22, 1, 0.36, 1] as const;
@@ -221,6 +222,15 @@ const WORK = [
       'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%201%20-%201x1(5).png?updatedAt=1767539579818',
     href: '/work/case-studies/ilight/',
   },
+];
+
+const CUBE_FACES = [
+  { image: WORK[0].image, category: WORK[0].cat, title: WORK[0].title },
+  { image: WORK[1].image, category: WORK[1].cat, title: WORK[1].title },
+  { image: WORK[2].image, category: WORK[2].cat, title: WORK[2].title },
+  { image: WORK[3].image, category: WORK[3].cat, title: WORK[3].title },
+  { image: 'https://ik.imagekit.io/qcvroy8xpd/image%201%20(5).png', category: 'Agency Brand', title: 'H2H Marketing' },
+  { image: 'https://ik.imagekit.io/qcvroy8xpd/1732717492455.jpeg', category: 'SaaS · Analytics', title: 'AutoMarginX' },
 ];
 
 const INDUSTRIES = [
@@ -452,47 +462,14 @@ export default function B2BWebDesignPage() {
               </motion.div>
             </div>
 
-            {/* Right — framed work mockup with floating stat cards */}
+            {/* Right — interactive cube of B2B website work */}
             <motion.div
               className="lg:col-span-5 flex justify-center"
-              initial={{ opacity: 0, y: 60 }}
+              initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.9, delay: 0.25, ease: EASE }}
+              transition={{ duration: 0.9, delay: 0.3, ease: EASE }}
             >
-              <div className="relative" style={{ width: 'min(460px, 88vw)' }}>
-                <motion.div
-                  className="overflow-hidden rounded-2xl border border-white/10 shadow-[0_40px_90px_-20px_rgba(0,0,0,0.7),0_0_60px_-10px_rgba(163,209,255,0.35)]"
-                  animate={reduce ? {} : { y: [0, -12, 0] }}
-                  transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
-                >
-                  <img src={WORK[0].image} alt="B2B website we designed and built, Paving Leads" className="block w-full h-auto" />
-                </motion.div>
-
-                <motion.div
-                  aria-hidden
-                  className="absolute z-30 rounded-xl border border-white/10 bg-black/50 px-3.5 py-2 backdrop-blur-md shadow-[0_10px_30px_-10px_rgba(0,0,0,0.7)]"
-                  style={{ top: '10%', right: '-8%' }}
-                  animate={reduce ? {} : { y: [0, -14, 0] }}
-                  transition={{ duration: 4.2, repeat: Infinity, ease: 'easeInOut' }}
-                >
-                  <div className="text-[#A3D1FF] font-heading text-xl font-bold leading-none">98<span className="text-white/40 text-sm">/100</span></div>
-                  <div className="text-white/60 text-[11px] uppercase tracking-wider mt-0.5">PageSpeed</div>
-                </motion.div>
-
-                <motion.div
-                  aria-hidden
-                  className="absolute z-30 flex items-center gap-2 rounded-xl border border-white/10 bg-black/50 px-3.5 py-2 backdrop-blur-md shadow-[0_10px_30px_-10px_rgba(0,0,0,0.7)]"
-                  style={{ bottom: '12%', left: '-9%' }}
-                  animate={reduce ? {} : { y: [0, 14, 0] }}
-                  transition={{ duration: 3.6, repeat: Infinity, ease: 'easeInOut' }}
-                >
-                  <span className="text-[#A3D1FF] text-lg" aria-hidden>↑</span>
-                  <div>
-                    <div className="text-white font-heading text-base font-bold leading-none">2× leads</div>
-                    <div className="text-white/60 text-[11px] uppercase tracking-wider mt-0.5">Month one</div>
-                  </div>
-                </motion.div>
-              </div>
+              <InteractiveCube faces={CUBE_FACES} autoRotate />
             </motion.div>
           </div>
         </div>
