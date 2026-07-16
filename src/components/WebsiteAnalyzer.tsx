@@ -178,7 +178,7 @@ export default function WebsiteAnalyzer() {
       {loading && (
         <div className="mt-12 flex flex-col items-center gap-4 text-white/50">
           <Loader2 className="w-8 h-8 animate-spin" style={{ color: ACCENT }} />
-          <p className="text-sm">Running a full audit, this takes 10–30 seconds.</p>
+          <p className="text-sm">Running a full audit, this can take up to 60 seconds.</p>
         </div>
       )}
 
