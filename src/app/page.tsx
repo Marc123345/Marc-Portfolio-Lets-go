@@ -2,18 +2,18 @@ import type { Metadata } from 'next';
 import HomePage from '@/pages-ported/HomePage';
 
 export const metadata: Metadata = {
-  title: { absolute: 'Custom React & Next.js Web Design for B2B & Service Businesses | Marc Friedman' },
+  title: { absolute: 'B2B & Service Web Design in Next.js | Marc Friedman' },
   description: 'Custom React & Next.js websites for B2B and service businesses. 98/100 PageSpeed, sub-2s loads, 50+ projects shipped, 5.0★ rating. Book a free strategy call.',
   alternates: { canonical: 'https://www.marcfriedmanportfolio.com/' },
   openGraph: {
-    title: 'Custom React & Next.js Web Design for B2B & Service Businesses | Marc Friedman',
+    title: 'B2B & Service Web Design in Next.js | Marc Friedman',
     description: 'Custom React & Next.js websites for B2B and service businesses. 98/100 PageSpeed, sub-2s loads, 50+ projects shipped, 5.0★ rating. Book a free strategy call.',
     url: 'https://www.marcfriedmanportfolio.com/',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Custom React & Next.js Web Design for B2B & Service Businesses | Marc Friedman',
+    title: 'B2B & Service Web Design in Next.js | Marc Friedman',
     description: 'Custom React & Next.js websites for B2B and service businesses. 98/100 PageSpeed, sub-2s loads, 50+ projects shipped, 5.0★ rating. Book a free strategy call.',
   },
 };

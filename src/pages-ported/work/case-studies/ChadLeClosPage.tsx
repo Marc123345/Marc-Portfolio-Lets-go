@@ -21,7 +21,6 @@ const config: CaseStudyConfig = {
     { value: '<2s', label: 'Load' },
     { value: 'ZA', label: 'Region' },
   ],
-  liveUrl: 'https://chadleclosswimming.com',
 
   marquee: [
     'Next.js',

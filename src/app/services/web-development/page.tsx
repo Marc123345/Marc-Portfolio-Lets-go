@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 
 const schema = {
   '@context': 'https://schema.org',
-  '@type': 'ProfessionalService',
+  '@type': 'Organization',
   name: 'Marc Friedman, Custom Website Development',
   url: 'https://www.marcfriedmanportfolio.com/services/web-development/',
   areaServed: 'Worldwide',

@@ -429,6 +429,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               <ul className="space-y-3">
                 <li><Link href="/longevity-clinics" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Longevity Clinics</Link></li>
                 <li><Link href="/biohacking-clinics" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Biohacking Studios</Link></li>
+                <li><Link href="/dental-audit/" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Dental Clinics</Link></li>
               </ul>
             </div>
 
@@ -440,6 +441,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 </p>
                 <ul className="space-y-3">
                   <li><Link href="/work/" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">All Projects</Link></li>
+                  <li><Link href="/work/case-studies/" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Case Studies</Link></li>
                   <li><Link href="/work/case-studies/binns-media/" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Binns Media Group</Link></li>
                   <li><Link href="/work/case-studies/untapped-africa/" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Untapped Africa</Link></li>
                   <li><Link href="/work/case-studies/automarginx/" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">AutoMarginX</Link></li>
@@ -469,6 +471,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                   <li><Link href="/tools/roi-calculator" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">ROI Calculator</Link></li>
                   <li><Link href="/tools/ai-crawler-optimization" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">AI Crawler Optimization</Link></li>
                   <li><Link href="/tools/project-timeline" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Project Timeline</Link></li>
+                  <li><Link href="/free-website-analyzer/" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Free Website Analyzer</Link></li>
+                  <li><Link href="/free-geo-audit/" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Free GEO Audit</Link></li>
                 </ul>
               </div>
             </div>
@@ -496,7 +500,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               <div className="flex flex-wrap justify-center gap-x-3 gap-y-1">
                 <Link href="/privacy-policy" className="text-[10px] font-mono uppercase tracking-[0.2em] text-white/40 hover:text-[#A3D1FF] transition-colors">Privacy</Link>
                 <Link href="/terms-and-conditions" className="text-[10px] font-mono uppercase tracking-[0.2em] text-white/40 hover:text-[#A3D1FF] transition-colors">Terms</Link>
-                <Link href="/accessibility-statement" className="text-[10px] font-mono uppercase tracking-[0.2em] text-white/40 hover:text-[#A3D1FF] transition-colors">Accessibility</Link>
+                <Link href="/accessibility-statement/" className="text-[10px] font-mono uppercase tracking-[0.2em] text-white/40 hover:text-[#A3D1FF] transition-colors">Accessibility</Link>
                 <Link href="/cookies-policy" className="text-[10px] font-mono uppercase tracking-[0.2em] text-white/40 hover:text-[#A3D1FF] transition-colors">Cookies</Link>
                 <Link href="/disclaimer" className="text-[10px] font-mono uppercase tracking-[0.2em] text-white/40 hover:text-[#A3D1FF] transition-colors">Disclaimer</Link>
                 <a href="/sitemap.xml" className="text-[10px] font-mono uppercase tracking-[0.2em] text-white/40 hover:text-[#A3D1FF] transition-colors">Sitemap</a>

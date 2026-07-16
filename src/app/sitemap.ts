@@ -98,6 +98,7 @@ const entries: Entry[] = [
   { path: 'disclaimer', priority: 0.5 },
   { path: 'acceptable-use-policy', priority: 0.5 },
   { path: 'dmca', priority: 0.5 },
+  { path: 'accessibility-statement', priority: 0.5 },
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

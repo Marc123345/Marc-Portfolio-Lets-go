@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 
 const schema = {
   '@context': 'https://schema.org',
-  '@type': 'ProfessionalService',
+  '@type': 'Organization',
   name: 'Marc Friedman, UI/UX Design Services',
   url: 'https://www.marcfriedmanportfolio.com/services/design/',
   areaServed: 'Worldwide',

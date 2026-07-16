@@ -22,7 +22,6 @@ const config: CaseStudyConfig = {
     { value: '100%', label: 'Custom' },
     { value: 'USA', label: 'Region' },
   ],
-  liveUrl: 'https://cumberlandtarchip.org/',
 
   marquee: [
     'React',

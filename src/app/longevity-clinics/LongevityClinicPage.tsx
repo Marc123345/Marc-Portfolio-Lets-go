@@ -80,7 +80,7 @@ function SchemaMarkup() {
         description:
           'Custom React websites for longevity, biohacking, and regenerative medicine clinics. 14-day delivery. Free Google Business setup and 3 months of SEO included.',
         provider: {
-          '@type': 'LocalBusiness',
+          '@type': 'Organization',
           name: 'Marc Friedman Web Design',
           url: 'https://www.marcfriedmanportfolio.com',
           email: 'marcf@marcfriedmanwebdesign.com',
