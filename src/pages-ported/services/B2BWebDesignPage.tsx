@@ -46,7 +46,7 @@ const PROCESS = [
     step: 'Step 2',
     title: 'Design & User Experience',
     body:
-      'Once strategy is set, we craft conversion-driven designs that speak to your B2B audience. We build wireframes and prototypes that streamline the flow, prioritize your content, and make navigation obvious. 80% of B2B buyers use mobile for work, so responsive design isn’t up for debate. Trust signals like testimonials and case studies go where they move the needle.',
+      'Once strategy is set, we craft conversion-driven designs that speak to your B2B audience. We build wireframes and prototypes that streamline the flow, prioritize your content, and make navigation obvious. 80% of B2B buyers use mobile for work, so responsive web design isn’t up for debate. Trust signals like testimonials and case studies go where they move the needle.',
   },
   {
     step: 'Step 3',
@@ -66,7 +66,7 @@ const APART = [
   {
     title: 'No templates, no WordPress themes',
     body:
-      'We build every B2B site from scratch, around each client’s exact sales process. Off-the-shelf themes are technical debt that slows you down and forces your conversion paths into a generic mold. Custom builds give you full control over how users interact, what you say, and how fast it loads.',
+      'We build every B2B site from scratch, around each client’s exact sales process. Off-the-shelf themes are technical debt that slows you down and forces your conversion paths into a generic mold. Custom builds give you full control over how users interact, what you say, and how fast it loads. As a specialized development agency and design partner, we handle B2B website design, B2B web development, and B2B website development around your exact sales process.',
   },
   {
     title: 'Tel Aviv-based, global reach',
@@ -129,7 +129,7 @@ const NEXTJS = [
   {
     title: 'Advanced SEO & AI search',
     body:
-      'Next.js has built-in server-side rendering, static generation, automatic sitemaps, and granular metadata control. That clean, semantic structure is also what wins in answer engine optimization and generative engine optimization, the AI-powered search paradigms.',
+      'Next.js has built-in server-side rendering, static generation, automatic sitemaps, and granular metadata control. That clean, semantic structure is also what wins in answer engine optimization and generative engine optimization, the AI-powered search paradigms. Our B2B web development and B2B website development services make that optimization cleaner than any template-based alternative.',
   },
   {
     title: 'Scalable architecture',
@@ -146,7 +146,7 @@ const NEXTJS = [
 const FAQS = [
   {
     q: 'What does a B2B web design project cost?',
-    a: 'B2B web design typically runs $3k to $6k per month depending on scope, complexity, and ongoing optimization, whether you’re hiring a web design agency or a web development company. We scope every engagement around your revenue targets rather than billing hours. The right agency delivers ROI, not hours: a one-second speed improvement can lift conversions ~7%, and a well-structured site can raise lead quantity by up to 400%. Weighed against those returns, a properly designed B2B site justifies the investment.',
+    a: 'B2B web design typically runs $3k to $6k per month depending on scope, complexity, and ongoing optimization, whether you’re hiring a web design agency, a web development company, or a B2B website design company. We scope every engagement around your revenue targets rather than billing hours. The right agency delivers ROI, not hours: a one-second speed improvement can lift conversions ~7%, and a well-structured site can raise lead quantity by up to 400%. Weighed against those returns, a properly designed B2B site justifies the investment.',
   },
   {
     q: 'How long does a B2B website redesign take?',
@@ -229,14 +229,16 @@ export default function B2BWebDesignPage() {
           </h2>
           <div className="space-y-5 text-white/70 leading-relaxed">
             <p>
-              Too many B2B companies have a website that wins internal approval but fails to
-              attract real clients or move buyers through the sales process. When no one
-              converts, the lost revenue adds up at every stage of the funnel.
+              Marc Friedman Design Agency is a professional web design company for B2B
+              businesses. Too many B2B companies have a website that wins internal approval but
+              fails to attract real clients or move buyers through the sales process. When no
+              one converts, the lost revenue adds up at every stage of the funnel.
             </p>
             <p>
-              Based in Tel Aviv and working across three continents, we combine strategic
-              design, UX for complex B2B buying journeys, brand integration, and technical
-              depth to build sites that turn traffic into pipeline.
+              Based in Tel Aviv and working across three continents, this B2B web design agency,
+              and B2B creative agency, combines strategic design, UX for complex B2B buying
+              journeys, brand integration, and technical depth. From B2B website design through
+              full redesign, we build sites that turn traffic into pipeline.
             </p>
             <p className="text-white">
               No templates, no WordPress themes, no page builders. Every site is a custom build
@@ -363,9 +365,11 @@ export default function B2BWebDesignPage() {
             B2B industries we serve
           </h2>
           <p className="mb-12 max-w-2xl text-white/60">
-            A specialized B2B web design agency drives higher-quality leads because it
-            understands the purchasing dynamics, terminology, and trust signals of each
-            vertical.
+            Our B2B web design business pairs web design with related digital marketing
+            services wherever it supports performance. A specialized B2B website design agency
+            drives higher-quality leads because it understands the purchasing dynamics,
+            terminology, and trust signals of each vertical, which strengthens the marketing
+            services outcomes in each one.
           </p>
           <div className="grid gap-px overflow-hidden border border-white/10 bg-white/10 sm:grid-cols-2 lg:grid-cols-3">
             {INDUSTRIES.map((it) => (
@@ -472,9 +476,11 @@ export default function B2BWebDesignPage() {
           </h2>
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-white/70">
             Your website should be your number one sales tool. If it isn’t generating leads, the
-            problem usually isn’t your market, it’s your website. Book a call and we’ll audit your
-            current site, find the biggest opportunities to lift conversions, and give you a
-            clear plan, no strings, no upselling.
+            problem usually isn’t your market, it’s your website. As your design partner and web
+            development partner, we deliver custom B2B web design that boosts credibility,
+            establishes your brand authority, and clarifies your value proposition. Book a call
+            and we’ll audit your current site, find the biggest opportunities to lift
+            conversions, and give you a clear plan, no strings, no upselling.
           </p>
           <div className="mt-10 flex flex-wrap justify-center gap-4">
             <Link href="/contact/" className="mr_btn mr_btn_primary inline-flex items-center gap-2">
