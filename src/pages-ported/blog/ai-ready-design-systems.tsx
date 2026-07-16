@@ -1,6 +1,7 @@
 import React from 'react';
 import { Calendar, Clock, ArrowLeft, Layers, Box, Code, TriangleAlert as AlertTriangle, CircleCheck as CheckCircle, Circle as XCircle, Zap, Shield, FileCode, Lightbulb, Target } from 'lucide-react';
 import Link from 'next/link';
+import ContactForm from '@/components/ContactForm';
 const blogPostSchema = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
@@ -720,6 +721,13 @@ export function validateComponent(tree) {
               </Link>
             </div>
           </div>
+        </div>
+      </section>
+      {/* Contact form */}
+      <section className="py-12 px-4 sm:px-6 lg:px-8 bg-black border-t border-white/10">
+        <div className="max-w-4xl mx-auto">
+          <h3 className="text-2xl font-semibold text-white mb-6">Start your project</h3>
+          <ContactForm />
         </div>
       </section>
     </>

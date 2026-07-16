@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { ArrowLeft, Calendar, Clock, Share2, Linkedin, Facebook, Link, ArrowRight, Grid2x2 as Grid, Square, Minimize2, Bold, LayoutGrid as Layout, Contrast } from 'lucide-react';
 import MagneticButton from '@/components/MagneticButton';
 import TwitterIcon from '@/components/TwitterIcon';
+import ContactForm from '@/components/ContactForm';
 import { useRouter } from 'next/navigation';
 export default function BrutalismAntiDesignPage() {
   const router = useRouter();
@@ -551,36 +552,10 @@ export default function BrutalismAntiDesignPage() {
             <p>Whether you fully embrace brutalist principles or simply incorporate elements of raw design into more traditional frameworks, the movement offers valuable lessons: question conventions, prioritize authenticity, embrace imperfection, and never forget that the web is made of text, links, and human ideas, everything else is optional.</p>
           </div>
 
+{/* Contact form */}
           <div className="mt-12 pt-8 border-t border-white/10">
-            <div className="flex items-center gap-4">
-              <img
-                src="https://ik.imagekit.io/qcvroy8xpd/PW8VUKH.png?updatedAt=1759693058055&tr=f-webp"
-                alt="Marc Friedman"
-                className="w-16 h-16 rounded-full object-cover"
-              />
-              <div>
-                <h3 className="text-xl font-semibold text-white">Marc Friedman</h3>
-                <p className="text-white">Full Stack Designer & Developer</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="mt-8 pt-8 border-t border-white/10">
-            <h3 className="text-xl font-semibold text-white mb-4">Share this article</h3>
-            <div className="flex gap-3">
-              <button className="p-3 bg-[#1b1b1b] rounded-full hover:bg-[#1877F2]/20 text-[#1877F2] transition-colors">
-                <Facebook className="w-5 h-5" />
-              </button>
-              <button className="p-3 bg-[#1b1b1b] rounded-full hover:bg-[#1DA1F2]/20 text-[#1DA1F2] transition-colors">
-                <TwitterIcon className="w-5 h-5" />
-              </button>
-              <button className="p-3 bg-[#1b1b1b] rounded-full hover:bg-[#0077B5]/20 text-[#0077B5] transition-colors">
-                <Linkedin className="w-5 h-5" />
-              </button>
-              <button className="p-3 bg-[#1b1b1b] rounded-full hover:bg-[#A3D1FF]/20 text-[#A3D1FF] transition-colors">
-                <Link className="w-5 h-5" />
-              </button>
-            </div>
+            <h3 className="text-2xl font-semibold text-white mb-6">Start your project</h3>
+            <ContactForm />
           </div>
 
           <div className="mt-12 pt-8 border-t border-white/10">

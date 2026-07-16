@@ -4,6 +4,7 @@ import React from 'react';
 import { ArrowLeft, Calendar, Clock, Linkedin, Facebook, Link, ArrowRight } from 'lucide-react';
 import MagneticButton from '@/components/MagneticButton';
 import TwitterIcon from '@/components/TwitterIcon';
+import ContactForm from '@/components/ContactForm';
 import { useRouter } from 'next/navigation';
 
 export default function BestNextjsDevelopersPage() {
@@ -286,41 +287,12 @@ export default function BestNextjsDevelopersPage() {
             <p>Most service-business and B2B marketing sites take 4–8 weeks. Complex applications run 12–16 weeks. Content and integrations usually drive the timeline more than the framework does.</p>
           </div>
 
-          {/* Author Section */}
+{/* Contact form */}
           <div className="mt-12 pt-8 border-t border-white/10">
-            <div className="flex items-center gap-4">
-              <img
-                src="https://ik.imagekit.io/qcvroy8xpd/PW8VUKH.png?updatedAt=1759693058055&tr=f-webp"
-                alt="Marc Friedman"
-                className="w-16 h-16 rounded-full object-cover"
-              />
-              <div>
-                <h3 className="text-xl font-semibold text-white">Marc Friedman</h3>
-                <p className="text-white">Next.js developer building custom, conversion-focused sites for B2B and service businesses</p>
-              </div>
-            </div>
+            <h3 className="text-2xl font-semibold text-white mb-6">Start your project</h3>
+            <ContactForm />
           </div>
 
-          {/* Share Section */}
-          <div className="mt-8 pt-8 border-t border-white/10">
-            <h3 className="text-xl font-semibold text-white mb-4">Share this article</h3>
-            <div className="flex gap-3">
-              <button className="p-3 bg-[#1b1b1b] rounded-full hover:bg-[#1877F2]/20 text-[#1877F2] transition-colors" aria-label="Share on Facebook">
-                <Facebook className="w-5 h-5" />
-              </button>
-              <button className="p-3 bg-[#1b1b1b] rounded-full hover:bg-[#1DA1F2]/20 text-[#1DA1F2] transition-colors" aria-label="Share on X">
-                <TwitterIcon className="w-5 h-5" />
-              </button>
-              <button className="p-3 bg-[#1b1b1b] rounded-full hover:bg-[#0077B5]/20 text-[#0077B5] transition-colors" aria-label="Share on LinkedIn">
-                <Linkedin className="w-5 h-5" />
-              </button>
-              <button className="p-3 bg-[#1b1b1b] rounded-full hover:bg-[#A3D1FF]/20 text-[#A3D1FF] transition-colors" aria-label="Copy link">
-                <Link className="w-5 h-5" />
-              </button>
-            </div>
-          </div>
-
-          {/* Related Articles */}
           <div className="mt-12 pt-8 border-t border-white/10">
             <h3 className="text-2xl font-semibold text-white mb-6">Related Articles</h3>
             <div className="grid sm:grid-cols-2 gap-6">

@@ -6,6 +6,7 @@ import { ArrowLeft, Calendar, Clock, Share2, Linkedin, Facebook, Link as LinkIco
 import MagneticButton from '@/components/MagneticButton';
 import TwitterIcon from '@/components/TwitterIcon';
 import Link from 'next/link';
+import ContactForm from '@/components/ContactForm';
 import { useRouter } from 'next/navigation';
 export default function EcommerceUXFlawsKillingConversionsPage() {
   const router = useRouter();
@@ -772,6 +773,13 @@ export default function EcommerceUXFlawsKillingConversionsPage() {
               <span>Schedule a Free Consultation</span>
             </button>
           </MagneticButton>
+        </div>
+      </section>
+      {/* Contact form */}
+      <section className="py-12 px-4 sm:px-6 lg:px-8 bg-black border-t border-white/10">
+        <div className="max-w-4xl mx-auto">
+          <h3 className="text-2xl font-semibold text-white mb-6">Start your project</h3>
+          <ContactForm />
         </div>
       </section>
     </>

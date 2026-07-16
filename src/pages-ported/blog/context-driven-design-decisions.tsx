@@ -1,6 +1,7 @@
 "use client";
 
 import React from 'react';
+import ContactForm from '@/components/ContactForm';
 import { motion } from 'framer-motion';
 import { ArrowLeft, Calendar, Clock, Target, Lightbulb, Users, Map, CircleAlert as AlertCircle, CircleCheck as CheckCircle, BookOpen, Code, TrendingUp, Linkedin } from 'lucide-react';
 import MagneticButton from '@/components/MagneticButton';
@@ -780,6 +781,13 @@ export default function ContextDrivenDesignDecisionsPage() {
           </div>
         </div>
       </article>
+      {/* Contact form */}
+      <section className="py-12 px-4 sm:px-6 lg:px-8 bg-black border-t border-white/10">
+        <div className="max-w-4xl mx-auto">
+          <h3 className="text-2xl font-semibold text-white mb-6">Start your project</h3>
+          <ContactForm />
+        </div>
+      </section>
     </>
   );
 }
