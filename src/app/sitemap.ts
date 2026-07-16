@@ -11,6 +11,7 @@ const entries: Entry[] = [
   { path: 'work', priority: 0.9 },
   { path: 'work/case-studies', priority: 0.9 },
   { path: 'services', priority: 0.9 },
+  { path: 'services/b2b-web-design', priority: 0.9 },
   { path: 'services/web-development', priority: 0.9 },
   { path: 'services/design', priority: 0.9 },
   { path: 'services/design-systems', priority: 0.9 },

@@ -411,6 +411,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 , Services
               </p>
               <ul className="space-y-3">
+                <li><Link href="/services/b2b-web-design/" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">B2B Web Design</Link></li>
                 <li><Link href="/services/web-development" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Web Development</Link></li>
                 <li><Link href="/services/design/" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">UI/UX Design</Link></li>
                 <li><Link href="/services/design-systems/" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Design Systems</Link></li>

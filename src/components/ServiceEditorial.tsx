@@ -536,6 +536,7 @@ export function WorkRow({
 
 const ALL_SERVICES = [
   { slug: 'web-development', title: 'Web Development', category: 'Build' },
+  { slug: 'b2b-web-design', title: 'B2B Web Design', category: 'B2B' },
   { slug: 'design', title: 'UI/UX Design', category: 'Design' },
   { slug: 'design-systems', title: 'Design Systems', category: 'Systems' },
   { slug: 'startup-mvp', title: 'Startup MVP', category: 'Launch' },
