@@ -44,7 +44,7 @@ const posts: Post[] = [
       'Turn a construction website into a steady source of project leads: local SEO, keyword research, on-page and technical SEO, content, link building, AI answer engines, and how to track results.',
     date: 'July 16, 2026',
     readTime: '16 min read',
-    image: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=2000&q=80',
+    image: 'https://images.surferseo.art/578a5f15-7ee3-4537-8588-8d61c352ad90.png',
     categories: ['SEO', 'Local SEO', 'Construction'],
   },
   {
