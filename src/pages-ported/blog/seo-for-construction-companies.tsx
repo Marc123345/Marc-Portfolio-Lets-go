@@ -1,9 +1,8 @@
 "use client";
 
 import React from 'react';
-import { ArrowLeft, Calendar, Clock, Linkedin, Facebook, Link, ArrowRight } from 'lucide-react';
-import MagneticButton from '@/components/MagneticButton';
-import TwitterIcon from '@/components/TwitterIcon';
+import { ArrowLeft, Calendar, Clock, ArrowRight } from 'lucide-react';
+import ContactForm from '@/components/ContactForm';
 import { useRouter } from 'next/navigation';
 
 export default function ConstructionSEOPage() {
@@ -355,38 +354,13 @@ export default function ConstructionSEOPage() {
             <p>Firms that start now in 2026 will hold a strong online presence and a commanding lead over competitors still relying only on referrals. Digital buyer behavior in the construction industry is accelerating, and the firms that show up in search results today will own the project pipelines of tomorrow.</p>
           </div>
 
-          {/* Author Section */}
-          <div className="mt-12 pt-8 border-t border-white/10">
-            <div className="flex items-center gap-4">
-              <img
-                src="https://ik.imagekit.io/qcvroy8xpd/PW8VUKH.png?updatedAt=1759693058055&tr=f-webp"
-                alt="Marc Friedman"
-                className="w-16 h-16 rounded-full object-cover"
-              />
-              <div>
-                <h3 className="text-xl font-semibold text-white">Marc Friedman</h3>
-                <p className="text-white">Full Stack Designer &amp; Developer</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Share Section */}
-          <div className="mt-8 pt-8 border-t border-white/10">
-            <h3 className="text-xl font-semibold text-white mb-4">Share this article</h3>
-            <div className="flex gap-3">
-              <button className="p-3 bg-[#1b1b1b] rounded-full hover:bg-[#1877F2]/20 text-[#1877F2] transition-colors" aria-label="Share on Facebook">
-                <Facebook className="w-5 h-5" />
-              </button>
-              <button className="p-3 bg-[#1b1b1b] rounded-full hover:bg-[#1DA1F2]/20 text-[#1DA1F2] transition-colors" aria-label="Share on X">
-                <TwitterIcon className="w-5 h-5" />
-              </button>
-              <button className="p-3 bg-[#1b1b1b] rounded-full hover:bg-[#0077B5]/20 text-[#0077B5] transition-colors" aria-label="Share on LinkedIn">
-                <Linkedin className="w-5 h-5" />
-              </button>
-              <button className="p-3 bg-[#1b1b1b] rounded-full hover:bg-[#A3D1FF]/20 text-[#A3D1FF] transition-colors" aria-label="Copy link">
-                <Link className="w-5 h-5" />
-              </button>
-            </div>
+          {/* CTA + Contact form */}
+          <div className="mt-16 pt-10 border-t border-white/10">
+            <h2 className="text-3xl font-bold text-white mb-4">Want your construction site on page one?</h2>
+            <p className="text-lg text-white/80 mb-8 max-w-2xl">
+              Local SEO, fast build-heavy pages, project-proof content, and schema that AI answers can read, built around your highest-margin services and the markets you actually serve. Let&rsquo;s scope it.
+            </p>
+            <ContactForm />
           </div>
 
           {/* Related Articles */}
@@ -436,25 +410,6 @@ export default function ConstructionSEOPage() {
               </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#1b1b1b]">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">Want your construction site on page one?</h2>
-          <p className="text-xl text-white mb-8 max-w-2xl mx-auto">
-            Local SEO, fast build-heavy pages, project-proof content, and schema that AI answers can read, built around your highest-margin services and the markets you actually serve. Let&rsquo;s scope it.
-          </p>
-          <MagneticButton>
-            <button
-              onClick={() => router.push('/contact')}
-              className="mr_btn mr_btn_primary inline-flex items-center gap-2"
-            >
-              <span>Start Your Project</span>
-              <ArrowRight className="w-5 h-5" />
-            </button>
-          </MagneticButton>
         </div>
       </section>
     </>
