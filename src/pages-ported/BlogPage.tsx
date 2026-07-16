@@ -38,6 +38,16 @@ type Post = {
 
 const posts: Post[] = [
   {
+    id: 'neo-brutalism-design-guide',
+    title: 'Neo Brutalism in Modern Design: A Complete Guide for Bold, High-Contrast Interfaces',
+    excerpt:
+      'What neo brutalism is, where it came from, its core visual traits, typography, accessibility, practical UI guidelines, real-world examples, and when to use it.',
+    date: 'July 16, 2026',
+    readTime: '11 min read',
+    image: 'https://images.surferseo.art/b10bf764-d10c-46ca-8e7a-5d5e4680d88b.png',
+    categories: ['Design', 'UI/UX', 'Trends'],
+  },
+  {
     id: 'react-user-interface-builder',
     title: 'React: A User Interface Builder for the Modern Web',
     excerpt:
