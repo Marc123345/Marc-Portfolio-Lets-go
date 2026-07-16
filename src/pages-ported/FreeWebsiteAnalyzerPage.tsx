@@ -16,7 +16,12 @@ function AuditForm() {
         .jotformEmbedHandler?.("iframe[id='JotFormIFrame-261294575681063']", 'https://form.jotform.com/');
     };
     document.body.appendChild(script);
-    return () => { document.body.removeChild(script); };
+    // Safety net: never leave the skeleton spinning if onLoad is missed.
+    const fallback = setTimeout(() => setLoaded(true), 4000);
+    return () => {
+      clearTimeout(fallback);
+      document.body.removeChild(script);
+    };
   }, []);
 
   return (
@@ -36,7 +41,7 @@ function AuditForm() {
         id="JotFormIFrame-261294575681063"
         title="Free Website Audit Request"
         onLoad={() => setLoaded(true)}
-        loading="lazy"
+        loading="eager"
         allow="geolocation; microphone; camera; fullscreen; payment"
         src="https://form.jotform.com/261294575681063"
         className="w-full block border-0 h-[820px] md:h-[480px]"

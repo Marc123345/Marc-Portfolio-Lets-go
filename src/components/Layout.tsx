@@ -257,12 +257,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 label="Resources"
                 items={[
                   { label: 'Free Landing Page Guide', href: '/resources' },
-                  { label: 'Clutch Reviews', href: 'https://clutch.co/profile/marc-friedman-design-agency', external: true },
-                  { label: 'CSS Design Awards', href: 'https://www.cssdesignawards.com/sites/marc-friedman-web-design-agency/49357/', external: true },
-                  { label: 'Awwwards', href: 'https://www.awwwards.com/marc-friedman/', external: true },
-                  { label: 'DesignRush', href: 'https://www.designrush.com/agency/profile/marc-friedman-design-agency', external: true },
-                  { label: 'Behance', href: 'https://www.behance.net/marcfriedmanweb', external: true },
-                  { label: 'Dribbble', href: 'https://dribbble.com/marcf9199/about', external: true },
                 ]}
               />
             </nav>
