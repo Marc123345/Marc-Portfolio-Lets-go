@@ -15,12 +15,16 @@ export default function DesignRushReviews() {
         <p className="text-[10px] font-mono uppercase tracking-[0.3em] text-[#A3D1FF] mb-8 text-center">
 , Verified Reviews
         </p>
-        <div
-          data-designrush-widget=""
-          data-agency-id="93754"
-          data-style="dark"
-          aria-label="DesignRush agency reviews section"
-        />
+        {/* overflow-x-auto so the third-party widget scrolls instead of
+            getting cut off / forcing horizontal page scroll on mobile. */}
+        <div className="overflow-x-auto -mx-4 px-4 sm:mx-0 sm:px-0">
+          <div
+            data-designrush-widget=""
+            data-agency-id="93754"
+            data-style="dark"
+            aria-label="DesignRush agency reviews section"
+          />
+        </div>
         <noscript>
           <p className="text-center">
             <a
