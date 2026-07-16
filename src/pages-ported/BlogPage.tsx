@@ -38,6 +38,16 @@ type Post = {
 
 const posts: Post[] = [
   {
+    id: 'website-not-ada-compliant',
+    title: 'Website Not ADA Compliant: Risks, Requirements, and How to Fix It',
+    excerpt:
+      'When the ADA applies to your website, the WCAG 2.1/2.2 AA standard courts and the DOJ use, the failures that trigger lawsuits and demand letters, and a practical roadmap to fix them.',
+    date: 'July 16, 2026',
+    readTime: '14 min read',
+    image: 'https://images.surferseo.art/90ac6ac9-d569-42bd-b37a-5b198351ceaa.png',
+    categories: ['Accessibility', 'ADA', 'Compliance'],
+  },
+  {
     id: 'electronic-accessibility',
     title: 'Electronic Accessibility: Making Digital Content Work for Everyone',
     excerpt:
