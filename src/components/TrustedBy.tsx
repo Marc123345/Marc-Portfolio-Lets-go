@@ -10,6 +10,20 @@ const SERIF = "var(--font-heading)";
 
 const FEATURED_NAME = 'Omar Turner';
 
+const CLIENT_LOGOS: { src: string; alt: string; invert?: boolean }[] = [
+  { src: '/images/clients/uliFOja.png', alt: 'Binns Media Group', invert: true },
+  { src: 'https://ik.imagekit.io/qcvroy8xpd/GOLD%20TEXT%20LOGO%20NO%20GLOW%20EFFECT%20ADDED%201.png?updatedAt=1748753342858', alt: 'Untapped Africa' },
+  { src: 'https://ik.imagekit.io/qcvroy8xpd/logo%20(1).svg?updatedAt=1763381682176', alt: 'Chad LeClos', invert: true },
+  { src: 'https://ik.imagekit.io/qcvroy8xpd/image%201%20(7).png', alt: 'Secure Annapolis', invert: true },
+  { src: 'https://ik.imagekit.io/qcvroy8xpd/9uafCUp%201%20(1).png?updatedAt=1755247790037', alt: 'Auto Margin', invert: true },
+  { src: 'https://ik.imagekit.io/qcvroy8xpd/White%20logo%20-%20no%20background.svg?updatedAt=1749030562412', alt: 'iLight' },
+];
+
+// One marquee "half" repeats the set enough to exceed the widest viewport, then
+// the track renders two identical halves so the -50% loop stays seamless.
+const LOGO_HALF = [...CLIENT_LOGOS, ...CLIENT_LOGOS, ...CLIENT_LOGOS];
+const LOGO_TRACK = [...LOGO_HALF, ...LOGO_HALF];
+
 function Stars({ count = 5 }: { count?: number }) {
   return (
     <div className="flex items-center gap-0.5">
@@ -159,37 +173,23 @@ export default function TrustedBy() {
 
       {/* Logo Marquee */}
       <div className="relative w-full py-8 mb-8 overflow-hidden testimonial-marquee-mask">
-        <div className="flex items-center gap-8 logo-scroll-tb">
-          {[
-            { src: '/images/clients/uliFOja.png', alt: 'Binns Media Group', invert: true },
-            { src: 'https://ik.imagekit.io/qcvroy8xpd/GOLD%20TEXT%20LOGO%20NO%20GLOW%20EFFECT%20ADDED%201.png?updatedAt=1748753342858', alt: 'Untapped Africa' },
-            { src: 'https://ik.imagekit.io/qcvroy8xpd/logo%20(1).svg?updatedAt=1763381682176', alt: 'Chad LeClos', invert: true },
-            { src: 'https://ik.imagekit.io/qcvroy8xpd/image%201%20(7).png', alt: 'Secure Annapolis', invert: true },
-            { src: 'https://ik.imagekit.io/qcvroy8xpd/9uafCUp%201%20(1).png?updatedAt=1755247790037', alt: 'Auto Margin', invert: true },
-            { src: 'https://ik.imagekit.io/qcvroy8xpd/White%20logo%20-%20no%20background.svg?updatedAt=1749030562412', alt: 'iLight' },
-          ]
-            .concat([
-              { src: '/images/clients/uliFOja.png', alt: 'Binns Media Group', invert: true },
-              { src: 'https://ik.imagekit.io/qcvroy8xpd/GOLD%20TEXT%20LOGO%20NO%20GLOW%20EFFECT%20ADDED%201.png?updatedAt=1748753342858', alt: 'Untapped Africa' },
-                { src: 'https://ik.imagekit.io/qcvroy8xpd/logo%20(1).svg?updatedAt=1763381682176', alt: 'Chad LeClos', invert: true },
-              { src: 'https://ik.imagekit.io/qcvroy8xpd/image%201%20(7).png', alt: 'Secure Annapolis', invert: true },
-              { src: 'https://ik.imagekit.io/qcvroy8xpd/9uafCUp%201%20(1).png?updatedAt=1755247790037', alt: 'Auto Margin', invert: true },
-              { src: 'https://ik.imagekit.io/qcvroy8xpd/White%20logo%20-%20no%20background.svg?updatedAt=1749030562412', alt: 'iLight' },
-            ])
-            .map((logo, i) => (
-              <div
-                key={i}
-                className="transition-all duration-300 hover:scale-110 flex-shrink-0"
-              >
-                <img
-                  src={logo.src}
-                  alt={logo.alt}
-                  className={`h-10 md:h-12 w-auto object-contain opacity-60 hover:opacity-100 transition-opacity ${
-                    logo.invert ? 'filter brightness-0 invert' : ''
-                  }`}
-                />
-              </div>
-            ))}
+        <div className="flex items-center gap-8 sm:gap-12 logo-scroll-tb">
+          {LOGO_TRACK.map((logo, i) => (
+            <div
+              key={i}
+              aria-hidden={i >= LOGO_HALF.length}
+              className="transition-transform duration-300 hover:scale-110 flex-shrink-0"
+            >
+              <img
+                src={logo.src}
+                alt={logo.alt}
+                loading="lazy"
+                className={`h-8 sm:h-10 md:h-12 w-auto object-contain opacity-60 hover:opacity-100 transition-opacity ${
+                  logo.invert ? 'filter brightness-0 invert' : ''
+                }`}
+              />
+            </div>
+          ))}
         </div>
       </div>
 
