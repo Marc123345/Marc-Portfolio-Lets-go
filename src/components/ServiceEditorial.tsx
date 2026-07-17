@@ -4,6 +4,8 @@ import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { ArrowUpRight, Mail } from 'lucide-react';
 import Link from 'next/link';
+import ArcSlider from '@/components/ArcSlider';
+import { SERVICES } from '@/data/services';
 
 export const SERIF = "var(--font-heading)";
 const CALENDLY = 'https://calendly.com/marc-friedman-web-design--meeting-link/30min';
@@ -534,136 +536,21 @@ export function WorkRow({
 
 /* ---------------- Service Navigator (cross-link all services) ---------------- */
 
-const ALL_SERVICES = [
-  { slug: 'web-development', title: 'Web Development', category: 'Build' },
-  { slug: 'b2b-web-design', title: 'B2B Web Design', category: 'B2B' },
-  { slug: 'design', title: 'UI/UX Design', category: 'Design' },
-  { slug: 'design-systems', title: 'Design Systems', category: 'Systems' },
-  { slug: 'startup-mvp', title: 'Startup MVP', category: 'Launch' },
-  { slug: 'ai-integration', title: 'AI Integration', category: 'AI' },
-  { slug: 'cybersecurity', title: 'Cybersecurity UX', category: 'Security' },
-  { slug: 'seo-content-layout', title: 'SEO Content & Layout', category: 'SEO' },
-  { slug: 'aeo', title: 'AEO', category: 'Answer Engines' },
-  { slug: 'geo', title: 'GEO', category: 'Generative Search' },
-  { slug: 'local-seo', title: 'Local SEO', category: 'Local' },
-  { slug: 'maintenance-hosting', title: 'Maintenance & Hosting', category: 'Care' },
-];
 
 export function ServiceNavigator({ currentSlug }: { currentSlug: string }) {
-  const idx = ALL_SERVICES.findIndex((s) => s.slug === currentSlug);
+  const idx = SERVICES.findIndex((s) => s.id === currentSlug);
   const current = idx >= 0 ? idx : 0;
-  const total = ALL_SERVICES.length;
-  const prev = ALL_SERVICES[(current - 1 + total) % total];
-  const next = ALL_SERVICES[(current + 1) % total];
 
   return (
-    <section className="relative bg-black border-t border-white/10 py-20 md:py-24 px-6 lg:px-12">
-      <div className="max-w-7xl mx-auto">
+    <section className="relative bg-black border-t border-white/10 py-20 md:py-28 px-6 lg:px-12 overflow-hidden">
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1100px] h-[700px] bg-[#A3D1FF]/8 rounded-full blur-[160px] pointer-events-none" />
+      <div className="max-w-7xl mx-auto relative">
         <ChapterMarker
-          number={`${String(current + 1).padStart(2, '0')} / ${String(total).padStart(2, '0')}`}
+          number={`${String(current + 1).padStart(2, '0')} / ${String(SERVICES.length).padStart(2, '0')}`}
           label="Continue · More services"
         />
-
-        {/* Prev / Next big links */}
-        <div className="grid md:grid-cols-2 gap-px bg-white/10 mb-12 border border-white/10">
-          <Link
-            href={`/services/${prev.slug}/`}
-            className="group bg-black hover:bg-[#0e1116] transition-colors p-6 md:p-8 flex flex-col gap-3"
-          >
-            <div className="flex items-center gap-3 text-[10px] font-mono uppercase tracking-[0.3em] text-white/40 group-hover:text-[#A3D1FF] transition-colors">
-              <span className="rotate-180 inline-block">↗</span>
-              Previous · {prev.category}
-            </div>
-            <h3
-              className="text-white leading-[1.0] tracking-tight group-hover:text-[#A3D1FF] transition-colors"
-              style={{
-                fontFamily: SERIF,
-                fontSize: 'clamp(1.5rem, 2.8vw, 2.5rem)',
-                fontWeight: 500,
-              }}
-            >
-              {prev.title}
-            </h3>
-          </Link>
-          <Link
-            href={`/services/${next.slug}/`}
-            className="group bg-black hover:bg-[#0e1116] transition-colors p-6 md:p-8 flex flex-col gap-3 md:items-end md:text-right"
-          >
-            <div className="flex items-center gap-3 text-[10px] font-mono uppercase tracking-[0.3em] text-white/40 group-hover:text-[#A3D1FF] transition-colors">
-              Next · {next.category}
-              <ArrowUpRight className="w-3 h-3" />
-            </div>
-            <h3
-              className="text-white leading-[1.0] tracking-tight group-hover:text-[#A3D1FF] transition-colors"
-              style={{
-                fontFamily: SERIF,
-                fontSize: 'clamp(1.5rem, 2.8vw, 2.5rem)',
-                fontWeight: 500,
-              }}
-            >
-              {next.title}
-            </h3>
-          </Link>
-        </div>
-
-        {/* All-services dock, every service in one strip, current highlighted */}
-        <div className="border border-white/10">
-          <div className="px-5 py-3 border-b border-white/10 flex items-center justify-between">
-            <span className="text-[10px] font-mono uppercase tracking-[0.3em] text-white/50">
-, All services
-            </span>
-            <Link
-              href="/services"
-              className="text-[10px] font-mono uppercase tracking-[0.3em] text-white/70 hover:text-[#A3D1FF] transition-colors flex items-center gap-1"
-            >
-              Open the arc <ArrowUpRight className="w-3 h-3" />
-            </Link>
-          </div>
-          <ul
-            className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 divide-x divide-white/10"
-            style={{ gridTemplateColumns: undefined }}
-          >
-            {ALL_SERVICES.map((s, i) => {
-              const isActive = s.slug === currentSlug;
-              return (
-                <li key={s.slug} className="border-b border-white/10 lg:border-b-0">
-                  <Link
-                    href={`/services/${s.slug}/`}
-                    className={`group block p-4 transition-colors ${
-                      isActive
-                        ? 'bg-[#A3D1FF]/10'
-                        : 'hover:bg-[#0e1116]'
-                    }`}
-                  >
-                    <div
-                      className={`text-[10px] font-mono tracking-[0.2em] mb-2 ${
-                        isActive ? 'text-[#A3D1FF]' : 'text-white/40'
-                      }`}
-                      style={{ fontVariantNumeric: 'tabular-nums' }}
-                    >
-                      {String(i + 1).padStart(2, '0')}
-                      {isActive && <span className="ml-2">●</span>}
-                    </div>
-                    <div
-                      className={`leading-tight transition-colors ${
-                        isActive
-                          ? 'text-white'
-                          : 'text-white/70 group-hover:text-white'
-                      }`}
-                      style={{
-                        fontFamily: SERIF,
-                        fontSize: '0.95rem',
-                        fontWeight: 500,
-                      }}
-                    >
-                      {s.title}
-                    </div>
-                  </Link>
-                </li>
-              );
-            })}
-          </ul>
-        </div>
+        {/* Same arc as /services and the home page, opened on the current service. */}
+        <ArcSlider cards={SERVICES} initialIndex={current} />
       </div>
     </section>
   );
