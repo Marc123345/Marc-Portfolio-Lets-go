@@ -9,7 +9,7 @@ export default function DesignRushReviews() {
   return (
     <section
       aria-label="DesignRush reviews"
-      className="bg-black border-t border-white/10 py-16 md:py-20 px-4 sm:px-6 lg:px-8"
+      className="bg-black border-t border-white/10 py-24 md:py-32 px-6 lg:px-12"
     >
       <div className="max-w-5xl mx-auto">
         <p className="text-[10px] font-mono uppercase tracking-[0.3em] text-[#A3D1FF] mb-8 text-center">

@@ -44,7 +44,7 @@ const cities = [
 
 export default function GlobeSection() {
   return (
-    <section className="relative py-28 md:py-36 px-6 lg:px-12 bg-black border-t border-white/10 overflow-hidden">
+    <section className="relative py-24 md:py-32 px-6 lg:px-12 bg-black border-t border-white/10 overflow-hidden">
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1100px] h-[700px] bg-[#A3D1FF]/10 rounded-full blur-[160px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto relative">

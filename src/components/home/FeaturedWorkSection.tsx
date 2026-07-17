@@ -295,7 +295,7 @@ export default function FeaturedWorkSection() {
     );
 
   return (
-    <section className="relative py-28 md:py-36 px-6 lg:px-12 bg-[#0a0a0a] border-t border-white/10 overflow-hidden">
+    <section className="relative py-24 md:py-32 px-6 lg:px-12 bg-[#0a0a0a] border-t border-white/10 overflow-hidden">
       <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[900px] h-[500px] bg-[#A3D1FF]/8 rounded-full blur-[140px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto relative">

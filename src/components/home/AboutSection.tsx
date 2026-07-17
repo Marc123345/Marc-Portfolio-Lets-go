@@ -45,7 +45,7 @@ export default function AboutSection() {
   return (
     <section
       ref={sectionRef}
-      className="relative py-28 md:py-36 px-6 lg:px-12 bg-[#0a0a0a] border-t border-white/10 overflow-hidden"
+      className="relative py-24 md:py-32 px-6 lg:px-12 bg-[#0a0a0a] border-t border-white/10 overflow-hidden"
     >
       {/* Ambient glow */}
       <div className="absolute top-1/3 -right-40 w-[640px] h-[640px] bg-[#A3D1FF]/8 rounded-full blur-[160px] pointer-events-none" />
