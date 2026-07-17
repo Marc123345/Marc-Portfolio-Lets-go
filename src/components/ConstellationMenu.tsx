@@ -33,7 +33,6 @@ const secondary: NavItem[] = [
   { label: 'GEO Audit', to: '/free-geo-audit' },
   { label: 'Website Analyzer', to: '/tools/website-analyzer' },
   { label: 'ROI Calculator', to: '/tools/roi-calculator' },
-  { label: 'AI Crawler Optimization', to: '/tools/ai-crawler-optimization' },
   { label: 'Project Timeline', to: '/tools/project-timeline' },
   { label: 'Resources', to: '/resources' },
 ];

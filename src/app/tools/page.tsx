@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { Gauge, Calculator, Bot, CalendarClock, FileDown, ArrowUpRight } from 'lucide-react';
+import { Gauge, Calculator, CalendarClock, FileDown, ArrowUpRight } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: { absolute: 'Free Tools & Resources for Web Projects | Marc Friedman' },
@@ -30,13 +30,6 @@ const TOOLS = [
     title: 'Website ROI Calculator',
     desc: 'Model the return on a redesign, see how traffic, conversion rate, and order value translate into real revenue.',
     tag: 'Calculator',
-  },
-  {
-    href: '/tools/ai-crawler-optimization',
-    icon: Bot,
-    title: 'AI Crawler Optimization',
-    desc: 'Check how well your site is structured for AI crawlers and generate a sitemap to improve AI visibility.',
-    tag: 'AI / GEO',
   },
   {
     href: '/tools/project-timeline',

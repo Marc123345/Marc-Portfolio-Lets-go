@@ -249,7 +249,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 items={[
                   { label: 'Website Analyzer', href: '/tools/website-analyzer' },
                   { label: 'ROI Calculator', href: '/tools/roi-calculator' },
-                  { label: 'AI Crawler Optimization', href: '/tools/ai-crawler-optimization' },
                   { label: 'Project Timeline', href: '/tools/project-timeline' },
                 ]}
               />
@@ -464,7 +463,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 <ul className="space-y-3">
                   <li><Link href="/tools/website-analyzer" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Website Analyzer</Link></li>
                   <li><Link href="/tools/roi-calculator" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">ROI Calculator</Link></li>
-                  <li><Link href="/tools/ai-crawler-optimization" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">AI Crawler Optimization</Link></li>
                   <li><Link href="/tools/project-timeline" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Project Timeline</Link></li>
                   <li><Link href="/free-website-analyzer/" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Free Website Analyzer</Link></li>
                   <li><Link href="/free-geo-audit/" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Free GEO Audit</Link></li>
