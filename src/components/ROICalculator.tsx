@@ -1,6 +1,8 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
+
+const SERIF = 'var(--font-heading)';
 import { Calculator, ArrowRight, Info, DollarSign, Users, MousePointerClick, ShoppingCart } from 'lucide-react';
 
 interface CalculatorInputs {
@@ -126,27 +128,27 @@ export default function ROICalculator() {
   };
   
   return (
-    <div className="bg-[#1b1b1b] rounded-xl border border-white/10 overflow-hidden">
-      <div className="p-8">
-        <div className="flex items-center gap-3 mb-4">
-          <div className="bg-[#A3D1FF]/10 p-3 rounded-lg">
-            <Calculator className="w-6 h-6 text-[#A3D1FF]" />
-          </div>
-          <h3 className="text-2xl font-bold text-white">Website ROI Calculator</h3>
+    <div className="border border-white/10 bg-[#0b0b0b]">
+      <div className="p-6 md:p-8">
+        <div className="flex items-center gap-3 mb-6 pb-6 border-b border-white/10">
+          <Calculator className="w-4 h-4 text-[#A3D1FF]" />
+          <span className="text-[10px] font-mono uppercase tracking-[0.3em] text-white/50">
+            Website ROI Calculator
+          </span>
         </div>
-        
-        <p className="text-white mb-6">
+
+        <p className="text-white/70 leading-relaxed mb-8">
           Estimate the potential return on investment for your new website project based on industry benchmarks and our client results.
         </p>
         
         <div className="grid md:grid-cols-2 gap-8">
           <div>
-            <h4 className="text-lg font-semibold text-white mb-4">Your Website Metrics</h4>
+            <h4 className="text-[10px] font-mono uppercase tracking-[0.3em] text-white/40 mb-6">Your Website Metrics</h4>
             
             <div className="space-y-4">
               <div>
                 <div className="flex items-center justify-between mb-2">
-                  <label className="flex items-center text-gray-300 text-sm">
+                  <label className="flex items-center text-white/70 text-sm">
                     <Users className="w-4 h-4 mr-2" />
                     Monthly Visitors
                     <button
@@ -163,7 +165,7 @@ export default function ROICalculator() {
                   <span className="text-sm text-[#A3D1FF]">{inputs.monthlyVisitors.toLocaleString()}</span>
                 </div>
                 {activeTooltip === 'visitors' && (
-                  <div className="text-xs text-white mb-2 bg-[#2d3035] p-2 rounded">
+                  <div className="text-xs text-white mb-2 border border-white/10 bg-white/[0.03] p-2">
                     The average number of unique visitors to your website each month. Check Google Analytics for this number.
                   </div>
                 )}
@@ -176,7 +178,7 @@ export default function ROICalculator() {
                   step="100"
                   value={inputs.monthlyVisitors}
                   onChange={handleInputChange}
-                  className="w-full h-2 bg-[#2d3035] rounded-lg appearance-none cursor-pointer"
+                  className="w-full h-1 bg-white/15 appearance-none cursor-pointer"
                   aria-label="Monthly website visitors slider"
                   aria-describedby="visitors-range-description"
                 />
@@ -192,7 +194,7 @@ export default function ROICalculator() {
               
               <div>
                 <div className="flex items-center justify-between mb-2">
-                  <label className="flex items-center text-gray-300 text-sm">
+                  <label className="flex items-center text-white/70 text-sm">
                     <MousePointerClick className="w-4 h-4 mr-2" />
                     Current Conversion Rate (%)
                     <button 
@@ -209,7 +211,7 @@ export default function ROICalculator() {
                   <span className="text-sm text-[#A3D1FF]">{inputs.conversionRate.toFixed(1)}%</span>
                 </div>
                 {activeTooltip === 'conversion' && (
-                  <div className="text-xs text-white mb-2 bg-[#2d3035] p-2 rounded">
+                  <div className="text-xs text-white mb-2 border border-white/10 bg-white/[0.03] p-2">
                     The percentage of visitors who complete a desired action. Industry average is 1-3%. Check your analytics or estimate if unsure.
                   </div>
                 )}
@@ -222,7 +224,7 @@ export default function ROICalculator() {
                   step="0.1"
                   value={inputs.conversionRate}
                   onChange={handleInputChange}
-                  className="w-full h-2 bg-[#2d3035] rounded-lg appearance-none cursor-pointer"
+                  className="w-full h-1 bg-white/15 appearance-none cursor-pointer"
                   aria-label="Current conversion rate percentage slider"
                   aria-describedby="conversion-range-description"
                 />
@@ -238,7 +240,7 @@ export default function ROICalculator() {
               
               <div>
                 <div className="flex items-center justify-between mb-2">
-                  <label className="flex items-center text-gray-300 text-sm">
+                  <label className="flex items-center text-white/70 text-sm">
                     <ShoppingCart className="w-4 h-4 mr-2" />
                     Average Order/Lead Value
                     <button 
@@ -255,7 +257,7 @@ export default function ROICalculator() {
                   <span className="text-sm text-[#A3D1FF]">{formatCurrency(inputs.averageValue)}</span>
                 </div>
                 {activeTooltip === 'value' && (
-                  <div className="text-xs text-white mb-2 bg-[#2d3035] p-2 rounded">
+                  <div className="text-xs text-white mb-2 border border-white/10 bg-white/[0.03] p-2">
                     For e-commerce: average order value. For lead generation: estimated lifetime value of a customer.
                   </div>
                 )}
@@ -268,7 +270,7 @@ export default function ROICalculator() {
                   step="10"
                   value={inputs.averageValue}
                   onChange={handleInputChange}
-                  className="w-full h-2 bg-[#2d3035] rounded-lg appearance-none cursor-pointer"
+                  className="w-full h-1 bg-white/15 appearance-none cursor-pointer"
                   aria-label="Average order or lead value slider"
                   aria-describedby="value-range-description"
                 />
@@ -284,7 +286,7 @@ export default function ROICalculator() {
               
               <div>
                 <div className="flex items-center justify-between mb-2">
-                  <label className="flex items-center text-gray-300 text-sm">
+                  <label className="flex items-center text-white/70 text-sm">
                     <DollarSign className="w-4 h-4 mr-2" />
                     Website Project Investment
                     <button 
@@ -301,7 +303,7 @@ export default function ROICalculator() {
                   <span className="text-sm text-[#A3D1FF]">{formatCurrency(inputs.projectCost)}</span>
                 </div>
                 {activeTooltip === 'cost' && (
-                  <div className="text-xs text-white mb-2 bg-[#2d3035] p-2 rounded">
+                  <div className="text-xs text-white mb-2 border border-white/10 bg-white/[0.03] p-2">
                     Professional websites typically range from $5,000-$25,000 depending on complexity and features.
                   </div>
                 )}
@@ -314,7 +316,7 @@ export default function ROICalculator() {
                   step="1000"
                   value={inputs.projectCost}
                   onChange={handleInputChange}
-                  className="w-full h-2 bg-[#2d3035] rounded-lg appearance-none cursor-pointer"
+                  className="w-full h-1 bg-white/15 appearance-none cursor-pointer"
                   aria-label="Website project investment amount slider"
                   aria-describedby="cost-range-description"
                 />
@@ -331,23 +333,23 @@ export default function ROICalculator() {
           </div>
           
           <div>
-            <h4 className="text-lg font-semibold text-white mb-4">Projected Results</h4>
+            <h4 className="text-[10px] font-mono uppercase tracking-[0.3em] text-white/40 mb-6">Projected Results</h4>
             
             {results && (
               <div className="space-y-6">
                 <div className="grid grid-cols-2 gap-4">
-                  <div className="bg-[#2d3035] p-4 rounded-lg">
+                  <div className="border border-white/10 bg-white/[0.03] p-4">
                     <p className="text-sm text-white mb-1">Current Monthly Revenue</p>
-                    <p className="text-xl font-bold text-white">{formatCurrency(results.currentMonthlyRevenue)}</p>
+                    <p className="text-white" style={{ fontFamily: SERIF, fontSize: '1.5rem', fontWeight: 500, fontVariantNumeric: 'tabular-nums' }}>{formatCurrency(results.currentMonthlyRevenue)}</p>
                   </div>
                   
-                  <div className="bg-[#2d3035] p-4 rounded-lg">
+                  <div className="border border-white/10 bg-white/[0.03] p-4">
                     <p className="text-sm text-white mb-1">Projected Monthly Revenue</p>
-                    <p className="text-xl font-bold text-[#A3D1FF]">{formatCurrency(results.projectedMonthlyRevenue)}</p>
+                    <p className="text-[#A3D1FF]" style={{ fontFamily: SERIF, fontSize: '1.5rem', fontWeight: 500, fontVariantNumeric: 'tabular-nums' }}>{formatCurrency(results.projectedMonthlyRevenue)}</p>
                   </div>
                 </div>
                 
-                <div className="bg-[#2d3035] p-4 rounded-lg">
+                <div className="border border-white/10 bg-white/[0.03] p-4">
                   <div className="flex items-center justify-between mb-2">
                     <p className="text-sm text-white">Current Conversion Rate</p>
                     <p className="text-sm font-medium text-white">{formatPercent(inputs.conversionRate)}</p>
@@ -358,23 +360,23 @@ export default function ROICalculator() {
                   </div>
                 </div>
                 
-                <div className="bg-[#A3D1FF]/10 p-4 rounded-lg border border-[#A3D1FF]/30">
-                  <h5 className="font-semibold text-white mb-3">ROI Summary</h5>
+                <div className="border border-[#A3D1FF]/30 bg-[#A3D1FF]/[0.06] p-5">
+                  <h5 className="text-[10px] font-mono uppercase tracking-[0.3em] text-white/40 mb-4">ROI Summary</h5>
                   
                   <div className="space-y-3">
                     <div className="flex items-center justify-between">
-                      <p className="text-gray-300">Additional Annual Revenue</p>
-                      <p className="font-bold text-[#A3D1FF]">{formatCurrency(results.additionalAnnualRevenue)}</p>
+                      <p className="text-white/70">Additional Annual Revenue</p>
+                      <p className="font-semibold text-[#A3D1FF]" style={{ fontVariantNumeric: 'tabular-nums' }}>{formatCurrency(results.additionalAnnualRevenue)}</p>
                     </div>
                     
                     <div className="flex items-center justify-between">
-                      <p className="text-gray-300">Return on Investment</p>
-                      <p className="font-bold text-[#A3D1FF]">{formatPercent(results.roi)}</p>
+                      <p className="text-white/70">Return on Investment</p>
+                      <p className="font-semibold text-[#A3D1FF]" style={{ fontVariantNumeric: 'tabular-nums' }}>{formatPercent(results.roi)}</p>
                     </div>
                     
                     <div className="flex items-center justify-between">
-                      <p className="text-gray-300">Payback Period</p>
-                      <p className="font-bold text-[#A3D1FF]">{formatMonths(results.paybackPeriod)}</p>
+                      <p className="text-white/70">Payback Period</p>
+                      <p className="font-semibold text-[#A3D1FF]" style={{ fontVariantNumeric: 'tabular-nums' }}>{formatMonths(results.paybackPeriod)}</p>
                     </div>
                   </div>
                 </div>
@@ -389,11 +391,11 @@ export default function ROICalculator() {
                       roi: results.roi.toFixed(1)
                     });
                     window.location.href = `/contact?${params.toString()}`;
-                  }} className="mr_btn mr_btn_primary">
-                    <span>Get My Custom Proposal</span>
+                  }} className="inline-flex items-center justify-center gap-3 bg-white text-black font-medium px-8 py-4 hover:bg-[#A3D1FF] transition-colors">
+                    Get My Custom Proposal
                   </button>
-                  <p className="text-xs text-gray-500 mt-2">
-                    I'll use these numbers to create your personalized proposal
+                  <p className="text-[10px] font-mono uppercase tracking-[0.25em] text-white/40 mt-4">
+                    I&apos;ll use these numbers to create your personalized proposal
                   </p>
                 </div>
               </div>

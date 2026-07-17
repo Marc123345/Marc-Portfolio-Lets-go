@@ -23,30 +23,7 @@ function ChapterMarker({ number, label }: { number: string; label: string }) {
   );
 }
 
-const RESULTS = [
-  {
-    client: 'Binns Media Group',
-    result:
-      'A 40% increase in engagement and 60% faster load times, resulting in significantly improved user retention and content consumption.',
-  },
-  {
-    client: 'Wellness TCYS',
-    result:
-      'A 200% increase in online bookings and 150% growth in organic traffic after implementing a conversion-focused design strategy.',
-  },
-  {
-    client: 'A Secure Annapolis Locksmith',
-    result:
-      'A 150% increase in qualified leads and top 3 rankings in local search results, dramatically growing the business.',
-  },
-];
 
-const BEYOND = [
-  'Enhanced brand perception and credibility',
-  'Improved customer experience and satisfaction',
-  'Better competitive positioning in your market',
-  'Long-term scalability for future growth',
-];
 
 export default function ROICalculatorPage() {
   const toolSchema = {
@@ -109,76 +86,6 @@ export default function ROICalculatorPage() {
         <div className="max-w-4xl mx-auto">
           <ChapterMarker number="01" label="Run the numbers" />
           <ROICalculator />
-        </div>
-      </section>
-
-      {/* ===================== REAL RESULTS ===================== */}
-      <section className="relative bg-black py-24 md:py-32 px-6 lg:px-12 border-t border-white/10">
-        <div className="max-w-7xl mx-auto">
-          <ChapterMarker number="02" label="Real results" />
-
-          <div className="grid md:grid-cols-3 gap-8 md:gap-10 pt-6">
-            {RESULTS.map((item) => (
-              <div key={item.client} className="border-t border-white/10 pt-6">
-                <h3
-                  className="text-white leading-[1.15] tracking-tight mb-3"
-                  style={{
-                    fontFamily: SERIF,
-                    fontSize: 'clamp(1.25rem, 2vw, 1.65rem)',
-                    fontWeight: 500,
-                  }}
-                >
-                  {item.client}
-                </h3>
-                <p className="text-white/60 leading-relaxed text-sm">{item.result}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ===================== BEYOND THE NUMBERS ===================== */}
-      <section className="relative bg-[#0a0a0a] py-24 md:py-32 px-6 lg:px-12 border-t border-white/10">
-        <div className="max-w-7xl mx-auto">
-          <ChapterMarker number="03" label="Beyond the numbers" />
-
-          <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-start">
-            <div>
-              <h2
-                className="text-white leading-[1.05] tracking-[-0.02em] mb-6"
-                style={{
-                  fontFamily: SERIF,
-                  fontSize: 'clamp(1.75rem, 3vw, 2.75rem)',
-                  fontWeight: 400,
-                }}
-              >
-                ROI is the floor,{' '}
-                <em className="italic text-[#A3D1FF]">not the ceiling.</em>
-              </h2>
-              <p className="text-white/60 leading-relaxed mb-8">
-                A strategic redesign delivers benefits that never show up in a payback
-                calculation:
-              </p>
-
-              <ul className="space-y-4">
-                {BEYOND.map((item) => (
-                  <li key={item} className="flex items-start gap-4 border-t border-white/10 pt-4">
-                    <span className="text-[#A3D1FF] font-mono text-xs mt-1">/</span>
-                    <span className="text-white/70">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="relative aspect-[4/3] overflow-hidden bg-[#1b1b1b]">
-              <img
-                src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=800&q=80"
-                alt="Business strategy meeting discussing website ROI and investment planning"
-                className="absolute inset-0 w-full h-full object-cover"
-                loading="lazy"
-              />
-            </div>
-          </div>
         </div>
       </section>
 
