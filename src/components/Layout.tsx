@@ -219,6 +219,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 { label: 'Work', to: '/work' },
                 { label: 'Services', to: '/services' },
                 { label: 'Blog', to: '/blog' },
+                { label: 'Resources', to: '/resources' },
                 { label: 'About', to: '/about' },
               ].map(({ label, to }) => {
                 const isActive =
@@ -250,14 +251,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                   { label: 'Website Analyzer', href: '/tools/website-analyzer' },
                   { label: 'ROI Calculator', href: '/tools/roi-calculator' },
                   { label: 'Project Timeline', href: '/tools/project-timeline' },
-                ]}
-              />
-              <NavDropdown
-                label="Resources"
-                items={[
-                  { label: 'Free Landing Page Guide', href: '/resources' },
-                  { label: 'B2B Website Checklist', href: '/resources/b2b-checklist' },
-                  { label: 'B2B Website Mastery', href: '/resources/b2b-website-mastery' },
                 ]}
               />
             </nav>
@@ -448,7 +441,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 , Resources
                 </p>
                 <ul className="space-y-3">
-                  <li><Link href="/resources" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Free Landing Page Guide</Link></li>
+                  <li><Link href="/resources" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Free Guides &amp; Checklists</Link></li>
                   <li><Link href="/blog" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Blog</Link></li>
                   <li><a href="https://www.behance.net/marcfriedmanweb" target="_blank" rel="noopener noreferrer" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Behance</a></li>
                   <li><a href="https://dribbble.com/marcf9199/about" target="_blank" rel="noopener noreferrer" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Dribbble</a></li>
