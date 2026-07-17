@@ -1,17 +1,13 @@
 "use client";
 
 import React from 'react';
-import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { ArrowUpRight } from 'lucide-react';
 import ArcSlider, { ArcCard } from '@/components/ArcSlider';
 import {
   ChapterMarker,
-  ServiceMarquee,
   ServiceColophon,
   SERIF,
 } from '@/components/ServiceEditorial';
-import TechStackStrip from '@/components/TechStackStrip';
 
 const services: ArcCard[] = [
   {
@@ -172,88 +168,6 @@ export default function ServicesPage() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1100px] h-[700px] bg-[#A3D1FF]/8 rounded-full blur-[160px] pointer-events-none" />
         <div className="max-w-7xl mx-auto relative">
           <ArcSlider cards={services} />
-        </div>
-      </section>
-
-{/* ===================== TECH STACK ===================== */}
-      <div className="relative bg-black border-t border-white/10 py-6">
-        <div className="flex items-center justify-center gap-3 mb-1">
-          <span className="h-[1px] w-8 bg-white/10" />
-          <span className="text-[9px] font-mono uppercase tracking-[0.35em] text-white/30">
-            Powered by
-          </span>
-          <span className="h-[1px] w-8 bg-white/10" />
-        </div>
-        <TechStackStrip />
-      </div>
-
-      {/* ===================== INDEX (LIST FALLBACK) ===================== */}
-      <section className="relative bg-[#0a0a0a] py-24 md:py-32 px-6 lg:px-12 border-t border-white/10">
-        <div className="max-w-7xl mx-auto">
-          <ChapterMarker number="Index" label="All Services · A–Z" />
-          <motion.h2
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: '-80px' }}
-            transition={{ duration: 0.9 }}
-            className="text-white leading-[0.95] tracking-[-0.03em] mb-12 max-w-3xl"
-            style={{
-              fontFamily: SERIF,
-              fontSize: 'clamp(2rem, 4.5vw, 4rem)',
-              fontWeight: 400,
-            }}
-          >
-            Or skim the{' '}
-            <em className="italic text-[#A3D1FF]">whole shelf.</em>
-          </motion.h2>
-
-          <ul className="border-y border-white/10">
-            {services.map((s, i) => (
-              <motion.li
-                key={s.id}
-                initial={{ clipPath: 'inset(0 100% 0 0)', opacity: 0 }}
-                whileInView={{ clipPath: 'inset(0 0% 0 0)', opacity: 1 }}
-                viewport={{ once: true, margin: '-60px' }}
-                transition={{
-                  duration: 0.85,
-                  delay: i * 0.06,
-                  ease: [0.22, 1, 0.36, 1],
-                }}
-                className="border-b border-white/10 last:border-b-0 group relative"
-              >
-                <Link
-                  href={s.href}
-                  className="grid md:grid-cols-[80px_1fr_180px_24px] gap-4 md:gap-8 items-center py-5 md:py-6 relative"
-                >
-                  {/* Hover sweep, a thin cyan bar slides in from the left */}
-                  <span
-                    className="absolute left-0 top-0 bottom-0 w-[3px] bg-[#A3D1FF] origin-top scale-y-0 group-hover:scale-y-100 transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]"
-                    aria-hidden
-                  />
-                  <span
-                    className="text-[#A3D1FF]/60 font-mono text-xs tracking-[0.2em] hidden md:block"
-                    style={{ fontVariantNumeric: 'tabular-nums' }}
-                  >
-                    {String(i + 1).padStart(2, '0')}
-                  </span>
-                  <h3
-                    className="text-white leading-[1.1] tracking-tight group-hover:text-[#A3D1FF] group-hover:translate-x-2 transition-all duration-500"
-                    style={{
-                      fontFamily: SERIF,
-                      fontSize: 'clamp(1.5rem, 2.5vw, 2.25rem)',
-                      fontWeight: 500,
-                    }}
-                  >
-                    {s.title}
-                  </h3>
-                  <span className="text-[10px] font-mono uppercase tracking-[0.25em] text-white/50 hidden md:block">
-                    {s.category}
-                  </span>
-                  <ArrowUpRight className="w-4 h-4 text-white/40 group-hover:text-[#A3D1FF] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all hidden md:block" />
-                </Link>
-              </motion.li>
-            ))}
-          </ul>
         </div>
       </section>
 
