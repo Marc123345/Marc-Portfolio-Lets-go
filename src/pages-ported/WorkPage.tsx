@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowUpRight, ExternalLink, ChevronLeft, ChevronRight } from 'lucide-react';
 import InteractiveCube from '@/components/InteractiveCube';
-import { ChapterMarker, ServiceColophon, SERIF } from '@/components/ServiceEditorial';
+import { ChapterMarker, SERIF } from '@/components/ServiceEditorial';
 
 const workSchema = {
   '@context': 'https://schema.org',
@@ -527,12 +527,6 @@ export default function WorkPage() {
           </div>
         </div>
       </section>
-
-      <ServiceColophon
-        headline="Want to be the"
-        italicHeadline="next case file?"
-        lead="Book a 30-minute call, I'll audit your current site live and show you exactly what we could ship together."
-      />
     </>
   );
 }
