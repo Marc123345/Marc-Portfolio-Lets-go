@@ -5,13 +5,7 @@ import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowUpRight, ExternalLink, ChevronLeft, ChevronRight } from 'lucide-react';
 import InteractiveCube from '@/components/InteractiveCube';
-import {
-  ChapterMarker,
-  ServiceMarquee,
-  EditorialSection,
-  ServiceColophon,
-  SERIF,
-} from '@/components/ServiceEditorial';
+import { ChapterMarker, ServiceColophon, SERIF } from '@/components/ServiceEditorial';
 
 const workSchema = {
   '@context': 'https://schema.org',
@@ -533,67 +527,6 @@ export default function WorkPage() {
           </div>
         </div>
       </section>
-
-      {/* ===================== FULL ARCHIVE IN CUBE-STYLE ===================== */}
-      <EditorialSection
-        chapter="03"
-        label="The Full Archive"
-        title="Every"
-        italicTitle="case file."
-        lead="All 14 case studies laid out in the same cube-face visual language. Click through to read any of them."
-      >
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-5">
-          {projects.map((p, i) => (
-            <motion.a
-              key={p.title}
-              href={p.caseStudyUrl}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-40px' }}
-              transition={{ duration: 0.6, delay: Math.min(i * 0.04, 0.4) }}
-              className="group relative block aspect-[4/5] overflow-hidden border border-white/10 hover:border-[#A3D1FF]/60 transition-colors"
-            >
-              <img
-                src={p.image}
-                alt={p.title}
-                className="absolute inset-0 w-full h-full object-cover group-hover:scale-[1.06] transition-transform duration-[900ms]"
-                style={{ filter: 'brightness(0.75) contrast(1.1)' }}
-                loading="lazy"
-              />
-              <div
-                className="absolute inset-0"
-                style={{
-                  background:
-                    'linear-gradient(180deg, rgba(0,0,0,0.0) 0%, rgba(0,0,0,0.78) 100%)',
-                }}
-              />
-              <div className="absolute top-3 left-3 flex items-center gap-2 text-[9px] font-mono uppercase tracking-[0.25em] text-white/70">
-                <span className="w-4 h-[1px] bg-[#A3D1FF]" />
-                File {String(i + 1).padStart(2, '0')}
-              </div>
-              <div className="absolute bottom-3 left-3 right-3">
-                <div
-                  className="text-[10px] font-mono uppercase tracking-[0.25em] mb-1"
-                  style={{ color: '#A3D1FF' }}
-                >
-                  {p.category}
-                </div>
-                <div
-                  className="text-white leading-[1.05]"
-                  style={{
-                    fontFamily: SERIF,
-                    fontSize: 'clamp(1rem, 1.4vw, 1.35rem)',
-                    fontWeight: 500,
-                  }}
-                >
-                  {p.title}
-                </div>
-              </div>
-              <ArrowUpRight className="absolute top-3 right-3 w-4 h-4 text-white/70 opacity-0 group-hover:opacity-100 transition-opacity" />
-            </motion.a>
-          ))}
-        </div>
-      </EditorialSection>
 
       <ServiceColophon
         headline="Want to be the"
