@@ -89,9 +89,9 @@ export default function HomePage() {
       <GlobeSection />
       <ServicesArcSection />
       <AboutSection />
-      <FAQSection />
-      <DesignRushReviews />
       <CTASection />
+      <DesignRushReviews />
+      <FAQSection />
     </>
   );
 }
