@@ -707,19 +707,6 @@ export function validateComponent(tree) {
               </p>
             </div>
 
-            <div className="border-t border-gray-800 pt-8 mt-12">
-              <h3 className="text-xl font-semibold text-white mb-4">Ready to make your design system AI-ready?</h3>
-              <p className="text-gray-300 mb-6">
-                I specialize in building design systems that work smoothly with AI tools while keeping brand consistency. Let's talk about how to evolve your system for the AI-assisted development workflow.
-              </p>
-              <Link
-                href="/contact/"
-                className="inline-flex items-center gap-2 bg-[#A3D1FF] text-black px-8 py-3 font-semibold hover:bg-[#8BB8E8] transition-colors"
-              >
-                Get in Touch
-                <ArrowLeft className="w-4 h-4 rotate-180" />
-              </Link>
-            </div>
           </div>
         </div>
       </section>

@@ -791,23 +791,6 @@ export default function AIPersonalizationEcommercePage() {
         </div>
       </section>
 
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#1b1b1b]">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">Ready to Implement AI Personalization?</h2>
-          <p className="text-xl text-white mb-8 max-w-2xl mx-auto">
-            Let's build a personalized ecommerce experience that drives engagement, increases conversions, and builds customer loyalty.
-          </p>
-          <MagneticButton>
-            <button
-              onClick={() => router.push('/contact')}
-              className="mr_btn mr_btn_primary inline-flex items-center gap-2"
-            >
-              <span>Start Your Personalization Journey</span>
-              <ArrowRight className="w-5 h-5" />
-            </button>
-          </MagneticButton>
-        </div>
-      </section>
     </>
   );
 }

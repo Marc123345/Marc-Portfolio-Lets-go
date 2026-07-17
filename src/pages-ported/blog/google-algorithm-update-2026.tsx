@@ -370,19 +370,6 @@ export default function GoogleAlgorithmUpdate2026() {
               AI can be a powerful tool in your content creation arsenal, but it must enhance human expertise, not replace it. The sites that will thrive in 2026 and beyond are those that prioritize genuine value over shortcuts.
             </p>
 
-            <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30 p-8 mt-10">
-              <h3 className="text-2xl font-bold text-white mb-4">Ready to Improve Your Rankings?</h3>
-              <p className="text-gray-300 mb-6">
-                Navigating Google's algorithm changes requires expertise, strategic thinking, and technical know-how. If you're struggling to maintain or improve your search rankings, I can help.
-              </p>
-              <Link
-                href="/contact/"
-                className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 transition-colors font-medium"
-              >
-                Get Expert SEO Help
-                <ArrowLeft className="w-4 h-4 rotate-180" />
-              </Link>
-            </div>
           </div>
         </div>
       </section>

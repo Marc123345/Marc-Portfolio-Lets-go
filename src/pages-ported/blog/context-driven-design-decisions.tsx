@@ -729,24 +729,6 @@ export default function ContextDrivenDesignDecisionsPage() {
           </div>
 
           <div className="mt-16 pt-8 border-t border-white/10">
-            <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
-              <div>
-                <h3 className="text-2xl font-bold text-white mb-2">Ready to Level Up Your Design Skills?</h3>
-                <p className="text-white">Let's discuss how context-driven design can transform your projects.</p>
-              </div>
-              <MagneticButton>
-                <button
-                  onClick={() => router.push('/contact')}
-                  className="mr_btn mr_btn_primary inline-flex items-center gap-2"
-                >
-                  <span>Book a Call</span>
-                  <TrendingUp className="w-5 h-5" />
-                </button>
-              </MagneticButton>
-            </div>
-          </div>
-
-          <div className="mt-16 pt-8 border-t border-white/10">
             <div className="flex items-center justify-between">
               <button
                 onClick={() => router.push('/blog')}

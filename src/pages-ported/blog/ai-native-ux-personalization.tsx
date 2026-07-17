@@ -683,19 +683,6 @@ export default function AINativeUXPersonalizationPage() {
               The future of UX is intelligent, adaptive, and personal. Whether to adopt these principles isn't really the question anymore; how fast you can learn to design this way is.
             </p>
 
-            <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 border border-purple-500/30 p-8 mt-10">
-              <h3 className="text-2xl font-bold text-white mb-4">Ready to Build AI-Native Experiences?</h3>
-              <p className="text-gray-300 mb-6">
-                I design and build intelligent, adaptive interfaces that use modern AI while keeping ethical standards and user control front and center. Let's build something worth shipping together.
-              </p>
-              <Link
-                href="/contact/"
-                className="inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 transition-colors font-medium"
-              >
-                Start Your AI-Native Project
-                <ArrowRight className="w-4 h-4" />
-              </Link>
-            </div>
           </div>
         </div>
       </section>
