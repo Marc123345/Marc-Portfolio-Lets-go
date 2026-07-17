@@ -1,146 +1,235 @@
 "use client";
 
 import React from 'react';
-import { ArrowRight, CircleCheck as CheckCircle2 } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
+import Link from 'next/link';
 import ProjectTimelineVisualizer from '@/components/ProjectTimelineVisualizer';
-import { useRouter } from 'next/navigation';
+
+const SERIF = "var(--font-heading)";
+
+/* ---------------- Chapter Marker ---------------- */
+function ChapterMarker({ number, label }: { number: string; label: string }) {
+  return (
+    <div className="flex items-center gap-4 mb-10">
+      <span
+        className="text-white/50 text-sm font-mono tracking-[0.3em] uppercase"
+        style={{ fontVariantNumeric: 'tabular-nums' }}
+      >
+        {number}
+      </span>
+      <span className="h-[1px] flex-1 bg-white/15 max-w-[60px]" />
+      <span className="text-white/50 text-sm font-mono tracking-[0.3em] uppercase">
+        {label}
+      </span>
+    </div>
+  );
+}
+
+const PRINCIPLES = [
+  {
+    title: 'Transparency',
+    body: 'No surprises or hidden steps. You know exactly what to expect at every stage of the project.',
+  },
+  {
+    title: 'Collaboration',
+    body: 'We work closely together throughout the process, ensuring your vision is realized.',
+  },
+  {
+    title: 'Efficiency',
+    body: 'A streamlined process eliminates delays and keeps your project on track for timely delivery.',
+  },
+];
+
+const QUOTES = [
+  {
+    client: 'Binns Media Group',
+    quote:
+      'The timeline was clear from day one, and Marc delivered exactly as promised. No surprises, just excellent results.',
+  },
+  {
+    client: 'Wellness TCYS',
+    quote:
+      'The project timeline made it easy to plan our marketing around the launch. Everything was delivered on schedule.',
+  },
+];
 
 export default function ProjectTimelinePage() {
-  const router = useRouter();
-  
-  // Structured data for SEO
   const toolSchema = {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "Website Project Timeline Visualizer",
-    "applicationCategory": "WebApplication",
-    "operatingSystem": "All",
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "USD"
-    },
-    "description": "See exactly what to expect during your website project with our interactive timeline tool. Our transparent process ensures you're informed every step of the way.",
-    "creator": {
-      "@type": "Person",
-      "name": "Marc Friedman"
-    }
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name: 'Website Project Timeline Visualizer',
+    applicationCategory: 'WebApplication',
+    operatingSystem: 'All',
+    offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+    description:
+      "See exactly what to expect during your website project with an interactive timeline tool. A transparent process ensures you're informed every step of the way.",
+    creator: { '@type': 'Person', name: 'Marc Friedman' },
   };
 
   return (
-    <>
-      
+    <main className="bg-black">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(toolSchema) }}
+      />
 
-      <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8 bg-black">
-        <div className="max-w-3xl mx-auto text-center">
-          <h1 className="text-4xl sm:text-5xl font-bold text-white mb-6">
-            Website Project Timeline
+      {/* ===================== HERO ===================== */}
+      <section className="relative bg-black overflow-hidden pt-28 pb-16 px-6 lg:px-12">
+        <div
+          className="absolute inset-0 opacity-[0.06] mix-blend-overlay pointer-events-none"
+          style={{
+            backgroundImage:
+              "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)' opacity='0.5'/></svg>\")",
+          }}
+        />
+        <div className="absolute top-1/3 left-[-10%] w-[700px] h-[700px] bg-[#A3D1FF]/8 rounded-full blur-[140px] pointer-events-none" />
+
+        <div className="max-w-7xl mx-auto relative">
+          <ChapterMarker number="Tool · Vol. 03" label="Free · No sign-up" />
+
+          <h1
+            className="text-white leading-[0.9] tracking-[-0.04em] mb-8 max-w-5xl"
+            style={{
+              fontFamily: SERIF,
+              fontSize: 'clamp(2.75rem, 7.5vw, 6.5rem)',
+              fontWeight: 400,
+            }}
+          >
+            Project <em className="italic text-[#A3D1FF]">timeline.</em>
           </h1>
-          <p className="text-xl text-gray-300 mb-8">
-            See exactly what to expect during your website project. Our transparent process ensures you're informed and involved every step of the way.
+
+          <p className="text-xl md:text-2xl text-white/70 max-w-2xl leading-snug">
+            See exactly what to expect during your website project, phase by phase, so
+            you&apos;re informed and involved every step of the way.
+          </p>
+
+          <p className="mt-6 text-[11px] font-mono uppercase tracking-[0.3em] text-white/40">
+            Discovery · Design · Build · Launch
           </p>
         </div>
       </section>
 
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      {/* ===================== THE TIMELINE ===================== */}
+      <section className="relative bg-[#0a0a0a] py-24 md:py-28 px-6 lg:px-12 border-t border-white/10">
         <div className="max-w-4xl mx-auto">
+          <ChapterMarker number="01" label="The phases" />
           <ProjectTimelineVisualizer />
-          
-          <div className="mt-16 bg-[#1b1b1b] p-8 rounded-xl border border-white/10">
-            <h2 className="text-2xl font-bold text-white mb-6">Why Our Process Works</h2>
-            
-            <div className="grid md:grid-cols-3 gap-8">
-              <div>
-                <h3 className="text-xl font-semibold text-white mb-3">Transparency</h3>
-                <p className="text-white">
-                  No surprises or hidden steps. You'll know exactly what to expect at every stage of the project.
-                </p>
+        </div>
+      </section>
+
+      {/* ===================== WHY IT WORKS ===================== */}
+      <section className="relative bg-black py-24 md:py-32 px-6 lg:px-12 border-t border-white/10">
+        <div className="max-w-7xl mx-auto">
+          <ChapterMarker number="02" label="Why it works" />
+
+          <div className="grid md:grid-cols-3 gap-8 md:gap-10 pt-6">
+            {PRINCIPLES.map((item) => (
+              <div key={item.title} className="border-t border-white/10 pt-6">
+                <h3
+                  className="text-white leading-[1.15] tracking-tight mb-3"
+                  style={{
+                    fontFamily: SERIF,
+                    fontSize: 'clamp(1.25rem, 2vw, 1.65rem)',
+                    fontWeight: 500,
+                  }}
+                >
+                  {item.title}
+                </h3>
+                <p className="text-white/60 leading-relaxed text-sm">{item.body}</p>
               </div>
-              
-              <div>
-                <h3 className="text-xl font-semibold text-white mb-3">Collaboration</h3>
-                <p className="text-white">
-                  We work closely with you throughout the process, ensuring your vision is realized.
-                </p>
-              </div>
-              
-              <div>
-                <h3 className="text-xl font-semibold text-white mb-3">Efficiency</h3>
-                <p className="text-white">
-                  Our streamlined process eliminates delays and keeps your project on track for timely delivery.
-                </p>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#1b1b1b]">
+      {/* ===================== CLIENT STORIES ===================== */}
+      <section className="relative bg-[#0a0a0a] py-24 md:py-32 px-6 lg:px-12 border-t border-white/10">
         <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <ChapterMarker number="03" label="Client stories" />
+
+          <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-start">
             <div>
-              <h2 className="text-3xl font-bold text-white mb-6">Client Success Stories</h2>
-              <p className="text-white mb-6">
-                Our proven process has helped numerous clients achieve their goals on time and within budget:
-              </p>
-              
-              <div className="space-y-6">
-                <div className="flex items-start">
-                  <div className="bg-[#A3D1FF]/10 p-3 rounded-lg mr-4">
-                    <CheckCircle2 className="w-6 h-6 text-[#A3D1FF]" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-white mb-2">Binns Media Group</h3>
-                    <p className="text-white">"The timeline was clear from day one, and Marc delivered exactly as promised. No surprises, just excellent results."</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start">
-                  <div className="bg-[#A3D1FF]/10 p-3 rounded-lg mr-4">
-                    <CheckCircle2 className="w-6 h-6 text-[#A3D1FF]" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-white mb-2">Wellness TCYS</h3>
-                    <p className="text-white">"The project timeline made it easy to plan our marketing around the launch. Everything was delivered on schedule."</p>
-                  </div>
-                </div>
-              </div>
-              
-              <button
-                onClick={() => router.push('/contact')}
-                className="mr_btn mr_btn_outline group"
+              <h2
+                className="text-white leading-[1.05] tracking-[-0.02em] mb-8"
+                style={{
+                  fontFamily: SERIF,
+                  fontSize: 'clamp(1.75rem, 3vw, 2.75rem)',
+                  fontWeight: 400,
+                }}
               >
-                <span>Start Your Project</span>
-                <ArrowRight className="ml-3 group-hover:translate-x-1 transition-transform duration-300" />
-              </button>
+                Delivered on time,{' '}
+                <em className="italic text-[#A3D1FF]">as promised.</em>
+              </h2>
+
+              <div className="space-y-8">
+                {QUOTES.map((item) => (
+                  <blockquote key={item.client} className="border-t border-white/10 pt-6">
+                    <p
+                      className="text-white/90 leading-[1.35] italic mb-3"
+                      style={{
+                        fontFamily: SERIF,
+                        fontSize: 'clamp(1.15rem, 1.8vw, 1.5rem)',
+                        fontWeight: 400,
+                      }}
+                    >
+                      &ldquo;{item.quote}&rdquo;
+                    </p>
+                    <footer className="text-[10px] font-mono uppercase tracking-[0.3em] text-white/40">
+                      {item.client}
+                    </footer>
+                  </blockquote>
+                ))}
+              </div>
             </div>
-            
-            <div>
-              <img 
-                src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=800&q=80" 
+
+            <div className="relative aspect-[4/3] overflow-hidden bg-[#1b1b1b]">
+              <img
+                src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=800&q=80"
                 alt="Project timeline planning and management session for web development"
-                className="rounded-xl shadow-2xl"
+                className="absolute inset-0 w-full h-full object-cover"
+                loading="lazy"
               />
             </div>
           </div>
         </div>
       </section>
 
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">Ready to Start Your Project?</h2>
-          <p className="text-xl text-white mb-8 max-w-2xl mx-auto">
-            Let's create a website that delivers real results for your business, with a clear timeline and process you can trust.
-          </p>
-          <button
-            onClick={() => router.push('/contact')}
-            className="mr_btn mr_btn_outline group"
+      {/* ===================== CTA ===================== */}
+      <section className="relative bg-black py-32 md:py-40 px-6 lg:px-12 border-t border-white/10 overflow-hidden">
+        <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-[#A3D1FF]/5 rounded-full blur-[120px] pointer-events-none" />
+
+        <div className="max-w-7xl mx-auto relative">
+          <h2
+            className="text-white leading-[0.95] tracking-[-0.04em] mb-12 max-w-5xl"
+            style={{
+              fontFamily: SERIF,
+              fontSize: 'clamp(2rem, 5vw, 4rem)',
+              fontWeight: 400,
+            }}
           >
-            <span>Book a Free Strategy Call</span>
-            <ArrowRight className="ml-3 group-hover:translate-x-1 transition-transform duration-300" />
-          </button>
+            Ready to start{' '}
+            <em className="italic text-[#A3D1FF]">your project?</em>
+          </h2>
+
+          <div className="flex flex-wrap items-center gap-6">
+            <Link
+              href="/contact/"
+              className="inline-flex items-center gap-3 bg-white text-black font-medium px-8 py-4 hover:bg-[#A3D1FF] transition-colors group"
+            >
+              Book a free strategy call
+              <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+            </Link>
+
+            <Link
+              href="/work/"
+              className="inline-flex items-center gap-3 text-white font-medium border-b border-white/30 hover:border-[#A3D1FF] hover:text-[#A3D1FF] transition-colors py-1"
+            >
+              See the work
+              <ArrowUpRight className="w-4 h-4" />
+            </Link>
+          </div>
         </div>
       </section>
-    </>
+    </main>
   );
 }

@@ -1,86 +1,134 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { Gauge, Calculator, CalendarClock, FileDown, ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: { absolute: 'Free Tools & Resources for Web Projects | Marc Friedman' },
   description:
-    'Free tools: instant website analyzer, website ROI calculator, AI crawler optimization checker, project timeline visualizer, and a landing page guide.',
+    'Free tools: instant website analyzer, website ROI calculator, project timeline visualizer, and free B2B website guides and checklists.',
   alternates: { canonical: 'https://www.marcfriedmanportfolio.com/tools/' },
   openGraph: {
     title: 'Free Tools & Resources for Web Projects | Marc Friedman',
     description:
-      'Free tools: website analyzer, ROI calculator, AI crawler checker, project timeline, and a landing page guide.',
+      'Free tools: website analyzer, ROI calculator, project timeline, and free B2B website guides.',
     url: 'https://www.marcfriedmanportfolio.com/tools/',
     type: 'website',
   },
 };
 
+const SERIF = "var(--font-heading)";
+
+/* ---------------- Chapter Marker ---------------- */
+function ChapterMarker({ number, label }: { number: string; label: string }) {
+  return (
+    <div className="flex items-center gap-4 mb-10">
+      <span
+        className="text-white/50 text-sm font-mono tracking-[0.3em] uppercase"
+        style={{ fontVariantNumeric: 'tabular-nums' }}
+      >
+        {number}
+      </span>
+      <span className="h-[1px] flex-1 bg-white/15 max-w-[60px]" />
+      <span className="text-white/50 text-sm font-mono tracking-[0.3em] uppercase">
+        {label}
+      </span>
+    </div>
+  );
+}
+
 const TOOLS = [
   {
     href: '/tools/website-analyzer',
-    icon: Gauge,
     title: 'Website Analyzer',
     desc: 'Instant Lighthouse audit of any URL, performance, accessibility, SEO, and Core Web Vitals. Powered by Google PageSpeed Insights.',
     tag: 'Live audit',
   },
   {
     href: '/tools/roi-calculator',
-    icon: Calculator,
     title: 'Website ROI Calculator',
     desc: 'Model the return on a redesign, see how traffic, conversion rate, and order value translate into real revenue.',
     tag: 'Calculator',
   },
   {
     href: '/tools/project-timeline',
-    icon: CalendarClock,
     title: 'Project Timeline',
     desc: 'Visualize a realistic timeline and phases for your web design and development project.',
     tag: 'Planner',
   },
   {
     href: '/resources',
-    icon: FileDown,
-    title: 'The Landing Page Lead Magnet',
-    desc: 'Free PDF guide to building landing pages that turn visitors into leads. Delivered straight to your inbox.',
-    tag: 'Free guide',
+    title: 'Free Guides & Checklists',
+    desc: 'B2B Website Mastery, the B2B Website Checklist, and the Landing Page Lead Magnet. Free PDFs, delivered to your inbox.',
+    tag: 'Free guides',
   },
 ];
 
 export default function ToolsHubPage() {
   return (
-    <main className="min-h-screen bg-black text-white">
-      <section className="mx-auto max-w-6xl px-6 pt-28 pb-24 md:pt-36">
-        <p className="mb-6 font-mono text-xs uppercase tracking-[0.32em] text-[#A3D1FF]">
-          Free Tools &amp; Resources
-        </p>
-        <h1 className="text-4xl md:text-5xl font-semibold leading-[1.05] tracking-tight max-w-2xl">
-          Tools to plan, measure, and <span className="text-[#A3D1FF]">improve</span> your website.
-        </h1>
-        <p className="mt-6 max-w-xl text-lg leading-relaxed text-white/70">
-          A small suite of free tools I built. No sign-up required, use them as much as you like.
-        </p>
+    <main className="bg-black">
+      {/* ===================== HERO ===================== */}
+      <section className="relative bg-black overflow-hidden pt-28 pb-16 px-6 lg:px-12">
+        <div
+          className="absolute inset-0 opacity-[0.06] mix-blend-overlay pointer-events-none"
+          style={{
+            backgroundImage:
+              "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)' opacity='0.5'/></svg>\")",
+          }}
+        />
+        <div className="absolute top-1/3 left-[-10%] w-[700px] h-[700px] bg-[#A3D1FF]/8 rounded-full blur-[140px] pointer-events-none" />
 
-        <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {TOOLS.map(({ href, icon: Icon, title, desc, tag }) => (
-            <Link
-              key={href}
-              href={href}
-              className="group relative flex flex-col rounded-2xl border border-white/10 bg-white/[0.03] p-6 hover:border-[#A3D1FF]/40 hover:bg-white/[0.05] transition-colors"
-            >
-              <div className="flex items-center justify-between mb-5">
-                <div className="w-11 h-11 flex items-center justify-center rounded-lg bg-[#A3D1FF]/10 border border-[#A3D1FF]/20">
-                  <Icon className="w-5 h-5 text-[#A3D1FF]" />
+        <div className="max-w-7xl mx-auto relative">
+          <ChapterMarker number="Tools · Vol. 01" label="Free · No sign-up" />
+
+          <h1
+            className="text-white leading-[0.9] tracking-[-0.04em] mb-8 max-w-5xl"
+            style={{
+              fontFamily: SERIF,
+              fontSize: 'clamp(2.75rem, 7.5vw, 6.5rem)',
+              fontWeight: 400,
+            }}
+          >
+            Free <em className="italic text-[#A3D1FF]">tools.</em>
+          </h1>
+
+          <p className="text-xl md:text-2xl text-white/70 max-w-2xl leading-snug">
+            A small suite of tools I built to plan, measure, and improve a website. No
+            sign-up required, use them as much as you like.
+          </p>
+        </div>
+      </section>
+
+      {/* ===================== THE SUITE ===================== */}
+      <section className="relative bg-[#0a0a0a] py-24 md:py-28 px-6 lg:px-12 border-t border-white/10">
+        <div className="max-w-7xl mx-auto">
+          <ChapterMarker number="01" label="The suite" />
+
+          <div className="border-t border-white/10">
+            {TOOLS.map(({ href, title, desc, tag }) => (
+              <Link key={href} href={href} className="group block border-b border-white/10">
+                <div className="flex items-start justify-between gap-8 py-8 md:py-10">
+                  <div className="max-w-2xl">
+                    <p className="text-[10px] font-mono uppercase tracking-[0.3em] text-white/40 mb-3">
+                      {tag}
+                    </p>
+                    <h2
+                      className="text-white leading-[1.15] tracking-tight group-hover:text-[#A3D1FF] transition-colors duration-300 mb-3"
+                      style={{
+                        fontFamily: SERIF,
+                        fontSize: 'clamp(1.5rem, 2.5vw, 2.15rem)',
+                        fontWeight: 500,
+                      }}
+                    >
+                      {title}
+                    </h2>
+                    <p className="text-white/60 leading-relaxed text-sm">{desc}</p>
+                  </div>
+
+                  <ArrowUpRight className="w-5 h-5 shrink-0 mt-1 text-white/40 group-hover:text-[#A3D1FF] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
                 </div>
-                <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-white/40">{tag}</span>
-              </div>
-              <h2 className="text-xl font-semibold mb-2 flex items-center gap-1.5">
-                {title}
-                <ArrowUpRight className="w-4 h-4 text-white/30 group-hover:text-[#A3D1FF] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
-              </h2>
-              <p className="text-sm leading-relaxed text-white/60">{desc}</p>
-            </Link>
-          ))}
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
     </main>
