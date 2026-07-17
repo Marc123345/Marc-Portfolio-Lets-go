@@ -3,11 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import ArcSlider, { ArcCard } from '@/components/ArcSlider';
-import {
-  ChapterMarker,
-  ServiceColophon,
-  SERIF,
-} from '@/components/ServiceEditorial';
+import { ChapterMarker, SERIF } from '@/components/ServiceEditorial';
 
 const services: ArcCard[] = [
   {
@@ -170,12 +166,6 @@ export default function ServicesPage() {
           <ArcSlider cards={services} />
         </div>
       </section>
-
-      <ServiceColophon
-        headline="Don't see what"
-        italicHeadline="you need?"
-        lead="Most engagements are some combination of these. Book a call and we'll scope it from scratch."
-      />
     </>
   );
 }
