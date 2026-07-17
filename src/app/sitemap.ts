@@ -31,6 +31,8 @@ const entries: Entry[] = [
   { path: 'free-website-analyzer', priority: 0.9 },
   { path: 'free-geo-audit', priority: 0.9 },
   { path: 'resources', priority: 0.8 },
+  { path: 'resources/b2b-checklist', priority: 0.7 },
+  { path: 'resources/b2b-website-mastery', priority: 0.7 },
   { path: 'tools', priority: 0.8 },
   { path: 'tools/website-analyzer', priority: 0.9 },
   { path: 'tools/roi-calculator', priority: 0.9 },

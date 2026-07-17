@@ -256,6 +256,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 label="Resources"
                 items={[
                   { label: 'Free Landing Page Guide', href: '/resources' },
+                  { label: 'B2B Website Checklist', href: '/resources/b2b-checklist' },
+                  { label: 'B2B Website Mastery', href: '/resources/b2b-website-mastery' },
                 ]}
               />
             </nav>

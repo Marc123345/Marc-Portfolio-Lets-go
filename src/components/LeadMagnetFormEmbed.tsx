@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 
-const FORM_ID = '261536844219058';
+const DEFAULT_FORM_ID = '261536844219058';
 
 /**
  * Embeds the "Get the Free Landing Page Guide" Jotform via a direct iframe
@@ -11,7 +11,10 @@ const FORM_ID = '261536844219058';
  * On submit, Jotform shows a thank-you page with a PDF download button and
  * emails the visitor the download link via autoresponder.
  */
-export default function LeadMagnetFormEmbed() {
+export default function LeadMagnetFormEmbed({
+  formId = DEFAULT_FORM_ID,
+  title = 'Lead magnet opt-in form',
+}: { formId?: string; title?: string } = {}) {
   const [loaded, setLoaded] = useState(false);
   const iframeRef = useRef<HTMLIFrameElement>(null);
 
@@ -43,7 +46,7 @@ export default function LeadMagnetFormEmbed() {
           jotformEmbedHandler?: (sel: string, base: string) => void;
         }
       ).jotformEmbedHandler?.(
-        `iframe[id='JotFormIFrame-${FORM_ID}']`,
+        `iframe[id='JotFormIFrame-${formId}']`,
         'https://form.jotform.com/',
       );
     };
@@ -51,7 +54,7 @@ export default function LeadMagnetFormEmbed() {
     return () => {
       if (script.parentNode) script.parentNode.removeChild(script);
     };
-  }, []);
+  }, [formId]);
 
   return (
     <div className="relative min-h-[700px] md:min-h-[560px]">
@@ -71,13 +74,13 @@ export default function LeadMagnetFormEmbed() {
       )}
       <iframe
         ref={iframeRef}
-        id={`JotFormIFrame-${FORM_ID}`}
-        title="Get the Free Landing Page Guide"
-        src={`https://form.jotform.com/${FORM_ID}`}
+        id={`JotFormIFrame-${formId}`}
+        title={title}
+        src={`https://form.jotform.com/${formId}`}
         onLoad={() => setLoaded(true)}
         allow="geolocation; microphone; camera; fullscreen; payment"
         allowTransparency
-        loading="lazy"
+        loading="eager"
         scrolling="no"
         className="w-full border-0 bg-transparent"
         style={{ minHeight: 560, height: '100%' }}

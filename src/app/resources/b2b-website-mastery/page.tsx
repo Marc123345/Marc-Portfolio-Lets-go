@@ -1,34 +1,28 @@
 import type { Metadata } from 'next';
 import LeadMagnetFormEmbed from '@/components/LeadMagnetFormEmbed';
 
+const FORM_ID = '261968253944066';
+const title = 'B2B Website Mastery, Free Guide | Marc Friedman';
+const description =
+  'Download B2B Website Mastery, a free guide to designing and building B2B websites that generate qualified leads. Enter your email and get the PDF instantly.';
+const url = 'https://www.marcfriedmanportfolio.com/resources/b2b-website-mastery/';
+
 export const metadata: Metadata = {
-  title: { absolute: 'Free Resources, The Landing Page Lead Magnet | Marc Friedman' },
-  description:
-    'Download a free guide to building high-converting landing pages. Enter your email and get the PDF delivered instantly.',
-  alternates: { canonical: 'https://www.marcfriedmanportfolio.com/resources/' },
-  openGraph: {
-    title: 'Free Resources, The Landing Page Lead Magnet | Marc Friedman',
-    description:
-      'Download a free guide to building high-converting landing pages. Enter your email and get the PDF delivered instantly.',
-    url: 'https://www.marcfriedmanportfolio.com/resources/',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Free Resources, The Landing Page Lead Magnet | Marc Friedman',
-    description:
-      'Download a free guide to building high-converting landing pages. Enter your email and get the PDF delivered instantly.',
-  },
+  title: { absolute: title },
+  description,
+  alternates: { canonical: url },
+  openGraph: { title, description, url, type: 'website' },
+  twitter: { card: 'summary_large_image', title, description },
 };
 
 const TAKEAWAYS = [
-  'The anatomy of a landing page that converts',
-  'Headline and copy frameworks that hold attention',
-  'Layout and visual-hierarchy mistakes that cost you leads',
-  'A practical checklist you can apply to your own page today',
+  'The full B2B web design playbook, from strategy to launch',
+  'Positioning and messaging that convinces a buying committee',
+  'Design and build decisions that turn traffic into pipeline',
+  'The SEO, AEO, and performance foundations B2B sites need',
 ];
 
-export default function ResourcesPage() {
+export default function B2BWebsiteMasteryResourcePage() {
   return (
     <main className="min-h-screen bg-black text-white">
       <section className="mx-auto max-w-6xl px-6 pt-28 pb-20 md:pt-36 md:pb-28">
@@ -40,14 +34,14 @@ export default function ResourcesPage() {
           {/* LEFT, pitch */}
           <div>
             <h1 className="text-4xl font-semibold leading-[1.05] tracking-tight md:text-5xl">
-              The Landing Page{' '}
-              <span className="text-[#A3D1FF]">Lead Magnet</span>
+              B2B Website{' '}
+              <span className="text-[#A3D1FF]">Mastery</span>
             </h1>
 
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-white/70">
-              A free, no-fluff guide to building landing pages that actually turn
-              visitors into leads. Drop your email and I&apos;ll send the PDF straight
-              to your inbox, you can also download it the moment you sign up.
+              A free, practical guide to designing and building B2B websites that actually
+              generate qualified leads, not just internal approval. Drop your email and I&apos;ll
+              send the guide straight to your inbox.
             </p>
 
             <ul className="mt-10 space-y-4">
@@ -70,9 +64,7 @@ export default function ResourcesPage() {
               ))}
             </ul>
 
-            <p className="mt-10 text-sm text-white/40">
-              No spam. Unsubscribe anytime.
-            </p>
+            <p className="mt-10 text-sm text-white/40">No spam. Unsubscribe anytime.</p>
           </div>
 
           {/* RIGHT, opt-in form */}
@@ -81,7 +73,7 @@ export default function ResourcesPage() {
             <p className="mb-6 text-sm text-white/60">
               Enter your details and the download is yours.
             </p>
-            <LeadMagnetFormEmbed title="Get the Free Landing Page Guide" />
+            <LeadMagnetFormEmbed formId={FORM_ID} title="Get the free B2B Website Mastery guide" />
           </div>
         </div>
       </section>

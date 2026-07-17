@@ -1,34 +1,28 @@
 import type { Metadata } from 'next';
 import LeadMagnetFormEmbed from '@/components/LeadMagnetFormEmbed';
 
+const FORM_ID = '261967965285073';
+const title = 'Free B2B Website Checklist | Marc Friedman';
+const description =
+  'Download a free B2B website checklist, the conversion, SEO, speed, and trust essentials every B2B site needs. Enter your email and get the PDF delivered instantly.';
+const url = 'https://www.marcfriedmanportfolio.com/resources/b2b-checklist/';
+
 export const metadata: Metadata = {
-  title: { absolute: 'Free Resources, The Landing Page Lead Magnet | Marc Friedman' },
-  description:
-    'Download a free guide to building high-converting landing pages. Enter your email and get the PDF delivered instantly.',
-  alternates: { canonical: 'https://www.marcfriedmanportfolio.com/resources/' },
-  openGraph: {
-    title: 'Free Resources, The Landing Page Lead Magnet | Marc Friedman',
-    description:
-      'Download a free guide to building high-converting landing pages. Enter your email and get the PDF delivered instantly.',
-    url: 'https://www.marcfriedmanportfolio.com/resources/',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Free Resources, The Landing Page Lead Magnet | Marc Friedman',
-    description:
-      'Download a free guide to building high-converting landing pages. Enter your email and get the PDF delivered instantly.',
-  },
+  title: { absolute: title },
+  description,
+  alternates: { canonical: url },
+  openGraph: { title, description, url, type: 'website' },
+  twitter: { card: 'summary_large_image', title, description },
 };
 
 const TAKEAWAYS = [
-  'The anatomy of a landing page that converts',
-  'Headline and copy frameworks that hold attention',
-  'Layout and visual-hierarchy mistakes that cost you leads',
-  'A practical checklist you can apply to your own page today',
+  'The conversion-path and CTA checks that turn visitors into leads',
+  'Core Web Vitals and speed targets that keep buyers from bouncing',
+  'The trust signals every B2B buyer looks for before they enquire',
+  'On-page SEO, metadata, and schema essentials, in a checkable list',
 ];
 
-export default function ResourcesPage() {
+export default function B2BChecklistResourcePage() {
   return (
     <main className="min-h-screen bg-black text-white">
       <section className="mx-auto max-w-6xl px-6 pt-28 pb-20 md:pt-36 md:pb-28">
@@ -40,14 +34,14 @@ export default function ResourcesPage() {
           {/* LEFT, pitch */}
           <div>
             <h1 className="text-4xl font-semibold leading-[1.05] tracking-tight md:text-5xl">
-              The Landing Page{' '}
-              <span className="text-[#A3D1FF]">Lead Magnet</span>
+              The B2B Website{' '}
+              <span className="text-[#A3D1FF]">Checklist</span>
             </h1>
 
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-white/70">
-              A free, no-fluff guide to building landing pages that actually turn
-              visitors into leads. Drop your email and I&apos;ll send the PDF straight
-              to your inbox, you can also download it the moment you sign up.
+              A free, no-fluff checklist for auditing a B2B website against the things
+              that actually drive pipeline, conversion, speed, trust, and search. Drop your
+              email and I&apos;ll send the PDF straight to your inbox.
             </p>
 
             <ul className="mt-10 space-y-4">
@@ -70,18 +64,16 @@ export default function ResourcesPage() {
               ))}
             </ul>
 
-            <p className="mt-10 text-sm text-white/40">
-              No spam. Unsubscribe anytime.
-            </p>
+            <p className="mt-10 text-sm text-white/40">No spam. Unsubscribe anytime.</p>
           </div>
 
           {/* RIGHT, opt-in form */}
           <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-6 md:p-8">
-            <h2 className="mb-2 text-xl font-semibold">Get the free guide</h2>
+            <h2 className="mb-2 text-xl font-semibold">Get the free checklist</h2>
             <p className="mb-6 text-sm text-white/60">
               Enter your details and the download is yours.
             </p>
-            <LeadMagnetFormEmbed title="Get the Free Landing Page Guide" />
+            <LeadMagnetFormEmbed formId={FORM_ID} title="Get the free B2B Website Checklist" />
           </div>
         </div>
       </section>
