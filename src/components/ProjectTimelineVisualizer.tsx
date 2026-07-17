@@ -3,6 +3,8 @@
 import React, { useState } from 'react';
 import { Calendar, Clock, SquareCheck as CheckSquare, FileText, Code, Zap, Rocket, ArrowRight } from 'lucide-react';
 
+const SERIF = 'var(--font-heading)';
+
 interface TimelinePhase {
   id: string;
   title: string;
@@ -117,97 +119,113 @@ export default function ProjectTimelineVisualizer() {
   const activePhaseData = phases.find(phase => phase.id === activePhase);
   
   return (
-    <div className="bg-[#1b1b1b] rounded-xl border border-white/10 overflow-hidden">
-      <div className="p-8">
-        <div className="flex items-center gap-3 mb-6">
-          <div className="bg-[#A3D1FF]/10 p-3 rounded-lg">
-            <Clock className="w-6 h-6 text-[#A3D1FF]" />
-          </div>
-          <h3 className="text-2xl font-bold text-white">Project Timeline</h3>
+    <div className="border border-white/10 bg-[#0b0b0b]">
+      <div className="p-6 md:p-8">
+        {/* Header */}
+        <div className="flex items-center gap-3 mb-10 pb-6 border-b border-white/10">
+          <Clock className="w-4 h-4 text-[#A3D1FF]" />
+          <span className="text-[10px] font-mono uppercase tracking-[0.3em] text-white/50">
+            Project Timeline
+          </span>
         </div>
-        
-        <p className="text-white mb-8">
-          See exactly what to expect during your website project. Our transparent process ensures you're informed and involved every step of the way.
-        </p>
-        
+
         {/* Timeline Navigation */}
         <div className="relative mb-12">
-          <div className="absolute top-1/2 left-0 right-0 h-1 bg-[#2d3035] -translate-y-1/2"></div>
-          
+          <div className="absolute top-5 left-0 right-0 h-[1px] bg-white/10" />
+
           <div className="relative flex justify-between">
-            {phases.map((phase, index) => (
-              <button
-                key={phase.id}
-                onClick={() => setActivePhase(phase.id)}
-                className={`flex flex-col items-center relative z-10 transition-all duration-300 ${
-                  activePhase === phase.id ? 'scale-110' : 'opacity-70 hover:opacity-100'
-                }`}
-              >
-                <div className={`w-10 h-10 rounded-full flex items-center justify-center mb-2 transition-colors ${
-                  activePhase === phase.id ? 'bg-[#A3D1FF] text-black' : 'bg-[#2d3035] text-white'
-                }`}>
-                  {index + 1}
-                </div>
-                <span className={`text-xs font-medium ${
-                  activePhase === phase.id ? 'text-[#A3D1FF]' : 'text-white'
-                }`}>
-                  {phase.title.split(' ')[0]}
-                </span>
-              </button>
-            ))}
+            {phases.map((phase, index) => {
+              const isActive = activePhase === phase.id;
+              return (
+                <button
+                  key={phase.id}
+                  onClick={() => setActivePhase(phase.id)}
+                  aria-current={isActive ? 'step' : undefined}
+                  className="flex flex-col items-center relative z-10 group"
+                >
+                  <div
+                    className={`w-10 h-10 flex items-center justify-center mb-3 border font-mono text-xs transition-colors ${
+                      isActive
+                        ? 'border-[#A3D1FF] bg-[#A3D1FF] text-black'
+                        : 'border-white/15 bg-black text-white/50 group-hover:border-white/40 group-hover:text-white'
+                    }`}
+                    style={{ fontVariantNumeric: 'tabular-nums' }}
+                  >
+                    {String(index + 1).padStart(2, '0')}
+                  </div>
+                  <span
+                    className={`text-[10px] font-mono uppercase tracking-[0.2em] transition-colors ${
+                      isActive ? 'text-[#A3D1FF]' : 'text-white/40 group-hover:text-white/70'
+                    }`}
+                  >
+                    {phase.title.split(' ')[0]}
+                  </span>
+                </button>
+              );
+            })}
           </div>
         </div>
-        
+
         {/* Active Phase Details */}
         {activePhaseData && (
           <div className="grid md:grid-cols-2 gap-8">
             <div>
-              <div className="flex items-center gap-3 mb-4">
+              <div className="flex items-center gap-4 mb-5">
                 {activePhaseData.icon}
                 <div>
-                  <h4 className="text-xl font-semibold text-white">{activePhaseData.title}</h4>
-                  <p className="text-[#A3D1FF]">{activePhaseData.duration}</p>
+                  <h4
+                    className="text-white leading-tight"
+                    style={{
+                      fontFamily: SERIF,
+                      fontSize: 'clamp(1.25rem, 2vw, 1.65rem)',
+                      fontWeight: 500,
+                    }}
+                  >
+                    {activePhaseData.title}
+                  </h4>
+                  <p className="mt-1 text-[10px] font-mono uppercase tracking-[0.25em] text-[#A3D1FF]">
+                    {activePhaseData.duration}
+                  </p>
                 </div>
               </div>
-              
-              <p className="text-gray-300 mb-6">
+
+              <p className="text-white/70 leading-relaxed mb-8">
                 {activePhaseData.description}
               </p>
-              
-              <div className="bg-[#2d3035] p-4 rounded-lg mb-4">
-                <h5 className="font-medium text-white mb-3">Your Responsibilities</h5>
-                <ul className="space-y-2">
+
+              <div className="border border-white/10 bg-white/[0.03] p-5">
+                <h5 className="text-[10px] font-mono uppercase tracking-[0.3em] text-white/40 mb-4">
+                  Your Responsibilities
+                </h5>
+                <ul className="space-y-3">
                   {activePhaseData.clientResponsibilities.map((item, index) => (
-                    <li key={index} className="flex items-start gap-2 text-gray-300">
-                      <CheckSquare className="w-5 h-5 text-[#A3D1FF] mt-0.5" />
+                    <li key={index} className="flex items-start gap-3 text-sm text-white/70">
+                      <CheckSquare className="w-4 h-4 text-[#A3D1FF] mt-0.5 shrink-0" />
                       <span>{item}</span>
                     </li>
                   ))}
                 </ul>
               </div>
             </div>
-            
+
             <div>
-              <div className="bg-[#2d3035] p-6 rounded-lg h-full">
-                <h5 className="font-medium text-white mb-4">What You'll Receive</h5>
+              <div className="border border-white/10 bg-white/[0.03] p-5 md:p-6 h-full">
+                <h5 className="text-[10px] font-mono uppercase tracking-[0.3em] text-white/40 mb-5">
+                  What You&apos;ll Receive
+                </h5>
                 <ul className="space-y-4">
                   {activePhaseData.deliverables.map((item, index) => (
-                    <li key={index} className="flex items-start gap-3">
-                      <div className="w-8 h-8 bg-[#A3D1FF]/10 rounded-full flex items-center justify-center flex-shrink-0">
-                        <span className="text-[#A3D1FF] text-sm font-medium">{index + 1}</span>
-                      </div>
-                      <div>
-                        <p className="text-white font-medium">{item}</p>
-                        <p className="text-sm text-white">
-                          {[
-                            'A comprehensive document outlining project goals, timeline, and strategy.',
-                            'Visual designs showing the layout, colors, and user interface of your website.',
-                            'Fully functional website code built with modern technologies.',
-                            'Thorough testing across devices and optimization for performance.',
-                            'Your website launched and live with ongoing support.'
-                          ][index]}
-                        </p>
-                      </div>
+                    <li
+                      key={index}
+                      className="flex items-start gap-4 border-b border-white/10 pb-4 last:border-b-0 last:pb-0"
+                    >
+                      <span
+                        className="font-mono text-xs text-[#A3D1FF] mt-0.5 shrink-0"
+                        style={{ fontVariantNumeric: 'tabular-nums' }}
+                      >
+                        {String(index + 1).padStart(2, '0')}
+                      </span>
+                      <p className="text-white/80 text-sm leading-relaxed">{item}</p>
                     </li>
                   ))}
                 </ul>
@@ -215,9 +233,9 @@ export default function ProjectTimelineVisualizer() {
             </div>
           </div>
         )}
-        
+
         {/* Navigation Buttons */}
-        <div className="flex justify-between mt-8 pt-6 border-t border-white/10">
+        <div className="flex justify-between mt-10 pt-6 border-t border-white/10">
           <button
             onClick={() => {
               const currentIndex = phases.findIndex(phase => phase.id === activePhase);
@@ -226,12 +244,12 @@ export default function ProjectTimelineVisualizer() {
               }
             }}
             disabled={activePhase === phases[0].id}
-            className="text-white hover:text-white disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
+            className="flex items-center gap-2 text-[10px] font-mono uppercase tracking-[0.25em] text-white/60 hover:text-white disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
           >
-            <ArrowRight className="w-4 h-4 rotate-180" />
-            ← Previous Step
+            <ArrowRight className="w-3.5 h-3.5 rotate-180" />
+            Previous step
           </button>
-          
+
           <button
             onClick={() => {
               const currentIndex = phases.findIndex(phase => phase.id === activePhase);
@@ -240,10 +258,10 @@ export default function ProjectTimelineVisualizer() {
               }
             }}
             disabled={activePhase === phases[phases.length - 1].id}
-            className="text-[#A3D1FF] hover:text-white disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
+            className="flex items-center gap-2 text-[10px] font-mono uppercase tracking-[0.25em] text-[#A3D1FF] hover:text-white disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
           >
-            Next Step →
-            <ArrowRight className="w-4 h-4" />
+            Next step
+            <ArrowRight className="w-3.5 h-3.5" />
           </button>
         </div>
       </div>
