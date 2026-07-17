@@ -1,9 +1,7 @@
 "use client";
 
 import React from 'react';
-import { ArrowUpRight, Mail } from 'lucide-react';
 import { motion } from 'framer-motion';
-import Link from 'next/link';
 import Globe from '@/components/Globe';
 
 const SERIF = "var(--font-heading)";
@@ -754,55 +752,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ===================== CLOSING ===================== */}
-      <section className="relative bg-[#0a0a0a] py-32 md:py-40 px-6 lg:px-12 border-t border-white/10 overflow-hidden">
-        <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-[#A3D1FF]/5 rounded-full blur-[120px] pointer-events-none" />
-        <div className="max-w-7xl mx-auto relative">
-          <ChapterMarker number="Colophon" label="The End." />
-
-          <motion.h2
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: '-80px' }}
-            transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-            className="text-white leading-[0.95] tracking-[-0.04em] mb-12 max-w-5xl"
-            style={{
-              fontFamily: SERIF,
-              fontSize: 'clamp(2.5rem, 6.5vw, 5.5rem)',
-              fontWeight: 400,
-            }}
-          >
-            Let&apos;s make
-            <br />
-            <em className="italic text-[#A3D1FF]">something real.</em>
-          </motion.h2>
-
-          <div className="flex flex-wrap items-center gap-6 mb-16">
-            <Link
-              href="/contact/"
-              className="inline-flex items-center gap-3 bg-white text-black font-medium px-8 py-4 hover:bg-[#A3D1FF] transition-colors group"
-            >
-              <Mail className="w-4 h-4" />
-              Book a Free Strategy Call
-              <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-            </Link>
-            <Link
-              href="/work/"
-              className="inline-flex items-center gap-2 text-white font-medium px-8 py-4 border border-white/20 hover:border-white/60 transition-colors group"
-            >
-              See the Work
-              <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-            </Link>
-          </div>
-
-          <div className="flex flex-wrap items-center gap-x-8 gap-y-3 pt-8 border-t border-white/10 text-xs font-mono uppercase tracking-[0.25em] text-white/40">
-            <span>Profile · Vol. 01</span>
-            <span>Issue: 2026</span>
-            <span>Marc Friedman</span>
-            <span className="ml-auto text-white/60">Thanks for reading.</span>
-          </div>
-        </div>
-      </section>
     </>
   );
 }

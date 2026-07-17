@@ -1,8 +1,6 @@
 "use client";
 
 import React from 'react';
-import { ArrowUpRight } from 'lucide-react';
-import Link from 'next/link';
 import ProjectTimelineVisualizer from '@/components/ProjectTimelineVisualizer';
 
 const SERIF = "var(--font-heading)";
@@ -194,42 +192,6 @@ export default function ProjectTimelinePage() {
         </div>
       </section>
 
-      {/* ===================== CTA ===================== */}
-      <section className="relative bg-black py-32 md:py-40 px-6 lg:px-12 border-t border-white/10 overflow-hidden">
-        <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-[#A3D1FF]/5 rounded-full blur-[120px] pointer-events-none" />
-
-        <div className="max-w-7xl mx-auto relative">
-          <h2
-            className="text-white leading-[0.95] tracking-[-0.04em] mb-12 max-w-5xl"
-            style={{
-              fontFamily: SERIF,
-              fontSize: 'clamp(2rem, 5vw, 4rem)',
-              fontWeight: 400,
-            }}
-          >
-            Ready to start{' '}
-            <em className="italic text-[#A3D1FF]">your project?</em>
-          </h2>
-
-          <div className="flex flex-wrap items-center gap-6">
-            <Link
-              href="/contact/"
-              className="inline-flex items-center gap-3 bg-white text-black font-medium px-8 py-4 hover:bg-[#A3D1FF] transition-colors group"
-            >
-              Book a free strategy call
-              <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-            </Link>
-
-            <Link
-              href="/work/"
-              className="inline-flex items-center gap-3 text-white font-medium border-b border-white/30 hover:border-[#A3D1FF] hover:text-[#A3D1FF] transition-colors py-1"
-            >
-              See the work
-              <ArrowUpRight className="w-4 h-4" />
-            </Link>
-          </div>
-        </div>
-      </section>
     </main>
   );
 }
