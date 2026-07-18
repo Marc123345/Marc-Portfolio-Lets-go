@@ -316,27 +316,6 @@ export default function HeroSection() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
           {/* ── Left, pitch stack ──────────────────────────────────── */}
           <div className="lg:col-span-7 text-center lg:text-left">
-            {/* Eyebrow */}
-            <motion.div
-              className="inline-flex items-center gap-2.5 mb-6 rounded-full border border-white/10 bg-white/[0.03] px-3.5 py-1.5 backdrop-blur-sm"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1, ease: EASE }}
-            >
-              <motion.span
-                className="w-2 h-2 rounded-full bg-[#A3D1FF]"
-                aria-hidden
-                animate={reduce ? {} : { scale: [1, 1.6, 1], opacity: [1, 0.4, 1] }}
-                transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
-              />
-              <span
-                className="font-heading uppercase text-white/70"
-                style={{ fontSize: 13, letterSpacing: '0.22em', fontWeight: 500 }}
-              >
-                Marc Friedman, Web Design &amp; Development
-              </span>
-            </motion.div>
-
             {/* Headline, word-by-word reveal with gradient sheen */}
             <h1
               className="font-heading uppercase leading-[0.95] m-0"

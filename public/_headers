@@ -28,6 +28,23 @@
   ! Content-Security-Policy
   Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.designrush.com https://*.designrush.com https://www.googletagmanager.com https://*.googletagmanager.com https://www.google-analytics.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://widget.clutch.co https://plausible.io https://cdn.jotfor.ms https://*.jotform.com https://assets.calendly.com; frame-src 'self' https://www.designrush.com https://*.designrush.com https://calendly.com https://*.calendly.com https://*.jotform.com https://*.jotfor.ms https://www.youtube.com https://www.youtube-nocookie.com; connect-src 'self' https://www.googleapis.com https://www.designrush.com https://*.designrush.com https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://www.google.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://stats.g.doubleclick.net https://plausible.io https://httpbin.org https://fonts.googleapis.com https://*.jotform.com https://*.jotfor.ms https://calendly.com https://*.calendly.com; img-src 'self' data: https: blob: https://ik.imagekit.io https://*.imagekit.io https://i.imgur.com https://images.unsplash.com https://res.cloudinary.com https://*.jotform.com https://*.jotfor.ms; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://*.jotform.com https://assets.calendly.com; font-src 'self' https://fonts.gstatic.com https://*.jotform.com https://assets.calendly.com; worker-src 'self' blob:; child-src 'self' blob: https://*.jotform.com; media-src 'self' https: data: blob:; object-src 'none'; frame-ancestors 'self' https://*.jotform.com https://*.jotfor.ms; base-uri 'self'; form-action 'self' https://*.jotform.com https://*.jotfor.ms; upgrade-insecure-requests;
 
+# Lead-magnet download page, shown inside the Jotform iframe after submit.
+# Same carve-out as /thank-you/: drop the inherited frame-ancestors 'none' CSP
+# and X-Frame-Options so Jotform can render it, then re-emit with the frame
+# rules relaxed.
+/resources/thank-you/
+  ! X-Frame-Options
+  ! Content-Security-Policy
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.designrush.com https://*.designrush.com https://www.googletagmanager.com https://*.googletagmanager.com https://www.google-analytics.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://widget.clutch.co https://plausible.io https://cdn.jotfor.ms https://*.jotform.com https://assets.calendly.com; frame-src 'self' https://www.designrush.com https://*.designrush.com https://calendly.com https://*.calendly.com https://*.jotform.com https://*.jotfor.ms https://www.youtube.com https://www.youtube-nocookie.com; connect-src 'self' https://www.googleapis.com https://www.designrush.com https://*.designrush.com https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://www.google.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://stats.g.doubleclick.net https://plausible.io https://httpbin.org https://fonts.googleapis.com https://*.jotform.com https://*.jotfor.ms https://calendly.com https://*.calendly.com; img-src 'self' data: https: blob: https://ik.imagekit.io https://*.imagekit.io https://i.imgur.com https://images.unsplash.com https://res.cloudinary.com https://*.jotform.com https://*.jotfor.ms; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://*.jotform.com https://assets.calendly.com; font-src 'self' https://fonts.gstatic.com https://*.jotform.com https://assets.calendly.com; worker-src 'self' blob:; child-src 'self' blob: https://*.jotform.com; media-src 'self' https: data: blob:; object-src 'none'; frame-ancestors 'self' https://*.jotform.com https://*.jotfor.ms; base-uri 'self'; form-action 'self' https://*.jotform.com https://*.jotfor.ms; upgrade-insecure-requests;
+
+# Force the lead-magnet PDFs to download rather than render inline.
+/b2b-website-mastery.pdf
+  Content-Disposition: attachment
+/b2b-checklist.pdf
+  Content-Disposition: attachment
+/landing-page-lead-magnet.pdf
+  Content-Disposition: attachment
+
 # Cache Control for Static Assets
 /assets/*
   Cache-Control: public, max-age=31536000, immutable

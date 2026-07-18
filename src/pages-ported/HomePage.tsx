@@ -8,7 +8,6 @@ import AboutSection from '@/components/home/AboutSection';
 import YouTubeSection from '@/components/home/YouTubeSection';
 import FAQSection from '@/components/home/FAQSection';
 import CTASection from '@/components/home/CTASection';
-import DesignRushReviews from '@/components/DesignRushReviews';
 
 const homeSchema = {
   "@context": "https://schema.org",
@@ -90,7 +89,6 @@ export default function HomePage() {
       <ServicesArcSection />
       <AboutSection />
       <CTASection />
-      <DesignRushReviews />
       <FAQSection />
     </>
   );

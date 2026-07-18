@@ -469,7 +469,7 @@ export default function WorkPage() {
                   </h3>
                   <p className="text-white/70 leading-relaxed mb-6">{active.blurb}</p>
 
-                  <div className="grid grid-cols-3 gap-3 py-5 border-y border-white/10 mb-6">
+                  <div className="grid grid-cols-3 gap-3 py-5 mb-6">
                     {active.stats.map((s) => (
                       <div key={s.label}>
                         <div

@@ -38,6 +38,8 @@ type Resource = {
   formId?: string;
   formHeading: string;
   formTitle: string;
+  /** Served from /public; downloads automatically on form submit. */
+  pdf: string;
 };
 
 const RESOURCES: Resource[] = [
@@ -53,6 +55,7 @@ const RESOURCES: Resource[] = [
     formId: '261968253944066',
     formHeading: 'Get the free guide',
     formTitle: 'Get the free B2B Website Mastery guide',
+    pdf: '/b2b-website-mastery.pdf',
   },
   {
     id: 'b2b-checklist',
@@ -67,6 +70,7 @@ const RESOURCES: Resource[] = [
     formId: '261967965285073',
     formHeading: 'Get the free checklist',
     formTitle: 'Get the free B2B Website Checklist',
+    pdf: '/b2b-checklist.pdf',
   },
   {
     id: 'landing-page-lead-magnet',
@@ -79,6 +83,7 @@ const RESOURCES: Resource[] = [
       'A no-fluff guide to building landing pages that turn visitors into leads, from headline frameworks to the layout mistakes that cost you signups.',
     formHeading: 'Get the free guide',
     formTitle: 'Get the Free Landing Page Guide',
+    pdf: '/landing-page-lead-magnet.pdf',
   },
 ];
 
@@ -305,6 +310,7 @@ export default function ResourcesPage() {
                     key={active.id}
                     formId={active.formId}
                     title={active.formTitle}
+                    pdfUrl={active.pdf}
                   />
                 </div>
               </div>

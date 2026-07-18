@@ -73,7 +73,7 @@ export default function B2BChecklistResourcePage() {
             <p className="mb-6 text-sm text-white/60">
               Enter your details and the download is yours.
             </p>
-            <LeadMagnetFormEmbed formId={FORM_ID} title="Get the free B2B Website Checklist" />
+            <LeadMagnetFormEmbed formId={FORM_ID} title="Get the free B2B Website Checklist" pdfUrl="/b2b-checklist.pdf" />
           </div>
         </div>
       </section>

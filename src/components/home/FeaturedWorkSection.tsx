@@ -446,7 +446,7 @@ export default function FeaturedWorkSection() {
                 </h3>
                 <p className="text-white/70 leading-relaxed mb-8">{active.blurb}</p>
 
-                <div className="grid grid-cols-3 gap-3 py-8 border-y border-white/10 mb-8">
+                <div className="grid grid-cols-3 gap-3 py-8 mb-8">
                   {active.stats.map((s) => (
                     <div key={s.label}>
                       <div

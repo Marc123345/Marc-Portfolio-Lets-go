@@ -1,8 +1,6 @@
 "use client";
 
 import { motion } from 'framer-motion';
-import Link from 'next/link';
-import { ArrowUpRight } from 'lucide-react';
 import ArcSlider from '@/components/ArcSlider';
 import { SERVICES } from '@/data/services';
 
@@ -60,18 +58,6 @@ export default function ServicesArcSection() {
 
         <ArcSlider cards={SERVICES} />
 
-        <div className="mt-8 flex items-center justify-between border-t border-white/10 pt-8">
-          <span className="text-[10px] font-mono uppercase tracking-[0.3em] text-white/40">
-, End of arc
-          </span>
-          <Link
-            href="/services"
-            className="inline-flex items-center gap-3 text-white font-medium border-b border-white/30 hover:border-[#A3D1FF] hover:text-[#A3D1FF] transition-colors py-1"
-          >
-            See all services in detail
-            <ArrowUpRight className="w-4 h-4" />
-          </Link>
-        </div>
       </div>
     </section>
   );

@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from 'react';
-import { Linkedin, Calendar, Trophy, ArrowUpRight, Palette, Youtube, Building2 } from 'lucide-react';
+import { Linkedin, Calendar, Trophy, ArrowUpRight, Palette, Youtube, Building2, type LucideIcon } from 'lucide-react';
 import { useAppStore } from '@/stores/useAppStore';
 import { motion, AnimatePresence } from 'framer-motion';
 import ConsentBanner from '@/components/ConsentBanner';
@@ -77,6 +77,136 @@ const navLinks: NavLink[] = [
       'https://ik.imagekit.io/qcvroy8xpd/uoq5Ztg.jpeg',
   },
 ];
+
+type FooterLink = { label: string; href: string; external?: boolean };
+type FooterGroup = { heading: string; links: FooterLink[] };
+
+/* Footer link columns. Grouped so the three link columns come out roughly the
+   same height (12 / 12 / 13 links) instead of 15 / 18 / 4. */
+const FOOTER_COLUMNS: FooterGroup[][] = [
+  [
+    {
+      heading: ', Services',
+      links: [
+        { label: 'B2B Web Design', href: '/services/b2b-web-design/' },
+        { label: 'Web Development', href: '/services/web-development' },
+        { label: 'UI/UX Design', href: '/services/design/' },
+        { label: 'Design Systems', href: '/services/design-systems/' },
+        { label: 'AI Integration', href: '/services/ai-integration' },
+        { label: 'Cybersecurity', href: '/services/cybersecurity' },
+        { label: 'Startup MVP', href: '/services/startup-mvp' },
+        { label: 'SEO & Content Layout', href: '/services/seo-content-layout' },
+        { label: 'AEO', href: '/services/aeo' },
+        { label: 'GEO', href: '/services/geo' },
+        { label: 'Local SEO', href: '/services/local-seo' },
+        { label: 'Maintenance & Hosting', href: '/services/maintenance-hosting' },
+      ],
+    },
+  ],
+  [
+    {
+      heading: ', Resources',
+      links: [
+        { label: 'Free Guides & Checklists', href: '/resources' },
+        { label: 'Blog', href: '/blog' },
+        { label: 'Behance', href: 'https://www.behance.net/marcfriedmanweb', external: true },
+        { label: 'Dribbble', href: 'https://dribbble.com/marcf9199/about', external: true },
+        { label: 'Clutch Reviews', href: 'https://clutch.co/profile/marc-friedman-design-agency', external: true },
+        { label: 'CSS Design Awards', href: 'https://www.cssdesignawards.com/sites/marc-friedman-web-design-agency/49357/', external: true },
+        { label: 'Awwwards', href: 'https://www.awwwards.com/marc-friedman/', external: true },
+        { label: 'DesignRush', href: 'https://www.designrush.com/agency/profile/marc-friedman-design-agency', external: true },
+      ],
+    },
+    {
+      heading: ', Company',
+      links: [
+        { label: 'About', href: '/about' },
+        { label: 'Contact', href: '/contact/' },
+        { label: 'Press', href: '/press' },
+        { label: 'Email Us', href: 'mailto:marcf@marcfriedmanwebdesign.com', external: true },
+      ],
+    },
+  ],
+  [
+    {
+      heading: ', Work',
+      links: [
+        { label: 'All Projects', href: '/work/' },
+        { label: 'Case Studies', href: '/work/case-studies/' },
+        { label: 'Binns Media Group', href: '/work/case-studies/binns-media/' },
+        { label: 'Untapped Africa', href: '/work/case-studies/untapped-africa/' },
+        { label: 'AutoMarginX', href: '/work/case-studies/automarginx/' },
+      ],
+    },
+    {
+      heading: ', Tools',
+      links: [
+        { label: 'Website Analyzer', href: '/tools/website-analyzer' },
+        { label: 'ROI Calculator', href: '/tools/roi-calculator' },
+        { label: 'Project Timeline', href: '/tools/project-timeline' },
+        { label: 'Free Website Analyzer', href: '/free-website-analyzer/' },
+        { label: 'Free GEO Audit', href: '/free-geo-audit/' },
+      ],
+    },
+    {
+      heading: ', Industry Pages',
+      links: [
+        { label: 'Longevity Clinics', href: '/longevity-clinics' },
+        { label: 'Biohacking Studios', href: '/biohacking-clinics' },
+        { label: 'Dental Clinics', href: '/dental-audit/' },
+      ],
+    },
+  ],
+];
+
+const FOOTER_LEGAL: FooterLink[] = [
+  { label: 'Privacy', href: '/privacy-policy' },
+  { label: 'Terms', href: '/terms-and-conditions' },
+  { label: 'Accessibility', href: '/accessibility-statement/' },
+  { label: 'Cookies', href: '/cookies-policy' },
+  { label: 'Disclaimer', href: '/disclaimer' },
+  { label: 'Sitemap', href: '/sitemap.xml', external: true },
+];
+
+const FOOTER_SOCIALS: { href: string; label: string; Icon: LucideIcon }[] = [
+  { href: 'https://www.linkedin.com/in/portfolio2/', label: 'LinkedIn', Icon: Linkedin },
+  { href: 'https://www.linkedin.com/company/105745552/', label: 'LinkedIn, Company page', Icon: Building2 },
+  { href: 'https://www.behance.net/marcfriedmanweb', label: 'Behance', Icon: Palette },
+  { href: 'https://www.youtube.com/@MarcFriedmanWebDesign', label: 'YouTube', Icon: Youtube },
+  { href: 'https://www.awwwards.com/marc-friedman/', label: 'Awwwards', Icon: Trophy },
+  { href: '/contact/', label: 'Schedule a call', Icon: Calendar },
+];
+
+/* One definition each, so the footer can't drift out of type alignment. */
+function FooterHeading({ children }: { children: React.ReactNode }) {
+  return (
+    <p className="text-[10px] font-mono uppercase tracking-[0.3em] text-[#A3D1FF] mb-4">
+      {children}
+    </p>
+  );
+}
+
+function FooterLinkItem({ link }: { link: FooterLink }) {
+  const className = 'text-sm text-white/60 hover:text-[#A3D1FF] transition-colors';
+  return (
+    <li>
+      {link.external ? (
+        <a
+          href={link.href}
+          target={link.href.startsWith('mailto:') ? undefined : '_blank'}
+          rel={link.href.startsWith('mailto:') ? undefined : 'noopener noreferrer'}
+          className={className}
+        >
+          {link.label}
+        </a>
+      ) : (
+        <Link href={link.href} className={className}>
+          {link.label}
+        </Link>
+      )}
+    </li>
+  );
+}
 
 const tickerItems = [
   'Available for select projects, Now',
@@ -346,13 +476,13 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             </span>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_1fr_1fr_1fr] gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr_1fr] gap-10 lg:gap-12">
             {/* Brand column */}
             <div>
               <img
                 src="/images/marc-friedman-primary.svg"
                 alt="Marc Friedman logo"
-                className="h-12 sm:h-16 w-auto object-contain mb-3 pt-2"
+                className="h-12 sm:h-16 w-auto object-contain mb-4"
                 width="80"
                 height="32"
               />
@@ -363,7 +493,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 Full-stack design &amp; development, vision to launch, no handoffs.
               </p>
 
-              <div className="flex items-center gap-3 text-[10px] font-mono uppercase tracking-[0.25em] text-white mb-8">
+              <div className="flex items-center gap-3 text-[10px] font-mono uppercase tracking-[0.3em] text-white mb-8">
                 <span className="relative flex w-2 h-2">
                   <span className="absolute inset-0 rounded-full bg-green-400 animate-ping opacity-60" />
                   <span className="relative w-2 h-2 rounded-full bg-green-400" />
@@ -371,127 +501,65 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 Available, Now
               </div>
 
-              <div className="flex flex-wrap gap-3">
-                <a href="https://www.linkedin.com/in/portfolio2/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 flex items-center justify-center border border-white/20 text-white hover:bg-white hover:text-black transition-colors" aria-label="LinkedIn">
-                  <Linkedin className="w-4 h-4" />
-                </a>
-                <a href="https://www.linkedin.com/company/105745552/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 flex items-center justify-center border border-white/20 text-white hover:bg-white hover:text-black transition-colors" aria-label="LinkedIn, Company page">
-                  <Building2 className="w-4 h-4" />
-                </a>
-                <a href="https://www.behance.net/marcfriedmanweb" target="_blank" rel="noopener noreferrer" className="w-10 h-10 flex items-center justify-center border border-white/20 text-white hover:bg-white hover:text-black transition-colors" aria-label="Behance">
-                  <Palette className="w-4 h-4" />
-                </a>
-                <a href="https://www.youtube.com/@MarcFriedmanWebDesign" target="_blank" rel="noopener noreferrer" className="w-10 h-10 flex items-center justify-center border border-white/20 text-white hover:bg-white hover:text-black transition-colors" aria-label="YouTube">
-                  <Youtube className="w-4 h-4" />
-                </a>
-                <a href="https://www.awwwards.com/marc-friedman/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 flex items-center justify-center border border-white/20 text-white hover:bg-white hover:text-black transition-colors" aria-label="Awwwards">
-                  <Trophy className="w-4 h-4" />
-                </a>
-                <a href="/contact/" className="w-10 h-10 flex items-center justify-center border border-white/20 text-white hover:bg-white hover:text-black transition-colors" aria-label="Schedule a call">
-                  <Calendar className="w-4 h-4" />
-                </a>
+              <div className="flex flex-wrap gap-2">
+                {FOOTER_SOCIALS.map(({ href, label, Icon }) => (
+                  <a
+                    key={label}
+                    href={href}
+                    target={href.startsWith('/') ? undefined : '_blank'}
+                    rel={href.startsWith('/') ? undefined : 'noopener noreferrer'}
+                    className="w-10 h-10 flex items-center justify-center border border-white/15 text-white/70 hover:bg-white hover:text-black hover:border-white transition-colors"
+                    aria-label={label}
+                  >
+                    <Icon className="w-4 h-4" />
+                  </a>
+                ))}
               </div>
             </div>
 
-            {/* Services column */}
-            <div>
-              <p className="text-[10px] font-mono uppercase tracking-[0.3em] text-[#A3D1FF] mb-3">
-, Services
-              </p>
-              <ul className="space-y-3">
-                <li><Link href="/services/b2b-web-design/" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">B2B Web Design</Link></li>
-                <li><Link href="/services/web-development" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Web Development</Link></li>
-                <li><Link href="/services/design/" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">UI/UX Design</Link></li>
-                <li><Link href="/services/design-systems/" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Design Systems</Link></li>
-                <li><Link href="/services/ai-integration" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">AI Integration</Link></li>
-                <li><Link href="/services/cybersecurity" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Cybersecurity</Link></li>
-                <li><Link href="/services/startup-mvp" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Startup MVP</Link></li>
-                <li><Link href="/services/seo-content-layout" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">SEO &amp; Content Layout</Link></li>
-                <li><Link href="/services/aeo" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">AEO</Link></li>
-                <li><Link href="/services/geo" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">GEO</Link></li>
-                <li><Link href="/services/local-seo" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Local SEO</Link></li>
-                <li><Link href="/services/maintenance-hosting" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Maintenance &amp; Hosting</Link></li>
-              </ul>
-              <p className="text-[10px] font-mono uppercase tracking-[0.3em] text-[#A3D1FF] mt-8 mb-3">
-, Industry Pages
-              </p>
-              <ul className="space-y-3">
-                <li><Link href="/longevity-clinics" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Longevity Clinics</Link></li>
-                <li><Link href="/biohacking-clinics" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Biohacking Studios</Link></li>
-                <li><Link href="/dental-audit/" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Dental Clinics</Link></li>
-              </ul>
-            </div>
-
-            {/* Work + Resources column */}
-            <div className="space-y-8">
-              <div>
-                <p className="text-[10px] font-mono uppercase tracking-[0.3em] text-[#A3D1FF] mb-3">
-, Work
-                </p>
-                <ul className="space-y-3">
-                  <li><Link href="/work/" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">All Projects</Link></li>
-                  <li><Link href="/work/case-studies/" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Case Studies</Link></li>
-                  <li><Link href="/work/case-studies/binns-media/" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Binns Media Group</Link></li>
-                  <li><Link href="/work/case-studies/untapped-africa/" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Untapped Africa</Link></li>
-                  <li><Link href="/work/case-studies/automarginx/" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">AutoMarginX</Link></li>
-                </ul>
+            {/* Link columns */}
+            {FOOTER_COLUMNS.map((groups, i) => (
+              <div key={i} className="space-y-10">
+                {groups.map((group) => (
+                  <div key={group.heading}>
+                    <FooterHeading>{group.heading}</FooterHeading>
+                    <ul className="space-y-3">
+                      {group.links.map((link) => (
+                        <FooterLinkItem key={link.label} link={link} />
+                      ))}
+                    </ul>
+                  </div>
+                ))}
               </div>
-              <div>
-                <p className="text-[10px] font-mono uppercase tracking-[0.3em] text-[#A3D1FF] mb-3">
-, Resources
-                </p>
-                <ul className="space-y-3">
-                  <li><Link href="/resources" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Free Guides &amp; Checklists</Link></li>
-                  <li><Link href="/blog" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Blog</Link></li>
-                  <li><a href="https://www.behance.net/marcfriedmanweb" target="_blank" rel="noopener noreferrer" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Behance</a></li>
-                  <li><a href="https://dribbble.com/marcf9199/about" target="_blank" rel="noopener noreferrer" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Dribbble</a></li>
-                  <li><a href="https://clutch.co/profile/marc-friedman-design-agency" target="_blank" rel="noopener noreferrer" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Clutch Reviews</a></li>
-                  <li><a href="https://www.cssdesignawards.com/sites/marc-friedman-web-design-agency/49357/" target="_blank" rel="noopener noreferrer" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">CSS Design Awards</a></li>
-                  <li><a href="https://www.awwwards.com/marc-friedman/" target="_blank" rel="noopener noreferrer" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Awwwards</a></li>
-                  <li><a href="https://www.designrush.com/agency/profile/marc-friedman-design-agency" target="_blank" rel="noopener noreferrer" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">DesignRush</a></li>
-                </ul>
-              </div>
-              <div>
-                <p className="text-[10px] font-mono uppercase tracking-[0.3em] text-[#A3D1FF] mb-3">
-, Tools
-                </p>
-                <ul className="space-y-3">
-                  <li><Link href="/tools/website-analyzer" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Website Analyzer</Link></li>
-                  <li><Link href="/tools/roi-calculator" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">ROI Calculator</Link></li>
-                  <li><Link href="/tools/project-timeline" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Project Timeline</Link></li>
-                  <li><Link href="/free-website-analyzer/" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Free Website Analyzer</Link></li>
-                  <li><Link href="/free-geo-audit/" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Free GEO Audit</Link></li>
-                </ul>
-              </div>
-            </div>
-
-            {/* Company column */}
-            <div>
-              <p className="text-[10px] font-mono uppercase tracking-[0.3em] text-[#A3D1FF] mb-3">
-, Company
-              </p>
-              <ul className="space-y-3">
-                <li><Link href="/about" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">About</Link></li>
-                <li><Link href="/contact/" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Contact</Link></li>
-                <li><Link href="/press" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Press</Link></li>
-                <li><a href="mailto:marcf@marcfriedmanwebdesign.com" className="text-sm text-white/60 hover:text-[#A3D1FF] transition-colors">Email Us</a></li>
-              </ul>
-            </div>
+            ))}
           </div>
 
           {/* Bottom bar */}
-          <div className="mt-8 pt-8 border-t border-white/10">
-            <div className="flex flex-col md:flex-row justify-between items-center gap-8">
+          <div className="mt-16 pt-8 border-t border-white/10">
+            <div className="flex flex-col md:flex-row justify-between items-center gap-6">
               <p className="text-[10px] font-mono uppercase tracking-[0.25em] text-white/40">
                 © {new Date().getFullYear()} Marc Friedman. All rights reserved.
               </p>
-              <div className="flex flex-wrap justify-center gap-x-3 gap-y-1">
-                <Link href="/privacy-policy" className="text-[10px] font-mono uppercase tracking-[0.2em] text-white/40 hover:text-[#A3D1FF] transition-colors">Privacy</Link>
-                <Link href="/terms-and-conditions" className="text-[10px] font-mono uppercase tracking-[0.2em] text-white/40 hover:text-[#A3D1FF] transition-colors">Terms</Link>
-                <Link href="/accessibility-statement/" className="text-[10px] font-mono uppercase tracking-[0.2em] text-white/40 hover:text-[#A3D1FF] transition-colors">Accessibility</Link>
-                <Link href="/cookies-policy" className="text-[10px] font-mono uppercase tracking-[0.2em] text-white/40 hover:text-[#A3D1FF] transition-colors">Cookies</Link>
-                <Link href="/disclaimer" className="text-[10px] font-mono uppercase tracking-[0.2em] text-white/40 hover:text-[#A3D1FF] transition-colors">Disclaimer</Link>
-                <a href="/sitemap.xml" className="text-[10px] font-mono uppercase tracking-[0.2em] text-white/40 hover:text-[#A3D1FF] transition-colors">Sitemap</a>
+              <div className="flex flex-wrap justify-center gap-x-5 gap-y-2">
+                {FOOTER_LEGAL.map((link) =>
+                  link.external ? (
+                    <a
+                      key={link.label}
+                      href={link.href}
+                      className="text-[10px] font-mono uppercase tracking-[0.25em] text-white/40 hover:text-[#A3D1FF] transition-colors"
+                    >
+                      {link.label}
+                    </a>
+                  ) : (
+                    <Link
+                      key={link.label}
+                      href={link.href}
+                      className="text-[10px] font-mono uppercase tracking-[0.25em] text-white/40 hover:text-[#A3D1FF] transition-colors"
+                    >
+                      {link.label}
+                    </Link>
+                  ),
+                )}
               </div>
             </div>
           </div>

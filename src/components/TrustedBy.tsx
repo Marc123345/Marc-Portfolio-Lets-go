@@ -308,11 +308,10 @@ export default function TrustedBy() {
         </motion.div>
 
         {/* Aggregate stats strip */}
-        <div className="mb-8 py-8 border-y border-white/10 grid grid-cols-2 md:grid-cols-4 gap-3">
+        <div className="mb-8 py-8 grid grid-cols-2 md:grid-cols-4 gap-3">
           {[
             { value: '5.0', label: 'Google Rating' },
             { value: '4.8', label: 'Clutch Rating' },
-            { value: '25', label: 'Verified Reviews' },
             { value: '50+', label: 'Projects Shipped' },
           ].map((s) => (
             <div key={s.label} className="text-center md:text-left">

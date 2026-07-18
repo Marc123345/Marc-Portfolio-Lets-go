@@ -5,18 +5,47 @@ import { useEffect, useRef, useState } from 'react';
 const DEFAULT_FORM_ID = '261536844219058';
 
 /**
- * Embeds the "Get the Free Landing Page Guide" Jotform via a direct iframe
- * + Jotform's embed handler (auto-resize). The jsform/document.write approach
- * silently no-ops when injected after page load, so we use the iframe pattern.
- * On submit, Jotform shows a thank-you page with a PDF download button and
- * emails the visitor the download link via autoresponder.
+ * Embeds a lead-magnet Jotform via a direct iframe + Jotform's embed handler
+ * (auto-resize). The jsform/document.write approach silently no-ops when
+ * injected after page load, so we use the iframe pattern.
+ *
+ * When `pdfUrl` is provided, the visitor's PDF downloads automatically the
+ * moment they submit. Jotform's embed handler exposes no "submitted" event, so
+ * we detect the `scrollIntoView` message it posts to the parent on submit (it
+ * scrolls the page to the thank-you view). We ignore any such message in the
+ * first few seconds after mount so a scroll fired during initial layout can't
+ * be mistaken for a submission, and download only once.
  */
 export default function LeadMagnetFormEmbed({
   formId = DEFAULT_FORM_ID,
   title = 'Lead magnet opt-in form',
-}: { formId?: string; title?: string } = {}) {
+  pdfUrl,
+}: { formId?: string; title?: string; pdfUrl?: string } = {}) {
   const [loaded, setLoaded] = useState(false);
   const iframeRef = useRef<HTMLIFrameElement>(null);
+  const downloadRef = useRef<HTMLAnchorElement>(null);
+
+  useEffect(() => {
+    if (!pdfUrl) return;
+
+    const armedAt = Date.now() + 2500;
+    let downloaded = false;
+
+    const onMessage = (e: MessageEvent) => {
+      if (downloaded) return;
+      if (!e.origin.includes('jotform') && !e.origin.includes('jotfor.ms')) return;
+
+      const data = typeof e.data === 'string' ? e.data : '';
+      const isSubmit = data.startsWith('scrollIntoView');
+      if (!isSubmit || Date.now() < armedAt) return;
+
+      downloaded = true;
+      downloadRef.current?.click();
+    };
+
+    window.addEventListener('message', onMessage);
+    return () => window.removeEventListener('message', onMessage);
+  }, [pdfUrl]);
 
   // The iframe often fires its `load` event from the server-rendered HTML
   // before React hydrates and attaches the JSX `onLoad` handler, leaving the
@@ -85,6 +114,18 @@ export default function LeadMagnetFormEmbed({
         className="w-full border-0 bg-transparent"
         style={{ minHeight: 560, height: '100%' }}
       />
+      {pdfUrl && (
+        <a
+          ref={downloadRef}
+          href={pdfUrl}
+          download={pdfUrl.replace(/^.*\//, '')}
+          className="sr-only"
+          aria-hidden
+          tabIndex={-1}
+        >
+          Download
+        </a>
+      )}
     </div>
   );
 }

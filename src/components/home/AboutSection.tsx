@@ -224,7 +224,7 @@ export default function AboutSection() {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.3 }}
-              className="flex items-stretch divide-x divide-white/10 border-y border-white/10 py-8 mb-8"
+              className="flex items-stretch py-8 mb-8"
             >
               {[
                 { n: '01', l: 'Contact' },

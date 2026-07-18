@@ -73,7 +73,7 @@ export default function B2BWebsiteMasteryResourcePage() {
             <p className="mb-6 text-sm text-white/60">
               Enter your details and the download is yours.
             </p>
-            <LeadMagnetFormEmbed formId={FORM_ID} title="Get the free B2B Website Mastery guide" />
+            <LeadMagnetFormEmbed formId={FORM_ID} title="Get the free B2B Website Mastery guide" pdfUrl="/b2b-website-mastery.pdf" />
           </div>
         </div>
       </section>
