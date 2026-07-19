@@ -81,12 +81,14 @@ const navLinks: NavLink[] = [
 type FooterLink = { label: string; href: string; external?: boolean };
 type FooterGroup = { heading: string; links: FooterLink[] };
 
-/* Footer link columns. Grouped so the three link columns come out roughly the
-   same height (12 / 12 / 13 links) instead of 15 / 18 / 4. */
+/* Footer link columns, grouped by meaning:
+   1 · Services  |  2 · Work / Industries / Company  |  3 · Tools / Resources / Recognition
+   Kept to a balanced 12 / 12 / 13 links so the columns come out roughly the
+   same height. */
 const FOOTER_COLUMNS: FooterGroup[][] = [
   [
     {
-      heading: ', Services',
+      heading: 'Services',
       links: [
         { label: 'B2B Web Design', href: '/services/b2b-web-design/' },
         { label: 'Web Development', href: '/services/web-development' },
@@ -105,20 +107,25 @@ const FOOTER_COLUMNS: FooterGroup[][] = [
   ],
   [
     {
-      heading: ', Resources',
+      heading: 'Work',
       links: [
-        { label: 'Free Guides & Checklists', href: '/resources' },
-        { label: 'Blog', href: '/blog' },
-        { label: 'Behance', href: 'https://www.behance.net/marcfriedmanweb', external: true },
-        { label: 'Dribbble', href: 'https://dribbble.com/marcf9199/about', external: true },
-        { label: 'Clutch Reviews', href: 'https://clutch.co/profile/marc-friedman-design-agency', external: true },
-        { label: 'CSS Design Awards', href: 'https://www.cssdesignawards.com/sites/marc-friedman-web-design-agency/49357/', external: true },
-        { label: 'Awwwards', href: 'https://www.awwwards.com/marc-friedman/', external: true },
-        { label: 'DesignRush', href: 'https://www.designrush.com/agency/profile/marc-friedman-design-agency', external: true },
+        { label: 'All Projects', href: '/work/' },
+        { label: 'Case Studies', href: '/work/case-studies/' },
+        { label: 'Binns Media Group', href: '/work/case-studies/binns-media/' },
+        { label: 'Untapped Africa', href: '/work/case-studies/untapped-africa/' },
+        { label: 'AutoMarginX', href: '/work/case-studies/automarginx/' },
       ],
     },
     {
-      heading: ', Company',
+      heading: 'Industries',
+      links: [
+        { label: 'Longevity Clinics', href: '/longevity-clinics' },
+        { label: 'Biohacking Studios', href: '/biohacking-clinics' },
+        { label: 'Dental Clinics', href: '/dental-audit/' },
+      ],
+    },
+    {
+      heading: 'Company',
       links: [
         { label: 'About', href: '/about' },
         { label: 'Contact', href: '/contact/' },
@@ -129,17 +136,7 @@ const FOOTER_COLUMNS: FooterGroup[][] = [
   ],
   [
     {
-      heading: ', Work',
-      links: [
-        { label: 'All Projects', href: '/work/' },
-        { label: 'Case Studies', href: '/work/case-studies/' },
-        { label: 'Binns Media Group', href: '/work/case-studies/binns-media/' },
-        { label: 'Untapped Africa', href: '/work/case-studies/untapped-africa/' },
-        { label: 'AutoMarginX', href: '/work/case-studies/automarginx/' },
-      ],
-    },
-    {
-      heading: ', Tools',
+      heading: 'Tools',
       links: [
         { label: 'Website Analyzer', href: '/tools/website-analyzer' },
         { label: 'ROI Calculator', href: '/tools/roi-calculator' },
@@ -149,11 +146,21 @@ const FOOTER_COLUMNS: FooterGroup[][] = [
       ],
     },
     {
-      heading: ', Industry Pages',
+      heading: 'Resources',
       links: [
-        { label: 'Longevity Clinics', href: '/longevity-clinics' },
-        { label: 'Biohacking Studios', href: '/biohacking-clinics' },
-        { label: 'Dental Clinics', href: '/dental-audit/' },
+        { label: 'Free Guides & Checklists', href: '/resources' },
+        { label: 'Blog', href: '/blog' },
+      ],
+    },
+    {
+      heading: 'Recognition',
+      links: [
+        { label: 'Behance', href: 'https://www.behance.net/marcfriedmanweb', external: true },
+        { label: 'Dribbble', href: 'https://dribbble.com/marcf9199/about', external: true },
+        { label: 'Clutch Reviews', href: 'https://clutch.co/profile/marc-friedman-design-agency', external: true },
+        { label: 'CSS Design Awards', href: 'https://www.cssdesignawards.com/sites/marc-friedman-web-design-agency/49357/', external: true },
+        { label: 'Awwwards', href: 'https://www.awwwards.com/marc-friedman/', external: true },
+        { label: 'DesignRush', href: 'https://www.designrush.com/agency/profile/marc-friedman-design-agency', external: true },
       ],
     },
   ],
