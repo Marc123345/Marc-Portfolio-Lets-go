@@ -38,6 +38,16 @@ type Post = {
 
 const posts: Post[] = [
   {
+    id: 'how-much-does-a-website-cost-2026',
+    title: 'How Much Does a Website Cost in 2026?',
+    excerpt:
+      'A practical 2026 guide to website costs for small business owners: typical price ranges, what drives them, DIY vs professional, platforms, design, mobile, content, ecommerce, and ongoing costs.',
+    date: 'July 21, 2026',
+    readTime: '14 min read',
+    image: 'https://images.surferseo.art/f8226b13-c8cb-4987-afb0-838cbe96bcc9.png',
+    categories: ['Web Design', 'Pricing', 'Small Business'],
+  },
+  {
     id: 'neo-brutalism-design-guide',
     title: 'Neo Brutalism in Modern Design: A Complete Guide for Bold, High-Contrast Interfaces',
     excerpt:

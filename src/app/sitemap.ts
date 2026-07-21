@@ -92,6 +92,7 @@ const entries: Entry[] = [
   { path: 'blog/conversational-ui-chat-interfaces', priority: 0.8 },
   { path: 'blog/neo-brutalism-design-guide', priority: 0.8 },
   { path: 'blog/react-user-interface-builder', priority: 0.8 },
+  { path: 'blog/how-much-does-a-website-cost-2026', priority: 0.8 },
   { path: 'blog/seo-for-construction-companies', priority: 0.8 },
   { path: 'blog/electronic-accessibility', priority: 0.8 },
   { path: 'blog/website-not-ada-compliant', priority: 0.8 },
