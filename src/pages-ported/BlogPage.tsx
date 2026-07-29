@@ -38,6 +38,16 @@ type Post = {
 
 const posts: Post[] = [
   {
+    id: 'how-to-choose-a-website-designer-2026',
+    title: 'How to Choose a Website Designer for Your Business Website in 2026',
+    excerpt:
+      'Set goals before you hire, audit what you have, compare DIY vs freelancer vs solo specialist vs agency, read portfolios properly, ask sharper questions, budget realistically, and settle ownership before you sign.',
+    date: 'July 29, 2026',
+    readTime: '15 min read',
+    image: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=2000&q=80',
+    categories: ['Web Design', 'Hiring', 'B2B'],
+  },
+  {
     id: 'how-much-does-a-website-cost-2026',
     title: 'How Much Does a Website Cost in 2026?',
     excerpt:

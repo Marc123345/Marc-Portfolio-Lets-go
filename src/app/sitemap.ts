@@ -4,7 +4,21 @@ export const dynamic = 'force-static';
 
 const BASE = 'https://www.marcfriedmanportfolio.com';
 
-type Entry = { path: string; priority: number };
+/**
+ * `lastModified` is the date that page's content actually changed, as
+ * YYYY-MM-DD.
+ *
+ * It used to be `new Date()` for every entry, which stamped all 93 URLs with
+ * the build time. That tells Google the entire site changed on every deploy,
+ * which is false, and the documented consequence is that Google starts
+ * ignoring the field altogether. Blog posts now carry their real publish
+ * dates, sourced from the same dates shown on the blog index.
+ *
+ * Entries with no date omit `lastmod` entirely. That is valid, and it is more
+ * honest than inventing a date: a missing value is ignored, a wrong one
+ * teaches crawlers to distrust the whole file.
+ */
+type Entry = { path: string; priority: number; lastModified?: string };
 
 const entries: Entry[] = [
   { path: '', priority: 1.0 },
@@ -59,43 +73,44 @@ const entries: Entry[] = [
   { path: 'work/case-studies/sentinel-ds', priority: 0.8 },
 
   // Blog posts
-  { path: 'blog/best-nextjs-developers-b2b-service-businesses-2026', priority: 0.8 },
-  { path: 'blog/what-is-eeat', priority: 0.8 },
-  { path: 'blog/empty-isnt-minimal', priority: 0.8 },
-  { path: 'blog/css-eating-javascript-lunch', priority: 0.8 },
-  { path: 'blog/context-driven-design-decisions', priority: 0.8 },
-  { path: 'blog/ai-ready-design-systems', priority: 0.8 },
-  { path: 'blog/ai-native-ux-personalization', priority: 0.8 },
-  { path: 'blog/ai-as-codesigner', priority: 0.8 },
-  { path: 'blog/google-algorithm-update-2026', priority: 0.8 },
-  { path: 'blog/ai-imperfect-aesthetics', priority: 0.8 },
-  { path: 'blog/brutalism-anti-design-web-trends', priority: 0.8 },
-  { path: 'blog/ecommerce-ux-flaws-killing-conversions', priority: 0.8 },
-  { path: 'blog/contrast-balance-ui-design', priority: 0.8 },
-  { path: 'blog/ui-polish-visual-realism', priority: 0.8 },
-  { path: 'blog/getting-the-best-out-of-cloudflare', priority: 0.8 },
-  { path: 'blog/building-data-driven-design-systems', priority: 0.8 },
-  { path: 'blog/conversion-rate-optimization-techniques', priority: 0.8 },
-  { path: 'blog/designing-platforms-for-automotive-dealers', priority: 0.8 },
-  { path: 'blog/future-of-saas-web-design', priority: 0.8 },
-  { path: 'blog/mobile-first-design-principles', priority: 0.8 },
-  { path: 'blog/optimizing-websites-for-ai-crawlers', priority: 0.8 },
-  { path: 'blog/progressive-web-apps', priority: 0.8 },
-  { path: 'blog/ai-personalization-ecommerce', priority: 0.8 },
-  { path: 'blog/paving-contractor-website-design-guide', priority: 0.8 },
-  { path: 'blog/local-seo-for-paving-contractors', priority: 0.8 },
-  { path: 'blog/digital-marketing-asphalt-contractors', priority: 0.8 },
-  { path: 'blog/what-is-geo', priority: 0.8 },
-  { path: 'blog/what-is-aeo', priority: 0.8 },
-  { path: 'blog/minimal-fast-sustainable-ux', priority: 0.8 },
-  { path: 'blog/google-search-console-ai-reports', priority: 0.8 },
-  { path: 'blog/conversational-ui-chat-interfaces', priority: 0.8 },
-  { path: 'blog/neo-brutalism-design-guide', priority: 0.8 },
-  { path: 'blog/react-user-interface-builder', priority: 0.8 },
-  { path: 'blog/how-much-does-a-website-cost-2026', priority: 0.8 },
-  { path: 'blog/seo-for-construction-companies', priority: 0.8 },
-  { path: 'blog/electronic-accessibility', priority: 0.8 },
-  { path: 'blog/website-not-ada-compliant', priority: 0.8 },
+  { path: 'blog/best-nextjs-developers-b2b-service-businesses-2026', priority: 0.8, lastModified: '2026-06-16' },
+  { path: 'blog/what-is-eeat', priority: 0.8, lastModified: '2026-06-10' },
+  { path: 'blog/empty-isnt-minimal', priority: 0.8, lastModified: '2026-06-08' },
+  { path: 'blog/css-eating-javascript-lunch', priority: 0.8, lastModified: '2026-06-02' },
+  { path: 'blog/context-driven-design-decisions', priority: 0.8, lastModified: '2026-02-04' },
+  { path: 'blog/ai-ready-design-systems', priority: 0.8, lastModified: '2026-02-03' },
+  { path: 'blog/ai-native-ux-personalization', priority: 0.8, lastModified: '2026-01-27' },
+  { path: 'blog/ai-as-codesigner', priority: 0.8, lastModified: '2026-01-22' },
+  { path: 'blog/google-algorithm-update-2026', priority: 0.8, lastModified: '2026-01-22' },
+  { path: 'blog/ai-imperfect-aesthetics', priority: 0.8, lastModified: '2026-01-21' },
+  { path: 'blog/brutalism-anti-design-web-trends', priority: 0.8, lastModified: '2025-12-29' },
+  { path: 'blog/ecommerce-ux-flaws-killing-conversions', priority: 0.8, lastModified: '2025-10-06' },
+  { path: 'blog/contrast-balance-ui-design', priority: 0.8, lastModified: '2024-12-10' },
+  { path: 'blog/ui-polish-visual-realism', priority: 0.8, lastModified: '2025-10-30' },
+  { path: 'blog/getting-the-best-out-of-cloudflare', priority: 0.8, lastModified: '2025-09-16' },
+  { path: 'blog/building-data-driven-design-systems', priority: 0.8, lastModified: '2025-04-01' },
+  { path: 'blog/conversion-rate-optimization-techniques', priority: 0.8, lastModified: '2025-02-01' },
+  { path: 'blog/designing-platforms-for-automotive-dealers', priority: 0.8, lastModified: '2025-03-30' },
+  { path: 'blog/future-of-saas-web-design', priority: 0.8, lastModified: '2025-05-15' },
+  { path: 'blog/mobile-first-design-principles', priority: 0.8, lastModified: '2025-01-15' },
+  { path: 'blog/optimizing-websites-for-ai-crawlers', priority: 0.8, lastModified: '2025-06-11' },
+  { path: 'blog/progressive-web-apps', priority: 0.8, lastModified: '2025-06-15' },
+  { path: 'blog/ai-personalization-ecommerce', priority: 0.8, lastModified: '2025-11-05' },
+  { path: 'blog/paving-contractor-website-design-guide', priority: 0.8, lastModified: '2025-04-15' },
+  { path: 'blog/local-seo-for-paving-contractors', priority: 0.8, lastModified: '2025-03-28' },
+  { path: 'blog/digital-marketing-asphalt-contractors', priority: 0.8, lastModified: '2025-02-20' },
+  { path: 'blog/what-is-geo', priority: 0.8, lastModified: '2026-03-03' },
+  { path: 'blog/what-is-aeo', priority: 0.8, lastModified: '2026-03-03' },
+  { path: 'blog/minimal-fast-sustainable-ux', priority: 0.8, lastModified: '2026-02-26' },
+  { path: 'blog/google-search-console-ai-reports', priority: 0.8, lastModified: '2026-02-19' },
+  { path: 'blog/conversational-ui-chat-interfaces', priority: 0.8, lastModified: '2026-04-13' },
+  { path: 'blog/neo-brutalism-design-guide', priority: 0.8, lastModified: '2026-07-16' },
+  { path: 'blog/react-user-interface-builder', priority: 0.8, lastModified: '2026-07-16' },
+  { path: 'blog/how-much-does-a-website-cost-2026', priority: 0.8, lastModified: '2026-07-21' },
+  { path: 'blog/how-to-choose-a-website-designer-2026', priority: 0.8, lastModified: '2026-07-29' },
+  { path: 'blog/seo-for-construction-companies', priority: 0.8, lastModified: '2026-07-16' },
+  { path: 'blog/electronic-accessibility', priority: 0.8, lastModified: '2026-07-16' },
+  { path: 'blog/website-not-ada-compliant', priority: 0.8, lastModified: '2026-07-16' },
 
   // Legal
   { path: 'privacy-policy', priority: 0.5 },
@@ -108,10 +123,9 @@ const entries: Entry[] = [
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const lastModified = new Date();
   return entries.map((e) => ({
     url: e.path ? `${BASE}/${e.path}/` : `${BASE}/`,
-    lastModified,
+    ...(e.lastModified ? { lastModified: new Date(e.lastModified) } : {}),
     priority: e.priority,
   }));
 }
