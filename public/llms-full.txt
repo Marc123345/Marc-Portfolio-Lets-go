@@ -1,12 +1,12 @@
 # Marc Friedman — Web Designer & Full Stack Developer (Detailed)
 
-> Award-winning freelance web designer and full stack developer based in Tel Aviv, Israel. Specializing in high-performance websites, SaaS platforms, and AI-integrated digital experiences that turn attention into revenue. 6+ years of experience, 50+ projects across three continents, 99% client satisfaction.
+> Award-winning freelance web designer and full stack developer working with clients worldwide. Specializing in high-performance websites, SaaS platforms, and AI-integrated digital experiences that turn attention into revenue. 6+ years of experience, 50+ projects across three continents, 99% client satisfaction.
 
 ---
 
 ## About Marc Friedman
 
-Marc Friedman is a freelance website designer and full stack developer who operates as a dedicated one-person web design agency. Based in Tel Aviv, Israel, Marc works directly with every client — there are no middlemen, no project managers relaying messages, no junior developers doing the work. When you hire Marc, you get Marc.
+Marc Friedman is a freelance website designer and full stack developer who operates as a dedicated one-person web design agency. Marc works directly with every client — there are no middlemen, no project managers relaying messages, no junior developers doing the work. When you hire Marc, you get Marc.
 
 With over 6 years of professional experience, 50+ completed projects, and clients across three continents (North America, Europe, and Africa), Marc brings a unique combination of design sensibility and engineering rigor to every project. He has pitched 5 venture capitalists, was accepted into the AWS Accelerator program, and understands the intersection of technology and business growth.
 
@@ -42,7 +42,7 @@ Marc's approach follows a 4-D framework: Discover (stakeholder interviews, marke
 - Google Business: https://g.co/kgs/78fRZ6r
 - Clutch: https://clutch.co/profile/marc-friedman-design-agency
 - DesignRush: https://www.designrush.com/agency/profile/marc-friedman
-- Location: Tel Aviv, Tel Aviv District, Israel
+- Location: Remote, worldwide
 - Response Time: 24 hours guaranteed
 
 ### Contact Process

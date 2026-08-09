@@ -235,7 +235,7 @@ export default function AboutPage() {
         <div className="absolute top-1/3 left-[-10%] w-[700px] h-[700px] bg-[#A3D1FF]/8 rounded-full blur-[140px] pointer-events-none" />
 
         <div className="max-w-7xl mx-auto relative">
-          <ChapterMarker number="Profile · Vol. 01" label="Senior Full-Stack Developer · Tel Aviv" />
+          <ChapterMarker number="Profile · Vol. 01" label="Senior Full-Stack Developer" />
 
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
@@ -257,7 +257,7 @@ export default function AboutPage() {
             transition={{ duration: 0.7, delay: 0.3 }}
             className="text-xl md:text-2xl text-white/70 max-w-2xl leading-snug"
           >
-            Freelance full stack developer and designer based in Tel Aviv, Israel,            building websites that bring in customers, not just compliments.
+            Freelance full stack developer and designer building websites that bring in customers, not just compliments.
           </motion.p>
 
           <motion.p
@@ -266,7 +266,7 @@ export default function AboutPage() {
             transition={{ duration: 0.7, delay: 0.45 }}
             className="mt-6 text-[11px] font-mono uppercase tracking-[0.3em] text-white/40"
           >
-            Full stack developer Tel Aviv · Web developer Israel · Remote worldwide
+            Full stack developer · Web developer · Remote worldwide
           </motion.p>
         </div>
       </section>
@@ -310,7 +310,7 @@ export default function AboutPage() {
                     I
                   </span>
                   &apos;m Marc, a senior web developer and freelance full stack
-                  developer based in Tel Aviv, Israel. I design and build websites
+                  developer. I design and build websites
                   that bring in customers, not just compliments. Over the past 6
                   years, as a full stack web developer working hands-on with React,
                   Next.js, Node, and Postgres, I&apos;ve shipped{' '}
@@ -413,7 +413,6 @@ export default function AboutPage() {
                   { city: 'Washington D.C.', country: 'USA' },
                   { city: 'Miami', country: 'USA' },
                   { city: 'Los Angeles', country: 'USA' },
-                  { city: 'Tel Aviv', country: 'Israel' },
                   { city: 'London', country: 'UK' },
                   { city: 'Paris', country: 'France' },
                   { city: 'Cape Town', country: 'South Africa' },
@@ -695,7 +694,7 @@ export default function AboutPage() {
                   <em className="text-[#A3D1FF]" style={{ fontFamily: SERIF }}>
                     Galilee
                   </em>
-, hunting for the best coffee in Tel Aviv, or helping junior
+, hunting for the best coffee, or helping junior
                   designers build their first portfolios.
                 </p>
                 <p>
@@ -745,7 +744,6 @@ export default function AboutPage() {
                   edge, mirrors the spec rows in the text column. */}
               <div className="flex items-baseline justify-between mt-3 text-[10px] font-mono uppercase tracking-[0.25em] text-white/40">
                 <span>Off the clock · 2026</span>
-                <span>Tel Aviv</span>
               </div>
             </motion.div>
           </div>

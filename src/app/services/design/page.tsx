@@ -3,18 +3,18 @@ import DesignPage from '@/pages-ported/services/DesignPage';
 
 export const metadata: Metadata = {
   title: { absolute: 'Professional UI UX Design Services | UX Design Consultancy | Marc Friedman' },
-  description: 'UI/UX design and consultancy from Tel Aviv, user research, high-fidelity interface design, design systems, and prototyping, delivered by a designer who also ships the front-end code.',
+  description: 'UI/UX design and consultancy, user research, high-fidelity interface design, design systems, and prototyping, delivered by a designer who also ships the front-end code.',
   alternates: { canonical: 'https://www.marcfriedmanportfolio.com/services/design/' },
   openGraph: {
     title: 'Professional UI UX Design Services | UX Design Consultancy | Marc Friedman',
-    description: 'UI/UX design and consultancy from Tel Aviv, user research, high-fidelity interface design, design systems, and prototyping, delivered by a designer who also ships the front-end code.',
+    description: 'UI/UX design and consultancy, user research, high-fidelity interface design, design systems, and prototyping, delivered by a designer who also ships the front-end code.',
     url: 'https://www.marcfriedmanportfolio.com/services/design/',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Professional UI UX Design Services | UX Design Consultancy | Marc Friedman',
-    description: 'UI/UX design and consultancy from Tel Aviv, user research, high-fidelity interface design, design systems, and prototyping, delivered by a designer who also ships the front-end code.',
+    description: 'UI/UX design and consultancy, user research, high-fidelity interface design, design systems, and prototyping, delivered by a designer who also ships the front-end code.',
   },
 };
 

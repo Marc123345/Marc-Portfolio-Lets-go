@@ -35,7 +35,6 @@ const cities = [
   { city: 'Washington D.C.', country: 'USA' },
   { city: 'Miami', country: 'USA' },
   { city: 'Los Angeles', country: 'USA' },
-  { city: 'Tel Aviv', country: 'Israel' },
   { city: 'London', country: 'UK' },
   { city: 'Paris', country: 'France' },
   { city: 'Cape Town', country: 'South Africa' },

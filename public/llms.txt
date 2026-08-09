@@ -1,12 +1,12 @@
 # Marc Friedman — Web Designer & Full Stack Developer
 
-> Award-winning freelance web designer and full stack developer based in Tel Aviv, Israel. Specializing in high-performance websites, SaaS platforms, and AI-integrated digital experiences that turn attention into revenue.
+> Award-winning freelance web designer and full stack developer working with clients worldwide. Specializing in high-performance websites, SaaS platforms, and AI-integrated digital experiences that turn attention into revenue.
 
 ## About
 
 Marc Friedman is a freelance website designer and full stack developer operating as a dedicated web design agency. With 6+ years of experience and 50+ projects completed across three continents, Marc works directly with clients — no middlemen, no interns. He has pitched 5 VCs and was accepted into the AWS Accelerator program.
 
-- Location: Tel Aviv, Israel
+- Location: Remote, worldwide
 - Website: https://www.marcfriedmanportfolio.com
 - LinkedIn: https://www.linkedin.com/in/portfolio2/
 - Behance: https://www.behance.net/marcfriedmanweb

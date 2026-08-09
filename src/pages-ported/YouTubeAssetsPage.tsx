@@ -215,7 +215,7 @@ function BannerComposition() {
           textTransform: 'uppercase',
         }}
       >
-        Tel Aviv · New Videos Weekly · @MarcFriedmanWebDesign
+        New Videos Weekly · @MarcFriedmanWebDesign
       </div>
 
       {/* Right-side volume marker */}

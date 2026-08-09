@@ -224,7 +224,7 @@ export default function DesignPage() {
               Designed by Marc Friedman
             </p>
             <p className="text-white/65 text-sm md:text-base leading-relaxed max-w-2xl">
-              Senior designer &amp; developer based in Tel Aviv, running a Figma-to-code
+              Senior designer &amp; developer running a Figma-to-code
               workflow since 2020. Research, UI, and the front-end that ships it, all
               under one set of hands, so nothing gets lost in a designer-to-dev handoff.
             </p>

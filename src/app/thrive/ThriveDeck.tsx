@@ -408,7 +408,7 @@ const S3 = () => (
     </R>
     <R style={{ marginTop: 18, maxWidth: 1520 }}>
       <p style={{ ...lead, fontSize: 20 }}>
-        An independent studio in Tel Aviv, building custom React &amp; Next.js sites for clients across
+        An independent studio building custom React &amp; Next.js sites for clients across
         three continents. The same person handles discovery through launch, so there are no account
         managers, handoffs, or junior work shipped under a senior name. The design is built to move the
         business, and the work shows it.
@@ -419,7 +419,6 @@ const S3 = () => (
         <Figure value="50+" label="Projects shipped" />
         <Figure value="5.0" label="Client rating" />
         <Figure value="Awwwards" label="& CSS Design Awards recognised" accent />
-        <Figure value="Tel Aviv" label="Studio · clients on 3 continents" />
       </div>
     </R>
     <div style={{ flex: 1 }} />

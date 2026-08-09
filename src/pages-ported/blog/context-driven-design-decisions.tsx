@@ -280,7 +280,7 @@ export default function ContextDrivenDesignDecisionsPage() {
                       "I would never use this, so it's a bad design."
                     </p>
                     <p className="text-white text-sm">
-                      <strong className="text-white">Reality:</strong> You're not the user. A 22-year-old designer in Tel Aviv isn't the same as a 55-year-old accountant in Nebraska. Your preferences don't matter, the user's do.
+                      <strong className="text-white">Reality:</strong> You're not the user. A 22-year-old designer in a big city isn't the same as a 55-year-old accountant in Nebraska. Your preferences don't matter, the user's do.
                     </p>
                   </div>
                 </div>

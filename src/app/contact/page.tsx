@@ -2,18 +2,18 @@ import type { Metadata } from 'next';
 import ContactPage from '@/pages-ported/ContactPage';
 
 export const metadata: Metadata = {
-  title: { absolute: 'Contact Marc Friedman | Free Website Strategy Call | Tel Aviv' },
+  title: { absolute: 'Contact Marc Friedman | Free Website Strategy Call' },
   description: 'Book a free 30-minute strategy call. Let\'s discuss your website goals and how custom web design can grow your business. 24-hour response guaranteed.',
   alternates: { canonical: 'https://www.marcfriedmanportfolio.com/contact/' },
   openGraph: {
-    title: 'Contact Marc Friedman | Free Website Strategy Call | Tel Aviv',
+    title: 'Contact Marc Friedman | Free Website Strategy Call',
     description: 'Book a free 30-minute strategy call. Let\'s discuss your website goals and how custom web design can grow your business. 24-hour response guaranteed.',
     url: 'https://www.marcfriedmanportfolio.com/contact/',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Contact Marc Friedman | Free Website Strategy Call | Tel Aviv',
+    title: 'Contact Marc Friedman | Free Website Strategy Call',
     description: 'Book a free 30-minute strategy call. Let\'s discuss your website goals and how custom web design can grow your business. 24-hour response guaranteed.',
   },
 };

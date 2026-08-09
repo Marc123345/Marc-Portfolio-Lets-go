@@ -95,9 +95,9 @@ const APART = [
       'We build every B2B site from scratch, around each client’s exact sales process. Off-the-shelf themes are technical debt that slows you down and forces your conversion paths into a generic mold. Custom builds give you full control over how users interact, what you say, and how fast it loads. As a specialized development agency and design partner, we handle B2B website design, B2B web development, and B2B website development around your exact sales process.',
   },
   {
-    title: 'Tel Aviv-based, global reach',
+    title: 'Independent studio, global reach',
     body:
-      'We serve US and European B2B companies from our studio in Tel Aviv. 50+ projects across three continents means we know how to communicate complex services across markets, time zones, and industries, including for firms in places like San Francisco where agency costs run far higher.',
+      'We serve US and European B2B companies. 50+ projects across three continents means we know how to communicate complex services across markets, time zones, and industries, including for firms in places like San Francisco where agency costs run far higher.',
   },
   {
     title: 'Proven results, not vague promises',
@@ -353,7 +353,7 @@ export default function B2BWebDesignPage() {
               every stage of the funnel, and the average B2B site converts just 2.4–3.5%.
             </p>
             <p>
-              Based in Tel Aviv and working across three continents, this B2B web design agency,
+              Working across three continents, this B2B web design agency,
               and B2B creative agency, combines strategic design, UX for complex B2B buying
               journeys, brand integration, and technical depth. From B2B website design through
               full redesign, we build sites that turn traffic into pipeline.
@@ -523,7 +523,7 @@ export default function B2BWebDesignPage() {
           <motion.div {...reveal}>
             <div className="space-y-5 text-white/70 leading-relaxed text-lg">
               <p>
-                Senior full-stack designer and developer based in Tel Aviv, working with B2B
+                Senior full-stack designer and developer working with B2B
                 companies across the US and Europe. Every project runs from discovery to launch
                 under one set of hands, so the strategy, the design, and the code all agree.
               </p>

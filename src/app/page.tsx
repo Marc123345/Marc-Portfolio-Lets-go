@@ -35,7 +35,6 @@ const homepageJsonLd = {
         'Web design agency building custom React & Next.js websites with sub-2-second load times and 98/100 PageSpeed scores. 50+ projects shipped across three continents.',
       address: {
         '@type': 'PostalAddress',
-        addressLocality: 'Tel Aviv',
         addressCountry: 'IL',
       },
       areaServed: ['United States', 'Europe', 'Africa', 'Worldwide'],

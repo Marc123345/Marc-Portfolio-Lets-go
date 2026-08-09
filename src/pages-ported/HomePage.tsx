@@ -12,20 +12,13 @@ import CTASection from '@/components/home/CTASection';
 const homeSchema = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
-  "name": "Marc Friedman - Web Designer Tel Aviv",
-  "description": "Professional web designer in Tel Aviv creating high-performance React/Node websites for agencies, ecommerce, and B2B companies. Expert in web development and conversion optimization.",
+  "name": "Marc Friedman - Web Designer",
+  "description": "Professional web designer creating high-performance React/Node websites for agencies, ecommerce, and B2B companies. Expert in web development and conversion optimization.",
   "image": "https://www.marcfriedmanportfolio.com/wp-content/uploads/2024/12/image-1.webp",
   "url": "https://www.marcfriedmanportfolio.com",
   "address": {
     "@type": "PostalAddress",
-    "addressLocality": "Tel Aviv",
-    "addressRegion": "Tel Aviv District",
     "addressCountry": "IL"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": "32.0853",
-    "longitude": "34.7818"
   },
   "sameAs": [
     "https://www.linkedin.com/in/portfolio2/",
@@ -35,17 +28,9 @@ const homeSchema = {
   "founder": {
     "@type": "Person",
     "name": "Marc Friedman",
-    "jobTitle": "Web Designer Tel Aviv | Full Stack Designer & Developer"
+    "jobTitle": "Web Designer | Full Stack Designer & Developer"
   },
-  "areaServed": {
-    "@type": "GeoCircle",
-    "geoMidpoint": {
-      "@type": "GeoCoordinates",
-      "latitude": "32.0853",
-      "longitude": "34.7818"
-    },
-    "geoRadius": "50000"
-  },
+  "areaServed": ["United States", "Europe", "Africa", "Worldwide"],
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
     "name": "Design & Development Services",

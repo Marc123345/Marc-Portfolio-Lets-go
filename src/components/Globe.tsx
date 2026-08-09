@@ -13,7 +13,6 @@ const CITIES = [
   { lat: 38.9072, lng: -77.0369, name: 'Washington D.C.', pop: 0.9 },
   { lat: 25.7617, lng: -80.1918, name: 'Miami', pop: 0.8 },
   { lat: 34.0522, lng: -118.2437, name: 'Los Angeles', pop: 0.85 },
-  { lat: 32.0853, lng: 34.7818, name: 'Tel Aviv', pop: 1 },
   { lat: 51.5074, lng: -0.1278, name: 'London', pop: 0.9 },
   { lat: 48.8566, lng: 2.3522, name: 'Paris', pop: 0.8 },
   { lat: -33.9249, lng: 18.4241, name: 'Cape Town', pop: 1 },

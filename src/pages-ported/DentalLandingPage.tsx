@@ -345,7 +345,7 @@ export default function DentalLandingPage() {
               },
               {
                 n: '02',
-                q: "You're in Tel Aviv. I'm in the US.",
+                q: "You're overseas. I'm in the US.",
                 a: "Calls happen in your time zone. Communication via Slack + Loom. Same-day replies during US business hours. I've shipped 50+ sites across 3 continents. Geography hasn't been a problem since 2018.",
               },
               {

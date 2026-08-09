@@ -231,7 +231,7 @@ export default function WebDevelopmentPage() {
               Built by Marc Friedman
             </p>
             <p className="text-white/65 text-sm md:text-base leading-relaxed max-w-2xl">
-              Senior full-stack designer &amp; developer based in Tel Aviv, six
+              Senior full-stack designer &amp; developer, six
               years shipping React &amp; Next.js. Every project runs from discovery
               to launch under one set of hands: no agency handoff, no offshore team.
             </p>
