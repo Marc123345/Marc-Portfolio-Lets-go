@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useMemo } from 'react';
+import React, { useId, useMemo } from 'react';
 import { Quote, Star, Linkedin, User, ArrowUpRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
@@ -95,9 +95,13 @@ function MarqueeRow({
   direction?: 'left' | 'right';
   speed?: number;
 }) {
+  // useId, not Math.random: the id lands in a <style> block, so a value that
+  // differs between server and client is a hydration mismatch. That one failed
+  // to hydrate the whole page and left the site loader frozen on screen.
+  const rawId = useId();
   const loopId = useMemo(
-    () => `testimonial-${direction}-${Math.random().toString(36).slice(2, 8)}`,
-    [direction],
+    () => `testimonial-${direction}-${rawId.replace(/[^a-zA-Z0-9]/g, '')}`,
+    [direction, rawId],
   );
 
   return (

@@ -26,32 +26,42 @@ const ARC_COLORS: [string, string][] = [
   ['rgba(216,232,255,0.55)', 'rgba(163,209,255,0.2)'],
 ];
 
+// Indices into CITIES: 0 New York, 1 Washington D.C., 2 Miami, 3 Los Angeles,
+// 4 London, 5 Paris, 6 Cape Town, 7 Nairobi.
 const ROUTES = [
   // Primary, tier A
   [0, 4, 0],
   [0, 5, 0],
-  [4, 7, 0],
-  [5, 6, 0],
+  [4, 6, 0],
+  [4, 5, 0],
   // Secondary, tier B
   [0, 2, 1],
   [2, 3, 1],
   [3, 4, 1],
-  [7, 8, 1],
+  [6, 7, 1],
   // Whisper, tier C
   [1, 0, 2],
-  [4, 8, 2],
   [5, 7, 2],
-  [3, 7, 2],
+  [5, 6, 2],
+  [3, 6, 2],
 ];
 
 function buildArcs() {
-  return ROUTES.map(([from, to, tier]) => ({
-    startLat: CITIES[from].lat,
-    startLng: CITIES[from].lng,
-    endLat: CITIES[to].lat,
-    endLng: CITIES[to].lng,
-    color: ARC_COLORS[tier],
-  }));
+  // Routes address cities by index, so a city being removed from CITIES used to
+  // take the whole globe down with an undefined read. Skip anything unresolved
+  // rather than throw.
+  return ROUTES.flatMap(([from, to, tier]) => {
+    const a = CITIES[from];
+    const b = CITIES[to];
+    if (!a || !b) return [];
+    return [{
+      startLat: a.lat,
+      startLng: a.lng,
+      endLat: b.lat,
+      endLng: b.lng,
+      color: ARC_COLORS[tier],
+    }];
+  });
 }
 
 function buildPoints() {
