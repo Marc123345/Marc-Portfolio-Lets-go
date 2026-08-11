@@ -14,7 +14,7 @@ const config: CaseStudyConfig = {
       time saved in analysis.
     </>
   ),
-  heroImage: '/images/clients/QNHXpzT.jpeg',
+  heroImage: '/images/clients/QNHXpzT.webp',
   metaStats: [
     { value: 'AI', label: 'Powered' },
     { value: 'Fast', label: 'Metadata' },
@@ -95,20 +95,20 @@ const config: CaseStudyConfig = {
 
   gallery: [
     {
-      image: '/images/clients/QNHXpzT.jpeg',
+      image: '/images/clients/QNHXpzT.webp',
       caption: 'Dashboard',
       wide: true,
     },
     {
-      image: '/images/clients/ZGLdkzN.jpeg',
+      image: '/images/clients/ZGLdkzN.webp',
       caption: 'Analytics view',
     },
     {
-      image: '/images/clients/ZDPU1yO.png',
+      image: '/images/clients/ZDPU1yO.webp',
       caption: 'Content management',
     },
     {
-      image: '/images/clients/Vt1rIYu.jpeg',
+      image: '/images/clients/Vt1rIYu.webp',
       caption: 'User interface',
       wide: true,
     },

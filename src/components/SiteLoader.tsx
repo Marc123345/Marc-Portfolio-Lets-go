@@ -22,6 +22,11 @@ export default function SiteLoader() {
 
     setVisible(true);
 
+    // The page is interactive within ~40ms, so this hold is the whole of the
+    // delay a visitor feels. Keep it just long enough to register as a brand
+    // moment rather than a flash.
+    const HOLD_MS = 600;
+
     const t = setTimeout(() => {
       try {
         sessionStorage.setItem('mf-loader-seen', '1');
@@ -29,7 +34,7 @@ export default function SiteLoader() {
         // no-op
       }
       setVisible(false);
-    }, 1700);
+    }, HOLD_MS);
 
     return () => clearTimeout(t);
   }, []);
@@ -57,7 +62,7 @@ export default function SiteLoader() {
           key="loader"
           className="fixed inset-0 z-[9999] bg-black flex flex-col items-center justify-center overflow-hidden"
           initial={{ opacity: 1 }}
-          exit={{ opacity: 0, transition: { duration: 0.6, ease: [0.76, 0, 0.24, 1] } }}
+          exit={{ opacity: 0, transition: { duration: 0.35, ease: [0.76, 0, 0.24, 1] } }}
         >
           {/* Marc logo */}
           <motion.img

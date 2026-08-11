@@ -14,7 +14,7 @@ const config: CaseStudyConfig = {
       reduction across operations.
     </>
   ),
-  heroImage: '/images/clients/EwgHAuK.png',
+  heroImage: '/images/clients/EwgHAuK.webp',
   metaStats: [
     { value: '500+', label: 'Vehicles' },
     { value: '35%', label: 'Cost ↓' },
@@ -100,24 +100,24 @@ const config: CaseStudyConfig = {
 
   gallery: [
     {
-      image: '/images/clients/ozcuJ2k.jpeg',
+      image: '/images/clients/ozcuJ2k.webp',
       caption: 'Live map + telemetry',
       wide: true,
     },
     {
-      image: '/images/clients/EwgHAuK.png',
+      image: '/images/clients/EwgHAuK.webp',
       caption: 'Fleet control dashboard',
     },
     {
-      image: '/images/clients/ACKUFLy.jpeg',
+      image: '/images/clients/ACKUFLy.webp',
       caption: 'Mobile dispatcher app',
     },
     {
-      image: '/images/clients/gEbm2d0.png',
+      image: '/images/clients/gEbm2d0.webp',
       caption: 'Analytics & dynamic pricing',
     },
     {
-      image: '/images/clients/0npIa3u.png',
+      image: '/images/clients/0npIa3u.webp',
       caption: 'Vehicle tracking interface',
     },
   ],
@@ -125,7 +125,7 @@ const config: CaseStudyConfig = {
   next: {
     title: 'MyTube',
     url: '/work/case-studies/mytube/',
-    image: '/images/clients/QNHXpzT.jpeg',
+    image: '/images/clients/QNHXpzT.webp',
   },
 };
 

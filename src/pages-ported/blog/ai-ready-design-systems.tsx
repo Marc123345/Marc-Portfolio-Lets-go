@@ -7,7 +7,7 @@ const blogPostSchema = {
   "@type": "BlogPosting",
   "headline": "AI-Ready Design Systems: Building for Human-AI Collaboration",
   "description": "Learn how to structure design tokens, components, and content so AI tools can generate on-brand layouts, copy, and variants reliably. Discover common pitfalls when AI fights your system and how to avoid them.",
-  "image": "/generated-1770282657147-xuhu1.png",
+  "image": "/generated-1770282657147-xuhu1.webp",
   "datePublished": "2026-02-03T10:00:00+00:00",
   "dateModified": "2026-02-03T10:00:00+00:00",
   "author": {
@@ -58,7 +58,7 @@ export default function AIReadyDesignSystems() {
 
           <div className="aspect-[21/9] overflow-hidden mb-8">
             <img
-              src="/generated-1770282657147-xuhu1.png"
+              src="/generated-1770282657147-xuhu1.webp"
               alt="AI-ready design systems visualization"
               className="w-full h-full object-cover"
             />

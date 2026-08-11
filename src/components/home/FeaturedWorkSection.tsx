@@ -181,7 +181,7 @@ const featured: Project[] = [
     category: 'Athlete · Bookings',
     blurb:
       "Olympic champion's swim clinics platform with self-serve booking and clinic scheduling.",
-    image: '/images/clients/ApfYPlH.jpg',
+    image: '/images/clients/ApfYPlH.webp',
     liveUrl: 'https://chadleclosswimming.com',
     caseStudyUrl: '/work/case-studies/chad-le-clos/',
     stats: [
@@ -196,7 +196,7 @@ const featured: Project[] = [
     category: 'SaaS · Logistics',
     blurb:
       'Enterprise fleet platform with real-time tracking and predictive maintenance.',
-    image: '/images/clients/EwgHAuK.png',
+    image: '/images/clients/EwgHAuK.webp',
     caseStudyUrl: '/work/case-studies/fleet-management/',
     stats: [
       { value: '500+', label: 'Vehicles' },
@@ -210,7 +210,7 @@ const featured: Project[] = [
     category: 'AI · Metadata',
     blurb:
       'Video metadata management with AI-powered insights and workflow automation.',
-    image: '/images/clients/QNHXpzT.jpeg',
+    image: '/images/clients/QNHXpzT.webp',
     caseStudyUrl: '/work/case-studies/mytube/',
     stats: [
       { value: 'AI', label: 'Powered' },

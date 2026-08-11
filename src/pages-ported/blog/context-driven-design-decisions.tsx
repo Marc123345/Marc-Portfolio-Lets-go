@@ -17,7 +17,7 @@ export default function ContextDrivenDesignDecisionsPage() {
     "description": "Learn why understanding context is the most critical skill for junior UX/UI designers and how to develop contextual thinking for better design decisions.",
     "image": {
       "@type": "ImageObject",
-      "url": "/generated-1770282657147-xuhu1.png",
+      "url": "/generated-1770282657147-xuhu1.webp",
       "width": 2000,
       "height": 1333
     },
@@ -73,7 +73,7 @@ export default function ContextDrivenDesignDecisionsPage() {
 
           <div className="aspect-[21/9] overflow-hidden mb-8">
             <img
-              src="/generated-1770282657147-xuhu1.png"
+              src="/generated-1770282657147-xuhu1.webp"
               alt="Context in UX/UI Design"
               className="w-full h-full object-cover"
             />

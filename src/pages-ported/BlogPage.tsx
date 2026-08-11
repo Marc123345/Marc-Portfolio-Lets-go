@@ -207,7 +207,7 @@ const posts: Post[] = [
       'Why understanding context is the most critical skill for junior UX/UI designers and how to develop contextual thinking.',
     date: 'February 4, 2026',
     readTime: '12 min read',
-    image: '/generated-1770282657147-xuhu1.png',
+    image: '/generated-1770282657147-xuhu1.webp',
     categories: ['UX', 'Design', 'Education'],
   },
   {
@@ -217,7 +217,7 @@ const posts: Post[] = [
       'Structure design tokens, components, and content so AI tools can generate on-brand layouts, copy, and variants reliably.',
     date: 'February 3, 2026',
     readTime: '18 min read',
-    image: '/generated-1770282657147-xuhu1.png',
+    image: '/generated-1770282657147-xuhu1.webp',
     categories: ['AI', 'Design Systems', 'Development'],
   },
   {
