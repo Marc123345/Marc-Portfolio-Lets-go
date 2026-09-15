@@ -5,6 +5,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { Plus } from 'lucide-react';
 import YouTubeSection from '@/components/home/YouTubeSection';
+import TrustedBy from '@/components/TrustedBy';
 import {
   SERIF,
   ChapterMarker,
@@ -322,6 +323,21 @@ export default function B2BWebDesignPage() {
         meta={['50+ projects · 3 continents', 'React · Next.js', '5.0 ★ · 25 reviews']}
         imageSrc={WORKSPACE}
       />
+
+      {/* The home page's testimonial block, in the slot it holds there —
+          directly under the hero, before the first chapter. Marc's call.
+
+          The component rather than a copy of it: TrustedBy already owns the
+          featured quote, the two marquee rows and the client logo strip, and
+          it takes no props, so the layout here IS the home page's layout by
+          construction rather than by resemblance. If a review is added to
+          src/data/testimonials.ts, both places get it.
+
+          It is the first service page to carry this. The masthead directly
+          above already claims "5.0 ★ · 25 reviews" in its meta row, which was
+          a number with nothing behind it on this page — the reviews are now
+          under it. */}
+      <TrustedBy />
 
       {/* Chapter 01, The Brief */}
       <EditorialSection
