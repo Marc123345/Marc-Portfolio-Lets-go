@@ -11,7 +11,7 @@ export default function MicrointeractionsMotion3DPage() {
   const blogPostSchema = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "headline": "Microinteractions, Motion and 3D: Making Websites Feel Physical in 2026",
+    "headline": "Microinteractions, Motion and 3D in 2026 Web Design",
     "description":
       "How microinteractions, motion design and immersive 3D are giving websites a tangible feel in 2026, and how to use them without slowing pages down, distracting visitors or ignoring reduced-motion users.",
     "image": "https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?auto=format&fit=crop&w=2000&q=80",
@@ -84,7 +84,7 @@ export default function MicrointeractionsMotion3DPage() {
           </button>
 
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">
-            Microinteractions, Motion and 3D: Making Websites Feel Physical in 2026
+            Microinteractions, Motion and 3D in 2026 Web Design
           </h1>
 
           <div className="flex items-center gap-4 mb-8">

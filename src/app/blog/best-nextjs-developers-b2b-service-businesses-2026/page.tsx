@@ -8,7 +8,7 @@ const url =
   'https://www.marcfriedmanportfolio.com/blog/best-nextjs-developers-b2b-service-businesses-2026/';
 
 export const metadata: Metadata = {
-  title,
+  title: { absolute: title },
   description,
   alternates: { canonical: url },
   openGraph: { title, description, url, type: 'article' },

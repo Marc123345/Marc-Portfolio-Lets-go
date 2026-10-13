@@ -11,7 +11,7 @@ export default function BoldTypographyEarthyPalettesPage() {
   const blogPostSchema = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "headline": "Bold Typography and Earthy Palettes: The Visual Throughline of 2026 Web Design",
+    "headline": "Bold Typography and Earthy Palettes in 2026 Web Design",
     "description":
       "Oversized type and earth-toned color palettes are the common thread across 2026 web design. How to set display type that scales, build a clay, stone and sage palette that passes contrast, and pick a font that actually says something.",
     "image": "https://images.unsplash.com/photo-1493106641515-6b5631de4bb9?auto=format&fit=crop&w=2000&q=80",
@@ -84,7 +84,7 @@ export default function BoldTypographyEarthyPalettesPage() {
           </button>
 
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">
-            Bold Typography and Earthy Palettes: The Visual Throughline of 2026 Web Design
+            Bold Typography and Earthy Palettes in 2026 Web Design
           </h1>
 
           <div className="flex items-center gap-4 mb-8">

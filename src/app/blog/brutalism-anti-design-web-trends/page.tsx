@@ -7,7 +7,7 @@ const description =
 const url = 'https://www.marcfriedmanportfolio.com/blog/brutalism-anti-design-web-trends/';
 
 export const metadata: Metadata = {
-  title,
+  title: { absolute: title },
   description,
   alternates: { canonical: url },
   openGraph: { title, description, url, type: 'article' },

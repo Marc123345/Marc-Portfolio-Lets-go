@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import BlogMicrointeractionsMotion3D from '@/pages-ported/blog/microinteractions-motion-3d-2026';
 
-const title = 'Microinteractions, Motion and 3D: Making Websites Feel Physical in 2026';
+const title = 'Microinteractions, Motion and 3D in 2026 Web Design';
 const description =
   'How microinteractions, motion design and immersive 3D give websites a tangible feel in 2026, and how to use them without slowing pages down or ignoring reduced-motion users.';
 const url = 'https://www.marcfriedmanportfolio.com/blog/microinteractions-motion-3d-2026/';

@@ -39,7 +39,7 @@ type Post = {
 const posts: Post[] = [
   {
     id: 'anti-design-texture-nostalgia-2026',
-    title: 'Anti-Design, Texture and Nostalgia: The Expressive End of Web Design in 2026',
+    title: 'Anti-Design, Texture and Nostalgia in 2026 Web Design',
     excerpt:
       'Why the expressive end of web design is pushing back against clean templates: anti-design, grain and paper textures, warm nostalgia and custom cursors, and where each belongs.',
     date: 'October 14, 2026',
@@ -49,7 +49,7 @@ const posts: Post[] = [
   },
   {
     id: 'microinteractions-motion-3d-2026',
-    title: 'Microinteractions, Motion and 3D: Making Websites Feel Physical in 2026',
+    title: 'Microinteractions, Motion and 3D in 2026 Web Design',
     excerpt:
       'Microinteractions, motion design and immersive 3D are giving sites a tangible feel. How to use them without slowing pages down, distracting visitors or ignoring reduced-motion users.',
     date: 'October 14, 2026',
@@ -59,7 +59,7 @@ const posts: Post[] = [
   },
   {
     id: 'bold-typography-earthy-palettes-2026',
-    title: 'Bold Typography and Earthy Palettes: The Visual Throughline of 2026 Web Design',
+    title: 'Bold Typography and Earthy Palettes in 2026 Web Design',
     excerpt:
       'Oversized type and earth-toned color are the common thread in 2026. Display type that scales, a clay, stone and sage palette that passes contrast, and fonts that say something.',
     date: 'October 14, 2026',

@@ -7,7 +7,7 @@ const description =
 const url = 'https://www.marcfriedmanportfolio.com/blog/paving-contractor-website-design-guide/';
 
 export const metadata: Metadata = {
-  title,
+  title: { absolute: title },
   description,
   alternates: { canonical: url },
   openGraph: { title, description, url, type: 'article' },

@@ -11,7 +11,7 @@ export default function AntiDesignTextureNostalgiaPage() {
   const blogPostSchema = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "headline": "Anti-Design, Texture and Nostalgia: The Expressive End of Web Design in 2026",
+    "headline": "Anti-Design, Texture and Nostalgia in 2026 Web Design",
     "description":
       "Why the expressive end of web design is pushing back against clean templates: anti-design, grain and paper textures, a warmer kind of nostalgia, and the return of custom cursors. Plus where these belong, and where they really don't.",
     "image": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=2000&q=80",
@@ -84,7 +84,7 @@ export default function AntiDesignTextureNostalgiaPage() {
           </button>
 
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">
-            Anti-Design, Texture and Nostalgia: The Expressive End of Web Design in 2026
+            Anti-Design, Texture and Nostalgia in 2026 Web Design
           </h1>
 
           <div className="flex items-center gap-4 mb-8">

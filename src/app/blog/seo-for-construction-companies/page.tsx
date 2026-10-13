@@ -7,7 +7,7 @@ const description =
 const url = 'https://www.marcfriedmanportfolio.com/blog/seo-for-construction-companies/';
 
 export const metadata: Metadata = {
-  title,
+  title: { absolute: title },
   description,
   alternates: { canonical: url },
   openGraph: { title, description, url, type: 'article' },

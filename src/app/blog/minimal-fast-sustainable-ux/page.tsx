@@ -2,12 +2,13 @@ import type { Metadata } from 'next';
 import BlogMinimalUX from '@/pages-ported/blog/minimal-fast-sustainable-ux';
 
 const title = 'Minimal, Fast, and Sustainable UX: Designing for Performance and the Planet';
+const seoTitle = 'Minimal, Fast, Sustainable UX: Designing for Performance';
 const description =
   'Leaner layouts, fewer scripts, smaller bundles. How a UX that respects the device respects the user, and uses less energy doing it.';
 const url = 'https://www.marcfriedmanportfolio.com/blog/minimal-fast-sustainable-ux/';
 
 export const metadata: Metadata = {
-  title,
+  title: { absolute: seoTitle },
   description,
   alternates: { canonical: url },
   openGraph: { title, description, url, type: 'article' },
