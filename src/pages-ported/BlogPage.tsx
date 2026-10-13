@@ -38,6 +38,36 @@ type Post = {
 
 const posts: Post[] = [
   {
+    id: 'anti-design-texture-nostalgia-2026',
+    title: 'Anti-Design, Texture and Nostalgia: The Expressive End of Web Design in 2026',
+    excerpt:
+      'Why the expressive end of web design is pushing back against clean templates: anti-design, grain and paper textures, warm nostalgia and custom cursors, and where each belongs.',
+    date: 'October 14, 2026',
+    readTime: '9 min read',
+    image: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=2000&q=80',
+    categories: ['Design', 'Trends', 'UI/UX'],
+  },
+  {
+    id: 'microinteractions-motion-3d-2026',
+    title: 'Microinteractions, Motion and 3D: Making Websites Feel Physical in 2026',
+    excerpt:
+      'Microinteractions, motion design and immersive 3D are giving sites a tangible feel. How to use them without slowing pages down, distracting visitors or ignoring reduced-motion users.',
+    date: 'October 14, 2026',
+    readTime: '9 min read',
+    image: 'https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?auto=format&fit=crop&w=2000&q=80',
+    categories: ['Motion', 'Trends', 'Performance'],
+  },
+  {
+    id: 'bold-typography-earthy-palettes-2026',
+    title: 'Bold Typography and Earthy Palettes: The Visual Throughline of 2026 Web Design',
+    excerpt:
+      'Oversized type and earth-toned color are the common thread in 2026. Display type that scales, a clay, stone and sage palette that passes contrast, and fonts that say something.',
+    date: 'October 14, 2026',
+    readTime: '8 min read',
+    image: 'https://images.unsplash.com/photo-1493106641515-6b5631de4bb9?auto=format&fit=crop&w=2000&q=80',
+    categories: ['Typography', 'Color', 'Trends'],
+  },
+  {
     id: 'how-to-choose-a-website-designer-2026',
     title: 'How to Choose a Website Designer for Your Business Website in 2026',
     excerpt:
