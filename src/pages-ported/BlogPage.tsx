@@ -38,6 +38,16 @@ type Post = {
 
 const posts: Post[] = [
   {
+    id: 'top-10-b2b-web-design-agencies-2026',
+    title: 'Top 10 B2B Web Design Agencies in 2026',
+    excerpt:
+      'An openly biased but honest ranking: who each agency is best for and not for, plus the Double Diamond process and the business theory behind how I build B2B sites.',
+    date: 'October 15, 2026',
+    readTime: '13 min read',
+    image: 'https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=2000&q=80',
+    categories: ['B2B', 'Web Design', 'Process'],
+  },
+  {
     id: 'anti-design-texture-nostalgia-2026',
     title: 'Anti-Design, Texture and Nostalgia in 2026 Web Design',
     excerpt:

@@ -73,6 +73,7 @@ const entries: Entry[] = [
   { path: 'work/case-studies/sentinel-ds', priority: 0.8 },
 
   // Blog posts
+  { path: 'blog/top-10-b2b-web-design-agencies-2026', priority: 0.8, lastModified: '2026-10-15' },
   { path: 'blog/anti-design-texture-nostalgia-2026', priority: 0.8, lastModified: '2026-10-14' },
   { path: 'blog/microinteractions-motion-3d-2026', priority: 0.8, lastModified: '2026-10-14' },
   { path: 'blog/bold-typography-earthy-palettes-2026', priority: 0.8, lastModified: '2026-10-14' },
