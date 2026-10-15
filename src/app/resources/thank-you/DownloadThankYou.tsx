@@ -23,6 +23,9 @@ const RESOURCES: Record<string, { title: string; file: string }> = {
     title: 'The B2B Website Checklist',
     file: '/b2b-checklist.pdf',
   },
+  'seo-checklist-2026': { title: 'The SEO Checklist', file: '/seo-checklist-2026.pdf' },
+  'geo-checklist-2026': { title: 'The GEO Checklist', file: '/geo-checklist-2026.pdf' },
+  'aeo-checklist-2026': { title: 'The AEO Checklist', file: '/aeo-checklist-2026.pdf' },
   'landing-page-lead-magnet': {
     title: 'The Landing Page Lead Magnet',
     file: '/landing-page-lead-magnet.pdf',

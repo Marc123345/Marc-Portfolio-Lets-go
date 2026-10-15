@@ -4,7 +4,7 @@ import LeadMagnetFormEmbed from '@/components/LeadMagnetFormEmbed';
 const FORM_ID = '261967965285073';
 const title = 'Free B2B Website Checklist | Marc Friedman';
 const description =
-  'Download a free B2B website checklist, the conversion, SEO, speed, and trust essentials every B2B site needs. Enter your email and get the PDF delivered instantly.';
+  'The B2B Website Checklist, 2026 edition: 47 checks across positioning, structure, proof, conversion, content, performance and findability. Free PDF.';
 const url = 'https://www.marcfriedmanportfolio.com/resources/b2b-checklist/';
 
 export const metadata: Metadata = {
@@ -16,10 +16,10 @@ export const metadata: Metadata = {
 };
 
 const TAKEAWAYS = [
-  'The conversion-path and CTA checks that turn visitors into leads',
-  'Core Web Vitals and speed targets that keep buyers from bouncing',
-  'The trust signals every B2B buyer looks for before they enquire',
-  'On-page SEO, metadata, and schema essentials, in a checkable list',
+  'Positioning: say what you do and who it is for in one read',
+  'Structure and proof: answer the whole buying committee, with evidence',
+  'Conversion: make the next step obvious and low-risk',
+  'Content, performance and findability: be fast, clear and easy to find',
 ];
 
 export default function B2BChecklistResourcePage() {
@@ -39,9 +39,9 @@ export default function B2BChecklistResourcePage() {
             </h1>
 
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-white/70">
-              A free, no-fluff checklist for auditing a B2B website against the things
-              that actually drive pipeline, conversion, speed, trust, and search. Drop your
-              email and I&apos;ll send the PDF straight to your inbox.
+              The 2026 edition: 47 checks for a B2B site that answers buyers&apos; questions
+              before the first call and turns the right visitors into qualified pipeline.
+              It&apos;s the list I use on every B2B build. Fill in the form and the PDF is yours.
             </p>
 
             <ul className="mt-10 space-y-4">

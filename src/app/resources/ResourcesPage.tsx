@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ArrowUpRight, FileDown } from 'lucide-react';
 import LeadMagnetFormEmbed from '@/components/LeadMagnetFormEmbed';
+import { CHECKLISTS } from '@/data/checklists';
 
 const SERIF = "var(--font-heading)";
 const ACCENT = '#A3D1FF';
@@ -42,7 +43,28 @@ type Resource = {
   pdf: string;
 };
 
+
+function checklistResource(which: keyof typeof CHECKLISTS, id: string): Resource {
+  const c = CHECKLISTS[which];
+  return {
+    id,
+    kind: 'Checklist',
+    cover: c.cover,
+    coverAlt: c.coverAlt,
+    title: c.title,
+    titleAccent: c.titleAccent,
+    excerpt: c.excerpt,
+    formId: c.formId,
+    formHeading: 'Get the free checklist',
+    formTitle: `Get the free ${c.title.replace(/^The /, '')} ${c.titleAccent}`,
+    pdf: c.pdf,
+  };
+}
+
 const RESOURCES: Resource[] = [
+  checklistResource('seo', 'seo-checklist-2026'),
+  checklistResource('geo', 'geo-checklist-2026'),
+  checklistResource('aeo', 'aeo-checklist-2026'),
   {
     id: 'b2b-website-mastery',
     kind: 'Guide',
@@ -57,21 +79,7 @@ const RESOURCES: Resource[] = [
     formTitle: 'Get the free B2B Website Mastery guide',
     pdf: '/b2b-website-mastery.pdf',
   },
-  {
-    id: 'b2b-checklist',
-    kind: 'Checklist',
-    cover:
-      'https://ik.imagekit.io/qcvroy8xpd/b2b-website-checklist-cover_6-EphRF04.png',
-    coverAlt: 'Cover of the free B2B Website Checklist',
-    title: 'The B2B Website',
-    titleAccent: 'Checklist',
-    excerpt:
-      'A no-fluff checklist for auditing a B2B website against the things that actually drive pipeline: conversion, speed, trust, and search.',
-    formId: '261967965285073',
-    formHeading: 'Get the free checklist',
-    formTitle: 'Get the free B2B Website Checklist',
-    pdf: '/b2b-checklist.pdf',
-  },
+  checklistResource('b2b', 'b2b-checklist'),
   {
     id: 'landing-page-lead-magnet',
     kind: 'Guide',

@@ -12,6 +12,7 @@ import {
   ServiceColophon,
   ServiceNavigator,
 } from '@/components/ServiceEditorial';
+import ChecklistDownload from '@/components/ChecklistDownload';
 
 export default function SeoContentLayoutPage() {
   return (
@@ -167,6 +168,8 @@ export default function SeoContentLayoutPage() {
         />
       </EditorialSection>
 
+
+      <ChecklistDownload which="seo" bg="bg-black" />
       <ServiceNavigator currentSlug="seo-content-layout" />
       <ServiceColophon
         headline="Stop writing"

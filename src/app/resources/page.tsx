@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
 import ResourcesPage from './ResourcesPage';
 
-const title = 'Free B2B Website Resources, Guides & Checklists | Marc Friedman';
+const title = 'Free SEO, GEO, AEO & B2B Website Checklists | Marc Friedman';
 const description =
-  'Free B2B website resources, B2B Website Mastery, the B2B Website Checklist, and the Landing Page Lead Magnet. Pick a guide, enter your email, and get the PDF delivered instantly.';
+  'Free 2026 SEO, GEO, AEO and B2B website checklists, plus B2B Website Mastery and the Landing Page guide. Enter your details and the PDF downloads instantly.';
 const url = 'https://www.marcfriedmanportfolio.com/resources/';
 
 export const metadata: Metadata = {

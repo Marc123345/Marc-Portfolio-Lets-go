@@ -18,6 +18,7 @@ import {
   ServiceNavigator,
   ServiceColophon,
 } from '@/components/ServiceEditorial';
+import ChecklistDownload from '@/components/ChecklistDownload';
 
 const PORTRAIT =
   'https://ik.imagekit.io/qcvroy8xpd/PW8VUKH.png?updatedAt=1759693058055&tr=f-webp';
@@ -693,6 +694,8 @@ export default function B2BWebDesignPage() {
         </div>
       </section>
 
+
+      <ChecklistDownload which="b2b" bg="bg-[#0a0a0a]" />
       <ServiceNavigator currentSlug="b2b-web-design" />
       <ServiceColophon
         headline="Turn your B2B website into"

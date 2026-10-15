@@ -12,6 +12,7 @@ import {
   ServiceNavigator,
 } from '@/components/ServiceEditorial';
 import AuditFormEmbed from '@/components/AuditFormEmbed';
+import ChecklistDownload from '@/components/ChecklistDownload';
 
 export default function AeoPage() {
   return (
@@ -148,6 +149,8 @@ export default function AeoPage() {
         </div>
       </section>
 
+
+      <ChecklistDownload which="aeo" bg="bg-black" />
       <ServiceNavigator currentSlug="aeo" />
       <ServiceColophon
         headline="Get quoted"

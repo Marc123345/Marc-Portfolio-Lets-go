@@ -11,6 +11,7 @@ import {
   ServiceColophon,
   ServiceNavigator,
 } from '@/components/ServiceEditorial';
+import ChecklistDownload from '@/components/ChecklistDownload';
 
 export default function GeoPage() {
   return (
@@ -202,6 +203,8 @@ export default function GeoPage() {
         </div>
       </EditorialSection>
 
+
+      <ChecklistDownload which="geo" bg="bg-[#0a0a0a]" />
       <ServiceNavigator currentSlug="geo" />
       <ServiceColophon
         headline="Be the answer"
