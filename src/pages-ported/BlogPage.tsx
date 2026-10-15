@@ -38,6 +38,36 @@ type Post = {
 
 const posts: Post[] = [
   {
+    id: 'headless-cms-explained',
+    title: 'Headless CMS Explained: Can My Team Still Edit the Site?',
+    excerpt:
+      "What a headless CMS is, what your team can and can't edit without a developer, how previews and publishing work, and when headless is overkill.",
+    date: 'October 15, 2026',
+    readTime: '8 min read',
+    image: 'https://images.unsplash.com/photo-1487014679447-9f8336841d58?auto=format&fit=crop&w=2000&q=80',
+    categories: ['CMS', 'Next.js', 'Business'],
+  },
+  {
+    id: 'nextjs-vs-webflow',
+    title: 'Next.js vs Webflow: When a No-Code Site Stops Being Enough',
+    excerpt:
+      "What Webflow does well, six signs you've outgrown it, what moving to Next.js costs, and the middle path that keeps both.",
+    date: 'October 15, 2026',
+    readTime: '9 min read',
+    image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=2000&q=80',
+    categories: ['Next.js', 'Webflow', 'Development'],
+  },
+  {
+    id: 'faster-site-worth-in-leads',
+    title: 'What a 1-Second Faster Site Is Worth in Leads',
+    excerpt:
+      'Put a dollar figure on site speed: what the research supports, a worked B2B example with three scenarios, and how to run your own numbers in the ROI calculator.',
+    date: 'October 15, 2026',
+    readTime: '8 min read',
+    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=2000&q=80',
+    categories: ['Performance', 'Conversion', 'ROI'],
+  },
+  {
     id: 'top-10-b2b-web-design-agencies-2026',
     title: 'Top 10 B2B Web Design Agencies in 2026',
     excerpt:

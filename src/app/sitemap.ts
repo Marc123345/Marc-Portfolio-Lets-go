@@ -73,6 +73,9 @@ const entries: Entry[] = [
   { path: 'work/case-studies/sentinel-ds', priority: 0.8 },
 
   // Blog posts
+  { path: 'blog/headless-cms-explained', priority: 0.8, lastModified: '2026-10-15' },
+  { path: 'blog/nextjs-vs-webflow', priority: 0.8, lastModified: '2026-10-15' },
+  { path: 'blog/faster-site-worth-in-leads', priority: 0.8, lastModified: '2026-10-15' },
   { path: 'blog/top-10-b2b-web-design-agencies-2026', priority: 0.8, lastModified: '2026-10-15' },
   { path: 'blog/anti-design-texture-nostalgia-2026', priority: 0.8, lastModified: '2026-10-14' },
   { path: 'blog/microinteractions-motion-3d-2026', priority: 0.8, lastModified: '2026-10-14' },
