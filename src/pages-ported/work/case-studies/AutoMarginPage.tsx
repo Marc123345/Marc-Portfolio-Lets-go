@@ -103,6 +103,11 @@ const config: CaseStudyConfig = {
     },
   },
 
+  videos: [
+    { vimeoId: '865081155', title: 'Alert flow', width: 1920, height: 984 },
+    { vimeoId: '865100622', title: 'Inventory', width: 1920, height: 984 },
+  ],
+
   gallery: [
     {
       image: 'https://ik.imagekit.io/qcvroy8xpd/1732717492455.jpeg',

@@ -98,6 +98,13 @@ const config: CaseStudyConfig = {
     ],
   },
 
+  videos: [
+    { vimeoId: '865404066', title: 'Onboarding flow', width: 1920, height: 984 },
+    { vimeoId: '865405799', title: 'Video editor flow', width: 1920, height: 984 },
+    { vimeoId: '865408838', title: 'Video editor 2', width: 1920, height: 984 },
+    { vimeoId: '865409674', title: 'Gamification flow', width: 1920, height: 984 },
+  ],
+
   gallery: [
     {
       image: '/images/clients/SubVB9A.jpeg',

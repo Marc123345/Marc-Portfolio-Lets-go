@@ -50,6 +50,9 @@ export type CaseStudyConfig = {
 
   // Gallery
   gallery: { image: string; caption?: string; wide?: boolean }[];
+  // Product flows recorded on Vimeo, shown full width above the gallery.
+  // width/height are the recording's size, used for the aspect ratio.
+  videos?: { vimeoId: string; title: string; width: number; height: number }[];
 
   // Next case
   next: {
@@ -233,6 +236,37 @@ function Gallery({ items }: { items: CaseStudyConfig['gallery'] }) {
   );
 }
 
+function Videos({ items }: { items: NonNullable<CaseStudyConfig['videos']> }) {
+  return (
+    <div className="grid gap-4 mb-4">
+      {items.map((v, i) => (
+        <motion.figure
+          key={v.vimeoId}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-60px' }}
+          transition={{ duration: 0.7, delay: i * 0.05 }}
+          className="border border-white/10 bg-[#0f1116]"
+        >
+          <div className="relative w-full" style={{ aspectRatio: `${v.width} / ${v.height}` }}>
+            <iframe
+              src={`https://player.vimeo.com/video/${v.vimeoId}?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479`}
+              title={v.title}
+              loading="lazy"
+              allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              className="absolute inset-0 w-full h-full"
+            />
+          </div>
+          <figcaption className="px-4 py-3 border-t border-white/10 text-[10px] font-mono uppercase tracking-[0.25em] text-white/80">
+            {v.title}
+          </figcaption>
+        </motion.figure>
+      ))}
+    </div>
+  );
+}
+
 export default function CaseStudyLayout({ config }: { config: CaseStudyConfig }) {
   const {
     kicker,
@@ -248,6 +282,7 @@ export default function CaseStudyLayout({ config }: { config: CaseStudyConfig })
     solution,
     results,
     gallery,
+    videos = [],
     next,
   } = config;
 
@@ -386,7 +421,7 @@ export default function CaseStudyLayout({ config }: { config: CaseStudyConfig })
       </section>
 
       {/* ============== GALLERY ============== */}
-      {gallery.length > 0 && (
+      {(gallery.length > 0 || videos.length > 0) && (
         <section className="relative py-24 md:py-32 px-6 lg:px-12 bg-black border-t border-white/10">
           <div className="max-w-7xl mx-auto">
             <ChapterMarker number="03" label="In Context" />
@@ -404,6 +439,7 @@ export default function CaseStudyLayout({ config }: { config: CaseStudyConfig })
             >
               The <em className="italic text-[#A3D1FF]">work.</em>
             </motion.h2>
+            {videos.length > 0 && <Videos items={videos} />}
             <Gallery items={gallery} />
           </div>
         </section>
