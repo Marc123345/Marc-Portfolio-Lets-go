@@ -38,6 +38,36 @@ type Post = {
 
 const posts: Post[] = [
   {
+    id: 'experimental-navigation-beyond-the-navbar',
+    title: 'Experimental Navigation: Canvases, Folding Pages and Sites Without a Navbar',
+    excerpt:
+      'Zoomable canvases, folding pages and other alternatives to the top navbar: when they work, where they fail, and how to build one people and search engines can still use.',
+    date: 'October 29, 2026',
+    readTime: '8 min read',
+    image: 'https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=2000&q=80',
+    categories: ['Navigation', 'UX', 'Trends'],
+  },
+  {
+    id: 'machine-experience-mx-lightweight-frontends',
+    title: 'Machine Experience (MX): Why Lighter Front Ends Work Better for People and Crawlers',
+    excerpt:
+      'Designing for the software that reads your site as well as the people who visit it: server-rendered HTML, CSS before JavaScript, fast loading and accessibility.',
+    date: 'October 29, 2026',
+    readTime: '9 min read',
+    image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=2000&q=80',
+    categories: ['Performance', 'Accessibility', 'AI Search'],
+  },
+  {
+    id: 'ai-copilot-ux-transparent-optional',
+    title: 'AI Copilots in Web Design: Transparent, Optional and Easy to Ignore',
+    excerpt:
+      'How to add AI help to a website or product without it taking over: clear labels, sources, easy dismissal and a working non-AI path.',
+    date: 'October 29, 2026',
+    readTime: '8 min read',
+    image: 'https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=2000&q=80',
+    categories: ['AI', 'UX', 'Product Design'],
+  },
+  {
     id: 'headless-cms-explained',
     title: 'Headless CMS Explained: Can My Team Still Edit the Site?',
     excerpt:
