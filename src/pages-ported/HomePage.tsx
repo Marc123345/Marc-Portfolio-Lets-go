@@ -8,6 +8,7 @@ import AboutSection from '@/components/home/AboutSection';
 import YouTubeSection from '@/components/home/YouTubeSection';
 import FAQSection from '@/components/home/FAQSection';
 import CTASection from '@/components/home/CTASection';
+import AwardsSection from '@/components/home/AwardsSection';
 
 const homeSchema = {
   "@context": "https://schema.org",
@@ -73,6 +74,7 @@ export default function HomePage() {
       <GlobeSection />
       <ServicesArcSection />
       <AboutSection />
+      <AwardsSection />
       <CTASection />
       <FAQSection />
     </>
