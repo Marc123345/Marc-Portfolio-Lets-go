@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import Globe from '@/components/Globe';
 import SilkCanvas from '@/components/SilkCanvas';
 import MediaReel from '@/components/MediaReel';
+import ProblemStack from '@/components/about/ProblemStack';
 import { SpinBadge, FloatPill, ScrollSpiral } from '@/components/MotionAccents';
 
 const PORTRAIT = 'https://ik.imagekit.io/qcvroy8xpd/PW8VUKH.png?updatedAt=1759693058055&tr=f-webp';
@@ -53,50 +54,6 @@ function ChapterMarker({ number, label }: { number: string; label: string }) {
 }
 
 /* ---------------- Problems Quote ---------------- */
-function ProblemQuote({
-  text,
-  align = 'left',
-  size = 'md',
-}: {
-  text: string;
-  align?: 'left' | 'right';
-  size?: 'md' | 'lg';
-}) {
-  const sizeClass =
-    size === 'lg'
-      ? 'text-[clamp(1.75rem,3vw,2.75rem)]'
-      : 'text-[clamp(1.25rem,2vw,1.75rem)]';
-  return (
-    <motion.blockquote
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: '-60px' }}
-      transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-      className={`relative ${align === 'right' ? 'md:text-right md:ml-auto' : ''}`}
-      style={{ maxWidth: '640px' }}
-    >
-      <span
-        aria-hidden
-        className="absolute -top-8 -left-3 text-[#A3D1FF]/30"
-        style={{
-          fontFamily: SERIF,
-          fontSize: '6rem',
-          lineHeight: 0.8,
-          fontStyle: 'italic',
-        }}
-      >
-        &ldquo;
-      </span>
-      <p
-        className={`${sizeClass} italic text-white/90 leading-[1.25]`}
-        style={{ fontFamily: SERIF, fontWeight: 400 }}
-      >
-        {text}
-      </p>
-    </motion.blockquote>
-  );
-}
-
 /* ---------------- Chapter Section (Process) ---------------- */
 function ProcessChapter({
   numeral,
@@ -173,38 +130,6 @@ function ProcessChapter({
 
 /* ---------------- Main Page ---------------- */
 export default function AboutPage() {
-  const problems = [
-    {
-      text: 'Our website looks like it was built in 2018 and we\'re embarrassed to send people there.',
-      size: 'lg' as const,
-      align: 'left' as const,
-    },
-    {
-      text: "We're getting traffic but nobody's filling out the contact form.",
-      size: 'md' as const,
-      align: 'right' as const,
-    },
-    {
-      text: "Our site takes forever to load and we're losing people before they even see what we do.",
-      size: 'md' as const,
-      align: 'left' as const,
-    },
-    {
-      text: "We're copy-pasting data between 4 different tools and it's eating our week.",
-      size: 'md' as const,
-      align: 'right' as const,
-    },
-    {
-      text: "I know what I want but I can't explain it to a developer.",
-      size: 'lg' as const,
-      align: 'left' as const,
-    },
-    {
-      text: "We've spent money on marketing but have no idea what's working.",
-      size: 'md' as const,
-      align: 'right' as const,
-    },
-  ];
 
   const design = [
     { name: 'UI/UX Design', proof: '50+ interfaces shipped to production' },
@@ -480,8 +405,12 @@ export default function AboutPage() {
       </section>
 
       {/* ===================== CHAPTER 02, PROBLEMS ===================== */}
-      <section className="relative bg-[#0a0a0a] py-28 md:py-36 px-6 lg:px-12 border-t border-white/10 overflow-hidden">
-        <div className="max-w-7xl mx-auto">
+      <section className="relative bg-[#0a0a0a] py-28 md:py-36 px-6 lg:px-12 border-t border-white/10">
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <SilkCanvas className="opacity-50" />
+          <ScrollSpiral className="absolute top-10 -right-16 hidden lg:block opacity-70" size={280} />
+        </div>
+        <div className="max-w-7xl mx-auto relative">
           <ChapterMarker number="02" label="In Their Words" />
 
           <motion.h2
@@ -489,7 +418,7 @@ export default function AboutPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-80px' }}
             transition={{ duration: 0.8 }}
-            className="text-white leading-[1.0] tracking-[-0.03em] mb-20 max-w-4xl"
+            className="text-white leading-[1.0] tracking-[-0.03em] mb-16 md:mb-20 max-w-4xl"
             style={{
               fontFamily: SERIF,
               fontSize: 'clamp(2.25rem, 5vw, 4.5rem)',
@@ -500,18 +429,7 @@ export default function AboutPage() {
             <em className="italic text-[#A3D1FF]">these six things</em>.
           </motion.h2>
 
-          <div className="space-y-16 md:space-y-20">
-            {problems.map((p, i) => (
-              <div
-                key={i}
-                className={`flex ${
-                  p.align === 'right' ? 'justify-end' : 'justify-start'
-                }`}
-              >
-                <ProblemQuote text={p.text} align={p.align} size={p.size} />
-              </div>
-            ))}
-          </div>
+          <ProblemStack />
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
