@@ -5,6 +5,9 @@ import { motion } from 'framer-motion';
 import ArcSlider from '@/components/ArcSlider';
 import { SERVICES } from '@/data/services';
 import { ChapterMarker, SERIF } from '@/components/ServiceEditorial';
+import SilkCanvas from '@/components/SilkCanvas';
+import MediaReel from '@/components/MediaReel';
+import { SpinBadge, ScrollSpiral } from '@/components/MotionAccents';
 
 
 export default function ServicesPage() {
@@ -20,8 +23,12 @@ export default function ServicesPage() {
           }}
         />
         <div className="absolute top-1/3 left-[-10%] w-[700px] h-[700px] bg-[#A3D1FF]/8 rounded-full blur-[140px] pointer-events-none" />
+        <SilkCanvas />
 
         <div className="max-w-7xl mx-auto relative">
+          <div className="hidden md:block absolute right-0 bottom-0">
+            <SpinBadge text="START A PROJECT • TAKING BOOKINGS • " href="/contact/" label="Start a project" size={116} />
+          </div>
           <ChapterMarker number="Chapter · Services" label="11 Disciplines · 2026" />
 
           <motion.h1
@@ -53,10 +60,13 @@ export default function ServicesPage() {
       {/* ===================== ARC SLIDER ===================== */}
       <section className="relative bg-black py-20 md:py-28 px-6 lg:px-12 overflow-hidden">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1100px] h-[700px] bg-[#A3D1FF]/8 rounded-full blur-[160px] pointer-events-none" />
+        <ScrollSpiral className="absolute -top-10 right-0 hidden xl:block opacity-90" size={260} />
         <div className="max-w-7xl mx-auto relative">
           <ArcSlider cards={SERVICES} />
         </div>
       </section>
+
+      <MediaReel chapter="Reel" bg="bg-[#0a0a0a]" />
     </>
   );
 }

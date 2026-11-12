@@ -5,6 +5,9 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { X, ArrowUpRight, FileDown } from 'lucide-react';
 import LeadMagnetFormEmbed from '@/components/LeadMagnetFormEmbed';
 import { CHECKLISTS } from '@/data/checklists';
+import SilkCanvas from '@/components/SilkCanvas';
+import BookStack from '@/components/BookStack';
+import { SpinBadge, FloatPill, ScrollSpiral } from '@/components/MotionAccents';
 
 const SERIF = "var(--font-heading)";
 const ACCENT = '#A3D1FF';
@@ -121,7 +124,16 @@ export default function ResourcesPage() {
   return (
     <main className="bg-black">
       {/* ===================== HERO ===================== */}
-      <section className="relative bg-black overflow-hidden pt-28 pb-16 px-6 lg:px-12">
+      <section
+        className="relative bg-black overflow-hidden pt-28 pb-16 px-6 lg:px-12"
+        style={{
+          /* RoofCoat /guides hero: faint 56px grid under a glow */
+          backgroundImage:
+            'linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px)',
+          backgroundSize: '56px 56px',
+        }}
+      >
+        <SilkCanvas />
         <div
           className="absolute inset-0 opacity-[0.06] mix-blend-overlay pointer-events-none"
           style={{
@@ -131,7 +143,8 @@ export default function ResourcesPage() {
         />
         <div className="absolute top-1/3 left-[-10%] w-[700px] h-[700px] bg-[#A3D1FF]/8 rounded-full blur-[140px] pointer-events-none" />
 
-        <div className="max-w-7xl mx-auto relative">
+        <div className="max-w-7xl mx-auto relative grid lg:grid-cols-[1.1fr_1fr] gap-10 items-center">
+          <div>
           <ChapterMarker number="Resources · Vol. 01" label="Guides · Checklists · Free" />
 
           <motion.h1
@@ -166,12 +179,26 @@ export default function ResourcesPage() {
           >
             No gatekeeping · No sales call · Unsubscribe anytime
           </motion.p>
+          </div>
+
+          <div className="relative">
+            <BookStack
+              covers={[RESOURCES[3], RESOURCES[5], RESOURCES[0]].map((r) => ({ src: r.cover, alt: r.coverAlt }))}
+            />
+            <FloatPill className="absolute top-2 right-2 z-10" tilt={10}>
+              {RESOURCES.length} free PDFs
+            </FloatPill>
+            <div className="hidden sm:block absolute bottom-0 right-0 z-10">
+              <SpinBadge text="FREE DOWNLOAD • NO SALES CALL • " label="Browse the library" href="#library" size={108} />
+            </div>
+          </div>
         </div>
       </section>
 
       {/* ===================== THE LIBRARY ===================== */}
-      <section className="relative bg-[#0a0a0a] py-24 md:py-28 px-6 lg:px-12 border-t border-white/10">
-        <div className="max-w-7xl mx-auto">
+      <section id="library" className="relative bg-[#0a0a0a] py-24 md:py-28 px-6 lg:px-12 border-t border-white/10 overflow-hidden">
+        <ScrollSpiral className="absolute -top-16 -right-12 hidden xl:block opacity-80" size={260} />
+        <div className="max-w-7xl mx-auto relative">
           <ChapterMarker number="01" label="The library" />
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 pt-6">
@@ -189,7 +216,7 @@ export default function ResourcesPage() {
                   aria-haspopup="dialog"
                   className="group block w-full text-left"
                 >
-                  <div className="relative aspect-[3/4] overflow-hidden bg-[#1b1b1b] mb-6">
+                  <div className="relative aspect-[3/4] overflow-hidden bg-[#1b1b1b] mb-6 transition-[transform,box-shadow] duration-700 ease-[cubic-bezier(.22,1,.36,1)] [transform:perspective(1200px)] group-hover:[transform:perspective(1200px)_rotateY(-8deg)_translateY(-6px)] group-hover:shadow-[30px_40px_60px_-20px_rgba(0,0,0,0.8),0_0_0_1px_rgba(163,209,255,0.35)]">
                     <img
                       src={resource.cover}
                       alt={resource.coverAlt}

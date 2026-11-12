@@ -6,6 +6,9 @@ import { ArrowUpRight, Mail } from 'lucide-react';
 import Link from 'next/link';
 import ArcSlider from '@/components/ArcSlider';
 import { SERVICES } from '@/data/services';
+import SilkCanvas from '@/components/SilkCanvas';
+import MediaReel from '@/components/MediaReel';
+import { SpinBadge, FloatPill, ScrollSpiral } from '@/components/MotionAccents';
 
 export const SERIF = "var(--font-heading)";
 const CALENDLY = 'https://calendly.com/marc-friedman-web-design--meeting-link/30min';
@@ -103,6 +106,9 @@ export function ServiceMasthead({
         </motion.div>
       )}
 
+      {/* Silk waves (RoofCoat "Everything You Need" background, animated) */}
+      <SilkCanvas className="z-[6] opacity-90" />
+
       {/* Spotlight glow */}
       <motion.div
         initial={{ opacity: 0 }}
@@ -144,6 +150,14 @@ export function ServiceMasthead({
             <br />
             <span className="text-white/40">Est. 2018</span>
           </span>
+        </div>
+
+        {/* Floating accents over the photo side (desktop) */}
+        <div className="hidden lg:block absolute right-[6%] top-[30%] z-30">
+          <FloatPill tilt={-14}>{kicker.replace(/^Service · /, '')}</FloatPill>
+        </div>
+        <div className="hidden lg:block absolute right-[8%] bottom-[22%] z-30">
+          <SpinBadge text="START A PROJECT • TAKING BOOKINGS • " href="#start" label="Start a project" size={118} />
         </div>
 
         {/* Title block */}
@@ -224,18 +238,25 @@ export function ServiceMasthead({
 export function ServiceMarquee({ phrases }: { phrases: string[] }) {
   return (
     <section className="relative bg-black border-y border-white/10 overflow-hidden">
-      <div className="svc-marquee py-6 md:py-8">
+      <div
+        className="svc-marquee py-6 md:py-8"
+        style={{
+          WebkitMaskImage: 'linear-gradient(90deg, transparent 0, #000 6%, #000 94%, transparent 100%)',
+          maskImage: 'linear-gradient(90deg, transparent 0, #000 6%, #000 94%, transparent 100%)',
+        }}
+      >
         {[...Array(2)].map((_, dup) => (
           <div key={dup} className="flex items-center gap-10 md:gap-16 pr-10 md:pr-16">
             {phrases.map((phrase, i) => (
               <span key={i} className="flex items-center gap-10 md:gap-16 shrink-0">
                 <span
-                  className="text-white/80 leading-none whitespace-nowrap"
+                  className={`leading-none whitespace-nowrap ${i % 2 === 0 ? 'text-white/80' : 'text-transparent'}`}
                   style={{
                     fontFamily: SERIF,
                     fontSize: 'clamp(1.75rem, 4vw, 3rem)',
                     fontWeight: 500,
                     fontStyle: i % 2 === 0 ? 'italic' : 'normal',
+                    WebkitTextStroke: i % 2 === 0 ? undefined : '1px rgba(255,255,255,0.55)',
                   }}
                 >
                   {phrase}
@@ -496,9 +517,10 @@ export function WorkRow({
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-60px' }}
           transition={{ duration: 0.7, delay: i * 0.08 }}
-          className="group block border border-white/10 hover:border-white/30 transition-colors overflow-hidden"
+          whileHover={{ y: -8 }}
+          className="group block border border-white/10 hover:border-[#A3D1FF]/40 hover:shadow-[0_30px_60px_-25px_rgba(163,209,255,0.35)] transition-[border-color,box-shadow] duration-500 overflow-hidden"
         >
-          <div className="aspect-[16/10] overflow-hidden bg-black">
+          <div className="relative aspect-[16/10] overflow-hidden bg-black">
             <img
               src={item.image}
               alt={item.title}
@@ -542,8 +564,11 @@ export function ServiceNavigator({ currentSlug }: { currentSlug: string }) {
   const current = idx >= 0 ? idx : 0;
 
   return (
+    <>
+    <MediaReel chapter="Reel" bg="bg-[#0a0a0a]" />
     <section className="relative bg-black border-t border-white/10 py-20 md:py-28 px-6 lg:px-12 overflow-hidden">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1100px] h-[700px] bg-[#A3D1FF]/8 rounded-full blur-[160px] pointer-events-none" />
+      <ScrollSpiral className="absolute -top-16 right-0 hidden xl:block opacity-90" size={260} />
       <div className="max-w-7xl mx-auto relative">
         <ChapterMarker
           number={`${String(current + 1).padStart(2, '0')} / ${String(SERVICES.length).padStart(2, '0')}`}
@@ -553,6 +578,7 @@ export function ServiceNavigator({ currentSlug }: { currentSlug: string }) {
         <ArcSlider cards={SERVICES} initialIndex={current} />
       </div>
     </section>
+    </>
   );
 }
 
@@ -571,8 +597,13 @@ export function ServiceColophon({
       id="start"
       className="relative bg-[#0a0a0a] py-32 md:py-40 px-6 lg:px-12 border-t border-white/10 overflow-hidden"
     >
+      <SilkCanvas flip />
       <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-[#A3D1FF]/5 rounded-full blur-[120px] pointer-events-none" />
+      <ScrollSpiral className="absolute -bottom-12 -right-10 hidden lg:block opacity-80" size={280} turn={-180} />
       <div className="max-w-7xl mx-auto relative">
+        <div className="hidden md:block absolute right-0 top-0">
+          <SpinBadge text="BOOK A CALL • FREE STRATEGY • " href="/contact/" label="Book a free strategy call" size={112} />
+        </div>
         <ChapterMarker number="Colophon" label="Start here." />
         <motion.h2
           initial={{ opacity: 0, y: 30 }}

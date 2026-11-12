@@ -1359,6 +1359,18 @@
   border: 2px solid #A3D1FF; animation: mx-ring 1.8s ease-out infinite; pointer-events: none;
 }
 
+/* Media reel marquee (RoofCoat rc-logos strip: masked edges, linear loop) */
+@keyframes mx-reel { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+.mx-reel { overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 6%, #000 94%, transparent 100%); mask-image: linear-gradient(90deg, transparent 0, #000 6%, #000 94%, transparent 100%); }
+.mx-reel__track { display: flex; width: max-content; animation: mx-reel var(--mx-reel-dur, 60s) linear infinite; }
+.mx-reel__track > * { margin-right: 1.5rem; }
+.mx-reel--rev .mx-reel__track { animation-direction: reverse; }
+.mx-reel:hover .mx-reel__track, .mx-reel:focus-within .mx-reel__track { animation-play-state: paused; }
+@media (prefers-reduced-motion: reduce) {
+  .mx-reel { overflow-x: auto; }
+  .mx-reel__track { animation: none; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .mx-spin, .mx-bob, .mx-pulse::after { animation: none; }
 }

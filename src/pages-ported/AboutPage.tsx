@@ -3,6 +3,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Globe from '@/components/Globe';
+import SilkCanvas from '@/components/SilkCanvas';
+import MediaReel from '@/components/MediaReel';
+import { SpinBadge, FloatPill, ScrollSpiral } from '@/components/MotionAccents';
+
+const PORTRAIT = 'https://ik.imagekit.io/qcvroy8xpd/PW8VUKH.png?updatedAt=1759693058055&tr=f-webp';
 
 const SERIF = "var(--font-heading)";
 
@@ -233,8 +238,10 @@ export default function AboutPage() {
           }}
         />
         <div className="absolute top-1/3 left-[-10%] w-[700px] h-[700px] bg-[#A3D1FF]/8 rounded-full blur-[140px] pointer-events-none" />
+        <SilkCanvas />
 
-        <div className="max-w-7xl mx-auto relative">
+        <div className="max-w-7xl mx-auto relative grid lg:grid-cols-[1.35fr_1fr] gap-12 items-center">
+          <div>
           <ChapterMarker number="Profile · Vol. 01" label="Senior Full-Stack Developer" />
 
           <motion.h1
@@ -268,12 +275,36 @@ export default function AboutPage() {
           >
             Full stack developer · Web developer · Remote worldwide
           </motion.p>
+          </div>
+
+          {/* Portrait card, tilted into depth */}
+          <motion.div
+            initial={{ opacity: 0, y: 40, rotateY: -18 }}
+            animate={{ opacity: 1, y: 0, rotateY: -8 }}
+            transition={{ duration: 1.1, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
+            className="relative mx-auto w-full max-w-[380px]"
+            style={{ transformPerspective: 1400 }}
+          >
+            <div className="absolute inset-[8%] rounded-full bg-[#A3D1FF]/25 blur-[60px]" />
+            <div className="relative aspect-[4/5] overflow-hidden bg-[#1b1b1b] border border-white/10 shadow-[30px_40px_70px_-20px_rgba(0,0,0,0.85)]">
+              <img src={PORTRAIT} alt="Marc Friedman" className="absolute inset-0 w-full h-full object-cover" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+              <span className="absolute left-4 bottom-4 text-[10px] font-mono uppercase tracking-[0.3em] text-white/80">
+                Marc Friedman · Israel
+              </span>
+            </div>
+            <FloatPill className="absolute -left-6 top-10 z-10" tilt={-12}>Designer + developer</FloatPill>
+            <div className="absolute -right-6 -bottom-8 z-10">
+              <SpinBadge text="LET'S BUILD • BOOK A CALL • " href="/contact/" label="Book a call" size={108} />
+            </div>
+          </motion.div>
         </div>
       </section>
 
       {/* ===================== CHAPTER 01, THE STORY ===================== */}
-      <section id="story" className="relative bg-black py-24 md:py-32 px-6 lg:px-12 border-t border-white/10">
-        <div className="max-w-7xl mx-auto">
+      <section id="story" className="relative bg-black py-24 md:py-32 px-6 lg:px-12 border-t border-white/10 overflow-hidden">
+        <ScrollSpiral className="absolute -top-16 -right-12 hidden xl:block opacity-80" size={260} />
+        <div className="max-w-7xl mx-auto relative">
           <ChapterMarker number="01" label="The Story" />
 
           <div className="grid md:grid-cols-[1.2fr_1fr] gap-12 md:gap-20">
@@ -583,9 +614,13 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* ===================== INTERLUDE, WORK IN MOTION ===================== */}
+      <MediaReel chapter="Interlude" title="See it" italic="move." />
+
       {/* ===================== CHAPTER 04, THE PROCESS ===================== */}
-      <section className="relative bg-[#0a0a0a] py-24 md:py-32 px-6 lg:px-12 border-t border-white/10">
-        <div className="max-w-7xl mx-auto">
+      <section className="relative bg-[#0a0a0a] py-24 md:py-32 px-6 lg:px-12 border-t border-white/10 overflow-hidden">
+        <SilkCanvas flip />
+        <div className="max-w-7xl mx-auto relative">
           <ChapterMarker number="04" label="The Process" />
 
           <motion.h2
@@ -664,8 +699,9 @@ export default function AboutPage() {
       </section>
 
       {/* ===================== CHAPTER 05, BEYOND THE WORK ===================== */}
-      <section className="relative bg-black py-24 md:py-32 px-6 lg:px-12 border-t border-white/10">
-        <div className="max-w-7xl mx-auto">
+      <section className="relative bg-black py-24 md:py-32 px-6 lg:px-12 border-t border-white/10 overflow-hidden">
+        <ScrollSpiral className="absolute -bottom-16 -left-14 hidden xl:block opacity-70" size={240} turn={-180} />
+        <div className="max-w-7xl mx-auto relative">
           <ChapterMarker number="05" label="Off the Clock" />
 
           <div className="grid md:grid-cols-[1fr_1fr] gap-8 md:gap-12 items-center">
@@ -740,6 +776,7 @@ export default function AboutPage() {
                   className="w-full h-full object-cover"
                 />
               </div>
+              <FloatPill className="absolute -left-4 top-8 z-10" tilt={-10}>Upper Galilee</FloatPill>
               {/* Caption gives the photo column a finished, editorial bottom
                   edge, mirrors the spec rows in the text column. */}
               <div className="flex items-baseline justify-between mt-3 text-[10px] font-mono uppercase tracking-[0.25em] text-white/40">
