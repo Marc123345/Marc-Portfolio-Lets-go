@@ -4,7 +4,9 @@ import { useState, useMemo } from 'react';
 import { ArrowUpRight, ChevronLeft, ChevronRight, ExternalLink } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
-import InteractiveCube from '@/components/InteractiveCube';
+import WorkStack from '@/components/WorkStack';
+import SilkCanvas from '@/components/SilkCanvas';
+import { ScrollSpiral } from '@/components/MotionAccents';
 
 const SERIF = "var(--font-heading)";
 
@@ -272,10 +274,10 @@ export default function FeaturedWorkSection() {
   const currentPage = Math.floor(activeIndex / PAGE_SIZE);
   const pageStart = currentPage * PAGE_SIZE;
   const pageProjects = featured.slice(pageStart, pageStart + PAGE_SIZE);
-  const faceIndex = activeIndex - pageStart;
+  const stackIndex = activeIndex - pageStart;
   const active = featured[activeIndex];
 
-  const cubeFaces = useMemo(
+  const stackItems = useMemo(
     () =>
       pageProjects.map((p) => ({
         image: p.image,
@@ -296,7 +298,9 @@ export default function FeaturedWorkSection() {
 
   return (
     <section className="relative py-24 md:py-32 px-6 lg:px-12 bg-[#0a0a0a] border-t border-white/10 overflow-hidden">
+      <SilkCanvas />
       <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[900px] h-[500px] bg-[#A3D1FF]/8 rounded-full blur-[140px] pointer-events-none" />
+      <ScrollSpiral className="absolute -top-16 -right-10 z-0 hidden xl:block opacity-90" size={260} />
 
       <div className="max-w-7xl mx-auto relative">
         <ChapterMarker
@@ -327,7 +331,7 @@ export default function FeaturedWorkSection() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-white/60 text-lg leading-relaxed"
           >
-            All {featured.length} case files, click any project or page through with the arrows. Drag the cube to spin it.
+            All {featured.length} case files, click any project or page through with the arrows. Swipe the stack or click a window behind to pull it forward.
           </motion.p>
         </div>
 
@@ -417,10 +421,14 @@ export default function FeaturedWorkSection() {
             </div>
           </div>
 
-          {/* Cube */}
+          {/* Window stack */}
           <div className="lg:col-span-5 order-1 lg:order-2">
             <div className="relative flex items-center justify-center min-h-[380px] lg:min-h-[460px]">
-              <InteractiveCube faces={cubeFaces} activeIndex={faceIndex} />
+              <WorkStack
+                items={stackItems}
+                activeIndex={stackIndex}
+                onChange={(i) => setActiveIndex(pageStart + i)}
+              />
             </div>
           </div>
 

@@ -1345,3 +1345,20 @@
     padding: 0 !important;
   }
 }
+/* ============================================================
+ * Motion accents (ported from RoofCoat Leads, see MotionAccents.tsx)
+ * ============================================================ */
+@keyframes mx-spin { to { transform: rotate(360deg); } }
+@keyframes mx-bob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-16px); } }
+@keyframes mx-ring { from { transform: scale(0.85); opacity: 0.9; } to { transform: scale(1.45); opacity: 0; } }
+
+.mx-spin { animation: mx-spin 20s linear infinite; transform-origin: 50% 50%; }
+.mx-bob { animation: mx-bob 3s ease-in-out infinite; }
+.mx-pulse::after {
+  content: ""; position: absolute; inset: -6px; border-radius: 9999px;
+  border: 2px solid #A3D1FF; animation: mx-ring 1.8s ease-out infinite; pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mx-spin, .mx-bob, .mx-pulse::after { animation: none; }
+}

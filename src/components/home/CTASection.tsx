@@ -1,5 +1,6 @@
 "use client";
 
+import SilkCanvas from '@/components/SilkCanvas';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 import ContactForm from '@/components/ContactForm';
@@ -36,6 +37,7 @@ export default function CTASection() {
       className="relative py-24 md:py-32 px-6 lg:px-12 bg-[#0a0a0a] border-t border-white/10 overflow-hidden"
     >
       {/* Ambient glow */}
+      <SilkCanvas flip />
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1200px] h-[600px] bg-[#A3D1FF]/10 rounded-full blur-[140px] pointer-events-none" />
       <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-[#A3D1FF]/5 rounded-full blur-[120px] pointer-events-none" />
 

@@ -1,5 +1,6 @@
 "use client";
 
+import { ScrollSpiral } from '@/components/MotionAccents';
 import { motion } from 'framer-motion';
 import ArcSlider from '@/components/ArcSlider';
 import { SERVICES } from '@/data/services';
@@ -25,6 +26,7 @@ export default function ServicesArcSection() {
   return (
     <section className="relative bg-black border-t border-white/10 py-24 md:py-32 px-6 lg:px-12 overflow-hidden">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1100px] h-[700px] bg-[#A3D1FF]/8 rounded-full blur-[160px] pointer-events-none" />
+      <ScrollSpiral className="absolute -top-20 right-0 hidden xl:block opacity-90" size={280} />
 
       <div className="max-w-7xl mx-auto relative">
         <ChapterMarker number="Chapter · Services" label="11 Disciplines" />

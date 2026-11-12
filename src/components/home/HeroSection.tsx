@@ -14,7 +14,9 @@ import {
 } from 'framer-motion';
 
 import MagneticButton from '@/components/MagneticButton';
-import InteractiveCube from '@/components/InteractiveCube';
+import WorkStack from '@/components/WorkStack';
+import SilkCanvas from '@/components/SilkCanvas';
+import { SpinBadge, FloatPill } from '@/components/MotionAccents';
 
 const MARC_PORTRAIT =
   'https://ik.imagekit.io/qcvroy8xpd/PW8VUKH.png?updatedAt=1759693058055&tr=f-webp';
@@ -25,7 +27,7 @@ const CLIENT_AVATARS = [
   'https://ik.imagekit.io/qcvroy8xpd/1732338426448%20(1).jpeg?updatedAt=1749337717019',
 ];
 
-const CUBE_FACES = [
+const WORK_WINDOWS = [
   { image: 'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%204%20-%2016_9.png?updatedAt=1767539579010', category: 'SEO · Lead Gen', title: 'Paving Leads' },
   { image: 'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%204%20-%2016x9.png?updatedAt=1767539579710', category: 'Media Platform', title: 'Binns Media Group' },
   { image: 'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%201%20-%201x1(1).png?updatedAt=1767539579782', category: 'Impact', title: 'Untapped Africa' },
@@ -277,6 +279,8 @@ export default function HeroSection() {
       onMouseMove={handleMove}
       className="relative w-full overflow-hidden bg-black pt-24 pb-12 md:pt-[140px] md:pb-20"
     >
+      <SilkCanvas className="opacity-80" />
+
       {/* ── Aurora + particle backdrop (parallax) ───────────────────── */}
       <motion.div aria-hidden className="absolute inset-0 pointer-events-none" style={{ x: bgX, y: bgY, willChange: 'transform' }}>
         <Aurora className="top-[-12%] left-[6%] w-[520px] h-[520px]" color="rgba(163,209,255,0.18)" reduce={reduce} dur={18} />
@@ -439,7 +443,7 @@ export default function HeroSection() {
             </motion.div>
           </div>
 
-          {/* ── Right, interactive cube of website work ─────── */}
+          {/* ── Right, stack of live client sites ─────── */}
           <motion.div
             className="lg:col-span-5 flex justify-center"
             style={{ x: fgX, y: fgY, willChange: 'transform' }}
@@ -447,7 +451,13 @@ export default function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.25, ease: EASE }}
           >
-            <InteractiveCube faces={CUBE_FACES} autoRotate />
+            <div className="relative w-full max-w-[480px]">
+              <WorkStack items={WORK_WINDOWS} autoPlay />
+              <FloatPill className="absolute bottom-16 left-0 sm:-left-8 z-10">Live client sites</FloatPill>
+              <div className="absolute -top-10 -right-2 sm:-right-6 z-10 hidden sm:block">
+                <SpinBadge text="SEE ALL WORK • CASE FILES • " href="/work/" label="See all work" size={104} />
+              </div>
+            </div>
           </motion.div>
         </div>
       </div>

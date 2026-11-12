@@ -4,7 +4,9 @@ import React, { useState, useMemo } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowUpRight, ExternalLink, ChevronLeft, ChevronRight } from 'lucide-react';
-import InteractiveCube from '@/components/InteractiveCube';
+import WorkStack from '@/components/WorkStack';
+import SilkCanvas from '@/components/SilkCanvas';
+import { ScrollSpiral } from '@/components/MotionAccents';
 import { ChapterMarker, SERIF } from '@/components/ServiceEditorial';
 
 const workSchema = {
@@ -267,10 +269,10 @@ export default function WorkPage() {
   const currentPage = Math.floor(activeIndex / PAGE_SIZE);
   const pageStart = currentPage * PAGE_SIZE;
   const pageProjects = projects.slice(pageStart, pageStart + PAGE_SIZE);
-  const faceIndex = activeIndex - pageStart;
+  const stackIndex = activeIndex - pageStart;
   const active = projects[activeIndex];
 
-  const cubeFaces = useMemo(
+  const stackItems = useMemo(
     () =>
       pageProjects.map((p) => ({
         image: p.image,
@@ -331,20 +333,22 @@ export default function WorkPage() {
             transition={{ duration: 0.7, delay: 0.3 }}
             className="text-xl md:text-2xl text-white/70 max-w-2xl leading-snug"
           >
-            No templates. No WordPress. No shortcuts. Every case file below, click a
-            face, read the file, drag the cube.
+            No templates. No WordPress. No shortcuts. All fourteen case files are
+            below. Pick one from the list or swipe through the stack.
           </motion.p>
         </div>
       </section>
 
-{/* ===================== CUBE SHOWCASE (PAGINATED · ALL 14) ===================== */}
+{/* ===================== WINDOW STACK SHOWCASE (PAGINATED · ALL 14) ===================== */}
       <section className="relative py-24 md:py-28 px-6 lg:px-12 bg-black border-t border-white/10 overflow-hidden">
+        <SilkCanvas flip />
+        <ScrollSpiral className="absolute -bottom-10 -left-12 hidden xl:block opacity-80" size={240} turn={-180} />
         <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[900px] h-[600px] bg-[#A3D1FF]/8 rounded-full blur-[140px] pointer-events-none" />
 
         <div className="max-w-7xl mx-auto relative">
           <ChapterMarker
             number="01"
-            label={`The Cube · Set ${String(currentPage + 1).padStart(2, '0')} of ${String(totalPages).padStart(2, '0')}`}
+            label={`The Stack · Set ${String(currentPage + 1).padStart(2, '0')} of ${String(totalPages).padStart(2, '0')}`}
           />
 
           <div className="grid lg:grid-cols-12 gap-8 lg:gap-10 items-center">
@@ -434,13 +438,17 @@ export default function WorkPage() {
               </div>
             </div>
 
-            {/* Center, cube */}
+            {/* Center, window stack */}
             <div className="lg:col-span-5 order-1 lg:order-2">
               <div className="relative flex items-center justify-center min-h-[380px] lg:min-h-[500px]">
-                <InteractiveCube faces={cubeFaces} activeIndex={faceIndex} />
+                <WorkStack
+                  items={stackItems}
+                  activeIndex={stackIndex}
+                  onChange={(i) => setActiveIndex(pageStart + i)}
+                />
               </div>
               <p className="text-center text-[10px] font-mono uppercase tracking-[0.3em] text-white/40 mt-6">
-, Drag to rotate · Click a case file
+, Swipe the stack · Click a window behind
               </p>
             </div>
 
