@@ -9,6 +9,7 @@ import SilkCanvas from '@/components/SilkCanvas';
 import { ScrollSpiral } from '@/components/MotionAccents';
 import { ChapterMarker, SERIF } from '@/components/ServiceEditorial';
 import WorkByService from '@/components/WorkByService';
+import RoofingSites from '@/components/RoofingSites';
 import { WORK_SERVICES } from '@/data/workByService';
 
 const workSchema = {
@@ -592,6 +593,8 @@ export default function WorkPage() {
       </section>
 
       <WorkByService projects={projects} />
+
+      <RoofingSites />
     </>
   );
 }
