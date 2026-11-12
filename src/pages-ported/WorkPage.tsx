@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowUpRight, ExternalLink, ChevronLeft, ChevronRight } from 'lucide-react';
@@ -8,6 +8,8 @@ import WorkStack from '@/components/WorkStack';
 import SilkCanvas from '@/components/SilkCanvas';
 import { ScrollSpiral } from '@/components/MotionAccents';
 import { ChapterMarker, SERIF } from '@/components/ServiceEditorial';
+import WorkByService from '@/components/WorkByService';
+import { WORK_SERVICES } from '@/data/workByService';
 
 const workSchema = {
   '@context': 'https://schema.org',
@@ -264,13 +266,32 @@ const PAGE_SIZE = 6;
 
 export default function WorkPage() {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [filter, setFilter] = useState('all');
 
-  const totalPages = Math.ceil(projects.length / PAGE_SIZE);
+  // deep links: /work/#ai, /work/#seo …
+  useEffect(() => {
+    const k = window.location.hash.replace('#', '');
+    if (WORK_SERVICES.some((s) => s.key === k)) setFilter(k); // eslint-disable-line react-hooks/set-state-in-effect
+  }, []);
+
+  const list = useMemo(() => {
+    const g = WORK_SERVICES.find((s) => s.key === filter);
+    return g ? projects.filter((p) => g.projects.includes(p.title)) : projects;
+  }, [filter]);
+  const group = WORK_SERVICES.find((s) => s.key === filter);
+
+  const pickFilter = (k: string) => {
+    setFilter(k);
+    setActiveIndex(0);
+    window.history.replaceState(null, '', k === 'all' ? window.location.pathname : `#${k}`);
+  };
+
+  const totalPages = Math.ceil(list.length / PAGE_SIZE);
   const currentPage = Math.floor(activeIndex / PAGE_SIZE);
   const pageStart = currentPage * PAGE_SIZE;
-  const pageProjects = projects.slice(pageStart, pageStart + PAGE_SIZE);
+  const pageProjects = list.slice(pageStart, pageStart + PAGE_SIZE);
   const stackIndex = activeIndex - pageStart;
-  const active = projects[activeIndex];
+  const active = list[activeIndex] ?? list[0];
 
   const stackItems = useMemo(
     () =>
@@ -288,7 +309,7 @@ export default function WorkPage() {
     );
   const goNext = () =>
     setActiveIndex((i) =>
-      i + PAGE_SIZE < projects.length ? i + PAGE_SIZE : 0,
+      i + PAGE_SIZE < list.length ? i + PAGE_SIZE : 0,
     );
 
   return (
@@ -351,7 +372,41 @@ export default function WorkPage() {
             label={`The Stack · Set ${String(currentPage + 1).padStart(2, '0')} of ${String(totalPages).padStart(2, '0')}`}
           />
 
-          <div className="grid lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+          {/* service filter */}
+          <div className="-mx-6 px-6 lg:mx-0 lg:px-0 mb-10 overflow-x-auto [scrollbar-width:none]">
+            <div role="tablist" aria-label="Filter work by service" className="flex gap-2 w-max lg:w-auto lg:flex-wrap">
+              {[{ key: 'all', label: 'All work', n: projects.length }, ...WORK_SERVICES.map((s) => ({ key: s.key, label: s.label, n: s.projects.length }))].map((t) => {
+                const on = t.key === filter;
+                return (
+                  <button
+                    key={t.key}
+                    type="button"
+                    role="tab"
+                    aria-selected={on}
+                    onClick={() => pickFilter(t.key)}
+                    className={`shrink-0 inline-flex items-center gap-2 px-4 py-2.5 text-[11px] font-mono uppercase tracking-[0.2em] border transition-colors ${
+                      on ? 'bg-[#A3D1FF] border-[#A3D1FF] text-black' : 'border-white/15 text-white/60 hover:border-white/40 hover:text-white'
+                    }`}
+                  >
+                    {t.label}
+                    <span className={on ? 'text-black/60' : 'text-white/30'} style={{ fontVariantNumeric: 'tabular-nums' }}>
+                      {String(t.n).padStart(2, '0')}
+                    </span>
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+          {group && (
+            <div className="flex flex-wrap items-baseline justify-between gap-4 mb-10 -mt-4">
+              <p className="text-white/60 max-w-xl">{group.blurb}</p>
+              <Link href={group.href} className="text-sm text-white/80 hover:text-[#A3D1FF] border-b border-white/25 hover:border-[#A3D1FF] pb-0.5 transition-colors inline-flex items-center gap-1.5">
+                About {group.label} <ArrowUpRight className="w-4 h-4" />
+              </Link>
+            </div>
+          )}
+
+          <div key={filter} className="grid lg:grid-cols-12 gap-8 lg:gap-10 items-center">
             {/* Left, project list for current page */}
             <div className="lg:col-span-3 order-2 lg:order-1">
               <div className="flex items-center justify-between mb-5">
@@ -535,6 +590,8 @@ export default function WorkPage() {
           </div>
         </div>
       </section>
+
+      <WorkByService projects={projects} />
     </>
   );
 }
