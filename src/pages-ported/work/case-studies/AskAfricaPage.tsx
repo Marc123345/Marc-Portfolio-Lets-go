@@ -14,7 +14,7 @@ const config: CaseStudyConfig = {
 , without sacrificing accessibility.
     </>
   ),
-  heroImage: 'https://ik.imagekit.io/qcvroy8xpd/image%202%20(1).png',
+  heroImage: 'https://ik.imagekit.io/qcvroy8xpd/Ask-Africa-Homepage-Image-Only.jpg',
   metaStats: [
     { value: 'Pan', label: 'African Reach' },
     { value: 'Enterprise', label: 'Positioning' },
@@ -102,9 +102,17 @@ const config: CaseStudyConfig = {
 
   gallery: [
     {
-      image: 'https://ik.imagekit.io/qcvroy8xpd/image%202%20(1).png',
-      caption: 'Homepage flagship',
+      image: 'https://ik.imagekit.io/qcvroy8xpd/Ask-Africa-Homepage-Image-Only.jpg',
+      caption: 'Homepage',
       wide: true,
+    },
+    {
+      image: 'https://ik.imagekit.io/qcvroy8xpd/Ask-Africa-Detail-Image-Only.jpg',
+      caption: 'Detail',
+    },
+    {
+      image: 'https://ik.imagekit.io/qcvroy8xpd/image%202%20(1).png',
+      caption: 'Above the fold',
     },
   ],
 

@@ -32,7 +32,7 @@ const WORK_WINDOWS = [
   { image: 'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%204%20-%2016x9.png?updatedAt=1767539579710', category: 'Media Platform', title: 'Binns Media Group' },
   { image: 'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%201%20-%201x1(1).png?updatedAt=1767539579782', category: 'Impact', title: 'Untapped Africa' },
   { image: 'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%201%20-%201x1(5).png?updatedAt=1767539579818', category: 'AI · Healthcare', title: 'iLight Care' },
-  { image: 'https://ik.imagekit.io/qcvroy8xpd/image%201%20(5).png', category: 'Agency Brand', title: 'H2H Marketing' },
+  { image: 'https://ik.imagekit.io/qcvroy8xpd/H2H-Social-Homepage-Image-Only.jpg', category: 'Agency Brand', title: 'H2H Marketing' },
   { image: 'https://ik.imagekit.io/qcvroy8xpd/1732717492455.jpeg', category: 'SaaS · Analytics', title: 'AutoMarginX' },
 ];
 

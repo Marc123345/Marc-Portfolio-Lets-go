@@ -13,7 +13,7 @@ const config: CaseStudyConfig = {
       real audiences through authentic, human-to-human strategies.
     </>
   ),
-  heroImage: 'https://ik.imagekit.io/qcvroy8xpd/image%201%20(5).png',
+  heroImage: 'https://ik.imagekit.io/qcvroy8xpd/H2H-Social-Homepage-Image-Only.jpg',
   metaStats: [
     { value: '100%', label: 'Custom Build' },
     { value: '<2s', label: 'Load' },
@@ -99,16 +99,24 @@ const config: CaseStudyConfig = {
 
   gallery: [
     {
-      image: 'https://ik.imagekit.io/qcvroy8xpd/image%201%20(5).png',
-      caption: 'Homepage flagship',
+      image: 'https://ik.imagekit.io/qcvroy8xpd/H2H-Social-Homepage-Image-Only.jpg',
+      caption: 'Homepage',
       wide: true,
+    },
+    {
+      image: 'https://ik.imagekit.io/qcvroy8xpd/H2H-Social-Detail-Image-Only.jpg',
+      caption: 'Detail',
+    },
+    {
+      image: 'https://ik.imagekit.io/qcvroy8xpd/image%201%20(5).png',
+      caption: 'Above the fold',
     },
   ],
 
   next: {
     title: 'Ask Africa',
     url: '/work/case-studies/ask-africa/',
-    image: 'https://ik.imagekit.io/qcvroy8xpd/image%202%20(1).png',
+    image: 'https://ik.imagekit.io/qcvroy8xpd/Ask-Africa-Homepage-Image-Only.jpg',
   },
 };
 

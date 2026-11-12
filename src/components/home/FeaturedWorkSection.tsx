@@ -59,7 +59,7 @@ const featured: Project[] = [
     category: 'Agency Brand',
     blurb:
       'Bold brand-first digital presence for a social marketing agency connecting brands with real audiences.',
-    image: 'https://ik.imagekit.io/qcvroy8xpd/image%201%20(5).png',
+    image: 'https://ik.imagekit.io/qcvroy8xpd/H2H-Social-Homepage-Image-Only.jpg',
     liveUrl: 'https://www.h2hsocialmarketing.com/',
     caseStudyUrl: '/work/case-studies/h2h-marketing/',
     stats: [
@@ -120,7 +120,7 @@ const featured: Project[] = [
     category: 'Research · Consultancy',
     blurb:
       "Commanding digital presence for one of Africa's leading research and consultancy firms.",
-    image: 'https://ik.imagekit.io/qcvroy8xpd/image%202%20(1).png',
+    image: 'https://ik.imagekit.io/qcvroy8xpd/Ask-Africa-Homepage-Image-Only.jpg',
     liveUrl: 'https://askafrica.co.za/',
     caseStudyUrl: '/work/case-studies/ask-africa/',
     stats: [
