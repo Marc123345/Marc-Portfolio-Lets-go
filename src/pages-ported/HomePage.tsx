@@ -17,10 +17,6 @@ const homeSchema = {
   "description": "Professional web designer creating high-performance React/Node websites for agencies, ecommerce, and B2B companies. Expert in web development and conversion optimization.",
   "image": "https://www.marcfriedmanportfolio.com/wp-content/uploads/2024/12/image-1.webp",
   "url": "https://www.marcfriedmanportfolio.com",
-  "address": {
-    "@type": "PostalAddress",
-    "addressCountry": "IL"
-  },
   "sameAs": [
     "https://www.linkedin.com/in/portfolio2/",
     "https://www.behance.net/marcfriedmanweb",

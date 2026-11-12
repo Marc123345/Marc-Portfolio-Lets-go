@@ -290,7 +290,7 @@ export default function AboutPage() {
               <img src={PORTRAIT} alt="Marc Friedman" className="absolute inset-0 w-full h-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
               <span className="absolute left-4 bottom-4 text-[10px] font-mono uppercase tracking-[0.3em] text-white/80">
-                Marc Friedman · Israel
+                Marc Friedman · Working worldwide
               </span>
             </div>
             <FloatPill className="absolute -left-6 top-10 z-10" tilt={-12}>Designer + developer</FloatPill>
@@ -353,7 +353,7 @@ export default function AboutPage() {
                   personally. As a fullstack developer covering design, frontend,
                   backend, and DevOps in one set of hands, I&apos;m the rare fullstack
                   web developer who actually ships the brand identity too. No
-                  handoffs. No junior devs. No project managers playing telephone,                  just one web developer in Israel, focused on your build.
+                  handoffs. No junior devs. No project managers playing telephone. Just one web developer, focused on your build.
                 </p>
               </motion.div>
             </div>
@@ -725,10 +725,9 @@ export default function AboutPage() {
               </motion.h2>
               <div className="space-y-3 text-lg md:text-xl text-white/80 leading-relaxed mb-8">
                 <p>
-                  When I&apos;m not shipping websites, I&apos;m usually hiking
-                  somewhere in the{' '}
+                  When I&apos;m not shipping websites, I&apos;m usually out on a{' '}
                   <em className="text-[#A3D1FF]" style={{ fontFamily: SERIF }}>
-                    Galilee
+                    trail
                   </em>
 , hunting for the best coffee, or helping junior
                   designers build their first portfolios.
@@ -745,7 +744,7 @@ export default function AboutPage() {
                   prose, doesn't compete with the headline. */}
               <ul className="border-t border-white/10 divide-y divide-white/10">
                 {[
-                  { k: 'Trails', v: 'Upper Galilee · weekly' },
+                  { k: 'Trails', v: 'Weekly, rain or shine' },
                   { k: 'Coffee', v: 'Cafelix · Streetwise · Aroma roaster hunt' },
                   { k: 'Mentoring', v: '20+ junior designers, 1:1' },
                   { k: 'Open Source', v: 'Contributing to tools devs actually use' },
@@ -776,7 +775,7 @@ export default function AboutPage() {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <FloatPill className="absolute -left-4 top-8 z-10" tilt={-10}>Upper Galilee</FloatPill>
+              <FloatPill className="absolute -left-4 top-8 z-10" tilt={-10}>Off the clock</FloatPill>
               {/* Caption gives the photo column a finished, editorial bottom
                   edge, mirrors the spec rows in the text column. */}
               <div className="flex items-baseline justify-between mt-3 text-[10px] font-mono uppercase tracking-[0.25em] text-white/40">

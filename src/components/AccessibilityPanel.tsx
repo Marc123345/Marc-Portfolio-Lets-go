@@ -550,8 +550,8 @@ export default function AccessibilityPanel({ className = '' }: AccessibilityPane
                     </p>
                     <p>
                       {settings.language === 'he'
-                        ? 'אתר זה תואם לתקן הישראלי 5568 ולהנחיות WCAG 2.1 AA.'
-                        : 'This site complies with Israeli Standard 5568 and WCAG 2.1 AA guidelines.'}
+                        ? 'אתר זה תואם להנחיות WCAG 2.1 AA.'
+                        : 'This site follows WCAG 2.1 AA guidelines.'}
                     </p>
                   </motion.div>
                 )}
