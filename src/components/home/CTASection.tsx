@@ -34,7 +34,7 @@ export default function CTASection() {
   return (
     <section
       ref={sectionRef}
-      className="relative py-24 md:py-32 px-6 lg:px-12 bg-[#0a0a0a] border-t border-white/10 overflow-hidden"
+      className="relative py-24 md:py-32 px-6 lg:px-12 bg-[#0a0a0a] border-t border-white/10 overflow-clip"
     >
       {/* Ambient glow */}
       <SilkCanvas flip />
@@ -53,14 +53,14 @@ export default function CTASection() {
       <div className="max-w-7xl mx-auto relative">
         <ChapterMarker number="Colophon · End Matter" label="Let's Build · 2026" />
 
-        {/* Dramatic headline */}
-        <motion.div style={{ y: typeY }} className="mb-8">
+        {/* Dramatic headline, full width */}
+        <motion.div style={{ y: typeY }} className="mb-12 md:mb-16">
           <motion.h2
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-100px' }}
             transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-            className="text-white leading-[0.92] tracking-[-0.04em] max-w-6xl"
+            className="text-white leading-[0.92] tracking-[-0.04em] max-w-5xl"
             style={{
               fontFamily: SERIF,
               fontSize: 'clamp(2rem, 4.5vw, 4.5rem)',
@@ -72,32 +72,90 @@ export default function CTASection() {
           </motion.h2>
         </motion.div>
 
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-xl md:text-2xl text-white/70 leading-relaxed max-w-3xl mb-8"
-        >
-          Let&apos;s fix that. Book 30 minutes, I&apos;ll audit your current site{' '}
-          <em className="text-white" style={{ fontFamily: SERIF }}>
-            live on the call
-          </em>{' '}
-          and show you exactly what&apos;s costing you customers.
-        </motion.p>
-
-        <div className="grid lg:grid-cols-[1.1fr_1fr] gap-8 items-start">
-          {/* Left, form */}
-          <motion.div
+        <div className="grid lg:grid-cols-[1fr_1.1fr] gap-12 lg:gap-20 items-start">
+          {/* Left, pitch + process + actions */}
+          <motion.aside
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-80px' }}
             transition={{ duration: 0.9, delay: 0.1 }}
+            className="space-y-10 lg:sticky lg:top-28"
+          >
+            <p className="text-lg md:text-xl text-white/70 leading-relaxed max-w-xl">
+              Let&apos;s fix that. Book 30 minutes, I&apos;ll audit your current site{' '}
+              <em className="text-white" style={{ fontFamily: SERIF }}>
+                live on the call
+              </em>{' '}
+              and show you exactly what&apos;s costing you customers.
+            </p>
+
+            <ol className="space-y-4">
+              {[
+                {
+                  n: '01',
+                  t: 'You fill the form.',
+                  d: 'Takes about 90 seconds. No pre-screeners.',
+                },
+                {
+                  n: '02',
+                  t: 'I reply within 24 hours.',
+                  d: 'With honest thoughts and a proposed next step.',
+                },
+                {
+                  n: '03',
+                  t: 'We talk for 30 minutes.',
+                  d: 'I audit your site live. You walk away with a plan.',
+                },
+              ].map((s) => (
+                <li key={s.n} className="flex gap-4 items-baseline border-b border-white/10 pb-4">
+                  <span
+                    className="text-[#A3D1FF]/70 text-xs font-mono tracking-[0.2em] shrink-0"
+                    style={{ fontVariantNumeric: 'tabular-nums' }}
+                  >
+                    {s.n}
+                  </span>
+                  <div>
+                    <p
+                      className="text-white text-2xl md:text-3xl leading-tight mb-1"
+                      style={{ fontFamily: SERIF, fontWeight: 500 }}
+                    >
+                      {s.t}
+                    </p>
+                    <p className="text-sm text-white/60 leading-relaxed">{s.d}</p>
+                  </div>
+                </li>
+              ))}
+            </ol>
+
+            <div className="flex flex-wrap items-center gap-x-6 gap-y-3">
+              <a
+                href="/contact/"
+                className="inline-flex items-center gap-3 bg-white text-black font-medium px-6 py-3 hover:bg-[#A3D1FF] transition-colors group"
+              >
+                Book a Call
+                <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+              </a>
+              <Link
+                href="/work/"
+                className="inline-flex items-center gap-3 text-white font-medium border-b border-white/30 hover:border-[#A3D1FF] hover:text-[#A3D1FF] transition-colors py-1"
+              >
+                See the work first
+                <ArrowUpRight className="w-4 h-4" />
+              </Link>
+            </div>
+          </motion.aside>
+
+          {/* Right, form */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '-80px' }}
+            transition={{ duration: 0.9, delay: 0.25 }}
             className="relative"
           >
             <ContactForm />
 
-            <p className="text-center text-sm text-white/60 mt-8">
+            <p className="text-center text-sm text-white/60 mt-6">
               Or{' '}
               <a
                 href="/contact/"
@@ -107,74 +165,6 @@ export default function CTASection() {
               </a>
             </p>
           </motion.div>
-
-          {/* Right, editorial sidebar */}
-          <motion.aside
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: '-80px' }}
-            transition={{ duration: 0.9, delay: 0.25 }}
-            className="space-y-8"
-          >
-            <div>
-              <ol className="space-y-3">
-                {[
-                  {
-                    n: '01',
-                    t: 'You fill the form.',
-                    d: 'Takes about 90 seconds. No pre-screeners.',
-                  },
-                  {
-                    n: '02',
-                    t: 'I reply within 24 hours.',
-                    d: 'With honest thoughts and a proposed next step.',
-                  },
-                  {
-                    n: '03',
-                    t: 'We talk for 30 minutes.',
-                    d: 'I audit your site live. You walk away with a plan.',
-                  },
-                ].map((s) => (
-                  <li key={s.n} className="flex gap-3 items-baseline border-b border-white/10 pb-3">
-                    <span
-                      className="text-[#A3D1FF]/70 text-xs font-mono tracking-[0.2em] shrink-0"
-                      style={{ fontVariantNumeric: 'tabular-nums' }}
-                    >
-                      {s.n}
-                    </span>
-                    <div>
-                      <p
-                        className="text-white text-2xl md:text-3xl leading-tight mb-1"
-                        style={{ fontFamily: SERIF, fontWeight: 500 }}
-                      >
-                        {s.t}
-                      </p>
-                      <p className="text-sm text-white/60 leading-relaxed">{s.d}</p>
-                    </div>
-                  </li>
-                ))}
-              </ol>
-            </div>
-
-            <div>
-              <div className="flex flex-wrap gap-3">
-                <a
-                  href="/contact/"
-                  className="inline-flex items-center gap-3 bg-white text-black font-medium px-6 py-3 hover:bg-[#A3D1FF] transition-colors group"
-                >
-                  Book a Call
-                  <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-                </a>
-                <Link
-                  href="/work/"
-                  className="inline-flex items-center gap-3 text-white font-medium border-b border-white/30 hover:border-[#A3D1FF] hover:text-[#A3D1FF] transition-colors py-1"
-                >
-                  See the work first
-                  <ArrowUpRight className="w-4 h-4" />
-                </Link>
-              </div>
-            </div>
-          </motion.aside>
         </div>
       </div>
     </section>
