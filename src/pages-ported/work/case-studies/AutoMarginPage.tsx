@@ -14,6 +14,7 @@ const config: CaseStudyConfig = {
     </>
   ),
   heroImage: 'https://ik.imagekit.io/qcvroy8xpd/1732717492455.jpeg',
+  heroVideo: { vimeoId: '865081155', width: 1920, height: 984 },
   metaStats: [
     { value: '35%', label: 'Faster Decisions' },
     { value: 'Live', label: 'Telemetry' },

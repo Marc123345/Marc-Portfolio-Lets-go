@@ -1,7 +1,7 @@
 "use client";
 
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react';
+import { motion, useReducedMotion } from 'framer-motion';
 import { ArrowUpRight, ExternalLink, Mail } from 'lucide-react';
 import Link from 'next/link';
 import {
@@ -19,6 +19,8 @@ export type CaseStudyConfig = {
   italicWord: string;
   tagline: React.ReactNode;
   heroImage: string;
+  /** Muted, looping Vimeo clip played behind the masthead; heroImage stays as its poster. */
+  heroVideo?: { vimeoId: string; width: number; height: number };
   metaStats: { label: string; value: string }[];
   liveUrl?: string;
 
@@ -69,21 +71,44 @@ function CaseMasthead({
   italicWord,
   tagline,
   heroImage,
+  heroVideo,
   metaStats,
   liveUrl,
 }: Pick<
   CaseStudyConfig,
-  'kicker' | 'pkg' | 'title' | 'italicWord' | 'tagline' | 'heroImage' | 'metaStats' | 'liveUrl'
+  'kicker' | 'pkg' | 'title' | 'italicWord' | 'tagline' | 'heroImage' | 'heroVideo' | 'metaStats' | 'liveUrl'
 >) {
+  const reduceMotion = useReducedMotion();
+  const [videoReady, setVideoReady] = useState(false);
+  const ratio = heroVideo ? heroVideo.width / heroVideo.height : 1;
+
   return (
     <section className="relative min-h-[100svh] bg-black overflow-hidden">
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 lg:left-[38%]">
+        <div className="absolute inset-0 lg:left-[38%] overflow-hidden" style={{ containerType: 'size' }}>
           <img
             src={heroImage}
             alt=""
             className="w-full h-full object-cover object-center grayscale contrast-125"
           />
+          {heroVideo && !reduceMotion && (
+            // Vimeo background mode: autoplay, muted, looped, no controls.
+            // Sized like object-fit: cover against the container.
+            <iframe
+              src={`https://player.vimeo.com/video/${heroVideo.vimeoId}?background=1&autoplay=1&loop=1&muted=1&autopause=0&dnt=1`}
+              title=""
+              aria-hidden="true"
+              tabIndex={-1}
+              allow="autoplay; fullscreen; picture-in-picture"
+              onLoad={() => setVideoReady(true)}
+              className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none grayscale contrast-125 transition-opacity duration-1000 ${videoReady ? 'opacity-100' : 'opacity-0'}`}
+              style={{
+                width: `max(100cqw, ${(100 * ratio).toFixed(2)}cqh)`,
+                height: `max(100cqh, ${(100 / ratio).toFixed(2)}cqw)`,
+                border: 0,
+              }}
+            />
+          )}
           <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-black/20 lg:from-black lg:via-black/55 lg:to-black/20" />
           <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/40" />
         </div>
@@ -275,6 +300,7 @@ export default function CaseStudyLayout({ config }: { config: CaseStudyConfig })
     italicWord,
     tagline,
     heroImage,
+    heroVideo,
     metaStats,
     liveUrl,
     marquee,
@@ -295,6 +321,7 @@ export default function CaseStudyLayout({ config }: { config: CaseStudyConfig })
         italicWord={italicWord}
         tagline={tagline}
         heroImage={heroImage}
+        heroVideo={heroVideo}
         metaStats={metaStats}
         liveUrl={liveUrl}
       />
