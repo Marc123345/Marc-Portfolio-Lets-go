@@ -176,7 +176,7 @@ export default function FreeWebsiteAnalyzerPage() {
               className="relative"
             >
               <div
-                className="relative border border-white/10 p-7 md:p-9"
+                className="ui-card relative p-7 md:p-9"
                 style={{ background: 'rgba(10,10,10,0.85)', backdropFilter: 'blur(16px)' }}
               >
                 {/* Corner bolts */}

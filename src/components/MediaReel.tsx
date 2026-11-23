@@ -32,14 +32,14 @@ const CLIPS: Clip[] = [
 ];
 
 const SHOTS: { src: string; title: string }[] = [
-  { title: 'Paving Leads', src: 'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%204%20-%2016_9.png?updatedAt=1767539579010' },
-  { title: 'Binns Media Group', src: 'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%204%20-%2016x9.png?updatedAt=1767539579710' },
-  { title: 'Untapped Africa', src: 'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%201%20-%201x1(1).png?updatedAt=1767539579782' },
+  { title: 'Paving Leads', src: '/images/case-studies/paving-leads.jpg' },
+  { title: 'Binns Media Group', src: 'https://ik.imagekit.io/qcvroy8xpd/Mockup%204%20-%2016x9.png?updatedAt=1767538713061' },
+  { title: 'Untapped Africa', src: '/images/case-studies/untapped-africa.jpg' },
   { title: 'H2H Marketing', src: 'https://ik.imagekit.io/qcvroy8xpd/H2H-Social-Homepage-Image-Only.jpg' },
-  { title: 'iLight Care', src: 'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%201%20-%201x1(5).png?updatedAt=1767539579818' },
+  { title: 'iLight Care', src: '/images/case-studies/ilight.jpg' },
   { title: 'Ask Africa', src: 'https://ik.imagekit.io/qcvroy8xpd/Ask-Africa-Homepage-Image-Only.jpg' },
-  { title: 'Friedman & Cohen', src: 'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%201%20-%201x1(3).png?updatedAt=1767539579776' },
-  { title: 'Tar & Chip Paving', src: 'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%204%20-%2016x9(5).png?updatedAt=1767539578933' },
+  { title: 'Friedman & Cohen', src: '/images/case-studies/friedman-cohen.jpg' },
+  { title: 'Tar & Chip Paving', src: '/images/case-studies/tar-chip-paving.jpg' },
 ];
 
 function ChapterMarker({ number, label }: { number: string; label: string }) {

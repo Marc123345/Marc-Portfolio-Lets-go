@@ -101,7 +101,7 @@ export default function AIImperfectAestheticsPage() {
               <li><strong>Creative Freedom:</strong> Embracing imperfection liberates creators from the pressure of flawless execution</li>
             </ul>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-2 flex items-center">
                 <Brush className="w-5 h-5 text-[#A3D1FF] mr-2" />
                 The Imperfection Paradox
@@ -128,7 +128,7 @@ export default function AIImperfectAestheticsPage() {
             <h3>Implementation Techniques</h3>
             <p>Creating convincing tactile effects requires thoughtful layering and restraint:</p>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-2 flex items-center">
                 <Palette className="w-5 h-5 text-[#A3D1FF] mr-2" />
                 Layering Strategy for Tactile Design
@@ -162,7 +162,7 @@ export default function AIImperfectAestheticsPage() {
             <h3>Brutalism Meets AI</h3>
             <p>Brutalist design principles are particularly effective when combined with AI-generated content. The raw, structural honesty of brutalism provides a perfect counterbalance to AI's tendency toward slickness:</p>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-2">Brutalist AI Design Principles</h4>
               <ul className="text-gray-300 space-y-2">
                 <li>Use AI to generate base imagery, then strip away all polish and refinement</li>
@@ -200,7 +200,7 @@ export default function AIImperfectAestheticsPage() {
               <li><strong>Creative Credibility:</strong> Willingness to embrace weirdness signals creative confidence</li>
             </ul>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-2 flex items-center">
                 <Wand2 className="w-5 h-5 text-[#A3D1FF] mr-2" />
                 Creating Effective Surreal Compositions
@@ -259,7 +259,7 @@ export default function AIImperfectAestheticsPage() {
               <li><strong>Emotional Tone:</strong> Deliberate mood-setting through composition, color, and texture</li>
             </ul>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-2 flex items-center">
                 <Sparkles className="w-5 h-5 text-[#A3D1FF] mr-2" />
                 Personality Injection Checklist
@@ -280,7 +280,7 @@ export default function AIImperfectAestheticsPage() {
             <h3>Workflow for AI + Human Hybrid Design</h3>
             <p>Creating effective AI-human hybrid designs takes a deliberate workflow that uses AI's efficiency while keeping creative control:</p>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-2">Five-Stage Hybrid Design Process</h4>
               <ul className="text-gray-300 space-y-3">
                 <li><strong>1. AI Generation:</strong> Use AI tools to create base imagery, layouts, or content. Focus on technical elements where AI excels.</li>
@@ -308,7 +308,7 @@ export default function AIImperfectAestheticsPage() {
             <h3>Real-World Applications</h3>
             <p>Several forward-thinking brands and creators are successfully combining AI efficiency with human imperfection:</p>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-2">Industry Examples</h4>
               <ul className="text-gray-300 space-y-3">
                 <li><strong>Fashion Marketing:</strong> Luxury brands using AI-generated models with hand-drawn annotations and collage elements</li>
@@ -339,7 +339,7 @@ export default function AIImperfectAestheticsPage() {
               <li><strong>Hybrid Approaches:</strong> Use imperfection in marketing while maintaining polish in functional interfaces</li>
             </ul>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-2 flex items-center">
                 <Cpu className="w-5 h-5 text-[#A3D1FF] mr-2" />
                 Decision Framework
@@ -384,7 +384,7 @@ export default function AIImperfectAestheticsPage() {
             <h3>Getting Started with Imperfect AI Design</h3>
             <p>If you want to begin incorporating imperfect aesthetics into your AI-assisted workflow:</p>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-2 flex items-center">
                 <Pencil className="w-5 h-5 text-[#A3D1FF] mr-2" />
                 Beginner's Action Plan

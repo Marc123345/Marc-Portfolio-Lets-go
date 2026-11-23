@@ -334,7 +334,7 @@ export default function GoogleSearchConsoleAIReports() {
               </div>
             </div>
 
-            <div className="bg-gray-800/50 p-6 mb-8 border border-white/10">
+            <div className="ui-card bg-gray-800/50 p-6 mb-8">
               <h4 className="text-white font-bold mb-3">Real-World Example</h4>
               <p className="text-gray-300 text-base">
                 Say you spot that all "managed IT support" queries lost CTR while impressions grew. The instinct is to panic about traffic. But the reality is likely AI Overviews absorbing clicks. The fix is not more content; it is reworking your SERP snippet with a stronger value proposition, adding comparison content that targets the queries AI cannot fully answer, and improving the conversion path on the pages you do get clicks to. The AI configuration panel surfaces the problem in seconds so you can spend your time on the solution.
@@ -441,7 +441,7 @@ export default function GoogleSearchConsoleAIReports() {
               </p>
               <Link
                 href="/contact/"
-                className="inline-flex items-center gap-2 bg-[#A3D1FF] hover:bg-[#92bce6] text-black px-6 py-3 transition-colors font-medium"
+                className="ui-btn ui-btn-primary"
               >
                 Get a GSC AI Audit
                 <ArrowRight className="w-4 h-4" />

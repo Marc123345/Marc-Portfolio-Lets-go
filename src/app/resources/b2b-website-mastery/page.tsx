@@ -68,7 +68,7 @@ export default function B2BWebsiteMasteryResourcePage() {
           </div>
 
           {/* RIGHT, opt-in form */}
-          <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-6 md:p-8">
+          <div className="ui-card p-6 md:p-8">
             <h2 className="mb-2 text-xl font-semibold">Get the free guide</h2>
             <p className="mb-6 text-sm text-white/60">
               Enter your details and the download is yours.

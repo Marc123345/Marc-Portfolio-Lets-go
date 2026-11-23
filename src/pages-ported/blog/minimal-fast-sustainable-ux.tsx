@@ -94,7 +94,7 @@ export default function MinimalFastSustainableUXPage() {
 
             <p>The reason is neurological. Perceived performance shapes trust. When a page loads instantly, users subconsciously attribute that quality to the brand behind it. When it lags, they assume incompetence, even if the content is superior.</p>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-3 flex items-center">
                 <Gauge className="w-5 h-5 text-[#A3D1FF] mr-2" />
                 The Performance Budget Mindset
@@ -137,7 +137,7 @@ export default function MinimalFastSustainableUXPage() {
               <li><strong>Use web platform features.</strong> The Intersection Observer API replaces scroll-based animation libraries. CSS transitions and animations replace most GSAP use cases. The native <code>&lt;dialog&gt;</code> element replaces modal libraries.</li>
             </ol>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-3 flex items-center">
                 <Zap className="w-5 h-5 text-[#A3D1FF] mr-2" />
                 Script Audit Example
@@ -201,7 +201,7 @@ export default function MinimalFastSustainableUXPage() {
 
             <p>A well-optimized page typically produces under 0.2g of CO2 per view. A bloated page can produce over 1.5g. At scale, millions of page views per month, that difference translates to tons of carbon annually.</p>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-3 flex items-center">
                 <Leaf className="w-5 h-5 text-emerald-400 mr-2" />
                 The Math of Green UX
@@ -261,7 +261,7 @@ export default function MinimalFastSustainableUXPage() {
 
             <p>The irony is that designers often add these elements to "increase engagement," but the data tells a different story. Calm, focused interfaces consistently outperform cluttered ones in conversion rates, time-on-task metrics, and user satisfaction scores.</p>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-3 flex items-center">
                 <Feather className="w-5 h-5 text-[#A3D1FF] mr-2" />
                 Principles of Calm Design
@@ -298,7 +298,7 @@ export default function MinimalFastSustainableUXPage() {
               <li><strong>Typography-driven hierarchy.</strong> A well-structured type scale (with clear distinctions between heading levels, body text, and supporting text) communicates hierarchy without relying on color or decoration.</li>
             </ol>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-3 flex items-center">
                 <Wind className="w-5 h-5 text-[#A3D1FF] mr-2" />
                 A Calm Typography Scale
@@ -340,7 +340,7 @@ Font weights:
 
             <p>Minimal, fast, and sustainable UX is not a checklist. It is a design philosophy that connects three interconnected concerns:</p>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-4">The Three Pillars</h4>
               <div className="grid sm:grid-cols-3 gap-6">
                 <div>

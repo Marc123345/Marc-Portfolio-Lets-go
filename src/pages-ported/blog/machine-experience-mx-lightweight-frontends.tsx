@@ -160,7 +160,7 @@ export default function MachineExperiencePage() {
 
             <p>Support for the newer ones still varies, so check Baseline or caniuse before relying on them, and treat the effect as an extra rather than a requirement. I went through this shift in more depth in <a href="/blog/css-eating-javascript-lunch">CSS is eating JavaScript&rsquo;s lunch</a>.</p>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8 not-prose">
+            <div className="ui-card p-6 my-8 not-prose">
               <h4 className="text-white font-semibold mb-2 flex items-center">
                 <Info className="w-5 h-5 text-[#A3D1FF] mr-2" />
                 The view-source test

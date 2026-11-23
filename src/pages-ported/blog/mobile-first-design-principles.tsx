@@ -107,7 +107,7 @@ export default function MobileFirstDesignPrinciplesPage() {
             
             <p>Progressive enhancement aligns perfectly with mobile-first design because it ensures that the core experience works for everyone, regardless of device capabilities. This approach also tends to result in more performant websites since you're only loading the essentials by default and adding enhancements conditionally.</p>
             
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-2">Implementation Example</h4>
               <p className="text-gray-300 mb-4">Consider a product gallery:</p>
               <ul className="text-gray-300 list-disc pl-5 space-y-2">
@@ -128,7 +128,7 @@ export default function MobileFirstDesignPrinciplesPage() {
             
             <p>The key principle here is to identify the core content and functionality that users need, ensure it's immediately accessible, and then provide clear pathways to secondary content. This approach benefits users on all devices by creating more focused, purposeful experiences.</p>
             
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-2">Case Study: Wellness TCYS</h4>
               <p className="text-gray-300">When redesigning the Wellness TCYS website, we conducted user interviews to identify the most critical information for potential clients. We discovered that service descriptions and booking availability were the top priorities, while testimonials and practitioner bios, while important, were secondary. This insight guided our content hierarchy, resulting in a significant increase in booking conversions on mobile devices.</p>
             </div>
@@ -145,7 +145,7 @@ export default function MobileFirstDesignPrinciplesPage() {
             
             <p>Touch-friendly design goes past making elements big enough to tap. The interface has to feel natural on touch devices while still working with a mouse and keyboard.</p>
             
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-2">Implementation Tip</h4>
               <p className="text-gray-300">When designing navigation menus, ensure that dropdown targets are large enough to tap easily but also include appropriate touch feedback. A common mistake is making the tap target too small or failing to provide clear visual feedback when a menu item is activated.</p>
             </div>
@@ -162,7 +162,7 @@ export default function MobileFirstDesignPrinciplesPage() {
             
             <p>Performance shapes user experience and conversion rates directly, not only load times in a report. Studies consistently show that faster sites have lower bounce rates and higher engagement, especially on mobile where users are quicker to leave.</p>
             
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-2">Case Study: Binns Media Group</h4>
               <p className="text-gray-300">For the Binns Media Group platform, we implemented a comprehensive performance optimization strategy that reduced initial load time from 4.2 seconds to 1.8 seconds on 3G connections. This improvement led to a significant increase in mobile engagement and a reduction in bounce rate.</p>
             </div>
@@ -179,7 +179,7 @@ export default function MobileFirstDesignPrinciplesPage() {
             
             <p>The goal is design that responds to viewing context, not screen size alone. That keeps content accessible and readable regardless of how someone is looking at it.</p>
             
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-2">Implementation Example</h4>
               <p className="text-gray-300 mb-4">For fluid typography, consider using a calculation like this:</p>
               <pre className="text-xs text-gray-300 overflow-x-auto">
@@ -213,7 +213,7 @@ font-size: clamp(1rem, 0.5rem + 2vw, 1.5rem);`}
             
             <p>Testing should be an ongoing process, not a one-time event at the end of development. By incorporating testing throughout the design and development process, you can identify and address issues early, when they're easier and less expensive to fix.</p>
             
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-2">Testing Tip</h4>
               <p className="text-gray-300">Create a device testing matrix that includes at minimum: a small Android phone, a large Android phone, an iPhone, and a tablet. For each device, test both portrait and landscape orientations. This basic matrix will catch the majority of layout and interaction issues.</p>
             </div>

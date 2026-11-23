@@ -391,7 +391,7 @@ export default function ROICalculator() {
                       roi: results.roi.toFixed(1)
                     });
                     window.location.href = `/contact?${params.toString()}`;
-                  }} className="inline-flex items-center justify-center gap-3 bg-white text-black font-medium px-8 py-4 hover:bg-[#A3D1FF] transition-colors">
+                  }} className="ui-btn ui-btn-primary ui-btn-lg justify-center">
                     Get My Custom Proposal
                   </button>
                   <p className="text-[10px] font-mono uppercase tracking-[0.25em] text-white/40 mt-4">

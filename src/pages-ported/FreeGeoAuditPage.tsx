@@ -140,7 +140,7 @@ export default function FreeGeoAuditPage() {
               {enginesCovered.map((e) => (
                 <span
                   key={e}
-                  className="px-3 py-1.5 border border-white/15 text-xs text-white/70 font-mono uppercase tracking-[0.15em]"
+                  className="ui-pill"
                 >
                   {e}
                 </span>
@@ -181,7 +181,7 @@ export default function FreeGeoAuditPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: '-40px' }}
                   transition={{ duration: 0.5, delay: i * 0.05 }}
-                  className="p-6 bg-[#111418] border border-white/10 hover:border-[#A3D1FF]/40 transition-colors"
+                  className="ui-card p-6 hover:bg-[#1a1a1a] transition-colors"
                 >
                   <Icon className="w-6 h-6 text-[#A3D1FF] mb-4" />
                   <p className="text-white font-medium leading-snug">{c.label}</p>
@@ -225,7 +225,7 @@ export default function FreeGeoAuditPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.08 }}
-                className="p-6 border border-white/10 bg-[#111418]"
+                className="ui-card p-6"
               >
                 <p
                   className="text-[#A3D1FF] mb-3"

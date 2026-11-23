@@ -100,7 +100,7 @@ export default function CssEatingJavascriptLunchPage() {
 
             <p>Scroll-driven animations make that whole pattern obsolete.</p>
 
-            <pre className="bg-[#0a0a0a] border border-white/10 p-5 overflow-x-auto text-sm leading-relaxed"><code>{`@keyframes fade-in {
+            <pre className="ui-card p-5 overflow-x-auto text-sm leading-relaxed"><code>{`@keyframes fade-in {
   from { opacity: 0; transform: translateY(24px); }
   to   { opacity: 1; transform: translateY(0); }
 }
@@ -117,7 +117,7 @@ export default function CssEatingJavascriptLunchPage() {
 
             <p>You can build the entire &quot;elements fade in as you scroll&quot; pattern that&apos;s on literally every marketing site, the one people install Framer Motion for, in pure CSS.</p>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-2 flex items-center">
                 <Eye className="w-5 h-5 text-[#A3D1FF] mr-2" />
                 Shippable today?
@@ -133,7 +133,7 @@ export default function CssEatingJavascriptLunchPage() {
 
             <p><code>@starting-style</code> fixes it.</p>
 
-            <pre className="bg-[#0a0a0a] border border-white/10 p-5 overflow-x-auto text-sm leading-relaxed"><code>{`dialog {
+            <pre className="ui-card p-5 overflow-x-auto text-sm leading-relaxed"><code>{`dialog {
   opacity: 1;
   transform: scale(1);
   transition: opacity 0.3s, transform 0.3s;
@@ -156,7 +156,7 @@ export default function CssEatingJavascriptLunchPage() {
 
             <p><code>:has()</code> is a parent selector. It lets you style an element based on what&apos;s inside it, or what comes after it. This was the fundamental limitation of CSS selectors for 20 years. JavaScript filled the gap.</p>
 
-            <pre className="bg-[#0a0a0a] border border-white/10 p-5 overflow-x-auto text-sm leading-relaxed"><code>{`/* Style a card differently when it contains an image */
+            <pre className="ui-card p-5 overflow-x-auto text-sm leading-relaxed"><code>{`/* Style a card differently when it contains an image */
 .card:has(img) {
   padding: 0;
 }
@@ -176,7 +176,7 @@ export default function CssEatingJavascriptLunchPage() {
 
             <p><code>:has()</code> also works as a general conditional. You can write things like &quot;if any input in this form is invalid, style the submit button differently.&quot; That&apos;s not a hack. That&apos;s just how it works now.</p>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-2 flex items-center">
                 <GitBranch className="w-5 h-5 text-[#A3D1FF] mr-2" />
                 Browser support
@@ -196,7 +196,7 @@ export default function CssEatingJavascriptLunchPage() {
 
             <h2>The Practical Takeaway</h2>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-2 flex items-center">
                 <Zap className="w-5 h-5 text-[#A3D1FF] mr-2" />
                 Three swaps to make this week

@@ -100,7 +100,7 @@ export default function WhatIsEEATPage() {
             <h3>Authoritativeness</h3>
             <p>Recognition by others in your field as a go-to source. Authority is reputational, it lives largely <em>off</em> your page. Are you cited, linked, reviewed, mentioned, and referenced by other credible people and sites? You can claim expertise yourself; authority is something the wider web grants you.</p>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-2">Trustworthiness, the pillar that holds up the rest</h4>
               <p className="text-gray-300 mb-0">Google has been explicit that <strong>Trust is the most important member of the E-E-A-T family</strong>. The other three exist to support it. A page can be written by an experienced, expert, authoritative author and still fail if it&rsquo;s inaccurate, deceptive, unsafe, or hides who&rsquo;s behind it. Trust is about whether the content is honest, accurate, safe, and transparent, clear authorship, real citations, secure pages, and no dark patterns.</p>
             </div>
@@ -125,7 +125,7 @@ export default function WhatIsEEATPage() {
               <li><strong>Accuracy and freshness.</strong> Keep content correct and current. Stale dates and broken facts read as neglect.</li>
             </ul>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-2">The AI-era angle</h4>
               <p className="text-gray-300 mb-0">As generative AI floods the web with competent-but-anonymous text, the signals that <em>can&rsquo;t</em> be faked at scale, first-hand experience, verifiable credentials, real reputation, transparent identity, become the differentiators. E-E-A-T is increasingly how both Google and AI answer engines decide whose content to trust and cite. The same fundamentals that win Search now also win <a href="/blog/what-is-aeo">Answer Engine Optimization</a> and <a href="/blog/what-is-geo">Generative Engine Optimization</a>.</p>
             </div>

@@ -83,7 +83,7 @@ export default function LocalSEOForPavingContractorsPage() {
 
             <p>Local SEO (Search Engine Optimization) is the practice of optimizing your online presence to attract customers from your specific geographic service area. For paving contractors, this means appearing in Google's "Local Pack" (the map results showing three businesses), ranking high in local search results, and maintaining a strong presence across online directories.</p>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-2 flex items-center">
                 <TrendingUp className="w-5 h-5 text-[#A3D1FF] mr-2" />
                 Local Search Statistics for Contractors
@@ -115,7 +115,7 @@ export default function LocalSEOForPavingContractorsPage() {
             <h4>Step 2: Complete Every Profile Section</h4>
             <p>Google rewards complete profiles with better visibility. Fill out every single field:</p>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-3">Essential Google Business Profile Elements:</h4>
               <ul className="text-gray-300 space-y-3">
                 <li>
@@ -163,7 +163,7 @@ export default function LocalSEOForPavingContractorsPage() {
             <h3>Optimizing Your Google Business Profile Description</h3>
             <p>Your 750-character description is valuable SEO real estate. Here's a proven formula:</p>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-2">Description Template:</h4>
               <p className="text-gray-300 text-sm italic mb-4">
                 "[Business Name] is a fully licensed and insured paving contractor serving [City/County] since [Year]. We specialize in residential driveway installation, commercial parking lot paving, sealcoating, and asphalt repairs. Our experienced crew uses premium materials and proven techniques to deliver durable, beautiful paving solutions. We offer free estimates, competitive pricing, and a satisfaction guarantee on all projects. Whether you need a new driveway, parking lot resurfacing, or pothole repairs, we're the local experts homeowners and businesses trust. Family-owned and operated, we pride ourselves on quality workmanship, punctual service, and fair prices. Call today for your free consultation!"
@@ -185,7 +185,7 @@ export default function LocalSEOForPavingContractorsPage() {
             <h4>Responding to Reviews</h4>
             <p>Respond to EVERY review, both positive and negative:</p>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-3">Review Response Examples:</h4>
 
               <div className="space-y-4">
@@ -230,7 +230,7 @@ export default function LocalSEOForPavingContractorsPage() {
             <h3>Title Tags and Meta Descriptions</h3>
             <p>These HTML elements tell search engines and users what each page is about:</p>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-3">Title Tag Formula:</h4>
               <p className="text-gray-300 text-sm mb-2">Homepage:</p>
               <p className="text-[#A3D1FF] text-sm italic mb-4">"Asphalt Paving & Driveway Installation | [Business Name] | [City, State]"</p>
@@ -245,7 +245,7 @@ export default function LocalSEOForPavingContractorsPage() {
             <h3>Local Keyword Strategy</h3>
             <p>Target keywords that include location modifiers:</p>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-3">High-Value Local Keywords for Paving Contractors:</h4>
               <div className="grid md:grid-cols-2 gap-3 text-gray-300 text-sm">
                 <div>
@@ -284,7 +284,7 @@ export default function LocalSEOForPavingContractorsPage() {
             <h3>Schema Markup for Local Businesses</h3>
             <p>Schema markup is code that helps search engines understand your business information:</p>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-2">Essential Schema Types for Paving Contractors:</h4>
               <ul className="text-gray-300 space-y-2">
                 <li><strong className="text-white">LocalBusiness Schema:</strong> Business name, address, phone, hours</li>
@@ -301,7 +301,7 @@ export default function LocalSEOForPavingContractorsPage() {
 
             <h3>Essential Directories for Paving Contractors</h3>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-3">Priority Citation Sites:</h4>
               <div className="space-y-3 text-gray-300">
                 <div>
@@ -351,7 +351,7 @@ export default function LocalSEOForPavingContractorsPage() {
             <h3>Blogging Strategy for Paving Contractors</h3>
             <p>Regular blog content attracts traffic, builds authority, and improves rankings:</p>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-3">Blog Topic Ideas That Attract Local Customers:</h4>
               <ul className="text-gray-300 space-y-2">
                 <li><strong>"Complete Guide to Driveway Paving in [Your City]"</strong> - Local regulations, climate considerations</li>
@@ -402,7 +402,7 @@ export default function LocalSEOForPavingContractorsPage() {
 
             <h3>Key Performance Indicators (KPIs)</h3>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-3">Metrics to Monitor Monthly:</h4>
               <ul className="text-gray-300 space-y-2">
                 <li className="flex items-start">
@@ -494,7 +494,7 @@ export default function LocalSEOForPavingContractorsPage() {
             <h3>Seasonal SEO Optimization</h3>
             <p>Adjust your SEO strategy throughout the year:</p>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-3">Seasonal Content Calendar:</h4>
               <ul className="text-gray-300 space-y-2">
                 <li><strong className="text-white">Spring (March-May):</strong> "Spring Paving Specials," "Inspect Winter Damage," "Best Season for Paving"</li>
@@ -506,7 +506,7 @@ export default function LocalSEOForPavingContractorsPage() {
 
             <h2>Putting It All Together: Your 90-Day Local SEO Action Plan</h2>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-4">Month 1: Foundation</h4>
               <ul className="text-gray-300 space-y-2 mb-6">
                 <li>• Claim and fully optimize Google Business Profile</li>

@@ -83,7 +83,7 @@ export default function DigitalMarketingAsphaltContractorsPage() {
 
             <p>Digital marketing isn't just for big corporations with massive budgets. In fact, local contractors often see better returns than larger companies because they can target their exact service area with precision. A well-executed digital marketing strategy means more leads, higher-quality customers, and the ability to charge premium prices because you're positioned as the expert in your market.</p>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-2 flex items-center">
                 <TrendingUp className="w-5 h-5 text-[#A3D1FF] mr-2" />
                 The ROI of Digital Marketing for Contractors
@@ -102,7 +102,7 @@ export default function DigitalMarketingAsphaltContractorsPage() {
             <h3>Residential vs. Commercial: Different Approaches</h3>
             <p>Your marketing strategy should differ based on whether you're targeting homeowners or commercial clients:</p>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <h4 className="text-white font-semibold mb-3">Residential Customers:</h4>
@@ -145,7 +145,7 @@ export default function DigitalMarketingAsphaltContractorsPage() {
 
             <h3>Setting Up Your First Campaign</h3>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-3">Google Ads Campaign Structure:</h4>
 
               <div className="space-y-4 text-gray-300">
@@ -179,7 +179,7 @@ export default function DigitalMarketingAsphaltContractorsPage() {
 
             <h3>High-Performing Ad Copy Formula</h3>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-2">Winning Ad Template:</h4>
               <div className="bg-black/50 p-4 rounded mt-3">
                 <p className="text-[#A3D1FF] font-semibold text-sm mb-2">Headline 1: [Service] in [City] | Licensed & Insured</p>
@@ -217,7 +217,7 @@ export default function DigitalMarketingAsphaltContractorsPage() {
             <h3>Facebook Marketing Strategy</h3>
             <p>Facebook remains highly effective for reaching local homeowners:</p>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-3">Content Strategy for Facebook:</h4>
               <ul className="text-gray-300 space-y-2">
                 <li className="flex items-start">
@@ -253,7 +253,7 @@ export default function DigitalMarketingAsphaltContractorsPage() {
               <li><strong>Lookalike Audiences:</strong> Target people similar to your best customers</li>
             </ul>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-2">High-Converting Facebook Ad Format:</h4>
               <ul className="text-gray-300 space-y-2 text-sm">
                 <li><strong className="text-white">Visual:</strong> Before/after image slider or video of crew working</li>
@@ -300,7 +300,7 @@ export default function DigitalMarketingAsphaltContractorsPage() {
 
             <h3>Email Campaign Ideas</h3>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-3">Effective Email Campaigns for Paving Contractors:</h4>
 
               <div className="space-y-3 text-gray-300">
@@ -339,7 +339,7 @@ export default function DigitalMarketingAsphaltContractorsPage() {
               <li><strong>Call-to-Action:</strong> Every post should end with offer for free estimate</li>
             </ul>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-3">Blog Topics That Generate Leads:</h4>
               <ul className="text-gray-300 text-sm space-y-1">
                 <li>• "2025 Driveway Paving Costs in [Your Area]: Complete Price Guide"</li>
@@ -371,7 +371,7 @@ export default function DigitalMarketingAsphaltContractorsPage() {
             <h3>Proactive Review Generation</h3>
             <p>Reviews directly impact your bottom line, make them a priority:</p>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-3">Review Generation System:</h4>
               <ol className="text-gray-300 space-y-2">
                 <li><strong className="text-white">1. Timing:</strong> Ask within 24-48 hours of project completion when satisfaction is highest</li>
@@ -418,7 +418,7 @@ export default function DigitalMarketingAsphaltContractorsPage() {
               <li>Generate reports on lead sources and conversion rates</li>
             </ul>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-3">Recommended CRM Options for Contractors:</h4>
               <ul className="text-gray-300 space-y-2">
                 <li><strong className="text-white">Jobber:</strong> Built specifically for home service contractors, includes scheduling</li>
@@ -444,7 +444,7 @@ export default function DigitalMarketingAsphaltContractorsPage() {
 
             <h3>Key Metrics to Track</h3>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-3">Essential Marketing Metrics:</h4>
               <ul className="text-gray-300 space-y-2">
                 <li className="flex items-start">
@@ -485,7 +485,7 @@ export default function DigitalMarketingAsphaltContractorsPage() {
 
             <h3>Sample Marketing Budget for Small to Medium Paving Contractors</h3>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-3">Monthly Budget: $2,000-3,000</h4>
               <ul className="text-gray-300 space-y-2">
                 <li><strong className="text-white">Google Ads:</strong> $1,000-1,500 (50% of budget)</li>
@@ -525,7 +525,7 @@ export default function DigitalMarketingAsphaltContractorsPage() {
 
             <h2>Seasonal Marketing Calendar</h2>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-4">Strategic Marketing Throughout the Year:</h4>
 
               <div className="space-y-4 text-gray-300">

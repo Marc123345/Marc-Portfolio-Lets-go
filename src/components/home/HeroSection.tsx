@@ -28,10 +28,10 @@ const CLIENT_AVATARS = [
 ];
 
 const WORK_WINDOWS = [
-  { image: 'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%204%20-%2016_9.png?updatedAt=1767539579010', category: 'SEO · Lead Gen', title: 'Paving Leads' },
-  { image: 'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%204%20-%2016x9.png?updatedAt=1767539579710', category: 'Media Platform', title: 'Binns Media Group' },
-  { image: 'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%201%20-%201x1(1).png?updatedAt=1767539579782', category: 'Impact', title: 'Untapped Africa' },
-  { image: 'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%201%20-%201x1(5).png?updatedAt=1767539579818', category: 'AI · Healthcare', title: 'iLight Care' },
+  { image: '/images/case-studies/paving-leads.jpg', category: 'SEO · Lead Gen', title: 'Paving Leads' },
+  { image: 'https://ik.imagekit.io/qcvroy8xpd/Mockup%204%20-%2016x9.png?updatedAt=1767538713061', category: 'Media Platform', title: 'Binns Media Group' },
+  { image: '/images/case-studies/untapped-africa.jpg', category: 'Impact', title: 'Untapped Africa' },
+  { image: '/images/case-studies/ilight.jpg', category: 'AI · Healthcare', title: 'iLight Care' },
   { image: 'https://ik.imagekit.io/qcvroy8xpd/H2H-Social-Homepage-Image-Only.jpg', category: 'Agency Brand', title: 'H2H Marketing' },
   { image: 'https://ik.imagekit.io/qcvroy8xpd/1732717492455.jpeg', category: 'SaaS · Analytics', title: 'AutoMarginX' },
 ];
@@ -393,7 +393,7 @@ export default function HeroSection() {
               <MagneticButton strength={20}>
                 <Link
                   href="/contact/"
-                  className="inline-flex items-center gap-3 bg-white text-black font-medium px-6 py-3 hover:bg-[#A3D1FF] transition-colors group"
+                  className="ui-btn ui-btn-primary group"
                 >
                   <span>Book a Call</span>
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

@@ -86,7 +86,7 @@ export default function SiteMapGenerator() {
               <a 
                 href="/sitemap.xml" 
                 download
-                className="inline-flex items-center px-4 py-2 bg-[#A3D1FF] text-black rounded-lg hover:bg-[#92bce6] transition-colors"
+                className="ui-btn ui-btn-primary ui-btn-sm"
               >
                 <Download className="w-4 h-4 mr-2" />
                 Download Sitemap
@@ -96,7 +96,7 @@ export default function SiteMapGenerator() {
             <button
               onClick={handleGenerate}
               disabled={isGenerating}
-              className="w-full inline-flex items-center justify-center px-6 py-3 bg-[#A3D1FF] text-black rounded-lg hover:bg-[#92bce6] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              className="ui-btn ui-btn-primary w-full disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {isGenerating ? (
                 <>

@@ -181,7 +181,7 @@ export default function MaintenanceHostingPage() {
               title: 'Paving Leads',
               blurb: 'Ongoing SEO-page factory with monthly performance reviews.',
               image:
-                'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%204%20-%2016_9.png?updatedAt=1767539579010',
+                '/images/case-studies/paving-leads.jpg',
               tags: ['Retainer', 'SEO'],
             },
             {
@@ -189,7 +189,7 @@ export default function MaintenanceHostingPage() {
               title: 'Binns Media Group',
               blurb: 'Flagship platform on monthly care, features shipped continuously.',
               image:
-                'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%204%20-%2016x9.png?updatedAt=1767539579710',
+                'https://ik.imagekit.io/qcvroy8xpd/Mockup%204%20-%2016x9.png?updatedAt=1767538713061',
               tags: ['Retainer', 'Flagship'],
             },
           ]}

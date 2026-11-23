@@ -214,7 +214,7 @@ export default function WebDevelopmentPage() {
         bg="bg-[#0a0a0a]"
       >
         {/* Practitioner block, the person behind the work (Experience signal) */}
-        <div className="mb-14 flex flex-col sm:flex-row sm:items-center gap-5 border border-white/10 bg-[#111418] p-6 md:p-8">
+        <div className="ui-card mb-14 flex flex-col sm:flex-row sm:items-center gap-5 p-6 md:p-8">
           <img
             src={MARC_PORTRAIT}
             alt="Marc Friedman, full-stack designer and developer"
@@ -266,7 +266,7 @@ export default function WebDevelopmentPage() {
               title: 'Binns Media Group',
               blurb: 'Production-house → streaming platform. React + TypeScript + Postgres.',
               image:
-                'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%204%20-%2016x9.png?updatedAt=1767539579710',
+                'https://ik.imagekit.io/qcvroy8xpd/Mockup%204%20-%2016x9.png?updatedAt=1767538713061',
               tags: ['React 18', 'TypeScript', 'Postgres'],
             },
             {
@@ -274,7 +274,7 @@ export default function WebDevelopmentPage() {
               title: 'Paving Leads',
               blurb: 'Failing Core Web Vitals → 98 Lighthouse. Leads doubled month one.',
               image:
-                'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%204%20-%2016_9.png?updatedAt=1767539579010',
+                '/images/case-studies/paving-leads.jpg',
               tags: ['Next.js', 'SEO', 'Lead Gen'],
             },
           ]}
@@ -314,7 +314,7 @@ export default function WebDevelopmentPage() {
               href={a.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="border border-white/15 px-3 py-1.5 text-white/70 hover:border-[#A3D1FF]/60 hover:text-white transition-colors"
+              className="ui-pill hover:bg-[#232323] hover:text-white transition-colors"
             >
               {a.label}
             </a>

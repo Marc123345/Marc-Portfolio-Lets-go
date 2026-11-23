@@ -151,7 +151,7 @@ export default function FasterSiteWorthInLeadsPage() {
             <p>Now assume the site gets one second faster, and that it increases the conversion rate by a cautious 5%, a middling 10% or an optimistic 20%. These are relative lifts, so 2% becomes 2.1%, 2.2% or 2.4%. Everything else stays the same.</p>
           </div>
 
-          <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8 overflow-x-auto">
+          <div className="ui-card p-6 my-8 overflow-x-auto">
             <table className="w-full text-sm min-w-[600px]">
               <thead>
                 <tr className="border-b border-white/10">
@@ -210,7 +210,7 @@ export default function FasterSiteWorthInLeadsPage() {
 
             <p>First, find out where you stand. Run your homepage and your main landing page through my <a href="/free-website-analyzer">free website analyzer</a> or Google&rsquo;s PageSpeed Insights, and check the Core Web Vitals report in Search Console for what real visitors experience.</p>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8 not-prose">
+            <div className="ui-card p-6 my-8 not-prose">
               <h4 className="text-white font-semibold mb-2 flex items-center">
                 <Calculator className="w-5 h-5 text-[#A3D1FF] mr-2" />
                 Using the ROI calculator

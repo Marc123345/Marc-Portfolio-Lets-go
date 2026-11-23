@@ -28,7 +28,7 @@ function FeatureCard({
   description: string;
 }) {
   return (
-    <div className="bg-[#1b1b1b] p-8 border border-white/10 hover:border-[#A3D1FF] transition-all group">
+    <div className="ui-card p-8 hover:bg-[#1a1a1a] transition-all group">
       <div className="relative mb-6">
         <div className="absolute inset-0 bg-[#A3D1FF]/20 blur-xl rounded-full"></div>
         <div className="bg-[#A3D1FF]/10 p-4 relative">
@@ -51,7 +51,7 @@ function ProcessStep({
   description: string;
 }) {
   return (
-    <div className="bg-[#1b1b1b] p-8 border border-white/10 h-full">
+    <div className="ui-card p-8 h-full">
       <div className="text-6xl font-black text-[#A3D1FF]/20 mb-4 leading-none">{number}</div>
       <h3 className="text-xl font-semibold text-white mb-3">{title}</h3>
       <p className="text-gray-400 leading-relaxed">{description}</p>
@@ -494,7 +494,7 @@ export default function DesignSystemsPage() {
                   (t) => (
                     <span
                       key={t}
-                      className="px-3 py-1 border border-white/10 text-white/70 rounded-full text-xs font-mono"
+                      className="ui-pill"
                     >
                       {t}
                     </span>
@@ -551,7 +551,7 @@ export default function DesignSystemsPage() {
                   (t) => (
                     <span
                       key={t}
-                      className="px-3 py-1 border border-white/10 text-white/70 rounded-full text-xs font-mono"
+                      className="ui-pill"
                     >
                       {t}
                     </span>

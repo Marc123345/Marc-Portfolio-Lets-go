@@ -39,7 +39,9 @@ export default function AnimatedCounter({
       const easeOutExpo = 1 - Math.pow(2, -10 * percentage);
       
       // Calculate current count value
-      const currentCount = Math.floor(easeOutExpo * end);
+      // easeOutExpo stops at 0.999, so floor() left every counter one short
+      // (#0, 299%, 49+). Land exactly on `end` when the time is up.
+      const currentCount = percentage >= 1 ? end : Math.floor(easeOutExpo * end);
       setCount(currentCount);
       
       // Continue animation if not complete

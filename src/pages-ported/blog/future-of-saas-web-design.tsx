@@ -96,7 +96,7 @@ export default function FutureOfSaasWebDesignPage() {
             
             <p>Effective micro-interactions serve multiple purposes: they provide immediate feedback on user actions, create moments of delight that build emotional connection, and guide users through complex processes without overwhelming them. When implemented thoughtfully, they transform utilitarian interfaces into engaging experiences that users enjoy returning to.</p>
             
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-2">Example: Videoleap's Template Interface</h4>
               <p className="text-gray-300 mb-4">In our work with Videoleap, we implemented subtle animation effects when users hover over video templates. This simple interaction provides immediate visual feedback, making the interface feel responsive and alive while guiding users toward available actions.</p>
               <p className="text-gray-300">That drove a marked increase in template usage and better user retention.</p>
@@ -129,7 +129,7 @@ export default function FutureOfSaasWebDesignPage() {
             
             <p>The most sophisticated implementations use AI not just to react to user behavior but to anticipate needs. Predictive interfaces can prepare data, suggest next steps, or highlight relevant information before the user explicitly requests it, creating an experience that feels almost magical in its responsiveness.</p>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-2">Case Study: MarginX AI-Powered Dashboard</h4>
               <p className="text-gray-300">In our work with MarginX, we implemented AI-driven data visualization that automatically highlights the most relevant metrics based on user role and historical interaction patterns. This intelligent prioritization reduced decision-making time and improved data comprehension.</p>
             </div>

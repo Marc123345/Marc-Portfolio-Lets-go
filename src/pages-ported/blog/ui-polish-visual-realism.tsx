@@ -103,7 +103,7 @@ export default function UIPolishVisualRealismPage() {
             
             <p>This approach works particularly well for business applications, productivity tools, and interfaces where trust and professionalism are paramount. Users subconsciously associate consistent, natural lighting with reliability and quality.</p>
             
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-2 flex items-center">
                 <Sun className="w-5 h-5 text-[#A3D1FF] mr-2" />
                 Implementation Example: "Lit from Above"
@@ -144,7 +144,7 @@ export default function UIPolishVisualRealismPage() {
             
             <p>This approach works well for creative applications, gaming interfaces, and brands that want to convey innovation and energy. The "lit from within" metaphor suggests that the interface is alive and responsive to user input.</p>
             
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-2 flex items-center">
                 <Sparkles className="w-5 h-5 text-[#A3D1FF] mr-2" />
                 Implementation Example: "Lit from Within"
@@ -200,7 +200,7 @@ export default function UIPolishVisualRealismPage() {
             
             <p>The key is to extract the essential visual and tactile qualities of materials, their weight, texture, response to light, and translate these into digital equivalents that enhance usability rather than just decoration.</p>
             
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-2">Case Study: AutoMarginX Dashboard</h4>
               <p className="text-gray-300">In designing the AutoMarginX platform, we used glass-inspired transparency effects for data overlays, allowing users to see contextual information without losing sight of the underlying data. The result felt like looking through a high-quality lens rather than navigating through digital menus, creating an interface that felt both sophisticated and intuitive.</p>
             </div>
@@ -231,7 +231,7 @@ export default function UIPolishVisualRealismPage() {
             
             <p>The most successful polished interfaces feel effortless to use. Users should notice the quality of the experience rather than the individual design elements that create it.</p>
             
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-2">Design Principle: Invisible Polish</h4>
               <p className="text-gray-300">The best UI polish is invisible, users feel the quality without being distracted by the techniques used to create it. When someone says an interface "just feels right," that's often the result of careful attention to visual realism and material authenticity.</p>
             </div>
@@ -259,7 +259,7 @@ export default function UIPolishVisualRealismPage() {
               <li><strong>Contextual Shadows:</strong> Adjust shadow intensity based on the background and surrounding elements</li>
             </ul>
             
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-2">Shadow System Example</h4>
               <pre className="text-xs text-gray-300 overflow-x-auto">
 {`:root {
@@ -299,7 +299,7 @@ export default function UIPolishVisualRealismPage() {
               <li><strong>Material Consistency:</strong> Ensure that similar interface elements use consistent surface treatments</li>
             </ul>
             
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-2">Texture Implementation</h4>
               <pre className="text-xs text-gray-300 overflow-x-auto">
 {`.subtle-texture {
@@ -354,7 +354,7 @@ export default function UIPolishVisualRealismPage() {
             <h3>CSS Custom Properties for Consistent Polish</h3>
             <p>Use CSS custom properties to maintain consistency across your polished interface elements:</p>
             
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <pre className="text-xs text-gray-300 overflow-x-auto">
 {`:root {
   /* Lighting system */

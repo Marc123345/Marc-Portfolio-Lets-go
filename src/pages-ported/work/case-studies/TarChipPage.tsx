@@ -15,7 +15,7 @@ const config: CaseStudyConfig = {
     </>
   ),
   heroImage:
-    'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%204%20-%2016x9(5).png?updatedAt=1767539578933',
+    '/images/case-studies/tar-chip-paving.jpg',
   metaStats: [
     { value: 'Bento', label: 'Layout' },
     { value: 'Mobile', label: 'First' },
@@ -98,24 +98,8 @@ const config: CaseStudyConfig = {
   gallery: [
     {
       image:
-        'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%204%20-%2016x9(5).png?updatedAt=1767539578933',
+        '/images/case-studies/tar-chip-paving.jpg',
       caption: 'Homepage',
-      wide: true,
-    },
-    {
-      image:
-        'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%201%20-%201x1(6).png?updatedAt=1767539579420',
-      caption: 'Service detail',
-    },
-    {
-      image:
-        'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%202%20-%201x1(6).png?updatedAt=1767539577975',
-      caption: 'Mobile',
-    },
-    {
-      image:
-        'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%203%20-%2016x9(6).png?updatedAt=1767539579791',
-      caption: 'Services',
       wide: true,
     },
   ],

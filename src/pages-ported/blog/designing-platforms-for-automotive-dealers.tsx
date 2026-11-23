@@ -96,7 +96,7 @@ export default function DesigningPlatformsForAutomotiveDealersPage() {
             
             <p>The concept emerged from a clear market need: as Tesla vehicles became increasingly popular in the secondary market, dealerships struggled to price them effectively. Traditional pricing models didn't account for the unique factors affecting Tesla values, from battery health to software version. Tesla Finder was conceived as a specialized solution to this emerging challenge.</p>
             
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-2">Design Challenge</h4>
               <p className="text-gray-300">The primary challenge was creating an interface that could present complex data in an actionable format. Dealers needed to quickly understand market positioning, profit potential, and risk factors without getting lost in the details.</p>
             </div>
@@ -128,7 +128,7 @@ export default function DesigningPlatformsForAutomotiveDealersPage() {
             
             <p>The European automotive market presents unique challenges: diverse regulations across countries, varying consumer preferences, and complex import/export considerations. Automargin was designed to address these specific challenges while providing the same data-driven advantages that were transforming dealerships in other markets.</p>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-2">User Research Insight</h4>
               <p className="text-gray-300">Our research revealed that European dealers were spending an average of 12 hours per week manually analyzing market data. This represented a significant opportunity for automation and optimization.</p>
             </div>

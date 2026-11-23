@@ -4,7 +4,7 @@ import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { ArrowUpRight, Mail } from 'lucide-react';
 import Link from 'next/link';
-import ArcSlider from '@/components/ArcSlider';
+import InertiaServiceCards from '@/components/InertiaServiceCards';
 import { SERVICES } from '@/data/services';
 import SilkCanvas from '@/components/SilkCanvas';
 import MediaReel from '@/components/MediaReel';
@@ -193,7 +193,7 @@ export function ServiceMasthead({
           <div className="mt-9 flex flex-wrap items-center gap-x-6 gap-y-3">
             <Link
               href="#start"
-              className="inline-flex items-center gap-3 bg-white text-black font-medium px-7 py-3.5 hover:bg-[#A3D1FF] transition-colors group"
+              className="ui-btn ui-btn-primary group"
             >
               <span>Start a project</span>
               <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
@@ -543,7 +543,7 @@ export function WorkRow({
               {item.tags.map((t) => (
                 <span
                   key={t}
-                  className="px-2 py-0.5 text-[10px] font-mono uppercase tracking-[0.2em] border border-white/15 text-white/60"
+                  className="ui-pill"
                 >
                   {t}
                 </span>
@@ -574,8 +574,8 @@ export function ServiceNavigator({ currentSlug }: { currentSlug: string }) {
           number={`${String(current + 1).padStart(2, '0')} / ${String(SERVICES.length).padStart(2, '0')}`}
           label="Continue · More services"
         />
-        {/* Same arc as /services and the home page, opened on the current service. */}
-        <ArcSlider cards={SERVICES} initialIndex={current} />
+        {/* Same cards as /services and the home page, current service ringed. */}
+        <InertiaServiceCards cards={SERVICES} currentId={SERVICES[current]?.id} />
       </div>
     </section>
     </>
@@ -633,7 +633,7 @@ export function ServiceColophon({
         <div className="flex flex-wrap items-center gap-6 mb-16">
           <Link
             href="/contact/"
-            className="inline-flex items-center gap-3 bg-white text-black font-medium px-8 py-4 hover:bg-[#A3D1FF] transition-colors group"
+            className="ui-btn ui-btn-primary ui-btn-lg group"
           >
             <Mail className="w-4 h-4" />
             Book a Free Strategy Call
@@ -643,7 +643,7 @@ export function ServiceColophon({
             href={CALENDLY}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-white font-medium px-8 py-4 border border-white/20 hover:border-white/60 transition-colors group"
+            className="ui-btn ui-btn-secondary ui-btn-lg group"
           >
             Or book directly
             <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />

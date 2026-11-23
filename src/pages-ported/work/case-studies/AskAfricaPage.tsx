@@ -93,10 +93,10 @@ const config: CaseStudyConfig = {
 
   results: {
     stats: [
-      { value: 'Pan', label: 'African Reach' },
-      { value: '100%', label: 'Custom Build' },
-      { value: 'Enterprise', label: 'Ready' },
-      { value: 'AA', label: 'Accessibility' },
+      { value: '30 yrs', label: 'Of Research, Since 1995' },
+      { value: '24+', label: 'African Markets' },
+      { value: '8,000+', label: 'Brands Profiled' },
+      { value: '6+', label: 'Industry Verticals' },
     ],
   },
 
@@ -120,7 +120,7 @@ const config: CaseStudyConfig = {
     title: 'Friedman & Cohen',
     url: '/work/case-studies/friedman-cohen/',
     image:
-      'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%201%20-%201x1(3).png?updatedAt=1767539579776',
+      '/images/case-studies/friedman-cohen.jpg',
   },
 };
 

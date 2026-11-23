@@ -181,7 +181,7 @@ export default function AIIntegrationPage() {
               title: 'iLight Care',
               blurb: 'AI mental health companion with grounded responses and clinician safety checks.',
               image:
-                'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%201%20-%201x1(5).png?updatedAt=1767539579818',
+                '/images/case-studies/ilight.jpg',
               tags: ['LLM', 'Healthcare', 'RAG'],
             },
             {

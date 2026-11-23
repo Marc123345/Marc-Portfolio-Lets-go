@@ -175,7 +175,7 @@ export default function ChooseWebsiteDesigner2026Page() {
             <h2>Understand What You Are Actually Choosing Between</h2>
             <p>When you pick a designer you are also picking a business model, and the models fail in different ways.</p>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8 overflow-x-auto not-prose">
+            <div className="ui-card p-6 my-8 overflow-x-auto not-prose">
               <table className="w-full text-sm">
                 <thead>
                   <tr className="border-b border-white/10">

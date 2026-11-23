@@ -104,7 +104,7 @@ export default function ContrastBalanceUIDesignPage() {
             
             <p>However, meeting minimum requirements is just the starting point. Exceptional interfaces go beyond compliance to create contrast relationships that enhance the overall user experience.</p>
             
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-2 flex items-center">
                 <Eye className="w-5 h-5 text-[#A3D1FF] mr-2" />
                 Practical Contrast Testing
@@ -155,7 +155,7 @@ export default function ContrastBalanceUIDesignPage() {
               <li><strong>Hierarchy Creation:</strong> Use different stroke weights and contrasts to establish visual importance</li>
             </ul>
             
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-2">Stroke Contrast Implementation</h4>
               <pre className="text-xs text-gray-300 overflow-x-auto">
 {`:root {
@@ -202,7 +202,7 @@ export default function ContrastBalanceUIDesignPage() {
             
             <p>The key to effective surface contrast is subtlety. Large contrast differences between surfaces can create visual chaos, while too little contrast fails to provide the necessary structure. The goal is to create just enough differentiation to support the interface's information architecture.</p>
             
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-2">Case Study: AutoMarginX Dashboard</h4>
               <p className="text-gray-300">In the AutoMarginX platform, we used a carefully calibrated surface contrast system to distinguish between different data visualization layers. The main dashboard used a dark base surface, data cards used a slightly lighter surface, and active/selected states used an even lighter surface. This created clear visual hierarchy without overwhelming users with stark contrasts.</p>
             </div>
@@ -230,7 +230,7 @@ export default function ContrastBalanceUIDesignPage() {
               <li><strong>Strategic Color Usage:</strong> Use color sparingly and purposefully to maintain clarity and focus</li>
             </ul>
             
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-2">Light Theme Color System</h4>
               <pre className="text-xs text-gray-300 overflow-x-auto">
 {`:root[data-theme="light"] {
@@ -271,7 +271,7 @@ export default function ContrastBalanceUIDesignPage() {
             
             <p>Dark themes are not inverted light themes. They need their own design considerations and optimization strategies. The goal is to create interfaces that feel comfortable for extended use while maintaining all the functionality and clarity of their light counterparts.</p>
             
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-2">Dark Theme Color System</h4>
               <pre className="text-xs text-gray-300 overflow-x-auto">
 {`:root[data-theme="dark"] {
@@ -311,7 +311,7 @@ export default function ContrastBalanceUIDesignPage() {
               <li><strong>User Preference Respect:</strong> Honor user preferences for high contrast modes and reduced motion</li>
             </ul>
             
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-2">Adaptive Contrast Implementation</h4>
               <pre className="text-xs text-gray-300 overflow-x-auto">
 {`/* Respect user preferences for high contrast */
@@ -373,7 +373,7 @@ export default function ContrastBalanceUIDesignPage() {
               <li><strong>Smart Overlays:</strong> Use intelligent overlay systems that ensure text readability over any background</li>
             </ul>
             
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-2">Dynamic Overlay Example</h4>
               <pre className="text-xs text-gray-300 overflow-x-auto">
 {`.dynamic-overlay {
@@ -485,7 +485,7 @@ export default function ContrastBalanceUIDesignPage() {
               <li><strong>Disabled State:</strong> Obvious indication that the element is not interactive</li>
             </ul>
             
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-2">Interactive State System</h4>
               <pre className="text-xs text-gray-300 overflow-x-auto">
 {`.button {

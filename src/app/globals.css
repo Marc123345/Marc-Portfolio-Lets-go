@@ -599,53 +599,81 @@
     animation: text-reveal-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
   }
 
-  /* Editorial button system, sharp corners, mono uppercase label.
-     Wide tracking (0.15em) is right for small uppercase; kern feature
-     keeps optical pairs (AV, To, Ye…) from drifting apart. */
+  /* ===== UI system (FlyStudio case-study style), used site-wide =====
+     Buttons: rounded 10px, condensed uppercase label. Primary = accent,
+     secondary = dark fill. Pills: rounded-full mono tags. Cards: rounded
+     20px dark panels. Keep every button / tag / card on these classes. */
+  .ui-btn,
   .mr_btn {
-    @apply relative inline-flex items-center justify-center gap-2 transition-colors focus:outline-none focus:ring-1 focus:ring-[#A3D1FF]/50 focus:ring-offset-2 focus:ring-offset-black overflow-hidden;
-    padding: 0.85rem 1.5rem;
-    font-family: var(--font-poppins), 'Poppins', sans-serif;
-    font-size: 0.8125rem;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.4rem;
+    border-radius: 10px;
+    border: 0;
+    font-family: var(--font-heading);
+    font-size: 0.95rem;
     font-weight: 500;
-    letter-spacing: 0.15em;
+    letter-spacing: 0.02em;
+    line-height: 1.1;
     text-transform: uppercase;
     text-decoration: none;
-    border: 1px solid transparent;
-    border-radius: 0;
+    white-space: nowrap;
     cursor: pointer;
-    line-height: 1;
-    font-feature-settings: "kern" 1, "liga" 1;
-    font-kerning: normal;
+    overflow: hidden;
+    transition: background-color .2s ease, color .2s ease, transform .2s ease;
   }
+  .ui-btn:focus-visible,
+  .mr_btn:focus-visible { outline: 2px solid #A3D1FF; outline-offset: 3px; }
+  .ui-btn:active,
+  .mr_btn:active { transform: translateY(1px); }
+  .ui-btn:disabled { opacity: .5; cursor: not-allowed; }
+  .ui-btn svg,
+  .mr_btn svg { width: 1rem; height: 1rem; flex: none; }
+  .ui-btn-lg { padding: 1rem 1.75rem; font-size: 1.05rem; }
+  .ui-btn-sm { padding: 0.6rem 1rem; font-size: 0.85rem; }
 
-  .mr_btn span {
-    position: relative;
-    z-index: 2;
-  }
+  .mr_btn span { position: relative; z-index: 2; }
 
-  .mr_btn_primary {
-    background: #ffffff;
-    color: #000000;
-    border-color: #ffffff;
-  }
+  .ui-btn-primary,
+  .mr_btn_primary { background: #A3D1FF; color: #000; }
+  .ui-btn-primary:hover,
+  .mr_btn_primary:hover { background: #ffffff; color: #000; }
 
-  .mr_btn_primary:hover {
-    background: #A3D1FF;
-    border-color: #A3D1FF;
-    color: #000000;
-  }
+  .ui-btn-secondary,
+  .mr_btn_outline { background: #1a1a1a; color: #fff; }
+  .ui-btn-secondary:hover,
+  .mr_btn_outline:hover { background: #262626; color: #fff; }
 
-  .mr_btn_outline {
-    background: transparent;
-    color: #ffffff;
-    border-color: rgba(255, 255, 255, 0.22);
-  }
+  /* dark button for use on the accent CTA panel */
+  .ui-btn-ink { background: #000; color: #fff; }
+  .ui-btn-ink:hover { background: #1a1a1a; }
 
-  .mr_btn_outline:hover {
-    border-color: rgba(255, 255, 255, 0.6);
-    color: #A3D1FF;
+  .ui-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: .375rem;
+    border-radius: 9999px;
+    padding: .25rem .7rem;
+    background: #1a1a1a;
+    color: rgba(255,255,255,.78);
+    font-family: var(--font-mono, ui-monospace), ui-monospace, monospace;
+    font-size: 10.5px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    line-height: 1.4;
   }
+  .ui-pill-accent { background: #A3D1FF; color: #000; }
+
+  .ui-card {
+    border-radius: 20px;
+    background: #141414;
+    border: 1px solid rgba(255,255,255,.04);
+    transition: background-color .25s ease;
+  }
+  a.ui-card:hover, .ui-card-hover:hover { background: #1a1a1a; }
 
   .hero-cta-btn {
     position: relative;
@@ -1374,3 +1402,9 @@
 @media (prefers-reduced-motion: reduce) {
   .mx-spin, .mx-bob, .mx-pulse::after { animation: none; }
 }
+
+/* Unlayered on purpose: the typography plugin's link styles sit in a higher
+   cascade layer than the ui-btn base styles, so buttons inside .prose need this. */
+.prose a.ui-btn, .prose a.mr_btn { text-decoration: none; font-weight: 500; }
+.prose a.ui-btn-primary, .prose a.mr_btn_primary { color: #000; }
+.prose a.ui-btn-secondary, .prose a.mr_btn_outline, .prose a.ui-btn-ink { color: #fff; }

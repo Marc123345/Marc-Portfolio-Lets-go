@@ -1785,8 +1785,8 @@ const BENCH: [string, string, string][] = [
   ],
 ];
 const PROOF: [string, string][] = [
-  ["https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%204%20-%2016x9.png?updatedAt=1767539579710", "Binns Media, streaming platform"],
-  ["https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%204%20-%2016_9.png?updatedAt=1767539579010", "Paving Leads, SEO lead-gen"],
+  ["https://ik.imagekit.io/qcvroy8xpd/Mockup%204%20-%2016x9.png?updatedAt=1767538713061", "Binns Media, streaming platform"],
+  ["/images/case-studies/paving-leads.jpg", "Paving Leads, SEO lead-gen"],
   ["https://ik.imagekit.io/qcvroy8xpd/1732717492455.jpeg", "AutoMarginX, SaaS analytics"],
   ["https://ik.imagekit.io/qcvroy8xpd/image%201%20(10).png", "Sentinel DS, design system"],
 ];

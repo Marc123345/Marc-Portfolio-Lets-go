@@ -54,7 +54,7 @@ export default function ChecklistDownload({
           </div>
         </div>
 
-        <div className="border border-white/10 bg-white/[0.02] p-6 md:p-8">
+        <div className="ui-card p-6 md:p-8">
           <p className="text-[10px] font-mono uppercase tracking-[0.3em] text-white/40 mb-2">
             Get the free checklist
           </p>

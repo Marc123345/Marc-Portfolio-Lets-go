@@ -154,7 +154,7 @@ export default function ExperimentalNavigationPage() {
               <li><strong>Crawlers see nothing.</strong> If the content only renders after a WebGL scene loads or a gesture fires, many crawlers, including most AI crawlers, get an empty page.</li>
             </ul>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8 not-prose">
+            <div className="ui-card p-6 my-8 not-prose">
               <h4 className="text-white font-semibold mb-2 flex items-center">
                 <Info className="w-5 h-5 text-[#A3D1FF] mr-2" />
                 A quick test

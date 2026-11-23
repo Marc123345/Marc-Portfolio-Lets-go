@@ -167,7 +167,7 @@ export default function AiCopilotUxPage() {
 
             <p>This matters for trust, for accessibility (not everyone can or wants to work through a chat interface), and for reliability. When the AI provider has an outage or rate-limits you, the site keeps working.</p>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8 not-prose">
+            <div className="ui-card p-6 my-8 not-prose">
               <h4 className="text-white font-semibold mb-2 flex items-center">
                 <Info className="w-5 h-5 text-[#A3D1FF] mr-2" />
                 The unplug test

@@ -193,7 +193,7 @@ export default function ProjectTimelineVisualizer() {
                 {activePhaseData.description}
               </p>
 
-              <div className="border border-white/10 bg-white/[0.03] p-5">
+              <div className="ui-card p-5">
                 <h5 className="text-[10px] font-mono uppercase tracking-[0.3em] text-white/40 mb-4">
                   Your Responsibilities
                 </h5>
@@ -209,7 +209,7 @@ export default function ProjectTimelineVisualizer() {
             </div>
 
             <div>
-              <div className="border border-white/10 bg-white/[0.03] p-5 md:p-6 h-full">
+              <div className="ui-card p-5 md:p-6 h-full">
                 <h5 className="text-[10px] font-mono uppercase tracking-[0.3em] text-white/40 mb-5">
                   What You&apos;ll Receive
                 </h5>

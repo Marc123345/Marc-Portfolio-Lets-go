@@ -31,13 +31,13 @@ export function NotFoundPage() {
             </button>
             <Link 
               href="/"
-              className="inline-flex items-center px-6 py-3 bg-[#A3D1FF] text-black hover:bg-[#92bce6] transition-colors"
+              className="ui-btn ui-btn-primary"
             >
               Go Home
             </Link>
             <Link 
               href="/work/"
-              className="inline-flex items-center px-6 py-3 bg-[#2d3035] text-white hover:bg-[#3d4045] transition-colors"
+              className="ui-btn ui-btn-secondary"
             >
               View Portfolio
             </Link>
@@ -132,7 +132,7 @@ export function RedirectPage({ permanent = false }) {
             </button>
             <a 
               href={redirectUrl}
-              className="inline-flex items-center px-6 py-3 bg-[#A3D1FF] text-black hover:bg-[#92bce6] transition-colors"
+              className="ui-btn ui-btn-primary"
             >
               Continue
               <MoveRight className="ml-2 w-5 h-5" />

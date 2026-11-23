@@ -184,7 +184,7 @@ export default function CybersecurityPage() {
               blurb:
                 'Open-source cybersecurity design system, tokens, components, SOC-ready patterns.',
               image:
-                'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%204%20-%2016_9.png?updatedAt=1767539579010',
+                '/images/case-studies/paving-leads.jpg',
               tags: ['DS', 'Security'],
             },
             {

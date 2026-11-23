@@ -26,7 +26,7 @@ const navLinks: NavLink[] = [
     number: '01',
     meta: '14 Case Files',
     preview:
-      'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%204%20-%2016x9.png?updatedAt=1767539579710',
+      'https://ik.imagekit.io/qcvroy8xpd/Mockup%204%20-%2016x9.png?updatedAt=1767538713061',
   },
   {
     label: 'Services',
@@ -58,7 +58,7 @@ const navLinks: NavLink[] = [
     number: '05',
     meta: 'Inbox · Now',
     preview:
-      'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%201%20-%201x1(1).png?updatedAt=1767539579782',
+      '/images/case-studies/untapped-africa.jpg',
   },
   {
     label: 'Free Audit',
@@ -66,7 +66,7 @@ const navLinks: NavLink[] = [
     number: '06',
     meta: 'Free Tool',
     preview:
-      'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%204%20-%2016x9.png?updatedAt=1767539579710',
+      'https://ik.imagekit.io/qcvroy8xpd/Mockup%204%20-%2016x9.png?updatedAt=1767538713061',
   },
   {
     label: 'GEO Audit',
@@ -395,7 +395,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <div className="flex items-center gap-4 sm:gap-6 z-[70] relative">
               <Link
                 href="/contact/"
-                className={`hidden sm:inline-flex items-center gap-2 bg-white text-black text-xs font-medium tracking-[0.12em] uppercase px-5 py-2.5 hover:bg-[#A3D1FF] transition-colors ${
+                className={`hidden sm:inline-flex ui-btn ui-btn-primary ui-btn-sm ${
                   isMenuOpen ? 'opacity-0 pointer-events-none' : ''
                 }`}
               >

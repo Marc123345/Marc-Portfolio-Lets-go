@@ -15,7 +15,7 @@ const config: CaseStudyConfig = {
     </>
   ),
   heroImage:
-    'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%204%20-%2016x9(3).png?updatedAt=1767539578460',
+    '/images/case-studies/friedman-cohen.jpg',
   metaStats: [
     { value: '100+', label: 'Years Legacy' },
     { value: '4.4', label: 'Google' },
@@ -99,24 +99,14 @@ const config: CaseStudyConfig = {
   gallery: [
     {
       image:
-        'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%204%20-%2016x9(3).png?updatedAt=1767539578460',
+        '/images/case-studies/friedman-cohen.jpg',
       caption: 'Desktop homepage',
       wide: true,
     },
     {
       image:
-        'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%203%20-%2016x9(3).png?updatedAt=1767539580203',
-      caption: 'Dark theme',
-    },
-    {
-      image:
-        'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%201%20-%201x1(3).png?updatedAt=1767539579776',
+        '/images/case-studies/friedman-cohen.jpg',
       caption: 'Detail view',
-    },
-    {
-      image:
-        'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%202%20-%201x1(3).png?updatedAt=1767539578244',
-      caption: 'Mobile',
     },
   ],
 
@@ -124,7 +114,7 @@ const config: CaseStudyConfig = {
     title: 'A Secure Annapolis',
     url: '/work/case-studies/secure-annapolis/',
     image:
-      'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%201%20-%201x1(2).png?updatedAt=1767539579194',
+      '/images/case-studies/secure-annapolis.jpg',
   },
 };
 

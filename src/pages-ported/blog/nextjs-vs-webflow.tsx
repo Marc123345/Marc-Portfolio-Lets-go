@@ -151,7 +151,7 @@ export default function NextjsVsWebflowPage() {
             <h2>Side by side</h2>
           </div>
 
-          <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8 overflow-x-auto">
+          <div className="ui-card p-6 my-8 overflow-x-auto">
             <table className="w-full text-sm min-w-[560px]">
               <thead>
                 <tr className="border-b border-white/10">

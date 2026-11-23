@@ -141,7 +141,7 @@ export default function WebsiteCost2026Page() {
             <h2>Quick Answer: Typical Website Cost Ranges in 2026</h2>
             <p>In 2026, website costs can vary widely - from $0 for a basic do-it-yourself (DIY) setup to $30,000 or more for a fully custom website. The final price depends on the development approach, complexity, and features included. Below is a practical overview of common project cost ranges:</p>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8 overflow-x-auto not-prose">
+            <div className="ui-card p-6 my-8 overflow-x-auto not-prose">
               <table className="w-full text-sm">
                 <thead>
                   <tr className="border-b border-white/10">
@@ -292,7 +292,7 @@ export default function WebsiteCost2026Page() {
             <h2>Website Cost Estimates by Size and Complexity</h2>
             <p>Here&rsquo;s a breakdown of typical budgets based on website scale.</p>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8 overflow-x-auto not-prose">
+            <div className="ui-card p-6 my-8 overflow-x-auto not-prose">
               <table className="w-full text-sm">
                 <thead>
                   <tr className="border-b border-white/10">

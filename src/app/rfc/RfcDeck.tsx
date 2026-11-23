@@ -124,11 +124,11 @@ const card: React.CSSProperties = {
 /* ── Work proof strip (real portfolio mockups) ───────────────────────────── */
 const WORK = [
   {
-    src: "https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%204%20-%2016x9.png?updatedAt=1767539579710",
+    src: "https://ik.imagekit.io/qcvroy8xpd/Mockup%204%20-%2016x9.png?updatedAt=1767538713061",
     label: "Binns Media, streaming platform",
   },
   {
-    src: "https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%204%20-%2016_9.png?updatedAt=1767539579010",
+    src: "/images/case-studies/paving-leads.jpg",
     label: "Paving Leads, SEO lead-gen",
   },
   {

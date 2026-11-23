@@ -165,7 +165,7 @@ export default function EcommerceUXFlawsKillingConversionsPage() {
               The average eCommerce site loses <strong className="text-white">30-40% of potential customers</strong> simply because they can't find the products they want. The fix is information architecture that matches how customers actually think and shop, not just adding a search bar.
             </p>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-4 flex items-center gap-2">
                 <XCircle className="w-5 h-5 text-red-400" />
                 Common Navigation Mistakes
@@ -269,7 +269,7 @@ export default function EcommerceUXFlawsKillingConversionsPage() {
               The culprit? Checkout experiences designed for desktop and awkwardly adapted for mobile. Every extra tap, every form field that requires zooming, every error that isn't clearly communicated represents lost revenue.
             </p>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-4 flex items-center gap-2">
                 <XCircle className="w-5 h-5 text-red-400" />
                 Mobile Checkout Killers
@@ -388,7 +388,7 @@ export default function EcommerceUXFlawsKillingConversionsPage() {
               The cost is staggering: <strong className="text-white">$816 billion in merchandise returns</strong> in 2023 (National Retail Federation), with inadequate product information being a leading cause.
             </p>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-4 flex items-center gap-2">
                 <XCircle className="w-5 h-5 text-red-400" />
                 Product Page Failures
@@ -559,7 +559,7 @@ export default function EcommerceUXFlawsKillingConversionsPage() {
               Implementing all these changes at once can be overwhelming. Here's a prioritized approach based on potential ROI and implementation complexity:
             </p>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h3 className="text-white mb-4">Quick Wins (Week 1-2)</h3>
               <ul className="space-y-2 mb-0">
                 <li className="flex items-start gap-3 text-gray-300">
@@ -581,7 +581,7 @@ export default function EcommerceUXFlawsKillingConversionsPage() {
               </ul>
             </div>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h3 className="text-white mb-4">Medium-Term Improvements (Month 1-2)</h3>
               <ul className="space-y-2 mb-0">
                 <li className="flex items-start gap-3 text-gray-300">
@@ -603,7 +603,7 @@ export default function EcommerceUXFlawsKillingConversionsPage() {
               </ul>
             </div>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h3 className="text-white mb-4">Long-Term Investments (Month 3-6)</h3>
               <ul className="space-y-2 mb-0">
                 <li className="flex items-start gap-3 text-gray-300">
@@ -632,7 +632,7 @@ export default function EcommerceUXFlawsKillingConversionsPage() {
             </p>
 
             <div className="grid md:grid-cols-2 gap-4 my-8">
-              <div className="bg-[#1b1b1b] p-6 border border-white/10">
+              <div className="ui-card p-6">
                 <h4 className="text-white font-semibold mb-3 flex items-center gap-2">
                   <Search className="w-5 h-5 text-[#A3D1FF]" />
                   Navigation Metrics
@@ -645,7 +645,7 @@ export default function EcommerceUXFlawsKillingConversionsPage() {
                 </ul>
               </div>
 
-              <div className="bg-[#1b1b1b] p-6 border border-white/10">
+              <div className="ui-card p-6">
                 <h4 className="text-white font-semibold mb-3 flex items-center gap-2">
                   <CreditCard className="w-5 h-5 text-[#A3D1FF]" />
                   Checkout Metrics
@@ -658,7 +658,7 @@ export default function EcommerceUXFlawsKillingConversionsPage() {
                 </ul>
               </div>
 
-              <div className="bg-[#1b1b1b] p-6 border border-white/10">
+              <div className="ui-card p-6">
                 <h4 className="text-white font-semibold mb-3 flex items-center gap-2">
                   <ShoppingCart className="w-5 h-5 text-[#A3D1FF]" />
                   Product Page Metrics
@@ -671,7 +671,7 @@ export default function EcommerceUXFlawsKillingConversionsPage() {
                 </ul>
               </div>
 
-              <div className="bg-[#1b1b1b] p-6 border border-white/10">
+              <div className="ui-card p-6">
                 <h4 className="text-white font-semibold mb-3 flex items-center gap-2">
                   <Package className="w-5 h-5 text-[#A3D1FF]" />
                   Business Metrics
@@ -734,7 +734,7 @@ export default function EcommerceUXFlawsKillingConversionsPage() {
             <h3 className="text-xl font-semibold text-white mb-4">Related Articles</h3>
             <div className="grid md:grid-cols-3 gap-6">
               <Link href="/blog/conversion-rate-optimization-techniques" className="block group">
-                <div className="bg-[#1b1b1b] p-6 border border-white/10 hover:border-[#A3D1FF] transition-all h-full">
+                <div className="ui-card p-6 hover:bg-[#1a1a1a] transition-all h-full">
                   <h4 className="text-white font-semibold mb-2 group-hover:text-[#A3D1FF] transition-colors">
                     7 Proven Conversion Rate Optimization Techniques
                   </h4>
@@ -742,7 +742,7 @@ export default function EcommerceUXFlawsKillingConversionsPage() {
                 </div>
               </Link>
               <Link href="/blog/mobile-first-design-principles" className="block group">
-                <div className="bg-[#1b1b1b] p-6 border border-white/10 hover:border-[#A3D1FF] transition-all h-full">
+                <div className="ui-card p-6 hover:bg-[#1a1a1a] transition-all h-full">
                   <h4 className="text-white font-semibold mb-2 group-hover:text-[#A3D1FF] transition-colors">
                     Mobile-First Design Principles
                   </h4>
@@ -750,7 +750,7 @@ export default function EcommerceUXFlawsKillingConversionsPage() {
                 </div>
               </Link>
               <Link href="/blog/contrast-balance-ui-design" className="block group">
-                <div className="bg-[#1b1b1b] p-6 border border-white/10 hover:border-[#A3D1FF] transition-all h-full">
+                <div className="ui-card p-6 hover:bg-[#1a1a1a] transition-all h-full">
                   <h4 className="text-white font-semibold mb-2 group-hover:text-[#A3D1FF] transition-colors">
                     Contrast & Balance in UI Design
                   </h4>

@@ -260,7 +260,7 @@ export default function AboutSection() {
             >
               <a
                 href="/contact/"
-                className="inline-flex items-center gap-3 bg-white text-black font-medium px-8 py-4 hover:bg-[#A3D1FF] transition-colors group"
+                className="ui-btn ui-btn-primary ui-btn-lg group"
               >
                 <MessageSquare className="w-4 h-4" />
                 Let&apos;s talk
@@ -268,7 +268,7 @@ export default function AboutSection() {
               </a>
               <Link
                 href="/about"
-                className="inline-flex items-center gap-3 text-white font-medium border-b border-white/30 hover:border-[#A3D1FF] hover:text-[#A3D1FF] transition-colors py-1"
+                className="ui-btn ui-btn-secondary"
               >
                 Full profile
                 <ArrowUpRight className="w-4 h-4" />

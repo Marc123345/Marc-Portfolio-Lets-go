@@ -38,6 +38,16 @@ type Post = {
 
 const posts: Post[] = [
   {
+    id: 'gohighlevel-leadconnector-website-leads',
+    title: 'Sending Website Leads to GoHighLevel and LeadConnector',
+    excerpt:
+      'How I connect website forms to GoHighLevel (LeadConnector): the three ways to get leads in, what to send with each one, the first five minutes of follow-up, and the mistakes that lose leads.',
+    date: 'November 17, 2026',
+    readTime: '9 min read',
+    image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=2000&q=80',
+    categories: ['Lead Generation', 'CRM', 'Automation'],
+  },
+  {
     id: 'experimental-navigation-beyond-the-navbar',
     title: 'Experimental Navigation: Canvases, Folding Pages and Sites Without a Navbar',
     excerpt:
@@ -669,7 +679,7 @@ export default function BlogPage() {
                         {hero.categories.map((c) => (
                           <span
                             key={c}
-                            className="px-2 py-0.5 text-[10px] font-mono uppercase tracking-[0.2em] border border-white/15 text-white/60"
+                            className="ui-pill"
                           >
                             {c}
                           </span>

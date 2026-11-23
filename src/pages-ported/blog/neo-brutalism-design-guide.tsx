@@ -210,7 +210,7 @@ export default function NeoBrutalismGuidePage() {
 
             <h2>Summary and implementation checklist</h2>
             <p>Neo brutalism draws on mid-century brutalist architecture and applies it to modern UI/UX and graphic design, defined by high contrast, bright colors, bold geometric shapes, oversized typography, and stark drop shadows.</p>
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-3">Quick-start checklist</h4>
               <ul className="text-gray-300 space-y-1 mb-0">
                 <li>☐ Set palette: 2&ndash;3 vivid accents + black + white</li>

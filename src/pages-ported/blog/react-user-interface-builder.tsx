@@ -256,7 +256,7 @@ export default function ReactUIBuilderPage() {
             </ol>
             <p>Master hooks early, especially <code>useState</code> and <code>useEffect</code>, and skip old class-component tutorials. Don&rsquo;t reach for Redux or MobX on day one; core React patterns carry you a long way. Build things you actually care about (a reading list, a recipe app) and you&rsquo;ll stick with it.</p>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <p className="text-gray-300 mb-0">Don&rsquo;t chase every new release. Learn the current version (19.x) and the features that matter, Server Components and <code>useActionState</code>, and adopt what you actually need rather than rewriting your codebase for each trend.</p>
             </div>
 

@@ -116,7 +116,7 @@ function JotformEmbedCard() {
       transition={{ duration: 1, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
       className="relative self-stretch flex flex-col"
     >
-      <div className="relative border border-white/10 p-7 md:p-9 flex-1 flex flex-col" style={{ background: 'rgba(10,10,10,0.85)', backdropFilter: 'blur(16px)' }}>
+      <div className="ui-card relative p-7 md:p-9 flex-1 flex flex-col" style={{ background: 'rgba(10,10,10,0.85)', backdropFilter: 'blur(16px)' }}>
         {/* Corner bolts */}
         <div className="absolute top-3 left-3 w-1.5 h-1.5 rounded-full bg-white/15" />
         <div className="absolute top-3 right-3 w-1.5 h-1.5 rounded-full bg-white/15" />
@@ -323,7 +323,7 @@ function HeroSection() {
               href={CALENDLY}
               target="_blank"
               rel="noopener noreferrer"
-              className="hero-cta-btn inline-flex items-center gap-2 bg-white text-black hover:bg-[#A3D1FF] transition-colors px-7 py-3.5"
+              className="ui-btn ui-btn-primary"
               style={{ fontFamily: 'var(--font-body)', fontSize: '14px', fontWeight: 500, letterSpacing: '0.01em' }}
             >
               Book the call
@@ -428,7 +428,7 @@ function GapSection() {
         <Reveal>
           <div className="grid md:grid-cols-2 mb-16">
             {/* Left, inside */}
-            <div className="border border-white/10 p-10 md:p-14">
+            <div className="ui-card p-10 md:p-14">
               <div className="space-y-4">
                 {inside.map((item) => (
                   <div
@@ -849,7 +849,7 @@ function ProcessSection() {
                 <p className="text-white/60 text-base leading-relaxed mb-8">
                   {step.body}
                 </p>
-                <span className="inline-flex items-center gap-2 text-[10px] font-mono uppercase tracking-[0.2em] text-white/40 border border-white/10 px-3 py-1.5">
+                <span className="ui-pill">
                   <span
                     className="w-1 h-1 rounded-full"
                     style={{ backgroundColor: ACCENT }}
@@ -1078,7 +1078,7 @@ function OperatorSection() {
                 href={CALENDLY}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-white text-black font-medium px-8 py-4 hover:bg-[#A3D1FF] transition-colors group"
+                className="ui-btn ui-btn-primary ui-btn-lg group"
               >
                 <MessageSquare className="w-4 h-4" />
                 Let&apos;s talk
@@ -1086,7 +1086,7 @@ function OperatorSection() {
               </a>
               <Link
                 href="/about"
-                className="inline-flex items-center gap-2 text-white font-medium border-b border-white/30 hover:border-[#A3D1FF] hover:text-[#A3D1FF] transition-colors py-1"
+                className="ui-btn ui-btn-secondary"
               >
                 Full profile
                 <ArrowUpRight className="w-4 h-4" />
@@ -1297,7 +1297,7 @@ function FinalCTASection() {
             href={CALENDLY}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 bg-white text-black font-medium px-10 py-5 hover:bg-[#A3D1FF] transition-colors group"
+            className="ui-btn ui-btn-primary ui-btn-lg group"
           >
             <span className="font-mono uppercase tracking-[0.15em] text-sm">
               Book the Audit

@@ -119,17 +119,17 @@ export default function EmptyIsntMinimalPage() {
             <h2>Where it quietly dies</h2>
             <p>Minimal aesthetics have a body count, and it&rsquo;s almost always the same three deaths.</p>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-2">Affordances</h4>
               <p className="text-gray-300 mb-0">You stripped the button down until it&rsquo;s just text, no background, no border, nothing that says &ldquo;click me.&rdquo; Looks slick. Nobody clicks it. A button that doesn&rsquo;t look like a button isn&rsquo;t minimal, it&rsquo;s broken.</p>
             </div>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-2">Contrast</h4>
               <p className="text-gray-300 mb-0">Light grey text on white is the official typeface of fake minimalism. It looks soft and sophisticated and a meaningful chunk of your users physically cannot read it. Minimalism is not a license to fail contrast checks. Calm is not the same as illegible.</p>
             </div>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-2">Mystery-meat navigation</h4>
               <p className="text-gray-300 mb-0">You buried the nav behind a hamburger on a wide desktop screen because the menu &ldquo;cluttered the hero.&rdquo; Now people can&rsquo;t find your pricing page. Congratulations, you made the single most important link on the site invisible, to look tidy.</p>
             </div>

@@ -1,15 +1,21 @@
 "use client";
 
+/**
+ * Case study page in the FlyStudio "project details" layout (project-details.html):
+ * breadcrumb, centred pills + giant uppercase title, a Client / Industry /
+ * Engagement / Project-page row, an arched hero image, then two-column sections
+ * (label left, content right) broken up by image rows, a "Next project" card and
+ * an accent CTA panel. Every case study passes a CaseStudyConfig; the shape of
+ * that config is unchanged so the 15 case files did not need editing.
+ */
+
 import React, { useState } from 'react';
 import { motion, useReducedMotion } from 'framer-motion';
-import { ArrowUpRight, ExternalLink, Mail } from 'lucide-react';
+import { ArrowUpRight, ExternalLink } from 'lucide-react';
 import Link from 'next/link';
-import {
-  ChapterMarker,
-  ServiceMarquee,
-  StatsBar,
-  SERIF,
-} from '@/components/ServiceEditorial';
+import { PROJECTS } from '@/data/projects';
+
+const HEAD = 'var(--font-heading)';
 
 export type CaseStudyConfig = {
   // Masthead
@@ -19,7 +25,7 @@ export type CaseStudyConfig = {
   italicWord: string;
   tagline: React.ReactNode;
   heroImage: string;
-  /** Muted, looping Vimeo clip played behind the masthead; heroImage stays as its poster. */
+  /** Muted, looping Vimeo clip played inside the hero; heroImage stays as its poster. */
   heroVideo?: { vimeoId: string; width: number; height: number };
   metaStats: { label: string; value: string }[];
   liveUrl?: string;
@@ -52,7 +58,7 @@ export type CaseStudyConfig = {
 
   // Gallery
   gallery: { image: string; caption?: string; wide?: boolean }[];
-  // Product flows recorded on Vimeo, shown full width above the gallery.
+  // Product flows recorded on Vimeo, shown full width.
   // width/height are the recording's size, used for the aspect ratio.
   videos?: { vimeoId: string; title: string; width: number; height: number }[];
 
@@ -64,36 +70,212 @@ export type CaseStudyConfig = {
   };
 };
 
-function CaseMasthead({
-  kicker,
-  pkg,
-  title,
-  italicWord,
-  tagline,
-  heroImage,
-  heroVideo,
-  metaStats,
-  liveUrl,
-}: Pick<
-  CaseStudyConfig,
-  'kicker' | 'pkg' | 'title' | 'italicWord' | 'tagline' | 'heroImage' | 'heroVideo' | 'metaStats' | 'liveUrl'
->) {
+/* ------------------------------------------------------------------ */
+/* small parts                                                         */
+/* ------------------------------------------------------------------ */
+const reveal = {
+  initial: { opacity: 0, y: 28 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true, margin: '-70px' },
+  transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] as const },
+};
+
+function Pill({ children, accent = false }: { children: React.ReactNode; accent?: boolean }) {
+  return (
+    <span
+      className={`rounded-full px-3 py-1 font-mono text-[11px] uppercase tracking-[0.12em] ${
+        accent ? 'bg-[#A3D1FF] text-black' : 'bg-[#1a1a1a] text-white/80'
+      }`}
+    >
+      {children}
+    </span>
+  );
+}
+
+function Img({ src, alt, className = '' }: { src: string; alt: string; className?: string }) {
+  const [broken, setBroken] = useState(false);
+  if (!src || broken) return <div className={`bg-[#161616] ${className}`} aria-hidden="true" />;
+  // eslint-disable-next-line @next/next/no-img-element
+  return <img src={src} alt={alt} loading="lazy" decoding="async" onError={() => setBroken(true)} className={className} />;
+}
+
+/** FlyStudio's two-column block: uppercase label left, content right. */
+function Block({ label, children }: { label: string; children: React.ReactNode }) {
+  return (
+    <motion.section {...reveal} className="grid lg:grid-cols-12 gap-6 lg:gap-10 py-14 md:py-20 border-t border-white/10 first:border-t-0">
+      <h2
+        className="lg:col-span-4 m-0 uppercase text-white leading-[1] lg:sticky lg:top-28 self-start"
+        style={{ fontFamily: HEAD, fontSize: 'clamp(1.9rem, 3.2vw, 2.9rem)', fontWeight: 500 }}
+      >
+        {label}
+      </h2>
+      <div className="lg:col-span-8">{children}</div>
+    </motion.section>
+  );
+}
+
+/** Numbered rows divided by rules, like FlyStudio's service / tech lists. */
+function Rows({ items }: { items: { title: string; description?: string }[] }) {
+  return (
+    <ul className="mt-10 border-t border-white/10">
+      {items.map((it, i) => (
+        <li key={it.title} className="grid grid-cols-[2.5rem_1fr] gap-3 py-6 border-b border-white/10">
+          <span className="font-mono text-xs text-[#A3D1FF] pt-1.5" style={{ fontVariantNumeric: 'tabular-nums' }}>
+            {String(i + 1).padStart(2, '0')}
+          </span>
+          <div>
+            <h3 className="m-0 uppercase text-white leading-tight" style={{ fontFamily: HEAD, fontSize: 'clamp(1.15rem, 1.6vw, 1.4rem)', fontWeight: 500 }}>
+              {it.title}
+            </h3>
+            {it.description && <p className="mt-2 text-white/60 leading-relaxed">{it.description}</p>}
+          </div>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
+function Shot({ item, className = '' }: { item: CaseStudyConfig['gallery'][number]; className?: string }) {
+  return (
+    <motion.figure {...reveal} className={`relative overflow-hidden rounded-[20px] bg-[#111] group ${className}`}>
+      <Img src={item.image} alt={item.caption || ''} className="absolute inset-0 h-full w-full object-cover object-top transition-transform duration-[900ms] group-hover:scale-[1.03]" />
+      {item.caption && (
+        <figcaption className="absolute left-4 bottom-4">
+          <span className="rounded-full bg-black/65 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.15em] text-white/85 backdrop-blur-sm">
+            {item.caption}
+          </span>
+        </figcaption>
+      )}
+    </motion.figure>
+  );
+}
+
+/** FlyStudio image rhythm: two side by side (narrow + wide), then one full width. */
+function ImageRow({ items }: { items: CaseStudyConfig['gallery'] }) {
+  if (!items.length) return null;
+  if (items.length === 1) return <Shot item={items[0]} className="aspect-[16/10] my-6" />;
+  const [a, b, ...rest] = items;
+  return (
+    <div className="my-6 space-y-5 md:space-y-6">
+      <div className="grid md:grid-cols-[1fr_1.45fr] gap-5 md:gap-6">
+        <Shot item={a} className="aspect-[5/6] md:aspect-auto md:min-h-[420px]" />
+        <Shot item={b} className="aspect-[40/27]" />
+      </div>
+      {rest.map((it, i) => (
+        <Shot key={i} item={it} className="aspect-[16/10]" />
+      ))}
+    </div>
+  );
+}
+
+/* ------------------------------------------------------------------ */
+/* page                                                                */
+/* ------------------------------------------------------------------ */
+export default function CaseStudyLayout({ config }: { config: CaseStudyConfig }) {
+  const {
+    kicker, pkg, title, italicWord, tagline, heroImage, heroVideo, metaStats, liveUrl,
+    marquee, challenge, solution, results, gallery, videos = [], next,
+  } = config;
   const reduceMotion = useReducedMotion();
   const [videoReady, setVideoReady] = useState(false);
+
+  // "Case File · 01 · Media Platform" → number "01", industry "Media Platform"
+  const kParts = kicker.split('·').map((s) => s.trim());
+  const fileNo = kParts.find((s) => /^\d+$/.test(s));
+  const industry = kParts[kParts.length - 1];
+  const clientName = `${title} ${italicWord}`.replace(/\.$/, '');
+  const host = liveUrl ? liveUrl.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '') : '';
+
+  // Gallery split around the text, FlyStudio style; skip images that only repeat the hero.
+  const shots = gallery.filter((g) => g.image && g.image !== heroImage);
+  const firstRow = shots.slice(0, 3);
+  const laterRow = shots.slice(3);
+
+  const nextP = PROJECTS.find((p) => p.caseStudyUrl === next.url);
   const ratio = heroVideo ? heroVideo.width / heroVideo.height : 1;
 
   return (
-    <section className="relative min-h-[100svh] bg-black overflow-hidden">
-      <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 lg:left-[38%] overflow-hidden" style={{ containerType: 'size' }}>
-          <img
-            src={heroImage}
-            alt=""
-            className="w-full h-full object-cover object-center grayscale contrast-125"
-          />
+    <div className="bg-black text-white">
+      {/* ============== HEADER ============== */}
+      <header className="relative px-6 lg:px-12 pt-28 md:pt-32 overflow-hidden">
+        <div className="absolute top-24 left-1/2 -translate-x-1/2 w-[900px] h-[460px] bg-[#A3D1FF]/8 rounded-full blur-[150px] pointer-events-none" />
+        <div className="max-w-7xl mx-auto relative">
+          <nav aria-label="Breadcrumb" className="font-mono text-[11px] uppercase tracking-[0.2em] text-white/55">
+            <Link href="/" className="hover:text-white">Home</Link>
+            <span className="mx-2">/</span>
+            <Link href="/work/case-studies/" className="hover:text-white">Case studies</Link>
+            <span className="mx-2">/</span>
+            <span className="text-white underline underline-offset-4">{clientName}</span>
+          </nav>
+
+          <div className="text-center mt-16 md:mt-20">
+            <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="flex flex-wrap justify-center gap-1.5 mb-7">
+              {marquee.slice(0, 2).map((m) => <Pill key={m}>{m}</Pill>)}
+              {fileNo && <Pill accent>Case file {fileNo}</Pill>}
+            </motion.div>
+            <motion.h1
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.9, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+              className="m-0 uppercase text-white leading-[0.9] tracking-[-0.01em] mx-auto max-w-6xl"
+              style={{ fontFamily: HEAD, fontSize: 'clamp(3rem, 9.5vw, 9rem)', fontWeight: 500 }}
+            >
+              {title} <span className="text-[#A3D1FF]">{italicWord}</span>
+            </motion.h1>
+            <motion.p
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.25 }}
+              className="text-lg md:text-xl text-white/65 max-w-2xl mx-auto mt-7 leading-snug"
+            >
+              {tagline}
+            </motion.p>
+          </div>
+
+          {/* Client / Industry / Engagement / Project page */}
+          <motion.dl
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.4 }}
+            className="mt-16 md:mt-24 grid grid-cols-2 md:flex md:justify-between gap-x-6 gap-y-6"
+          >
+            {[
+              { k: 'Client', v: clientName },
+              { k: 'Industry', v: industry },
+              ...(pkg ? [{ k: 'Engagement', v: pkg }] : []),
+            ].map((m) => (
+              <div key={m.k}>
+                <dt className="font-mono text-[11px] uppercase tracking-[0.2em] text-white/45 mb-1.5">{m.k}</dt>
+                <dd className="m-0 uppercase text-white" style={{ fontFamily: HEAD, fontSize: 'clamp(1rem, 1.4vw, 1.3rem)' }}>{m.v}</dd>
+              </div>
+            ))}
+            <div className="md:text-right">
+              <dt className="font-mono text-[11px] uppercase tracking-[0.2em] text-white/45 mb-1.5">Project page</dt>
+              <dd className="m-0 uppercase" style={{ fontFamily: HEAD, fontSize: 'clamp(1rem, 1.4vw, 1.3rem)' }}>
+                {liveUrl ? (
+                  <a href={liveUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-white hover:text-[#A3D1FF] transition-colors">
+                    {host} <ExternalLink className="w-3.5 h-3.5" />
+                  </a>
+                ) : (
+                  <span className="text-white/70">Private build</span>
+                )}
+              </dd>
+            </div>
+          </motion.dl>
+        </div>
+      </header>
+
+      {/* ============== ARCHED HERO IMAGE ============== */}
+      <div className="px-6 lg:px-12 mt-6">
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.1, delay: 0.45, ease: [0.22, 1, 0.36, 1] }}
+          className="relative max-w-7xl mx-auto aspect-[4/3] md:aspect-[16/9] overflow-hidden bg-[#111] rounded-b-[20px] rounded-t-[120px] md:rounded-t-[min(22vw,300px)]"
+          style={{ containerType: 'size' }}
+        >
+          <Img src={heroImage} alt={`${clientName} website`} className="absolute inset-0 h-full w-full object-cover object-top" />
           {heroVideo && !reduceMotion && (
-            // Vimeo background mode: autoplay, muted, looped, no controls.
-            // Sized like object-fit: cover against the container.
             <iframe
               src={`https://player.vimeo.com/video/${heroVideo.vimeoId}?background=1&autoplay=1&loop=1&muted=1&autopause=0&dnt=1`}
               title=""
@@ -101,7 +283,7 @@ function CaseMasthead({
               tabIndex={-1}
               allow="autoplay; fullscreen; picture-in-picture"
               onLoad={() => setVideoReady(true)}
-              className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none grayscale contrast-125 transition-opacity duration-1000 ${videoReady ? 'opacity-100' : 'opacity-0'}`}
+              className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none transition-opacity duration-1000 ${videoReady ? 'opacity-100' : 'opacity-0'}`}
               style={{
                 width: `max(100cqw, ${(100 * ratio).toFixed(2)}cqh)`,
                 height: `max(100cqh, ${(100 / ratio).toFixed(2)}cqw)`,
@@ -109,495 +291,163 @@ function CaseMasthead({
               }}
             />
           )}
-          <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-black/20 lg:from-black lg:via-black/55 lg:to-black/20" />
-          <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/40" />
-        </div>
-      </div>
-
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 2.5, delay: 0.3 }}
-        className="absolute top-1/2 left-0 lg:left-[5%] -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-[#A3D1FF]/10 blur-[140px] z-[5] pointer-events-none"
-      />
-
-      <div
-        className="absolute inset-0 z-10 opacity-[0.07] mix-blend-overlay pointer-events-none"
-        style={{
-          backgroundImage:
-            "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)' opacity='0.5'/></svg>\")",
-        }}
-      />
-
-      <div className="absolute inset-0 z-[15] pointer-events-none hidden md:block">
-        {['top-8 left-8', 'top-8 right-8', 'bottom-8 left-8', 'bottom-8 right-8'].map(
-          (pos, i) => (
-            <div key={i} className={`absolute ${pos} w-4 h-4`}>
-              <div className="absolute inset-0 border-l border-t border-white/20" />
-            </div>
-          ),
-        )}
-      </div>
-
-      <div className="container-custom relative z-20 min-h-[100svh] flex flex-col justify-between pt-32 pb-10">
-        <motion.div
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.1 }}
-          className="flex justify-between items-start text-[10px] md:text-xs font-mono uppercase tracking-[0.3em] text-white/60"
-        >
-          <div className="flex items-center gap-3">
-            <span className="w-6 h-[1px] bg-white/40" />
-            <span>{kicker}</span>
-          </div>
-          {pkg && (
-            <span className="text-right max-w-xs">
-              Package
-              <br />
-              <span className="text-white/80">{pkg}</span>
-            </span>
-          )}
-        </motion.div>
-
-        <div className="max-w-5xl">
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-            className="text-white leading-[0.88] tracking-[-0.04em] mb-8"
-            style={{
-              fontFamily: SERIF,
-              fontSize: 'clamp(2.75rem, 8vw, 7rem)',
-              fontWeight: 400,
-            }}
-          >
-            <span className="block">{title}</span>
-            <span className="block italic text-white/80 font-light">{italicWord}</span>
-          </motion.h1>
-
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6, duration: 0.7 }}
-            className="text-xl md:text-2xl text-white/75 max-w-2xl leading-snug"
-          >
-            {tagline}
-          </motion.p>
-        </div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.9, duration: 0.6 }}
-          className="flex flex-wrap items-end gap-x-8 gap-y-3 pt-6 border-t border-white/10"
-        >
-          {metaStats.map((s) => (
-            <div key={s.label}>
-              <div
-                className="text-white leading-none mb-1"
-                style={{
-                  fontFamily: SERIF,
-                  fontSize: 'clamp(1.25rem, 1.8vw, 1.6rem)',
-                  fontWeight: 500,
-                  fontVariantNumeric: 'tabular-nums',
-                }}
-              >
-                {s.value}
-              </div>
-              <div className="text-[10px] font-mono uppercase tracking-[0.25em] text-white/50">
-                {s.label}
-              </div>
-            </div>
-          ))}
-          {liveUrl && (
-            <a
-              href={liveUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="ml-auto inline-flex items-center gap-2 text-xs md:text-sm font-medium text-white border-b border-white/30 hover:border-[#A3D1FF] hover:text-[#A3D1FF] transition-colors pb-1"
-            >
-              Visit live site
-              <ExternalLink className="w-3.5 h-3.5" />
-            </a>
-          )}
         </motion.div>
       </div>
-    </section>
-  );
-}
 
-function Gallery({ items }: { items: CaseStudyConfig['gallery'] }) {
-  if (items.length === 0) return null;
-  return (
-    <div className="grid md:grid-cols-12 gap-4 auto-rows-[minmax(240px,auto)]">
-      {items.map((it, i) => {
-        const span = it.wide ? 'md:col-span-12' : 'md:col-span-6';
-        return (
-          <motion.div
-            key={i}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: '-60px' }}
-            transition={{ duration: 0.7, delay: i * 0.05 }}
-            className={`${span} relative group overflow-hidden border border-white/10 bg-[#0f1116] min-h-[280px]`}
-          >
-            <img
-              src={it.image}
-              alt={it.caption || ''}
-              className="absolute inset-0 w-full h-full object-cover transition-transform duration-[900ms] group-hover:scale-[1.03]"
-              loading="lazy"
-            />
-            {it.caption && (
-              <div className="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-black/80 via-black/30 to-transparent">
-                <p className="text-[10px] font-mono uppercase tracking-[0.25em] text-white/80">
-                  {it.caption}
-                </p>
-              </div>
-            )}
-          </motion.div>
-        );
-      })}
-    </div>
-  );
-}
-
-function Videos({ items }: { items: NonNullable<CaseStudyConfig['videos']> }) {
-  return (
-    <div className="grid gap-4 mb-4">
-      {items.map((v, i) => (
-        <motion.figure
-          key={v.vimeoId}
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-60px' }}
-          transition={{ duration: 0.7, delay: i * 0.05 }}
-          className="border border-white/10 bg-[#0f1116]"
-        >
-          <div className="relative w-full" style={{ aspectRatio: `${v.width} / ${v.height}` }}>
-            <iframe
-              src={`https://player.vimeo.com/video/${v.vimeoId}?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479`}
-              title={v.title}
-              loading="lazy"
-              allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
-              referrerPolicy="strict-origin-when-cross-origin"
-              className="absolute inset-0 w-full h-full"
-            />
-          </div>
-          <figcaption className="px-4 py-3 border-t border-white/10 text-[10px] font-mono uppercase tracking-[0.25em] text-white/80">
-            {v.title}
-          </figcaption>
-        </motion.figure>
-      ))}
-    </div>
-  );
-}
-
-export default function CaseStudyLayout({ config }: { config: CaseStudyConfig }) {
-  const {
-    kicker,
-    pkg,
-    title,
-    italicWord,
-    tagline,
-    heroImage,
-    heroVideo,
-    metaStats,
-    liveUrl,
-    marquee,
-    challenge,
-    solution,
-    results,
-    gallery,
-    videos = [],
-    next,
-  } = config;
-
-  return (
-    <>
-      <CaseMasthead
-        kicker={kicker}
-        pkg={pkg}
-        title={title}
-        italicWord={italicWord}
-        tagline={tagline}
-        heroImage={heroImage}
-        heroVideo={heroVideo}
-        metaStats={metaStats}
-        liveUrl={liveUrl}
-      />
-
-{/* ============== CHAPTER 01, THE CHALLENGE ============== */}
-      <section className="relative py-24 md:py-32 px-6 lg:px-12 bg-black border-t border-white/10">
-        <div className="max-w-7xl mx-auto">
-          <ChapterMarker number="01" label="The Challenge" />
-          <div className="grid lg:grid-cols-[1fr_1fr] gap-10 lg:gap-20">
-            <motion.h2
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-80px' }}
-              transition={{ duration: 0.9 }}
-              className="text-white leading-[1.0] tracking-[-0.03em]"
-              style={{
-                fontFamily: SERIF,
-                fontSize: 'clamp(2rem, 4.5vw, 4rem)',
-                fontWeight: 400,
-              }}
-            >
-              What they came <em className="italic text-[#A3D1FF]">with.</em>
-            </motion.h2>
-            <div>
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: 0.15 }}
-                className="text-lg md:text-xl text-white/75 leading-relaxed space-y-5"
-              >
-                {challenge.narrative}
-              </motion.div>
-              {challenge.bullets && challenge.bullets.length > 0 && (
-                <ul className="mt-8 space-y-2 border-t border-white/10 pt-6">
-                  {challenge.bullets.map((b) => (
-                    <li key={b} className="text-white/70 flex gap-3">
-                      <span className="text-[#A3D1FF] font-mono mt-1.5 shrink-0">–</span>
-                      <span>{b}</span>
-                    </li>
-                  ))}
-                </ul>
-              )}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ============== CHAPTER 02, THE SOLUTION ============== */}
-      <section className="relative py-24 md:py-32 px-6 lg:px-12 bg-[#0a0a0a] border-t border-white/10">
-        <div className="max-w-7xl mx-auto">
-          <ChapterMarker number="02" label="The Solution" />
-          <div className="grid lg:grid-cols-[1fr_1fr] gap-10 lg:gap-20 mb-16">
-            <motion.h2
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-80px' }}
-              transition={{ duration: 0.9 }}
-              className="text-white leading-[1.0] tracking-[-0.03em]"
-              style={{
-                fontFamily: SERIF,
-                fontSize: 'clamp(2rem, 4.5vw, 4rem)',
-                fontWeight: 400,
-              }}
-            >
-              What I <em className="italic text-[#A3D1FF]">shipped.</em>
-            </motion.h2>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.15 }}
-              className="text-lg md:text-xl text-white/75 leading-relaxed space-y-5"
-            >
-              {solution.narrative}
-            </motion.div>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-6 mb-12">
-            {solution.items.map((it, i) => (
-              <motion.div
-                key={it.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: '-60px' }}
-                transition={{ duration: 0.6, delay: i * 0.05 }}
-                className="border border-white/10 p-6 md:p-8 bg-[#12151b]"
-              >
-                <div
-                  className="text-[#A3D1FF]/80 font-mono text-xs tracking-[0.2em] mb-3"
-                  style={{ fontVariantNumeric: 'tabular-nums' }}
-                >
-                  {String(i + 1).padStart(2, '0')}
+      {/* headline numbers from the brief */}
+      {metaStats.length > 0 && (
+        <div className="px-6 lg:px-12">
+          <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-px bg-white/10 rounded-[20px] overflow-hidden mt-6">
+            {metaStats.map((s) => (
+              <div key={s.label} className="bg-[#0d0d0d] px-5 py-6 md:px-7 md:py-8">
+                <div className="text-white leading-none" style={{ fontFamily: HEAD, fontSize: 'clamp(1.75rem, 3vw, 2.75rem)', fontWeight: 500, fontVariantNumeric: 'tabular-nums' }}>
+                  {s.value}
                 </div>
-                <h3
-                  className="text-white mb-3 leading-tight"
-                  style={{
-                    fontFamily: SERIF,
-                    fontSize: 'clamp(1.25rem, 2vw, 1.75rem)',
-                    fontWeight: 500,
-                  }}
-                >
-                  {it.title}
-                </h3>
-                <p className="text-white/65 text-sm leading-relaxed">{it.description}</p>
-              </motion.div>
-            ))}
-          </div>
-
-          <div className="flex flex-wrap gap-2 border-t border-white/10 pt-8">
-            <span className="text-[10px] font-mono uppercase tracking-[0.3em] text-white/40 mr-2">
-, Stack
-            </span>
-            {solution.tech.map((t) => (
-              <span
-                key={t}
-                className="px-3 py-1 border border-white/15 text-white/70 text-xs font-mono"
-              >
-                {t}
-              </span>
+                <div className="mt-2 font-mono text-[10px] uppercase tracking-[0.2em] text-white/50">{s.label}</div>
+              </div>
             ))}
           </div>
         </div>
-      </section>
-
-      {/* ============== GALLERY ============== */}
-      {(gallery.length > 0 || videos.length > 0) && (
-        <section className="relative py-24 md:py-32 px-6 lg:px-12 bg-black border-t border-white/10">
-          <div className="max-w-7xl mx-auto">
-            <ChapterMarker number="03" label="In Context" />
-            <motion.h2
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-80px' }}
-              transition={{ duration: 0.9 }}
-              className="text-white leading-[1.0] tracking-[-0.03em] mb-12 max-w-3xl"
-              style={{
-                fontFamily: SERIF,
-                fontSize: 'clamp(2rem, 4.5vw, 4rem)',
-                fontWeight: 400,
-              }}
-            >
-              The <em className="italic text-[#A3D1FF]">work.</em>
-            </motion.h2>
-            {videos.length > 0 && <Videos items={videos} />}
-            <Gallery items={gallery} />
-          </div>
-        </section>
       )}
 
-      {/* ============== CHAPTER 04, THE RESULTS ============== */}
-      <section className="relative py-24 md:py-32 px-6 lg:px-12 bg-[#0a0a0a] border-t border-white/10">
-        <div className="max-w-7xl mx-auto">
-          <ChapterMarker number="04" label="The Results" />
-          <motion.h2
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: '-80px' }}
-            transition={{ duration: 0.9 }}
-            className="text-white leading-[1.0] tracking-[-0.03em] mb-10 max-w-3xl"
-            style={{
-              fontFamily: SERIF,
-              fontSize: 'clamp(2rem, 4.5vw, 4rem)',
-              fontWeight: 400,
-            }}
-          >
-            What <em className="italic text-[#A3D1FF]">shipped.</em>
-          </motion.h2>
-          <StatsBar stats={results.stats} />
+      {/* ============== BODY ============== */}
+      <main className="px-6 lg:px-12 pt-10 md:pt-16">
+        <div className="max-w-6xl mx-auto">
+          <Block label="Overview">
+            <div className="text-lg md:text-xl text-white/75 leading-relaxed space-y-5 [&>p:first-child]:text-white">
+              {challenge.narrative}
+            </div>
+            {challenge.bullets && challenge.bullets.length > 0 && (
+              <>
+                <p className="mt-10 font-mono text-[11px] uppercase tracking-[0.2em] text-white/45">What wasn&apos;t working</p>
+                <Rows items={challenge.bullets.map((b) => ({ title: b }))} />
+              </>
+            )}
+          </Block>
+
+          <ImageRow items={firstRow} />
+
+          <Block label="What I built">
+            <div className="text-lg md:text-xl text-white/75 leading-relaxed space-y-5 [&>p:first-child]:text-white">
+              {solution.narrative}
+            </div>
+            <Rows items={solution.items} />
+          </Block>
+
+          {videos.length > 0 && (
+            <div className="my-6 space-y-6">
+              {videos.map((v) => (
+                <motion.figure key={v.vimeoId} {...reveal} className="overflow-hidden rounded-[20px] bg-[#111]">
+                  <div className="relative w-full" style={{ aspectRatio: `${v.width} / ${v.height}` }}>
+                    <iframe
+                      src={`https://player.vimeo.com/video/${v.vimeoId}?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479`}
+                      title={v.title}
+                      loading="lazy"
+                      allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                      referrerPolicy="strict-origin-when-cross-origin"
+                      className="absolute inset-0 w-full h-full"
+                    />
+                  </div>
+                  <figcaption className="px-5 py-3 font-mono text-[10px] uppercase tracking-[0.2em] text-white/70">{v.title}</figcaption>
+                </motion.figure>
+              ))}
+            </div>
+          )}
+
+          {solution.tech.length > 0 && (
+            <Block label="Tech stack">
+              <div className="flex flex-wrap gap-2">
+                {solution.tech.map((t, i) => <Pill key={t} accent={i === 0}>{t}</Pill>)}
+              </div>
+            </Block>
+          )}
+
+          <ImageRow items={laterRow} />
+
+          {results.stats.length > 0 && (
+            <Block label="Results">
+              <div className="grid grid-cols-2 gap-px bg-white/10 rounded-[20px] overflow-hidden">
+                {results.stats.map((s) => (
+                  <div key={s.label} className="bg-black px-6 py-8">
+                    <div className="text-[#A3D1FF] leading-none" style={{ fontFamily: HEAD, fontSize: 'clamp(2.25rem, 4.5vw, 3.75rem)', fontWeight: 500, fontVariantNumeric: 'tabular-nums' }}>
+                      {s.value}
+                    </div>
+                    <div className="mt-3 font-mono text-[11px] uppercase tracking-[0.2em] text-white/55">{s.label}</div>
+                  </div>
+                ))}
+              </div>
+            </Block>
+          )}
+
           {results.testimonial && (
-            <motion.blockquote
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-60px' }}
-              transition={{ duration: 0.9 }}
-              className="mt-16 max-w-4xl border-l-2 border-[#A3D1FF] pl-6 md:pl-10"
-            >
-              <p
-                className="text-white/95 leading-[1.25] italic"
-                style={{
-                  fontFamily: SERIF,
-                  fontSize: 'clamp(1.5rem, 2.6vw, 2.25rem)',
-                  fontWeight: 400,
-                }}
-              >
-                &ldquo;{results.testimonial.quote}&rdquo;
-              </p>
-              <footer className="mt-6 text-[10px] font-mono uppercase tracking-[0.3em] text-[#A3D1FF]">
-, {results.testimonial.author} · {results.testimonial.role}
-              </footer>
-            </motion.blockquote>
+            <Block label="Client's feedback">
+              <blockquote className="m-0">
+                <p className="m-0 text-white text-xl md:text-2xl leading-snug">&ldquo;{results.testimonial.quote}&rdquo;</p>
+                <footer className="mt-7 flex flex-wrap items-center gap-3">
+                  <span className="text-[#A3D1FF] text-lg" style={{ fontFamily: HEAD }}>{results.testimonial.author}</span>
+                  {results.testimonial.role.split(',').map((r) => <Pill key={r}>{r.trim()}</Pill>)}
+                </footer>
+              </blockquote>
+            </Block>
           )}
         </div>
-      </section>
+      </main>
 
-      {/* ============== NEXT CASE ============== */}
-      <section className="relative py-20 md:py-24 px-6 lg:px-12 bg-black border-t border-white/10">
-        <div className="max-w-7xl mx-auto">
-          <ChapterMarker number="Next" label="Another Case File" />
-          <Link
-            href={next.url}
-            className="group relative grid md:grid-cols-[1fr_1.4fr] gap-8 md:gap-12 items-center border border-white/10 hover:border-white/30 transition-colors overflow-hidden"
-          >
-            <div className="relative aspect-[4/3] md:aspect-auto md:h-full overflow-hidden bg-[#0f1116]">
-              <img
-                src={next.image}
-                alt={next.title}
-                className="absolute inset-0 w-full h-full object-cover group-hover:scale-[1.04] transition-transform duration-[900ms]"
-              />
-              <div
-                className="absolute inset-0"
-                style={{
-                  background:
-                    'linear-gradient(90deg, rgba(0,0,0,0.0) 0%, rgba(0,0,0,0.5) 100%)',
-                }}
-              />
-            </div>
-            <div className="p-8 md:p-12">
-              <h3
-                className="text-white leading-[1.0] tracking-[-0.03em] mb-6 group-hover:text-[#A3D1FF] transition-colors"
-                style={{
-                  fontFamily: SERIF,
-                  fontSize: 'clamp(2rem, 5vw, 4rem)',
-                  fontWeight: 500,
-                }}
-              >
-                {next.title}
-              </h3>
-              <div className="inline-flex items-center gap-2 text-white font-medium border-b border-white/30 group-hover:border-[#A3D1FF] pb-1 transition-colors">
-                Read the file
-                <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+      {/* ============== NEXT PROJECT ============== */}
+      <section className="px-6 lg:px-12 pt-16 md:pt-24">
+        <div className="max-w-6xl mx-auto">
+          <div className="flex items-end justify-between mb-6">
+            <h2 className="m-0 uppercase text-white leading-none" style={{ fontFamily: HEAD, fontSize: 'clamp(1.9rem, 3.2vw, 2.9rem)', fontWeight: 500 }}>
+              Next project
+            </h2>
+            <Link href="/work/case-studies/" className="font-mono text-[11px] uppercase tracking-[0.2em] text-white/55 hover:text-white">
+              All case studies
+            </Link>
+          </div>
+          <Link href={next.url} className="group grid md:grid-cols-2 gap-3 md:gap-4 rounded-[24px] bg-[#141414] p-3 md:p-4 hover:bg-[#1a1a1a] transition-colors">
+            <div className="flex flex-col justify-between p-4 md:p-6 order-2 md:order-1">
+              <div>
+                <div className="flex flex-wrap gap-1.5 mb-6">
+                  {(nextP ? [nextP.category, ...nextP.tags.slice(0, 2)] : ['Case file']).map((t, i) => <Pill key={t} accent={i === 0}>{t}</Pill>)}
+                </div>
+                <h3 className="m-0 uppercase text-white leading-[0.95] group-hover:text-[#A3D1FF] transition-colors" style={{ fontFamily: HEAD, fontSize: 'clamp(2rem, 4.5vw, 3.75rem)', fontWeight: 500 }}>
+                  {next.title}
+                </h3>
               </div>
+              <div className="mt-10">
+                {nextP && <p className="text-white/60 leading-relaxed max-w-md mb-6">{nextP.blurb}</p>}
+                <span className="ui-btn ui-btn-primary">
+                  See project <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                </span>
+              </div>
+            </div>
+            <div className="relative order-1 md:order-2 aspect-[4/3] md:aspect-auto md:min-h-[420px] overflow-hidden rounded-[18px] bg-[#1d1d1d]">
+              <Img src={nextP?.image || next.image} alt={`${next.title} website`} className="absolute inset-0 h-full w-full object-cover object-top transition-transform duration-[900ms] group-hover:scale-[1.04]" />
             </div>
           </Link>
         </div>
       </section>
 
-      {/* ============== COLOPHON ============== */}
-      <section className="relative bg-[#0a0a0a] py-24 md:py-32 px-6 lg:px-12 border-t border-white/10 overflow-hidden">
-        <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-[#A3D1FF]/5 blur-[120px] rounded-full pointer-events-none" />
-        <div className="max-w-7xl mx-auto relative">
-          <ChapterMarker number="Colophon" label="Let's build together." />
-          <motion.h2
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: '-80px' }}
-            transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-            className="text-white leading-[0.95] tracking-[-0.04em] mb-10 max-w-5xl"
-            style={{
-              fontFamily: SERIF,
-              fontSize: 'clamp(2.5rem, 6vw, 5.5rem)',
-              fontWeight: 400,
-            }}
-          >
-            Want to be the{' '}
-            <em className="italic text-[#A3D1FF]">next case file?</em>
-          </motion.h2>
-          <div className="flex flex-wrap items-center gap-6">
-            <Link
-              href="/contact/"
-              className="inline-flex items-center gap-3 bg-white text-black font-medium px-8 py-4 hover:bg-[#A3D1FF] transition-colors group"
-            >
-              <Mail className="w-4 h-4" />
-              Book a Strategy Call
-              <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+      {/* ============== CTA (FlyStudio "Let's talk about your project") ============== */}
+      <section className="px-6 lg:px-12 py-16 md:py-24">
+        <motion.div {...reveal} className="relative max-w-7xl mx-auto overflow-hidden rounded-[28px] bg-[#A3D1FF] px-6 py-20 md:py-28 text-center text-black">
+          <div className="flex flex-wrap justify-center gap-1.5 mb-6">
+            <span className="rounded-full bg-black/10 px-3 py-1 font-mono text-[11px] uppercase tracking-[0.12em]">Taking bookings</span>
+            <span className="rounded-full bg-black/10 px-3 py-1 font-mono text-[11px] uppercase tracking-[0.12em]">2026</span>
+          </div>
+          <h2 className="m-0 uppercase leading-[0.92] mx-auto max-w-4xl" style={{ color: '#000', fontFamily: HEAD, fontSize: 'clamp(2.5rem, 7vw, 6rem)', fontWeight: 500 }}>
+            Want to be the next case file?
+          </h2>
+          <div className="mt-9 flex flex-wrap justify-center gap-3">
+            <Link href="/contact/" className="ui-btn ui-btn-ink">
+              Book a strategy call <ArrowUpRight className="w-4 h-4" />
             </Link>
-            <Link
-              href="/work/"
-              className="inline-flex items-center gap-2 text-white font-medium border border-white/20 hover:border-white/60 px-8 py-4 transition-colors"
-            >
-              See all cases
-              <ArrowUpRight className="w-4 h-4" />
+            <Link href="/work/" className="ui-btn bg-black/10 text-black hover:bg-black/15">
+              See all work
             </Link>
           </div>
-        </div>
+        </motion.div>
       </section>
-    </>
+    </div>
   );
 }

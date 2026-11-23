@@ -201,7 +201,7 @@ export default function ConsentBanner() {
                 <button
                   onClick={acceptAll}
                   disabled={saving}
-                  className="flex-1 bg-[#A3D1FF] text-black font-semibold text-sm py-2.5 px-5 hover:bg-[#92bce6] transition-colors disabled:opacity-50"
+                  className="ui-btn ui-btn-primary flex-1 disabled:opacity-50"
                 >
                   Accept All
                 </button>
@@ -210,7 +210,7 @@ export default function ConsentBanner() {
                   <button
                     onClick={() => savePreferences(customPrefs)}
                     disabled={saving}
-                    className="flex-1 bg-white/10 text-white font-medium text-sm py-2.5 px-5 hover:bg-white/15 transition-colors disabled:opacity-50"
+                    className="ui-btn ui-btn-secondary flex-1 disabled:opacity-50"
                   >
                     Save Preferences
                   </button>
@@ -218,7 +218,7 @@ export default function ConsentBanner() {
                   <button
                     onClick={rejectAll}
                     disabled={saving}
-                    className="flex-1 bg-white/10 text-white font-medium text-sm py-2.5 px-5 hover:bg-white/15 transition-colors disabled:opacity-50"
+                    className="ui-btn ui-btn-secondary flex-1 disabled:opacity-50"
                   >
                     Reject All
                   </button>

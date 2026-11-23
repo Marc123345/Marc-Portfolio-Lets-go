@@ -113,7 +113,7 @@ export default function WebsiteNotADACompliantPage() {
             <p>In most jurisdictions, yes, private businesses serving the public are expected to meet ADA standards, and courts in New York, California, and Florida have been especially aggressive, treating websites as extensions of physical locations or as public accommodations in their own right.</p>
             <p>The landmark case is <a href="https://en.wikipedia.org/wiki/Robles_v._Domino%27s_Pizza">Robles v. Domino&rsquo;s Pizza</a> (Ninth Circuit, 2019). Guillermo Robles, who is blind, alleged that Domino&rsquo;s website and app were unusable with a screen reader and blocked him from ordering. The court confirmed ADA coverage for websites under Title III, and Domino&rsquo;s settled in 2022, committing to WCAG conformance and internal accessibility training.</p>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-2">What this means for your business</h4>
               <p className="text-gray-300 mb-0">Small businesses are not exempt, single-location restaurants, salons, and local shops get demand letters regularly. There is no one-time &ldquo;ADA website certificate&rdquo;; compliance means ongoing conformance to a recognized standard like WCAG 2.1 or 2.2 AA. The obligation holds regardless of your size or whether you have a storefront, and liability does not depend on intent.</p>
             </div>
@@ -198,7 +198,7 @@ export default function WebsiteNotADACompliantPage() {
               <li>Choose accessible themes and plugins from the start, and require accessibility from vendors.</li>
             </ul>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-2">Financial help exists</h4>
               <p className="text-gray-300 mb-0">The Disabled Access Credit (IRS Form 8826) lets eligible small businesses, those under $1 million in revenue or with 30 or fewer full-time employees, claim up to $5,000 per tax year for accessibility improvements. It can offset audit costs, developer time, or accessible-plugin licenses. Building on an accessible foundation is always cheaper than retrofitting, so ask whether a theme or tool has been tested against WCAG before you buy.</p>
             </div>

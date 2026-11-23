@@ -28,7 +28,7 @@ const PROBLEMS: Problem[] = [
     proof: {
       title: 'Friedman & Cohen',
       href: '/work/case-studies/friedman-cohen/',
-      image: 'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%201%20-%201x1(3).png?updatedAt=1767539579776',
+      image: '/images/case-studies/friedman-cohen.jpg',
       stat: '100+',
       label: 'year-old brand, rebuilt',
     },
@@ -39,7 +39,7 @@ const PROBLEMS: Problem[] = [
     proof: {
       title: 'A Secure Annapolis',
       href: '/work/case-studies/secure-annapolis/',
-      image: 'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%201%20-%201x1(2).png?updatedAt=1767539579194',
+      image: '/images/case-studies/secure-annapolis.jpg',
       stat: '+150%',
       label: 'leads',
     },
@@ -50,7 +50,7 @@ const PROBLEMS: Problem[] = [
     proof: {
       title: 'Paving Leads',
       href: '/work/case-studies/paving-leads/',
-      image: 'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%204%20-%2016_9.png?updatedAt=1767539579010',
+      image: '/images/case-studies/paving-leads.jpg',
       stat: '98',
       label: 'Lighthouse, up from failing',
     },
@@ -72,7 +72,7 @@ const PROBLEMS: Problem[] = [
     proof: {
       title: 'iLight Care',
       href: '/work/case-studies/ilight/',
-      image: 'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%201%20-%201x1(5).png?updatedAt=1767539579818',
+      image: '/images/case-studies/ilight.jpg',
       stat: '6 wk',
       label: 'vision to MVP',
     },
@@ -184,7 +184,7 @@ function Card({
                 <span className="block text-[10px] font-mono uppercase tracking-[0.3em] text-white/40 mb-4">Start here · free</span>
                 <Link
                   href={p.cta.href}
-                  className="group relative block border border-[#A3D1FF]/40 bg-[#A3D1FF]/[0.06] hover:bg-[#A3D1FF]/[0.12] p-7 transition-colors"
+                  className="group relative block rounded-[20px] border border-[#A3D1FF]/40 bg-[#A3D1FF]/[0.06] hover:bg-[#A3D1FF]/[0.12] p-7 transition-colors"
                 >
                   <span className="block text-white leading-tight mb-6" style={{ fontFamily: SERIF, fontSize: 'clamp(1.6rem, 2.6vw, 2.25rem)' }}>
                     {p.cta.text}

@@ -8,7 +8,7 @@ const BASE = 'https://www.marcfriedmanportfolio.com';
  * `lastModified` is the date that page's content actually changed, as
  * YYYY-MM-DD.
  *
- * It used to be `new Date()` for every entry, which stamped all 93 URLs with
+ * It used to be `new Date()` for every entry, which stamped every URL with
  * the build time. That tells Google the entire site changed on every deploy,
  * which is false, and the documented consequence is that Google starts
  * ignoring the field altogether. Blog posts now carry their real publish
@@ -25,7 +25,7 @@ const entries: Entry[] = [
   { path: 'work', priority: 0.9 },
   { path: 'work/case-studies', priority: 0.9 },
   { path: 'services', priority: 0.9 },
-  { path: 'services/b2b-web-design', priority: 0.9 },
+  { path: 'services/b2b-web-design', priority: 0.9, lastModified: '2026-11-17' },
   { path: 'services/web-development', priority: 0.9 },
   { path: 'services/design', priority: 0.9 },
   { path: 'services/design-systems', priority: 0.9 },
@@ -69,10 +69,11 @@ const entries: Entry[] = [
   { path: 'work/case-studies/paving-leads', priority: 0.8 },
   { path: 'work/case-studies/tar-chip-paving', priority: 0.8 },
   { path: 'work/case-studies/h2h-marketing', priority: 0.8 },
-  { path: 'work/case-studies/ask-africa', priority: 0.8 },
+  { path: 'work/case-studies/ask-africa', priority: 0.8, lastModified: '2026-11-21' },
   { path: 'work/case-studies/sentinel-ds', priority: 0.8 },
 
   // Blog posts
+  { path: 'blog/gohighlevel-leadconnector-website-leads', priority: 0.8, lastModified: '2026-11-17' },
   { path: 'blog/experimental-navigation-beyond-the-navbar', priority: 0.8, lastModified: '2026-10-29' },
   { path: 'blog/machine-experience-mx-lightweight-frontends', priority: 0.8, lastModified: '2026-10-29' },
   { path: 'blog/ai-copilot-ux-transparent-optional', priority: 0.8, lastModified: '2026-10-29' },

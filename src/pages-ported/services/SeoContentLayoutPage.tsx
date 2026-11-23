@@ -154,14 +154,14 @@ export default function SeoContentLayoutPage() {
               href: '/work/case-studies/paving-leads/',
               title: 'Paving Leads',
               blurb: 'Failing Core Web Vitals → #1 on Google, leads doubled in month one.',
-              image: 'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%204%20-%2016_9.png?updatedAt=1767539579010',
+              image: '/images/case-studies/paving-leads.jpg',
               tags: ['SEO', 'Lead Gen'],
             },
             {
               href: '/work/case-studies/secure-annapolis/',
               title: 'A Secure Annapolis',
               blurb: 'Local lead engine, top-3 maps, 85% mobile conversion.',
-              image: 'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%201%20-%201x1(2).png?updatedAt=1767539579194',
+              image: '/images/case-studies/secure-annapolis.jpg',
               tags: ['Local SEO', 'Conversion'],
             },
           ]}

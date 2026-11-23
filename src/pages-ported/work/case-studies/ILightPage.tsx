@@ -15,7 +15,7 @@ const config: CaseStudyConfig = {
     </>
   ),
   heroImage:
-    'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%201%20-%201x1(5).png?updatedAt=1767539579818',
+    '/images/case-studies/ilight.jpg',
   metaStats: [
     { value: '6wk', label: 'Vision → MVP' },
     { value: '4-in-1', label: 'Deliverables' },
@@ -99,29 +99,8 @@ const config: CaseStudyConfig = {
   gallery: [
     {
       image:
-        'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%204%20-%2016x9(4).png?updatedAt=1767539579763',
-      caption: 'Marketing site',
-      wide: true,
-    },
-    {
-      image:
-        'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%201%20-%201x1(5).png?updatedAt=1767539579818',
+        '/images/case-studies/ilight.jpg',
       caption: 'Product surface',
-    },
-    {
-      image:
-        'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%203%20-%2016x9(5).png?updatedAt=1767539579921',
-      caption: 'Dark theme',
-    },
-    {
-      image:
-        'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/download%20(60).png',
-      caption: 'SaaS dashboard',
-    },
-    {
-      image:
-        'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/download%20(58).png',
-      caption: 'Analytics view',
     },
   ],
 

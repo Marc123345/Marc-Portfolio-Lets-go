@@ -163,7 +163,7 @@ export default function WebsiteAnalyzer() {
         <button
           type="submit"
           disabled={loading || !url.trim()}
-          className="inline-flex items-center justify-center gap-2 bg-white text-black font-semibold px-7 py-4 hover:bg-[#A3D1FF] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+          className="ui-btn ui-btn-primary ui-btn-lg justify-center disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {loading ? <Loader2 className="w-4 h-4 animate-spin" /> : <Gauge className="w-4 h-4" />}
           {loading ? 'Analyzing…' : 'Analyze'}
@@ -230,7 +230,7 @@ export default function WebsiteAnalyzer() {
             </p>
             <Link
               href="/free-website-analyzer"
-              className="group inline-flex items-center gap-2 bg-white text-black text-sm font-semibold px-5 py-3 hover:bg-[#A3D1FF] transition-colors whitespace-nowrap"
+              className="ui-btn ui-btn-primary ui-btn-sm group whitespace-nowrap"
             >
               Get a Human Audit
               <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />

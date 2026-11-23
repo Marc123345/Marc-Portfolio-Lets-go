@@ -207,7 +207,7 @@ export default function DesignPage() {
         bg="bg-[#0a0a0a]"
       >
         {/* Practitioner block, the person behind the work (Experience signal) */}
-        <div className="mb-14 flex flex-col sm:flex-row sm:items-center gap-5 border border-white/10 bg-[#111418] p-6 md:p-8">
+        <div className="ui-card mb-14 flex flex-col sm:flex-row sm:items-center gap-5 p-6 md:p-8">
           <img
             src={MARC_PORTRAIT}
             alt="Marc Friedman, designer and developer"
@@ -266,7 +266,7 @@ export default function DesignPage() {
               title: 'iLight Care',
               blurb: 'Brand + product + pitch deck for an AI-powered mental health startup.',
               image:
-                'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%201%20-%201x1(5).png?updatedAt=1767539579818',
+                '/images/case-studies/ilight.jpg',
               tags: ['Product Design', 'AI'],
             },
           ]}
@@ -306,7 +306,7 @@ export default function DesignPage() {
               href={a.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="border border-white/15 px-3 py-1.5 text-white/70 hover:border-[#A3D1FF]/60 hover:text-white transition-colors"
+              className="ui-pill hover:bg-[#232323] hover:text-white transition-colors"
             >
               {a.label}
             </a>

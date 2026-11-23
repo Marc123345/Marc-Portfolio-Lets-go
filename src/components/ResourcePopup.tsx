@@ -153,7 +153,7 @@ export default function ResourcePopup() {
               <Link
                 href="/resources"
                 onClick={dismiss}
-                className="group inline-flex w-full items-center justify-center gap-2 bg-white text-black text-sm font-semibold px-6 py-3.5 hover:bg-[#A3D1FF] transition-colors"
+                className="ui-btn ui-btn-primary group w-full justify-center"
               >
                 Get the Free Guide
                 <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />

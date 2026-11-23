@@ -132,7 +132,7 @@ export default function ConversationalUIChatInterfaces() {
 
             <p>Conversational UI (CUI) is any interface where users interact through natural language, text or voice, rather than menus, buttons, and forms. It encompasses a wide spectrum:</p>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8 not-prose">
+            <div className="ui-card p-6 my-8 not-prose">
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                 {[
                   { label: 'Rule-Based Bots', desc: 'Fixed decision trees, keyword matching, scripted responses', color: 'border-gray-700' },
@@ -155,7 +155,7 @@ export default function ConversationalUIChatInterfaces() {
 
             <p>Chat interfaces aren't inherently good or bad, they're appropriate or inappropriate for a given context. There are several situations where conversational design delivers real, measurable UX improvement.</p>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8 not-prose">
+            <div className="ui-card p-6 my-8 not-prose">
               <div className="space-y-4">
                 {[
                   {
@@ -195,7 +195,7 @@ export default function ConversationalUIChatInterfaces() {
               </div>
             </div>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8 not-prose">
+            <div className="ui-card p-6 my-8 not-prose">
               <p className="text-[#A3D1FF] font-semibold text-sm mb-2">Real-world benchmark</p>
               <p className="text-white text-sm leading-relaxed">
                 Intercom's data on conversational lead qualification flows found 35–40% higher completion rates compared to traditional multi-field forms. The difference wasn't the amount of information collected, it was the perceived effort and the sense of being guided rather than tested.
@@ -206,7 +206,7 @@ export default function ConversationalUIChatInterfaces() {
 
             <p>The honest truth is that most deployed chatbots make the user experience worse, not better. Here are the failure patterns that show up most consistently.</p>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8 not-prose">
+            <div className="ui-card p-6 my-8 not-prose">
               <div className="space-y-6">
                 <div className="border-l-2 border-red-500/40 pl-5">
                   <p className="text-white font-semibold mb-2">1. Replacing faster direct navigation</p>
@@ -261,7 +261,7 @@ export default function ConversationalUIChatInterfaces() {
 
             <p>Not all conversational interfaces are alike. Understanding where a given implementation falls on this spectrum shapes every design decision.</p>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8 overflow-x-auto not-prose">
+            <div className="ui-card p-6 my-8 overflow-x-auto not-prose">
               <table className="w-full text-sm">
                 <thead>
                   <tr className="border-b border-white/10">
@@ -292,7 +292,7 @@ export default function ConversationalUIChatInterfaces() {
 
             <p>When you've established that a chat interface is genuinely the right tool, these principles determine whether it will be a quality experience or a liability.</p>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8 not-prose">
+            <div className="ui-card p-6 my-8 not-prose">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {[
                   { title: "Show, don't ask", detail: "Where possible, surface relevant options rather than making users describe what they want from scratch. Quick reply chips, smart suggestions, and contextual prompts reduce the blank-slate problem dramatically." },
@@ -314,7 +314,7 @@ export default function ConversationalUIChatInterfaces() {
 
             <p>Before committing to conversational UI, run through this evaluation honestly. The goal isn't to avoid chat interfaces, it's to use them where they provide genuine value.</p>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8 not-prose">
+            <div className="ui-card p-6 my-8 not-prose">
               <div className="space-y-3">
                 {[
                   { question: 'Can users accomplish this task faster with direct navigation?', ifYes: 'Build or improve the direct path. Add chat as a supplement, not a replacement.', signal: 'warning' },
@@ -345,7 +345,7 @@ export default function ConversationalUIChatInterfaces() {
 
             <p>This is the right model for most products. It respects user expertise and preference while extending the interface's capabilities. It also de-risks AI integration: if the conversational layer fails or produces a bad response, the underlying product still works.</p>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8 not-prose">
+            <div className="ui-card p-6 my-8 not-prose">
               <p className="text-[#A3D1FF] font-semibold mb-4 text-sm uppercase tracking-wide">Hybrid architecture pattern</p>
               <div className="space-y-3 text-sm">
                 {[
@@ -368,7 +368,7 @@ export default function ConversationalUIChatInterfaces() {
 
             <p>The metrics that actually matter:</p>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8 not-prose">
+            <div className="ui-card p-6 my-8 not-prose">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {[
                   { metric: 'Task completion rate', desc: 'Did the user accomplish what they came to do via the conversational interface? This is the primary success metric. Anything below 60% for well-defined task types warrants redesign.' },

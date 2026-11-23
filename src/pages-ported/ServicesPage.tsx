@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import ArcSlider from '@/components/ArcSlider';
+import InertiaServiceCards from '@/components/InertiaServiceCards';
 import { SERVICES } from '@/data/services';
 import { ChapterMarker, SERIF } from '@/components/ServiceEditorial';
 import SilkCanvas from '@/components/SilkCanvas';
@@ -29,7 +29,7 @@ export default function ServicesPage() {
           <div className="hidden md:block absolute right-0 bottom-0">
             <SpinBadge text="START A PROJECT • TAKING BOOKINGS • " href="/contact/" label="Start a project" size={116} />
           </div>
-          <ChapterMarker number="Chapter · Services" label="11 Disciplines · 2026" />
+          <ChapterMarker number="Chapter · Services" label="12 Disciplines · 2026" />
 
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
@@ -51,18 +51,18 @@ export default function ServicesPage() {
             transition={{ duration: 0.7, delay: 0.3 }}
             className="text-xl md:text-2xl text-white/70 max-w-2xl leading-snug"
           >
-            Drag, click, or use the arrows. Each card opens the full service
-            page.
+            Twelve things I build and run for clients. Each card opens the
+            full service page.
           </motion.p>
         </div>
       </section>
 
-      {/* ===================== ARC SLIDER ===================== */}
+      {/* ===================== SERVICE CARDS ===================== */}
       <section className="relative bg-black py-20 md:py-28 px-6 lg:px-12 overflow-hidden">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1100px] h-[700px] bg-[#A3D1FF]/8 rounded-full blur-[160px] pointer-events-none" />
         <ScrollSpiral className="absolute -top-10 right-0 hidden xl:block opacity-90" size={260} />
         <div className="max-w-7xl mx-auto relative">
-          <ArcSlider cards={SERVICES} />
+          <InertiaServiceCards cards={SERVICES} />
         </div>
       </section>
 

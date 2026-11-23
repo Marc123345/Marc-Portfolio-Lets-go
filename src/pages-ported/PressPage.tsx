@@ -228,7 +228,7 @@ export default function PressPage() {
           
           <div className="grid md:grid-cols-4 gap-6">
             <motion.div 
-              className="bg-[#2d3035] p-6 border border-white/10 hover:border-[#A3D1FF] transition-all text-center group"
+              className="ui-card bg-[#2d3035] p-6 hover:bg-[#1a1a1a] transition-all text-center group"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
@@ -240,7 +240,7 @@ export default function PressPage() {
             </motion.div>
             
             <motion.div 
-              className="bg-[#2d3035] p-6 border border-white/10 hover:border-[#A3D1FF] transition-all text-center group"
+              className="ui-card bg-[#2d3035] p-6 hover:bg-[#1a1a1a] transition-all text-center group"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
@@ -252,7 +252,7 @@ export default function PressPage() {
             </motion.div>
             
             <motion.div 
-              className="bg-[#2d3035] p-6 border border-white/10 hover:border-[#A3D1FF] transition-all text-center group"
+              className="ui-card bg-[#2d3035] p-6 hover:bg-[#1a1a1a] transition-all text-center group"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
@@ -264,7 +264,7 @@ export default function PressPage() {
             </motion.div>
             
             <motion.div 
-              className="bg-[#2d3035] p-6 border border-white/10 hover:border-[#A3D1FF] transition-all text-center group"
+              className="ui-card bg-[#2d3035] p-6 hover:bg-[#1a1a1a] transition-all text-center group"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}

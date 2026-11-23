@@ -41,7 +41,7 @@ export default function ConnectedSteps({ steps, className = '' }: ConnectedSteps
               damping: 30,
             }}
             viewport={{ once: true }}
-            className="flex items-start gap-8 bg-[#1b1b1b] border border-white/10 p-10 rounded-3xl hover:border-[#A3D1FF] transition-all duration-300 relative"
+            className="ui-card flex items-start gap-8 p-10 hover:bg-[#1a1a1a] transition-all duration-300 relative"
           >
             <motion.div
               className="text-6xl font-black text-[#A3D1FF] opacity-20"

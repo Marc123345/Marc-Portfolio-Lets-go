@@ -560,7 +560,7 @@ export default function AccessibilityPanel({ className = '' }: AccessibilityPane
               {/* Reset Button */}
               <button
                 onClick={resetSettings}
-                className="w-full flex items-center justify-center px-4 py-3 bg-[#2d3035] text-white hover:bg-[#3d4045] transition-colors text-sm"
+                className="ui-btn ui-btn-secondary w-full"
               >
                 <RotateCcw className="w-4 h-4 mr-2" />
                 {t.resetSettings}

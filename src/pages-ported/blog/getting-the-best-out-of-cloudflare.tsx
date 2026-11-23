@@ -100,7 +100,7 @@ export default function GettingTheBestOutOfCloudflarePage() {
               <li><strong>HTML Minification:</strong> Reduces HTML file sizes by removing extra spaces and comments</li>
             </ul>
             
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-2 flex items-center">
                 <Settings className="w-5 h-5 text-[#A3D1FF] mr-2" />
                 How to Enable Auto Minification
@@ -133,7 +133,7 @@ export default function GettingTheBestOutOfCloudflarePage() {
               <li><strong>Cache Everything:</strong> Enable caching for HTML pages (use with caution for dynamic content)</li>
             </ul>
             
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-2">Recommended Cache Settings</h4>
               <ul className="text-gray-300 space-y-2">
                 <li>• <strong>Static Assets (CSS, JS, Images):</strong> 1 year browser cache, 1 month edge cache</li>
@@ -156,7 +156,7 @@ export default function GettingTheBestOutOfCloudflarePage() {
             
             <p>These features work together to ensure users receive optimally sized and formatted images for their specific device and browser, significantly improving load times especially on mobile devices.</p>
             
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-2">Implementation Example</h4>
               <p className="text-gray-300 mb-4">With image resizing enabled, you can use URL parameters to serve different image sizes:</p>
               <pre className="text-xs text-gray-300 overflow-x-auto">
@@ -191,7 +191,7 @@ export default function GettingTheBestOutOfCloudflarePage() {
               <li><strong>TLS 1.3:</strong> Enable the latest TLS version for improved security and performance</li>
             </ul>
             
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-2 flex items-center">
                 <Shield className="w-5 h-5 text-[#A3D1FF] mr-2" />
                 SSL Configuration Steps
@@ -236,7 +236,7 @@ export default function GettingTheBestOutOfCloudflarePage() {
               <li><strong>Personalization:</strong> Customize content based on user location, device, or other factors</li>
             </ul>
             
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-2">Worker Example: Image Optimization</h4>
               <p className="text-gray-300 mb-4">Here's a simple Worker script that automatically optimizes images based on the requesting device:</p>
               <pre className="text-xs text-gray-300 overflow-x-auto">
@@ -285,7 +285,7 @@ async function handleRequest(request) {
               <li><strong>Security Events:</strong> Monitor blocked threats, bot traffic, and security rule triggers</li>
             </ul>
             
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-2 flex items-center">
                 <BarChart className="w-5 h-5 text-[#A3D1FF] mr-2" />
                 Key Metrics to Monitor
@@ -341,7 +341,7 @@ async function handleRequest(request) {
               <li><strong>Secure Payment Processing:</strong> Implement additional security measures for payment pages</li>
             </ul>
             
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-2">E-commerce Page Rules Example</h4>
               <pre className="text-xs text-gray-300 overflow-x-auto">
 {`/* Cache product pages aggressively */
@@ -397,7 +397,7 @@ example.com/account*
               <li><strong>Monitoring Integration:</strong> Pull Cloudflare metrics into your monitoring systems</li>
             </ul>
             
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-2">API Example: Cache Purging</h4>
               <p className="text-gray-300 mb-4">Automatically purge cache when deploying new content:</p>
               <pre className="text-xs text-gray-300 overflow-x-auto">
@@ -460,7 +460,7 @@ example.com/account*
               <li><strong>Significant SEO improvements</strong> due to faster load times and better Core Web Vitals scores</li>
             </ul>
             
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-2">Case Study: Client Website Optimization</h4>
               <p className="text-gray-300">After implementing comprehensive Cloudflare optimizations for a client's e-commerce site, we achieved a 65% reduction in page load times, a 40% increase in conversion rates, and a 90% reduction in security incidents. The combination of performance and security improvements created a measurably better user experience that directly impacted business metrics.</p>
             </div>

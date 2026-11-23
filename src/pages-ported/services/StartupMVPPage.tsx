@@ -182,7 +182,7 @@ export default function StartupMVPPage() {
               title: 'iLight Care',
               blurb: 'Brand, website, MVP platform, and pitch deck, shipped in under 6 weeks.',
               image:
-                'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%201%20-%201x1(5).png?updatedAt=1767539579818',
+                '/images/case-studies/ilight.jpg',
               tags: ['MVP', 'AI', 'Healthcare'],
             },
             {

@@ -113,7 +113,7 @@ export default function ContextDrivenDesignDecisionsPage() {
 
             <div className="space-y-8 my-12">
               <motion.div
-                className="bg-[#1a2332]/30 border border-white/10 p-6"
+                className="ui-card bg-[#1a2332]/30 p-6"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -138,7 +138,7 @@ export default function ContextDrivenDesignDecisionsPage() {
               </motion.div>
 
               <motion.div
-                className="bg-[#1a2332]/30 border border-white/10 p-6"
+                className="ui-card bg-[#1a2332]/30 p-6"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -163,7 +163,7 @@ export default function ContextDrivenDesignDecisionsPage() {
               </motion.div>
 
               <motion.div
-                className="bg-[#1a2332]/30 border border-white/10 p-6"
+                className="ui-card bg-[#1a2332]/30 p-6"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -188,7 +188,7 @@ export default function ContextDrivenDesignDecisionsPage() {
               </motion.div>
 
               <motion.div
-                className="bg-[#1a2332]/30 border border-white/10 p-6"
+                className="ui-card bg-[#1a2332]/30 p-6"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -356,7 +356,7 @@ export default function ContextDrivenDesignDecisionsPage() {
               Create a checklist you run through for every project. Mine looks like this:
             </p>
 
-            <div className="bg-[#0a0a0a] border border-white/10 p-6 my-6 font-mono text-sm">
+            <div className="ui-card p-6 my-6 font-mono text-sm">
               <div className="space-y-4 text-gray-300">
                 <div>
                   <div className="text-[#A3D1FF] mb-2">[ ] USER RESEARCH</div>
@@ -479,7 +479,7 @@ export default function ContextDrivenDesignDecisionsPage() {
             </p>
 
             <div className="grid md:grid-cols-2 gap-8 my-12">
-              <div className="bg-[#1a2332]/30 border border-white/10 p-6">
+              <div className="ui-card bg-[#1a2332]/30 p-6">
                 <h4 className="text-xl font-bold text-white mb-4">Revolut (Digital Bank)</h4>
                 <div className="space-y-4 text-sm text-gray-300">
                   <div>
@@ -504,7 +504,7 @@ export default function ContextDrivenDesignDecisionsPage() {
                 </div>
               </div>
 
-              <div className="bg-[#1a2332]/30 border border-white/10 p-6">
+              <div className="ui-card bg-[#1a2332]/30 p-6">
                 <h4 className="text-xl font-bold text-white mb-4">Chase Bank (Traditional Bank)</h4>
                 <div className="space-y-4 text-sm text-gray-300">
                   <div>
@@ -617,7 +617,7 @@ export default function ContextDrivenDesignDecisionsPage() {
             </p>
 
             <div className="space-y-8 my-12">
-              <div className="bg-[#0a0a0a] border border-white/10 p-6">
+              <div className="ui-card p-6">
                 <h4 className="text-lg font-bold text-white mb-3">Scenario 1: E-commerce Checkout</h4>
                 <p className="text-gray-300 text-sm mb-4">
                   You're redesigning checkout for an online jewelry store. Average order value is $2,500. Users are 80% female, 35-55 years old. Most purchases happen on desktop (70%). Current conversion rate is 2.1%.
@@ -627,7 +627,7 @@ export default function ContextDrivenDesignDecisionsPage() {
                 </p>
               </div>
 
-              <div className="bg-[#0a0a0a] border border-white/10 p-6">
+              <div className="ui-card p-6">
                 <h4 className="text-lg font-bold text-white mb-3">Scenario 2: SaaS Dashboard</h4>
                 <p className="text-gray-300 text-sm mb-4">
                   You're building a dashboard for project managers. Users log in daily, spend 30-45 minutes per session. They need to track 5-15 active projects simultaneously. Current pain point: "I can't see what's urgent at a glance."
@@ -637,7 +637,7 @@ export default function ContextDrivenDesignDecisionsPage() {
                 </p>
               </div>
 
-              <div className="bg-[#0a0a0a] border border-white/10 p-6">
+              <div className="ui-card p-6">
                 <h4 className="text-lg font-bold text-white mb-3">Scenario 3: Healthcare App</h4>
                 <p className="text-gray-300 text-sm mb-4">
                   You're designing a medication reminder app for elderly patients (65+). Many have limited tech experience. They take 4-8 medications daily at different times. Missed doses can be dangerous. HIPAA compliance is required.
@@ -689,7 +689,7 @@ export default function ContextDrivenDesignDecisionsPage() {
               For the next week, do this exercise:
             </p>
 
-            <div className="bg-[#1a2332]/30 border border-white/10 p-6 my-8">
+            <div className="ui-card bg-[#1a2332]/30 p-6 my-8">
               <ol className="space-y-4 text-gray-300 list-decimal list-inside">
                 <li>Pick a product you use daily (app, website, tool)</li>
                 <li>Write down 3-5 design decisions you notice</li>

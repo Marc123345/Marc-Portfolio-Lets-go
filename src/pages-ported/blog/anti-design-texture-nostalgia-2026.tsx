@@ -146,7 +146,7 @@ export default function AntiDesignTextureNostalgiaPage() {
 
             <p>My own site does this in a small way. The hero sections sit on an SVG noise layer that you mostly feel rather than see. It costs almost nothing, because it is generated in the browser rather than shipped as an image:</p>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-2">A grain overlay in a few lines</h4>
               <pre className="text-xs text-gray-300 overflow-x-auto">
 {`.grain::after {
@@ -182,7 +182,7 @@ export default function AntiDesignTextureNostalgiaPage() {
 
             <p>It is also the easiest of these trends to get wrong. Some designers would happily see gimmicky cursors disappear, and I understand why. A cursor that lags behind the real pointer, hides the native one, or sticks around on a phone where there is no cursor at all is just friction with a nice animation.</p>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-2 flex items-center">
                 <MousePointer2 className="w-5 h-5 text-[#A3D1FF] mr-2" />
                 Rules I use for custom cursors

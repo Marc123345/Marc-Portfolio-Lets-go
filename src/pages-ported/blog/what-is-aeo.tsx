@@ -137,7 +137,7 @@ export default function WhatIsAEOPage() {
 
             <p>The common thread: none of these platforms work like traditional search. Users do not type keywords and scan a list of blue links. They ask questions in natural language and receive synthesized answers, sometimes with source citations, sometimes without.</p>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-3 flex items-center">
                 <MessageSquare className="w-5 h-5 text-[#A3D1FF] mr-2" />
                 The Shift in User Behavior
@@ -181,7 +181,7 @@ export default function WhatIsAEOPage() {
               <li><strong>Semantic richness</strong>, content that covers topics comprehensively with clear relationships between concepts</li>
             </ul>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-3 flex items-center">
                 <Target className="w-5 h-5 text-[#A3D1FF] mr-2" />
                 Key Distinction
@@ -253,7 +253,7 @@ export default function WhatIsAEOPage() {
 
             <p>AI answer engines can detect content age and prefer recently published or recently updated content for time-sensitive queries. Content that references current data, recent developments, and up-to-date examples signals active maintenance and ongoing relevance.</p>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-3 flex items-center">
                 <Bot className="w-5 h-5 text-[#A3D1FF] mr-2" />
                 How Perplexity Selects Sources
@@ -289,7 +289,7 @@ export default function WhatIsAEOPage() {
 
             <p>The most AEO-effective content format follows a pattern we call "answer-first architecture":</p>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-3 flex items-center">
                 <FileText className="w-5 h-5 text-[#A3D1FF] mr-2" />
                 Answer-First Content Architecture
@@ -377,7 +377,7 @@ export default function WhatIsAEOPage() {
 
             <p>Beyond content strategy, several technical factors influence AEO performance:</p>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-4 flex items-center">
                 <Search className="w-5 h-5 text-[#A3D1FF] mr-2" />
                 Technical AEO Foundations
@@ -433,7 +433,7 @@ export default function WhatIsAEOPage() {
 
             <h2>Getting Started: A 30-Day AEO Action Plan</h2>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-4 flex items-center">
                 <TrendingUp className="w-5 h-5 text-[#A3D1FF] mr-2" />
                 Week-by-Week Plan

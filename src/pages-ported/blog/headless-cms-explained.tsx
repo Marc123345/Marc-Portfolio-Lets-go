@@ -165,7 +165,7 @@ export default function HeadlessCmsExplainedPage() {
 
             <p>In practice that&rsquo;s healthy. It stops a site turning into fifty slightly different hero sections, which is what tends to happen with unlimited page builders. But it does mean you should plan the block library carefully at the start, around the pages your team actually makes.</p>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8 not-prose">
+            <div className="ui-card p-6 my-8 not-prose">
               <h4 className="text-white font-semibold mb-2 flex items-center">
                 <Info className="w-5 h-5 text-[#A3D1FF] mr-2" />
                 The question to ask before you build

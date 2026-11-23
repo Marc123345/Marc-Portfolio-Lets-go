@@ -125,7 +125,7 @@ export default function BoldTypographyEarthyPalettesPage() {
 
             <p>The headings on this site are a fair example: a serif set at weight 400, scaling with <code>clamp(2.75rem, 7.5vw, 6.5rem)</code>, with tight leading and slightly negative tracking. Nothing about it is clever. It is just big, and set carefully.</p>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-2">Oversized display type that survives a phone</h4>
               <pre className="text-xs text-gray-300 overflow-x-auto">
 {`h1 {
@@ -170,7 +170,7 @@ p {
 
             <p>The risk with an earthy palette is that a lot of earth colors sit in the middle of the brightness range, which is exactly where contrast fails. Beautiful sage text on a cream background is often unreadable. Here is a sample palette with real WCAG ratios against a warm off-white:</p>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8 overflow-x-auto not-prose">
+            <div className="ui-card p-6 my-8 overflow-x-auto not-prose">
               <h4 className="text-white font-semibold mb-4 flex items-center">
                 <Palette className="w-5 h-5 text-[#A3D1FF] mr-2" />
                 A sample earthy palette, checked against #F4EFE6

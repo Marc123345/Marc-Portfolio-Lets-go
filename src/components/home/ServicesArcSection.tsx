@@ -2,7 +2,7 @@
 
 import { ScrollSpiral } from '@/components/MotionAccents';
 import { motion } from 'framer-motion';
-import ArcSlider from '@/components/ArcSlider';
+import InertiaServiceCards from '@/components/InertiaServiceCards';
 import { SERVICES } from '@/data/services';
 
 const SERIF = "var(--font-heading)";
@@ -29,7 +29,7 @@ export default function ServicesArcSection() {
       <ScrollSpiral className="absolute -top-20 right-0 hidden xl:block opacity-90" size={280} />
 
       <div className="max-w-7xl mx-auto relative">
-        <ChapterMarker number="Chapter · Services" label="11 Disciplines" />
+        <ChapterMarker number="Chapter · Services" label="12 Disciplines" />
 
         <div className="grid md:grid-cols-[1.2fr_1fr] gap-8 items-end mb-8">
           <motion.h2
@@ -53,12 +53,11 @@ export default function ServicesArcSection() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-white/60 text-lg leading-relaxed"
           >
-            Click any service or use the arrows to explore, each opens the
-            full page. Prefer to spin it? Drag the arc.
+            Each card opens the full service page and the work behind it.
           </motion.p>
         </div>
 
-        <ArcSlider cards={SERVICES} />
+        <InertiaServiceCards cards={SERVICES} />
 
       </div>
     </section>

@@ -88,7 +88,7 @@ export default function YouTubeSection() {
                 href={CHANNEL_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 bg-white text-black font-medium px-6 py-3 hover:bg-[#A3D1FF] transition-colors group"
+                className="ui-btn ui-btn-primary group"
               >
                 <Play className="w-4 h-4 fill-current" />
                 Subscribe on YouTube
@@ -106,7 +106,7 @@ export default function YouTubeSection() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="LinkedIn, Marc Friedman"
-                    className="inline-flex items-center gap-2 text-sm text-white/80 font-medium border border-white/20 px-4 py-2 hover:border-[#A3D1FF] hover:text-[#A3D1FF] transition-colors group"
+                    className="ui-btn ui-btn-secondary ui-btn-sm group"
                   >
                     <Linkedin className="w-3.5 h-3.5" />
                     LinkedIn
@@ -117,7 +117,7 @@ export default function YouTubeSection() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="LinkedIn, Marc Friedman Web Design company page"
-                    className="inline-flex items-center gap-2 text-sm text-white/80 font-medium border border-white/20 px-4 py-2 hover:border-[#A3D1FF] hover:text-[#A3D1FF] transition-colors group"
+                    className="ui-btn ui-btn-secondary ui-btn-sm group"
                   >
                     <Building2 className="w-3.5 h-3.5" />
                     Company page
@@ -128,7 +128,7 @@ export default function YouTubeSection() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Awwwards profile"
-                    className="inline-flex items-center gap-2 text-sm text-white/80 font-medium border border-white/20 px-4 py-2 hover:border-[#A3D1FF] hover:text-[#A3D1FF] transition-colors group"
+                    className="ui-btn ui-btn-secondary ui-btn-sm group"
                   >
                     <Trophy className="w-3.5 h-3.5" />
                     Awwwards

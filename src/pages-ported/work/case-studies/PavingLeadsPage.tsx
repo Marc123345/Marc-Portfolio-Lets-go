@@ -15,7 +15,7 @@ const config: CaseStudyConfig = {
     </>
   ),
   heroImage:
-    'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%204%20-%2016_9.png?updatedAt=1767539579010',
+    '/images/case-studies/paving-leads.jpg',
   metaStats: [
     { value: '#1', label: 'Google Rank' },
     { value: '300%', label: 'Traffic ↑' },
@@ -108,24 +108,8 @@ const config: CaseStudyConfig = {
   gallery: [
     {
       image:
-        'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%204%20-%2016_9.png?updatedAt=1767539579010',
+        '/images/case-studies/paving-leads.jpg',
       caption: 'Homepage',
-      wide: true,
-    },
-    {
-      image:
-        'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%201%20-%201x1(4).png?updatedAt=1767539579396',
-      caption: 'Service detail',
-    },
-    {
-      image:
-        'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%202%20-%201x1(4).png?updatedAt=1767539578842',
-      caption: 'Mobile lead flow',
-    },
-    {
-      image:
-        'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%203%20-%2016x9(4).png?updatedAt=1767539579462',
-      caption: 'Service pages',
       wide: true,
     },
   ],
@@ -134,7 +118,7 @@ const config: CaseStudyConfig = {
     title: 'A Secure Annapolis',
     url: '/work/case-studies/secure-annapolis/',
     image:
-      'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%201%20-%201x1(2).png?updatedAt=1767539579194',
+      '/images/case-studies/secure-annapolis.jpg',
   },
 };
 

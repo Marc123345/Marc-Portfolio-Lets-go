@@ -148,7 +148,7 @@ export default function MicrointeractionsMotion3DPage() {
 
             <p>I&rsquo;ll admit this site has a globe on it. It earns its place, barely, by showing where clients are. But it is loaded lazily, it isn&rsquo;t in the critical path, and the page works fine before it arrives. That is the bar for any 3D on a page that has to perform.</p>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-2 flex items-center">
                 <Gauge className="w-5 h-5 text-[#A3D1FF] mr-2" />
                 Keeping motion and 3D off the critical path

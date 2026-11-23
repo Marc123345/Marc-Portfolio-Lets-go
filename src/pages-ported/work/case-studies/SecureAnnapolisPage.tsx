@@ -15,7 +15,7 @@ const config: CaseStudyConfig = {
     </>
   ),
   heroImage:
-    'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%204%20-%2016x9(2).png?updatedAt=1767539579038',
+    '/images/case-studies/secure-annapolis.jpg',
   metaStats: [
     { value: '+150%', label: 'Leads' },
     { value: 'Top 3', label: 'Local Map' },
@@ -106,25 +106,14 @@ const config: CaseStudyConfig = {
   gallery: [
     {
       image:
-        'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%204%20-%2016x9(2).png?updatedAt=1767539579038',
+        '/images/case-studies/secure-annapolis.jpg',
       caption: 'Homepage, trust-first',
       wide: true,
     },
     {
       image:
-        'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%201%20-%201x1(2).png?updatedAt=1767539579194',
+        '/images/case-studies/secure-annapolis.jpg',
       caption: 'Service detail',
-    },
-    {
-      image:
-        'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%202%20-%201x1(2).png?updatedAt=1767539577859',
-      caption: 'Mobile emergency flow',
-    },
-    {
-      image:
-        'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%203%20-%2016x9(2).png?updatedAt=1767539579940',
-      caption: 'Contact',
-      wide: true,
     },
   ],
 
@@ -132,7 +121,7 @@ const config: CaseStudyConfig = {
     title: 'Tar & Chip Paving',
     url: '/work/case-studies/tar-chip-paving/',
     image:
-      'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%204%20-%2016x9(5).png?updatedAt=1767539578933',
+      '/images/case-studies/tar-chip-paving.jpg',
   },
 };
 

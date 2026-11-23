@@ -146,14 +146,14 @@ export default function LocalSeoPage() {
               href: '/work/case-studies/secure-annapolis/',
               title: 'A Secure Annapolis',
               blurb: 'Locksmith, top 3 in local maps within a month, leads up 150%.',
-              image: 'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%201%20-%201x1(2).png?updatedAt=1767539579194',
+              image: '/images/case-studies/secure-annapolis.jpg',
               tags: ['Local SEO', 'GBP'],
             },
             {
               href: '/work/case-studies/paving-leads/',
               title: 'Paving Leads',
               blurb: 'Specialty contractor, #1 on Google for high-intent local queries.',
-              image: 'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%204%20-%2016_9.png?updatedAt=1767539579010',
+              image: '/images/case-studies/paving-leads.jpg',
               tags: ['Local SEO', 'Lead Gen'],
             },
           ]}

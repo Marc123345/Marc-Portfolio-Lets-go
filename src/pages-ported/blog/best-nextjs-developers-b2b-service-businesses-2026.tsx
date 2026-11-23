@@ -177,7 +177,7 @@ export default function BestNextjsDevelopersPage() {
 
             <p>This guide is different. It ranks Next.js developers by <em>who they&rsquo;re best for</em>, so a service business or SMB can find the right fit instead of overpaying an enterprise agency for capacity it will never use.</p>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-2">Disclosure</h4>
               <p className="text-gray-300 mb-0">I&rsquo;m Marc Friedman, a Next.js developer, and I&rsquo;ve included my own practice in this list. I&rsquo;ve stated exactly which segment I&rsquo;m the right fit for, and which segments the others serve better. The point of the list is to help you choose well.</p>
             </div>

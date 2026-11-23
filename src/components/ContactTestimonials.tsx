@@ -19,7 +19,7 @@ function Stars({ count = 5 }: { count?: number }) {
 function TestimonialCard({ review }: { review: Review }) {
   const client = clientInfo[review.name] ?? { role: 'Client', image: '' };
   return (
-    <div className="bg-[#111418] border border-white/10 p-6 hover:border-[#A3D1FF]/60 hover:bg-[#14181d] transition-all group">
+    <div className="ui-card p-6 hover:bg-[#1a1a1a] hover:bg-[#14181d] transition-all group">
       <div className="flex items-start justify-between mb-5">
         <Stars />
         <Quote className="w-5 h-5 text-[#A3D1FF]/40 -scale-x-100 group-hover:text-[#A3D1FF] transition-colors" />

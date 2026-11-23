@@ -97,7 +97,7 @@ export default function ElectronicAccessibilityPage() {
             <p>The money is just as concrete. The UK&rsquo;s <a href="https://www.clickawaypound.com/cap16finalreport.html">Click-Away Pound research</a> put lost revenue at £17.1 billion in 2019, spending that walked away because shoppers with access needs hit an unusable site and left. On the compliance side, the <a href="https://www.ada.gov/assets/pdfs/web-rule.pdf">2024 DOJ final rule</a> under ADA Title II now explicitly requires WCAG 2.1 AA for state and local government web content and mobile apps.</p>
             <p>And accessibility features tend to help everyone, not only the people they were written for. Captions let commuters watch video on mute. Transcripts give search engines text to index. Keyboard shortcuts make power users faster. Designing for a genuine range of abilities produces products that are simply better built.</p>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-2">The cost of ignoring it</h4>
               <p className="text-gray-300 mb-0">Skipping accessibility stacks up three risks at once: legal complaints and lawsuits, reputational damage when the exclusion becomes public, and the quiet loss of audiences you needed, students, customers, community members, and employees whose needs went unmet.</p>
             </div>
@@ -166,7 +166,7 @@ export default function ElectronicAccessibilityPage() {
             <p>Accessibility is shared across every role that touches a digital product. Developers write semantic markup. Designers pick usable palettes and visible focus styles. Content creators add alt text and descriptive headings. Faculty tag their PDFs and slide decks and caption their lecture video. Communications teams check that social posts meet the guidelines. IT selects platforms that support accessibility, and administrators set procurement standards so third-party tools clear the same bar.</p>
             <p>The most useful habit is to <strong>shift left</strong>: plan for accessibility at the start of a project, a redesign, a new document template, a one-page form, instead of retrofitting it later at several times the cost. You can start today with small moves, run the built-in checkers in Microsoft 365 and Google Workspace, keyboard-test your most-visited page, invite people with disabilities to review a key service. Equal access is not a one-time project; it is an ongoing practice you build into publishing workflows and checklists, and treat exactly like security or brand compliance, something everyone owns.</p>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-2">Start here</h4>
               <p className="text-gray-300 mb-0">Pick one thing, a single page, one document, or one video. Test it, fix what you find, and move to the next. Momentum beats a perfect plan you never start.</p>
             </div>

@@ -164,7 +164,7 @@ export default function ConstellationMenu({
             <Link
               href="/contact/"
               onClick={onClose}
-              className="flex items-center justify-center gap-2 bg-white text-black font-medium py-4 hover:bg-[#A3D1FF] transition-colors mb-4"
+              className="ui-btn ui-btn-primary ui-btn-lg justify-center mb-4 flex"
             >
               Book a Call
               <ArrowUpRight className="w-4 h-4" />

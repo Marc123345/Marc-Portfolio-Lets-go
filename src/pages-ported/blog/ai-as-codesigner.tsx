@@ -563,7 +563,7 @@ export default function AIAsCoDesigner() {
               </p>
               <Link
                 href="/contact/"
-                className="inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 transition-colors font-medium"
+                className="ui-btn ui-btn-primary"
               >
                 Start a Conversation
                 <ArrowLeft className="w-4 h-4 rotate-180" />

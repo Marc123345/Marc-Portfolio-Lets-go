@@ -103,7 +103,7 @@ export default function BrutalismAntiDesignPage() {
 
             <p>This approach creates websites that feel raw, immediate, and unfiltered, like looking directly at the bones of the internet rather than through a carefully polished lens.</p>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-2 flex items-center">
                 <Grid className="w-5 h-5 text-[#A3D1FF] mr-2" />
                 Key Characteristics of Brutalist Design
@@ -152,7 +152,7 @@ export default function BrutalismAntiDesignPage() {
               <li><strong>Flexible Framework:</strong> Content can break or respect grid lines as needed for emphasis</li>
             </ul>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-2 flex items-center">
                 <Layout className="w-5 h-5 text-[#A3D1FF] mr-2" />
                 Implementation: Exposed Grid System
@@ -235,7 +235,7 @@ export default function BrutalismAntiDesignPage() {
               <li><strong>User-Generated Content:</strong> Authentic, unpolished submissions from real users</li>
             </ul>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-2">Case Study: Text-Based Navigation</h4>
               <p className="text-gray-300">Rather than icon-heavy navigation, brutalist sites often use large, bold text links organized in unconventional layouts. This approach is faster to load, easier to scan, and more direct in communication. Users don't need to decode icon meanings, the text says exactly what it is.</p>
             </div>
@@ -256,7 +256,7 @@ export default function BrutalismAntiDesignPage() {
             <h3>High-Contrast Design Techniques</h3>
             <p>When brutalist designs do use color, they often employ stark, high-contrast combinations that demand attention:</p>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-2 flex items-center">
                 <Contrast className="w-5 h-5 text-[#A3D1FF] mr-2" />
                 Brutalist Color Strategies
@@ -328,7 +328,7 @@ export default function BrutalismAntiDesignPage() {
             <h3>Controlled Chaos</h3>
             <p>The key to effective imperfect layouts is that they're carefully planned chaos. Every apparent mistake or irregularity is actually a deliberate choice that serves the overall design intent:</p>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-2">Techniques for Intentional Imperfection</h4>
               <ul className="text-gray-300 space-y-2">
                 <li><strong>Baseline Shifts:</strong> Elements sit on slightly different horizontal alignments</li>
@@ -376,7 +376,7 @@ export default function BrutalismAntiDesignPage() {
               <li><strong>Accessibility-Critical Applications:</strong> Where any barrier to access is unacceptable</li>
             </ul>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-2">Design Decision Framework</h4>
               <p className="text-gray-300 mb-4">Ask these questions before committing to brutalist design:</p>
               <ul className="text-gray-300 space-y-2">
@@ -393,7 +393,7 @@ export default function BrutalismAntiDesignPage() {
             <h3>Starting with Structure</h3>
             <p>Implementing brutalist design requires different thinking from traditional web development:</p>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-2">Basic Brutalist HTML Structure</h4>
               <pre className="text-xs text-gray-300 overflow-x-auto">
 {`<!DOCTYPE html>
@@ -504,7 +504,7 @@ export default function BrutalismAntiDesignPage() {
               <li><strong>Screen Reader Support:</strong> Simple HTML structure is inherently more accessible</li>
             </ul>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-2">Usability Checklist for Brutalist Design</h4>
               <ul className="text-gray-300 space-y-2">
                 <li>Can users identify clickable elements immediately?</li>

@@ -35,7 +35,7 @@ const AWARDS: AwardRow[] = [
     project: 'Untapped Africa',
     href: 'https://www.designrush.com/best-designs/websites/untapped-africa-website-design',
     image:
-      'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%201%20-%201x1(1).png?updatedAt=1767539579782',
+      '/images/case-studies/untapped-africa.jpg',
   },
   {
     source: 'Awwwards',
@@ -43,7 +43,7 @@ const AWARDS: AwardRow[] = [
     project: 'Untapped Africa · Binns Media · Portfolio',
     href: 'https://www.awwwards.com/marc-friedman/',
     image:
-      'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%204%20-%2016x9.png?updatedAt=1767539579710',
+      'https://ik.imagekit.io/qcvroy8xpd/Mockup%204%20-%2016x9.png?updatedAt=1767538713061',
   },
   {
     source: 'DesignRush',

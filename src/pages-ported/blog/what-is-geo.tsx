@@ -144,7 +144,7 @@ export default function WhatIsGEOPage() {
 
             <p>What makes these "generative" rather than "traditional" engines is the output format. A traditional search engine retrieves and ranks existing pages. A generative engine creates a new piece of text that did not exist before, assembled from information it found across the web. Your content is no longer the destination, it is the raw material.</p>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-3 flex items-center">
                 <Cpu className="w-5 h-5 text-[#A3D1FF] mr-2" />
                 The Generative Search Pipeline
@@ -193,7 +193,7 @@ export default function WhatIsGEOPage() {
 
             <p>Traditional SEO and GEO share common DNA, both are about making content discoverable. But the mechanics diverge in critical ways.</p>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8 overflow-x-auto">
+            <div className="ui-card p-6 my-8 overflow-x-auto">
               <table className="w-full text-sm">
                 <thead>
                   <tr className="border-b border-white/10">
@@ -248,7 +248,7 @@ export default function WhatIsGEOPage() {
 
             <p>If you have been reading about AI search optimization, you have likely encountered both GEO and AEO (Answer Engine Optimization). The two terms are closely related and sometimes used interchangeably, but there is a meaningful distinction:</p>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <div className="grid sm:grid-cols-2 gap-6">
                 <div className="bg-black/30 p-5">
                   <h4 className="text-[#A3D1FF] font-semibold mb-3">AEO (Answer Engine Optimization)</h4>
@@ -280,7 +280,7 @@ export default function WhatIsGEOPage() {
 
             <p>The research team tested nine different optimization strategies across thousands of queries and measured their impact on source visibility in generative engines. The results revealed which strategies actually move the needle:</p>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-4 flex items-center">
                 <BarChart3 className="w-5 h-5 text-[#A3D1FF] mr-2" />
                 Optimization Strategies Ranked by Effectiveness
@@ -345,7 +345,7 @@ export default function WhatIsGEOPage() {
 
             <p>The GEO research is unambiguous: quantitative data significantly increases citation probability. For every major claim in your content, ask whether you can support it with a specific number:</p>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-3 flex items-center">
                 <Lightbulb className="w-5 h-5 text-[#A3D1FF] mr-2" />
                 Weak vs. Strong for GEO
@@ -428,7 +428,7 @@ export default function WhatIsGEOPage() {
 
             <p>Your content cannot be cited if AI systems cannot access it. Technical GEO fundamentals include:</p>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-4 flex items-center">
                 <Globe className="w-5 h-5 text-[#A3D1FF] mr-2" />
                 Technical Access Checklist
@@ -473,7 +473,7 @@ export default function WhatIsGEOPage() {
 
             <p>One of the most important findings from the GEO research is that optimization effectiveness varies by domain. Different strategies work better for different types of content:</p>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-4 flex items-center">
                 <Layers className="w-5 h-5 text-[#A3D1FF] mr-2" />
                 GEO by Content Domain
@@ -549,7 +549,7 @@ export default function WhatIsGEOPage() {
 
             <p>Use this framework to evaluate your existing content library for GEO readiness:</p>
 
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-4 flex items-center">
                 <BookOpen className="w-5 h-5 text-[#A3D1FF] mr-2" />
                 GEO Content Audit Scorecard

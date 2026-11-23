@@ -41,7 +41,7 @@ function MarqueeCard({ review }: { review: Review }) {
        - 4px: within a label (name → role tiny gap)
        - 12px: within a tight group (avatar + name+role cluster)
        - 32px: between distinct content groups (meta row | quote | footer) */
-    <div className="w-[340px] sm:w-[380px] shrink-0 bg-[#111418] border border-white/10 p-8 hover:border-[#A3D1FF]/60 hover:bg-[#14181d] transition-all group">
+    <div className="ui-card w-[340px] sm:w-[380px] shrink-0 p-8 hover:bg-[#1a1a1a] hover:bg-[#14181d] transition-all group">
       <div className="flex items-start justify-between mb-8">
         <Stars />
         <Quote className="w-5 h-5 text-[#A3D1FF]/40 -scale-x-100 group-hover:text-[#A3D1FF] transition-colors" />
@@ -268,7 +268,7 @@ export default function TrustedBy() {
                     href={featuredClient.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-3 mt-3 px-3 py-1.5 bg-white/10 hover:bg-white/20 text-white text-[10px] font-mono uppercase tracking-[0.2em] backdrop-blur-sm transition-colors"
+                    className="ui-pill mt-3 hover:bg-[#232323] backdrop-blur-sm transition-colors"
                   >
                     <Linkedin className="w-3 h-3" /> Verify on LinkedIn
                     <ArrowUpRight className="w-3 h-3" />

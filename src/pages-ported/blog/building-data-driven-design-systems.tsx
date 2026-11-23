@@ -102,7 +102,7 @@ export default function BuildingDataDrivenDesignSystemsPage() {
             
             <p>Implementing component analytics requires collaboration between design and development teams. Designers need to define the metrics that matter, while developers need to instrument components to collect the right data. This cross-functional approach ensures you're measuring what matters to both user experience and technical performance.</p>
             
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-2">Implementation Tip</h4>
               <p className="text-gray-300">Start with basic usage tracking for your most critical components. Even simple data like "how often is this button variant used across the product" can provide valuable insights for prioritization and decision-making.</p>
             </div>
@@ -146,7 +146,7 @@ export default function BuildingDataDrivenDesignSystemsPage() {
             
             <p>Documentation should be treated as a product in itself, with attention to user experience and regular updates based on feedback. The best documentation anticipates questions and provides answers before users need to ask.</p>
             
-            <div className="bg-[#1b1b1b] p-6 border border-white/10 my-8">
+            <div className="ui-card p-6 my-8">
               <h4 className="text-white font-semibold mb-2">Documentation Tip</h4>
               <p className="text-gray-300">Include real-world examples of components in context, not just isolated demonstrations. This helps teams understand how components work together and makes it easier to envision how they might fit into new features.</p>
             </div>
@@ -240,7 +240,7 @@ export default function BuildingDataDrivenDesignSystemsPage() {
             </div>
             
             {/* Additional Internal Links */}
-            <div className="mt-8 p-6 bg-[#1b1b1b] border border-white/10">
+            <div className="ui-card mt-8 p-6">
               <h4 className="text-lg font-semibold text-white mb-4">Explore More Resources</h4>
               <div className="grid md:grid-cols-3 gap-4">
                 <Link 

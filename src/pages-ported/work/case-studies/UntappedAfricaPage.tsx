@@ -15,7 +15,7 @@ const config: CaseStudyConfig = {
     </>
   ),
   heroImage:
-    'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%201%20-%201x1(1).png?updatedAt=1767539579782',
+    '/images/case-studies/untapped-africa.jpg',
   metaStats: [
     { value: '500k+', label: 'People Served' },
     { value: '08', label: 'Countries' },
@@ -111,24 +111,8 @@ const config: CaseStudyConfig = {
   gallery: [
     {
       image:
-        'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%204%20-%2016x9(1).png?updatedAt=1767539578544',
-      caption: 'Homepage flagship',
-      wide: true,
-    },
-    {
-      image:
-        'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%201%20-%201x1(1).png?updatedAt=1767539579782',
+        '/images/case-studies/untapped-africa.jpg',
       caption: 'Project detail',
-    },
-    {
-      image:
-        'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%203%20-%2016x9(1).png?updatedAt=1767539580388',
-      caption: 'Dark mode',
-    },
-    {
-      image:
-        'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%202%20-%201x1(1).png?updatedAt=1767539578180',
-      caption: 'Mobile experience',
     },
   ],
 
@@ -136,7 +120,7 @@ const config: CaseStudyConfig = {
     title: 'iLight Care',
     url: '/work/case-studies/ilight/',
     image:
-      'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%201%20-%201x1(5).png?updatedAt=1767539579818',
+      '/images/case-studies/ilight.jpg',
   },
 };
 

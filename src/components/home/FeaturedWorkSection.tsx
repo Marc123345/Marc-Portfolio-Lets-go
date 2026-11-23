@@ -28,7 +28,7 @@ const featured: Project[] = [
     blurb:
       'Streaming-grade platform for authentic voices, Netflix-style UX on a lean production tech stack.',
     image:
-      'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%204%20-%2016x9.png?updatedAt=1767539579710',
+      'https://ik.imagekit.io/qcvroy8xpd/Mockup%204%20-%2016x9.png?updatedAt=1767538713061',
     liveUrl: 'https://www.binnsmediagroup.com',
     caseStudyUrl: '/work/case-studies/binns-media/',
     stats: [
@@ -44,7 +44,7 @@ const featured: Project[] = [
     blurb:
       'A mission-first platform that helps bring clean water to 500,000+ people across 8 African countries.',
     image:
-      'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%201%20-%201x1(1).png?updatedAt=1767539579782',
+      '/images/case-studies/untapped-africa.jpg',
     liveUrl: 'https://untappedafrica.co.za',
     caseStudyUrl: '/work/case-studies/untapped-africa/',
     stats: [
@@ -75,7 +75,7 @@ const featured: Project[] = [
     blurb:
       'Failing Core Web Vitals → 98 Lighthouse. Organic leads doubled in the first month after launch.',
     image:
-      'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%204%20-%2016_9.png?updatedAt=1767539579010',
+      '/images/case-studies/paving-leads.jpg',
     liveUrl: 'https://pavinglead.com/',
     caseStudyUrl: '/work/case-studies/paving-leads/',
     stats: [
@@ -105,7 +105,7 @@ const featured: Project[] = [
     blurb:
       'Brand, website, MVP platform, and pitch deck. Founder went from vision to investor-ready in 6 weeks.',
     image:
-      'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%201%20-%201x1(5).png?updatedAt=1767539579818',
+      '/images/case-studies/ilight.jpg',
     liveUrl: 'https://www.ilight.care',
     caseStudyUrl: '/work/case-studies/ilight/',
     stats: [
@@ -136,7 +136,7 @@ const featured: Project[] = [
     blurb:
       'Century-old retail legacy re-engineered for the digital procurement age.',
     image:
-      'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%201%20-%201x1(3).png?updatedAt=1767539579776',
+      '/images/case-studies/friedman-cohen.jpg',
     liveUrl: 'https://b2b.fandc.co.za',
     caseStudyUrl: '/work/case-studies/friedman-cohen/',
     stats: [
@@ -152,7 +152,7 @@ const featured: Project[] = [
     blurb:
       'Hyper-local lead engine. Emergency locksmith traffic turned into immediate phone calls.',
     image:
-      'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%201%20-%201x1(2).png?updatedAt=1767539579194',
+      '/images/case-studies/secure-annapolis.jpg',
     liveUrl: 'https://www.asecureannapolislocksmith.com',
     caseStudyUrl: '/work/case-studies/secure-annapolis/',
     stats: [
@@ -168,7 +168,7 @@ const featured: Project[] = [
     blurb:
       'Specialised showcase for premium tar and chip paving applications.',
     image:
-      'https://ik.imagekit.io/qcvroy8xpd/New%20Folder/Mockup%204%20-%2016x9(5).png?updatedAt=1767539578933',
+      '/images/case-studies/tar-chip-paving.jpg',
     liveUrl: 'https://cumberlandtarchip.org/',
     caseStudyUrl: '/work/case-studies/tar-chip-paving/',
     stats: [
@@ -479,7 +479,7 @@ export default function FeaturedWorkSection() {
                   {active.tags.map((t) => (
                     <span
                       key={t}
-                      className="px-3 py-0.5 text-[10px] font-mono uppercase tracking-[0.2em] border border-white/15 text-white/60"
+                      className="ui-pill"
                     >
                       {t}
                     </span>
@@ -489,7 +489,7 @@ export default function FeaturedWorkSection() {
                 <div className="flex flex-wrap gap-3">
                   <Link
                     href={active.caseStudyUrl}
-                    className="inline-flex items-center gap-3 bg-white text-black font-medium px-5 py-2.5 hover:bg-[#A3D1FF] transition-colors group"
+                    className="ui-btn ui-btn-primary ui-btn-sm group"
                   >
                     Read case study
                     <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
@@ -499,7 +499,7 @@ export default function FeaturedWorkSection() {
                       href={active.liveUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-3 text-white font-medium border border-white/20 hover:border-white/60 transition-colors px-5 py-2.5 group"
+                      className="ui-btn ui-btn-secondary group"
                     >
                       Live
                       <ExternalLink className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
@@ -517,7 +517,7 @@ export default function FeaturedWorkSection() {
           </span>
           <Link
             href="/work/"
-            className="inline-flex items-center gap-3 text-white font-medium border-b border-white/30 hover:border-[#A3D1FF] hover:text-[#A3D1FF] transition-colors py-1"
+            className="ui-btn ui-btn-secondary"
           >
             View the complete archive
             <ArrowUpRight className="w-4 h-4" />
