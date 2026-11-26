@@ -55,48 +55,48 @@ const AWARDS = [
 
 export default function DesignPage() {
   return (
-    <>
+    <div className="scheme-systems">
       <ServiceMasthead
-        kicker="Service · Professional UI UX Design Services"
-        title="Interfaces"
-        italicWord="That Convert."
+        kicker="Service · UI/UX for Complex Systems"
+        title="Complex systems,"
+        italicWord="made clear."
         volumeNumber="02"
         tagline={
           <>
-            Intuitive interfaces grounded in real user research, designed to move the
-            one number that actually matters to your business.
+            Dashboards, internal tools and data-heavy products, designed so the people
+            using them can find the answer and make the call, then shipped in code.
           </>
         }
-        meta={['Figma-to-code', 'Research-led', '50+ interfaces shipped']}
+        meta={['Dashboards + internal tools', 'Research-led', 'Figma-to-code']}
         imageSrc="https://ik.imagekit.io/qcvroy8xpd/TTV8Liw.jpg"
       />
 
 <EditorialSection
         chapter="01"
         label="Who it's for"
-        title="If users"
-        italicTitle="keep bouncing."
-        lead="Most clients come to me because something measurable is broken."
+        title="If your product"
+        italicTitle="needs a manual."
+        lead="Teams usually call me when a powerful product has become hard to use."
       >
         <div className="space-y-16">
           {[
             {
-              text: "Users sign up, poke around, and never come back.",
+              text: "New users need a training session before they can do anything.",
               align: 'left' as const,
               size: 'lg' as const,
             },
             {
-              text: "Our best feature is buried three clicks deep.",
+              text: "Every new feature added another tab.",
               align: 'right' as const,
               size: 'md' as const,
             },
             {
-              text: "Designers make it look pretty but ignore how it actually works.",
+              text: "The data is all there, but nobody can find the answer in it.",
               align: 'left' as const,
               size: 'md' as const,
             },
             {
-              text: "I can't tell if our interface is the problem or the product is.",
+              text: "Design and engineering argue over every state and edge case.",
               align: 'right' as const,
               size: 'lg' as const,
             },
@@ -114,31 +114,31 @@ export default function DesignPage() {
       <EditorialSection
         chapter="02"
         label="What you get"
-        title="Design services,"
-        italicTitle="delivered."
-        lead="Research, UI design, prototyping, and dev-ready handoff, bundled into every engagement, under one set of hands instead of split across four people. No à la carte, no scope creep, no extra invoices for the basics."
+        title="Structure first,"
+        italicTitle="then screens."
+        lead="Workflow research, information architecture, interface design and a working design system, handled by one person from the first interview to the shipped front-end."
         bg="bg-[#0a0a0a]"
       >
         <div className="border-t border-white/10">
           <DeliverableRow
             number="01"
-            title="UI Design"
-            description="High-fidelity interfaces grounded in your brand and tuned for conversion. Every state, every variant, every edge case."
+            title="Workflow + Task Analysis"
+            description="I sit with the people who use the tool, map the decisions they make each day, and find where the interface slows them down."
           />
           <DeliverableRow
             number="02"
-            title="UX Research"
-            description="Stakeholder interviews, usability testing, and analytics review. I find the problem before designing the solution."
+            title="Information Architecture"
+            description="Navigation, hierarchy and naming for products with many roles, records and permissions, so each person sees what their job needs first."
           />
           <DeliverableRow
             number="03"
-            title="Wireframing + Prototyping"
-            description="Low-fidelity flows turn into interactive Figma prototypes you can actually click through and test with real users."
+            title="Data-Dense Interface Design"
+            description="Tables, filters, charts and detail panels designed for every state: empty, loading, error, partial and overloaded."
           />
           <DeliverableRow
             number="04"
             title="Design Systems"
-            description="Reusable components, tokens, and documentation so the design stays consistent as the product scales."
+            description="Tokens, components and documented states, so new features fit the system instead of adding another one-off screen."
           />
         </div>
       </EditorialSection>
@@ -146,52 +146,52 @@ export default function DesignPage() {
       <EditorialSection
         chapter="03"
         label="The Process"
-        title="Research, design,"
-        italicTitle="validate, ship."
+        title="Map, structure,"
+        italicTitle="design, validate."
       >
         <div>
           <ProcessChapter
             numeral="I."
-            title="Research"
-            description="I interview your users, audit your analytics, and map the friction points before touching Figma."
+            title="Map"
+            description="I interview users and stakeholders, review the data model, and map the workflows before touching Figma."
             items={[
-              'User interviews',
-              'Analytics review',
+              'User + stakeholder interviews',
+              'Workflow mapping',
+              'Data model review',
               'Heuristic audit',
-              'Opportunity map',
             ]}
           />
           <ProcessChapter
             numeral="II."
-            title="Wireframe"
-            description="Low-fidelity structure so we get the flow right before the aesthetics distract."
+            title="Structure"
+            description="Low-fidelity structure that settles navigation, roles and hierarchy before visual design starts."
             items={[
-              'User flows',
               'Information architecture',
-              'Low-fi mockups',
-              'Stakeholder reviews',
+              'Roles + permissions',
+              'Task flows',
+              'Low-fi wireframes',
             ]}
             reverse
           />
           <ProcessChapter
             numeral="III."
             title="Design"
-            description="High-fidelity, on-brand interfaces. Every state, every viewport, documented as a system."
+            description="High-fidelity screens built from components and tokens, with every state and viewport documented."
             items={[
               'UI design in Figma',
               'Components + tokens',
-              'Dark + light themes',
+              'States + edge cases',
               'Accessibility AA',
             ]}
           />
           <ProcessChapter
             numeral="IV."
             title="Validate"
-            description="Interactive prototypes tested with real users. We iterate before a single line of production code is written."
+            description="Clickable prototypes tested on real tasks with real users, then revised before production code is written."
             items={[
               'Clickable prototypes',
-              'Usability testing',
-              'A/B test design',
+              'Task-based usability tests',
+              'Revisions',
               'Dev handoff docs',
             ]}
             reverse
@@ -202,7 +202,7 @@ export default function DesignPage() {
       <EditorialSection
         chapter="04"
         label="Proof"
-        title="Interfaces"
+        title="Systems"
         italicTitle="in the wild."
         bg="bg-[#0a0a0a]"
       >
@@ -326,7 +326,7 @@ export default function DesignPage() {
         label="Specialties"
         title="Research, design, and code,"
         italicTitle="in the same hands."
-        lead="Most teams split UX research, UI design, and front-end across three or four people. I run them as one continuous craft, which is why the design actually survives contact with production."
+        lead="Complex products suffer most when research, UI and front-end are split across separate people. I do all three, so the structure agreed in research is the structure that ships."
       >
         <div className="grid md:grid-cols-3 gap-px bg-white/10 border border-white/10">
           <div className="bg-black p-8">
@@ -372,10 +372,10 @@ export default function DesignPage() {
 
       <ServiceNavigator currentSlug="design" />
       <ServiceColophon
-        headline="Make the interface"
-        italicHeadline="do the heavy lifting."
-        lead="If your product is great but the UX is fighting it, that's a fixable problem. Book a call and I'll show you exactly where."
+        headline="Make the complex"
+        italicHeadline="feel simple."
+        lead="If your product is powerful but hard to use, that can be fixed. Book a call and I'll show you where to start."
       />
-    </>
+    </div>
   );
 }

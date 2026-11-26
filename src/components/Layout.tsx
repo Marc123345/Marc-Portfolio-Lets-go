@@ -92,7 +92,7 @@ const FOOTER_COLUMNS: FooterGroup[][] = [
       links: [
         { label: 'B2B Web Design', href: '/services/b2b-web-design/' },
         { label: 'Web Development', href: '/services/web-development' },
-        { label: 'UI/UX Design', href: '/services/design/' },
+        { label: 'UI/UX for Complex Systems', href: '/services/design/' },
         { label: 'Design Systems', href: '/services/design-systems/' },
         { label: 'AI Integration', href: '/services/ai-integration' },
         { label: 'Cybersecurity', href: '/services/cybersecurity' },

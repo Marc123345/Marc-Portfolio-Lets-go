@@ -25,12 +25,12 @@ export const SERVICES: ArcCard[] = [
   },
   {
     id: 'design',
-    title: 'UI/UX Design',
+    title: 'UI/UX for Complex Systems',
     category: 'Design',
     blurb:
-      'Interfaces grounded in research, built to move the number that actually matters.',
+      'Dashboards, internal tools and data-heavy products that people can use without a manual.',
     href: '/services/design/',
-    bullets: ['Research → wireframe → ship', 'Conversion-focused', 'A11y AA'],
+    bullets: ['Dashboards + internal tools', 'Research → structure → ship', 'A11y AA'],
   },
   {
     id: 'design-systems',

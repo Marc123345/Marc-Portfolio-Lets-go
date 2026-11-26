@@ -1408,3 +1408,36 @@
 .prose a.ui-btn, .prose a.mr_btn { text-decoration: none; font-weight: 500; }
 .prose a.ui-btn-primary, .prose a.mr_btn_primary { color: #000; }
 .prose a.ui-btn-secondary, .prose a.mr_btn_outline, .prose a.ui-btn-ink { color: #fff; }
+
+/* ------------------------------------------------------------------ */
+/* UI/UX for Complex Systems page: deep slate + signal lime scheme.     */
+/* Scoped to .scheme-systems so the rest of the site keeps its blue.    */
+/* ------------------------------------------------------------------ */
+.scheme-systems {
+  --sys-accent: #C8F25A;
+  --sys-bg: #0b1016;
+  --sys-bg-alt: #0f151d;
+  --color-accent: #C8F25A;
+  background: var(--sys-bg);
+}
+.scheme-systems .bg-black { background-color: var(--sys-bg); }
+.scheme-systems .bg-\[\#0a0a0a\] { background-color: var(--sys-bg-alt); }
+.scheme-systems .text-\[\#A3D1FF\] { color: var(--sys-accent); }
+.scheme-systems .text-\[\#A3D1FF\]\/80 { color: rgb(200 242 90 / 0.8); }
+.scheme-systems .text-\[\#A3D1FF\]\/30 { color: rgb(200 242 90 / 0.3); }
+.scheme-systems .hover\:text-\[\#A3D1FF\]:hover,
+.scheme-systems .group:hover .group-hover\:text-\[\#A3D1FF\] { color: var(--sys-accent); }
+.scheme-systems .hover\:border-\[\#A3D1FF\]:hover { border-color: var(--sys-accent); }
+.scheme-systems .hover\:border-\[\#A3D1FF\]\/40:hover { border-color: rgb(200 242 90 / 0.4); }
+.scheme-systems .bg-\[\#A3D1FF\]\/5 { background-color: rgb(200 242 90 / 0.05); }
+.scheme-systems .bg-\[\#A3D1FF\]\/8 { background-color: rgb(200 242 90 / 0.08); }
+.scheme-systems .bg-\[\#A3D1FF\]\/10 { background-color: rgb(200 242 90 / 0.1); }
+.scheme-systems .bg-\[\#A3D1FF\]\/50 { background-color: rgb(200 242 90 / 0.5); }
+.scheme-systems .bg-\[\#A3D1FF\] { background-color: var(--sys-accent); }
+.scheme-systems .ui-btn-primary,
+.scheme-systems .mr_btn_primary,
+.scheme-systems .ui-pill-accent { background: var(--sys-accent); color: #0b1016; }
+.scheme-systems .ui-btn-primary:hover,
+.scheme-systems .mr_btn_primary:hover { background: #ffffff; color: #0b1016; }
+.scheme-systems .hover\:shadow-\[0_30px_60px_-25px_rgba\(163\,209\,255\,0\.35\)\]:hover { box-shadow: 0 30px 60px -25px rgb(200 242 90 / 0.3); }
+.scheme-systems ::selection { background: var(--sys-accent); color: #0b1016; }
