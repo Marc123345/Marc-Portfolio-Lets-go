@@ -13,6 +13,8 @@ const config: CaseStudyConfig = {
   tagline: 'A cybersecurity UI kit for Figma that follows two fictional investigations from the first alert to the decision to close a case.',
   heroImage: images + '/cover.webp',
   liveUrl: store,
+  purchaseLabel: "Buy Tracefold on Gumroad",
+  fullImages: true,
   metaStats: [
     { value: '22', label: 'Desktop screens' },
     { value: '14', label: 'Mobile screens' },

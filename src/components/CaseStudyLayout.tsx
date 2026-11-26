@@ -29,6 +29,8 @@ export type CaseStudyConfig = {
   heroVideo?: { vimeoId: string; width: number; height: number };
   metaStats: { label: string; value: string }[];
   liveUrl?: string;
+  purchaseLabel?: string;
+  fullImages?: boolean;
 
   // Marquee tags
   marquee: string[];
@@ -151,8 +153,18 @@ function Shot({ item, className = '' }: { item: CaseStudyConfig['gallery'][numbe
 }
 
 /** FlyStudio image rhythm: two side by side (narrow + wide), then one full width. */
-function ImageRow({ items }: { items: CaseStudyConfig['gallery'] }) {
+function ImageRow({ items, fullImages }: { items: CaseStudyConfig['gallery']; fullImages?: boolean }) {
   if (!items.length) return null;
+  if (fullImages) return (
+    <div className="my-8 space-y-10">
+      {items.map((item) => (
+        <figure key={item.image}>
+          <Img src={item.image} alt={item.caption || ''} className="block h-auto w-full" />
+          <figcaption className="mt-3 text-sm text-white/70">{item.caption}</figcaption>
+        </figure>
+      ))}
+    </div>
+  );
   if (items.length === 1) return <Shot item={items[0]} className="aspect-[16/10] my-6" />;
   const [a, b, ...rest] = items;
   return (
@@ -176,6 +188,11 @@ export default function CaseStudyLayout({ config }: { config: CaseStudyConfig })
     kicker, pkg, title, italicWord, tagline, heroImage, heroVideo, metaStats, liveUrl,
     marquee, challenge, solution, results, gallery, videos = [], next,
   } = config;
+  const buyButton = liveUrl && config.purchaseLabel ? (
+    <a className="ui-btn ui-btn-primary mt-6" href={liveUrl}>
+      {config.purchaseLabel} <ArrowUpRight aria-hidden="true" className="h-4 w-4" />
+    </a>
+  ) : null;
   const reduceMotion = useReducedMotion();
   const [videoReady, setVideoReady] = useState(false);
 
@@ -230,6 +247,7 @@ export default function CaseStudyLayout({ config }: { config: CaseStudyConfig })
             >
               {tagline}
             </motion.p>
+            {buyButton}
           </div>
 
           {/* Client / Industry / Engagement / Project page */}
@@ -271,10 +289,10 @@ export default function CaseStudyLayout({ config }: { config: CaseStudyConfig })
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.1, delay: 0.45, ease: [0.22, 1, 0.36, 1] }}
-          className="relative max-w-7xl mx-auto aspect-[4/3] md:aspect-[16/9] overflow-hidden bg-[#111] rounded-b-[20px] rounded-t-[120px] md:rounded-t-[min(22vw,300px)]"
-          style={{ containerType: 'size' }}
+          className={config.fullImages ? "relative max-w-7xl mx-auto" : "relative max-w-7xl mx-auto aspect-[4/3] md:aspect-[16/9] overflow-hidden bg-[#111] rounded-b-[20px] rounded-t-[120px] md:rounded-t-[min(22vw,300px)]"}
+          style={config.fullImages ? undefined : { containerType: 'size' }}
         >
-          <Img src={heroImage} alt={`${clientName} website`} className="absolute inset-0 h-full w-full object-cover object-top" />
+          <Img src={heroImage} alt={config.fullImages ? title + " product cover" : `${clientName} website`} className={config.fullImages ? "block h-auto w-full" : "absolute inset-0 h-full w-full object-cover object-top"} />
           {heroVideo && !reduceMotion && (
             <iframe
               src={`https://player.vimeo.com/video/${heroVideo.vimeoId}?background=1&autoplay=1&loop=1&muted=1&autopause=0&dnt=1`}
@@ -325,7 +343,7 @@ export default function CaseStudyLayout({ config }: { config: CaseStudyConfig })
             )}
           </Block>
 
-          <ImageRow items={firstRow} />
+          <ImageRow items={firstRow} fullImages={config.fullImages} />
 
           <Block label="What I built">
             <div className="text-lg md:text-xl text-white/75 leading-relaxed space-y-5 [&>p:first-child]:text-white">
@@ -362,7 +380,8 @@ export default function CaseStudyLayout({ config }: { config: CaseStudyConfig })
             </Block>
           )}
 
-          <ImageRow items={laterRow} />
+          <ImageRow items={laterRow} fullImages={config.fullImages} />
+          {buyButton}
 
           {results.stats.length > 0 && (
             <Block label="Results">
