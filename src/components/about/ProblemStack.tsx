@@ -69,13 +69,6 @@ const PROBLEMS: Problem[] = [
   {
     quote: "I know what I want but I can't explain it to a developer.",
     fix: 'You explain it to me. I design it, build it and ship it, so nothing gets lost in a handoff.',
-    proof: {
-      title: 'iLight Care',
-      href: '/work/case-studies/ilight/',
-      image: '/images/case-studies/ilight.jpg',
-      stat: '6 wk',
-      label: 'vision to MVP',
-    },
   },
   {
     quote: "We've spent money on marketing but have no idea what's working.",

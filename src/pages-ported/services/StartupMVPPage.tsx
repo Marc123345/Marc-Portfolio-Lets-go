@@ -178,12 +178,11 @@ export default function StartupMVPPage() {
         <WorkRow
           items={[
             {
-              href: '/work/case-studies/ilight/',
-              title: 'iLight Care',
-              blurb: 'Brand, website, MVP platform, and pitch deck, shipped in under 6 weeks.',
-              image:
-                '/images/case-studies/ilight.jpg',
-              tags: ['MVP', 'AI', 'Healthcare'],
+              href: '/work/case-studies/fleet-management/',
+              title: 'Fleet Management',
+              blurb: 'Fleet platform with live tracking, predictive maintenance and route optimisation.',
+              image: '/images/clients/EwgHAuK.webp',
+              tags: ['SaaS', 'Logistics'],
             },
             {
               href: '/work/case-studies/automarginx/',

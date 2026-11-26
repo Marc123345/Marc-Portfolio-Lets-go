@@ -117,10 +117,9 @@ const config: CaseStudyConfig = {
   ],
 
   next: {
-    title: 'iLight Care',
-    url: '/work/case-studies/ilight/',
-    image:
-      '/images/case-studies/ilight.jpg',
+    title: 'Videoleap',
+    url: '/work/case-studies/videoleap/',
+    image: '/images/clients/SubVB9A.jpeg',
   },
 };
 

@@ -158,14 +158,6 @@ const WORK = [
       '/images/case-studies/untapped-africa.jpg',
     href: '/work/case-studies/untapped-africa/',
   },
-  {
-    title: 'iLight Care',
-    cat: 'AI · Healthcare',
-    blurb: 'Brand, site, and MVP. Founder went vision-to-investor-ready in six weeks.',
-    image:
-      '/images/case-studies/ilight.jpg',
-    href: '/work/case-studies/ilight/',
-  },
 ];
 
 const INDUSTRIES = [

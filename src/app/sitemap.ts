@@ -66,7 +66,6 @@ const entries: Entry[] = [
   { path: 'work/case-studies/binns-media', priority: 0.8 },
   { path: 'work/case-studies/secure-annapolis', priority: 0.8 },
   { path: 'work/case-studies/untapped-africa', priority: 0.8 },
-  { path: 'work/case-studies/ilight', priority: 0.8 },
   { path: 'work/case-studies/paving-leads', priority: 0.8 },
   { path: 'work/case-studies/h2h-marketing', priority: 0.8 },
   { path: 'work/case-studies/ask-africa', priority: 0.8, lastModified: '2026-11-21' },

@@ -108,22 +108,6 @@ export const PROJECTS: Project[] = [
     tags: ['React', 'Node.js', 'PostgreSQL'],
   },
   {
-    title: 'iLight Care',
-    category: 'AI · Healthcare',
-    blurb:
-      'Brand, website, MVP platform, and pitch deck. Founder went from vision to investor-ready in 6 weeks.',
-    image:
-      '/images/case-studies/ilight.jpg',
-    liveUrl: 'https://www.ilight.care',
-    caseStudyUrl: '/work/case-studies/ilight/',
-    stats: [
-      { value: '6wk', label: 'Vision → MVP' },
-      { value: 'LLM', label: 'Grounded' },
-      { value: 'Deck', label: 'Included' },
-    ],
-    tags: ['React', 'Node.js', 'AI/ML'],
-  },
-  {
     title: 'Ask Africa',
     category: 'Research · Consultancy',
     blurb:

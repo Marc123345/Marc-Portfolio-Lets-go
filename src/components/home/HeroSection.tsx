@@ -31,7 +31,6 @@ const WORK_WINDOWS = [
   { image: '/images/case-studies/paving-leads.jpg', category: 'SEO · Lead Gen', title: 'Paving Leads' },
   { image: 'https://ik.imagekit.io/qcvroy8xpd/Mockup%204%20-%2016x9.png?updatedAt=1767538713061', category: 'Media Platform', title: 'Binns Media Group' },
   { image: '/images/case-studies/untapped-africa.jpg', category: 'Impact', title: 'Untapped Africa' },
-  { image: '/images/case-studies/ilight.jpg', category: 'AI · Healthcare', title: 'iLight Care' },
   { image: 'https://ik.imagekit.io/qcvroy8xpd/H2H-Social-Homepage-Image-Only.jpg', category: 'Agency Brand', title: 'H2H Marketing' },
   { image: 'https://ik.imagekit.io/qcvroy8xpd/1732717492455.jpeg', category: 'SaaS · Analytics', title: 'AutoMarginX' },
 ];

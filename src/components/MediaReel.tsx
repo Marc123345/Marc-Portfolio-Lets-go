@@ -36,7 +36,6 @@ const SHOTS: { src: string; title: string }[] = [
   { title: 'Binns Media Group', src: 'https://ik.imagekit.io/qcvroy8xpd/Mockup%204%20-%2016x9.png?updatedAt=1767538713061' },
   { title: 'Untapped Africa', src: '/images/case-studies/untapped-africa.jpg' },
   { title: 'H2H Marketing', src: 'https://ik.imagekit.io/qcvroy8xpd/H2H-Social-Homepage-Image-Only.jpg' },
-  { title: 'iLight Care', src: '/images/case-studies/ilight.jpg' },
   { title: 'Ask Africa', src: 'https://ik.imagekit.io/qcvroy8xpd/Ask-Africa-Homepage-Image-Only.jpg' },
   { title: 'Friedman & Cohen', src: '/images/case-studies/friedman-cohen.jpg' },
 ];

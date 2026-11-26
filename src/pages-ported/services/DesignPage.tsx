@@ -262,12 +262,11 @@ export default function DesignPage() {
               tags: ['UX', 'Mobile'],
             },
             {
-              href: '/work/case-studies/ilight/',
-              title: 'iLight Care',
-              blurb: 'Brand + product + pitch deck for an AI-powered mental health startup.',
-              image:
-                '/images/case-studies/ilight.jpg',
-              tags: ['Product Design', 'AI'],
+              href: '/work/case-studies/silicon-atlas/',
+              title: 'Silicon Atlas',
+              blurb: 'Data-dense dashboard kit for lab and telemetry tools, built on one token set.',
+              image: '/images/case-studies/silicon-atlas/run-comparison.jpg',
+              tags: ['Product UX', 'Design System'],
             },
           ]}
         />

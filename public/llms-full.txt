@@ -263,11 +263,6 @@ Olympic champion Chad Le Clos's swimming clinics website. Drove numerous sign-up
 - Live: https://chadleclosswimming.com
 - Case Study: https://www.marcfriedmanportfolio.com/work/case-studies/chad-le-clos
 
-### iLight
-Modern lighting e-commerce store with increased conversions and excellent mobile performance. Built with Next.js, Shopify, and TypeScript.
-- Live: https://ilight.co.za
-- Case Study: https://www.marcfriedmanportfolio.com/work/case-studies/ilight
-
 ### MyTube Platform
 Video metadata management platform for media and manufacturing. Faster metadata processing and high user satisfaction. Built with React, Node.js, AI/ML, and PostgreSQL.
 - Case Study: https://www.marcfriedmanportfolio.com/work/case-studies/mytube

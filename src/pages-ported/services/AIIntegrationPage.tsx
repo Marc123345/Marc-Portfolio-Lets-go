@@ -177,12 +177,11 @@ export default function AIIntegrationPage() {
         <WorkRow
           items={[
             {
-              href: '/work/case-studies/ilight/',
-              title: 'iLight Care',
-              blurb: 'AI mental health companion with grounded responses and clinician safety checks.',
-              image:
-                '/images/case-studies/ilight.jpg',
-              tags: ['LLM', 'Healthcare', 'RAG'],
+              href: '/work/case-studies/mytube/',
+              title: 'MyTube',
+              blurb: 'Video metadata platform with AI tagging, insights and workflow automation.',
+              image: '/images/clients/QNHXpzT.webp',
+              tags: ['AI/ML', 'Automation'],
             },
             {
               href: '/work/case-studies/videoleap/',

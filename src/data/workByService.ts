@@ -31,14 +31,14 @@ export const WORK_SERVICES: WorkService[] = [
     label: 'Startup MVP',
     href: '/services/startup-mvp/',
     blurb: 'Brand, product and pitch deck for founders who need a working first version.',
-    projects: ['iLight Care'],
+    projects: ['AutoMarginX', 'Fleet Management'],
   },
   {
     key: 'ai',
     label: 'AI Integration',
     href: '/services/ai-integration/',
     blurb: 'AI features people actually use: pricing recommendations, tagging, editing tools.',
-    projects: ['iLight Care', 'MyTube', 'Videoleap', 'AutoMarginX'],
+    projects: ['MyTube', 'Videoleap', 'AutoMarginX'],
   },
   {
     key: 'b2b',
