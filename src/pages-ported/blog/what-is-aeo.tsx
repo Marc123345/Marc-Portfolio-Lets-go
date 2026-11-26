@@ -109,7 +109,7 @@ export default function WhatIsAEOPage() {
             <img
               src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=2000&q=80"
               alt="AI-powered search and answer engine visualization"
-              className="w-full h-full img-fit"
+              className="w-full h-full object-cover"
             />
           </div>
         </div>
@@ -502,7 +502,7 @@ export default function WhatIsAEOPage() {
                   <img
                     src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=2000&q=80"
                     alt="Optimizing Your Website for AI Crawlers"
-                    className="w-full h-full img-fit"
+                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
                 <div className="p-6">
@@ -523,7 +523,7 @@ export default function WhatIsAEOPage() {
                   <img
                     src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=2000&q=80"
                     alt="Stop Guessing in GSC: AI-Powered Configuration for SEOs"
-                    className="w-full h-full img-fit"
+                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
                 <div className="p-6">

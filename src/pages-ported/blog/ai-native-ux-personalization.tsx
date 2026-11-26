@@ -60,7 +60,7 @@ export default function AINativeUXPersonalizationPage() {
             <img
               src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=2000&q=80"
               alt="AI-Native UX and Personalization"
-              className="w-full h-full img-fit"
+              className="w-full h-full object-cover"
             />
           </div>
         </div>

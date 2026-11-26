@@ -72,7 +72,7 @@ export default function BuildingDataDrivenDesignSystemsPage() {
             <img 
               src="https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?auto=format&fit=crop&w=2000&q=80" 
               alt="Building Data-Driven Design Systems for Scale" 
-              className="w-full h-full img-fit"
+              className="w-full h-full object-cover"
             />
           </div>
         </div>
@@ -199,7 +199,7 @@ export default function BuildingDataDrivenDesignSystemsPage() {
                   <img 
                     src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=2000&q=80" 
                     alt="The Future of SaaS Web Design" 
-                    className="w-full h-full img-fit"
+                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
                 <div className="p-6">
@@ -221,7 +221,7 @@ export default function BuildingDataDrivenDesignSystemsPage() {
                   <img 
                     src="https://images.unsplash.com/photo-1560179707-f14e90ef3623?auto=format&fit=crop&w=2000&q=80" 
                     alt="From Concept to Profit: Designing Platforms That Empower Automotive Dealers" 
-                    className="w-full h-full img-fit"
+                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
                 <div className="p-6">

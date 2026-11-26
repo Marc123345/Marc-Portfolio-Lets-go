@@ -207,8 +207,8 @@ export default function AwardsSection() {
                           key={AWARDS[active].image}
                           src={AWARDS[active].image}
                           alt=""
-                          className="w-full h-full img-fit"
-                          initial={{ opacity: 0 }}
+                          className="w-full h-full object-cover"
+                          initial={{ opacity: 0, scale: 1.15 }}
                           animate={{ opacity: 1, scale: 1 }}
                           exit={{ opacity: 0 }}
                           transition={{ duration: 0.4 }}

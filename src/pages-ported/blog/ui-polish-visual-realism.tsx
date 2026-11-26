@@ -72,7 +72,7 @@ export default function UIPolishVisualRealismPage() {
             <img 
               src="https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=2000&q=80" 
               alt="UI Polish and Visual Realism in Interface Design" 
-              className="w-full h-full img-fit"
+              className="w-full h-full object-cover"
             />
           </div>
         </div>
@@ -495,7 +495,7 @@ export default function UIPolishVisualRealismPage() {
                   <img 
                     src="https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?auto=format&fit=crop&w=2000&q=80" 
                     alt="Building Data-Driven Design Systems for Scale" 
-                    className="w-full h-full img-fit"
+                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
                 <div className="p-6">
@@ -516,7 +516,7 @@ export default function UIPolishVisualRealismPage() {
                   <img 
                     src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=2000&q=80" 
                     alt="The Future of SaaS Web Design" 
-                    className="w-full h-full img-fit"
+                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
                 <div className="p-6">

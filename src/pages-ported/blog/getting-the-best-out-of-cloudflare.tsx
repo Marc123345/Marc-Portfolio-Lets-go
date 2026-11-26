@@ -72,7 +72,7 @@ export default function GettingTheBestOutOfCloudflarePage() {
             <img 
               src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=2000&q=80" 
               alt="Cloudflare optimization and CDN configuration" 
-              className="w-full h-full img-fit"
+              className="w-full h-full object-cover"
             />
           </div>
         </div>
@@ -489,7 +489,7 @@ example.com/account*
                   <img 
                     src="https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?auto=format&fit=crop&w=2000&q=80" 
                     alt="Progressive Web Apps (PWAs): The Best of Both Worlds" 
-                    className="w-full h-full img-fit"
+                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
                 <div className="p-6">
@@ -510,7 +510,7 @@ example.com/account*
                   <img 
                     src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=2000&q=80" 
                     alt="Optimizing Your Website for AI Crawlers" 
-                    className="w-full h-full img-fit"
+                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
                 <div className="p-6">

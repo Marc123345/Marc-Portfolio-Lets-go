@@ -124,7 +124,7 @@ export default function WebsiteCost2026Page() {
             <img
               src="https://images.surferseo.art/f8226b13-c8cb-4987-afb0-838cbe96bcc9.png"
               alt="The image features a laptop and smartphone placed on a wooden desk, both showcasing a clean and modern small business website designed for mobile users. The website highlights a responsive layout, ensuring an optimal viewing experience on mobile devices and desktops alike."
-              className="w-full h-full img-fit"
+              className="w-full h-full object-cover"
             />
           </div>
         </div>
@@ -555,7 +555,7 @@ export default function WebsiteCost2026Page() {
                   <img
                     src="https://images.surferseo.art/578a5f15-7ee3-4537-8588-8d61c352ad90.png"
                     alt="SEO for Construction Companies"
-                    className="w-full h-full img-fit"
+                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
                 <div className="p-6">
@@ -576,7 +576,7 @@ export default function WebsiteCost2026Page() {
                   <img
                     src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=2000&q=80"
                     alt="Mobile-First Design Principles"
-                    className="w-full h-full img-fit"
+                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
                 <div className="p-6">

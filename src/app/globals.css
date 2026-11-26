@@ -954,14 +954,6 @@
     image-rendering: crisp-edges;
   }
   
-  /* Every content image shows in full: never cropped, always centred on the
-     same neutral backdrop so frames look alike across the site. */
-  .img-fit {
-    object-fit: contain;
-    object-position: center;
-    background-color: #111;
-  }
-
   /* Lazy load images with blur-up effect */
   .lazy-image {
     filter: blur(10px);

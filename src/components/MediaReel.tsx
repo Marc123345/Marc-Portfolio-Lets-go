@@ -108,7 +108,7 @@ export default function MediaReel({
               className="group relative shrink-0 w-[300px] md:w-[420px] aspect-[16/10] overflow-hidden bg-[#111] border border-white/10 hover:border-[#A3D1FF]/50 transition-colors text-left"
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={c.poster} alt="" loading="lazy" decoding="async" className="absolute inset-0 w-full h-full img-fit" />
+              <img src={c.poster} alt="" loading="lazy" decoding="async" className="absolute inset-0 w-full h-full object-cover group-hover:scale-[1.05] transition-transform duration-[900ms]" />
               <span className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/10 to-transparent" />
               <span className="mx-pulse absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-14 h-14 rounded-full bg-[#A3D1FF] text-black grid place-items-center transition-transform duration-500 group-hover:scale-110">
                 <Play className="w-5 h-5 ml-0.5" fill="currentColor" />
@@ -133,7 +133,7 @@ export default function MediaReel({
           {[...SHOTS, ...SHOTS].map((s, i) => (
             <div key={`${s.title}-${i}`} aria-hidden={i >= SHOTS.length} className="relative shrink-0 w-[220px] md:w-[300px] aspect-[16/10] overflow-hidden bg-[#1b1b1b]">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={s.src} alt={i >= SHOTS.length ? '' : `${s.title} website`} loading="lazy" decoding="async" className="absolute inset-0 w-full h-full img-fit" />
+              <img src={s.src} alt={i >= SHOTS.length ? '' : `${s.title} website`} loading="lazy" decoding="async" className="absolute inset-0 w-full h-full object-cover" />
               <span className="absolute left-3 bottom-2 text-[9px] font-mono uppercase tracking-[0.25em] text-white/80 drop-shadow">{s.title}</span>
             </div>
           ))}

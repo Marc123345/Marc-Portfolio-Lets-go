@@ -90,15 +90,15 @@ export function ServiceMasthead({
           style={{ y, opacity, scale }}
         >
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            initial={{ scale: 1.25, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 2.2, ease: [0.22, 1, 0.36, 1] }}
             className="absolute inset-0 lg:left-[38%]"
           >
             <img
               src={imageSrc}
               alt=""
-              className="w-full h-full img-fit !bg-transparent grayscale contrast-125"
+              className="w-full h-full object-cover object-center grayscale contrast-125"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-black/20 lg:from-black lg:via-black/55 lg:to-black/20" />
             <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/40" />
@@ -524,7 +524,7 @@ export function WorkRow({
             <img
               src={item.image}
               alt={item.title}
-              className="w-full h-full img-fit"
+              className="w-full h-full object-cover group-hover:scale-[1.04] transition-transform duration-[900ms]"
             />
           </div>
           <div className="p-6">

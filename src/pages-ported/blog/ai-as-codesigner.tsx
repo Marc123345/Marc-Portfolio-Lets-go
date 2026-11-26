@@ -60,7 +60,7 @@ export default function AIAsCoDesigner() {
             <img
               src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=2000&q=80"
               alt="AI as Co-Designer concept visualization"
-              className="w-full h-full img-fit"
+              className="w-full h-full object-cover"
             />
           </div>
         </div>

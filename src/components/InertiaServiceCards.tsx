@@ -109,7 +109,7 @@ function Card({
               alt=""
               loading="lazy"
               decoding="async"
-              className="absolute inset-0 h-full w-full img-fit"
+              className="absolute inset-0 h-full w-full object-cover transition-transform duration-[900ms] group-hover:scale-[1.06]"
             />
             <span className="absolute bottom-2 right-2 max-w-[calc(100%-1rem)] truncate rounded-full bg-black/60 px-2 py-0.5 font-mono text-[8.5px] uppercase tracking-[0.1em] text-white/80 backdrop-blur-sm md:px-2.5 md:py-1 md:text-[10px] md:tracking-[0.18em]">
               {v?.project}

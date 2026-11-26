@@ -36,7 +36,7 @@ export default function ChecklistDownload({
               src={c.cover}
               alt={c.coverAlt}
               loading="lazy"
-              className="absolute inset-0 w-full h-full img-fit"
+              className="absolute inset-0 w-full h-full object-cover"
             />
           </div>
           <div>

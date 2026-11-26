@@ -70,7 +70,7 @@ export default function AIImperfectAestheticsPage() {
             <img
               src="https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?auto=format&fit=crop&w=2000&q=80"
               alt="AI and Human Imperfect Aesthetics"
-              className="w-full h-full img-fit"
+              className="w-full h-full object-cover"
             />
           </div>
         </div>
@@ -425,7 +425,7 @@ export default function AIImperfectAestheticsPage() {
                   <img
                     src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=2000&q=80"
                     alt="Brutalism and Anti-Design"
-                    className="w-full h-full img-fit"
+                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
                 <div className="p-6">
@@ -446,7 +446,7 @@ export default function AIImperfectAestheticsPage() {
                   <img
                     src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=2000&q=80"
                     alt="AI Personalization in E-commerce"
-                    className="w-full h-full img-fit"
+                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
                 <div className="p-6">

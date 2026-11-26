@@ -110,7 +110,7 @@ export default function MachineExperiencePage() {
             <img
               src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=2000&q=80"
               alt="Close-up of a green and black circuit board with chips and capacitors."
-              className="w-full h-full img-fit"
+              className="w-full h-full object-cover"
             />
           </div>
         </div>
@@ -237,7 +237,7 @@ export default function MachineExperiencePage() {
                   <img
                     src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=2000&q=80"
                     alt="Optimizing websites for AI crawlers"
-                    className="w-full h-full img-fit"
+                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
                 <div className="p-6">
@@ -258,7 +258,7 @@ export default function MachineExperiencePage() {
                   <img
                     src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=2000&q=80"
                     alt="AI copilots in web design"
-                    className="w-full h-full img-fit"
+                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
                 <div className="p-6">

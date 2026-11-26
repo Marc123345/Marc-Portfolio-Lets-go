@@ -163,7 +163,7 @@ function HeroSection() {
     >
       {/* Background image */}
       <div
-        className="absolute inset-0 bg-contain bg-center bg-no-repeat"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage:
             "url('https://ik.imagekit.io/qcvroy8xpd/32119d88-0da4-45ed-bbf8-a6049119f728.jpeg')",
@@ -871,6 +871,12 @@ const ROLES = ['designer', 'developer', 'strategist', 'operator'];
 
 function OperatorSection() {
   const sectionRef = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ['start end', 'end start'],
+  });
+  const portraitY = useTransform(scrollYProgress, [0, 1], ['-5%', '6%']);
+  const portraitScale = useTransform(scrollYProgress, [0, 0.5, 1], [1.08, 1, 1.06]);
 
   const [roleIndex, setRoleIndex] = useState(0);
   useEffect(() => {
@@ -909,7 +915,8 @@ function OperatorSection() {
               <motion.img
                 src={PORTRAIT}
                 alt="Marc Friedman, designer, developer, and operator"
-                className="absolute inset-0 w-full h-full img-fit grayscale contrast-125"
+                className="absolute inset-0 w-full h-full object-cover object-top grayscale contrast-125"
+                style={{ y: portraitY, scale: portraitScale }}
                 loading="lazy"
                 width={480}
                 height={600}

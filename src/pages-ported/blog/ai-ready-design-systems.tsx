@@ -60,7 +60,7 @@ export default function AIReadyDesignSystems() {
             <img
               src="/generated-1770282657147-xuhu1.webp"
               alt="AI-ready design systems visualization"
-              className="w-full h-full img-fit"
+              className="w-full h-full object-cover"
             />
           </div>
         </div>

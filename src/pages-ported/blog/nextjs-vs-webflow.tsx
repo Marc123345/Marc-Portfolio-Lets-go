@@ -102,7 +102,7 @@ export default function NextjsVsWebflowPage() {
             <img
               src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=2000&q=80"
               alt="A laptop screen showing colorful source code in a dark code editor."
-              className="w-full h-full img-fit"
+              className="w-full h-full object-cover"
             />
           </div>
         </div>
@@ -241,7 +241,7 @@ export default function NextjsVsWebflowPage() {
                   <img
                     src="https://images.unsplash.com/photo-1487014679447-9f8336841d58?auto=format&fit=crop&w=2000&q=80"
                     alt="Headless CMS Explained"
-                    className="w-full h-full img-fit"
+                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
                 <div className="p-6">
@@ -262,7 +262,7 @@ export default function NextjsVsWebflowPage() {
                   <img
                     src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=2000&q=80"
                     alt="Best Next.js Developers for B2B Service Businesses"
-                    className="w-full h-full img-fit"
+                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
                 <div className="p-6">

@@ -130,7 +130,7 @@ export default function EcommerceUXFlawsKillingConversionsPage() {
             <img
               src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=2000&q=80"
               alt="eCommerce shopping cart and online store interface showing UX design elements"
-              className="w-full h-full img-fit"
+              className="w-full h-full object-cover"
             />
           </div>
         </div>

@@ -190,7 +190,7 @@ export default function WorkStack({
                         draggable={false}
                         loading={depth <= 1 ? 'eager' : 'lazy'}
                         decoding="async"
-                        className="absolute inset-0 w-full h-full img-fit"
+                        className="absolute inset-0 w-full h-full object-cover"
                       />
                     )}
                     {/* glare that follows the deck */}

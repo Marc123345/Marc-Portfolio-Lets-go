@@ -47,7 +47,7 @@ function ShotRow({ s, i, n }: { s: Shot; i: number; n: number }) {
             }`}
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={s.detail} alt="Roofing website, detail" loading="lazy" decoding="async" className="absolute inset-0 w-full h-full img-fit" />
+            <img src={s.detail} alt="Roofing website, detail" loading="lazy" decoding="async" className="absolute inset-0 w-full h-full object-cover object-top" />
             <span className="absolute inset-0 bg-black/20" />
           </motion.div>
         )}
@@ -67,7 +67,7 @@ function ShotRow({ s, i, n }: { s: Shot; i: number; n: number }) {
             </div>
             <div className="relative aspect-[16/10] overflow-hidden">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={s.home} alt="Roofing website, homepage" loading="lazy" decoding="async" className="absolute inset-0 w-full h-full img-fit" />
+              <img src={s.home} alt="Roofing website, homepage" loading="lazy" decoding="async" className="absolute inset-0 w-full h-full object-cover object-top" />
               <span className="absolute inset-0 bg-[linear-gradient(115deg,rgba(255,255,255,0.10),transparent_38%)]" />
             </div>
           </div>

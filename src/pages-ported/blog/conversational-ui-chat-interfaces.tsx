@@ -116,7 +116,7 @@ export default function ConversationalUIChatInterfaces() {
             <img
               src="https://images.unsplash.com/photo-1531746790731-6c087fecd65a?auto=format&fit=crop&w=2000&q=80"
               alt="Conversational UI chat interface design"
-              className="w-full h-full img-fit"
+              className="w-full h-full object-cover"
             />
           </div>
         </div>
@@ -410,7 +410,7 @@ export default function ConversationalUIChatInterfaces() {
                   <img
                     src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=2000&q=80"
                     alt="What Is GEO? Generative Engine Optimization Explained"
-                    className="w-full h-full img-fit"
+                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
                 <div className="p-6">
@@ -431,7 +431,7 @@ export default function ConversationalUIChatInterfaces() {
                   <img
                     src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=2000&q=80"
                     alt="What Is AEO? Answer Engine Optimization Explained"
-                    className="w-full h-full img-fit"
+                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
                 <div className="p-6">
