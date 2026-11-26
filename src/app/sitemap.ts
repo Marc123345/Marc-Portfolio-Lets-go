@@ -56,6 +56,7 @@ const entries: Entry[] = [
   { path: 'dental-audit', priority: 0.9 },
 
   // Case studies
+  { path: 'work/case-studies/tracefold', priority: 0.8 },
   { path: 'work/case-studies/automarginx', priority: 0.8 },
   { path: 'work/case-studies/fleet-management', priority: 0.8 },
   { path: 'work/case-studies/mytube', priority: 0.8 },
