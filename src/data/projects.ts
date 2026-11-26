@@ -46,6 +46,20 @@ export const PROJECTS: Project[] = [
     tags: ['React 19', 'Figma', 'Design Tokens'],
   },
   {
+    title: 'Relay',
+    category: 'Product UX · AI Review',
+    blurb:
+      'Control-room UI kit for reviewing AI-generated media before it goes live. Eight React workspaces, a Figma file and one token set.',
+    image: '/images/case-studies/relay/cover.jpg',
+    caseStudyUrl: '/work/case-studies/relay/',
+    stats: [
+      { value: '8', label: 'Workspaces' },
+      { value: 'React 19', label: 'Source' },
+      { value: '6', label: 'Guides' },
+    ],
+    tags: ['React 19', 'Figma', 'Design Tokens'],
+  },
+  {
     title: 'Untapped Africa',
     category: 'Impact / Storytelling',
     blurb:
