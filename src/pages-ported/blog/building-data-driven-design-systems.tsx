@@ -1,14 +1,13 @@
 "use client";
 
+import NextLink from 'next/link';
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowLeft, Calendar, Clock, Share2, Linkedin, Facebook, Link, ArrowRight } from 'lucide-react';
 import MagneticButton from '@/components/MagneticButton';
 import TwitterIcon from '@/components/TwitterIcon';
 import ContactForm from '@/components/ContactForm';
-import { useRouter } from 'next/navigation';
 export default function BuildingDataDrivenDesignSystemsPage() {
-  const router = useRouter();
   
   // Blog post schema for SEO
   const blogPostSchema = {
@@ -45,13 +44,12 @@ export default function BuildingDataDrivenDesignSystemsPage() {
       {/* Hero Section */}
       <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8 bg-black">
         <div className="max-w-4xl mx-auto">
-          <button 
-            onClick={() => router.push('/blog')}
+          <NextLink href="/blog"
             className="flex items-center gap-2 text-[#A3D1FF] hover:underline mb-6"
           >
             <ArrowLeft className="w-4 h-4" />
             Back to Blog
-          </button>
+          </NextLink>
           
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">
             Building Data-Driven Design Systems for Scale
@@ -205,14 +203,13 @@ export default function BuildingDataDrivenDesignSystemsPage() {
                 <div className="p-6">
                   <h4 className="text-lg font-semibold text-white mb-2 group-hover:text-[#A3D1FF] transition-colors">The Future of SaaS Web Design: Merging Aesthetics with Functionality</h4>
                   <p className="text-white text-sm mb-4">How SaaS web design is changing, and what it means for digital products.</p>
-                  <button 
-                    onClick={() => router.push('/blog/future-of-saas-web-design')}
+                  <NextLink href="/blog/future-of-saas-web-design"
                     className="text-[#A3D1FF] text-sm flex items-center gap-1 hover:underline"
                     title="Read about the future of SaaS web design"
                   >
                     Read Article
                     <ArrowRight className="w-3 h-3" />
-                  </button>
+                  </NextLink>
                 </div>
               </div>
               
@@ -227,14 +224,13 @@ export default function BuildingDataDrivenDesignSystemsPage() {
                 <div className="p-6">
                   <h4 className="text-lg font-semibold text-white mb-2 group-hover:text-[#A3D1FF] transition-colors">From Concept to Profit: Designing Platforms That Empower Automotive Dealers</h4>
                   <p className="text-white text-sm mb-4">The automotive industry is no stranger to disruption, with rapid advancements in technology reshaping how dealers operate.</p>
-                  <button 
-                    onClick={() => router.push('/blog/designing-platforms-for-automotive-dealers')}
+                  <NextLink href="/blog/designing-platforms-for-automotive-dealers"
                     className="text-[#A3D1FF] text-sm flex items-center gap-1 hover:underline"
                     title="Learn about automotive dealer platform design"
                   >
                     Read Article
                     <ArrowRight className="w-3 h-3" />
-                  </button>
+                  </NextLink>
                 </div>
               </div>
             </div>
@@ -243,27 +239,27 @@ export default function BuildingDataDrivenDesignSystemsPage() {
             <div className="ui-card mt-8 p-6">
               <h4 className="text-lg font-semibold text-white mb-4">Explore More Resources</h4>
               <div className="grid md:grid-cols-3 gap-4">
-                <Link 
+                <NextLink 
                   href="/services/design/" 
                   className="text-[#A3D1FF] hover:text-white transition-colors"
                   title="Professional UI/UX design services"
                 >
                   UI/UX Design Services →
-                </Link>
-                <Link 
+                </NextLink>
+                <NextLink 
                   href="/work/" 
                   className="text-[#A3D1FF] hover:text-white transition-colors"
                   title="View our design portfolio"
                 >
                   Design Portfolio →
-                </Link>
-                <Link 
+                </NextLink>
+                <NextLink 
                   href="/contact/" 
                   className="text-[#A3D1FF] hover:text-white transition-colors"
                   title="Analyze your website design"
                 >
                   Free Website Analysis →
-                </Link>
+                </NextLink>
               </div>
             </div>
           </div>
@@ -278,13 +274,12 @@ export default function BuildingDataDrivenDesignSystemsPage() {
             Let's create a data-driven design system that grows with your product and delivers measurable ROI through improved development efficiency and user experience.
           </p>
           <MagneticButton>
-            <button
-              onClick={() => router.push('/contact')}
+            <NextLink href="/contact"
               className="mr_btn mr_btn_primary inline-flex items-center gap-2"
             >
               <span>Book a Call</span>
               <ArrowRight className="w-5 h-5" />
-            </button>
+            </NextLink>
           </MagneticButton>
         </div>
       </section>

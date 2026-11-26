@@ -1,13 +1,12 @@
 "use client";
 
+import NextLink from 'next/link';
 import React from 'react';
 import { ArrowLeft, Calendar, Clock, Linkedin, Facebook, Link, ArrowRight, Zap, Layers, ChartBar as BarChart3, Lightbulb, BookOpen, Cpu, Globe } from 'lucide-react';
 import MagneticButton from '@/components/MagneticButton';
 import TwitterIcon from '@/components/TwitterIcon';
 import ContactForm from '@/components/ContactForm';
-import { useRouter } from 'next/navigation';
 export default function WhatIsGEOPage() {
-  const router = useRouter();
 
   const blogPostSchema = {
     "@context": "https://schema.org",
@@ -89,13 +88,12 @@ export default function WhatIsGEOPage() {
 
       <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8 bg-black">
         <div className="max-w-4xl mx-auto">
-          <button
-            onClick={() => router.push('/blog')}
+          <NextLink href="/blog"
             className="flex items-center gap-2 text-[#A3D1FF] hover:underline mb-6"
           >
             <ArrowLeft className="w-4 h-4" />
             Back to Blog
-          </button>
+          </NextLink>
 
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">
             What Is GEO? Generative Engine Optimization Explained for Modern Search
@@ -644,13 +642,12 @@ export default function WhatIsGEOPage() {
                 <div className="p-6">
                   <h4 className="text-lg font-semibold text-white mb-2 group-hover:text-[#A3D1FF] transition-colors">What Is AEO? Answer Engine Optimization Explained for 2026 and Beyond</h4>
                   <p className="text-white text-sm mb-4">Learn what Answer Engine Optimization (AEO) is, how it differs from traditional SEO, and why it matters for modern visibility.</p>
-                  <button
-                    onClick={() => router.push('/blog/what-is-aeo')}
+                  <NextLink href="/blog/what-is-aeo"
                     className="text-[#A3D1FF] text-sm flex items-center gap-1 hover:underline"
                   >
                     Read Article
                     <ArrowRight className="w-3 h-3" />
-                  </button>
+                  </NextLink>
                 </div>
               </div>
 
@@ -665,13 +662,12 @@ export default function WhatIsGEOPage() {
                 <div className="p-6">
                   <h4 className="text-lg font-semibold text-white mb-2 group-hover:text-[#A3D1FF] transition-colors">Stop Guessing in GSC: A Practical Guide to AI-Powered Configuration for SEOs</h4>
                   <p className="text-white text-sm mb-4">Learn how to use AI-powered configuration in Google Search Console to build reports and diagnose traffic drops faster.</p>
-                  <button
-                    onClick={() => router.push('/blog/google-search-console-ai-reports')}
+                  <NextLink href="/blog/google-search-console-ai-reports"
                     className="text-[#A3D1FF] text-sm flex items-center gap-1 hover:underline"
                   >
                     Read Article
                     <ArrowRight className="w-3 h-3" />
-                  </button>
+                  </NextLink>
                 </div>
               </div>
             </div>

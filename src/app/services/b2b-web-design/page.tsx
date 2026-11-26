@@ -1,9 +1,10 @@
 import type { Metadata } from 'next';
 import B2BWebDesignPage from '@/pages-ported/services/B2BWebDesignPage';
+import { B2B_EXTRA_FAQS } from '@/content/serviceFaqs';
 
-const title = 'Choosing the Right B2B Web Design Agency for Your Business Needs';
+const title = 'B2B Web Design Agency | Custom Next.js Sites | Marc Friedman';
 const description =
-  'Discover how to choose the ideal B2B web design agency that aligns with your business needs and goals. Read the article for expert tips and insights.';
+  'B2B web design agency building custom React and Next.js websites for US and European companies. Lead-focused UX, fast pages, 50+ projects shipped. Book a call.';
 const url = 'https://www.marcfriedmanportfolio.com/services/b2b-web-design/';
 
 export const metadata: Metadata = {
@@ -81,6 +82,11 @@ const schema = {
             text: 'No. We work with everyone from growing service businesses to established manufacturers. What our best clients share is treating the website as a lead-generation tool rather than a brochure.',
           },
         },
+        ...B2B_EXTRA_FAQS.map((f) => ({
+          '@type': 'Question',
+          name: f.q,
+          acceptedAnswer: { '@type': 'Answer', text: f.a },
+        })),
       ],
     },
   ],

@@ -1,12 +1,12 @@
 "use client";
 
+import NextLink from 'next/link';
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, ArrowUpRight, Calendar, Award, Globe, Users, Star, ExternalLink } from 'lucide-react';
 import TextReveal from '@/components/TextReveal';
 import HoverCard3D from '@/components/HoverCard3D';
 import MagneticButton from '@/components/MagneticButton';
-import { useRouter } from 'next/navigation';
 
 interface PressItem {
   title: string;
@@ -151,7 +151,6 @@ function PressCard({ item }: { item: PressItem }) {
 }
 
 export default function PressPage() {
-  const router = useRouter();
   
   const featuredItems = pressItems.filter(item => item.featured);
   const regularItems = pressItems.filter(item => !item.featured);
@@ -314,9 +313,9 @@ export default function PressPage() {
               </div>
               
               <MagneticButton>
-                <button onClick={() => router.push('/contact')} className="mr_btn mr_btn_primary">
+                <NextLink href="/contact" className="mr_btn mr_btn_primary">
                   <span>Request Media Kit</span>
-                </button>
+                </NextLink>
               </MagneticButton>
             </div>
             
@@ -345,9 +344,9 @@ export default function PressPage() {
               Let's create a digital solution that not only delivers results but earns recognition for its excellence.
             </p>
             <MagneticButton>
-              <button onClick={() => router.push('/contact')} className="mr_btn mr_btn_primary">
+              <NextLink href="/contact" className="mr_btn mr_btn_primary">
                 <span>Book a Call</span>
-              </button>
+              </NextLink>
             </MagneticButton>
           </motion.div>
         </div>

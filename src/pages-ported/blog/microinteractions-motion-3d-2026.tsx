@@ -1,12 +1,11 @@
 "use client";
 
+import NextLink from 'next/link';
 import React from 'react';
 import { ArrowLeft, Calendar, Clock, ArrowRight, Gauge } from 'lucide-react';
 import ContactForm from '@/components/ContactForm';
-import { useRouter } from 'next/navigation';
 
 export default function MicrointeractionsMotion3DPage() {
-  const router = useRouter();
 
   const blogPostSchema = {
     "@context": "https://schema.org",
@@ -75,13 +74,12 @@ export default function MicrointeractionsMotion3DPage() {
       {/* Hero Section */}
       <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8 bg-black">
         <div className="max-w-4xl mx-auto">
-          <button
-            onClick={() => router.push('/blog')}
+          <NextLink href="/blog"
             className="flex items-center gap-2 text-[#A3D1FF] hover:underline mb-6"
           >
             <ArrowLeft className="w-4 h-4" />
             Back to Blog
-          </button>
+          </NextLink>
 
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">
             Microinteractions, Motion and 3D in 2026 Web Design
@@ -233,13 +231,12 @@ const Scene = dynamic(() => import('./Scene'), {
                 <div className="p-6">
                   <h4 className="text-lg font-semibold text-white mb-2 group-hover:text-[#A3D1FF] transition-colors">Anti-Design, Texture and Nostalgia</h4>
                   <p className="text-white text-sm mb-4">The expressive end of web design, and where it belongs.</p>
-                  <button
-                    onClick={() => router.push('/blog/anti-design-texture-nostalgia-2026')}
+                  <NextLink href="/blog/anti-design-texture-nostalgia-2026"
                     className="text-[#A3D1FF] text-sm flex items-center gap-1 hover:underline"
                   >
                     Read Article
                     <ArrowRight className="w-3 h-3" />
-                  </button>
+                  </NextLink>
                 </div>
               </div>
 
@@ -254,13 +251,12 @@ const Scene = dynamic(() => import('./Scene'), {
                 <div className="p-6">
                   <h4 className="text-lg font-semibold text-white mb-2 group-hover:text-[#A3D1FF] transition-colors">Bold Typography and Earthy Palettes</h4>
                   <p className="text-white text-sm mb-4">Oversized type, clay and stone colors, and how to keep them readable.</p>
-                  <button
-                    onClick={() => router.push('/blog/bold-typography-earthy-palettes-2026')}
+                  <NextLink href="/blog/bold-typography-earthy-palettes-2026"
                     className="text-[#A3D1FF] text-sm flex items-center gap-1 hover:underline"
                   >
                     Read Article
                     <ArrowRight className="w-3 h-3" />
-                  </button>
+                  </NextLink>
                 </div>
               </div>
             </div>

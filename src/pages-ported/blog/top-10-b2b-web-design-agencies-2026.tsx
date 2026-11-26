@@ -1,9 +1,9 @@
 "use client";
 
+import NextLink from 'next/link';
 import React from 'react';
 import { ArrowLeft, Calendar, Clock, ArrowRight, Info } from 'lucide-react';
 import ContactForm from '@/components/ContactForm';
-import { useRouter } from 'next/navigation';
 
 const agencies = [
   { name: 'Marc Friedman', base: 'Solo studio, remote', bestFor: 'B2B SMBs and service firms that want one accountable person', platform: 'Next.js / React' },
@@ -19,7 +19,6 @@ const agencies = [
 ];
 
 export default function Top10B2BWebDesignAgencies2026Page() {
-  const router = useRouter();
 
   const blogPostSchema = {
     "@context": "https://schema.org",
@@ -108,13 +107,12 @@ export default function Top10B2BWebDesignAgencies2026Page() {
       {/* Hero Section */}
       <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8 bg-black">
         <div className="max-w-4xl mx-auto">
-          <button
-            onClick={() => router.push('/blog')}
+          <NextLink href="/blog"
             className="flex items-center gap-2 text-[#A3D1FF] hover:underline mb-6"
           >
             <ArrowLeft className="w-4 h-4" />
             Back to Blog
-          </button>
+          </NextLink>
 
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">
             Top 10 B2B Web Design Agencies in 2026
@@ -379,13 +377,12 @@ export default function Top10B2BWebDesignAgencies2026Page() {
                 <div className="p-6">
                   <h4 className="text-lg font-semibold text-white mb-2 group-hover:text-[#A3D1FF] transition-colors">How to Choose a Website Designer</h4>
                   <p className="text-white text-sm mb-4">Goals, audits, portfolios, questions to ask, and ownership before you sign.</p>
-                  <button
-                    onClick={() => router.push('/blog/how-to-choose-a-website-designer-2026')}
+                  <NextLink href="/blog/how-to-choose-a-website-designer-2026"
                     className="text-[#A3D1FF] text-sm flex items-center gap-1 hover:underline"
                   >
                     Read Article
                     <ArrowRight className="w-3 h-3" />
-                  </button>
+                  </NextLink>
                 </div>
               </div>
 
@@ -400,13 +397,12 @@ export default function Top10B2BWebDesignAgencies2026Page() {
                 <div className="p-6">
                   <h4 className="text-lg font-semibold text-white mb-2 group-hover:text-[#A3D1FF] transition-colors">Best Next.js Developers for B2B Service Businesses</h4>
                   <p className="text-white text-sm mb-4">The same honest format, ranked by fit for Next.js builds.</p>
-                  <button
-                    onClick={() => router.push('/blog/best-nextjs-developers-b2b-service-businesses-2026')}
+                  <NextLink href="/blog/best-nextjs-developers-b2b-service-businesses-2026"
                     className="text-[#A3D1FF] text-sm flex items-center gap-1 hover:underline"
                   >
                     Read Article
                     <ArrowRight className="w-3 h-3" />
-                  </button>
+                  </NextLink>
                 </div>
               </div>
             </div>

@@ -18,6 +18,7 @@ import {
   ServiceColophon,
 } from '@/components/ServiceEditorial';
 import ChecklistDownload from '@/components/ChecklistDownload';
+import { B2B_EXTRA_FAQS } from '@/content/serviceFaqs';
 
 const PORTRAIT =
   'https://ik.imagekit.io/qcvroy8xpd/PW8VUKH.png?updatedAt=1759693058055&tr=f-webp';
@@ -889,7 +890,7 @@ export default function B2BWebDesignPage() {
               </div>
             </div>
             <div className="border-t border-white/10">
-              {FAQS.map((item, i) => (
+              {[...FAQS, ...B2B_EXTRA_FAQS].map((item, i) => (
                 <FAQRow
                   key={item.q}
                   item={item}

@@ -8,7 +8,9 @@
     "start": "next start",
     "lint": "eslint",
     "deploy": "next build && wrangler deploy",
-    "deploy:cf": "wrangler deploy"
+    "deploy:cf": "wrangler deploy",
+    "deploy:dental": "wrangler deploy -c dental-worker/wrangler.jsonc",
+    "deploy:thrive": "wrangler deploy -c thrive-worker/wrangler.jsonc"
   },
   "dependencies": {
     "@plausible-analytics/tracker": "^0.4.5",

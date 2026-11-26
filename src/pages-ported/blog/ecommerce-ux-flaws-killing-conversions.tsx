@@ -6,10 +6,9 @@ import { ArrowLeft, Calendar, Clock, Share2, Linkedin, Facebook, Link as LinkIco
 import MagneticButton from '@/components/MagneticButton';
 import TwitterIcon from '@/components/TwitterIcon';
 import Link from 'next/link';
+import NextLink from 'next/link';
 import ContactForm from '@/components/ContactForm';
-import { useRouter } from 'next/navigation';
 export default function EcommerceUXFlawsKillingConversionsPage() {
-  const router = useRouter();
 
   const blogPostSchema = {
     "@context": "https://schema.org",
@@ -61,13 +60,12 @@ export default function EcommerceUXFlawsKillingConversionsPage() {
 
       <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8 bg-black">
         <div className="max-w-4xl mx-auto">
-          <button
-            onClick={() => router.push('/blog')}
+          <NextLink href="/blog"
             className="flex items-center gap-2 text-[#A3D1FF] hover:underline mb-6"
           >
             <ArrowLeft className="w-4 h-4" />
             Back to Blog
-          </button>
+          </NextLink>
 
           <div className="flex flex-wrap gap-2 mb-4">
             <span className="px-3 py-1 bg-[#A3D1FF]/10 text-[#A3D1FF] rounded-full text-sm">

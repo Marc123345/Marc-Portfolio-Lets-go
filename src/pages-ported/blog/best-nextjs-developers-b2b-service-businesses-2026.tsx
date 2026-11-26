@@ -1,14 +1,13 @@
 "use client";
 
+import NextLink from 'next/link';
 import React from 'react';
 import { ArrowLeft, Calendar, Clock, Linkedin, Facebook, Link, ArrowRight } from 'lucide-react';
 import MagneticButton from '@/components/MagneticButton';
 import TwitterIcon from '@/components/TwitterIcon';
 import ContactForm from '@/components/ContactForm';
-import { useRouter } from 'next/navigation';
 
 export default function BestNextjsDevelopersPage() {
-  const router = useRouter();
 
   const blogPostSchema = {
     "@context": "https://schema.org",
@@ -136,13 +135,12 @@ export default function BestNextjsDevelopersPage() {
       {/* Hero Section */}
       <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8 bg-black">
         <div className="max-w-4xl mx-auto">
-          <button
-            onClick={() => router.push('/blog')}
+          <NextLink href="/blog"
             className="flex items-center gap-2 text-[#A3D1FF] hover:underline mb-6"
           >
             <ArrowLeft className="w-4 h-4" />
             Back to Blog
-          </button>
+          </NextLink>
 
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">
             Best Next.js Developers for B2B &amp; Service Businesses (2026)
@@ -307,13 +305,12 @@ export default function BestNextjsDevelopersPage() {
                 <div className="p-6">
                   <h4 className="text-lg font-semibold text-white mb-2 group-hover:text-[#A3D1FF] transition-colors">CSS Is Eating JavaScript&rsquo;s Lunch</h4>
                   <p className="text-white text-sm mb-4">What&rsquo;s shippable today with modern CSS, and the UI JavaScript it quietly replaces.</p>
-                  <button
-                    onClick={() => router.push('/blog/css-eating-javascript-lunch')}
+                  <NextLink href="/blog/css-eating-javascript-lunch"
                     className="text-[#A3D1FF] text-sm flex items-center gap-1 hover:underline"
                   >
                     Read Article
                     <ArrowRight className="w-3 h-3" />
-                  </button>
+                  </NextLink>
                 </div>
               </div>
 
@@ -328,13 +325,12 @@ export default function BestNextjsDevelopersPage() {
                 <div className="p-6">
                   <h4 className="text-lg font-semibold text-white mb-2 group-hover:text-[#A3D1FF] transition-colors">What Is GEO? Generative Engine Optimization Explained</h4>
                   <p className="text-white text-sm mb-4">Showing up inside AI-generated answers across LLMs, the new SEO playbook.</p>
-                  <button
-                    onClick={() => router.push('/blog/what-is-geo')}
+                  <NextLink href="/blog/what-is-geo"
                     className="text-[#A3D1FF] text-sm flex items-center gap-1 hover:underline"
                   >
                     Read Article
                     <ArrowRight className="w-3 h-3" />
-                  </button>
+                  </NextLink>
                 </div>
               </div>
             </div>
@@ -350,13 +346,12 @@ export default function BestNextjsDevelopersPage() {
             One operator handling strategy, design, copy, and code, all aimed at turning visitors into leads. Let&rsquo;s build it.
           </p>
           <MagneticButton>
-            <button
-              onClick={() => router.push('/contact')}
+            <NextLink href="/contact"
               className="mr_btn mr_btn_primary inline-flex items-center gap-2"
             >
               <span>Start Your Project</span>
               <ArrowRight className="w-5 h-5" />
-            </button>
+            </NextLink>
           </MagneticButton>
         </div>
       </section>

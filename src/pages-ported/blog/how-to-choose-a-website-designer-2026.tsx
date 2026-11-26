@@ -1,12 +1,11 @@
 "use client";
 
+import NextLink from 'next/link';
 import React from 'react';
 import { ArrowLeft, Calendar, Clock, ArrowRight } from 'lucide-react';
 import ContactForm from '@/components/ContactForm';
-import { useRouter } from 'next/navigation';
 
 export default function ChooseWebsiteDesigner2026Page() {
-  const router = useRouter();
 
   const blogPostSchema = {
     "@context": "https://schema.org",
@@ -97,13 +96,12 @@ export default function ChooseWebsiteDesigner2026Page() {
       {/* Hero Section */}
       <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8 bg-black">
         <div className="max-w-4xl mx-auto">
-          <button
-            onClick={() => router.push('/blog')}
+          <NextLink href="/blog"
             className="flex items-center gap-2 text-[#A3D1FF] hover:underline mb-6"
           >
             <ArrowLeft className="w-4 h-4" />
             Back to Blog
-          </button>
+          </NextLink>
 
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">
             How to Choose a Website Designer for Your Business Website in 2026
@@ -419,13 +417,12 @@ export default function ChooseWebsiteDesigner2026Page() {
                 <div className="p-6">
                   <h4 className="text-lg font-semibold text-white mb-2 group-hover:text-[#A3D1FF] transition-colors">How Much Does a Website Cost in 2026?</h4>
                   <p className="text-white text-sm mb-4">Typical price ranges, what drives them, and where budgets quietly get cut.</p>
-                  <button
-                    onClick={() => router.push('/blog/how-much-does-a-website-cost-2026')}
+                  <NextLink href="/blog/how-much-does-a-website-cost-2026"
                     className="text-[#A3D1FF] text-sm flex items-center gap-1 hover:underline"
                   >
                     Read Article
                     <ArrowRight className="w-3 h-3" />
-                  </button>
+                  </NextLink>
                 </div>
               </div>
 
@@ -440,13 +437,12 @@ export default function ChooseWebsiteDesigner2026Page() {
                 <div className="p-6">
                   <h4 className="text-lg font-semibold text-white mb-2 group-hover:text-[#A3D1FF] transition-colors">Best Next.js Developers for B2B Service Businesses</h4>
                   <p className="text-white text-sm mb-4">What to look for in a Next.js developer when the site has to generate pipeline.</p>
-                  <button
-                    onClick={() => router.push('/blog/best-nextjs-developers-b2b-service-businesses-2026')}
+                  <NextLink href="/blog/best-nextjs-developers-b2b-service-businesses-2026"
                     className="text-[#A3D1FF] text-sm flex items-center gap-1 hover:underline"
                   >
                     Read Article
                     <ArrowRight className="w-3 h-3" />
-                  </button>
+                  </NextLink>
                 </div>
               </div>
             </div>

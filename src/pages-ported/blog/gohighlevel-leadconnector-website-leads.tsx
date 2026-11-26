@@ -1,9 +1,9 @@
 "use client";
 
+import NextLink from 'next/link';
 import React from 'react';
 import { ArrowLeft, Calendar, Clock, ArrowRight, AlertTriangle } from 'lucide-react';
 import ContactForm from '@/components/ContactForm';
-import { useRouter } from 'next/navigation';
 
 const HERO =
   'https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=2000&q=80';
@@ -30,7 +30,6 @@ const routes = [
 ];
 
 export default function GoHighLevelLeadConnectorPage() {
-  const router = useRouter();
 
   const blogPostSchema = {
     "@context": "https://schema.org",
@@ -107,13 +106,12 @@ export default function GoHighLevelLeadConnectorPage() {
       {/* Hero Section */}
       <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8 bg-black">
         <div className="max-w-4xl mx-auto">
-          <button
-            onClick={() => router.push('/blog')}
+          <NextLink href="/blog"
             className="flex items-center gap-2 text-[#A3D1FF] hover:underline mb-6"
           >
             <ArrowLeft className="w-4 h-4" />
             Back to Blog
-          </button>
+          </NextLink>
 
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">
             Sending Website Leads to GoHighLevel and LeadConnector
@@ -282,13 +280,12 @@ export default function GoHighLevelLeadConnectorPage() {
                 <div className="p-6">
                   <h4 className="text-lg font-semibold text-white mb-2 group-hover:text-[#A3D1FF] transition-colors">What a 1-Second Faster Site Is Worth in Leads</h4>
                   <p className="text-white text-sm mb-4">Putting a dollar figure on site speed.</p>
-                  <button
-                    onClick={() => router.push('/blog/faster-site-worth-in-leads')}
+                  <NextLink href="/blog/faster-site-worth-in-leads"
                     className="text-[#A3D1FF] text-sm flex items-center gap-1 hover:underline"
                   >
                     Read Article
                     <ArrowRight className="w-3 h-3" />
-                  </button>
+                  </NextLink>
                 </div>
               </div>
 
@@ -303,13 +300,12 @@ export default function GoHighLevelLeadConnectorPage() {
                 <div className="p-6">
                   <h4 className="text-lg font-semibold text-white mb-2 group-hover:text-[#A3D1FF] transition-colors">Digital Marketing Strategy for Asphalt Contractors</h4>
                   <p className="text-white text-sm mb-4">Getting more local jobs from your website.</p>
-                  <button
-                    onClick={() => router.push('/blog/digital-marketing-asphalt-contractors')}
+                  <NextLink href="/blog/digital-marketing-asphalt-contractors"
                     className="text-[#A3D1FF] text-sm flex items-center gap-1 hover:underline"
                   >
                     Read Article
                     <ArrowRight className="w-3 h-3" />
-                  </button>
+                  </NextLink>
                 </div>
               </div>
             </div>

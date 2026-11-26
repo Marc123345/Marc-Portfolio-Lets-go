@@ -1,13 +1,12 @@
 "use client";
 
+import NextLink from 'next/link';
 import React from 'react';
 import { ArrowLeft, Calendar, Clock, Linkedin, Facebook, Link, ArrowRight, MessageSquare, Zap, TriangleAlert as AlertTriangle, CircleCheck as CheckCircle, Circle as XCircle, Users, Brain, Target, TrendingUp, Layers, Eye } from 'lucide-react';
 import MagneticButton from '@/components/MagneticButton';
 import TwitterIcon from '@/components/TwitterIcon';
 import ContactForm from '@/components/ContactForm';
-import { useRouter } from 'next/navigation';
 export default function ConversationalUIChatInterfaces() {
-  const router = useRouter();
 
   const blogPostSchema = {
     "@context": "https://schema.org",
@@ -89,13 +88,12 @@ export default function ConversationalUIChatInterfaces() {
 
       <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8 bg-black">
         <div className="max-w-4xl mx-auto">
-          <button
-            onClick={() => router.push('/blog')}
+          <NextLink href="/blog"
             className="flex items-center gap-2 text-[#A3D1FF] hover:underline mb-6"
           >
             <ArrowLeft className="w-4 h-4" />
             Back to Blog
-          </button>
+          </NextLink>
 
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">
             Conversational UI Design: When Chat Interfaces Help, and When They Hurt, Your UX
@@ -416,13 +414,12 @@ export default function ConversationalUIChatInterfaces() {
                 <div className="p-6">
                   <h4 className="text-lg font-semibold text-white mb-2 group-hover:text-[#A3D1FF] transition-colors">What Is GEO? Generative Engine Optimization Explained for Modern Search</h4>
                   <p className="text-white text-sm mb-4">Learn what Generative Engine Optimization (GEO) is and how to optimize your content to appear in AI-generated search results.</p>
-                  <button
-                    onClick={() => router.push('/blog/what-is-geo')}
+                  <NextLink href="/blog/what-is-geo"
                     className="text-[#A3D1FF] text-sm flex items-center gap-1 hover:underline"
                   >
                     Read Article
                     <ArrowRight className="w-3 h-3" />
-                  </button>
+                  </NextLink>
                 </div>
               </div>
 
@@ -437,13 +434,12 @@ export default function ConversationalUIChatInterfaces() {
                 <div className="p-6">
                   <h4 className="text-lg font-semibold text-white mb-2 group-hover:text-[#A3D1FF] transition-colors">What Is AEO? Answer Engine Optimization Explained for 2026 and Beyond</h4>
                   <p className="text-white text-sm mb-4">Learn what Answer Engine Optimization (AEO) is, how it differs from traditional SEO, and why it matters for modern visibility.</p>
-                  <button
-                    onClick={() => router.push('/blog/what-is-aeo')}
+                  <NextLink href="/blog/what-is-aeo"
                     className="text-[#A3D1FF] text-sm flex items-center gap-1 hover:underline"
                   >
                     Read Article
                     <ArrowRight className="w-3 h-3" />
-                  </button>
+                  </NextLink>
                 </div>
               </div>
             </div>
@@ -458,13 +454,12 @@ export default function ConversationalUIChatInterfaces() {
             I help teams design conversational and AI-powered experiences that solve real user problems, not just add surface-level AI features. Let's talk about what would actually move the needle for your product.
           </p>
           <MagneticButton>
-            <button
-              onClick={() => router.push('/contact')}
+            <NextLink href="/contact"
               className="mr_btn mr_btn_primary inline-flex items-center gap-2"
             >
               <span>Start a Conversation</span>
               <ArrowRight className="w-5 h-5" />
-            </button>
+            </NextLink>
           </MagneticButton>
         </div>
       </section>

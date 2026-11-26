@@ -1,9 +1,9 @@
 "use client";
 
+import NextLink from 'next/link';
 import React from 'react';
 import { ArrowLeft, Calendar, Clock, ArrowRight, Calculator } from 'lucide-react';
 import ContactForm from '@/components/ContactForm';
-import { useRouter } from 'next/navigation';
 
 const scenarios = [
   { lift: '+5%', label: 'Cautious', rate: '2.1%', leads: '63', clients: '12.6', monthly: '+$3,000', yearly: '+$36,000' },
@@ -12,7 +12,6 @@ const scenarios = [
 ];
 
 export default function FasterSiteWorthInLeadsPage() {
-  const router = useRouter();
 
   const blogPostSchema = {
     "@context": "https://schema.org",
@@ -81,13 +80,12 @@ export default function FasterSiteWorthInLeadsPage() {
       {/* Hero Section */}
       <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8 bg-black">
         <div className="max-w-4xl mx-auto">
-          <button
-            onClick={() => router.push('/blog')}
+          <NextLink href="/blog"
             className="flex items-center gap-2 text-[#A3D1FF] hover:underline mb-6"
           >
             <ArrowLeft className="w-4 h-4" />
             Back to Blog
-          </button>
+          </NextLink>
 
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">
             What a 1-Second Faster Site Is Worth in Leads
@@ -255,13 +253,12 @@ export default function FasterSiteWorthInLeadsPage() {
                 <div className="p-6">
                   <h4 className="text-lg font-semibold text-white mb-2 group-hover:text-[#A3D1FF] transition-colors">Next.js vs Webflow</h4>
                   <p className="text-white text-sm mb-4">When a no-code site stops being enough.</p>
-                  <button
-                    onClick={() => router.push('/blog/nextjs-vs-webflow')}
+                  <NextLink href="/blog/nextjs-vs-webflow"
                     className="text-[#A3D1FF] text-sm flex items-center gap-1 hover:underline"
                   >
                     Read Article
                     <ArrowRight className="w-3 h-3" />
-                  </button>
+                  </NextLink>
                 </div>
               </div>
 
@@ -276,13 +273,12 @@ export default function FasterSiteWorthInLeadsPage() {
                 <div className="p-6">
                   <h4 className="text-lg font-semibold text-white mb-2 group-hover:text-[#A3D1FF] transition-colors">Minimal, Fast, Sustainable UX</h4>
                   <p className="text-white text-sm mb-4">Designing for performance from the first wireframe.</p>
-                  <button
-                    onClick={() => router.push('/blog/minimal-fast-sustainable-ux')}
+                  <NextLink href="/blog/minimal-fast-sustainable-ux"
                     className="text-[#A3D1FF] text-sm flex items-center gap-1 hover:underline"
                   >
                     Read Article
                     <ArrowRight className="w-3 h-3" />
-                  </button>
+                  </NextLink>
                 </div>
               </div>
             </div>
