@@ -1,12 +1,11 @@
 "use client";
 
+import NextLink from 'next/link';
 import React from 'react';
 import { ArrowLeft, Calendar, Clock, ArrowRight, MousePointer2 } from 'lucide-react';
 import ContactForm from '@/components/ContactForm';
-import { useRouter } from 'next/navigation';
 
 export default function AntiDesignTextureNostalgiaPage() {
-  const router = useRouter();
 
   const blogPostSchema = {
     "@context": "https://schema.org",
@@ -75,13 +74,12 @@ export default function AntiDesignTextureNostalgiaPage() {
       {/* Hero Section */}
       <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8 bg-black">
         <div className="max-w-4xl mx-auto">
-          <button
-            onClick={() => router.push('/blog')}
+          <NextLink href="/blog"
             className="flex items-center gap-2 text-[#A3D1FF] hover:underline mb-6"
           >
             <ArrowLeft className="w-4 h-4" />
             Back to Blog
-          </button>
+          </NextLink>
 
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">
             Anti-Design, Texture and Nostalgia in 2026 Web Design
@@ -242,13 +240,12 @@ export default function AntiDesignTextureNostalgiaPage() {
                 <div className="p-6">
                   <h4 className="text-lg font-semibold text-white mb-2 group-hover:text-[#A3D1FF] transition-colors">Microinteractions, Motion and 3D</h4>
                   <p className="text-white text-sm mb-4">How to use motion and depth without making visitors wait for them.</p>
-                  <button
-                    onClick={() => router.push('/blog/microinteractions-motion-3d-2026')}
+                  <NextLink href="/blog/microinteractions-motion-3d-2026"
                     className="text-[#A3D1FF] text-sm flex items-center gap-1 hover:underline"
                   >
                     Read Article
                     <ArrowRight className="w-3 h-3" />
-                  </button>
+                  </NextLink>
                 </div>
               </div>
 
@@ -263,13 +260,12 @@ export default function AntiDesignTextureNostalgiaPage() {
                 <div className="p-6">
                   <h4 className="text-lg font-semibold text-white mb-2 group-hover:text-[#A3D1FF] transition-colors">Brutalism &amp; Anti-Design</h4>
                   <p className="text-white text-sm mb-4">The raw, unpolished side of web design and where it came from.</p>
-                  <button
-                    onClick={() => router.push('/blog/brutalism-anti-design-web-trends')}
+                  <NextLink href="/blog/brutalism-anti-design-web-trends"
                     className="text-[#A3D1FF] text-sm flex items-center gap-1 hover:underline"
                   >
                     Read Article
                     <ArrowRight className="w-3 h-3" />
-                  </button>
+                  </NextLink>
                 </div>
               </div>
             </div>

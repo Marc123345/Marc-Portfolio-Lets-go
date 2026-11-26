@@ -1,13 +1,12 @@
 "use client";
 
+import NextLink from 'next/link';
 import React from 'react';
 import { ArrowLeft, Calendar, Clock, Share2, Linkedin, Facebook, Link as LinkIcon, ArrowRight, Brain, ShoppingCart, Zap, Shield, TrendingUp, CircleCheck as CheckCircle, TriangleAlert as AlertTriangle } from 'lucide-react';
 import MagneticButton from '@/components/MagneticButton';
 import TwitterIcon from '@/components/TwitterIcon';
 import ContactForm from '@/components/ContactForm';
-import { useRouter } from 'next/navigation';
 export default function AIPersonalizationEcommercePage() {
-  const router = useRouter();
 
   const blogPostSchema = {
     "@context": "https://schema.org",
@@ -42,13 +41,12 @@ export default function AIPersonalizationEcommercePage() {
 
       <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8 bg-black">
         <div className="max-w-4xl mx-auto">
-          <button
-            onClick={() => router.push('/blog')}
+          <NextLink href="/blog"
             className="flex items-center gap-2 text-[#A3D1FF] hover:underline mb-6"
           >
             <ArrowLeft className="w-4 h-4" />
             Back to Blog
-          </button>
+          </NextLink>
 
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">
             The Rise of AI-Driven Personalization in Ecommerce: A Practical Guide for 2025
@@ -756,13 +754,12 @@ export default function AIPersonalizationEcommercePage() {
                 <div className="p-6">
                   <h4 className="text-lg font-semibold text-white mb-2 group-hover:text-[#A3D1FF] transition-colors">3 UX Flaws That Kill eCommerce Conversions</h4>
                   <p className="text-white text-sm mb-4">Discover critical UX mistakes costing eCommerce businesses millions in lost revenue.</p>
-                  <button
-                    onClick={() => router.push('/blog/ecommerce-ux-flaws-killing-conversions')}
+                  <NextLink href="/blog/ecommerce-ux-flaws-killing-conversions"
                     className="text-[#A3D1FF] text-sm flex items-center gap-1 hover:underline"
                   >
                     Read Article
                     <ArrowRight className="w-3 h-3" />
-                  </button>
+                  </NextLink>
                 </div>
               </div>
 
@@ -777,13 +774,12 @@ export default function AIPersonalizationEcommercePage() {
                 <div className="p-6">
                   <h4 className="text-lg font-semibold text-white mb-2 group-hover:text-[#A3D1FF] transition-colors">7 Proven Conversion Rate Optimization Techniques</h4>
                   <p className="text-white text-sm mb-4">Discover actionable strategies to boost your website's conversion rates.</p>
-                  <button
-                    onClick={() => router.push('/blog/conversion-rate-optimization-techniques')}
+                  <NextLink href="/blog/conversion-rate-optimization-techniques"
                     className="text-[#A3D1FF] text-sm flex items-center gap-1 hover:underline"
                   >
                     Read Article
                     <ArrowRight className="w-3 h-3" />
-                  </button>
+                  </NextLink>
                 </div>
               </div>
             </div>

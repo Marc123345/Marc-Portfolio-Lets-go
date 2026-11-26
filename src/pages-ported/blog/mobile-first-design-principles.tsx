@@ -1,14 +1,13 @@
 "use client";
 
+import NextLink from 'next/link';
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowLeft, Calendar, Clock, Share2, Linkedin, Facebook, Link, ArrowRight, Smartphone, Zap, LayoutGrid as Layout, Eye } from 'lucide-react';
 import MagneticButton from '@/components/MagneticButton';
 import TwitterIcon from '@/components/TwitterIcon';
 import ContactForm from '@/components/ContactForm';
-import { useRouter } from 'next/navigation';
 export default function MobileFirstDesignPrinciplesPage() {
-  const router = useRouter();
   
   // Blog post schema for SEO
   const blogPostSchema = {
@@ -45,13 +44,12 @@ export default function MobileFirstDesignPrinciplesPage() {
       {/* Hero Section */}
       <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8 bg-black">
         <div className="max-w-4xl mx-auto">
-          <button 
-            onClick={() => router.push('/blog')}
+          <NextLink href="/blog"
             className="flex items-center gap-2 text-[#A3D1FF] hover:underline mb-6"
           >
             <ArrowLeft className="w-4 h-4" />
             Back to Blog
-          </button>
+          </NextLink>
           
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">
             Mobile-First Design Principles Every Developer Should Know
@@ -246,13 +244,12 @@ font-size: clamp(1rem, 0.5rem + 2vw, 1.5rem);`}
                 <div className="p-6">
                   <h4 className="text-lg font-semibold text-white mb-2 group-hover:text-[#A3D1FF] transition-colors">7 Proven Conversion Rate Optimization Techniques for 2025</h4>
                   <p className="text-white text-sm mb-4">Discover actionable strategies to boost your website's conversion rates and drive more business growth.</p>
-                  <button 
-                    onClick={() => router.push('/blog/conversion-rate-optimization-techniques')}
+                  <NextLink href="/blog/conversion-rate-optimization-techniques"
                     className="text-[#A3D1FF] text-sm flex items-center gap-1 hover:underline"
                   >
                     Read Article
                     <ArrowRight className="w-3 h-3" />
-                  </button>
+                  </NextLink>
                 </div>
               </div>
               
@@ -267,13 +264,12 @@ font-size: clamp(1rem, 0.5rem + 2vw, 1.5rem);`}
                 <div className="p-6">
                   <h4 className="text-lg font-semibold text-white mb-2 group-hover:text-[#A3D1FF] transition-colors">Optimizing Your Website for AI Crawlers: The Complete Guide</h4>
                   <p className="text-white text-sm mb-4">As AI becomes more integrated into search, learn how to optimize your website for AI crawlers to improve visibility.</p>
-                  <button 
-                    onClick={() => router.push('/blog/optimizing-websites-for-ai-crawlers')}
+                  <NextLink href="/blog/optimizing-websites-for-ai-crawlers"
                     className="text-[#A3D1FF] text-sm flex items-center gap-1 hover:underline"
                   >
                     Read Article
                     <ArrowRight className="w-3 h-3" />
-                  </button>
+                  </NextLink>
                 </div>
               </div>
             </div>
@@ -289,13 +285,12 @@ font-size: clamp(1rem, 0.5rem + 2vw, 1.5rem);`}
             Let's create a responsive, user-friendly website that delivers an exceptional experience on all devices and drives real business results.
           </p>
           <MagneticButton>
-            <button
-              onClick={() => router.push('/contact')}
+            <NextLink href="/contact"
               className="mr_btn mr_btn_primary inline-flex items-center gap-2"
             >
               <span>Book a Call</span>
               <ArrowRight className="w-5 h-5" />
-            </button>
+            </NextLink>
           </MagneticButton>
         </div>
       </section>

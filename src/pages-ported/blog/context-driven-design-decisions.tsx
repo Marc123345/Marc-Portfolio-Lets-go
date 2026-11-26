@@ -1,14 +1,13 @@
 "use client";
 
+import NextLink from 'next/link';
 import React from 'react';
 import ContactForm from '@/components/ContactForm';
 import { motion } from 'framer-motion';
 import { ArrowLeft, Calendar, Clock, Target, Lightbulb, Users, Map, CircleAlert as AlertCircle, CircleCheck as CheckCircle, BookOpen, Code, TrendingUp, Linkedin } from 'lucide-react';
 import MagneticButton from '@/components/MagneticButton';
 import TwitterIcon from '@/components/TwitterIcon';
-import { useRouter } from 'next/navigation';
 export default function ContextDrivenDesignDecisionsPage() {
-  const router = useRouter();
 
   const blogPostSchema = {
     "@context": "https://schema.org",
@@ -48,13 +47,12 @@ export default function ContextDrivenDesignDecisionsPage() {
 
       <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8 bg-black">
         <div className="max-w-4xl mx-auto">
-          <button
-            onClick={() => router.push('/blog')}
+          <NextLink href="/blog"
             className="flex items-center gap-2 text-[#A3D1FF] hover:underline mb-6"
           >
             <ArrowLeft className="w-4 h-4" />
             Back to Blog
-          </button>
+          </NextLink>
 
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">
             Why Context Matters: A Junior Designer's Guide to Making Better Design Decisions
@@ -730,13 +728,12 @@ export default function ContextDrivenDesignDecisionsPage() {
 
           <div className="mt-16 pt-8 border-t border-white/10">
             <div className="flex items-center justify-between">
-              <button
-                onClick={() => router.push('/blog')}
+              <NextLink href="/blog"
                 className="flex items-center gap-2 text-[#A3D1FF] hover:underline"
               >
                 <ArrowLeft className="w-4 h-4" />
                 Back to Blog
-              </button>
+              </NextLink>
 
               <div className="flex items-center gap-4">
                 <span className="text-white text-sm">Share:</span>

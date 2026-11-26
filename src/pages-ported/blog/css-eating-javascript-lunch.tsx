@@ -1,16 +1,15 @@
 "use client";
 
+import NextLink from 'next/link';
 import React from 'react';
 import { ArrowLeft, Calendar, Clock, Linkedin, Facebook, Link, ArrowRight, Code2, Eye, GitBranch, Sparkles, Zap } from 'lucide-react';
 import MagneticButton from '@/components/MagneticButton';
 import TwitterIcon from '@/components/TwitterIcon';
 import ContactForm from '@/components/ContactForm';
-import { useRouter } from 'next/navigation';
 
 const HERO_IMAGE = 'https://ik.imagekit.io/qcvroy8xpd/8ce5c50b-8af1-4e99-b2b0-f7f29cd0abd3.avif';
 
 export default function CssEatingJavascriptLunchPage() {
-  const router = useRouter();
 
   const blogPostSchema = {
     '@context': 'https://schema.org',
@@ -49,13 +48,12 @@ export default function CssEatingJavascriptLunchPage() {
 
       <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8 bg-black">
         <div className="max-w-4xl mx-auto">
-          <button
-            onClick={() => router.push('/blog')}
+          <NextLink href="/blog"
             className="flex items-center gap-2 text-[#A3D1FF] hover:underline mb-6"
           >
             <ArrowLeft className="w-4 h-4" />
             Back to Blog
-          </button>
+          </NextLink>
 
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
             CSS Is Eating JavaScript&apos;s Lunch
@@ -233,13 +231,12 @@ export default function CssEatingJavascriptLunchPage() {
                 <div className="p-6">
                   <h4 className="text-lg font-semibold text-white mb-2 group-hover:text-[#A3D1FF] transition-colors">Minimal, Fast, and Sustainable UX</h4>
                   <p className="text-white text-sm mb-4">Leaner layouts and fewer heavy scripts create calmer, faster, more sustainable experiences.</p>
-                  <button
-                    onClick={() => router.push('/blog/minimal-fast-sustainable-ux')}
+                  <NextLink href="/blog/minimal-fast-sustainable-ux"
                     className="text-[#A3D1FF] text-sm flex items-center gap-1 hover:underline"
                   >
                     Read Article
                     <ArrowRight className="w-3 h-3" />
-                  </button>
+                  </NextLink>
                 </div>
               </div>
 
@@ -254,13 +251,12 @@ export default function CssEatingJavascriptLunchPage() {
                 <div className="p-6">
                   <h4 className="text-lg font-semibold text-white mb-2 group-hover:text-[#A3D1FF] transition-colors">Building Data-Driven Design Systems for Scale</h4>
                   <p className="text-white text-sm mb-4">How to create and maintain scalable design systems that evolve with your product needs.</p>
-                  <button
-                    onClick={() => router.push('/blog/building-data-driven-design-systems')}
+                  <NextLink href="/blog/building-data-driven-design-systems"
                     className="text-[#A3D1FF] text-sm flex items-center gap-1 hover:underline"
                   >
                     Read Article
                     <ArrowRight className="w-3 h-3" />
-                  </button>
+                  </NextLink>
                 </div>
               </div>
             </div>
@@ -279,13 +275,12 @@ export default function CssEatingJavascriptLunchPage() {
             I build modern web apps that lean on the platform first, fast, accessible, and easy to maintain. Let&apos;s talk.
           </p>
           <MagneticButton>
-            <button
-              onClick={() => router.push('/contact')}
+            <NextLink href="/contact"
               className="mr_btn mr_btn_primary inline-flex items-center gap-2"
             >
               <span>Book a Call</span>
               <ArrowRight className="w-5 h-5" />
-            </button>
+            </NextLink>
           </MagneticButton>
         </div>
       </section>

@@ -12,6 +12,8 @@ import {
   ServiceColophon,
   ServiceNavigator,
 } from '@/components/ServiceEditorial';
+import ServiceFAQ from '@/components/ServiceFAQ';
+import { AI_FAQS } from '@/content/serviceFaqs';
 
 export default function AIIntegrationPage() {
   return (
@@ -193,6 +195,12 @@ export default function AIIntegrationPage() {
           ]}
         />
       </EditorialSection>
+
+      <ServiceFAQ
+        items={AI_FAQS}
+        chapter="05"
+        intro="What teams ask before adding OpenAI, Claude or RAG to a product."
+      />
 
       <ServiceNavigator currentSlug="ai-integration" />
       <ServiceColophon

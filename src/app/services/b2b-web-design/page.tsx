@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import B2BWebDesignPage from '@/pages-ported/services/B2BWebDesignPage';
+import { B2B_EXTRA_FAQS } from '@/content/serviceFaqs';
 
 const title = 'B2B Web Design Agency | Custom Next.js Sites | Marc Friedman';
 const description =
@@ -81,6 +82,11 @@ const schema = {
             text: 'No. We work with everyone from growing service businesses to established manufacturers. What our best clients share is treating the website as a lead-generation tool rather than a brochure.',
           },
         },
+        ...B2B_EXTRA_FAQS.map((f) => ({
+          '@type': 'Question',
+          name: f.q,
+          acceptedAnswer: { '@type': 'Answer', text: f.a },
+        })),
       ],
     },
   ],

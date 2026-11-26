@@ -1,12 +1,11 @@
 "use client";
 
+import NextLink from 'next/link';
 import React from 'react';
 import { ArrowLeft, Calendar, Clock, ArrowRight, Info } from 'lucide-react';
 import ContactForm from '@/components/ContactForm';
-import { useRouter } from 'next/navigation';
 
 export default function HeadlessCmsExplainedPage() {
-  const router = useRouter();
 
   const blogPostSchema = {
     "@context": "https://schema.org",
@@ -83,13 +82,12 @@ export default function HeadlessCmsExplainedPage() {
       {/* Hero Section */}
       <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8 bg-black">
         <div className="max-w-4xl mx-auto">
-          <button
-            onClick={() => router.push('/blog')}
+          <NextLink href="/blog"
             className="flex items-center gap-2 text-[#A3D1FF] hover:underline mb-6"
           >
             <ArrowLeft className="w-4 h-4" />
             Back to Blog
-          </button>
+          </NextLink>
 
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">
             Headless CMS Explained: Can My Team Still Edit the Site?
@@ -245,13 +243,12 @@ export default function HeadlessCmsExplainedPage() {
                 <div className="p-6">
                   <h4 className="text-lg font-semibold text-white mb-2 group-hover:text-[#A3D1FF] transition-colors">Next.js vs Webflow</h4>
                   <p className="text-white text-sm mb-4">When a no-code site stops being enough, and when it doesn&rsquo;t.</p>
-                  <button
-                    onClick={() => router.push('/blog/nextjs-vs-webflow')}
+                  <NextLink href="/blog/nextjs-vs-webflow"
                     className="text-[#A3D1FF] text-sm flex items-center gap-1 hover:underline"
                   >
                     Read Article
                     <ArrowRight className="w-3 h-3" />
-                  </button>
+                  </NextLink>
                 </div>
               </div>
 
@@ -266,13 +263,12 @@ export default function HeadlessCmsExplainedPage() {
                 <div className="p-6">
                   <h4 className="text-lg font-semibold text-white mb-2 group-hover:text-[#A3D1FF] transition-colors">What a 1-Second Faster Site Is Worth</h4>
                   <p className="text-white text-sm mb-4">A worked example you can redo with your own numbers.</p>
-                  <button
-                    onClick={() => router.push('/blog/faster-site-worth-in-leads')}
+                  <NextLink href="/blog/faster-site-worth-in-leads"
                     className="text-[#A3D1FF] text-sm flex items-center gap-1 hover:underline"
                   >
                     Read Article
                     <ArrowRight className="w-3 h-3" />
-                  </button>
+                  </NextLink>
                 </div>
               </div>
             </div>

@@ -1,14 +1,13 @@
 "use client";
 
+import NextLink from 'next/link';
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowLeft, Calendar, Clock, Share2, Linkedin, Facebook, Link, ArrowRight, Eye, Palette, Layers, Sun, Moon, Contrast } from 'lucide-react';
 import MagneticButton from '@/components/MagneticButton';
 import TwitterIcon from '@/components/TwitterIcon';
 import ContactForm from '@/components/ContactForm';
-import { useRouter } from 'next/navigation';
 export default function ContrastBalanceUIDesignPage() {
-  const router = useRouter();
   
   // Blog post schema for SEO
   const blogPostSchema = {
@@ -45,13 +44,12 @@ export default function ContrastBalanceUIDesignPage() {
       {/* Hero Section */}
       <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8 bg-black">
         <div className="max-w-4xl mx-auto">
-          <button 
-            onClick={() => router.push('/blog')}
+          <NextLink href="/blog"
             className="flex items-center gap-2 text-[#A3D1FF] hover:underline mb-6"
           >
             <ArrowLeft className="w-4 h-4" />
             Back to Blog
-          </button>
+          </NextLink>
           
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">
             Contrast & Balance: The Foundation of Accessible UI Design
@@ -601,13 +599,12 @@ export default function ContrastBalanceUIDesignPage() {
                 <div className="p-6">
                   <h4 className="text-lg font-semibold text-white mb-2 group-hover:text-[#A3D1FF] transition-colors">UI Polish: Mastering Visual Realism in Modern Interface Design</h4>
                   <p className="text-white text-sm mb-4">Explore the art of UI polish through visual realism, lighting metaphors, and design choices inspired by physical materials.</p>
-                  <button 
-                    onClick={() => router.push('/blog/ui-polish-visual-realism')}
+                  <NextLink href="/blog/ui-polish-visual-realism"
                     className="text-[#A3D1FF] text-sm flex items-center gap-1 hover:underline"
                   >
                     Read Article
                     <ArrowRight className="w-3 h-3" />
-                  </button>
+                  </NextLink>
                 </div>
               </div>
               
@@ -622,13 +619,12 @@ export default function ContrastBalanceUIDesignPage() {
                 <div className="p-6">
                   <h4 className="text-lg font-semibold text-white mb-2 group-hover:text-[#A3D1FF] transition-colors">Building Data-Driven Design Systems for Scale</h4>
                   <p className="text-white text-sm mb-4">Learn how to create and maintain scalable design systems that evolve with your product needs.</p>
-                  <button 
-                    onClick={() => router.push('/blog/building-data-driven-design-systems')}
+                  <NextLink href="/blog/building-data-driven-design-systems"
                     className="text-[#A3D1FF] text-sm flex items-center gap-1 hover:underline"
                   >
                     Read Article
                     <ArrowRight className="w-3 h-3" />
-                  </button>
+                  </NextLink>
                 </div>
               </div>
             </div>
@@ -644,13 +640,12 @@ export default function ContrastBalanceUIDesignPage() {
             Let's create interfaces with exceptional contrast and balance that work beautifully for all users while meeting the highest accessibility standards.
           </p>
           <MagneticButton>
-            <button
-              onClick={() => router.push('/contact')}
+            <NextLink href="/contact"
               className="mr_btn mr_btn_primary inline-flex items-center gap-2"
             >
               <span>Start Your Design Project</span>
               <ArrowRight className="w-5 h-5" />
-            </button>
+            </NextLink>
           </MagneticButton>
         </div>
       </section>

@@ -14,9 +14,9 @@ import {
   Truck,
 } from 'lucide-react';
 import Link from 'next/link';
+import NextLink from 'next/link';
 import ServiceLeadForm from '@/components/ServiceLeadForm';
 import { ServiceNavigator } from '@/components/ServiceEditorial';
-import { useRouter } from 'next/navigation';
 
 function FeatureCard({
   icon: Icon,
@@ -426,7 +426,6 @@ function FleetSystemCard() {
 }
 
 export default function DesignSystemsPage() {
-  const router = useRouter();
 
   return (
     <>
@@ -445,14 +444,13 @@ export default function DesignSystemsPage() {
               product consistent across 50+ screens. Below: two production systems I
               designed and built from scratch.
             </p>
-            <button
-              onClick={() => router.push('/contact')}
+            <NextLink href="/contact"
               className="mr_btn mr_btn_primary group relative overflow-hidden"
             >
               <span className="relative z-10">Start Your Design System</span>
               <div className="absolute inset-0 bg-white transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300"></div>
               <ArrowRight className="ml-2 w-5 h-5 relative z-10 group-hover:rotate-45 transition-transform duration-300" />
-            </button>
+            </NextLink>
           </div>
         </div>
       </section>
@@ -684,14 +682,13 @@ export default function DesignSystemsPage() {
           <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
             Let&apos;s build the design system your team has been asking for.
           </p>
-          <button
-            onClick={() => router.push('/contact')}
+          <NextLink href="/contact"
             className="mr_btn mr_btn_primary group relative overflow-hidden"
           >
             <span className="relative z-10">Book a Call</span>
             <div className="absolute inset-0 bg-white transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300"></div>
             <ArrowRight className="ml-2 w-5 h-5 relative z-10 group-hover:rotate-45 transition-transform duration-300" />
-          </button>
+          </NextLink>
         </div>
       </section>
     </>

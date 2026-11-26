@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import BlogGoogleAlgo2026 from '@/pages-ported/blog/google-algorithm-update-2026';
+import ServiceCallout from '@/components/ServiceCallout';
 
 const title = 'Google Algorithm Update 2026: What Changed and What to Fix';
 const description =
@@ -15,5 +16,19 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <BlogGoogleAlgo2026 />;
+  return (
+    <>
+      <BlogGoogleAlgo2026 />
+      <ServiceCallout
+        heading={"Lost rankings after the update?"}
+        lead={"Most recoveries come from the same few fixes: clearer page structure, stronger proof of expertise and content that answers the query directly. I can audit and fix it."}
+        links={[
+          { href: "/tools/website-analyzer/", label: "Free website analyzer", blurb: "Run an instant SEO, speed and Core Web Vitals check on your site." },
+          { href: "/services/seo-content-layout/", label: "SEO content and site structure", blurb: "Page structure and internal linking that search engines can read." },
+          { href: "/services/aeo/", label: "Answer engine optimization", blurb: "Structured data and content built to be quoted by AI search." },
+          { href: "/services/geo/", label: "Generative engine optimization", blurb: "Get cited in ChatGPT, Perplexity and Google AI answers." },
+        ]}
+      />
+    </>
+  );
 }

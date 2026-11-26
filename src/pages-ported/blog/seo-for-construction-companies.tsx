@@ -1,12 +1,11 @@
 "use client";
 
+import NextLink from 'next/link';
 import React from 'react';
 import { ArrowLeft, Calendar, Clock, ArrowRight } from 'lucide-react';
 import ContactForm from '@/components/ContactForm';
-import { useRouter } from 'next/navigation';
 
 export default function ConstructionSEOPage() {
-  const router = useRouter();
 
   const blogPostSchema = {
     "@context": "https://schema.org",
@@ -46,13 +45,12 @@ export default function ConstructionSEOPage() {
       {/* Hero Section */}
       <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8 bg-black">
         <div className="max-w-4xl mx-auto">
-          <button
-            onClick={() => router.push('/blog')}
+          <NextLink href="/blog"
             className="flex items-center gap-2 text-[#A3D1FF] hover:underline mb-6"
           >
             <ArrowLeft className="w-4 h-4" />
             Back to Blog
-          </button>
+          </NextLink>
 
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">
             SEO for Construction Companies: Win More Projects from Google in 2026
@@ -378,13 +376,12 @@ export default function ConstructionSEOPage() {
                 <div className="p-6">
                   <h4 className="text-lg font-semibold text-white mb-2 group-hover:text-[#A3D1FF] transition-colors">Local SEO for Paving Contractors</h4>
                   <p className="text-white text-sm mb-4">The map-pack, GBP, and citation playbook for winning jobs in a defined service area.</p>
-                  <button
-                    onClick={() => router.push('/blog/local-seo-for-paving-contractors')}
+                  <NextLink href="/blog/local-seo-for-paving-contractors"
                     className="text-[#A3D1FF] text-sm flex items-center gap-1 hover:underline"
                   >
                     Read Article
                     <ArrowRight className="w-3 h-3" />
-                  </button>
+                  </NextLink>
                 </div>
               </div>
 
@@ -399,13 +396,12 @@ export default function ConstructionSEOPage() {
                 <div className="p-6">
                   <h4 className="text-lg font-semibold text-white mb-2 group-hover:text-[#A3D1FF] transition-colors">What Is AEO?</h4>
                   <p className="text-white text-sm mb-4">Structure content so ChatGPT, Perplexity, and Google AI can extract and cite it.</p>
-                  <button
-                    onClick={() => router.push('/blog/what-is-aeo')}
+                  <NextLink href="/blog/what-is-aeo"
                     className="text-[#A3D1FF] text-sm flex items-center gap-1 hover:underline"
                   >
                     Read Article
                     <ArrowRight className="w-3 h-3" />
-                  </button>
+                  </NextLink>
                 </div>
               </div>
             </div>

@@ -1,13 +1,12 @@
 "use client";
 
+import NextLink from 'next/link';
 import React from 'react';
 import { ArrowLeft, Calendar, Clock, Share2, Linkedin, Facebook, Link, ArrowRight, Hammer, MapPin, Phone, Image, CircleCheck as CheckCircle } from 'lucide-react';
 import MagneticButton from '@/components/MagneticButton';
 import TwitterIcon from '@/components/TwitterIcon';
 import ContactForm from '@/components/ContactForm';
-import { useRouter } from 'next/navigation';
 export default function PavingContractorWebsiteDesignGuidePage() {
-  const router = useRouter();
 
   const blogPostSchema = {
     "@context": "https://schema.org",
@@ -42,13 +41,12 @@ export default function PavingContractorWebsiteDesignGuidePage() {
 
       <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8 bg-black">
         <div className="max-w-4xl mx-auto">
-          <button
-            onClick={() => router.push('/blog')}
+          <NextLink href="/blog"
             className="flex items-center gap-2 text-[#A3D1FF] hover:underline mb-6"
           >
             <ArrowLeft className="w-4 h-4" />
             Back to Blog
-          </button>
+          </NextLink>
 
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">
             Website Design Guide for Paving Contractors: Converting Visitors to Customers
@@ -497,13 +495,12 @@ export default function PavingContractorWebsiteDesignGuidePage() {
                 <div className="p-6">
                   <h4 className="text-lg font-semibold text-white mb-2 group-hover:text-[#A3D1FF] transition-colors">Local SEO for Paving Contractors: Dominate Your Market</h4>
                   <p className="text-white text-sm mb-4">Master local search optimization to ensure your paving business appears first when customers search.</p>
-                  <button
-                    onClick={() => router.push('/blog/local-seo-for-paving-contractors')}
+                  <NextLink href="/blog/local-seo-for-paving-contractors"
                     className="text-[#A3D1FF] text-sm flex items-center gap-1 hover:underline"
                   >
                     Read Article
                     <ArrowRight className="w-3 h-3" />
-                  </button>
+                  </NextLink>
                 </div>
               </div>
 
@@ -518,13 +515,12 @@ export default function PavingContractorWebsiteDesignGuidePage() {
                 <div className="p-6">
                   <h4 className="text-lg font-semibold text-white mb-2 group-hover:text-[#A3D1FF] transition-colors">Digital Marketing Strategy for Asphalt Contractors</h4>
                   <p className="text-white text-sm mb-4">Complete guide to attracting more customers through strategic online marketing.</p>
-                  <button
-                    onClick={() => router.push('/blog/digital-marketing-asphalt-contractors')}
+                  <NextLink href="/blog/digital-marketing-asphalt-contractors"
                     className="text-[#A3D1FF] text-sm flex items-center gap-1 hover:underline"
                   >
                     Read Article
                     <ArrowRight className="w-3 h-3" />
-                  </button>
+                  </NextLink>
                 </div>
               </div>
             </div>

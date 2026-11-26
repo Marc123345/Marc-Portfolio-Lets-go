@@ -1,12 +1,11 @@
 "use client";
 
+import NextLink from 'next/link';
 import React from 'react';
 import { ArrowLeft, Calendar, Clock, ArrowRight, Info } from 'lucide-react';
 import ContactForm from '@/components/ContactForm';
-import { useRouter } from 'next/navigation';
 
 export default function AiCopilotUxPage() {
-  const router = useRouter();
 
   const blogPostSchema = {
     "@context": "https://schema.org",
@@ -83,13 +82,12 @@ export default function AiCopilotUxPage() {
       {/* Hero Section */}
       <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8 bg-black">
         <div className="max-w-4xl mx-auto">
-          <button
-            onClick={() => router.push('/blog')}
+          <NextLink href="/blog"
             className="flex items-center gap-2 text-[#A3D1FF] hover:underline mb-6"
           >
             <ArrowLeft className="w-4 h-4" />
             Back to Blog
-          </button>
+          </NextLink>
 
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">
             AI Copilots in Web Design: Transparent, Optional and Easy to Ignore
@@ -247,13 +245,12 @@ export default function AiCopilotUxPage() {
                 <div className="p-6">
                   <h4 className="text-lg font-semibold text-white mb-2 group-hover:text-[#A3D1FF] transition-colors">Conversational UI &amp; Chat Interfaces</h4>
                   <p className="text-white text-sm mb-4">When chat is the right interface, and when a form is better.</p>
-                  <button
-                    onClick={() => router.push('/blog/conversational-ui-chat-interfaces')}
+                  <NextLink href="/blog/conversational-ui-chat-interfaces"
                     className="text-[#A3D1FF] text-sm flex items-center gap-1 hover:underline"
                   >
                     Read Article
                     <ArrowRight className="w-3 h-3" />
-                  </button>
+                  </NextLink>
                 </div>
               </div>
 
@@ -268,13 +265,12 @@ export default function AiCopilotUxPage() {
                 <div className="p-6">
                   <h4 className="text-lg font-semibold text-white mb-2 group-hover:text-[#A3D1FF] transition-colors">Experimental Navigation</h4>
                   <p className="text-white text-sm mb-4">Canvases, folding pages and sites without a navbar, built so they still work.</p>
-                  <button
-                    onClick={() => router.push('/blog/experimental-navigation-beyond-the-navbar')}
+                  <NextLink href="/blog/experimental-navigation-beyond-the-navbar"
                     className="text-[#A3D1FF] text-sm flex items-center gap-1 hover:underline"
                   >
                     Read Article
                     <ArrowRight className="w-3 h-3" />
-                  </button>
+                  </NextLink>
                 </div>
               </div>
             </div>

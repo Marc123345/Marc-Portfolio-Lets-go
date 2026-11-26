@@ -12,6 +12,8 @@ import {
   ServiceColophon,
   ServiceNavigator,
 } from '@/components/ServiceEditorial';
+import ServiceFAQ from '@/components/ServiceFAQ';
+import { MVP_FAQS } from '@/content/serviceFaqs';
 
 export default function StartupMVPPage() {
   return (
@@ -23,7 +25,7 @@ export default function StartupMVPPage() {
         volumeNumber="03"
         tagline={
           <>
-            MVP development for startups, built to prove your thesis fast. Ship a real
+            MVP development services for startups, built to prove your thesis fast. Ship a real
             product to raise a round, win first users, or kill an idea before it eats
             your savings.
           </>
@@ -273,6 +275,12 @@ export default function StartupMVPPage() {
           </div>
         </div>
       </EditorialSection>
+
+      <ServiceFAQ
+        items={MVP_FAQS}
+        chapter="06"
+        intro="What founders ask most about MVP development cost, timelines and stack."
+      />
 
       <ServiceNavigator currentSlug="startup-mvp" />
       <ServiceColophon
