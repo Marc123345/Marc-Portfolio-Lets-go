@@ -7,6 +7,7 @@ export type Project = {
   category: string;
   blurb: string;
   image: string;
+  showFullCover?: boolean;
   liveUrl?: string;
   caseStudyUrl: string;
   stats: { value: string; label: string }[];
@@ -32,6 +33,7 @@ export const PROJECTS: Project[] = [
   },
   {
     title: 'Tracefold',
+    showFullCover: true,
     category: 'Cybersecurity UI Kit',
     blurb: 'A Figma design system for tracing identity alerts, reviewing evidence and approving a response across desktop and mobile.',
     image: '/images/case-studies/tracefold/cover.webp',
