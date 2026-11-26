@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
 import BlogBrutalism from '@/pages-ported/blog/brutalism-anti-design-web-trends';
 
-const title = 'Digital Brutalism in Web Design: The Raw, Anti-Design Revolution';
+const title = 'Brutalist Web Design: Digital Brutalism & Anti-Design Trends';
 const description =
-  'Digital brutalism is the raw, anti-design movement reshaping modern web design. Why designers are rejecting polished interfaces in favor of stark grids, exposed structure, and unapologetic imperfection.';
+  'What digital brutalism is and why designers are dropping polished UI for stark grids, exposed structure, raw type, and deliberate imperfection in web design.';
 const url = 'https://www.marcfriedmanportfolio.com/blog/brutalism-anti-design-web-trends/';
 
 export const metadata: Metadata = {
