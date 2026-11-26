@@ -17,6 +17,7 @@ const config: CaseStudyConfig = {
     </>
   ),
   heroImage: `${IMG}/run-comparison.jpg`,
+  fullImages: true,
   metaStats: [
     { value: '5', label: 'Workspaces' },
     { value: '3,856', label: 'Demo Captures' },
