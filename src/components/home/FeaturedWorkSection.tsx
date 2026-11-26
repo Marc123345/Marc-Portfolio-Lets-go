@@ -163,22 +163,6 @@ const featured: Project[] = [
     tags: ['React', 'Local SEO', 'Node'],
   },
   {
-    title: 'Tar & Chip Paving',
-    category: 'Specialty · Contractor',
-    blurb:
-      'Specialised showcase for premium tar and chip paving applications.',
-    image:
-      '/images/case-studies/tar-chip-paving.jpg',
-    liveUrl: 'https://cumberlandtarchip.org/',
-    caseStudyUrl: '/work/case-studies/tar-chip-paving/',
-    stats: [
-      { value: 'Bento', label: 'Layout' },
-      { value: 'Mobile', label: 'First' },
-      { value: '100%', label: 'Custom' },
-    ],
-    tags: ['React', 'Tailwind', 'Responsive'],
-  },
-  {
     title: 'Chad Le Clos',
     category: 'Athlete · Bookings',
     blurb:

@@ -52,7 +52,7 @@ export const WORK_SERVICES: WorkService[] = [
     label: 'Websites & Brands',
     href: '/services/web-development/',
     blurb: 'Custom-coded marketing sites with the brand built in.',
-    projects: ['Binns Media Group', 'Untapped Africa', 'Chad Le Clos Swimming', 'Tar & Chip Paving', 'H2H Marketing'],
+    projects: ['Binns Media Group', 'Untapped Africa', 'Chad Le Clos Swimming', 'H2H Marketing'],
   },
   {
     key: 'product',

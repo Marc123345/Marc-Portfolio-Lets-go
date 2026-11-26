@@ -118,10 +118,9 @@ const config: CaseStudyConfig = {
   ],
 
   next: {
-    title: 'Tar & Chip Paving',
-    url: '/work/case-studies/tar-chip-paving/',
-    image:
-      '/images/case-studies/tar-chip-paving.jpg',
+    title: 'Chad Le Clos Swimming',
+    url: '/work/case-studies/chad-le-clos/',
+    image: '/images/clients/ApfYPlH.webp',
   },
 };
 

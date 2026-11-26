@@ -258,11 +258,6 @@ B2B procurement platform for property developers with 100+ years of business exc
 - Live: https://b2b.fandc.co.za
 - Case Study: https://www.marcfriedmanportfolio.com/work/case-studies/friedman-cohen
 
-### Tar & Chip Paving
-Specialized paving surface solutions showcase. Built with React, Tailwind CSS, and responsive design.
-- Live: https://cumberlandtarchip.org/
-- Case Study: https://www.marcfriedmanportfolio.com/work/case-studies/tar-chip
-
 ### Chad Le Clos Swimming
 Olympic champion Chad Le Clos's swimming clinics website. Drove numerous sign-ups within days of launch with high form completion rates. Built with Next.js, Tailwind CSS, and Framer Motion.
 - Live: https://chadleclosswimming.com

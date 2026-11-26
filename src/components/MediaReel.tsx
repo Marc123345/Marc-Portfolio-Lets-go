@@ -39,7 +39,6 @@ const SHOTS: { src: string; title: string }[] = [
   { title: 'iLight Care', src: '/images/case-studies/ilight.jpg' },
   { title: 'Ask Africa', src: 'https://ik.imagekit.io/qcvroy8xpd/Ask-Africa-Homepage-Image-Only.jpg' },
   { title: 'Friedman & Cohen', src: '/images/case-studies/friedman-cohen.jpg' },
-  { title: 'Tar & Chip Paving', src: '/images/case-studies/tar-chip-paving.jpg' },
 ];
 
 function ChapterMarker({ number, label }: { number: string; label: string }) {
