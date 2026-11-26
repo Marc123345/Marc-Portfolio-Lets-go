@@ -41,10 +41,10 @@ const config: CaseStudyConfig = {
     ],
   },
   gallery: [
-    { image: images + '/evidence-graph.webp', caption: 'Account, device and case linked to alert AL-1842', wide: true },
-    { image: images + '/record-comparison.webp', caption: 'Directory and endpoint records compared' },
-    { image: images + '/mobile-review.webp', caption: 'Mobile approval, verification and closure' },
-    { image: images + '/components.webp', caption: 'Reusable investigation components', wide: true },
+    { image: images + '/svg/02-Evidence-graph.svg', caption: 'Account, device and case linked to alert AL-1842', wide: true },
+    { image: images + '/svg/08-Record-comparison.svg', caption: 'Directory and endpoint records compared' },
+    { image: images + '/svg/10-Mobile-response.svg', caption: 'Mobile approval, verification and closure' },
+    { image: images + '/svg/09-Component-library.svg', caption: 'Reusable investigation components', wide: true },
   ],
   next: {
     title: 'Fleet Management',
