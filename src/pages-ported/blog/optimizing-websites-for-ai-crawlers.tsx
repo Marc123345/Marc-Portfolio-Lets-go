@@ -68,11 +68,11 @@ export default function OptimizingWebsitesForAICrawlersPage() {
             </div>
           </div>
           
-          <div className="aspect-[21/9] overflow-hidden mb-8">
+          <div className="overflow-hidden mb-8">
             <img 
               src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=2000&q=80" 
               alt="AI Crawlers and Website Optimization" 
-              className="w-full h-full object-cover"
+              className="block w-full h-auto"
             />
           </div>
         </div>
@@ -357,11 +357,11 @@ Disallow: /admin/`}
             <h3 className="text-2xl font-semibold text-white mb-6">Related Articles</h3>
             <div className="grid sm:grid-cols-2 gap-6">
               <div className="bg-[#1b1b1b] overflow-hidden border border-white/10 hover:border-[#A3D1FF] transition-all group">
-                <div className="aspect-[16/9] overflow-hidden">
+                <div className="overflow-hidden">
                   <img 
                     src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=2000&q=80" 
                     alt="7 Proven Conversion Rate Optimization Techniques for 2025" 
-                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                    className="block w-full h-auto transform group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
                 <div className="p-6">
@@ -378,11 +378,11 @@ Disallow: /admin/`}
               </div>
               
               <div className="bg-[#1b1b1b] overflow-hidden border border-white/10 hover:border-[#A3D1FF] transition-all group">
-                <div className="aspect-[16/9] overflow-hidden">
+                <div className="overflow-hidden">
                   <img 
                     src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=2000&q=80" 
                     alt="Mobile-First Design Principles Every Developer Should Know" 
-                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                    className="block w-full h-auto transform group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
                 <div className="p-6">

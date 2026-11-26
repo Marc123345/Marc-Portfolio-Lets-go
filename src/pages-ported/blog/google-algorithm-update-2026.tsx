@@ -56,11 +56,11 @@ export default function GoogleAlgorithmUpdate2026() {
             </div>
           </div>
 
-          <div className="aspect-[21/9] overflow-hidden mb-8">
+          <div className="overflow-hidden mb-8">
             <img
               src="https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?auto=format&fit=crop&w=2000&q=80"
               alt="Google Search Algorithm Update 2026"
-              className="w-full h-full object-cover"
+              className="block w-full h-auto"
             />
           </div>
         </div>

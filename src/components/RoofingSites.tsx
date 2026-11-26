@@ -42,12 +42,12 @@ function ShotRow({ s, i, n }: { s: Shot; i: number; n: number }) {
         {s.detail && (
           <motion.div
             style={{ y: yBack }}
-            className={`absolute top-[-8%] w-[44%] aspect-[4/3] overflow-hidden border border-white/10 bg-[#1b1b1b] shadow-[0_30px_60px_-20px_rgba(0,0,0,0.9)] hidden sm:block ${
+            className={`absolute top-[-8%] w-[44%] overflow-hidden border border-white/10 bg-[#1b1b1b] shadow-[0_30px_60px_-20px_rgba(0,0,0,0.9)] hidden sm:block ${
               flip ? 'left-[-3%] rotate-[-4deg]' : 'right-[-3%] rotate-[4deg]'
             }`}
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={s.detail} alt="Roofing website, detail" loading="lazy" decoding="async" className="absolute inset-0 w-full h-full object-cover object-top" />
+            <img src={s.detail} alt="Roofing website, detail" loading="lazy" decoding="async" className="block w-full h-auto" />
             <span className="absolute inset-0 bg-black/20" />
           </motion.div>
         )}
@@ -65,9 +65,9 @@ function ShotRow({ s, i, n }: { s: Shot; i: number; n: number }) {
               <i className="w-2 h-2 rounded-full bg-white/20" />
               <i className="w-2 h-2 rounded-full bg-white/20" />
             </div>
-            <div className="relative aspect-[16/10] overflow-hidden">
+            <div className="relative overflow-hidden">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={s.home} alt="Roofing website, homepage" loading="lazy" decoding="async" className="absolute inset-0 w-full h-full object-cover object-top" />
+              <img src={s.home} alt="Roofing website, homepage" loading="lazy" decoding="async" className="block w-full h-auto" />
               <span className="absolute inset-0 bg-[linear-gradient(115deg,rgba(255,255,255,0.10),transparent_38%)]" />
             </div>
           </div>

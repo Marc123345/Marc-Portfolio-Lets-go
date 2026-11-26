@@ -226,15 +226,15 @@ export default function TrustedBy() {
           {/* Portrait card */}
           <div className="relative">
             <div className="absolute -inset-6 bg-gradient-to-tr from-[#A3D1FF]/10 via-transparent to-[#A3D1FF]/5 blur-3xl" />
-            <div className="relative aspect-[4/5] max-w-md mx-auto lg:mx-0 overflow-hidden border border-white/10">
+            <div className="relative max-w-md mx-auto lg:mx-0 overflow-hidden border border-white/10">
               {featuredClient?.image ? (
                 <img
                   src={featuredClient.image}
                   alt=""
-                  className="w-full h-full object-cover"
+                  className="block w-full h-auto"
                 />
               ) : (
-                <div className="w-full h-full bg-[#1b1b1b] flex items-center justify-center">
+                <div className="w-full aspect-[4/5] bg-[#1b1b1b] flex items-center justify-center">
                   <User className="w-24 h-24 text-white/20" />
                 </div>
               )}

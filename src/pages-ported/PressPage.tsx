@@ -104,11 +104,11 @@ function PressCard({ item }: { item: PressItem }) {
       )}
       
       {item.image && (
-        <div className="aspect-[16/9] overflow-hidden">
+        <div className="overflow-hidden">
           <img 
             src={item.image} 
             alt={item.title} 
-            className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+            className="block w-full h-auto transform group-hover:scale-105 transition-transform duration-500"
           />
         </div>
       )}

@@ -59,11 +59,11 @@ export default function GoogleSearchConsoleAIReports() {
             </div>
           </div>
 
-          <div className="aspect-[21/9] overflow-hidden mb-8">
+          <div className="overflow-hidden mb-8">
             <img
               src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=2000&q=80"
               alt="Google Search Console AI-powered configuration dashboard showing analytics data"
-              className="w-full h-full object-cover"
+              className="block w-full h-auto"
             />
           </div>
         </div>

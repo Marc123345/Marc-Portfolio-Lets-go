@@ -71,11 +71,11 @@ export default function ElectronicAccessibilityPage() {
             </div>
           </div>
 
-          <div className="aspect-[21/9] overflow-hidden mb-8">
+          <div className="overflow-hidden mb-8">
             <img
               src="https://images.surferseo.art/cb035972-4d77-4a5c-aa7d-abe70c2165fd.png"
               alt="A person working at a laptop alongside a refreshable Braille display, one of the assistive technologies that depend on accessible digital design"
-              className="w-full h-full object-cover"
+              className="block w-full h-auto"
             />
           </div>
         </div>
@@ -113,11 +113,11 @@ export default function ElectronicAccessibilityPage() {
             <p>The <strong>Web Content Accessibility Guidelines (WCAG)</strong> turn those principles into testable criteria, and nearly every accessibility law on earth points back to them. <a href="https://www.w3.org/WAI/standards-guidelines/wcag/new-in-22/">WCAG 2.1 became a W3C recommendation in June 2018</a>, and WCAG 2.2 followed in October 2023, adding criteria for target size, accessible authentication, and more. WCAG 2.2 AA is the usual compliance target, and its criteria apply across web pages, forms, learning platforms, and documents alike.</p>
             <p>Regional standards mostly wrap WCAG rather than replace it. In the EU, <a href="https://en.wikipedia.org/wiki/EN_301_549">EN 301 549</a> harmonizes accessibility requirements for ICT procurement and references WCAG directly; US Section 508 maps to it too. For most organizations, an accessibility policy is really just a commitment to meet WCAG on every platform you run.</p>
 
-            <div className="aspect-[21/9] overflow-hidden my-8">
+            <div className="overflow-hidden my-8">
               <img
                 src="https://images.surferseo.art/c61de429-e661-4dcb-af34-419f2e9bbbab.png"
                 alt="A diverse group of people using tablets, phones, and laptops around a table, illustrating equal access to digital content across abilities"
-                className="w-full h-full object-cover"
+                className="block w-full h-auto"
               />
             </div>
 
@@ -142,11 +142,11 @@ export default function ElectronicAccessibilityPage() {
             <h2>Common barriers, and how to remove them</h2>
             <p>A barrier is any design or technical choice that stops someone from finishing a task, applying for a service, buying something, reaching a resource. Here are the usual ones, with the fix.</p>
 
-            <div className="aspect-[21/9] overflow-hidden my-8">
+            <div className="overflow-hidden my-8">
               <img
                 src="https://images.surferseo.art/5df7481e-91ca-4212-9ef2-c7773ffd498f.png"
                 alt="Someone navigating a website by keyboard, with a visible focus indicator highlighting the active element"
-                className="w-full h-full object-cover"
+                className="block w-full h-auto"
               />
             </div>
 
@@ -182,11 +182,11 @@ export default function ElectronicAccessibilityPage() {
             <h3 className="text-2xl font-semibold text-white mb-6">Related Articles</h3>
             <div className="grid sm:grid-cols-2 gap-6">
               <div className="bg-[#1b1b1b] overflow-hidden border border-white/10 hover:border-[#A3D1FF] transition-all group">
-                <div className="aspect-[16/9] overflow-hidden">
+                <div className="overflow-hidden">
                   <img
                     src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=2000&q=80"
                     alt="Mobile-First Design Principles"
-                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                    className="block w-full h-auto transform group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
                 <div className="p-6">
@@ -203,11 +203,11 @@ export default function ElectronicAccessibilityPage() {
               </div>
 
               <div className="bg-[#1b1b1b] overflow-hidden border border-white/10 hover:border-[#A3D1FF] transition-all group">
-                <div className="aspect-[16/9] overflow-hidden">
+                <div className="overflow-hidden">
                   <img
                     src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=2000&q=80"
                     alt="Minimal, Fast, and Sustainable UX"
-                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                    className="block w-full h-auto transform group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
                 <div className="p-6">

@@ -113,7 +113,7 @@ export function ProjectCard({ p, large = false, priority = false }: { p: Project
       href={p.caseStudyUrl}
       className="group flex h-full flex-col rounded-[20px] bg-[#141414] p-3 md:p-3.5 transition-colors hover:bg-[#1a1a1a]"
     >
-      <div className="relative aspect-[40/27] overflow-hidden rounded-[14px] bg-[#1d1d1d]">
+      <div className={`relative overflow-hidden rounded-[14px] bg-[#1d1d1d] ${!broken && p.image ? '' : 'aspect-[40/27]'}`}>
         {!broken && p.image ? (
           // eslint-disable-next-line @next/next/no-img-element
           <img
@@ -122,7 +122,7 @@ export function ProjectCard({ p, large = false, priority = false }: { p: Project
             loading={priority ? 'eager' : 'lazy'}
             decoding="async"
             onError={() => setBroken(true)}
-            className={p.showFullCover ? "h-full w-full object-contain" : "absolute inset-0 h-full w-full object-cover object-top transition-transform duration-[900ms] ease-out group-hover:scale-[1.04]"}
+            className="block w-full h-auto transition-transform duration-[900ms] ease-out group-hover:scale-[1.04]"
           />
         ) : (
           <div className="absolute inset-0 grid place-items-center p-6 text-center">

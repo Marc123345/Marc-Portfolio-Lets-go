@@ -69,11 +69,11 @@ export default function ConstructionSEOPage() {
             </div>
           </div>
 
-          <div className="aspect-[21/9] overflow-hidden mb-8">
+          <div className="overflow-hidden mb-8">
             <img
               src="https://images.surferseo.art/578a5f15-7ee3-4537-8588-8d61c352ad90.png"
               alt="A group of construction workers is gathered at an active residential jobsite, intently reviewing blueprints displayed on a tablet. This scene highlights collaboration in the construction industry, emphasizing the importance of effective communication and planning for successful project execution."
-              className="w-full h-full object-cover"
+              className="block w-full h-auto"
             />
           </div>
         </div>
@@ -368,11 +368,11 @@ export default function ConstructionSEOPage() {
             <h3 className="text-2xl font-semibold text-white mb-6">Related Articles</h3>
             <div className="grid sm:grid-cols-2 gap-6">
               <div className="bg-[#1b1b1b] overflow-hidden border border-white/10 hover:border-[#A3D1FF] transition-all group">
-                <div className="aspect-[16/9] overflow-hidden">
+                <div className="overflow-hidden">
                   <img
                     src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=2000&q=80"
                     alt="Local SEO for Paving Contractors"
-                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                    className="block w-full h-auto transform group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
                 <div className="p-6">
@@ -389,11 +389,11 @@ export default function ConstructionSEOPage() {
               </div>
 
               <div className="bg-[#1b1b1b] overflow-hidden border border-white/10 hover:border-[#A3D1FF] transition-all group">
-                <div className="aspect-[16/9] overflow-hidden">
+                <div className="overflow-hidden">
                   <img
                     src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=2000&q=80"
                     alt="What Is AEO? Answer Engine Optimization Explained"
-                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                    className="block w-full h-auto transform group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
                 <div className="p-6">

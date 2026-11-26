@@ -71,11 +71,11 @@ export default function WebsiteNotADACompliantPage() {
             </div>
           </div>
 
-          <div className="aspect-[21/9] overflow-hidden mb-8">
+          <div className="overflow-hidden mb-8">
             <img
               src="https://images.surferseo.art/90ac6ac9-d569-42bd-b37a-5b198351ceaa.png"
               alt="A person using screen-magnification software to read a website, one of the assistive technologies an inaccessible site can lock out"
-              className="w-full h-full object-cover"
+              className="block w-full h-auto"
             />
           </div>
         </div>
@@ -123,11 +123,11 @@ export default function WebsiteNotADACompliantPage() {
             <p><strong>Perceivable</strong> failures are the most common. Images need text alternatives, yet missing alt text showed up in about 89% of complaint cases in 2025. Contrast has to clear a minimum, and poor contrast was cited in roughly 68% of cases. Video needs captions and audio needs transcripts, including synchronized captions for pre-recorded media.</p>
             <p><strong>Operable</strong> failures include menus and form fields that a keyboard alone can&rsquo;t work, keyboard traps that strand users inside a widget, and auto-rotating carousels with no pause control. Keyboard failures appeared in about 61% of cases, and keyboard access is essential for people with motor or cognitive disabilities.</p>
 
-            <div className="aspect-[21/9] overflow-hidden my-8">
+            <div className="overflow-hidden my-8">
               <img
                 src="https://images.surferseo.art/1a7e5bb3-38cc-4552-a069-4037632e388e.png"
                 alt="Navigating a site by keyboard, with a visible focus indicator highlighting the active menu item"
-                className="w-full h-full object-cover"
+                className="block w-full h-auto"
               />
             </div>
 
@@ -165,11 +165,11 @@ export default function WebsiteNotADACompliantPage() {
             </ul>
             <p><strong>User testing</strong> with people who have visual, motor, and cognitive disabilities surfaces real-world gaps that neither tools nor developers will predict. For complex or high-risk sites, online banking, healthcare, education, bring in accessibility experts for a professional audit mapped to WCAG 2.1 or 2.2 AA. Document what you find, prioritize by severity, fix, and retest.</p>
 
-            <div className="aspect-[21/9] overflow-hidden my-8">
+            <div className="overflow-hidden my-8">
               <img
                 src="https://images.surferseo.art/b0abe2d5-d928-4657-b98a-b00cbf7e640b.png"
                 alt="A developer reviewing automated accessibility audit results on screen"
-                className="w-full h-full object-cover"
+                className="block w-full h-auto"
               />
             </div>
 
@@ -218,11 +218,11 @@ export default function WebsiteNotADACompliantPage() {
             <h3 className="text-2xl font-semibold text-white mb-6">Related Articles</h3>
             <div className="grid sm:grid-cols-2 gap-6">
               <div className="bg-[#1b1b1b] overflow-hidden border border-white/10 hover:border-[#A3D1FF] transition-all group">
-                <div className="aspect-[16/9] overflow-hidden">
+                <div className="overflow-hidden">
                   <img
                     src="https://images.surferseo.art/cb035972-4d77-4a5c-aa7d-abe70c2165fd.png"
                     alt="Electronic Accessibility: Making Digital Content Work for Everyone"
-                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                    className="block w-full h-auto transform group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
                 <div className="p-6">
@@ -239,11 +239,11 @@ export default function WebsiteNotADACompliantPage() {
               </div>
 
               <div className="bg-[#1b1b1b] overflow-hidden border border-white/10 hover:border-[#A3D1FF] transition-all group">
-                <div className="aspect-[16/9] overflow-hidden">
+                <div className="overflow-hidden">
                   <img
                     src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=2000&q=80"
                     alt="What Is E-E-A-T? Experience, Expertise, Authoritativeness & Trustworthiness"
-                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                    className="block w-full h-auto transform group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
                 <div className="p-6">

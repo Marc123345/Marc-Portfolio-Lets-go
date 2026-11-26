@@ -104,11 +104,11 @@ export default function FasterSiteWorthInLeadsPage() {
             </div>
           </div>
 
-          <div className="aspect-[21/9] overflow-hidden mb-8">
+          <div className="overflow-hidden mb-8">
             <img
               src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=2000&q=80"
               alt="An analytics dashboard on a dark screen showing user counts, bar charts and line graphs for the last seven days."
-              className="w-full h-full object-cover"
+              className="block w-full h-auto"
             />
           </div>
         </div>
@@ -245,11 +245,11 @@ export default function FasterSiteWorthInLeadsPage() {
             <h3 className="text-2xl font-semibold text-white mb-6">Related Articles</h3>
             <div className="grid sm:grid-cols-2 gap-6">
               <div className="bg-[#1b1b1b] overflow-hidden border border-white/10 hover:border-[#A3D1FF] transition-all group">
-                <div className="aspect-[16/9] overflow-hidden">
+                <div className="overflow-hidden">
                   <img
                     src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=2000&q=80"
                     alt="Next.js vs Webflow"
-                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                    className="block w-full h-auto transform group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
                 <div className="p-6">
@@ -266,11 +266,11 @@ export default function FasterSiteWorthInLeadsPage() {
               </div>
 
               <div className="bg-[#1b1b1b] overflow-hidden border border-white/10 hover:border-[#A3D1FF] transition-all group">
-                <div className="aspect-[16/9] overflow-hidden">
+                <div className="overflow-hidden">
                   <img
                     src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=2000&q=80"
                     alt="Minimal, Fast, Sustainable UX"
-                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                    className="block w-full h-auto transform group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
                 <div className="p-6">

@@ -17,6 +17,14 @@ import { PROJECTS } from '@/data/projects';
 
 const HEAD = 'var(--font-heading)';
 
+export type ProcessSection = {
+  label: string;
+  narrative?: React.ReactNode;
+  /** Small mono caption above the rows, like "What wasn't working". */
+  rowsLabel?: string;
+  rows?: { title: string; description?: string }[];
+};
+
 export type CaseStudyConfig = {
   // Masthead
   kicker: string;
@@ -57,6 +65,11 @@ export type CaseStudyConfig = {
       role: string;
     };
   };
+
+  // Process: strategy-first blocks shown after Overview (goals, market, scope),
+  // and a validation block shown after "What I built". Same Block + Rows styling.
+  strategy?: ProcessSection[];
+  validation?: ProcessSection;
 
   // Gallery
   gallery: { image: string; caption?: string; wide?: boolean }[];
@@ -137,44 +150,37 @@ function Rows({ items }: { items: { title: string; description?: string }[] }) {
   );
 }
 
-function Shot({ item, className = '' }: { item: CaseStudyConfig['gallery'][number]; className?: string }) {
+/** A strategy / validation step, drawn exactly like the Overview block. */
+function ProcessBlock({ section }: { section: ProcessSection }) {
   return (
-    <motion.figure {...reveal} className={`relative overflow-hidden rounded-[20px] bg-[#111] group ${className}`}>
-      <Img src={item.image} alt={item.caption || ''} className="absolute inset-0 h-full w-full object-cover object-top transition-transform duration-[900ms] group-hover:scale-[1.03]" />
-      {item.caption && (
-        <figcaption className="absolute left-4 bottom-4">
-          <span className="rounded-full bg-black/65 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.15em] text-white/85 backdrop-blur-sm">
-            {item.caption}
-          </span>
-        </figcaption>
+    <Block label={section.label}>
+      {section.narrative && (
+        <div className="text-lg md:text-xl text-white/75 leading-relaxed space-y-5 [&>p:first-child]:text-white">
+          {section.narrative}
+        </div>
       )}
-    </motion.figure>
+      {section.rows && section.rows.length > 0 && (
+        <>
+          {section.rowsLabel && (
+            <p className="mt-10 font-mono text-[11px] uppercase tracking-[0.2em] text-white/45">{section.rowsLabel}</p>
+          )}
+          <Rows items={section.rows} />
+        </>
+      )}
+    </Block>
   );
 }
 
-/** FlyStudio image rhythm: two side by side (narrow + wide), then one full width. */
+/** Gallery: every image shows whole, at its own proportions, stacked full width. */
 function ImageRow({ items, fullImages }: { items: CaseStudyConfig['gallery']; fullImages?: boolean }) {
   if (!items.length) return null;
-  if (fullImages) return (
+  return (
     <div className="my-8 space-y-10">
       {items.map((item) => (
-        <figure key={item.image}>
-          <Img src={item.image} alt={item.caption || ''} className="block h-auto w-full" />
-          <figcaption className="mt-3 text-sm text-white/70">{item.caption}</figcaption>
-        </figure>
-      ))}
-    </div>
-  );
-  if (items.length === 1) return <Shot item={items[0]} className="aspect-[16/10] my-6" />;
-  const [a, b, ...rest] = items;
-  return (
-    <div className="my-6 space-y-5 md:space-y-6">
-      <div className="grid md:grid-cols-[1fr_1.45fr] gap-5 md:gap-6">
-        <Shot item={a} className="aspect-[5/6] md:aspect-auto md:min-h-[420px]" />
-        <Shot item={b} className="aspect-[40/27]" />
-      </div>
-      {rest.map((it, i) => (
-        <Shot key={i} item={it} className="aspect-[16/10]" />
+        <motion.figure key={item.image} {...reveal}>
+          <Img src={item.image} alt={item.caption || ''} className={fullImages ? "block h-auto w-full" : "block h-auto w-full rounded-[20px] bg-[#111]"} />
+          {item.caption && <figcaption className="mt-3 text-sm text-white/70">{item.caption}</figcaption>}
+        </motion.figure>
       ))}
     </div>
   );
@@ -186,7 +192,7 @@ function ImageRow({ items, fullImages }: { items: CaseStudyConfig['gallery']; fu
 export default function CaseStudyLayout({ config }: { config: CaseStudyConfig }) {
   const {
     kicker, pkg, title, italicWord, tagline, heroImage, heroVideo, metaStats, liveUrl,
-    marquee, challenge, solution, results, gallery, videos = [], next,
+    marquee, challenge, solution, results, gallery, videos = [], next, strategy = [], validation,
   } = config;
   const buyButton = liveUrl && config.purchaseLabel ? (
     <a className="ui-btn ui-btn-primary mt-6" href={liveUrl}>
@@ -289,10 +295,11 @@ export default function CaseStudyLayout({ config }: { config: CaseStudyConfig })
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.1, delay: 0.45, ease: [0.22, 1, 0.36, 1] }}
-          className={config.fullImages ? "relative max-w-7xl mx-auto" : "relative max-w-7xl mx-auto aspect-[4/3] md:aspect-[16/9] overflow-hidden bg-[#111] rounded-b-[20px] rounded-t-[120px] md:rounded-t-[min(22vw,300px)]"}
-          style={config.fullImages ? undefined : { containerType: 'size' }}
+          className={config.fullImages ? "relative max-w-7xl mx-auto" : heroVideo ? "relative max-w-7xl mx-auto aspect-[4/3] md:aspect-[16/9] overflow-hidden bg-[#111] rounded-b-[20px] rounded-t-[120px] md:rounded-t-[min(22vw,300px)]" : "relative max-w-7xl mx-auto overflow-hidden bg-[#111] rounded-[20px]"}
+          style={heroVideo && !config.fullImages ? { containerType: 'size' } : undefined}
         >
-          <Img src={heroImage} alt={config.fullImages ? title + " product cover" : `${clientName} website`} className={config.fullImages ? "block h-auto w-full" : "absolute inset-0 h-full w-full object-cover object-top"} />
+          {/* Images are never cropped; only a hero with a video keeps the fixed arched frame the video fills. */}
+          <Img src={heroImage} alt={config.fullImages ? title + " product cover" : `${clientName} website`} className={heroVideo && !config.fullImages ? "absolute inset-0 h-full w-full object-cover object-top" : "block h-auto w-full"} />
           {heroVideo && !reduceMotion && (
             <iframe
               src={`https://player.vimeo.com/video/${heroVideo.vimeoId}?background=1&autoplay=1&loop=1&muted=1&autopause=0&dnt=1`}
@@ -343,6 +350,8 @@ export default function CaseStudyLayout({ config }: { config: CaseStudyConfig })
             )}
           </Block>
 
+          {strategy.map((s) => <ProcessBlock key={s.label} section={s} />)}
+
           <ImageRow items={firstRow} fullImages={config.fullImages} />
 
           <Block label="What I built">
@@ -351,6 +360,8 @@ export default function CaseStudyLayout({ config }: { config: CaseStudyConfig })
             </div>
             <Rows items={solution.items} />
           </Block>
+
+          {validation && <ProcessBlock section={validation} />}
 
           {videos.length > 0 && (
             <div className="my-6 space-y-6">
@@ -440,8 +451,8 @@ export default function CaseStudyLayout({ config }: { config: CaseStudyConfig })
                 </span>
               </div>
             </div>
-            <div className="relative order-1 md:order-2 aspect-[4/3] md:aspect-auto md:min-h-[420px] overflow-hidden rounded-[18px] bg-[#1d1d1d]">
-              <Img src={nextP?.image || next.image} alt={`${next.title} website`} className="absolute inset-0 h-full w-full object-cover object-top transition-transform duration-[900ms] group-hover:scale-[1.04]" />
+            <div className="relative order-1 md:order-2 overflow-hidden rounded-[18px] bg-[#1d1d1d]">
+              <Img src={nextP?.image || next.image} alt={`${next.title} website`} className="block h-auto w-full transition-transform duration-[900ms] group-hover:scale-[1.04]" />
             </div>
           </Link>
         </div>

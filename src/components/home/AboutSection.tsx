@@ -70,11 +70,11 @@ export default function AboutSection() {
             transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
             className="relative"
           >
-            <div className="relative aspect-[4/5] overflow-hidden">
+            <div className="relative overflow-hidden">
               <motion.img
                 src={PORTRAIT}
                 alt="Marc Friedman"
-                className="absolute inset-0 w-full h-full object-cover object-top grayscale contrast-125"
+                className="block w-full h-auto grayscale contrast-125"
                 style={{ y: portraitY, scale: portraitScale }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent" />

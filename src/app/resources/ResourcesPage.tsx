@@ -216,12 +216,12 @@ export default function ResourcesPage() {
                   aria-haspopup="dialog"
                   className="group block w-full text-left"
                 >
-                  <div className="relative aspect-[3/4] overflow-hidden bg-[#1b1b1b] mb-6 transition-[transform,box-shadow] duration-700 ease-[cubic-bezier(.22,1,.36,1)] [transform:perspective(1200px)] group-hover:[transform:perspective(1200px)_rotateY(-8deg)_translateY(-6px)] group-hover:shadow-[30px_40px_60px_-20px_rgba(0,0,0,0.8),0_0_0_1px_rgba(163,209,255,0.35)]">
+                  <div className="relative overflow-hidden bg-[#1b1b1b] mb-6 transition-[transform,box-shadow] duration-700 ease-[cubic-bezier(.22,1,.36,1)] [transform:perspective(1200px)] group-hover:[transform:perspective(1200px)_rotateY(-8deg)_translateY(-6px)] group-hover:shadow-[30px_40px_60px_-20px_rgba(0,0,0,0.8),0_0_0_1px_rgba(163,209,255,0.35)]">
                     <img
                       src={resource.cover}
                       alt={resource.coverAlt}
                       loading={i === 0 ? 'eager' : 'lazy'}
-                      className="absolute inset-0 w-full h-full object-cover group-hover:scale-[1.04] transition-transform duration-[900ms]"
+                      className="block w-full h-auto group-hover:scale-[1.04] transition-transform duration-[900ms]"
                     />
                     <div className="absolute bottom-4 left-4 right-4 flex items-end justify-between text-[10px] font-mono uppercase tracking-[0.3em] text-white/80">
                       <span>{resource.kind}</span>

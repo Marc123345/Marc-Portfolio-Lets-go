@@ -641,11 +641,11 @@ export default function BlogPage() {
                 <Link href={`/blog/${hero.id}/`} className="group block">
                   <div className="grid lg:grid-cols-[1.3fr_1fr] gap-10 lg:gap-16 items-center">
                     {/* Image */}
-                    <div className="relative aspect-[16/11] overflow-hidden bg-[#1b1b1b]">
+                    <div className="relative overflow-hidden bg-[#1b1b1b]">
                       <img
                         src={hero.image}
                         alt={hero.title}
-                        className="absolute inset-0 w-full h-full object-cover group-hover:scale-[1.04] transition-transform duration-[1000ms]"
+                        className="block w-full h-auto group-hover:scale-[1.04] transition-transform duration-[1000ms]"
                       />
                       <div className="absolute top-5 left-5 flex items-center gap-2 text-[10px] font-mono uppercase tracking-[0.3em] text-white/85">
                         <span className="w-6 h-[1px] bg-[#A3D1FF]" />
@@ -713,11 +713,11 @@ export default function BlogPage() {
                   transition={{ duration: 0.7, delay: i * 0.08 }}
                 >
                   <Link href={`/blog/${p.id}/`} className="group block">
-                    <div className="relative aspect-[16/10] overflow-hidden bg-[#1b1b1b] mb-6">
+                    <div className="relative overflow-hidden bg-[#1b1b1b] mb-6">
                       <img
                         src={p.image}
                         alt={p.title}
-                        className="absolute inset-0 w-full h-full object-cover group-hover:scale-[1.04] transition-transform duration-[900ms]"
+                        className="block w-full h-auto group-hover:scale-[1.04] transition-transform duration-[900ms]"
                         loading="lazy"
                       />
                       <div className="absolute bottom-4 left-4 right-4 flex items-end justify-between text-[10px] font-mono uppercase tracking-[0.3em] text-white/80">

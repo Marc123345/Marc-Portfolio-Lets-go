@@ -149,10 +149,10 @@ function Card({
               <Link href={p.proof.href} className="group block" style={{ perspective: 1200 }}>
                 <span className="block text-[10px] font-mono uppercase tracking-[0.3em] text-white/40 mb-4">Proof · shipped</span>
                 <span
-                  className="relative block aspect-[4/3] overflow-hidden border border-white/10 bg-[#1b1b1b] shadow-[0_40px_80px_-30px_rgba(0,0,0,0.9)] transition-transform duration-700 [transform:rotateY(-8deg)_rotateX(4deg)] group-hover:[transform:rotateY(0deg)_rotateX(0deg)]"
+                  className="relative block overflow-hidden border border-white/10 bg-[#1b1b1b] shadow-[0_40px_80px_-30px_rgba(0,0,0,0.9)] transition-transform duration-700 [transform:rotateY(-8deg)_rotateX(4deg)] group-hover:[transform:rotateY(0deg)_rotateX(0deg)]"
                 >
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={p.proof.image} alt={`${p.proof.title} website`} loading="lazy" decoding="async" className="absolute inset-0 w-full h-full object-cover transition-transform duration-[900ms] group-hover:scale-[1.04]" />
+                  <img src={p.proof.image} alt={`${p.proof.title} website`} loading="lazy" decoding="async" className="block w-full h-auto transition-transform duration-[900ms] group-hover:scale-[1.04]" />
                   <span className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
                   <span className="absolute inset-0 bg-[linear-gradient(115deg,rgba(255,255,255,0.12),transparent_40%)]" />
                   <span className="absolute left-5 bottom-5 right-5 flex items-end justify-between gap-4">

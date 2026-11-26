@@ -80,14 +80,14 @@ export default function WorkByService({ projects }: { projects: P[] }) {
                         href={p.caseStudyUrl}
                         className="group block border border-white/10 hover:border-[#A3D1FF]/40 hover:shadow-[0_30px_60px_-25px_rgba(163,209,255,0.35)] transition-[border-color,box-shadow] duration-500 overflow-hidden bg-black"
                       >
-                        <div className={`relative overflow-hidden bg-[#1b1b1b] ${items.length === 1 ? 'aspect-[16/8]' : 'aspect-[16/10]'}`}>
+                        <div className="relative overflow-hidden bg-[#1b1b1b]">
                           {/* eslint-disable-next-line @next/next/no-img-element */}
                           <img
                             src={p.image}
                             alt={`${p.title} website`}
                             loading="lazy"
                             decoding="async"
-                            className="absolute inset-0 w-full h-full object-cover group-hover:scale-[1.04] transition-transform duration-[900ms]"
+                            className="block w-full h-auto group-hover:scale-[1.04] transition-transform duration-[900ms]"
                           />
                           <span className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
                           {p.stats[0] && (

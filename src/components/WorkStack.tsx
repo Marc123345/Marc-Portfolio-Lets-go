@@ -181,7 +181,7 @@ export default function WorkStack({
                       {slug(item.title)}.site
                     </span>
                   </div>
-                  <div className="relative aspect-[16/10] bg-[#1b1b1b]">
+                  <div className="relative bg-[#1b1b1b]">
                     {item.image && (
                       // eslint-disable-next-line @next/next/no-img-element
                       <img
@@ -190,7 +190,7 @@ export default function WorkStack({
                         draggable={false}
                         loading={depth <= 1 ? 'eager' : 'lazy'}
                         decoding="async"
-                        className="absolute inset-0 w-full h-full object-cover"
+                        className="block w-full h-auto"
                       />
                     )}
                     {/* glare that follows the deck */}

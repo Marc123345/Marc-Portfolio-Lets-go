@@ -71,11 +71,11 @@ export default function ContextDrivenDesignDecisionsPage() {
             </div>
           </div>
 
-          <div className="aspect-[21/9] overflow-hidden mb-8">
+          <div className="overflow-hidden mb-8">
             <img
               src="/generated-1770282657147-xuhu1.webp"
               alt="Context in UX/UI Design"
-              className="w-full h-full object-cover"
+              className="block w-full h-auto"
             />
           </div>
         </div>

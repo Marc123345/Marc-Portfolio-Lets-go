@@ -520,11 +520,11 @@ export function WorkRow({
           whileHover={{ y: -8 }}
           className="group block border border-white/10 hover:border-[#A3D1FF]/40 hover:shadow-[0_30px_60px_-25px_rgba(163,209,255,0.35)] transition-[border-color,box-shadow] duration-500 overflow-hidden"
         >
-          <div className="relative aspect-[16/10] overflow-hidden bg-black">
+          <div className="relative overflow-hidden bg-black">
             <img
               src={item.image}
               alt={item.title}
-              className="w-full h-full object-cover group-hover:scale-[1.04] transition-transform duration-[900ms]"
+              className="block w-full h-auto group-hover:scale-[1.04] transition-transform duration-[900ms]"
             />
           </div>
           <div className="p-6">

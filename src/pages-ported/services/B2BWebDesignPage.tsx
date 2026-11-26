@@ -684,11 +684,11 @@ export default function B2BWebDesignPage() {
       <EditorialSection chapter="01" label="The Brief" title="Results," italicTitle="not aesthetics.">
         <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-10 lg:gap-16 items-center">
           <motion.div {...reveal} className="relative">
-            <div className="relative aspect-[4/5] overflow-hidden">
+            <div className="relative overflow-hidden">
               <img
                 src={WORKSPACE}
                 alt="Marc Friedman at work on a B2B web design project"
-                className="absolute inset-0 w-full h-full object-cover"
+                className="block w-full h-auto"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent" />
               <FloatPill className="absolute top-6 right-6" tilt={8}>Custom-coded</FloatPill>
@@ -769,11 +769,11 @@ export default function B2BWebDesignPage() {
       <EditorialSection chapter="05" label="The Operator" title="No agency handoff." italicTitle="No offshore team.">
         <div className="grid lg:grid-cols-[0.85fr_1.15fr] gap-10 lg:gap-16 items-center">
           <motion.div {...reveal} className="relative">
-            <div className="relative aspect-[4/5] overflow-hidden">
+            <div className="relative overflow-hidden">
               <img
                 src={PORTRAIT}
                 alt="Marc Friedman, the designer and developer behind every B2B build"
-                className="absolute inset-0 w-full h-full object-cover object-top grayscale contrast-125"
+                className="block w-full h-auto grayscale contrast-125"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-8">

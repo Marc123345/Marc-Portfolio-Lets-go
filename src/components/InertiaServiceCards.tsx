@@ -102,14 +102,14 @@ function Card({
           className={`group relative flex h-full flex-col gap-3 rounded-[16px] p-2 md:gap-4 md:rounded-[20px] md:p-3 ${tone.frame} ${current ? 'ring-2 ring-[#A3D1FF] ring-offset-4 ring-offset-black' : ''}`}
         >
           {/* image */}
-          <div className="relative aspect-square overflow-hidden rounded-[11px] bg-[#1b1b1b] md:rounded-[14px]">
+          <div className="relative overflow-hidden rounded-[11px] bg-[#1b1b1b] md:rounded-[14px]">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={v?.image}
               alt=""
               loading="lazy"
               decoding="async"
-              className="absolute inset-0 h-full w-full object-cover transition-transform duration-[900ms] group-hover:scale-[1.06]"
+              className="block w-full h-auto transition-transform duration-[900ms] group-hover:scale-[1.06]"
             />
             <span className="absolute bottom-2 right-2 max-w-[calc(100%-1rem)] truncate rounded-full bg-black/60 px-2 py-0.5 font-mono text-[8.5px] uppercase tracking-[0.1em] text-white/80 backdrop-blur-sm md:px-2.5 md:py-1 md:text-[10px] md:tracking-[0.18em]">
               {v?.project}

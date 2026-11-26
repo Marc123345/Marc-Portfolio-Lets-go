@@ -31,12 +31,12 @@ export default function ChecklistDownload({
     >
       <div className="grid lg:grid-cols-[1fr_1.1fr] gap-12 lg:gap-16 items-start">
         <div className="grid grid-cols-[minmax(0,140px)_1fr] sm:grid-cols-[minmax(0,180px)_1fr] gap-6 sm:gap-8 items-start">
-          <div className="relative aspect-[3/4] overflow-hidden bg-[#1b1b1b]">
+          <div className="relative overflow-hidden bg-[#1b1b1b]">
             <img
               src={c.cover}
               alt={c.coverAlt}
               loading="lazy"
-              className="absolute inset-0 w-full h-full object-cover"
+              className="block w-full h-auto"
             />
           </div>
           <div>

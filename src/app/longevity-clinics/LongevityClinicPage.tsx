@@ -911,11 +911,11 @@ function OperatorSection() {
             transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
             className="relative"
           >
-            <div className="relative aspect-[4/5] overflow-hidden">
+            <div className="relative overflow-hidden">
               <motion.img
                 src={PORTRAIT}
                 alt="Marc Friedman, designer, developer, and operator"
-                className="absolute inset-0 w-full h-full object-cover object-top grayscale contrast-125"
+                className="block w-full h-auto grayscale contrast-125"
                 style={{ y: portraitY, scale: portraitScale }}
                 loading="lazy"
                 width={480}

@@ -201,13 +201,13 @@ export default function AwardsSection() {
                     exit={{ opacity: 0, scale: 0.6 }}
                     transition={{ duration: 0.3 }}
                   >
-                    <div className="-translate-x-1/2 -translate-y-[115%] w-[220px] aspect-[4/3] overflow-hidden bg-[#1b1b1b] border border-white/10 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.9)] rotate-[-4deg]">
+                    <div className="-translate-x-1/2 -translate-y-[115%] w-[220px] overflow-hidden bg-[#1b1b1b] border border-white/10 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.9)] rotate-[-4deg]">
                       <AnimatePresence mode="popLayout">
                         <motion.img
                           key={AWARDS[active].image}
                           src={AWARDS[active].image}
                           alt=""
-                          className="w-full h-full object-cover"
+                          className="block w-full h-auto"
                           initial={{ opacity: 0, scale: 1.15 }}
                           animate={{ opacity: 1, scale: 1 }}
                           exit={{ opacity: 0 }}
