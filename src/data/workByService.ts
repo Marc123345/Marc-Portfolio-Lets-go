@@ -59,7 +59,7 @@ export const WORK_SERVICES: WorkService[] = [
     label: 'Product UX',
     href: '/services/design/',
     blurb: 'Dashboards and app flows for people who use the product every day.',
-    projects: ['Silicon Atlas', 'Tracefold', 'AutoMarginX', 'Fleet Management', 'Videoleap', 'MyTube'],
+    projects: ['Tracefold', 'Silicon Atlas', 'MyTube', 'AutoMarginX', 'Fleet Management', 'Videoleap'],
   },
   {
     key: 'security',

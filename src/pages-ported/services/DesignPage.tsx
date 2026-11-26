@@ -255,11 +255,11 @@ export default function DesignPage() {
         <WorkRow
           items={[
             {
-              href: '/work/case-studies/videoleap/',
-              title: 'Videoleap',
-              blurb: 'Redesigned onboarding, editor, and gamification for a flagship mobile app.',
-              image: '/images/clients/SubVB9A.jpeg',
-              tags: ['UX', 'Mobile'],
+              href: '/work/case-studies/tracefold/',
+              title: 'Tracefold',
+              blurb: 'Figma design system for tracing identity alerts and approving a response on desktop and mobile.',
+              image: '/images/case-studies/tracefold/cover.webp',
+              tags: ['Figma', 'Product Design'],
             },
             {
               href: '/work/case-studies/silicon-atlas/',
@@ -267,6 +267,13 @@ export default function DesignPage() {
               blurb: 'Data-dense dashboard kit for lab and telemetry tools, built on one token set.',
               image: '/images/case-studies/silicon-atlas/run-comparison.jpg',
               tags: ['Product UX', 'Design System'],
+            },
+            {
+              href: '/work/case-studies/mytube/',
+              title: 'MyTube',
+              blurb: 'Video metadata platform with AI tagging, insights and workflow automation.',
+              image: '/images/clients/QNHXpzT.webp',
+              tags: ['Product UX', 'AI/ML'],
             },
           ]}
         />

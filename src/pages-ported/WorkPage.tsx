@@ -29,7 +29,9 @@ export default function WorkPage() {
 
   const list = useMemo(() => {
     const g = WORK_SERVICES.find((s) => s.key === filter);
-    return g ? projects.filter((p) => g.projects.includes(p.title)) : projects;
+    return g
+      ? g.projects.map((t) => projects.find((p) => p.title === t)).filter((p): p is (typeof projects)[number] => Boolean(p))
+      : projects;
   }, [filter]);
   const group = WORK_SERVICES.find((s) => s.key === filter);
 

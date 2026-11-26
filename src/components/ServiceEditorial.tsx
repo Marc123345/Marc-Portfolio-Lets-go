@@ -508,7 +508,7 @@ export function WorkRow({
   items: { href: string; title: string; blurb: string; image: string; tags: string[] }[];
 }) {
   return (
-    <div className="grid md:grid-cols-2 gap-6 md:gap-8">
+    <div className={`grid md:grid-cols-2 ${items.length === 3 ? 'lg:grid-cols-3' : ''} gap-6 md:gap-8`}>
       {items.map((item, i) => (
         <motion.a
           key={item.title}
