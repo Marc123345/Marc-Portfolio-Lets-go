@@ -32,19 +32,18 @@ export const PROJECTS: Project[] = [
     tags: ['React 18', 'TypeScript', 'Postgres', 'GSAP'],
   },
   {
-    title: 'Tracefold',
-    showFullCover: true,
-    category: 'Cybersecurity UI Kit',
-    blurb: 'A Figma design system for tracing identity alerts, reviewing evidence and approving a response across desktop and mobile.',
-    image: '/images/case-studies/tracefold/cover.webp',
-    liveUrl: 'https://marcdesigns25.gumroad.com/l/tracefold',
-    caseStudyUrl: '/work/case-studies/tracefold/',
+    title: 'Silicon Atlas',
+    category: 'Product UX · Engineering',
+    blurb:
+      'Dark, data-dense dashboard kit for lab and telemetry tools. Five React workspaces, a Figma file and a design system on one token set.',
+    image: '/images/case-studies/silicon-atlas/run-comparison.jpg',
+    caseStudyUrl: '/work/case-studies/silicon-atlas/',
     stats: [
-      { value: '22', label: 'Desktop screens' },
-      { value: '14', label: 'Mobile screens' },
-      { value: '67', label: 'Components' },
+      { value: '5', label: 'Workspaces' },
+      { value: 'React 19', label: 'Source' },
+      { value: '1', label: 'Token Set' },
     ],
-    tags: ['Figma', 'Product Design', 'Security Operations'],
+    tags: ['React 19', 'Figma', 'Design Tokens'],
   },
   {
     title: 'Untapped Africa',
@@ -92,6 +91,21 @@ export const PROJECTS: Project[] = [
       { value: '2x', label: 'Leads' },
     ],
     tags: ['Next.js', 'SEO', 'Lead Gen'],
+  },
+  {
+    title: 'Tracefold',
+    showFullCover: true,
+    category: 'Cybersecurity UI Kit',
+    blurb: 'A Figma design system for tracing identity alerts, reviewing evidence and approving a response across desktop and mobile.',
+    image: '/images/case-studies/tracefold/cover.webp',
+    liveUrl: 'https://marcdesigns25.gumroad.com/l/tracefold',
+    caseStudyUrl: '/work/case-studies/tracefold/',
+    stats: [
+      { value: '22', label: 'Desktop screens' },
+      { value: '14', label: 'Mobile screens' },
+      { value: '67', label: 'Components' },
+    ],
+    tags: ['Figma', 'Product Design', 'Security Operations'],
   },
   {
     title: 'AutoMarginX',
@@ -225,19 +239,5 @@ export const PROJECTS: Project[] = [
       { value: 'OSS', label: 'License' },
     ],
     tags: ['React', 'CSS Vars', 'Open Source'],
-  },
-  {
-    title: 'Silicon Atlas',
-    category: 'Product UX · Engineering',
-    blurb:
-      'Dark, data-dense dashboard kit for lab and telemetry tools. Five React workspaces, a Figma file and a design system on one token set.',
-    image: '/images/case-studies/silicon-atlas/run-comparison.jpg',
-    caseStudyUrl: '/work/case-studies/silicon-atlas/',
-    stats: [
-      { value: '5', label: 'Workspaces' },
-      { value: 'React 19', label: 'Source' },
-      { value: '1', label: 'Token Set' },
-    ],
-    tags: ['React 19', 'Figma', 'Design Tokens'],
   },
 ];
