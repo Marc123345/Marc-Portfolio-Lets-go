@@ -31,6 +31,20 @@ export const PROJECTS: Project[] = [
     tags: ['React 18', 'TypeScript', 'Postgres', 'GSAP'],
   },
   {
+    title: 'Tracefold',
+    category: 'Cybersecurity UI Kit',
+    blurb: 'A Figma design system for tracing identity alerts, reviewing evidence and approving a response across desktop and mobile.',
+    image: '/images/case-studies/tracefold/cover.webp',
+    liveUrl: 'https://marcdesigns25.gumroad.com/l/tracefold',
+    caseStudyUrl: '/work/case-studies/tracefold/',
+    stats: [
+      { value: '22', label: 'Desktop screens' },
+      { value: '14', label: 'Mobile screens' },
+      { value: '67', label: 'Components' },
+    ],
+    tags: ['Figma', 'Product Design', 'Security Operations'],
+  },
+  {
     title: 'Untapped Africa',
     category: 'Impact / Storytelling',
     blurb:
