@@ -163,7 +163,7 @@ export default function BestNextjsDevelopersPage() {
             <img
               src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=2000&q=80"
               alt="A developer hand-coding a custom Next.js site on a laptop"
-              className="w-full h-full object-cover"
+              className="w-full h-full img-fit"
             />
           </div>
         </div>
@@ -301,7 +301,7 @@ export default function BestNextjsDevelopersPage() {
                   <img
                     src="https://ik.imagekit.io/qcvroy8xpd/8ce5c50b-8af1-4e99-b2b0-f7f29cd0abd3.avif"
                     alt="CSS Is Eating JavaScript's Lunch"
-                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full img-fit"
                   />
                 </div>
                 <div className="p-6">
@@ -322,7 +322,7 @@ export default function BestNextjsDevelopersPage() {
                   <img
                     src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=2000&q=80"
                     alt="What Is GEO? Generative Engine Optimization Explained"
-                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full img-fit"
                   />
                 </div>
                 <div className="p-6">

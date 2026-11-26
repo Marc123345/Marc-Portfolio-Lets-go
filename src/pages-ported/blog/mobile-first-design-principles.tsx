@@ -72,7 +72,7 @@ export default function MobileFirstDesignPrinciplesPage() {
             <img 
               src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=2000&q=80" 
               alt="Mobile-First Design" 
-              className="w-full h-full object-cover"
+              className="w-full h-full img-fit"
             />
           </div>
         </div>
@@ -240,7 +240,7 @@ font-size: clamp(1rem, 0.5rem + 2vw, 1.5rem);`}
                   <img 
                     src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=2000&q=80" 
                     alt="7 Proven Conversion Rate Optimization Techniques for 2025" 
-                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full img-fit"
                   />
                 </div>
                 <div className="p-6">
@@ -261,7 +261,7 @@ font-size: clamp(1rem, 0.5rem + 2vw, 1.5rem);`}
                   <img 
                     src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=2000&q=80" 
                     alt="Optimizing Your Website for AI Crawlers" 
-                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full img-fit"
                   />
                 </div>
                 <div className="p-6">

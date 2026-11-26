@@ -70,7 +70,7 @@ export default function MinimalFastSustainableUXPage() {
             <img
               src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=2000&q=80"
               alt="Minimal mountain landscape representing calm, sustainable design"
-              className="w-full h-full object-cover"
+              className="w-full h-full img-fit"
             />
           </div>
         </div>
@@ -434,7 +434,7 @@ Font weights:
                   <img
                     src="https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=2000&q=80"
                     alt="UI Polish: Mastering Visual Realism in Modern Interface Design"
-                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full img-fit"
                   />
                 </div>
                 <div className="p-6">
@@ -455,7 +455,7 @@ Font weights:
                   <img
                     src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=2000&q=80"
                     alt="Brutalism & Anti-Design: The Raw, Unpolished Web Design Revolution"
-                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full img-fit"
                   />
                 </div>
                 <div className="p-6">

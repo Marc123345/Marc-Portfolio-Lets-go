@@ -134,7 +134,7 @@ export default function GoHighLevelLeadConnectorPage() {
             <img
               src={HERO}
               alt="Someone at a laptop replying to messages while holding a phone with a chat open."
-              className="w-full h-full object-cover"
+              className="w-full h-full img-fit"
             />
           </div>
         </div>
@@ -276,7 +276,7 @@ export default function GoHighLevelLeadConnectorPage() {
                   <img
                     src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=2000&q=80"
                     alt="What a 1-Second Faster Site Is Worth in Leads"
-                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full img-fit"
                   />
                 </div>
                 <div className="p-6">
@@ -297,7 +297,7 @@ export default function GoHighLevelLeadConnectorPage() {
                   <img
                     src="https://images.unsplash.com/photo-1533750349088-cd871a92f312?auto=format&fit=crop&w=2000&q=80"
                     alt="Digital Marketing Strategy for Asphalt Contractors"
-                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full img-fit"
                   />
                 </div>
                 <div className="p-6">

@@ -75,7 +75,7 @@ export default function ContextDrivenDesignDecisionsPage() {
             <img
               src="/generated-1770282657147-xuhu1.webp"
               alt="Context in UX/UI Design"
-              className="w-full h-full object-cover"
+              className="w-full h-full img-fit"
             />
           </div>
         </div>

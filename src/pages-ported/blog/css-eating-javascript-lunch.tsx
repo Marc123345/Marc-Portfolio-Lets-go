@@ -77,7 +77,7 @@ export default function CssEatingJavascriptLunchPage() {
             <img
               src={HERO_IMAGE}
               alt="CSS code on a dark editor background"
-              className="w-full h-full object-cover"
+              className="w-full h-full img-fit"
             />
           </div>
         </div>
@@ -227,7 +227,7 @@ export default function CssEatingJavascriptLunchPage() {
                   <img
                     src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=2000&q=80"
                     alt="Minimal, fast, sustainable UX"
-                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full img-fit"
                   />
                 </div>
                 <div className="p-6">
@@ -248,7 +248,7 @@ export default function CssEatingJavascriptLunchPage() {
                   <img
                     src="https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?auto=format&fit=crop&w=2000&q=80"
                     alt="Data-driven design systems"
-                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full img-fit"
                   />
                 </div>
                 <div className="p-6">

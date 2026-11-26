@@ -60,7 +60,7 @@ export default function GoogleAlgorithmUpdate2026() {
             <img
               src="https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?auto=format&fit=crop&w=2000&q=80"
               alt="Google Search Algorithm Update 2026"
-              className="w-full h-full object-cover"
+              className="w-full h-full img-fit"
             />
           </div>
         </div>

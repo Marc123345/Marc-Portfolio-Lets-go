@@ -102,7 +102,7 @@ export default function AntiDesignTextureNostalgiaPage() {
             <img
               src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=2000&q=80"
               alt="A desk of vintage computers, a handheld games console and cassette tapes lit in pink and blue."
-              className="w-full h-full object-cover"
+              className="w-full h-full img-fit"
             />
           </div>
         </div>
@@ -236,7 +236,7 @@ export default function AntiDesignTextureNostalgiaPage() {
                   <img
                     src="https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?auto=format&fit=crop&w=2000&q=80"
                     alt="Microinteractions, Motion and 3D"
-                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full img-fit"
                   />
                 </div>
                 <div className="p-6">
@@ -257,7 +257,7 @@ export default function AntiDesignTextureNostalgiaPage() {
                   <img
                     src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=2000&q=80"
                     alt="Brutalism & Anti-Design"
-                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full img-fit"
                   />
                 </div>
                 <div className="p-6">

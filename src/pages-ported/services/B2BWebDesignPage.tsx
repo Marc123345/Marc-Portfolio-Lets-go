@@ -696,7 +696,7 @@ export default function B2BWebDesignPage() {
               <img
                 src={WORKSPACE}
                 alt="Marc Friedman at work on a B2B web design project"
-                className="absolute inset-0 w-full h-full object-cover"
+                className="absolute inset-0 w-full h-full img-fit"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent" />
               <FloatPill className="absolute top-6 right-6" tilt={8}>Custom-coded</FloatPill>
@@ -781,7 +781,7 @@ export default function B2BWebDesignPage() {
               <img
                 src={PORTRAIT}
                 alt="Marc Friedman, the designer and developer behind every B2B build"
-                className="absolute inset-0 w-full h-full object-cover object-top grayscale contrast-125"
+                className="absolute inset-0 w-full h-full img-fit grayscale contrast-125"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-8">

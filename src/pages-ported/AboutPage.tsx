@@ -212,7 +212,7 @@ export default function AboutPage() {
           >
             <div className="absolute inset-[8%] rounded-full bg-[#A3D1FF]/25 blur-[60px]" />
             <div className="relative aspect-[4/5] overflow-hidden bg-[#1b1b1b] border border-white/10 shadow-[30px_40px_70px_-20px_rgba(0,0,0,0.85)]">
-              <img src={PORTRAIT} alt="Marc Friedman" className="absolute inset-0 w-full h-full object-cover" />
+              <img src={PORTRAIT} alt="Marc Friedman" className="absolute inset-0 w-full h-full img-fit" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
               <span className="absolute left-4 bottom-4 text-[10px] font-mono uppercase tracking-[0.3em] text-white/80">
                 Marc Friedman · Working worldwide
@@ -690,7 +690,7 @@ export default function AboutPage() {
                 <img
                   src="https://ik.imagekit.io/qcvroy8xpd/uoq5Ztg.jpeg"
                   alt="Marc at work"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full img-fit"
                 />
               </div>
               <FloatPill className="absolute -left-4 top-8 z-10" tilt={-10}>Off the clock</FloatPill>

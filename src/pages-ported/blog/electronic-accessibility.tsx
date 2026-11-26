@@ -75,7 +75,7 @@ export default function ElectronicAccessibilityPage() {
             <img
               src="https://images.surferseo.art/cb035972-4d77-4a5c-aa7d-abe70c2165fd.png"
               alt="A person working at a laptop alongside a refreshable Braille display, one of the assistive technologies that depend on accessible digital design"
-              className="w-full h-full object-cover"
+              className="w-full h-full img-fit"
             />
           </div>
         </div>
@@ -117,7 +117,7 @@ export default function ElectronicAccessibilityPage() {
               <img
                 src="https://images.surferseo.art/c61de429-e661-4dcb-af34-419f2e9bbbab.png"
                 alt="A diverse group of people using tablets, phones, and laptops around a table, illustrating equal access to digital content across abilities"
-                className="w-full h-full object-cover"
+                className="w-full h-full img-fit"
               />
             </div>
 
@@ -146,7 +146,7 @@ export default function ElectronicAccessibilityPage() {
               <img
                 src="https://images.surferseo.art/5df7481e-91ca-4212-9ef2-c7773ffd498f.png"
                 alt="Someone navigating a website by keyboard, with a visible focus indicator highlighting the active element"
-                className="w-full h-full object-cover"
+                className="w-full h-full img-fit"
               />
             </div>
 
@@ -186,7 +186,7 @@ export default function ElectronicAccessibilityPage() {
                   <img
                     src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=2000&q=80"
                     alt="Mobile-First Design Principles"
-                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full img-fit"
                   />
                 </div>
                 <div className="p-6">
@@ -207,7 +207,7 @@ export default function ElectronicAccessibilityPage() {
                   <img
                     src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=2000&q=80"
                     alt="Minimal, Fast, and Sustainable UX"
-                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full img-fit"
                   />
                 </div>
                 <div className="p-6">

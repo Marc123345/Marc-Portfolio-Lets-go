@@ -108,7 +108,7 @@ export default function FasterSiteWorthInLeadsPage() {
             <img
               src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=2000&q=80"
               alt="An analytics dashboard on a dark screen showing user counts, bar charts and line graphs for the last seven days."
-              className="w-full h-full object-cover"
+              className="w-full h-full img-fit"
             />
           </div>
         </div>
@@ -249,7 +249,7 @@ export default function FasterSiteWorthInLeadsPage() {
                   <img
                     src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=2000&q=80"
                     alt="Next.js vs Webflow"
-                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full img-fit"
                   />
                 </div>
                 <div className="p-6">
@@ -270,7 +270,7 @@ export default function FasterSiteWorthInLeadsPage() {
                   <img
                     src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=2000&q=80"
                     alt="Minimal, Fast, Sustainable UX"
-                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full img-fit"
                   />
                 </div>
                 <div className="p-6">

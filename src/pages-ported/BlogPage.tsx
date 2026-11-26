@@ -645,7 +645,7 @@ export default function BlogPage() {
                       <img
                         src={hero.image}
                         alt={hero.title}
-                        className="absolute inset-0 w-full h-full object-cover group-hover:scale-[1.04] transition-transform duration-[1000ms]"
+                        className="absolute inset-0 w-full h-full img-fit"
                       />
                       <div className="absolute top-5 left-5 flex items-center gap-2 text-[10px] font-mono uppercase tracking-[0.3em] text-white/85">
                         <span className="w-6 h-[1px] bg-[#A3D1FF]" />
@@ -717,7 +717,7 @@ export default function BlogPage() {
                       <img
                         src={p.image}
                         alt={p.title}
-                        className="absolute inset-0 w-full h-full object-cover group-hover:scale-[1.04] transition-transform duration-[900ms]"
+                        className="absolute inset-0 w-full h-full img-fit"
                         loading="lazy"
                       />
                       <div className="absolute bottom-4 left-4 right-4 flex items-end justify-between text-[10px] font-mono uppercase tracking-[0.3em] text-white/80">

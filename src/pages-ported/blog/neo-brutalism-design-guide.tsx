@@ -73,7 +73,7 @@ export default function NeoBrutalismGuidePage() {
             <img
               src="https://images.surferseo.art/b10bf764-d10c-46ca-8e7a-5d5e4680d88b.png"
               alt="An abstract composition of colorful geometric blocks with hard shadows against a bright background, embodying the neobrutalist aesthetic of bold shapes and high-contrast color"
-              className="w-full h-full object-cover"
+              className="w-full h-full img-fit"
             />
           </div>
         </div>
@@ -243,7 +243,7 @@ export default function NeoBrutalismGuidePage() {
                   <img
                     src="https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=2000&q=80"
                     alt="Brutalism & Anti-Design Web Trends"
-                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full img-fit"
                   />
                 </div>
                 <div className="p-6">
@@ -264,7 +264,7 @@ export default function NeoBrutalismGuidePage() {
                   <img
                     src="https://images.unsplash.com/photo-1541462608143-67571c6738dd?auto=format&fit=crop&w=2000&q=80"
                     alt="Contrast & Balance in UI Design"
-                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full img-fit"
                   />
                 </div>
                 <div className="p-6">

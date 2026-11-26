@@ -75,7 +75,7 @@ export default function WebsiteNotADACompliantPage() {
             <img
               src="https://images.surferseo.art/90ac6ac9-d569-42bd-b37a-5b198351ceaa.png"
               alt="A person using screen-magnification software to read a website, one of the assistive technologies an inaccessible site can lock out"
-              className="w-full h-full object-cover"
+              className="w-full h-full img-fit"
             />
           </div>
         </div>
@@ -127,7 +127,7 @@ export default function WebsiteNotADACompliantPage() {
               <img
                 src="https://images.surferseo.art/1a7e5bb3-38cc-4552-a069-4037632e388e.png"
                 alt="Navigating a site by keyboard, with a visible focus indicator highlighting the active menu item"
-                className="w-full h-full object-cover"
+                className="w-full h-full img-fit"
               />
             </div>
 
@@ -169,7 +169,7 @@ export default function WebsiteNotADACompliantPage() {
               <img
                 src="https://images.surferseo.art/b0abe2d5-d928-4657-b98a-b00cbf7e640b.png"
                 alt="A developer reviewing automated accessibility audit results on screen"
-                className="w-full h-full object-cover"
+                className="w-full h-full img-fit"
               />
             </div>
 
@@ -222,7 +222,7 @@ export default function WebsiteNotADACompliantPage() {
                   <img
                     src="https://images.surferseo.art/cb035972-4d77-4a5c-aa7d-abe70c2165fd.png"
                     alt="Electronic Accessibility: Making Digital Content Work for Everyone"
-                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full img-fit"
                   />
                 </div>
                 <div className="p-6">
@@ -243,7 +243,7 @@ export default function WebsiteNotADACompliantPage() {
                   <img
                     src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=2000&q=80"
                     alt="What Is E-E-A-T? Experience, Expertise, Authoritativeness & Trustworthiness"
-                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full img-fit"
                   />
                 </div>
                 <div className="p-6">

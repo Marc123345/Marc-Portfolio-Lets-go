@@ -110,7 +110,7 @@ export default function ExperimentalNavigationPage() {
             <img
               src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=2000&q=80"
               alt="An old printed world map with countries in muted greens, yellows and reds."
-              className="w-full h-full object-cover"
+              className="w-full h-full img-fit"
             />
           </div>
         </div>
@@ -242,7 +242,7 @@ export default function ExperimentalNavigationPage() {
                   <img
                     src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=2000&q=80"
                     alt="Machine Experience (MX) and lightweight front ends"
-                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full img-fit"
                   />
                 </div>
                 <div className="p-6">
@@ -263,7 +263,7 @@ export default function ExperimentalNavigationPage() {
                   <img
                     src="https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?auto=format&fit=crop&w=2000&q=80"
                     alt="Microinteractions, motion and 3D in 2026"
-                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full img-fit"
                   />
                 </div>
                 <div className="p-6">

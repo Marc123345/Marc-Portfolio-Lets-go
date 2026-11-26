@@ -24,7 +24,7 @@ export const WORK_SERVICES: WorkService[] = [
     label: 'Design Systems',
     href: '/services/design-systems/',
     blurb: 'Tokens, components and rules that keep a product consistent as the team grows.',
-    projects: ['Sentinel DS', 'AutoMarginX', 'Fleet Management', 'MyTube'],
+    projects: ['Sentinel DS', 'Silicon Atlas', 'AutoMarginX', 'Fleet Management', 'MyTube'],
   },
   {
     key: 'mvp',
@@ -59,13 +59,13 @@ export const WORK_SERVICES: WorkService[] = [
     label: 'Product UX',
     href: '/services/design/',
     blurb: 'Dashboards and app flows for people who use the product every day.',
-    projects: ['AutoMarginX', 'Fleet Management', 'Videoleap', 'MyTube'],
+    projects: ['Silicon Atlas', 'Tracefold', 'AutoMarginX', 'Fleet Management', 'Videoleap', 'MyTube'],
   },
   {
     key: 'security',
     label: 'Cybersecurity UX',
     href: '/services/cybersecurity/',
     blurb: 'Interfaces for security teams working under pressure.',
-    projects: ['Sentinel DS'],
+    projects: ['Sentinel DS', 'Tracefold'],
   },
 ];

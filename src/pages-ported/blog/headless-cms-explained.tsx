@@ -110,7 +110,7 @@ export default function HeadlessCmsExplainedPage() {
             <img
               src="https://images.unsplash.com/photo-1487014679447-9f8336841d58?auto=format&fit=crop&w=2000&q=80"
               alt="A laptop on a wooden desk showing a product page for a yellow sofa, next to a phone and a coffee cup."
-              className="w-full h-full object-cover"
+              className="w-full h-full img-fit"
             />
           </div>
         </div>
@@ -239,7 +239,7 @@ export default function HeadlessCmsExplainedPage() {
                   <img
                     src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=2000&q=80"
                     alt="Next.js vs Webflow"
-                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full img-fit"
                   />
                 </div>
                 <div className="p-6">
@@ -260,7 +260,7 @@ export default function HeadlessCmsExplainedPage() {
                   <img
                     src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=2000&q=80"
                     alt="What a 1-Second Faster Site Is Worth in Leads"
-                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full img-fit"
                   />
                 </div>
                 <div className="p-6">

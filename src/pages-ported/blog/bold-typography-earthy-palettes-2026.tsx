@@ -102,7 +102,7 @@ export default function BoldTypographyEarthyPalettesPage() {
             <img
               src="https://images.unsplash.com/photo-1493106641515-6b5631de4bb9?auto=format&fit=crop&w=2000&q=80"
               alt="Clay-covered hands shaping a dark earthenware pot on a spinning potter's wheel."
-              className="w-full h-full object-cover"
+              className="w-full h-full img-fit"
             />
           </div>
         </div>
@@ -265,7 +265,7 @@ p {
                   <img
                     src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=2000&q=80"
                     alt="Anti-Design, Texture and Nostalgia"
-                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full img-fit"
                   />
                 </div>
                 <div className="p-6">
@@ -286,7 +286,7 @@ p {
                   <img
                     src="https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?auto=format&fit=crop&w=2000&q=80"
                     alt="Microinteractions, Motion and 3D"
-                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full img-fit"
                   />
                 </div>
                 <div className="p-6">

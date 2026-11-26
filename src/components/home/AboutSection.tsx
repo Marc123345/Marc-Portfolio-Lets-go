@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from 'react';
-import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowUpRight, MessageSquare } from 'lucide-react';
 import Link from 'next/link';
 
@@ -27,12 +27,6 @@ function ChapterMarker({ number, label }: { number: string; label: string }) {
 
 export default function AboutSection() {
   const sectionRef = useRef<HTMLElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: sectionRef,
-    offset: ['start end', 'end start'],
-  });
-  const portraitY = useTransform(scrollYProgress, [0, 1], ['-5%', '6%']);
-  const portraitScale = useTransform(scrollYProgress, [0, 0.5, 1], [1.08, 1, 1.06]);
 
   const [roleIndex, setRoleIndex] = useState(0);
   useEffect(() => {
@@ -74,8 +68,7 @@ export default function AboutSection() {
               <motion.img
                 src={PORTRAIT}
                 alt="Marc Friedman"
-                className="absolute inset-0 w-full h-full object-cover object-top grayscale contrast-125"
-                style={{ y: portraitY, scale: portraitScale }}
+                className="absolute inset-0 w-full h-full img-fit grayscale contrast-125"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent" />
 

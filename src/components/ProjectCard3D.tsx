@@ -128,7 +128,7 @@ export default function ProjectCard3D({
         <motion.img 
           src={image} 
           alt={title} 
-          className={`w-full h-full object-cover ${
+          className={`w-full h-full img-fit ${
             isLoaded ? 'opacity-100' : 'opacity-0'
           } transition-opacity duration-300`}
           style={isEnabled ? {

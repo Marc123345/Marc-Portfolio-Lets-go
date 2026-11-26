@@ -69,7 +69,7 @@ export default function LocalSEOForPavingContractorsPage() {
             <img
               src="https://images.unsplash.com/photo-1562577309-4932fdd64cd1?auto=format&fit=crop&w=2000&q=80"
               alt="Local SEO for Paving Contractors"
-              className="w-full h-full object-cover"
+              className="w-full h-full img-fit"
             />
           </div>
         </div>
@@ -562,7 +562,7 @@ export default function LocalSEOForPavingContractorsPage() {
                   <img
                     src="https://images.unsplash.com/photo-1615811361523-6bd03d7748e7?auto=format&fit=crop&w=2000&q=80"
                     alt="Website Design for Paving Contractors"
-                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full img-fit"
                   />
                 </div>
                 <div className="p-6">
@@ -583,7 +583,7 @@ export default function LocalSEOForPavingContractorsPage() {
                   <img
                     src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=2000&q=80"
                     alt="Digital Marketing Strategy"
-                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full img-fit"
                   />
                 </div>
                 <div className="p-6">

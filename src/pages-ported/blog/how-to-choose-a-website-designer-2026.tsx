@@ -124,7 +124,7 @@ export default function ChooseWebsiteDesigner2026Page() {
             <img
               src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=2000&q=80"
               alt="Two people reviewing website designs and wireframes together at a desk, discussing layout and structure before a build begins."
-              className="w-full h-full object-cover"
+              className="w-full h-full img-fit"
             />
           </div>
         </div>
@@ -413,7 +413,7 @@ export default function ChooseWebsiteDesigner2026Page() {
                   <img
                     src="https://images.surferseo.art/f8226b13-c8cb-4987-afb0-838cbe96bcc9.png"
                     alt="How Much Does a Website Cost in 2026?"
-                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full img-fit"
                   />
                 </div>
                 <div className="p-6">
@@ -434,7 +434,7 @@ export default function ChooseWebsiteDesigner2026Page() {
                   <img
                     src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=2000&q=80"
                     alt="Best Next.js Developers for B2B Service Businesses"
-                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full img-fit"
                   />
                 </div>
                 <div className="p-6">

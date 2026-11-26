@@ -258,4 +258,18 @@ export const PROJECTS: Project[] = [
     ],
     tags: ['React', 'CSS Vars', 'Open Source'],
   },
+  {
+    title: 'Silicon Atlas',
+    category: 'Product UX · Engineering',
+    blurb:
+      'Dark, data-dense dashboard kit for lab and telemetry tools. Five React workspaces, a Figma file and a design system on one token set.',
+    image: '/images/case-studies/silicon-atlas/run-comparison.jpg',
+    caseStudyUrl: '/work/case-studies/silicon-atlas/',
+    stats: [
+      { value: '5', label: 'Workspaces' },
+      { value: 'React 19', label: 'Source' },
+      { value: '1', label: 'Token Set' },
+    ],
+    tags: ['React 19', 'Figma', 'Design Tokens'],
+  },
 ];

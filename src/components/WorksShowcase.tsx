@@ -122,7 +122,7 @@ export function ProjectCard({ p, large = false, priority = false }: { p: Project
             loading={priority ? 'eager' : 'lazy'}
             decoding="async"
             onError={() => setBroken(true)}
-            className={p.showFullCover ? "h-full w-full object-contain" : "absolute inset-0 h-full w-full object-cover object-top transition-transform duration-[900ms] ease-out group-hover:scale-[1.04]"}
+            className="absolute inset-0 h-full w-full img-fit"
           />
         ) : (
           <div className="absolute inset-0 grid place-items-center p-6 text-center">

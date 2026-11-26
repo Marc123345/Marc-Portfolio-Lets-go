@@ -72,7 +72,7 @@ export default function ConversionRateOptimizationTechniquesPage() {
             <img 
               src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=2000&q=80" 
               alt="Conversion Rate Optimization" 
-              className="w-full h-full object-cover"
+              className="w-full h-full img-fit"
             />
           </div>
         </div>
@@ -228,7 +228,7 @@ export default function ConversionRateOptimizationTechniquesPage() {
                   <img 
                     src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=2000&q=80" 
                     alt="Optimizing Your Website for AI Crawlers" 
-                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full img-fit"
                   />
                 </div>
                 <div className="p-6">
@@ -249,7 +249,7 @@ export default function ConversionRateOptimizationTechniquesPage() {
                   <img 
                     src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=2000&q=80" 
                     alt="Mobile-First Design Principles Every Developer Should Know" 
-                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full img-fit"
                   />
                 </div>
                 <div className="p-6">

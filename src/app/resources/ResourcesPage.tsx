@@ -221,7 +221,7 @@ export default function ResourcesPage() {
                       src={resource.cover}
                       alt={resource.coverAlt}
                       loading={i === 0 ? 'eager' : 'lazy'}
-                      className="absolute inset-0 w-full h-full object-cover group-hover:scale-[1.04] transition-transform duration-[900ms]"
+                      className="absolute inset-0 w-full h-full img-fit"
                     />
                     <div className="absolute bottom-4 left-4 right-4 flex items-end justify-between text-[10px] font-mono uppercase tracking-[0.3em] text-white/80">
                       <span>{resource.kind}</span>

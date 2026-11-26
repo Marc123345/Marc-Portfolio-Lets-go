@@ -56,7 +56,7 @@ export default function FeaturedWorkCarousel({
         <AnimatePresence mode="wait">
           <motion.div
             key={currentIndex}
-            initial={{ opacity: 0, scale: 1.1 }}
+            initial={{ opacity: 0, scale: 1 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.95 }}
             transition={{
@@ -68,7 +68,7 @@ export default function FeaturedWorkCarousel({
             <img
               src={currentProject.image}
               alt={currentProject.title}
-              className="w-full h-full object-cover"
+              className="w-full h-full img-fit"
             />
 
             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent" />

@@ -48,7 +48,7 @@ export default function BookStack({
           >
             <div className="relative shadow-[30px_40px_60px_rgba(0,0,0,0.6)]" style={{ filter: front ? undefined : `brightness(${0.55 + i * 0.15})` }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={c.src} alt={c.alt} className="block w-full h-auto aspect-[3/4] object-cover rounded-[2px_6px_6px_2px]" />
+              <img src={c.src} alt={c.alt} className="block w-full h-auto aspect-[3/4] img-fit rounded-[2px_6px_6px_2px]" />
               <span className="absolute inset-y-0 left-0 w-[22px] rounded-l-[2px] bg-[linear-gradient(90deg,rgba(0,0,0,0.55),rgba(255,255,255,0.12)_45%,rgba(0,0,0,0.25))]" />
             </div>
           </motion.div>

@@ -140,7 +140,7 @@ function Rows({ items }: { items: { title: string; description?: string }[] }) {
 function Shot({ item, className = '' }: { item: CaseStudyConfig['gallery'][number]; className?: string }) {
   return (
     <motion.figure {...reveal} className={`relative overflow-hidden rounded-[20px] bg-[#111] group ${className}`}>
-      <Img src={item.image} alt={item.caption || ''} className="absolute inset-0 h-full w-full object-cover object-top transition-transform duration-[900ms] group-hover:scale-[1.03]" />
+      <Img src={item.image} alt={item.caption || ''} className="absolute inset-0 h-full w-full img-fit" />
       {item.caption && (
         <figcaption className="absolute left-4 bottom-4">
           <span className="rounded-full bg-black/65 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.15em] text-white/85 backdrop-blur-sm">
@@ -283,16 +283,16 @@ export default function CaseStudyLayout({ config }: { config: CaseStudyConfig })
         </div>
       </header>
 
-      {/* ============== ARCHED HERO IMAGE ============== */}
+      {/* ============== HERO IMAGE ============== */}
       <div className="px-6 lg:px-12 mt-6">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.1, delay: 0.45, ease: [0.22, 1, 0.36, 1] }}
-          className={config.fullImages ? "relative max-w-7xl mx-auto" : "relative max-w-7xl mx-auto aspect-[4/3] md:aspect-[16/9] overflow-hidden bg-[#111] rounded-b-[20px] rounded-t-[120px] md:rounded-t-[min(22vw,300px)]"}
+          className={config.fullImages ? "relative max-w-7xl mx-auto" : "relative max-w-7xl mx-auto aspect-[4/3] md:aspect-[16/9] overflow-hidden bg-[#111] rounded-[20px]"}
           style={config.fullImages ? undefined : { containerType: 'size' }}
         >
-          <Img src={heroImage} alt={config.fullImages ? title + " product cover" : `${clientName} website`} className={config.fullImages ? "block h-auto w-full" : "absolute inset-0 h-full w-full object-cover object-top"} />
+          <Img src={heroImage} alt={config.fullImages ? title + " product cover" : `${clientName} website`} className={config.fullImages ? "block h-auto w-full" : "absolute inset-0 h-full w-full img-fit"} />
           {heroVideo && !reduceMotion && (
             <iframe
               src={`https://player.vimeo.com/video/${heroVideo.vimeoId}?background=1&autoplay=1&loop=1&muted=1&autopause=0&dnt=1`}
@@ -441,7 +441,7 @@ export default function CaseStudyLayout({ config }: { config: CaseStudyConfig })
               </div>
             </div>
             <div className="relative order-1 md:order-2 aspect-[4/3] md:aspect-auto md:min-h-[420px] overflow-hidden rounded-[18px] bg-[#1d1d1d]">
-              <Img src={nextP?.image || next.image} alt={`${next.title} website`} className="absolute inset-0 h-full w-full object-cover object-top transition-transform duration-[900ms] group-hover:scale-[1.04]" />
+              <Img src={nextP?.image || next.image} alt={`${next.title} website`} className="absolute inset-0 h-full w-full img-fit" />
             </div>
           </Link>
         </div>

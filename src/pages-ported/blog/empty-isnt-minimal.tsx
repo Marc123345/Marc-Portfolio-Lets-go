@@ -75,7 +75,7 @@ export default function EmptyIsntMinimalPage() {
             <img
               src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=2000&q=80"
               alt="A near-empty white workspace, the look most people mistake for minimalism"
-              className="w-full h-full object-cover"
+              className="w-full h-full img-fit"
             />
           </div>
         </div>
@@ -159,7 +159,7 @@ export default function EmptyIsntMinimalPage() {
                   <img
                     src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=2000&q=80"
                     alt="Contrast & Balance: The Foundation of Accessible UI Design"
-                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full img-fit"
                   />
                 </div>
                 <div className="p-6">
@@ -180,7 +180,7 @@ export default function EmptyIsntMinimalPage() {
                   <img
                     src="https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=2000&q=80"
                     alt="UI Polish: Mastering Visual Realism in Modern Interface Design"
-                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full img-fit"
                   />
                 </div>
                 <div className="p-6">

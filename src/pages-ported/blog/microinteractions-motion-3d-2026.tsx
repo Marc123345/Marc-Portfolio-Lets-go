@@ -102,7 +102,7 @@ export default function MicrointeractionsMotion3DPage() {
             <img
               src="https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?auto=format&fit=crop&w=2000&q=80"
               alt="Smooth white curved lines flowing across a pale background, suggesting movement."
-              className="w-full h-full object-cover"
+              className="w-full h-full img-fit"
             />
           </div>
         </div>
@@ -227,7 +227,7 @@ const Scene = dynamic(() => import('./Scene'), {
                   <img
                     src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=2000&q=80"
                     alt="Anti-Design, Texture and Nostalgia"
-                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full img-fit"
                   />
                 </div>
                 <div className="p-6">
@@ -248,7 +248,7 @@ const Scene = dynamic(() => import('./Scene'), {
                   <img
                     src="https://images.unsplash.com/photo-1493106641515-6b5631de4bb9?auto=format&fit=crop&w=2000&q=80"
                     alt="Bold Typography and Earthy Palettes"
-                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full img-fit"
                   />
                 </div>
                 <div className="p-6">

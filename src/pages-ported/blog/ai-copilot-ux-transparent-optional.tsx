@@ -110,7 +110,7 @@ export default function AiCopilotUxPage() {
             <img
               src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=2000&q=80"
               alt="A person in a mustard sweater typing on a laptop at a wooden table."
-              className="w-full h-full object-cover"
+              className="w-full h-full img-fit"
             />
           </div>
         </div>
@@ -241,7 +241,7 @@ export default function AiCopilotUxPage() {
                   <img
                     src="https://images.unsplash.com/photo-1531746790731-6c087fecd65a?auto=format&fit=crop&w=2000&q=80"
                     alt="Conversational UI and chat interfaces"
-                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full img-fit"
                   />
                 </div>
                 <div className="p-6">
@@ -262,7 +262,7 @@ export default function AiCopilotUxPage() {
                   <img
                     src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=2000&q=80"
                     alt="Experimental navigation beyond the navbar"
-                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full img-fit"
                   />
                 </div>
                 <div className="p-6">

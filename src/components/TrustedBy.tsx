@@ -231,7 +231,7 @@ export default function TrustedBy() {
                 <img
                   src={featuredClient.image}
                   alt=""
-                  className="w-full h-full object-cover"
+                  className="w-full h-full img-fit"
                 />
               ) : (
                 <div className="w-full h-full bg-[#1b1b1b] flex items-center justify-center">

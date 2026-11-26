@@ -87,7 +87,7 @@ export default function WorkByService({ projects }: { projects: P[] }) {
                             alt={`${p.title} website`}
                             loading="lazy"
                             decoding="async"
-                            className="absolute inset-0 w-full h-full object-cover group-hover:scale-[1.04] transition-transform duration-[900ms]"
+                            className="absolute inset-0 w-full h-full img-fit"
                           />
                           <span className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
                           {p.stats[0] && (
