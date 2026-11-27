@@ -1,0 +1,82 @@
+{
+  "title": "Tracefold",
+  "slug": "tracefold",
+  "discipline": "Security operations",
+  "lead": "Before an analyst can close a case, someone else should be able to explain what was authorized, what happened, and which part of the evidence is missing.",
+  "role": "Product strategy, interaction design and Figma component design",
+  "scope": "Two fictional investigations across 22 desktop and 14 mobile screens",
+  "cover": "cover.webp",
+  "coverAlt": "Tracefold cybersecurity investigation UI kit cover",
+  "next": {
+    "slug": "relay",
+    "title": "Relay"
+  },
+  "chapters": [
+    {
+      "title": "Start at the end of the shift",
+      "paragraphs": [
+        "Imagine taking over an investigation just after the analyst who opened it has gone home. The board says the incident is contained. The next question is simple enough to ask aloud: contained on whose authority, and how do we know? If the answer lives in the previous analyst’s memory, the case is hard to defend.",
+        "I used that handoff to define Tracefold. The analyst needs to identify the affected account and device. A reviewer needs to know exactly what an intervention will affect. A case owner needs to explain why the evidence is sufficient for closure. Each person enters the case with a different question and a different amount of time.",
+        "I wanted a design team buying the kit to get usable examples of those decisions. A collection of empty dashboards would leave the hard work of inventing the underlying case to the buyer. I wrote two fictional investigations so identifiers, times, actions and exceptions could recur coherently across the screens."
+      ]
+    },
+    {
+      "title": "Follow the alert without losing the case",
+      "paragraphs": [
+        "The first investigation starts with identity alert AL-1842. The evidence graph has a specific job here: establish which account and device belong to this alert, and which case owns the investigation. A free-standing network drawing can show many relationships and still leave the analyst unsure which one to inspect.",
+        "I kept the selected alert’s details beside the graph. The analyst can trace a relationship, then return to a named record and an event time. The case board serves a different purpose. It lets another person pick up the work at the level of ownership and progress, without reconstructing the graph from memory. The transition between those views carries the identity of the case.",
+        "That separation also limits what the picture can imply. A line between two entities describes a recorded relationship. The evidence record and the sequence of events supply the context for a human judgment about what happened."
+      ],
+      "image": "svg/02-Evidence-graph.svg",
+      "caption": "Alert AL-1842 remains visible alongside the account, device and case relationships under investigation."
+    },
+    {
+      "title": "Resolve the four seconds",
+      "paragraphs": [
+        "The second investigation follows a payroll identity. The directory records an event at 11:06:04. The endpoint records it at 11:06:00. Both identify the account svc-payroll on device NL-FIN-07. Four seconds is small enough to hide in a polished timeline and large enough to change how someone reads the sequence.",
+        "I put the source fields side by side and made the directory clock the explicit normalization reference. The view retains both original times, identifies the correction and gives the reviewer the records behind it. Now a second analyst can inspect why the timeline aligns the two entries.",
+        "This decision costs space. A single corrected timestamp would make the row shorter. In this case the reviewer’s ability to reconstruct the correction matters more. It is also why provenance belongs near the comparison itself: by the time the case reaches closure, the person reading it may have no direct knowledge of the original discrepancy."
+      ],
+      "image": "svg/08-Record-comparison.svg",
+      "caption": "IR-031 preserves the original directory and endpoint times, the shared identifiers and the four-second correction."
+    },
+    {
+      "title": "Make approval narrow enough to review",
+      "paragraphs": [
+        "An approval request for the payroll investigation concerns a particular session. The reviewer needs to see the target, the requester and the authority being granted, along with the payroll activity that should continue. A generic approval button would compress all of that into an ambiguous yes.",
+        "The request names session sess-024. The approval chain records Mira Chen’s request and Sam Reed’s authorization. The action receipt and the later observation window answer separate questions: did the authorized action occur, and what evidence followed it? Combining them into a single success indicator would let an issued instruction stand in for its observed outcome.",
+        "I used mobile for the moment a reviewer is called into the case. The useful content on a smaller screen is the specific request, its scope, who owns it and what the reviewer can inspect next. The desktop relationship view remains useful for investigation. The approval screen can be much narrower because its decision is narrower."
+      ],
+      "image": "svg/10-Mobile-response.svg",
+      "caption": "Read the mobile sequence from approval to outcome, then inspect the coverage exception before closing the case."
+    },
+    {
+      "title": "Leave the gap in the closure record",
+      "paragraphs": [
+        "The outcome screen covers 11:13 through 11:23 UTC. It shows zero session renewals and ten of ten endpoint checks. It also points to EX-014, an eight-minute gap in network evidence. A reader could easily interpret an empty network row as eight minutes of quiet. The designed record makes the collector delay explicit.",
+        "This is where the story of IR-031 becomes a judgment call. The reviewer can inspect the population of available records and the disposition of the exception. The example closes as contained at 11:26. The closure record retains the gap and the accountable people, so the next reader can understand the basis and limits of that decision.",
+        "For the studio kit, this became a useful constraint on the component system. A coverage indicator needs to represent delayed evidence. An approval chain needs an identifiable target. A closure checklist needs a route back to the exception. A new screen assembled from these parts should preserve those distinctions without requiring its designer to invent a fresh visual language."
+      ],
+      "image": "svg/09-Component-library.svg",
+      "caption": "The reusable patterns carry investigation-specific meaning, including evidence provenance, approval scope and coverage."
+    },
+    {
+      "title": "Design the handoff twice",
+      "paragraphs": [
+        "The shift overview asks what needs attention across cases. The case board asks who owns a particular piece of work. An analyst returning to AL-1842 should be able to move from the first question to the second without confusing it with the separate payroll case. Consistent case identifiers and named owners do more work here than decorative severity treatments.",
+        "The other handoff happens between designer and product team. I included 67 reusable component masters and JSON design tokens alongside the editable screens. Their value is clearest when a team adapts the examples. Change the source that is late, the session in scope or the person who authorized the action, and the interface should still let a reader reconstruct the case."
+      ],
+      "image": "svg/03-Case-board.svg",
+      "caption": "The case board gives the next analyst a place to resume responsibility for the investigation."
+    },
+    {
+      "title": "What I would test with analysts",
+      "paragraphs": [
+        "Tracefold is a Figma study with authored case records. It does not establish a reduction in response time, an improvement in incident outcomes or the suitability of a containment policy. The deliverable is a system of screens in which those decisions can be inspected and discussed.",
+        "For a first usability session, I would give a reviewer IR-031 and ask three things: identify the exact session authorized for intervention, explain the four-second mismatch using the original records, and describe the limits of the closure evidence. I would record the fields they use, where they backtrack and whether they mistake delayed collection for an absence of activity.",
+        "A particularly revealing failure would be a participant who reaches the right closure screen and gives the wrong reason for closing. That would point directly to the next design change: bring the missing evidence closer to the point where the reviewer forms the conclusion."
+      ]
+    }
+  ],
+  "purchase": "https://marcdesigns25.gumroad.com/l/tracefold"
+}

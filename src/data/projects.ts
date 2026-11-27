@@ -243,11 +243,22 @@ export const PROJECTS: Project[] = [
     tags: ['React', 'CSS Vars', 'Open Source'],
   },
   {
+    title: 'Relay',
+    category: 'Simulation UX · Exercise Control',
+    blurb: 'How a controller inspects a proposed scene, authorizes a revision and decides when participants see it.',
+    image: '/images/case-studies/relay/cover.jpg',
+    showFullCover: true,
+    caseStudyUrl: '/work/case-studies/relay/',
+    stats: [{ value: '8', label: 'Workspaces' }],
+    tags: ['Product design', 'React', 'Figma'],
+  },
+  {
     title: 'Silicon Atlas',
+    showFullCover: true,
     category: 'Product UX · Engineering',
     blurb:
       'Dark, data-dense dashboard kit for lab and telemetry tools. Five React workspaces, a Figma file and a design system on one token set.',
-    image: '/images/case-studies/silicon-atlas/run-comparison.jpg',
+    image: '/images/case-studies/silicon-atlas/cover.webp',
     caseStudyUrl: '/work/case-studies/silicon-atlas/',
     stats: [
       { value: '5', label: 'Workspaces' },

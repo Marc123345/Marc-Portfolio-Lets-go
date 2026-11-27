@@ -1,0 +1,80 @@
+{
+  "title": "Relay",
+  "slug": "relay",
+  "discipline": "Civil-defense training software",
+  "lead": "A lighting cue darkens a training hall and removes its exit sign. I designed the controller’s workstation around the moment someone catches that second change.",
+  "role": "Product design, simulated control logic, visual system and React prototype",
+  "scope": "Independent exercise-control concept with authored scenes and local session replay",
+  "cover": "cover.jpg",
+  "coverAlt": "Three-dimensional cutaway of the training hall with its exit marker above the rear doors",
+  "next": {
+    "slug": "silicon-atlas",
+    "title": "Silicon Atlas"
+  },
+  "chapters": [
+    {
+      "title": "One change too many",
+      "paragraphs": [
+        "A municipal exercise controller wants trainees to experience a power interruption. The proposed lighting change looks convincing. It also removes the exit sign. If that frame reaches participants, the exercise has quietly acquired a second condition that its author never requested.",
+        "That scenario gave Relay a precise user and a reason to exist. The controller decides whether the proposed scene still represents the intended exercise. The participants should see only what the controller has elected to release. A facilitator reviewing the exercise later needs to know what the participant display actually showed in the simulation.",
+        "The studio opportunity was to design those responsibilities into a working model before introducing a live media dependency. I used a single hall, one camera and a small cue sequence. That scope leaves room for a difficult question a broad command-center dashboard could easily bury: what happens to the audience while the controller is still deciding?"
+      ]
+    },
+    {
+      "title": "Keep both sides of the change available",
+      "paragraphs": [
+        "In Cue review the controller can pull a wipe across aligned versions of the hall. The rear doorway occupies the same position in both frames. That makes the missing sign easy to inspect without asking the controller to remember exactly where it appeared in a previous view.",
+        "I paired the visual comparison with two explicit checks: exit marker and doorway clearance. Each selects a corresponding inspection region. The original lighting candidate cannot pass the marker check. Holding the cue requires a reason, which the next reviewer can read when looking at the session record.",
+        "The wipe and the checklist do different work. The wipe lets the controller examine the evidence. The checks express what the exercise author cares about preserving. A believable frame can still fail one of those conditions. That is why visual plausibility alone never advances a cue in the simulation."
+      ],
+      "image": "cue-review.webp",
+      "caption": "The controller can inspect the aligned doorway and identify the missing marker while the original remains on the participant display."
+    },
+    {
+      "title": "Give approval an expiry condition",
+      "paragraphs": [
+        "Suppose the controller holds the cue, obtains a corrected version, and verifies the sign. A previous approval would say very little about the new candidate. I made the revision the unit of review. Staging a revision clears its checks; both protected details must be verified before that revision can be approved.",
+        "Approval leaves the participant output alone. Release is a second action that copies the approved cue and revision to the participant route. This gives the controller a deliberate pause to coordinate with the exercise lead. The cost is an extra action. The benefit is that reviewing something early does not commit anyone to showing it early.",
+        "The same rule applies while another cue is on display. The controller can prepare the next candidate while participants continue seeing the previous released revision. The interface names both the candidate under inspection and the output currently routed. Those labels keep two simultaneously true states intelligible."
+      ]
+    },
+    {
+      "title": "Use the building as an index",
+      "paragraphs": [
+        "A note that says “inspect the rear doorway” assumes the next controller can identify the intended feature in the camera image. The Scene atlas provides a cutaway of the room with separate anchors for the sign and the doorway opening. Choosing an anchor updates the detail crop. Opening camera inspection carries that same selection back into Cue review.",
+        "The atlas is an orientation aid. Its illustrated sign always belongs to the conceptual hall. The current candidate can still be missing its sign. I kept the candidate status alongside the illustration so a reviewer has to inspect the actual authored frame before marking that detail verified.",
+        "The dark palette also serves that distinction. Neutral surfaces leave the hall legible, blue identifies the active selection, and coral calls attention to a missing or interrupted condition. Written labels carry the status when color or image detail is difficult to distinguish."
+      ],
+      "image": "scene-atlas.webp",
+      "caption": "Selecting the doorway anchor in the spatial reference opens the corresponding camera check."
+    },
+    {
+      "title": "Design the interruption before the replay",
+      "paragraphs": [
+        "A preview connection can disappear after a cue has been approved or released. In the simulated workstation, that event restores the original source, holds the candidate and clears verification. Reconnecting restores the ability to review. The controller decides when to stage another revision and when participants should see it.",
+        "I used a worked rehearsal to make the recovery rule inspectable. At 30 seconds a revision is approved. At 36 seconds it is released. The connection is lost at 52 seconds. At 65 seconds the preview is connected again, while the participant route still points to the original hall. A later revision reaches the display at 88 seconds.",
+        "Viewed side by side, the route and connection tracks explain what a single green “online” light would conceal. The replay cursor reconstructs the state at each event. Events recorded within the same second retain their ordering through their identifiers. Scrubbing the record leaves the current session untouched."
+      ],
+      "image": "replay.webp",
+      "caption": "At recovery, the preview connection and participant route tell different parts of the story. Read the event alongside both tracks."
+    },
+    {
+      "title": "Give duration a useful interpretation",
+      "paragraphs": [
+        "A facilitator may ask why the scene changed several seconds after it was ready. The revision timing screen separates time spent reviewing from time spent waiting after approval. In the worked rehearsal, revision two takes 14 seconds from staging to approval and six more seconds to release.",
+        "I kept pending milestones visible. A revision that has not reached approval has no completed review duration. Plotting a zero there would turn an unfinished review into an apparently instantaneous one. The graph describes controller events in the exercise record. It supplies no measurement of network latency or model inference performance.",
+        "This is also why the screen names its event source. A worked example makes the timing relationships easy to explore on first use. Switching to the current session shows the events produced by the person at the controls. Mixing the two sources would make the demonstration look more active at the expense of its credibility."
+      ],
+      "image": "timing.webp",
+      "caption": "Completed intervals have a duration in seconds. An unreached milestone remains pending."
+    },
+    {
+      "title": "What works and what needs field evaluation",
+      "paragraphs": [
+        "Relay ships as an offline React simulation with eight workspaces and an editable Figma kit. The checks exercise approval gating, explicit release, staging during playback, fallback on interruption, timing calculations and reconstruction of historical routes. In this prototype, “displayed” records a local routing decision. A live deployment would need a receipt from the participant endpoint before claiming that a remote audience saw a frame.",
+        "My first controller evaluation would introduce an interruption just after release, then ask the operator to explain what participants are seeing before and after reconnection. I would also ask a second person to reconstruct the same episode from the event history. Disagreement between those two accounts would expose a concrete problem in the routing language, the timeline or both.",
+        "Those tasks would test the central promise of the design. A controller should be able to prepare an exercise change, decide when to show it, and explain afterward exactly what was shown and why."
+      ]
+    }
+  ]
+}

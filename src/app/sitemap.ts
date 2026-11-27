@@ -71,6 +71,7 @@ const entries: Entry[] = [
   { path: 'work/case-studies/h2h-marketing', priority: 0.8 },
   { path: 'work/case-studies/ask-africa', priority: 0.8, lastModified: '2026-11-21' },
   { path: 'work/case-studies/sentinel-ds', priority: 0.8 },
+  { path: 'work/case-studies/relay', priority: 0.8, lastModified: '2026-11-26' },
   { path: 'work/case-studies/silicon-atlas', priority: 0.8, lastModified: '2026-11-26' },
 
   // Blog posts

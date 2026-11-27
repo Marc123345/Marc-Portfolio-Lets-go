@@ -1,0 +1,79 @@
+{
+  "title": "Silicon Atlas",
+  "slug": "silicon-atlas",
+  "discipline": "Hardware validation",
+  "lead": "Two receiver lanes fall below the same limit. Only one records errors. I designed a way to investigate the difference and carry the evidence into a repeatable test.",
+  "role": "Product design, interaction design, Figma system and React prototype",
+  "scope": "Independent design study with synthetic optical-link measurements",
+  "cover": "cover.webp",
+  "coverAlt": "Silicon Atlas kit cover with a receiver assembly and comparison instrument",
+  "next": {
+    "slug": "tracefold",
+    "title": "Tracefold"
+  },
+  "chapters": [
+    {
+      "title": "The decision at the bench",
+      "paragraphs": [
+        "Imagine reviewing a capture with a colleague. You point to a dip in a trace. She asks which lane it came from, which stimulus was applied and whether any bits were lost at that moment. A picture of the dip gets the conversation started. For her to repeat the test, she needs the observation itself.",
+        "That exchange set the scope for Silicon Atlas. The bench engineer has to isolate an interval. The test owner has to choose a useful comparison. The reviewer has to decide whether the repeat produced enough evidence to accept the result. Those are three responsibilities in the design study. One person can move through all three in the prototype.",
+        "My studio goal was to make a kit another product team could adapt to a validation workflow. I defined success for the prototype as a handoff someone could reproduce: start from a sample, carry its lane and interval into a plan, and recover the sample behind the eventual decision."
+      ]
+    },
+    {
+      "title": "Give the comparison a common clock",
+      "paragraphs": [
+        "My earlier layout put synchronized traces in one panel and a lane heatmap underneath. It was useful for reading a particular measurement. To see whether neighboring lanes reacted together, I had to find the event in the chart, look down at the matrix, choose a cell and mentally recover my place on the clock.",
+        "I moved eight lane rows onto one timeline. Opening L03 expands its two traces in place. Opening L05 adds a second detailed row and leaves the other six visible. Graphite fills the distance between the runs. Crimson identifies samples below the illustrative 54 mV criterion. The two conditions deserve separate encodings because a large difference between runs can still sit comfortably above the limit.",
+        "At 126 ms, the emulated L03 sample reads 43.14 mV and contains two observed bit errors. Across the selected 118–134 ms window, L03 records four errors and L05 records zero. A cursor answers a question about one instant. The brush defines what gets handed to the next engineer."
+      ],
+      "image": "run-comparison.jpg",
+      "caption": "Open rows share the same horizontal scale. Follow the cursor through L03 and L05, then read the error events inside the selected interval."
+    },
+    {
+      "title": "Put the test conditions beside the signal",
+      "paragraphs": [
+        "There is a tempting interpretation of the deeper dip: something is wrong with that receiver. But the original runs used different stimuli. EVT-041 represents package heating on one bench. EVT-058 represents a wavelength sweep expressed as an equivalent thermal ramp on another. Both use the same modeled chip revision and firmware.",
+        "I kept the conditions table within reach of the synchronized charts. The reviewer can check the stimulus behind each trace before offering a causal explanation. Zoom changes the chart domain while the inspector keeps its full-capture statistics. Labeling those scopes matters: a minimum across 241 bins and the instantaneous reading at the cursor can both be correct and still answer different questions."
+      ],
+      "image": "run-details.jpg",
+      "caption": "The conditions table and full-capture inspector give context to the thermal, eye-height and error traces."
+    },
+    {
+      "title": "Give each projection a job",
+      "paragraphs": [
+        "The spatial view began with a question about a colleague pointing at a physical port: how would they find that channel in software? The conceptual package drawing became a lane selector. Choosing a receiver moves the waterfall, trajectory and duration curve to the same source and sample.",
+        "Each projection earns its space through a different reading. The waterfall shows how localized the excursion is across eight lanes. The trajectory pairs eye height with ramp rate at each time step. The duration curve gives up time order so the reviewer can see how much of the capture fell below the limit. For the emulated L03 fixture, that is 48 of 241 bins. Returning to the timeline restores the question of when it happened."
+      ],
+      "image": "signal-field.jpg",
+      "caption": "The package selects the channel. The waterfall shows its neighbors; the duration curve counts how much of the capture crossed the criterion."
+    },
+    {
+      "title": "Make the selection into a test plan",
+      "paragraphs": [
+        "A useful note has to survive the person who wrote it. I kept the evidence lane, optional reference and inclusive endpoints together when the engineer saves an observation or starts a retest. The reference stays editable because another lane may be a better control. A written rationale records why the owner chose it.",
+        "The endpoints have an engineering consequence. From 118 through 134 ms there are 17 one-millisecond bins. At the fixture’s nominal 25 Gb/s, that is 425 million expected bits per lane per repetition. The plan displays that expectation before review. Later, the reviewer can compare it with the exposure actually represented by the captured bins."
+      ],
+      "image": "retest-planning.jpg",
+      "caption": "The lane pair, stimulus and interval become an explicit acquisition sequence that the test owner can inspect and export."
+    },
+    {
+      "title": "Let missing evidence change the verdict",
+      "paragraphs": [
+        "The most useful case in the prototype is the third repeat on L05. Its observed samples meet the eye-height requirement and contain zero recorded errors. The reference capture lost its center bin at 126 ms. Calling that result a pass would turn an absence of measurement into positive evidence.",
+        "The review rules give an observed violation priority. If every observed value is within bounds but coverage is incomplete, the lane receives an Incomplete verdict. A missing bin contributes zero exposure and an unknown error count. Acceptance becomes available only when every planned lane check passes. A reviewer can request reacquisition, give a reason and link the decision to the exact bin."
+      ],
+      "image": "capture-review.jpg",
+      "caption": "Each lane retains its own verdict for each repetition. The reviewer can open the missing bin and attach the disposition to it."
+    },
+    {
+      "title": "What the prototype establishes",
+      "paragraphs": [
+        "The delivered study connects five workspaces, editable Figma components, local evidence records and JSON plan and review exports. The default simulated review yields four failed lane checks, one pass and one incomplete result. A clean fixture allows acceptance. Those are reproducible software behaviors; the project has no measured effect on lab throughput or hardware reliability.",
+        "My next evaluation would put two engineers on opposite sides of the handoff. One would capture an interval and leave the room. The second would reconstruct the test using only the saved observation. I would record whether the lane pair, stimulus and endpoints survived, and whether the reviewer caught the missing bin before accepting. That would tell me more about the quality of the design than another count of dashboard components."
+      ],
+      "image": "design-system.jpg",
+      "caption": "The design foundations establish consistent roles for selection, information, caution and observed violations."
+    }
+  ]
+}
